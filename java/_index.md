@@ -3,7 +3,7 @@ id: home
 url: conversion/java
 title: GroupDocs.Conversion for Java
 weight: 1
-description: ""
+description: "GroupDocs.Conversion for Java is a lightweight multi-format document conversion API designed as a middle-ware for Java applications."
 keywords: 
 productName: GroupDocs.Conversion for Java
 hideChildren: True

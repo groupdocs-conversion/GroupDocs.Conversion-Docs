@@ -3,7 +3,7 @@ id: set-license-under-mono-linux
 url: conversion/net/set-license-under-mono-linux
 title: Set license under Mono/Linux
 weight: 6
-description: ""
+description: "This is a guide about setting GroupDocs.Conversion for .NET license under Mono/Linux"
 keywords: 
 productName: GroupDocs.Conversion for .NET
 hideChildren: False

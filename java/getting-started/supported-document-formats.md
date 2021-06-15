@@ -3,7 +3,7 @@ id: supported-document-formats
 url: conversion/java/supported-document-formats
 title: Supported Document Formats
 weight: 2
-description: ""
+description: "This section describes GroupDocs.Conversion for Java supported document types"
 keywords: 
 productName: GroupDocs.Conversion for Java
 hideChildren: False

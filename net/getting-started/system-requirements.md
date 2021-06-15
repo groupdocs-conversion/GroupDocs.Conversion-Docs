@@ -3,7 +3,7 @@ id: system-requirements
 url: conversion/net/system-requirements
 title: System Requirements
 weight: 3
-description: ""
+description: "This article explains GroupDocs.Conversion for .NET system requirements."
 keywords: 
 productName: GroupDocs.Conversion for .NET
 hideChildren: False

@@ -3,7 +3,7 @@ id: features-overview
 url: conversion/java/features-overview
 title: Features Overview
 weight: 1
-description: ""
+description: "This is an overview of GroupDocs.Conversion for Java library features and capabilities"
 keywords: 
 productName: GroupDocs.Conversion for Java
 hideChildren: False

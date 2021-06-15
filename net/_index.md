@@ -3,7 +3,7 @@ id: home
 url: conversion/net
 title: GroupDocs.Conversion for .NET
 weight: 1
-description: ""
+description: "GroupDocs.Conversion for .NET is a lightweight multi-format document conversion API designed as a middle-ware for C# applications."
 keywords: 
 productName: GroupDocs.Conversion for .NET
 hideChildren: True

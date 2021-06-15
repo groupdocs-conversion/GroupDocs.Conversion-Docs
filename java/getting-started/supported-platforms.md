@@ -3,7 +3,7 @@ id: system-requirements
 url: conversion/java/system-requirements
 title: Supported Platforms
 weight: 3
-description: ""
+description: "This section describes GroupDocs.Conversion for .NET supported document types"
 keywords: 
 productName: GroupDocs.Conversion for Java
 hideChildren: False

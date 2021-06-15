@@ -3,7 +3,7 @@ id: supported-document-formats
 url: conversion/net/supported-document-formats
 title: Supported Document Formats
 weight: 2
-description: ""
+description: "This section describes GroupDocs.Conversion for .NET supported document types"
 keywords: 
 productName: GroupDocs.Conversion for .NET
 hideChildren: False

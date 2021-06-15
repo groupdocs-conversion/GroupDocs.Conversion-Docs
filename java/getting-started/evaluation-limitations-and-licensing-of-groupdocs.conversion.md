@@ -3,7 +3,7 @@ id: evaluation-limitations-and-licensing-of-groupdocs-conversion
 url: conversion/java/evaluation-limitations-and-licensing-of-groupdocs-conversion
 title: Evaluation Limitations and Licensing of GroupDocs.Conversion
 weight: 5
-description: ""
+description: "This article explains evaluation limitations and licensing of GroupDocs.Conversion for Java"
 keywords: 
 productName: GroupDocs.Conversion for Java
 hideChildren: False

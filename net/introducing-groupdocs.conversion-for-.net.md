@@ -3,7 +3,7 @@ id: introducing-groupdocs-conversion-for-net
 url: conversion/net/introducing-groupdocs-conversion-for-net
 title: Introducing GroupDocs.Conversion for .NET
 weight: 1
-description: ""
+description: "Introduction to GroupDocs.Conversion for .NET - what is it and why to use"
 keywords: 
 productName: GroupDocs.Conversion for .NET
 hideChildren: False

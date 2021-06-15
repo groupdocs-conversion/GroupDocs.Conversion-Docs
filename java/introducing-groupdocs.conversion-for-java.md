@@ -3,7 +3,7 @@ id: introducing-groupdocs-conversion-for-java
 url: conversion/java/introducing-groupdocs-conversion-for-java
 title: Introducing GroupDocs.Conversion for Java
 weight: 1
-description: ""
+description: "Introduction to GroupDocs.Conversion for Java - what is it and why to use"
 keywords: 
 productName: GroupDocs.Conversion for Java
 hideChildren: False
