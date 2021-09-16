@@ -6,7 +6,7 @@ weight: 6
 description: "Learn this article and check how to convert documents to Word DOCX, DOC, RTF or Open Document ODT, OTT formats with GroupDocs.Conversion for .NET."
 keywords: Convert to Word, Convert to DOCX, Convert to DOC
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+hideChildren: True
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) can convert any source document to the following WordProcessing formats: *Doc, Docm, Docx, Dot, Dotx, Rtf, Odt, Ott, Mobi, Txt*. When just instantiate the [WordProcessingConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/wordprocessingconvertoptions) class without specifying the target format explicitly, *Docx* will be used as a default format.
 
