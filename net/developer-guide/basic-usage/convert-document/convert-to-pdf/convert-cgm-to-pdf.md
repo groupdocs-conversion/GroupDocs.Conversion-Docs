@@ -10,7 +10,7 @@ hideChildren: False
 
 The Computer Graphics Metafile (CGM) format is a free and open international, platform-independent standard file formats that is used for exchanging and storing vector graphics (2D), raster graphics, and text. CGM uses an object-oriented approach and many function provisions for image production. CGM uses these object-oriented characteristics for remolding graphical elements to render an image. A metafile contains necessary information that defines other files. In CGM, a text-based source file contains all graphical elements that can be later compiled into a binary file. Basically, CGM is a way to facilitate 2D graphical data interchange, independent from any particular platform, or device.
 
-To convert CGM to PDF file just call `Convert` method like shown below:
+To convert CGM to PDF file in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source CGM file

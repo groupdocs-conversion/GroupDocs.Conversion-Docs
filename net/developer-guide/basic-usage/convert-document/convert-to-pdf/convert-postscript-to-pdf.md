@@ -12,7 +12,7 @@ PostScript (PS) is a general-purpose page description language used in the busin
 
 PostScript page description is available to be rendered, displayed on printer and other output device with the help of the PostScript interpreter of the device. As the commands to print characters, graphical shapes and images are executed by interpreter, for that specific device, the high-level PostScript description converts into the low level raster data format. Generally, different applications such as illustrators, document composition systems and computer-aided design (CAD) are automated to generate PostScript page descriptions. Generally programmers have to write PostScript programs at the time of new applications creation. However, a programmer can take advantage of the capabilities of the PostScript language that are not accessible in any application by writing a PS a program for that special situation.
 
-To convert POSTSCRIPT to PDF file just call `Convert` method like shown below:
+To convert POSTSCRIPT to PDF file in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source POSTSCRIPT file

@@ -11,7 +11,7 @@ hideChildren: False
 Files with MHTML extension represent a web page archive format that can be created by a number of different applications. It stores the HTML of the webpage, as well as linked resources in the webpage, which may include CSS, JavaScript, images, and audio files. MHTML files are primarily used by web developers to save the current state of a webpage for archival purposes.
 MHTML files can be opened in a variety of applications such as browsers and Microsoft Word.
 
-To convert MHTML to PDF file just call `Convert` method like shown below:
+To convert MHTML to PDF file in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source MHTML file

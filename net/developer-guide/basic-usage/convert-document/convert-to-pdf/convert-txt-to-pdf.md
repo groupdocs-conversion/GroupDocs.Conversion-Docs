@@ -12,7 +12,7 @@ A file with .TXT extension represents a text document that contains plain text i
 
 Text files can store large amount of data as there is no limitation on the size of contents. However, text editors opening such large files need to be smart for loading and displaying these. Almost all operating systems come with text editors that allow you to create and edit text files. For example, Windows OS comes with Notepad and Wordpad for this purpose. Similarly, MacOS comes with TextEdit for creating and editing Text Documents. There are, however, other free text editors available as well over the internet that provide you the capability to work with Text Documents like Notepad++ which is far more advanced in terms of functionality.
 
-To convert TXT to PDF file just call `Convert` method like shown below:
+To convert TXT to PDF file in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source TXT file

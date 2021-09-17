@@ -12,7 +12,7 @@ TeX is a language that comprises of programming as well as mark-up features, use
 
 TeX input files are based on ASCII-code, thereby allowing manuscript sharing among writers, publishing managers and critics. A wide variety of computing environments, almost every modern platform and lot of older platforms support TeX. Moreover, TeX is a free software, available to a wide range of consumers. Many UNIX installations use both UNIX troff and TeX as their formatting system for different purposes. Other typesetting tasks are performed tremendously in the form of LaTeX, ConTeXt, and other macro packages.
 
-To convert TEX to PDF file just call `Convert` method like shown below:
+To convert TEX to PDF file in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source TEX file

@@ -12,7 +12,7 @@ An XPS file represents page layout files that are based on XML Paper Specificati
 
 XPS viewers come integrated as part of Windows Vista, Windows 7, Windows 8, and Internet Explorer 6 or later. XPS files become read-only once they are generated. This adds to the user’s confidence in received documents sent as XPS for the authenticity of the document. An XPS document can contain one or more pages as converted from the original document.
 
-To convert XPS to PDF file just call `Convert` method like shown below:
+To convert XPS to PDF file in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source XPS file

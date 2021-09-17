@@ -10,7 +10,7 @@ hideChildren: False
 
 BMP files are  used to store bitmap digital images. Which are independent of graphics adapter and are also called device independent bitmap (DIB) file format. This independency allows to open such files on different platforms such as Microsoft Windows and Mac. The BMP file format can store data as two-dimensional digital images in both monochrome as well as color format with various colour depths.
 
-To convert BMP to PDF file just call `Convert` method like shown below:
+To convert BMP to PDF file in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source BMP file

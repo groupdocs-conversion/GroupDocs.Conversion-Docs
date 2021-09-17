@@ -10,7 +10,7 @@ hideChildren: False
 
 EPUB files are e-book format files that provide a standard digital publication format for publishers and consumers. The format has been so common by now that it is supported by many e-readers and software applications. For example, on Mac OS, the pre-installed Books software provides the support for opening such files. In addition, there are a lot of compatible software available for smartphones, tablets and computers.
 
-To convert EPUB to PDF file just call `Convert` method like shown below:
+To convert EPUB to PDF file in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source EPUB file

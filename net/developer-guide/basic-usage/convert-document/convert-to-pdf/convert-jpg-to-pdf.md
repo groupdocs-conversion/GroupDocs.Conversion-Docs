@@ -10,7 +10,7 @@ hideChildren: False
 
 A JPEG is a type of image format that is saved using the method of lossy compression. The output image, as result of compression, is a trade-off between storage size and image quality. Users can adjust the compression level to achieve the desired quality level while at the same time reduce the storage size. Image quality is negligibly affected if 10:1 compression is applied to the image.  The higher the compression value, the higher the degradation in image quality.
 
-To convert JPG to PDF file just call `Convert` method like shown below:
+To convert JPG to PDF file in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source JPG file

@@ -10,7 +10,7 @@ hideChildren: False
 
 PNG, Portable Network Graphics, refers to a type of raster image file format that use loseless compression. This file format was created as a replacement of Graphics Interchange Format (GIF) and has no copyright limitations. However, PNG file format does not support animations. PNG file format supports loseless image compression that makes it popular among its users. With the passage of time, PNG has evolved as one of the mostly used image file format.
 
-To convert PNG to PDF file just call `Convert` method like shown below:
+To convert PNG to PDF file in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source PNG file

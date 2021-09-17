@@ -10,7 +10,7 @@ hideChildren: False
 
 DICOM is the acronym for Digital Imaging and Communications in Medicine and pertains to the field of Medical Informatics. DICOM is used for the integration of medical imaging devices like printers, servers, scanners etc from various vendors and also contains identification data of each patient for uniqueness. DICOM files can be shared between two parties if they are capable of receiving image data in DICOM format. The communication part of DICOM is application layer protocol and uses TCP/IP to communicate between entities. Versions supported by web services are 1.0, 1.1, 2 or later.
 
-To convert DICOM to PDF file just call `Convert` method like shown below:
+To convert DICOM to PDF file in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source DICOM file

@@ -10,7 +10,7 @@ hideChildren: False
 
 Text files created with Markdown language dialects is saved with .md or .MARKDOWN file extension. MD files are saved in plain text format that uses Markdown language which also includes inline text symbols, defining how a text can be formatted such as indentations, table formatting, fonts, and headers.  MD files can be converted to HTML with a program called Markdown. Markdown language is released by John Gruber.
 
-To convert MARKDOWN to PDF file just call `Convert` method like shown below:
+To convert MARKDOWN to PDF file in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source MARKDOWN file
