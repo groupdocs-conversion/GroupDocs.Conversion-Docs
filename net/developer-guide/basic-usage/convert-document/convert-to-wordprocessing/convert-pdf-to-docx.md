@@ -63,4 +63,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**PDF to DOCX converter**](https://products.groupdocs.app/conversion/pdf-to-docx), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert PDF to DOCX in C#"](conversion/net/images/convert-pdf-to-docx.png)](https://products.groupdocs.app/conversion/pdf-to-docx)
+[!["Convert PDF to DOCX"](conversion/net/images/convert-pdf-to-docx.png)](https://products.groupdocs.app/conversion/pdf-to-docx)
