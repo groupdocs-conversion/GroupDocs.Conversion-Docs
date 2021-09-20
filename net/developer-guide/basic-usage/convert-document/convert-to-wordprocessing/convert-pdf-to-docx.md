@@ -15,7 +15,7 @@ Converting PDF to Microsoft Word DOCX file is one of the most used solutions whe
 
 DOCX is an updated version of the DOC file format, which is much more popular and accessible than its predecessor. Unlike the binary nature of DOC files, the DOCX file is a combination of XML and binary files, and usually has a smaller document size. DOCX format is supported by Microsoft Office Word 2007 (and later versions), Open Office and many other document processing applications.
 
-To convert PDF to DOCX file with default settings just call `Convert` method like shown below:
+To convert PDF to DOCX file in C# with default settings just call `Convert` method like shown below:
 
 ```csharp
 // Load the source PDF file

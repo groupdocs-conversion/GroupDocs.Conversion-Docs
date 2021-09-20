@@ -2,7 +2,7 @@
 id: convert-epub-to-pdf
 url: conversion/net/convert-epub-to-pdf
 title: Convert EPUB to PDF
-description: "Convert e-books and digital publication files to PDF in C# easily. Learn this guide that shows EPUB  to PDF conversion in a few simple steps."
+description: "Convert e-books and digital publication files to PDF in C# easily. Learn this guide that shows EPUB to PDF conversion in a few simple steps."
 keywords: Convert EPUB to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
