@@ -2,7 +2,7 @@
 id: convert-igs-to-pdf
 url: conversion/net/convert-igs-to-pdf
 title: Convert IGS to PDF
-description: "IGS files can be accurately and precisely converted to PDF document using C# language. Check simple code snippet to know how to convert IGS to PDF using Groupdocs.Conversion for .NET library."
+description: "IGS files can be accurately and precisely converted to PDF document using C# language. Check a simple code snippet to know how to convert IGS to PDF using Groupdocs.Conversion for .NET library."
 keywords: Convert IGS to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False

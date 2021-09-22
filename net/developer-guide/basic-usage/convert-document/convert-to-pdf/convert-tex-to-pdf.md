@@ -2,7 +2,7 @@
 id: convert-tex-to-pdf
 url: conversion/net/convert-tex-to-pdf
 title: Convert TEX to PDF
-description: "LaTex and Tex files can be converted to PDF document using C# language. Check simple code snippet to know how to convert TEX to PDF using Groupdocs.Conversion for .NET library."
+description: "LaTex and Tex files can be converted to PDF document using C# language. Check a simple code snippet to know how to convert TEX to PDF using Groupdocs.Conversion for .NET library."
 keywords: Convert TEX to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
