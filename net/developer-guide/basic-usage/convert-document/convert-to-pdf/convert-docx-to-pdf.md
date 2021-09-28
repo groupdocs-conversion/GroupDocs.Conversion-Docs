@@ -2,15 +2,15 @@
 id: convert-docx-to-pdf
 url: conversion/net/convert-docx-to-pdf
 title: Convert DOCX to PDF
-description: "You can convert Microsoft Word DOCX file to PDF document in C# language. Just check our guide and use GroupDocs.Conversion for .NET to convert DOCX to PDF in a quick and intuitive way."
+description: "DOCX format represents Microsoft Word Open XML Document with .docx extension. Learn how to convert DOCX to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert DOCX to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-DOCX is a well-known format for Microsoft Word documents. Introduced from 2007 with the release of Microsoft Office 2007, the structure of this new Document format was changed from plain binary to a combination of XML and binary files. Docx files can be opened with Word 2007 and later versions, but not with the earlier versions of MS Word which support DOC file extensions.
+Docx is well-known format for Microsoft Word documents. Introduced from 2007 with the release of Microsoft Office 2007, the structure of this new Document format was changed from plain binary to a combination of XML and binary files. Docx files can be opened with Word 2007 and lateral versions but not with the earlier versions of MS Word which support DOC file extensions.
 
-To convert DOCX to PDF file in C# just call `Convert` method like shown below:
+To convert from Microsoft Word Open XML Document (.docx) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source DOCX file

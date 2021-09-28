@@ -2,15 +2,15 @@
 id: convert-emf-to-pdf
 url: conversion/net/convert-emf-to-pdf
 title: Convert EMF to PDF
-description: "EMF files are Enhanced MetaFile image format that is commonly used for printing on Windows. Learn how to quickly convert graphics from EMF to PDF file using C#."
+description: "EMF format represents Enhanced Metafile Format with .emf extension. Learn how to convert EMF to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert EMF to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-Enhanced metafile format (EMF) stores graphical images device-independently. Metafiles of EMF comprises of variable-length records in chronological order that can render the stored image after parsing on any output device. These variable-length records can be definitions of enclosed objects, commands for drawing, and graphics properties critical to render the image accurately. When a device opens an EMF metafile using its own graphics environment, the proportions, dimensions, colors and other graphic properties of original image remains same regardless of the opening device platform.
+Enhanced metafile format (EMF) stores graphical images device-independently. Metafiles of EMF comprises of variable-length records in chronological order that can render the stored image after parsing on any output device. These variable-length records can be definitions of enclosed objects, commands for drawing, and graphics properties critical to render the image accurately.
 
-To convert EMF to PDF file in C# just call `Convert` method like shown below:
+To convert from Enhanced Metafile Format (.emf) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source EMF file

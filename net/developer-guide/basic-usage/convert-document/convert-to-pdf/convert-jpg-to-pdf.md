@@ -2,7 +2,7 @@
 id: convert-jpg-to-pdf
 url: conversion/net/convert-jpg-to-pdf
 title: Convert JPG to PDF
-description: "This article demonstrates how to convert JPG to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
+description: "JPG format represents Joint Photographic Expert Group Image File with .jpg extension. Learn how to convert JPG to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert JPG to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
@@ -10,7 +10,7 @@ hideChildren: False
 
 A JPEG is a type of image format that is saved using the method of lossy compression. The output image, as result of compression, is a trade-off between storage size and image quality. Users can adjust the compression level to achieve the desired quality level while at the same time reduce the storage size. Image quality is negligibly affected if 10:1 compression is applied to the image.  The higher the compression value, the higher the degradation in image quality.
 
-To convert JPG to PDF file in C# just call `Convert` method like shown below:
+To convert from Joint Photographic Expert Group Image File (.jpg) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source JPG file

@@ -28,6 +28,6 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 ### Live Demo
 
-GroupDocs.Conversion for .NET provides an online [**DICOM to PDF converter**](https://products.groupdocs.app/conversion/dicom-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
+GroupDocs.Conversion for .NET provides an online [**DICOM to PDF converter**](https://products.groupdocs.app/conversion/dcm-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert DICOM to PDF"](conversion/net/images/convert-dcm-to-pdf.png)](https://products.groupdocs.app/conversion/dicom-to-pdf)
+[!["Convert DICOM to PDF"](conversion/net/images/convert-dicom-to-pdf.png)](https://products.groupdocs.app/conversion/dcm-to-pdf)

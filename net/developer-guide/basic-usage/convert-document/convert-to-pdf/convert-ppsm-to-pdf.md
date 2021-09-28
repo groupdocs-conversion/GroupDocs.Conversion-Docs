@@ -2,7 +2,7 @@
 id: convert-ppsm-to-pdf
 url: conversion/net/convert-ppsm-to-pdf
 title: Convert PPSM to PDF
-description: "You can create PDF document from a Macro-enabled Slide Show files with .ppsm extension. Follow our guide and use GroupDocs.Conversion for .NET to convert PPSM to PDF file in C# language."
+description: "PPSM format represents Microsoft PowerPoint Slide Show with .ppsm extension. Learn how to convert PPSM to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert PPSM to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
@@ -10,7 +10,7 @@ hideChildren: False
 
 Files with PPSM extension represent Macro-enabled Slide Show file format created with Microsoft PowerPoint 2007 or higher. Another similar file format is PPTM which differs in opening with Microsoft PowerPoint in editable format instead of running as Slide Show. When run as slide show, the PPSM file shows the presentation slides with contents intact in the slide show and is in read-only mode by default. PPSM files can still be edited in Microsoft PowerPoint by opening it in PowerPoint.
 
-To convert PPSM to PDF file in C# just call `Convert` method like shown below:
+To convert from Microsoft PowerPoint Slide Show (.ppsm) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source PPSM file

@@ -2,15 +2,15 @@
 id: convert-svg-to-pdf
 url: conversion/net/convert-svg-to-pdf
 title: Convert SVG to PDF
-description: "Groupdocs.Conversion for .NET provides a convert SVG to PDF feature. Review this article to learn more about SVG format transformations and simple C# code snippet."
+description: "SVG format represents Scalable Vector Graphics File with .svg extension. Learn how to convert SVG to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert SVG to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-An SVG file is a Scalar Vector Graphics file that uses XML based text format for describing the appearance of an image. The word Scalable refers to the fact that the SVG can be scaled to different sizes without losing any quality. Text-based description of such files makes them independent of resolution. It is one of the most used formats for building a website and print graphics in order to achieve scalability. The format can only be used for two-dimensional graphics though. SVG files can be viewed/opened in almost all modern browsers including Chrome, Internet Explorer, Firefox, and Safari.
+SVG files are Scalable Vector Graphics Files that use XML based text format for describing the appearance of image. The word Scalable refers to the fact that the SVG can be scaled to different sizes without losing any quality. Text based description of such files make them independent of resolution. It is one of the mostly used format for building website and print graphics in order to achieve scalability.
 
-To convert SVG to PDF file in C# just call `Convert` method like shown below:
+To convert from Scalable Vector Graphics File (.svg) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source SVG file

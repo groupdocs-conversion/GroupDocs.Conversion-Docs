@@ -2,15 +2,15 @@
 id: convert-stl-to-pdf
 url: conversion/net/convert-stl-to-pdf
 title: Convert STL to PDF
-description: "This guide explains how to convert stereolithography STL file to PDF document using C# and GroupDocs.Conversion for .NET library."
+description: "STL format represents Stereolithography with .stl extension. Learn how to convert STL to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert STL to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-STL, abbreviation for stereolithography, is an interchangeable file format that represents 3-dimensional surface geometry. The file format finds its usage in several fields such as rapid prototyping, 3D printing and computer-aided manufacturing. It represents a surface as a series of small triangles, known as facets, where each facet is described by a perpendicular direction and three points representing the vertices of the triangle. Resultant data is used by applications to determine the cross section of the 3D shape to be built by the fabber. There is no information available in the STL file format for representation of colour, texture or other common CAD model attributes.
+STL, an abbreviation for stereolithography, is an interchangeable file format that represents 3-dimensional surface geometry. The file format finds its usage in several fields such as rapid prototyping, 3D printing, and computer-aided manufacturing. It represents a surface as a series of small triangles, known as facets, where each facet is described by a perpendicular direction and three points representing the vertices of the triangle.
 
-To convert STL to PDF file in C# just call `Convert` method like shown below:
+To convert from Stereolithography (.stl) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source STL file

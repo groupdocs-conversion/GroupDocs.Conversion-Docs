@@ -2,15 +2,15 @@
 id: convert-vcf-to-pdf
 url: conversion/net/convert-vcf-to-pdf
 title: Convert VCF to PDF
-description: "Virtual Card Format or vCard is a digital file format for storing contact information .vcf extension. You may easily convert VCF files to PDF format in C# with Groupdocs.Conversion for .NET."
+description: "VCF format represents vCard File with .vcf extension. Learn how to convert VCF to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert VCF to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-VCF (Virtual Card Format) or vCard is a digital file format for storing contact information. The format is widely used for data interchange among popular information exchange applications. Most operating systems such as Windows and MacOS come with default applications to create and open these files. A single VCF file can contain contact information for one or multiple contacts. A VCF file usually contains information such as contact’s name, address, phone number, email, birthday, photographs and audio in addition to a number of other fields. Being supported by email clients and services, there is no loss of data during the transfer of contacts via using the vCard format. The media type for VCF file format is text/vcard.
+VCF (Virtual Card Format) or vCard is a digital file format for storing contact information. The format is widely used for data interchange among popular information exchange applications. Most operating systems such as Windows and macOS come with default applications to create and open these files. A single VCF file can contain contact information for one or multiple contacts.
 
-To convert VCF to PDF file in C# just call `Convert` method like shown below:
+To convert from vCard File (.vcf) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source VCF file

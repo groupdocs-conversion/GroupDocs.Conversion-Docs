@@ -2,15 +2,15 @@
 id: convert-emz-to-pdf
 url: conversion/net/convert-emz-to-pdf
 title: Convert EMZ to PDF
-description: "When it comes to convert EMZ metafile to PDF or any other format Groupdocs.Conversion for .NET is a solution. Use your favourite C# language and turn EMZ to PDF in a plain and simple approach."
+description: "EMZ format represents Enhanced Windows Metafile Compressed with .emz extension. Learn how to convert EMZ to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert EMZ to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-A file with .emz extension is a compressed container of Enhanced Metafile (EML file). These are compressed using the GZIP compression technique which is the commonly used compression method on UNIX and LINUX operating systems. Unlink ZIP (/compression/zip/), GZIP compresses the archive as a whole instead of compressing individual files. EMZ files are smaller in size as compared to the EMF files and help in fast transfer during online file sharing. Some of the applications that can open EMZ files include Microsoft Visio 2019, Microsoft Office 2019, XnView MP, and File Viewer Plus.
+A file with .emz extension is a compressed container of Enhanced Metafile (.emf file). It follows GZIP compression algorithm and takes less storage space due to compression. The small file size makes it more easy to transfer EMZ files over the network.
 
-To convert EMZ to PDF file in C# just call `Convert` method like shown below:
+To convert from Enhanced Windows Metafile Compressed (.emz) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source EMZ file

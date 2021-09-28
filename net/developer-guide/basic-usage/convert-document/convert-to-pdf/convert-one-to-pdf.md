@@ -2,15 +2,15 @@
 id: convert-one-to-pdf
 url: conversion/net/convert-one-to-pdf
 title: Convert ONE to PDF
-description: "Converting Microsoft OneNote files to PDF is so easy and straightforward with Groupdocs.Conversion for .NET. Just a few lines of C# code to convert ONE note file to PDF document, check our guide to learn how."
+description: "ONE format represents Microsoft OneNote File Format with .one extension. Learn how to convert ONE to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert ONE to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-File represented by .ONE extension are created by Microsoft OneNote application. OneNote lets you gather information using the application as if you are using your draft pad for taking notes. OneNote files can contain different elements that can be placed at non-fixed locations on document pages. These elements may contain text, digitized handwriting, and objects copied from other applications including images, drawings and multimedia (audio/video) clips. Microsoft now offers online version of OneNote as part of Office365 where Notes can be shared with other OneNote users over the internet.
+Files with .ONE extension are created by Microsoft OneNote application. OneNote lets you gather information using the application as if you are using your draftpad for taking notes. OneNote files can contain different elements that can be placed at non-fixed locations on document pages. These elements may contain text, digitized handwriting, and objects copied from other applications including images, drawings and multimedia (audio/video) clips.
 
-To convert ONE to PDF file in C# just call `Convert` method like shown below:
+To convert from Microsoft OneNote File Format (.one) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source ONE file

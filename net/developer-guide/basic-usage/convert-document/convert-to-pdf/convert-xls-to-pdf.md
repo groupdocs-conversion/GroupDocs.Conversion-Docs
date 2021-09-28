@@ -2,15 +2,15 @@
 id: convert-xls-to-pdf
 url: conversion/net/convert-xls-to-pdf
 title: Convert XLS to PDF
-description: "Converting XLS spreadsheet to PDF file is as simple as writing several lines of C# code using GroupDocs.Conversion for .NET. Check this guide for Microsoft Excel 97-2003 XLS format description and complete code to perform XLS to PDF conversion."
+description: "XLS format represents Microsoft Excel Binary File Format with .xls extension. Learn how to convert XLS to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert XLS to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-Files with XLS extension represent Excel Binary File Format. Such files can be created by Microsoft Excel as well as other similar spreadsheet programs such as OpenOffice Calc or Apple Numbers. File saved by Excel is known as Workbook where each workbook can have one or more worksheets. Data is stored and displayed to users in table format in worksheet and can span numeric values, text data, formulas, external data connections, images, and charts. Applications like Microsoft Excel lets you export workbook data to several different formats including PDF, CSV, XLSX, TXT, HTML, XPS, and several others. The XLS file format was replaced with a more open and structured format, XLSX, with the release of Microsoft Excel 2007. The latest versions still provide support for creating and reading XLS files, though XLSX is the first choice of use now.
+Files with XLS extension represent Excel Binary File Format. Such files can be created by Microsoft Excel as well as other similar spreadsheet programs such as OpenOffice Calc or Apple Numbers. File saved by Excel are known as Workbook where each workbook can have one or more worksheets. Data is stored and displayed to users in table format in worksheet and can span numeric values, text data, formulas, external data connections, images and charts.
 
-To convert XLS to PDF file in C# just call `Convert` method like shown below:
+To convert from Microsoft Excel Binary File Format (.xls) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source XLS file

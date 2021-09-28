@@ -2,15 +2,15 @@
 id: convert-epub-to-pdf
 url: conversion/net/convert-epub-to-pdf
 title: Convert EPUB to PDF
-description: "Convert e-books and digital publication files to PDF in C# easily. Learn this guide that shows EPUB to PDF conversion in a few simple steps."
+description: "EPUB format represents Digital E-Book File Format with .epub extension. Learn how to convert EPUB to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert EPUB to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-EPUB files are e-book format files that provide a standard digital publication format for publishers and consumers. The format has been so common by now that it is supported by many e-readers and software applications. For example, on Mac OS, the pre-installed Books software provides the support for opening such files. In addition, there are a lot of compatible software available for smartphones, tablets and computers.
+Files with .EPUB extension are an e-book file format that provide a standard digital publication format for publishers and consumers. The format has been so common by now that it is supported by many e-readers and software applications. For example, on Mac OS, the pre-installed Books software provides the support for opening such files. In addition, there are a lot of compatible software available for smartphones, tablets and computers.
 
-To convert EPUB to PDF file in C# just call `Convert` method like shown below:
+To convert from Digital E-Book File Format (.epub) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source EPUB file

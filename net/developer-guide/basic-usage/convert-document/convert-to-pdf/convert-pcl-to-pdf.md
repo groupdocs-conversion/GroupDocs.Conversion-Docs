@@ -2,15 +2,15 @@
 id: convert-pcl-to-pdf
 url: conversion/net/convert-pcl-to-pdf
 title: Convert PCL to PDF
-description: "Check this guide to know more about PCL files to PDF format conversion in C# language. Use GroupDocs.Conversion for .NET to transform printing graphics to PDF documents or other file types."
+description: "PCL format represents Printer Command Language Document with .pcl extension. Learn how to convert PCL to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert PCL to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-PCL stands for Printer Command Language which is a Page Description Language introduced by Hewlett Packard (HP). HP created PCL to provide an efficient way for controlling printer features across many different printing devices. The format was originally developed for HP’s dot matrix and Inkjet printers, but has been part of various thermal, matrix and page printers with the passage of time. The format underwent several different revisions, resulting in different versions where each version was enhanced to meet the demands of time with respect to the printer control features. Today, PCL is the most widely spread printer language in the laster printer market.
+PCL stands for Printer Command Language which is a Page Description Language introduced by Hewlett Packard (HP). HP created PCL to provide an efficient way of controlling printer features across many different printing devices. The format was originally developed for HP’s dot-matrix and Inkjet printers but has been part of various thermal, matrix, and page printers with the passage of time. The format underwent several different revisions, resulting in different versions where each version was enhanced to meet the demands of time with respect to the printer control features
 
-To convert PCL to PDF file in C# just call `Convert` method like shown below:
+To convert from Printer Command Language Document (.pcl) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source PCL file

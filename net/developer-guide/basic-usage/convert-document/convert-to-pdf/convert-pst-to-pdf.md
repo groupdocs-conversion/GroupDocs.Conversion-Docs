@@ -2,15 +2,15 @@
 id: convert-pst-to-pdf
 url: conversion/net/convert-pst-to-pdf
 title: Convert PST to PDF
-description: "Converting PST to PDF file is as simple as writing several lines of C# code using GroupDocs.Conversion for .NET. Check this guide for Outlook Personal Storage file description and complete code to perform PST to PDF conversion."
+description: "PST format represents Personal Storage File with .pst extension. Learn how to convert PST to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert PST to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-Files with .pst extension represent Outlook Personal Storage Files (also called Personal Storage Table) that store variety of user information. User information is stored in folders of different types that include emails, calendar items, notes, contacts, and several other file formats. PST files are used for archiving emailing data offline that can be later loaded and viewed in various applications.
+Files with .PST extension represent Outlook Personal Storage Files (also called Personal Storage Table) that store variety of user information. User information is stored in folders of different types that include emails, calendar items, notes, contacts, and several other file formats. PST files are used for archiving emailing data offline that can be later loaded and viewed in various applications.
 
-To convert PST to PDF file in C# just call `Convert` method like shown below:
+To convert from Personal Storage File (.pst) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source PST file

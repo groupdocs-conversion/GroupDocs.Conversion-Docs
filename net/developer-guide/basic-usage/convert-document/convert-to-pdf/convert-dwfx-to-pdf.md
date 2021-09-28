@@ -2,7 +2,7 @@
 id: convert-dwfx-to-pdf
 url: conversion/net/convert-dwfx-to-pdf
 title: Convert DWFX to PDF
-description: "Learn how to convert Autodesk DWFX drawings to PDF files using a few lines of C# code. Groupdocs.Conversion for .NET provides an ability to convert drawings, images and graphics to PDF and many other file formats in a quick and accurate way."
+description: "DWFX format represents Design Web Format XPS with .dwfx extension. Learn how to convert DWFX to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert DWFX to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
@@ -10,7 +10,7 @@ hideChildren: False
 
 A DWFx (Design Web Format XPS) is a a formatted representation of 2D/3D drawing as XPS document. It contains graphics and text as part of design data. It is the newest version of DWF file format and can be viewed and printed with the Microsoft XPS Viewer. The XPS nature of these files lets you share the design data with reviewers without requiring them to install Autodesk Design Review. Similar to DWF, DWFx is developed by Autodesk in compressed format to make transmission over the internet suitable. A single DWFx file can contain one or multiple drawings and sheet sets.
 
-To convert DWFX to PDF file in C# just call `Convert` method like shown below:
+To convert from Design Web Format XPS (.dwfx) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source DWFX file

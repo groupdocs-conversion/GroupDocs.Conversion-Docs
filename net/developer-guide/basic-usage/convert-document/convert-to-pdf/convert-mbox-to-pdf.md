@@ -2,7 +2,7 @@
 id: convert-mbox-to-pdf
 url: conversion/net/convert-mbox-to-pdf
 title: Convert MBOX to PDF
-description: "You can create PDF document from a MBOX email container in C# language. Just check our guide and use GroupDocs.Conversion for .NET to convert MBOX to PDF in a quick and intuitive way."
+description: "MBOX format represents Email Mailbox File with .mbox extension. Learn how to convert MBOX to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert MBOX to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
@@ -10,7 +10,7 @@ hideChildren: False
 
 MBox file format is a generic term that represents a container for collection of electronic mail messages. The messages are stored inside the container along with their attachments. Messages from an entire folder are saved in a single database file and new messages are appended to the end of the file. Numerous applications and API provide support for MBox file format such as Apple Mail and Mozilla Thunderbird.
 
-To convert MBOX to PDF file in C# just call `Convert` method like shown below:
+To convert from Email Mailbox File (.mbox) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source MBOX file

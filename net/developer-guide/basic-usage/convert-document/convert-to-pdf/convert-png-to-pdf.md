@@ -2,7 +2,7 @@
 id: convert-png-to-pdf
 url: conversion/net/convert-png-to-pdf
 title: Convert PNG to PDF
-description: "Learn how to seamlessly convert a PNG image into PDF file with a couple of simple steps. Use GroupDocs.Conversion for .NET to transform images into PDF and many other file types."
+description: "PNG format represents Portable Network Graphic with .png extension. Learn how to convert PNG to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert PNG to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
@@ -10,7 +10,7 @@ hideChildren: False
 
 PNG, Portable Network Graphics, refers to a type of raster image file format that use loseless compression. This file format was created as a replacement of Graphics Interchange Format (GIF) and has no copyright limitations. However, PNG file format does not support animations. PNG file format supports loseless image compression that makes it popular among its users. With the passage of time, PNG has evolved as one of the mostly used image file format.
 
-To convert PNG to PDF file in C# just call `Convert` method like shown below:
+To convert from Portable Network Graphic (.png) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source PNG file

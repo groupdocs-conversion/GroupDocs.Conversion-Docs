@@ -2,16 +2,15 @@
 id: convert-mhtml-to-pdf
 url: conversion/net/convert-mhtml-to-pdf
 title: Convert MHTML to PDF
-description: "Convert web-pages in MHT or MHTML format to PDF format using C# programming language and GroupDocs.Conversion for .NET."
+description: "MHTML format represents MIME Encapsulation of Aggregate HTML with .mhtml extension. Learn how to convert MHTML to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert MHTML to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-Files with MHTML extension represent a web page archive format that can be created by a number of different applications. It stores the HTML of the webpage, as well as linked resources in the webpage, which may include CSS, JavaScript, images, and audio files. MHTML files are primarily used by web developers to save the current state of a webpage for archival purposes.
-MHTML files can be opened in a variety of applications such as browsers and Microsoft Word.
+Files with MHTML extension represent a web page archive format that can be created by a number of different applications. The format is known as archive format because it saves the web HTML code and associated resources in a single file. These resources include anything linked to the webpage such as images, applets, animations, audio files and so on. MHTML files can be opened in a variety of applications such as Internet Explorer and Microsoft Word.
 
-To convert MHTML to PDF file in C# just call `Convert` method like shown below:
+To convert from MIME Encapsulation of Aggregate HTML (.mhtml) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source MHTML file

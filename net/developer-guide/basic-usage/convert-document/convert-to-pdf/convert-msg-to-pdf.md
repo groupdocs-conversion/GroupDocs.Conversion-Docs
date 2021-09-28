@@ -2,15 +2,15 @@
 id: convert-msg-to-pdf
 url: conversion/net/convert-msg-to-pdf
 title: Convert MSG to PDF
-description: "Turn MSG email files to PDF documents using a few lines of C# code. With GroupDocs.Conversion for .NET features it is much easier than ever to convert MSG to PDF without much effort."
+description: "MSG format represents Microsoft Outlook Email Format with .msg extension. Learn how to convert MSG to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert MSG to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-MSG is a file format used by Microsoft Outlook and Exchange to store email messages, contact, appointment, or other tasks. Such messages may contain one or more email fields, with the sender, recipient, subject, date, and message body, or contact information, appointment particulars, and one or more task specifications. The properties that constitute the Message object, including are also a part of the MSG file.  MSG file has headers, main message body, and hyperlinks as plain ASCII text. MSG files are also suitable with the programs that need Microsoft’s Messaging Applications Programming Interface (MAPI).
+MSG is a file format used by Microsoft Outlook and Exchange to store email messages, contact, appointment, or other tasks. Such messages may contain one or more email fields, with the sender, recipient, subject, date, and message body, or contact information, appointment particulars, and one or more task specifications. The properties that constitute the Message object, including are also a part of the MSG file.
 
-To convert MSG to PDF file in C# just call `Convert` method like shown below:
+To convert from Microsoft Outlook Email Format (.msg) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source MSG file

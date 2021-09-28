@@ -2,15 +2,15 @@
 id: convert-igs-to-pdf
 url: conversion/net/convert-igs-to-pdf
 title: Convert IGS to PDF
-description: "IGS files can be accurately and precisely converted to PDF document using C# language. Check a simple code snippet to know how to convert IGS to PDF using Groupdocs.Conversion for .NET library."
+description: "IGS format represents Initial Graphics Exchange Specification (IGES) with .igs extension. Learn how to convert IGS to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert IGS to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-A file with .igs (Initial Graphics Exchange) extension is a 2D-3D design exchange file format that is independent of source or destination file format specifications used by CAD applications. It is be used to exchange design information about circuit diagrams, wireframe, freeform surface between two independent systems. It is similar to IGES and is primary requirement of manufacturers for pricing and designing molds for your product. IGS has most recently been replaced by the newer STEP(.STP) file format. IGS files can be opened by applications such as Autodesk, FreeCAD, CADEX CAD Exchanger and other similar applications.
+A file with .igs (Initial Graphics Exchange) extension is a 2D-3D design exchange file format that is independent of source or destination file format specifications used by CAD applications. It is used to exchange design information about circuit diagrams, wireframes, the freeform surfaces between two independent systems. IGS files can be opened by applications such as Autodesk, FreeCAD, CADEX CAD Exchanger, and other similar applications.
 
-To convert IGS to PDF file in C# just call `Convert` method like shown below:
+To convert from Initial Graphics Exchange Specification (IGES) (.igs) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source IGS file

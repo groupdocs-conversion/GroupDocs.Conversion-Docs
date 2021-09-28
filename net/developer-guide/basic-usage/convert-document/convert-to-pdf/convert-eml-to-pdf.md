@@ -2,15 +2,15 @@
 id: convert-eml-to-pdf
 url: conversion/net/convert-eml-to-pdf
 title: Convert EML to PDF
-description: "EML files can be converted to PDF format lightning fast using couple of C# code lines and powerful features of GroupDocs.Conversion for .NET. Try to convert EML to PDF file programmatically for free right now."
+description: "EML format represents E-Mail Message File with .eml extension. Learn how to convert EML to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert EML to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-EML file format represents email messages saved using Outlook and other relevant applications. Almost all emailing clients support this file format for its compliance with RFC-822 Internet Message Format Standard. Microsoft Outlook is the default software for opening EML message types. EML files can be used for saving to disc as well as sending out to recipients using communication protocols.
+EML file format represents email messages saved using Outlook and other relevant applications. Almost all emailing clients support this file format for its compliance with RFC-822 Internet Message Format Standard. Microsoft Outlook is default software for opening EML message types. EML files can be used for saving to disc as well as sending out to recipients using communication protocols.
 
-To convert EML to PDF file in C# just call `Convert` method like shown below:
+To convert from E-Mail Message File (.eml) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source EML file

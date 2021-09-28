@@ -2,15 +2,15 @@
 id: convert-bmp-to-pdf
 url: conversion/net/convert-bmp-to-pdf
 title: Convert BMP to PDF
-description: "This guide explains how to convert BMP image to PDF document using C# with help of GroupDocs.Conversion for .NET."
+description: "BMP format represents Bitmap File Format with .bmp extension. Learn how to convert BMP to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert BMP to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-BMP files are  used to store bitmap digital images. Which are independent of graphics adapter and are also called device independent bitmap (DIB) file format. This independency allows to open such files on different platforms such as Microsoft Windows and Mac. The BMP file format can store data as two-dimensional digital images in both monochrome as well as color format with various colour depths.
+Files having extension .BMP represent Bitmap Image files that are used to store bitmap digital images. These images are independent of graphics adapter and are also called device independent bitmap (DIB) file format. This independency serves the purpose of opening the file on multiple platforms such as Microsoft Windows and Mac. The BMP file format can store data as two-dimensional digital images  in both monochrome as well as color format with various colour depths.
 
-To convert BMP to PDF file in C# just call `Convert` method like shown below:
+To convert from Bitmap File Format (.bmp) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source BMP file

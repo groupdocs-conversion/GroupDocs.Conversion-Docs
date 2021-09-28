@@ -2,15 +2,15 @@
 id: convert-mpp-to-pdf
 url: conversion/net/convert-mpp-to-pdf
 title: Convert MPP to PDF
-description: "Learn how to convert Microsoft Project data file to PDF format using a few lines of C# code. Groupdocs.Conversion for .NET provides an ability to convert MPP to PDF quickly and with attention to details."
+description: "MPP format represents Microsoft Project File with .mpp extension. Learn how to convert MPP to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert MPP to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-A file with a .mpp extension is a Microsoft Project data file that stores information related to project management in an integrated manner. Microsoft has developed this proprietary file format to make it compatible with Microsoft Project (MSP), their project management software product. Other than MPP, MSP can work with project XML schema. Many applications and APIs allow MPPs to be converted to other file formats. Microsoft now has an online Project Server where project management files can be uploaded for collaboration by multiple users.
+A file with MPP extension is Microsoft Project data file that stores information related to project management in an integrated manner. It is proprietary file format developed by Microsoft as file format for Microsoft Project (MSP) which is a project management application software. Besides MPP, MSP supports other file formats as well like project XML schema. Several APIs and applications provide the facility to convert MPP file format to others.
 
-To convert MPP to PDF file in C# just call `Convert` method like shown below:
+To convert from Microsoft Project File (.mpp) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
 
 ```csharp
 // Load the source MPP file
