@@ -10,14 +10,21 @@ hideChildren: False
 
 OST or Offline Storage Files represent the user's mailbox data in offline mode on the local machine upon registration with Exchange Server using Microsoft Outlook. It is automatically created on the first use of Microsoft Outlook upon connectivity with the server. Once the file is created, the data is synchronized with the email server so that it is available offline as well in case of disconnectivity from the email server.
 
-To convert from Outlook Offline Storage File (.ost) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
+## Steps to convert OST to PDF in C#
+
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the OST file to PDF format in an easy and intuitive way just using a few lines of code as described below:
+
+* Create an instance of `Converter` class and pass source OST file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Create an instance of `PdfConvertOptions` class.
+* Call `Converter` class `Convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
 ```csharp
 // Load the source OST file
-using (Converter converter = new Converter("sample.ost"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.ost"))
 {
+    // Set the convert options for PDF format
     PdfConvertOptions options = new PdfConvertOptions();
-    // Save converted PDF file
+    // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
 ```

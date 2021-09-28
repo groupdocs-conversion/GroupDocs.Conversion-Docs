@@ -10,14 +10,21 @@ hideChildren: False
 
 A JPEG is a type of image format that is saved using the method of lossy compression. The output image, as result of compression, is a trade-off between storage size and image quality. Users can adjust the compression level to achieve the desired quality level while at the same time reduce the storage size. Image quality is negligibly affected if 10:1 compression is applied to the image.  The higher the compression value, the higher the degradation in image quality.
 
-To convert from Joint Photographic Expert Group Image File (.jpg) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
+## Steps to convert JPG to PDF in C#
+
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the JPG file to PDF format in an easy and intuitive way just using a few lines of code as described below:
+
+* Create an instance of `Converter` class and pass source JPG file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Create an instance of `PdfConvertOptions` class.
+* Call `Converter` class `Convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
 ```csharp
 // Load the source JPG file
-using (Converter converter = new Converter("sample.jpg"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.jpg"))
 {
+    // Set the convert options for PDF format
     PdfConvertOptions options = new PdfConvertOptions();
-    // Save converted PDF file
+    // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
 ```

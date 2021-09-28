@@ -10,14 +10,21 @@ hideChildren: False
 
 MPX, Microsoft Exchange File Format, is an ASCII file format for transferring project information between Microsoft Project (MSP) and other applications that support the MPX file format such as Primavera Project Planner, Sciforma, and Timberline Precision Estimating. The MPX file format allows you to transfer project information that cannot appear in a table, such as detailed resource assignment information, calendar information, or information in the Project Info dialog box.
 
-To convert from Microsoft Project Exchange File (.mpx) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
+## Steps to convert MPX to PDF in C#
+
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the MPX file to PDF format in an easy and intuitive way just using a few lines of code as described below:
+
+* Create an instance of `Converter` class and pass source MPX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Create an instance of `PdfConvertOptions` class.
+* Call `Converter` class `Convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
 ```csharp
 // Load the source MPX file
-using (Converter converter = new Converter("sample.mpx"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.mpx"))
 {
+    // Set the convert options for PDF format
     PdfConvertOptions options = new PdfConvertOptions();
-    // Save converted PDF file
+    // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
 ```

@@ -10,14 +10,21 @@ hideChildren: False
 
 Files with IFC extension refer to  Industry Foundation Classes (IFC) file format that establishes international standards to import and export building objects and their properties. This file format provides interoperability between different software applications. Specifications for this file format are developed and maintained by buildingSMART International as its Data Standard.
 
-To convert from Industry Foundation Classes (IFC) File Format (.ifc) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
+## Steps to convert IFC to PDF in C#
+
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the IFC file to PDF format in an easy and intuitive way just using a few lines of code as described below:
+
+* Create an instance of `Converter` class and pass source IFC file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Create an instance of `PdfConvertOptions` class.
+* Call `Converter` class `Convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
 ```csharp
 // Load the source IFC file
-using (Converter converter = new Converter("sample.ifc"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.ifc"))
 {
+    // Set the convert options for PDF format
     PdfConvertOptions options = new PdfConvertOptions();
-    // Save converted PDF file
+    // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
 ```

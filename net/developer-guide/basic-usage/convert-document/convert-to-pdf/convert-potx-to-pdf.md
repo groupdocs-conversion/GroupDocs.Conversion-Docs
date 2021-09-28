@@ -10,14 +10,21 @@ hideChildren: False
 
 Files with .POTX extension represent Microsoft PowerPoint template presentations that are created with Microsoft PowerPoint 2007 and above. This format was created to replace the POT file format that is based on the binary file format and is supported with PowerPoint 97-2003. The files generated can be used to create presentations that have same layout and other settings required to be applied to new files. These settings can include styles, backgrounds, colour palette, fonts and defaults. Such files are generated in order to create ready-to-use template files for official use.
 
-To convert from Microsoft PowerPoint Open XML Template (.potx) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
+## Steps to convert POTX to PDF in C#
+
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the POTX file to PDF format in an easy and intuitive way just using a few lines of code as described below:
+
+* Create an instance of `Converter` class and pass source POTX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Create an instance of `PdfConvertOptions` class.
+* Call `Converter` class `Convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
 ```csharp
 // Load the source POTX file
-using (Converter converter = new Converter("sample.potx"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.potx"))
 {
+    // Set the convert options for PDF format
     PdfConvertOptions options = new PdfConvertOptions();
-    // Save converted PDF file
+    // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
 ```

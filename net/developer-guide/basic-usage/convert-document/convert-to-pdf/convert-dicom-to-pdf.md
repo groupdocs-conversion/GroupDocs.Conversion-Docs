@@ -2,22 +2,29 @@
 id: convert-dicom-to-pdf
 url: conversion/net/convert-dicom-to-pdf
 title: Convert DICOM to PDF
-description: "Groupdocs.Conversion for .NET library provides an easy and intuitive way to convert medical images in DICOM format to PDF files. Check this article to perform DCM to PDF conversion in C#."
+description: "DICOM format represents Digital Imaging and Communications in Medicine with .dicom extension. Learn how to convert DICOM to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert DICOM to PDF in C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-DICOM is the acronym for Digital Imaging and Communications in Medicine and pertains to the field of Medical Informatics. DICOM is used for the integration of medical imaging devices like printers, servers, scanners etc from various vendors and also contains identification data of each patient for uniqueness. DICOM files can be shared between two parties if they are capable of receiving image data in DICOM format. The communication part of DICOM is application layer protocol and uses TCP/IP to communicate between entities. Versions supported by web services are 1.0, 1.1, 2 or later.
+DICOM is the acronym for Digital Imaging and Communications in Medicine and pertains to the field of Medical Informatics. DICOM is the combination of file format definition and a network communications protocol. DICOM uses the .DCM extension. .DCM exists in two different formats i.e. format 1.x and format 2.x. DCM Format 1.x is further available in two versions normal and extended.
 
-To convert DICOM to PDF file in C# just call `Convert` method like shown below:
+## Steps to convert DICOM to PDF in C#
+
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the DICOM file to PDF format in an easy and intuitive way just using a few lines of code as described below:
+
+* Create an instance of `Converter` class and pass source DICOM file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Create an instance of `PdfConvertOptions` class.
+* Call `Converter` class `Convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
 ```csharp
 // Load the source DICOM file
-using (Converter converter = new Converter("sample.dcm"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.dicom"))
 {
+    // Set the convert options for PDF format
     PdfConvertOptions options = new PdfConvertOptions();
-    // Save converted PDF file
+    // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
 ```

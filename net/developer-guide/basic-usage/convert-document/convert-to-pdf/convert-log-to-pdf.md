@@ -10,14 +10,21 @@ hideChildren: False
 
 A log file is a file that records either events that occur in an operating system or other software runs.
 
-To convert from Log File (.log) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
+## Steps to convert LOG to PDF in C#
+
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the LOG file to PDF format in an easy and intuitive way just using a few lines of code as described below:
+
+* Create an instance of `Converter` class and pass source LOG file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Create an instance of `PdfConvertOptions` class.
+* Call `Converter` class `Convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
 ```csharp
 // Load the source LOG file
-using (Converter converter = new Converter("sample.log"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.log"))
 {
+    // Set the convert options for PDF format
     PdfConvertOptions options = new PdfConvertOptions();
-    // Save converted PDF file
+    // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
 ```

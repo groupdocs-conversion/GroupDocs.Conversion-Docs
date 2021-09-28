@@ -10,14 +10,21 @@ hideChildren: False
 
 FODP is a file format for the presentations saved in OpenDocument format.
 
-To convert from OpenDocument Flat XML Presentation (.fodp) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
+## Steps to convert FODP to PDF in C#
+
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the FODP file to PDF format in an easy and intuitive way just using a few lines of code as described below:
+
+* Create an instance of `Converter` class and pass source FODP file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Create an instance of `PdfConvertOptions` class.
+* Call `Converter` class `Convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
 ```csharp
 // Load the source FODP file
-using (Converter converter = new Converter("sample.fodp"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.fodp"))
 {
+    // Set the convert options for PDF format
     PdfConvertOptions options = new PdfConvertOptions();
-    // Save converted PDF file
+    // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
 ```

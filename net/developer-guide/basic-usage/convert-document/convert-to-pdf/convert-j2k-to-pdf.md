@@ -10,14 +10,21 @@ hideChildren: False
 
 A J2K file is an image that is compressed using the wavelet compression instead of DCT compression.
 
-To convert from JPEG 2000 Image (.j2k) to Portable Document (.pdf) in C# just call `Convert` method like shown below:
+## Steps to convert J2K to PDF in C#
+
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the J2K file to PDF format in an easy and intuitive way just using a few lines of code as described below:
+
+* Create an instance of `Converter` class and pass source J2K file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Create an instance of `PdfConvertOptions` class.
+* Call `Converter` class `Convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
 ```csharp
 // Load the source J2K file
-using (Converter converter = new Converter("sample.j2k"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.j2k"))
 {
+    // Set the convert options for PDF format
     PdfConvertOptions options = new PdfConvertOptions();
-    // Save converted PDF file
+    // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
 ```
