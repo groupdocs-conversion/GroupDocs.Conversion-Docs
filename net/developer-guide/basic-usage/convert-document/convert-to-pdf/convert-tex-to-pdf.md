@@ -33,7 +33,7 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.tex"))
 
 Please find more [use-cases and complete C# sources]({{< ref "conversion/net/developer-guide/examples-and-demos.md" >}}) of our backend and frontend examples and try them for free!
 
-### Live Demo
+### TEX to PDF Live Demo
 
 GroupDocs.Conversion for .NET provides an online [**TEX to PDF converter**](https://products.groupdocs.app/conversion/tex-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 

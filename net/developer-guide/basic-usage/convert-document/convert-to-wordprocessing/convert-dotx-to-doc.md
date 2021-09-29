@@ -33,7 +33,7 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.dotx"))
 
 Please find more [use-cases and complete C# sources]({{< ref "conversion/net/developer-guide/examples-and-demos.md" >}}) of our backend and frontend examples and try them for free!
 
-### Live Demo
+### DOTX to DOC Live Demo
 
 GroupDocs.Conversion for .NET provides an online [**DOTX to DOC converter**](https://products.groupdocs.app/conversion/dotx-to-doc), which allows you to try it for free and check conversion quality and accuracy.
 
