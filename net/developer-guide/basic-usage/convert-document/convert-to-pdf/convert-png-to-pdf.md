@@ -23,7 +23,7 @@ PNG, Portable Network Graphics, refers to a type of raster image file format tha
 using (var converter = new GroupDocs.Conversion.Converter("sample.png"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**PNG to PDF converter**](https://products.groupdocs.app/conversion/png-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert PNG to PDF"](conversion/net/images/convert-png-to-pdf.png)](https://products.groupdocs.app/conversion/png-to-pdf)
+[!["Convert PNG to PDF"](conversion/net/images/convert-to-pdf/convert-png-to-pdf.png)](https://products.groupdocs.app/conversion/png-to-pdf)

@@ -23,7 +23,7 @@ Files with .ONE extension are created by Microsoft OneNote application. OneNote 
 using (var converter = new GroupDocs.Conversion.Converter("sample.one"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**ONE to PDF converter**](https://products.groupdocs.app/conversion/one-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert ONE to PDF"](conversion/net/images/convert-one-to-pdf.png)](https://products.groupdocs.app/conversion/one-to-pdf)
+[!["Convert ONE to PDF"](conversion/net/images/convert-to-pdf/convert-one-to-pdf.png)](https://products.groupdocs.app/conversion/one-to-pdf)

@@ -23,7 +23,7 @@ A DWFx (Design Web Format XPS) is a a formatted representation of 2D/3D drawing 
 using (var converter = new GroupDocs.Conversion.Converter("sample.dwfx"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**DWFX to PDF converter**](https://products.groupdocs.app/conversion/dwfx-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert DWFX to PDF"](conversion/net/images/convert-dwfx-to-pdf.png)](https://products.groupdocs.app/conversion/dwfx-to-pdf)
+[!["Convert DWFX to PDF"](conversion/net/images/convert-to-pdf/convert-dwfx-to-pdf.png)](https://products.groupdocs.app/conversion/dwfx-to-pdf)

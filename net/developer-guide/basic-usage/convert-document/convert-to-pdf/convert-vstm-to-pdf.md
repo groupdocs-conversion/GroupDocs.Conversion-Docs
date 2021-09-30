@@ -23,7 +23,7 @@ Files with VSTM extension are template files created with Microsoft Visio that s
 using (var converter = new GroupDocs.Conversion.Converter("sample.vstm"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**VSTM to PDF converter**](https://products.groupdocs.app/conversion/vstm-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert VSTM to PDF"](conversion/net/images/convert-vstm-to-pdf.png)](https://products.groupdocs.app/conversion/vstm-to-pdf)
+[!["Convert VSTM to PDF"](conversion/net/images/convert-to-pdf/convert-vstm-to-pdf.png)](https://products.groupdocs.app/conversion/vstm-to-pdf)

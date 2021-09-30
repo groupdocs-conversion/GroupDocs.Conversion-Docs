@@ -23,7 +23,7 @@ File with .sxc extension is a spreadsheet created by StarOffice Calc.
 using (var converter = new GroupDocs.Conversion.Converter("sample.sxc"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**SXC to PDF converter**](https://products.groupdocs.app/conversion/sxc-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert SXC to PDF"](conversion/net/images/convert-sxc-to-pdf.png)](https://products.groupdocs.app/conversion/sxc-to-pdf)
+[!["Convert SXC to PDF"](conversion/net/images/convert-to-pdf/convert-sxc-to-pdf.png)](https://products.groupdocs.app/conversion/sxc-to-pdf)

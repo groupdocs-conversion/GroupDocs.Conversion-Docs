@@ -23,7 +23,7 @@ Computer Graphics Metafile (CGM) is free, platform-independent, international st
 using (var converter = new GroupDocs.Conversion.Converter("sample.cgm"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**CGM to PDF converter**](https://products.groupdocs.app/conversion/cgm-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert CGM to PDF"](conversion/net/images/convert-cgm-to-pdf.png)](https://products.groupdocs.app/conversion/cgm-to-pdf)
+[!["Convert CGM to PDF"](conversion/net/images/convert-to-pdf/convert-cgm-to-pdf.png)](https://products.groupdocs.app/conversion/cgm-to-pdf)

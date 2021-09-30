@@ -23,7 +23,7 @@ A file with .emz extension is a compressed container of Enhanced Metafile (.emf 
 using (var converter = new GroupDocs.Conversion.Converter("sample.emz"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**EMZ to PDF converter**](https://products.groupdocs.app/conversion/emz-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert EMZ to PDF"](conversion/net/images/convert-emz-to-pdf.png)](https://products.groupdocs.app/conversion/emz-to-pdf)
+[!["Convert EMZ to PDF"](conversion/net/images/convert-to-pdf/convert-emz-to-pdf.png)](https://products.groupdocs.app/conversion/emz-to-pdf)

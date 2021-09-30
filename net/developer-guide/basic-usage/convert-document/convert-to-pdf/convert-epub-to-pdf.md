@@ -23,7 +23,7 @@ Files with .EPUB extension are an e-book file format that provide a standard dig
 using (var converter = new GroupDocs.Conversion.Converter("sample.epub"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**EPUB to PDF converter**](https://products.groupdocs.app/conversion/epub-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert EPUB to PDF"](conversion/net/images/convert-epub-to-pdf.png)](https://products.groupdocs.app/conversion/epub-to-pdf)
+[!["Convert EPUB to PDF"](conversion/net/images/convert-to-pdf/convert-epub-to-pdf.png)](https://products.groupdocs.app/conversion/epub-to-pdf)

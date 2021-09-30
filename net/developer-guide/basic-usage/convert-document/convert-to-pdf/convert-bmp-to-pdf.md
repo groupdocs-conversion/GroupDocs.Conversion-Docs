@@ -23,7 +23,7 @@ Files having extension .BMP represent Bitmap Image files that are used to store 
 using (var converter = new GroupDocs.Conversion.Converter("sample.bmp"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**BMP to PDF converter**](https://products.groupdocs.app/conversion/bmp-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert BMP to PDF"](conversion/net/images/convert-bmp-to-pdf.png)](https://products.groupdocs.app/conversion/bmp-to-pdf)
+[!["Convert BMP to PDF"](conversion/net/images/convert-to-pdf/convert-bmp-to-pdf.png)](https://products.groupdocs.app/conversion/bmp-to-pdf)

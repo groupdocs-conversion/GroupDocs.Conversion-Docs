@@ -23,7 +23,7 @@ A Tab-Separated Values (TSV) file format represents data separated with tabs in 
 using (var converter = new GroupDocs.Conversion.Converter("sample.tsv"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**TSV to PDF converter**](https://products.groupdocs.app/conversion/tsv-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert TSV to PDF"](conversion/net/images/convert-tsv-to-pdf.png)](https://products.groupdocs.app/conversion/tsv-to-pdf)
+[!["Convert TSV to PDF"](conversion/net/images/convert-to-pdf/convert-tsv-to-pdf.png)](https://products.groupdocs.app/conversion/tsv-to-pdf)

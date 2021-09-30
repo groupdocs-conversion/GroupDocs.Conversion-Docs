@@ -23,7 +23,7 @@ SVG files are Scalable Vector Graphics Files that use XML based text format for 
 using (var converter = new GroupDocs.Conversion.Converter("sample.svg"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**SVG to PDF converter**](https://products.groupdocs.app/conversion/svg-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert SVG to PDF"](conversion/net/images/convert-svg-to-pdf.png)](https://products.groupdocs.app/conversion/svg-to-pdf)
+[!["Convert SVG to PDF"](conversion/net/images/convert-to-pdf/convert-svg-to-pdf.png)](https://products.groupdocs.app/conversion/svg-to-pdf)

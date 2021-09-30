@@ -23,7 +23,7 @@ VCF (Virtual Card Format) or vCard is a digital file format for storing contact 
 using (var converter = new GroupDocs.Conversion.Converter("sample.vcf"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**VCF to PDF converter**](https://products.groupdocs.app/conversion/vcf-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert VCF to PDF"](conversion/net/images/convert-vcf-to-pdf.png)](https://products.groupdocs.app/conversion/vcf-to-pdf)
+[!["Convert VCF to PDF"](conversion/net/images/convert-to-pdf/convert-vcf-to-pdf.png)](https://products.groupdocs.app/conversion/vcf-to-pdf)

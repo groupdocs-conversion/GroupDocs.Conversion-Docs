@@ -23,7 +23,7 @@ Files with PPTM extension are Macro-enabled Presentation files that are created 
 using (var converter = new GroupDocs.Conversion.Converter("sample.pptm"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**PPTM to PDF converter**](https://products.groupdocs.app/conversion/pptm-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert PPTM to PDF"](conversion/net/images/convert-pptm-to-pdf.png)](https://products.groupdocs.app/conversion/pptm-to-pdf)
+[!["Convert PPTM to PDF"](conversion/net/images/convert-to-pdf/convert-pptm-to-pdf.png)](https://products.groupdocs.app/conversion/pptm-to-pdf)

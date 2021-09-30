@@ -23,7 +23,7 @@ JPX is a JPEG 2000 extended file-format. JPEG 2000 is an improvement to the JPEG
 using (var converter = new GroupDocs.Conversion.Converter("sample.jpx"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**JPX to PDF converter**](https://products.groupdocs.app/conversion/jpx-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert JPX to PDF"](conversion/net/images/convert-jpx-to-pdf.png)](https://products.groupdocs.app/conversion/jpx-to-pdf)
+[!["Convert JPX to PDF"](conversion/net/images/convert-to-pdf/convert-jpx-to-pdf.png)](https://products.groupdocs.app/conversion/jpx-to-pdf)

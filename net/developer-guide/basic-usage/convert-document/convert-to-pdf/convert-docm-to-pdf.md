@@ -23,7 +23,7 @@ DOCM files are Microsoft Word 2007 or higher generated documents with the abilit
 using (var converter = new GroupDocs.Conversion.Converter("sample.docm"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**DOCM to PDF converter**](https://products.groupdocs.app/conversion/docm-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert DOCM to PDF"](conversion/net/images/convert-docm-to-pdf.png)](https://products.groupdocs.app/conversion/docm-to-pdf)
+[!["Convert DOCM to PDF"](conversion/net/images/convert-to-pdf/convert-docm-to-pdf.png)](https://products.groupdocs.app/conversion/docm-to-pdf)

@@ -23,7 +23,7 @@ DGN files are drawings created by and supported by CAD applications such as Micr
 using (var converter = new GroupDocs.Conversion.Converter("sample.dgn"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**DGN to PDF converter**](https://products.groupdocs.app/conversion/dgn-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert DGN to PDF"](conversion/net/images/convert-dgn-to-pdf.png)](https://products.groupdocs.app/conversion/dgn-to-pdf)
+[!["Convert DGN to PDF"](conversion/net/images/convert-to-pdf/convert-dgn-to-pdf.png)](https://products.groupdocs.app/conversion/dgn-to-pdf)

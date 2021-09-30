@@ -23,7 +23,7 @@ FODP is a file format for the presentations saved in OpenDocument format.
 using (var converter = new GroupDocs.Conversion.Converter("sample.fodp"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**FODP to PDF converter**](https://products.groupdocs.app/conversion/fodp-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert FODP to PDF"](conversion/net/images/convert-fodp-to-pdf.png)](https://products.groupdocs.app/conversion/fodp-to-pdf)
+[!["Convert FODP to PDF"](conversion/net/images/convert-to-pdf/convert-fodp-to-pdf.png)](https://products.groupdocs.app/conversion/fodp-to-pdf)

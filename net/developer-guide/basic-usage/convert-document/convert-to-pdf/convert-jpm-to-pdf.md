@@ -23,7 +23,7 @@ JPM is an extension to the JP2 format and was developed for multi-page documents
 using (var converter = new GroupDocs.Conversion.Converter("sample.jpm"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**JPM to PDF converter**](https://products.groupdocs.app/conversion/jpm-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert JPM to PDF"](conversion/net/images/convert-jpm-to-pdf.png)](https://products.groupdocs.app/conversion/jpm-to-pdf)
+[!["Convert JPM to PDF"](conversion/net/images/convert-to-pdf/convert-jpm-to-pdf.png)](https://products.groupdocs.app/conversion/jpm-to-pdf)

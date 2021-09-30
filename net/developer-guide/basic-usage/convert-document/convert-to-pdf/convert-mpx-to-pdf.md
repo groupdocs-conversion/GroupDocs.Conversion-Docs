@@ -23,7 +23,7 @@ MPX, Microsoft Exchange File Format, is an ASCII file format for transferring pr
 using (var converter = new GroupDocs.Conversion.Converter("sample.mpx"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**MPX to PDF converter**](https://products.groupdocs.app/conversion/mpx-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert MPX to PDF"](conversion/net/images/convert-mpx-to-pdf.png)](https://products.groupdocs.app/conversion/mpx-to-pdf)
+[!["Convert MPX to PDF"](conversion/net/images/convert-to-pdf/convert-mpx-to-pdf.png)](https://products.groupdocs.app/conversion/mpx-to-pdf)

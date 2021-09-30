@@ -23,7 +23,7 @@ JPEG 2000 is an image coding system and state-of-the-art image compression stand
 using (var converter = new GroupDocs.Conversion.Converter("sample.jpf"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**JPF to PDF converter**](https://products.groupdocs.app/conversion/jpf-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert JPF to PDF"](conversion/net/images/convert-jpf-to-pdf.png)](https://products.groupdocs.app/conversion/jpf-to-pdf)
+[!["Convert JPF to PDF"](conversion/net/images/convert-to-pdf/convert-jpf-to-pdf.png)](https://products.groupdocs.app/conversion/jpf-to-pdf)

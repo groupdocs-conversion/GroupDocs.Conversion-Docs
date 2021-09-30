@@ -23,7 +23,7 @@ The EMLX file format is implemented and developed by Apple. The Apple Mail appli
 using (var converter = new GroupDocs.Conversion.Converter("sample.emlx"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**EMLX to PDF converter**](https://products.groupdocs.app/conversion/emlx-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert EMLX to PDF"](conversion/net/images/convert-emlx-to-pdf.png)](https://products.groupdocs.app/conversion/emlx-to-pdf)
+[!["Convert EMLX to PDF"](conversion/net/images/convert-to-pdf/convert-emlx-to-pdf.png)](https://products.groupdocs.app/conversion/emlx-to-pdf)

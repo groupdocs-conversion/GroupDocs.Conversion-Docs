@@ -23,7 +23,7 @@ Docx is well-known format for Microsoft Word documents. Introduced from 2007 wit
 using (var converter = new GroupDocs.Conversion.Converter("sample.docx"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**DOCX to PDF converter**](https://products.groupdocs.app/conversion/docx-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert DOCX to PDF"](conversion/net/images/convert-docx-to-pdf.png)](https://products.groupdocs.app/conversion/docx-to-pdf)
+[!["Convert DOCX to PDF"](conversion/net/images/convert-to-pdf/convert-docx-to-pdf.png)](https://products.groupdocs.app/conversion/docx-to-pdf)

@@ -23,7 +23,7 @@ PPSX, Power Point Slide Show, file are created using Microsoft PowerPoint 2007 a
 using (var converter = new GroupDocs.Conversion.Converter("sample.ppsx"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**PPSX to PDF converter**](https://products.groupdocs.app/conversion/ppsx-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert PPSX to PDF"](conversion/net/images/convert-ppsx-to-pdf.png)](https://products.groupdocs.app/conversion/ppsx-to-pdf)
+[!["Convert PPSX to PDF"](conversion/net/images/convert-to-pdf/convert-ppsx-to-pdf.png)](https://products.groupdocs.app/conversion/ppsx-to-pdf)

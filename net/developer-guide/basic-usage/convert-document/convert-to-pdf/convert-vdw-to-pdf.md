@@ -23,7 +23,7 @@ VDW is the Visio Graphics Service file format that specifies the streams and sto
 using (var converter = new GroupDocs.Conversion.Converter("sample.vdw"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**VDW to PDF converter**](https://products.groupdocs.app/conversion/vdw-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert VDW to PDF"](conversion/net/images/convert-vdw-to-pdf.png)](https://products.groupdocs.app/conversion/vdw-to-pdf)
+[!["Convert VDW to PDF"](conversion/net/images/convert-to-pdf/convert-vdw-to-pdf.png)](https://products.groupdocs.app/conversion/vdw-to-pdf)

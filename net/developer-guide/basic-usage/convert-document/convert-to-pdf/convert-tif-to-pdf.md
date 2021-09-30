@@ -23,7 +23,7 @@ TIF or TIFF, Tagged Image File Format, represents raster images that are meant f
 using (var converter = new GroupDocs.Conversion.Converter("sample.tif"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**TIF to PDF converter**](https://products.groupdocs.app/conversion/tif-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert TIF to PDF"](conversion/net/images/convert-tif-to-pdf.png)](https://products.groupdocs.app/conversion/tif-to-pdf)
+[!["Convert TIF to PDF"](conversion/net/images/convert-to-pdf/convert-tif-to-pdf.png)](https://products.groupdocs.app/conversion/tif-to-pdf)

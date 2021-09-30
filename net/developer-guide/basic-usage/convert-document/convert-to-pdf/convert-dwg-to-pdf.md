@@ -23,7 +23,7 @@ Files with DWG extension represent proprietary binary files used for containing 
 using (var converter = new GroupDocs.Conversion.Converter("sample.dwg"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**DWG to PDF converter**](https://products.groupdocs.app/conversion/dwg-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert DWG to PDF"](conversion/net/images/convert-dwg-to-pdf.png)](https://products.groupdocs.app/conversion/dwg-to-pdf)
+[!["Convert DWG to PDF"](conversion/net/images/convert-to-pdf/convert-dwg-to-pdf.png)](https://products.groupdocs.app/conversion/dwg-to-pdf)

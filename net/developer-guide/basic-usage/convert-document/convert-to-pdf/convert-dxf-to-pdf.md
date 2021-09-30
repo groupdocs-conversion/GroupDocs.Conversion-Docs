@@ -23,7 +23,7 @@ DXF, Drawing Interchange Format, or Drawing Exchange Format, is a tagged data re
 using (var converter = new GroupDocs.Conversion.Converter("sample.dxf"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**DXF to PDF converter**](https://products.groupdocs.app/conversion/dxf-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert DXF to PDF"](conversion/net/images/convert-dxf-to-pdf.png)](https://products.groupdocs.app/conversion/dxf-to-pdf)
+[!["Convert DXF to PDF"](conversion/net/images/convert-to-pdf/convert-dxf-to-pdf.png)](https://products.groupdocs.app/conversion/dxf-to-pdf)

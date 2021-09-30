@@ -23,7 +23,7 @@ Open XML Paper Specification (also referred to as OpenXPS) is an open specificat
 using (var converter = new GroupDocs.Conversion.Converter("sample.oxps"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**OXPS to PDF converter**](https://products.groupdocs.app/conversion/oxps-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert OXPS to PDF"](conversion/net/images/convert-oxps-to-pdf.png)](https://products.groupdocs.app/conversion/oxps-to-pdf)
+[!["Convert OXPS to PDF"](conversion/net/images/convert-to-pdf/convert-oxps-to-pdf.png)](https://products.groupdocs.app/conversion/oxps-to-pdf)

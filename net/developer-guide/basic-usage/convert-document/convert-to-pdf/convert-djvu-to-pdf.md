@@ -23,7 +23,7 @@ DjVu, pronounced as “déjà vu”, is a graphics file format intended for scan
 using (var converter = new GroupDocs.Conversion.Converter("sample.djvu"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**DJVU to PDF converter**](https://products.groupdocs.app/conversion/djvu-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert DJVU to PDF"](conversion/net/images/convert-djvu-to-pdf.png)](https://products.groupdocs.app/conversion/djvu-to-pdf)
+[!["Convert DJVU to PDF"](conversion/net/images/convert-to-pdf/convert-djvu-to-pdf.png)](https://products.groupdocs.app/conversion/djvu-to-pdf)

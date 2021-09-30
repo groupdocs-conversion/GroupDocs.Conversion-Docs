@@ -23,7 +23,7 @@ A JPEG is a type of image format that is saved using the method of lossy compres
 using (var converter = new GroupDocs.Conversion.Converter("sample.jpg"))
 {
     // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
+   var options = new PdfConvertOptions();
     // Convert to PDF format
     converter.Convert("converted.pdf", options);
 }
@@ -37,4 +37,4 @@ Please find more [use-cases and complete C# sources]({{< ref "conversion/net/dev
 
 GroupDocs.Conversion for .NET provides an online [**JPG to PDF converter**](https://products.groupdocs.app/conversion/jpg-to-pdf), which allows you to try it for free and check conversion quality and accuracy.
 
-[!["Convert JPG to PDF"](conversion/net/images/convert-jpg-to-pdf.png)](https://products.groupdocs.app/conversion/jpg-to-pdf)
+[!["Convert JPG to PDF"](conversion/net/images/convert-to-pdf/convert-jpg-to-pdf.png)](https://products.groupdocs.app/conversion/jpg-to-pdf)
