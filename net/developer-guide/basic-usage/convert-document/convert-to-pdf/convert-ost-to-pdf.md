@@ -19,13 +19,20 @@ OST or Offline Storage Files represent the user's mailbox data in offline mode o
 * Call `Converter` class `Convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
 ```csharp
+string outputFile = "ost-converted-{0}-to.pdf";
+
 // Load the source OST file
-using (var converter = new GroupDocs.Conversion.Converter("sample.ost"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.ost", fileType => fileType == PersonalStorageFileType.Ost 
+                                                                                                    ? new PersonalStorageLoadOptions()
+                                                                                                    : null))
 {
-    // Set the convert options for PDF format
-   var options = new PdfConvertOptions();
-    // Convert to PDF format
-    converter.Convert("converted.pdf", options);
+    var options = new PdfConvertOptions();
+    var counter = 1;
+    // Save converted PDF file
+    converter.Convert(
+        (FileType fyleType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+        options
+    );
 }
 ```
 
