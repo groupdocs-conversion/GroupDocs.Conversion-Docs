@@ -15,8 +15,8 @@ The EMLX file format is implemented and developed by Apple. The Apple Mail appli
 [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the EMLX file to DOC format in an easy and intuitive way just using a few lines of code as described below:
 
 * Create an instance of `Converter` class and pass source EMLX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
-* Create an instance of `[CONVERT_OPTIONS_CLASS_NAME]` class.
-* Call `Converter` class `Convert` method and pass the filename for the converted DOC file and the `[CONVERT_OPTIONS_CLASS_NAME]` object from the previous step as parameters.
+* Create an instance of `WordProcessingConvertOptions` class and set `Format` property to `GroupDocs.Conversion.FileTypes.WordProcessingFileType.Doc`
+* Call `Converter` class `Convert` method and pass the filename for the converted DOC file and the `WordProcessingConvertOptions` object from the previous step as parameters.
 
 ```csharp
 // Load the source EMLX file
