@@ -9,6 +9,6 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows you quickly and easily convert your files of various formats into convenient and familiar Microsoft Word 97-2003 (DOC) format.
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows you quickly and easily convert your files of various formats into convenient and familiar **Microsoft Word 97-2003 (DOC)** format.
 
 Please see the list of available conversions below:
