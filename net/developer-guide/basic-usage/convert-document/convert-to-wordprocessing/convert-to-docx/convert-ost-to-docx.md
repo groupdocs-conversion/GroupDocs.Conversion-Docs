@@ -19,13 +19,20 @@ OST or Offline Storage Files represent the user's mailbox data in offline mode o
 * Call `Converter` class `Convert` method and pass the filename for the converted DOCX file and the `WordProcessingConvertOptions` object from the previous step as parameters.
 
 ```csharp
+string outputFile = "ost-converted-{0}-to.docx";
+
 // Load the source OST file
-using (var converter = new GroupDocs.Conversion.Converter("sample.ost"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.ost", fileType => fileType == PersonalStorageFileType.Ost
+                                                                                                ? new PersonalStorageLoadOptions()
+                                                                                                : null))
 {
-    // Set the convert options for DOCX format
-   var options = new WordProcessingConvertOptions();
-    // Convert to DOCX format
-    converter.Convert("converted.docx", options);
+    var options = new WordProcessingConvertOptions();
+    var counter = 1;
+    // Save converted DOCX file
+    converter.Convert(
+        (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+        options
+    );
 }
 ```
 

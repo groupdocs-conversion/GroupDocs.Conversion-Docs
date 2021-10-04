@@ -19,13 +19,23 @@ MBox file format is a generic term that represents a container for collection of
 * Call `Converter` class `Convert` method and pass the filename for the converted XLS file and the `SpreadsheetConvertOptions` object from the previous step as parameters.
 
 ```csharp
+string outputFile = "mbox-converted-{0}-to.xls";
+
 // Load the source MBOX file
-using (var converter = new GroupDocs.Conversion.Converter("sample.mbox"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.mbox", fileType => fileType == EmailFileType.Mbox
+                                                                                                ? new MboxLoadOptions()
+                                                                                                : null ))
 {
-    // Set the convert options for XLS format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Xls };
-    // Convert to XLS format
-    converter.Convert("converted.xls", options);
+    var options = new SpreadsheetConvertOptions
+    {
+        Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Xls
+    };
+    var counter = 1;
+    // Save converted XLS file
+    converter.Convert(
+        (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+        options
+    );
 }
 ```
 

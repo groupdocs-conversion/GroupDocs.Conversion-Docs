@@ -19,13 +19,23 @@ Files with .PST extension represent Outlook Personal Storage Files (also called 
 * Call `Converter` class `Convert` method and pass the filename for the converted DOC file and the `WordProcessingConvertOptions` object from the previous step as parameters.
 
 ```csharp
+string outputFile = "pst-converted-{0}-to.doc";
+
 // Load the source PST file
-using (var converter = new GroupDocs.Conversion.Converter("sample.pst"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.pst", fileType => fileType == PersonalStorageFileType.Pst 
+                                                                                                ? new PersonalStorageLoadOptions()
+                                                                                                : null))
 {
-    // Set the convert options for DOC format
-   WordProcessingConvertOptions options = new WordProcessingConvertOptions { Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Doc };
-    // Convert to DOC format
-    converter.Convert("converted.doc", options);
+    var options = new WordProcessingConvertOptions
+    {
+        Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Doc
+    };
+    var counter = 1;
+    // Save converted DOC file
+    converter.Convert(
+        (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+        options
+    );
 }
 ```
 
