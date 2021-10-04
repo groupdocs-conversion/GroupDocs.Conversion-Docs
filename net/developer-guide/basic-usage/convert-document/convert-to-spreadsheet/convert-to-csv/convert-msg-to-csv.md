@@ -23,7 +23,7 @@ MSG is a file format used by Microsoft Outlook and Exchange to store email messa
 using (var converter = new GroupDocs.Conversion.Converter("sample.msg"))
 {
     // Set the convert options for CSV format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+   var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
     // Convert to CSV format
     converter.Convert("converted.csv", options);
 }

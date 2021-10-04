@@ -23,7 +23,7 @@ Files with XLTX extension represent Microsoft Excel Template files that are base
 using (var converter = new GroupDocs.Conversion.Converter("sample.xltx"))
 {
     // Set the convert options for CSV format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+   var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
     // Convert to CSV format
     converter.Convert("converted.csv", options);
 }

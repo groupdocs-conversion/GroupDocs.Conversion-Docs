@@ -23,7 +23,7 @@ PCL stands for Printer Command Language which is a Page Description Language int
 using (var converter = new GroupDocs.Conversion.Converter("sample.pcl"))
 {
     // Set the convert options for CSV format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+   var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
     // Convert to CSV format
     converter.Convert("converted.csv", options);
 }

@@ -23,7 +23,7 @@ Files with POTM extension are Microsoft PowerPoint template files with support f
 using (var converter = new GroupDocs.Conversion.Converter("sample.potm"))
 {
     // Set the convert options for CSV format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+   var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
     // Convert to CSV format
     converter.Convert("converted.csv", options);
 }

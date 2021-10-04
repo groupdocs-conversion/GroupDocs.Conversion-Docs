@@ -23,7 +23,7 @@ Files with .ONE extension are created by Microsoft OneNote application. OneNote 
 using (var converter = new GroupDocs.Conversion.Converter("sample.one"))
 {
     // Set the convert options for CSV format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+   var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
     // Convert to CSV format
     converter.Convert("converted.csv", options);
 }

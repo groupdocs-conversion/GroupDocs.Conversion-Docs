@@ -15,7 +15,7 @@ MBox file format is a generic term that represents a container for collection of
 [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the MBOX file to TXT format in an easy and intuitive way just using a few lines of code as described below:
 
 * Create an instance of `Converter` class and pass source MBOX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
-* Create an instance of `WordProcessingConvertOptions` class and set `Format` property to `GroupDocs.Conversion.FileTypes.WordProcessingFileType.Txt`
+* Create an instance of `WordProcessingConvertOptions` class and set `Format` property to `GroupDocs.Conversion.FileTypes.WordProcessingFileType.Txt`.
 * Call `Converter` class `Convert` method and pass the filename for the converted TXT file and the `WordProcessingConvertOptions` object from the previous step as parameters.
 
 ```csharp
@@ -23,19 +23,16 @@ string outputFile = "mbox-converted-{0}-to.txt";
 
 // Load the source MBOX file
 using (var converter = new GroupDocs.Conversion.Converter("sample.mbox", fileType => fileType == EmailFileType.Mbox
-                                                                                                    ? new MboxLoadOptions()
-                                                                                                    : null))
+                                                                                                            ? new MboxLoadOptions()
+                                                                                                            : null))
 {
-    var options = new WordProcessingConvertOptions
-    {
-        Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Txt
-    };
-    var counter = 1;
+    WordProcessingConvertOptions options = new WordProcessingConvertOptions { Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Txt };
+	var counter = 1;
     // Save converted TXT file
     converter.Convert(
-        (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+		(FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
         options
-    );
+    );            
 }
 ```
 

@@ -23,7 +23,7 @@ Docx is well-known format for Microsoft Word documents. Introduced from 2007 wit
 using (var converter = new GroupDocs.Conversion.Converter("sample.docx"))
 {
     // Set the convert options for CSV format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+   var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
     // Convert to CSV format
     converter.Convert("converted.csv", options);
 }

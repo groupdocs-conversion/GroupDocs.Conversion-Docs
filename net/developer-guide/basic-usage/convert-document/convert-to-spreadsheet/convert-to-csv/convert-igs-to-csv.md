@@ -23,7 +23,7 @@ A file with .igs (Initial Graphics Exchange) extension is a 2D-3D design exchang
 using (var converter = new GroupDocs.Conversion.Converter("sample.igs"))
 {
     // Set the convert options for CSV format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+   var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
     // Convert to CSV format
     converter.Convert("converted.csv", options);
 }

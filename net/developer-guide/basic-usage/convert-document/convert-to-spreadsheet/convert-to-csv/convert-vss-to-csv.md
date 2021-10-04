@@ -23,7 +23,7 @@ VSS is stencil files created with Microsoft Visio 2007 and earlier. A relatively
 using (var converter = new GroupDocs.Conversion.Converter("sample.vss"))
 {
     // Set the convert options for CSV format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+   var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
     // Convert to CSV format
     converter.Convert("converted.csv", options);
 }

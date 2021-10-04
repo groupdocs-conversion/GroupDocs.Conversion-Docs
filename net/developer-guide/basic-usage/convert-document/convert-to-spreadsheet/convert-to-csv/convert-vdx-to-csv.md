@@ -23,7 +23,7 @@ Any drawing or chart created in Microsoft Visio, but saved in XML format has a V
 using (var converter = new GroupDocs.Conversion.Converter("sample.vdx"))
 {
     // Set the convert options for CSV format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+   var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
     // Convert to CSV format
     converter.Convert("converted.csv", options);
 }

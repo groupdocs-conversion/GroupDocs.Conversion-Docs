@@ -23,7 +23,7 @@ FODS is a ZIP-compressed XML-based file format for spreadsheets, charts, present
 using (var converter = new GroupDocs.Conversion.Converter("sample.fods"))
 {
     // Set the convert options for CSV format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+   var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
     // Convert to CSV format
     converter.Convert("converted.csv", options);
 }

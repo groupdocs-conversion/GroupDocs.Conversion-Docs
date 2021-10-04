@@ -27,12 +27,12 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pst", fileType
                                                                                                     : null))
 {
     var options = new PdfConvertOptions();
-    var counter = 1;
+	var counter = 1;
     // Save converted PDF file
     converter.Convert(
-        (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+		(FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
         options
-    );
+    );            
 }
 ```
 

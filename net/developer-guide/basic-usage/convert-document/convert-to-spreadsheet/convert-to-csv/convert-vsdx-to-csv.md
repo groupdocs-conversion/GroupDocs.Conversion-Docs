@@ -23,7 +23,7 @@ Files with .VSDX extension represents Microsoft Visio file format introduced fro
 using (var converter = new GroupDocs.Conversion.Converter("sample.vsdx"))
 {
     // Set the convert options for CSV format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+   var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
     // Convert to CSV format
     converter.Convert("converted.csv", options);
 }

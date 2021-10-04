@@ -23,7 +23,7 @@ Files with .VSSM extension are Microsoft Visio Stencil files that support provid
 using (var converter = new GroupDocs.Conversion.Converter("sample.vssm"))
 {
     // Set the convert options for CSV format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+   var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
     // Convert to CSV format
     converter.Convert("converted.csv", options);
 }

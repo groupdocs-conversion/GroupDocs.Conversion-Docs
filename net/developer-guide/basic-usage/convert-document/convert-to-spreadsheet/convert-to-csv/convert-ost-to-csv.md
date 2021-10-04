@@ -19,13 +19,20 @@ OST or Offline Storage Files represent the user's mailbox data in offline mode o
 * Call `Converter` class `Convert` method and pass the filename for the converted CSV file and the `SpreadsheetConvertOptions` object from the previous step as parameters.
 
 ```csharp
+string outputFile = "ost-converted-{0}-to.csv";
+
 // Load the source OST file
-using (var converter = new GroupDocs.Conversion.Converter("sample.ost"))
+using (var converter = new GroupDocs.Conversion.Converter("sample.ost", fileType => fileType == PersonalStorageFileType.Ost
+                                                                                                    ? new PersonalStorageLoadOptions()
+                                                                                                    : null))
 {
-    // Set the convert options for CSV format
-   SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
-    // Convert to CSV format
-    converter.Convert("converted.csv", options);
+    var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Csv };
+	var counter = 1;
+    // Save converted CSV file
+    converter.Convert(
+		(FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+        options
+    );            
 }
 ```
 

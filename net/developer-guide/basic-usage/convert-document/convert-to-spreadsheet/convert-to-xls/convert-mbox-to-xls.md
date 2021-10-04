@@ -23,19 +23,16 @@ string outputFile = "mbox-converted-{0}-to.xls";
 
 // Load the source MBOX file
 using (var converter = new GroupDocs.Conversion.Converter("sample.mbox", fileType => fileType == EmailFileType.Mbox
-                                                                                                ? new MboxLoadOptions()
-                                                                                                : null ))
+                                                                                                            ? new MboxLoadOptions()
+                                                                                                            : null))
 {
-    var options = new SpreadsheetConvertOptions
-    {
-        Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Xls
-    };
-    var counter = 1;
+    var options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Xls };
+	var counter = 1;
     // Save converted XLS file
     converter.Convert(
-        (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+		(FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
         options
-    );
+    );            
 }
 ```
 

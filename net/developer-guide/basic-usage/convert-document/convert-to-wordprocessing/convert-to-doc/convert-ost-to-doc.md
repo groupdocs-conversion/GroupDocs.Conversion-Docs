@@ -15,7 +15,7 @@ OST or Offline Storage Files represent the user's mailbox data in offline mode o
 [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the OST file to DOC format in an easy and intuitive way just using a few lines of code as described below:
 
 * Create an instance of `Converter` class and pass source OST file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
-* Create an instance of `WordProcessingConvertOptions` class and set `Format` property to `GroupDocs.Conversion.FileTypes.WordProcessingFileType.Doc`
+* Create an instance of `WordProcessingConvertOptions` class and set `Format` property to `GroupDocs.Conversion.FileTypes.WordProcessingFileType.Doc`.
 * Call `Converter` class `Convert` method and pass the filename for the converted DOC file and the `WordProcessingConvertOptions` object from the previous step as parameters.
 
 ```csharp
@@ -23,16 +23,16 @@ string outputFile = "ost-converted-{0}-to.doc";
 
 // Load the source OST file
 using (var converter = new GroupDocs.Conversion.Converter("sample.ost", fileType => fileType == PersonalStorageFileType.Ost
-                                                                                                ? new PersonalStorageLoadOptions()
-                                                                                                : null))
+                                                                                                    ? new PersonalStorageLoadOptions()
+                                                                                                    : null))
 {
-    var options = new WordProcessingConvertOptions
-    {
-        Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Doc
-    };
-    var counter = 1;
+    WordProcessingConvertOptions options = new WordProcessingConvertOptions { Format = GroupDocs.Conversion.FileTypes.WordProcessingFileType.Doc };
+	var counter = 1;
     // Save converted DOC file
-    converter.Convert((FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create), options);
+    converter.Convert(
+		(FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+        options
+    );            
 }
 ```
 

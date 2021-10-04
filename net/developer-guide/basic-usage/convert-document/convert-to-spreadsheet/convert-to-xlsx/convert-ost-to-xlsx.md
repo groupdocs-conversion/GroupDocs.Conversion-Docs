@@ -22,17 +22,17 @@ OST or Offline Storage Files represent the user's mailbox data in offline mode o
 string outputFile = "ost-converted-{0}-to.xlsx";
 
 // Load the source OST file
-using (var converter = new GroupDocs.Conversion.Converter("sample.ost", fileType=> fileType == PersonalStorageFileType.Ost 
-                                                                                            ? new PersonalStorageLoadOptions()
-                                                                                            : null ))
+using (var converter = new GroupDocs.Conversion.Converter("sample.ost", fileType => fileType == PersonalStorageFileType.Ost
+                                                                                                    ? new PersonalStorageLoadOptions()
+                                                                                                    : null))
 {
     var options = new SpreadsheetConvertOptions();
-    var counter = 1;
+	var counter = 1;
     // Save converted XLSX file
     converter.Convert(
-        (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+		(FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
         options
-    );
+    );            
 }
 ```
 

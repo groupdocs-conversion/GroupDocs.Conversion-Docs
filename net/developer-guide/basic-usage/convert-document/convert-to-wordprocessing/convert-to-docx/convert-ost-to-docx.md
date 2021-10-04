@@ -23,16 +23,16 @@ string outputFile = "ost-converted-{0}-to.docx";
 
 // Load the source OST file
 using (var converter = new GroupDocs.Conversion.Converter("sample.ost", fileType => fileType == PersonalStorageFileType.Ost
-                                                                                                ? new PersonalStorageLoadOptions()
-                                                                                                : null))
+                                                                                                    ? new PersonalStorageLoadOptions()
+                                                                                                    : null))
 {
     var options = new WordProcessingConvertOptions();
-    var counter = 1;
+	var counter = 1;
     // Save converted DOCX file
     converter.Convert(
-        (FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
+		(FileType fileType) => new FileStream(string.Format(outputFile, counter++), FileMode.Create),
         options
-    );
+    );            
 }
 ```
 
