@@ -1,0 +1,43 @@
+---
+id: convert-pot-to-jpg
+url: conversion/net/convert-pot-to-jpg
+title: Convert POT to JPG
+description: "POT format represents PowerPoint Template with .pot extension. Learn how to convert POT to JPG file programmatically in C# language using GroupDocs.Conversion for .NET library."
+keywords: Convert POT to JPG in C#
+productName: GroupDocs.Conversion for .NET
+hideChildren: False
+---
+
+Files with .POT extension represent Microsoft PowerPoint template files created by PowerPoint 97-2003 versions. Files created with these versions of Microsoft PowerPoint are in binary format as compared to those created in Office OpenXML file formats using the higher versions of PowerPoint. The files, hence, generated can be used to create presentations that have the same layout and other settings required to be applied to new files. These settings can include styles, backgrounds, color palettes, fonts, and defaults.
+
+## Steps to convert POT to JPG in C#
+
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the POT file to JPG format in an easy and intuitive way just using a few lines of code as described below:
+
+* Create an instance of `Converter` class and pass source POT file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Create an instance of `ImageConvertOptions` class and set `Format` property to `GroupDocs.Conversion.FileTypes.ImageFileType.Jpg`.
+* Call `Converter` class `Convert` method and pass the filename for the converted JPG file and the `ImageConvertOptions` object from the previous step as parameters.
+
+```csharp
+string outputFileTemplate = Path.Combine(outputFolder, "converted-page-{0}.jpg");
+GroupDocs.Conversion.Contracts.SavePageStream getPageStream = page => new FileStream(string.Format(outputFileTemplate, page), FileMode.Create);
+
+// Load the source POT file
+using (Converter converter = new Converter("sample.pot"))
+{
+    // Set the convert options for JPG format
+    var options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Jpg };   
+    // Convert to JPG format
+    converter.Convert(getPageStream, options);
+}
+```
+
+### Code Examples
+
+Please find more [use-cases and complete C# sources]({{< ref "conversion/net/developer-guide/examples-and-demos.md" >}}) of our backend and frontend examples and try them for free!
+
+### POT to JPG Live Demo
+
+GroupDocs.Conversion for .NET provides an online [**POT to JPG converter**](https://products.groupdocs.app/conversion/pot-to-jpg), which allows you to try it for free and check conversion quality and accuracy.
+
+[!["Convert POT to JPG"](conversion/net/images/convert-to-jpg/convert-pot-to-jpg.png)](https://products.groupdocs.app/conversion/pot-to-jpg)
