@@ -30,6 +30,7 @@ There are 10+ features, improvements and bug-fixes in this release, most notable
 | CONVERSIONNET-4034 | Bug | XPS to XLS conversion issue |
 | CONVERSIONNET-4275 | Bug | Cannot convert particular Xps document |
 | CONVERSIONNET-4315 | Bug | Failed to convert Plt |
+| CONVERSIONNET-4332 | Bug | PDF to DOCX conversion adds a frame around paragraphs |
 | CONVERSIONNET-4674 | Bug | 'Can not save ??? to csv' exception when converting PST to CSV |
 | CONVERSIONNET-4805 | Bug | Incorrect text watermark angle when applying on image |
 | CONVERSIONNET-4811 | Bug | Excel to PDF conversion issue |
