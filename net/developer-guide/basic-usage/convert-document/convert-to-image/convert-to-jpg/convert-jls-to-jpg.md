@@ -15,16 +15,17 @@ A JLS file is an image saved in the JPEG-LS file format. It contains a lossy or 
 [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the JLS file to JPG format in an easy and intuitive way just using a few lines of code as described below:
 
 * Create an instance of `Converter` class and pass source JLS file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Declare `SavePageStream` delegate, which should provide a stream to store converted page of JLS document.
 * Create an instance of `ImageConvertOptions` class and set `Format` property to `GroupDocs.Conversion.FileTypes.ImageFileType.Jpg`.
 * Call `Converter` class `Convert` method and pass the filename for the converted JPG file and the `ImageConvertOptions` object from the previous step as parameters.
 
 ```csharp
-string outputFileTemplate = Path.Combine(outputFolder, "converted-page-{0}.jpg");
-GroupDocs.Conversion.Contracts.SavePageStream getPageStream = page => new FileStream(string.Format(outputFileTemplate, page), FileMode.Create);
-
 // Load the source JLS file
 using (Converter converter = new Converter("sample.jls"))
 {
+    string outputFileTemplate = Path.Combine(outputFolder, "converted-page-{0}.jpg");
+    GroupDocs.Conversion.Contracts.SavePageStream getPageStream = page => new FileStream(string.Format(outputFileTemplate, page), FileMode.Create);
+
     // Set the convert options for JPG format
     var options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Jpg };   
     // Convert to JPG format

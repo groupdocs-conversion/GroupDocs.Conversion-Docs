@@ -15,16 +15,17 @@ File with .sxc extension is a spreadsheet created by StarOffice Calc.
 [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the SXC file to JPG format in an easy and intuitive way just using a few lines of code as described below:
 
 * Create an instance of `Converter` class and pass source SXC file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Declare `SavePageStream` delegate, which should provide a stream to store converted page of SXC document.
 * Create an instance of `ImageConvertOptions` class and set `Format` property to `GroupDocs.Conversion.FileTypes.ImageFileType.Jpg`.
 * Call `Converter` class `Convert` method and pass the filename for the converted JPG file and the `ImageConvertOptions` object from the previous step as parameters.
 
 ```csharp
-string outputFileTemplate = Path.Combine(outputFolder, "converted-page-{0}.jpg");
-GroupDocs.Conversion.Contracts.SavePageStream getPageStream = page => new FileStream(string.Format(outputFileTemplate, page), FileMode.Create);
-
 // Load the source SXC file
 using (Converter converter = new Converter("sample.sxc"))
 {
+    string outputFileTemplate = Path.Combine(outputFolder, "converted-page-{0}.jpg");
+    GroupDocs.Conversion.Contracts.SavePageStream getPageStream = page => new FileStream(string.Format(outputFileTemplate, page), FileMode.Create);
+
     // Set the convert options for JPG format
     var options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Jpg };   
     // Convert to JPG format
