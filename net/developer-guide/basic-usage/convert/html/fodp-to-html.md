@@ -1,0 +1,40 @@
+---
+id: fodp-to-html
+url: conversion/net/convert/fodp-to-html
+title: Convert FODP to HTML
+description: "FODP format represents OpenDocument Flat XML Presentation with .fodp extension. Learn how to convert FODP to HTML file programmatically in C# language using GroupDocs.Conversion for .NET library."
+keywords: Convert FODP to HTML in C#
+productName: GroupDocs.Conversion for .NET
+hideChildren: False
+---
+
+FODP is a file format for the presentations saved in OpenDocument format.
+
+## Steps to convert FODP to HTML in C#
+
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the FODP file to HTML format in an easy and intuitive way just using a few lines of code as described below:
+
+* Create an instance of `Converter` class and pass source FODP file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Create an instance of `MarkupConvertOptions` class.
+* Call `Converter` class `Convert` method and pass the filename for the converted HTML file and the `MarkupConvertOptions` object from the previous step as parameters.
+
+```csharp
+// Load the source FODP file
+using (var converter = new GroupDocs.Conversion.Converter("sample.fodp"))
+{
+    // Set the convert options for HTML format
+   var options = new MarkupConvertOptions();
+    // Convert to HTML format
+    converter.Convert("converted.html", options);
+}
+```
+
+### Code Examples
+
+Please find more [use-cases and complete C# sources]({{< ref "conversion/net/developer-guide/examples-and-demos.md" >}}) of our backend and frontend examples and try them for free!
+
+### FODP to HTML Live Demo
+
+GroupDocs.Conversion for .NET provides an online [**FODP to HTML converter**](https://products.groupdocs.app/conversion/fodp-to-html), which allows you to try it for free and check conversion quality and accuracy.
+
+[!["Convert FODP to HTML"](conversion/net/images/convert-to-html/convert-fodp-to-html.png)](https://products.groupdocs.app/conversion/fodp-to-html)
