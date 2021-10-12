@@ -6,7 +6,6 @@ weight: 1
 description: "Learn this documentation and check how to convert files to Microsoft Excel 2007-2019 (XLSX) format with GroupDocs.Conversion for .NET."
 keywords: Convert to Excel, Convert to XLSX
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
 showAllChildrenTable: True
 ---
 

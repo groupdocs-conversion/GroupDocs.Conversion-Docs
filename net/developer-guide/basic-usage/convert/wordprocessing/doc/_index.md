@@ -6,7 +6,6 @@ weight: 1
 description: "Learn this documentation and check how to convert files to Microsoft Word 97-2003 (DOC) format with GroupDocs.Conversion for .NET."
 keywords: Convert to Word, Convert to DOC, Convert to DOC
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
 showAllChildrenTable: True
 ---
 

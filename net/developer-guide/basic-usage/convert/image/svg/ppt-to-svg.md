@@ -1,0 +1,40 @@
+---
+id: ppt-to-svg
+url: conversion/net/convert/ppt-to-svg
+title: Convert PPT to SVG
+description: "PPT format represents PowerPoint Presentation with .ppt extension. Learn how to convert PPT to SVG file programmatically in C# language using GroupDocs.Conversion for .NET library."
+keywords: Convert PPT to SVG in C#
+productName: GroupDocs.Conversion for .NET
+hideChildren: False
+---
+
+A file with PPT extension represents PowerPoint file that consists of a collection of slides for displaying as SlideShow. It specifies the Binary File Format used by Microsoft PowerPoint 97-2003. A PPT file can contain several different types of information such as text, bulleted points, images, multimedia and other embedded OLE objects. Microsoft came up with newer file format for PowerPoint, known as PPTX, from 2007 onwards that is based on Office OpenXML and is different from this binary file format.
+
+## Steps to convert PPT to SVG in C#
+
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows developers to convert the PPT file to SVG format in an easy and intuitive way just using a few lines of code as described below:
+
+* Create an instance of `Converter` class and pass source PPT file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+* Create an instance of `ImageConvertOptions` class and set `Format` property to `GroupDocs.Conversion.FileTypes.ImageFileType.Svg`.
+* Call `Converter` class `Convert` method and pass the filename for the converted SVG file and the `ImageConvertOptions` object from the previous step as parameters.
+
+```csharp
+// Load the source PPT file
+using (var converter = new GroupDocs.Conversion.Converter("sample.ppt"))
+{
+    // Set the convert options for SVG format
+   var options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Svg };
+    // Convert to SVG format
+    converter.Convert("converted.svg", options);
+}
+```
+
+### Code Examples
+
+Please find more [use-cases and complete C# sources]({{< ref "conversion/net/developer-guide/examples-and-demos.md" >}}) of our backend and frontend examples and try them for free!
+
+### PPT to SVG Live Demo
+
+GroupDocs.Conversion for .NET provides an online [**PPT to SVG converter**](https://products.groupdocs.app/conversion/ppt-to-svg), which allows you to try it for free and check conversion quality and accuracy.
+
+[!["Convert PPT to SVG"](conversion/net/images/convert-to-svg/convert-ppt-to-svg.png)](https://products.groupdocs.app/conversion/ppt-to-svg)

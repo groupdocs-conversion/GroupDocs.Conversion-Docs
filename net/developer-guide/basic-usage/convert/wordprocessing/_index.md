@@ -6,8 +6,7 @@ weight: 1
 description: "Learn this article and check how to convert documents to Word DOCX, DOC, RTF or Open Document ODT, OTT formats with GroupDocs.Conversion for .NET."
 keywords: Convert to Word, Convert to DOCX, Convert to DOC
 productName: GroupDocs.Conversion for .NET
-hideChildren: True
-showAllChildrenTable: True
+hideChildren: False
 ---
 
 ## About Word Processing File Formats

@@ -6,7 +6,6 @@ weight: 1
 description: "This article demonstrates how to convert any document from PDF and to PDF format with couple C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert from PDF, Convert to PDF, Convert to PDF/A
 productName: GroupDocs.Conversion for .NET
-hideChildren: True
 showAllChildrenTable: True
 ---
 

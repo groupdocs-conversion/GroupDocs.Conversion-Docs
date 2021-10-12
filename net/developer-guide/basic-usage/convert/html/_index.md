@@ -6,7 +6,6 @@ weight: 1
 description: "Following this article you will learn how to convert documents to HTML format with couple C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert from HTML, Convert to HTML, Convert to HTM
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
 showAllChildrenTable: True
 ---
 

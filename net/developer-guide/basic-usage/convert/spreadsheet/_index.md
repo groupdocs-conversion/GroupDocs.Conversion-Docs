@@ -7,7 +7,6 @@ description: "Follow this guide and learn how to convert documents to spreadshee
 keywords: Convert to Excel, Convert to Spreadsheet, Convert to XLS, Convert to XLSX
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
-showAllChildrenTable: True
 ---
 
 ## About Spreadsheet File Formats

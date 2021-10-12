@@ -7,7 +7,6 @@ description: "This article demonstrates how to convert documents to PowerPoint p
 keywords: Convert to Presentation, Convert to PPT, Convert to PPTX
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
-showAllChildrenTable: True
 ---
 
 ## About Presentation File Formats
