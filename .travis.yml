@@ -33,7 +33,13 @@ script:
 - cp -r net $ROOT_DIR/content/$PRODUCT
 - cp _index.md $ROOT_DIR/content/$PRODUCT
 - hugo --source $ROOT_DIR --minify --config config.toml,ignore-total-config.toml
+- cd $SRC_DIR
+- zip -r -q $PRODUCT.zip $PRODUCT
 
 after_success:
-- travis_wait scp -i ./deploy_key -r $SRC_DIR/$PRODUCT $USER@$HOST:$DEST_DIR
-- scp -i ./deploy_key -r $SRC_DIR/product-sitemap.xml $USER@$HOST:$DEST_DIR/sitemaps/$PRODUCT.xml
+# upload sitemap
+- scp -i ./deploy_key product-sitemap.xml $USER@$HOST:$DEST_DIR/sitemaps/$PRODUCT.xml
+# upload pages arhive
+- travis_wait scp -i ./deploy_key $PRODUCT.zip $USER@$HOST:$DEST_DIR
+# unzip & clean
+- ssh -i ./deploy_key $USER@$HOST unzip -o -q $DEST_DIR/$PRODUCT.zip -d $DEST_DIR && rm $DEST_DIR/$PRODUCT.zip
