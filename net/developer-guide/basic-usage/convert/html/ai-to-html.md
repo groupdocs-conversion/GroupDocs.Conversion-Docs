@@ -5,7 +5,22 @@ title: Convert AI to HTML
 description: "AI format represents Adobe Illustrator with .ai extension. Learn how to convert AI to HTML file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert AI to HTML in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert AI to HTML in C#
+    appDescription: Convert AI to HTML natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert AI to HTML in C# 
+        description: Some description
+        url: conversion/net/convert/ai-to-html/#steps-to-convert-ai-to-html-in-c
+        steps:
+        - name: Load source AI file 
+          text: Create an instance of Converter class and pass source AI file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+        - name: Specify convert options 
+          text: Create an instance of MarkupConvertOptions class.
+        - name: Convert to HTML and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the MarkupConvertOptions object from the previous step as parameters.   
 ---
 
 A file with an .ai extension is an Adobe Illustrator Artwork file that contains vector graphics on a single page. It uses points to create paths for displaying the image data, thus making it safe from losing image quality if it is enlarged. AI format finds its major usage for logos and print media. AI files can be opened with Adobe Illustrator, Adobe Acrobat DC, PaintShop Pro, and CorelDraw Graphics tools.
