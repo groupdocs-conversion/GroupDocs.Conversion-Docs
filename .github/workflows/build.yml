@@ -23,13 +23,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs submodule update
+      # Run submodule update
       - name: Submodule update
         run: |
           git submodule update --init --recursive
           git submodule foreach git pull origin master
 
-      # Install Hugo
+      # Run Hugo install
       - name: Install Hugo
         run: |
           curl -LO https://github.com/gohugoio/hugo/releases/download/v0.67.1/hugo_extended_0.67.1_Linux-64bit.deb
@@ -45,3 +45,11 @@ jobs:
           hugo --source common --minify --config config.toml,ignore-total-config.toml
           #cd common/public
           #zip -r -q conversion.zip conversion
+
+      # Store generated output produced by Hugo
+      - name: Store artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: hugo-output
+          path: common/public
+          retention-days: 1
