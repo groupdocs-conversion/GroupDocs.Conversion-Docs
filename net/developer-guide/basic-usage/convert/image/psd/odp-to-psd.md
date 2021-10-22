@@ -5,7 +5,31 @@ title: Convert ODP to PSD
 description: "ODP format represents OpenDocument Presentation File Format with .odp extension. Learn how to convert ODP to PSD file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert ODP to PSD in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert ODP to PSD in C#
+    appDescription: Convert ODP to PSD natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert ODP to PSD in C# 
+        description: Some description
+        url: conversion/net/convert/odp-to-psd/#steps-to-convert-odp-to-psd-in-c
+        steps:
+        - name: Load source ODP file 
+          text: Create an instance of Converter class and pass source ODP file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of ImageConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to PSD and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the ImageConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 Files with ODP extension represents the presentation file format used by OpenOffice.org in the OASIS OpenDocument standard. A presentation file is a collection of slides where each slide can comprise text, images, formatting, animations, and other media. These slides are presented to an audience in the form of slideshows with custom presentation settings.

@@ -5,7 +5,31 @@ title: Convert MBOX to DOC
 description: "MBOX format represents Email Mailbox File with .mbox extension. Learn how to convert MBOX to DOC file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert MBOX to DOC in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert MBOX to DOC in C#
+    appDescription: Convert MBOX to DOC natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert MBOX to DOC in C# 
+        description: Some description
+        url: conversion/net/convert/mbox-to-doc/#steps-to-convert-mbox-to-doc-in-c
+        steps:
+        - name: Load source MBOX file 
+          text: Create an instance of Converter class and pass source MBOX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of WordProcessingConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to DOC and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the WordProcessingConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 MBox file format is a generic term that represents a container for collection of electronic mail messages. The messages are stored inside the container along with their attachments. Messages from an entire folder are saved in a single database file and new messages are appended to the end of the file. Numerous applications and API provide support for MBox file format such as Apple Mail and Mozilla Thunderbird.

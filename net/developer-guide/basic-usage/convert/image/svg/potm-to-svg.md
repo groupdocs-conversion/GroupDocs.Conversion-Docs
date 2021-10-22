@@ -5,7 +5,31 @@ title: Convert POTM to SVG
 description: "POTM format represents Microsoft PowerPoint Template with .potm extension. Learn how to convert POTM to SVG file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert POTM to SVG in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert POTM to SVG in C#
+    appDescription: Convert POTM to SVG natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert POTM to SVG in C# 
+        description: Some description
+        url: conversion/net/convert/potm-to-svg/#steps-to-convert-potm-to-svg-in-c
+        steps:
+        - name: Load source POTM file 
+          text: Create an instance of Converter class and pass source POTM file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of ImageConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to SVG and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the ImageConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 Files with POTM extension are Microsoft PowerPoint template files with support for Macros. POTM files are created with PowerPoint 2007 or above and contains default settings that can be used to create further presentation files. These settings can include styles, backgrounds, colour palette, fonts and defaults along with macros that consist of custom functions for doing particular task. They may also be opened by a previous version of PowerPoint with Open XML document support installed. POTM files can be opened in Microsoft PowerPoint for editing like any other PowerPoint file.

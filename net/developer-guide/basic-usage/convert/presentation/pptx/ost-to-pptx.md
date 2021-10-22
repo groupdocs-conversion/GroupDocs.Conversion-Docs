@@ -5,7 +5,31 @@ title: Convert OST to PPTX
 description: "OST format represents Outlook Offline Storage File with .ost extension. Learn how to convert OST to PPTX file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert OST to PPTX in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert OST to PPTX in C#
+    appDescription: Convert OST to PPTX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert OST to PPTX in C# 
+        description: Some description
+        url: conversion/net/convert/ost-to-pptx/#steps-to-convert-ost-to-pptx-in-c
+        steps:
+        - name: Load source OST file 
+          text: Create an instance of Converter class and pass source OST file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of PresentationConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to PPTX and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the PresentationConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 OST or Offline Storage Files represent the user's mailbox data in offline mode on the local machine upon registration with Exchange Server using Microsoft Outlook. It is automatically created on the first use of Microsoft Outlook upon connectivity with the server. Once the file is created, the data is synchronized with the email server so that it is available offline as well in case of disconnectivity from the email server.

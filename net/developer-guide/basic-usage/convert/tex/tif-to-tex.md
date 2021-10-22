@@ -5,7 +5,31 @@ title: Convert TIF to TEX
 description: "TIF format represents Tagged Image File Format with .tif extension. Learn how to convert TIF to TEX file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert TIF to TEX in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert TIF to TEX in C#
+    appDescription: Convert TIF to TEX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert TIF to TEX in C# 
+        description: Some description
+        url: conversion/net/convert/tif-to-tex/#steps-to-convert-tif-to-tex-in-c
+        steps:
+        - name: Load source TIF file 
+          text: Create an instance of Converter class and pass source TIF file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of PdfConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to TEX and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the PdfConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 TIF or TIFF, Tagged Image File Format, represents raster images that are meant for usage on a variety of devices that comply with this file format standard. It is capable of describing bilevel, grayscale, palette-color and full-color image data in several color spaces. It supports lossy as well as lossless compression schemes to choose between space and time for applications using the format.

@@ -5,7 +5,31 @@ title: Convert PPTX to DOC
 description: "PPTX format represents PowerPoint Open XML Presentation with .pptx extension. Learn how to convert PPTX to DOC file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert PPTX to DOC in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert PPTX to DOC in C#
+    appDescription: Convert PPTX to DOC natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert PPTX to DOC in C# 
+        description: Some description
+        url: conversion/net/convert/pptx-to-doc/#steps-to-convert-pptx-to-doc-in-c
+        steps:
+        - name: Load source PPTX file 
+          text: Create an instance of Converter class and pass source PPTX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of WordProcessingConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to DOC and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the WordProcessingConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 Files with PPTX extension are presentation files created with popular Microsoft PowerPoint application. Unlike the previous version of presentation file format PPT which was binary, the PPTX format is based on the Microsoft PowerPoint open XML presentation file format. A presentation file is a collection of slides where each slide can comprise of text, images, formatting, animations, and other media.

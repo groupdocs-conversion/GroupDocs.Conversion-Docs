@@ -5,7 +5,31 @@ title: Convert WEBP to DOC
 description: "WEBP format represents Raster Web Image File Format with .webp extension. Learn how to convert WEBP to DOC file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert WEBP to DOC in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert WEBP to DOC in C#
+    appDescription: Convert WEBP to DOC natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert WEBP to DOC in C# 
+        description: Some description
+        url: conversion/net/convert/webp-to-doc/#steps-to-convert-webp-to-doc-in-c
+        steps:
+        - name: Load source WEBP file 
+          text: Create an instance of Converter class and pass source WEBP file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of WordProcessingConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to DOC and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the WordProcessingConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 WebP, introduced by Google, is a modern raster web image file format that is based on lossless and lossy compression. It provides same image quality while considerably reducing the image size. Since most of the web pages use images as effective representation of data, the use of WebP images in web pages results in faster loading of web pages.

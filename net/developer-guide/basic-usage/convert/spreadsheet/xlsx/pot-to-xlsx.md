@@ -5,7 +5,31 @@ title: Convert POT to XLSX
 description: "POT format represents PowerPoint Template with .pot extension. Learn how to convert POT to XLSX file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert POT to XLSX in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert POT to XLSX in C#
+    appDescription: Convert POT to XLSX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert POT to XLSX in C# 
+        description: Some description
+        url: conversion/net/convert/pot-to-xlsx/#steps-to-convert-pot-to-xlsx-in-c
+        steps:
+        - name: Load source POT file 
+          text: Create an instance of Converter class and pass source POT file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of SpreadsheetConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to XLSX and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the SpreadsheetConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 Files with .POT extension represent Microsoft PowerPoint template files created by PowerPoint 97-2003 versions. Files created with these versions of Microsoft PowerPoint are in binary format as compared to those created in Office OpenXML file formats using the higher versions of PowerPoint. The files, hence, generated can be used to create presentations that have the same layout and other settings required to be applied to new files. These settings can include styles, backgrounds, color palettes, fonts, and defaults.

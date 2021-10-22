@@ -5,7 +5,31 @@ title: Convert WMF to DOCX
 description: "WMF format represents Windows Metafile with .wmf extension. Learn how to convert WMF to DOCX file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert WMF to DOCX in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert WMF to DOCX in C#
+    appDescription: Convert WMF to DOCX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert WMF to DOCX in C# 
+        description: Some description
+        url: conversion/net/convert/wmf-to-docx/#steps-to-convert-wmf-to-docx-in-c
+        steps:
+        - name: Load source WMF file 
+          text: Create an instance of Converter class and pass source WMF file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of WordProcessingConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to DOCX and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the WordProcessingConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 Files with WMF extension represent Microsoft Windows Metafile (WMF) for storing vector as well as bitmap-format images data. To be more accurate, WMF belongs to the vector file format category of Graphics file formats that is device independent. Windows Graphical Device Interface (GDI) uses the functions stored in a WMF file to display an image on the screen.

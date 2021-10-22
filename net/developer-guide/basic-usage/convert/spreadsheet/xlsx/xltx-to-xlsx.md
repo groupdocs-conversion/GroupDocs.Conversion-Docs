@@ -5,7 +5,31 @@ title: Convert XLTX to XLSX
 description: "XLTX format represents Microsoft Excel Open XML Template with .xltx extension. Learn how to convert XLTX to XLSX file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert XLTX to XLSX in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert XLTX to XLSX in C#
+    appDescription: Convert XLTX to XLSX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert XLTX to XLSX in C# 
+        description: Some description
+        url: conversion/net/convert/xltx-to-xlsx/#steps-to-convert-xltx-to-xlsx-in-c
+        steps:
+        - name: Load source XLTX file 
+          text: Create an instance of Converter class and pass source XLTX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of SpreadsheetConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to XLSX and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the SpreadsheetConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 Files with XLTX extension represent Microsoft Excel Template files that are based on the Office OpenXML file format specifications. It is used to create a standard template file that can be utilized to generate XLSX files that exhibit the same settings as specified in the XLTX file.

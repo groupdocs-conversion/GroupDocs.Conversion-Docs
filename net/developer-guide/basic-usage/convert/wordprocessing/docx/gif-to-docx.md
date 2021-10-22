@@ -5,7 +5,31 @@ title: Convert GIF to DOCX
 description: "GIF format represents Graphical Interchange Format File with .gif extension. Learn how to convert GIF to DOCX file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert GIF to DOCX in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert GIF to DOCX in C#
+    appDescription: Convert GIF to DOCX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert GIF to DOCX in C# 
+        description: Some description
+        url: conversion/net/convert/gif-to-docx/#steps-to-convert-gif-to-docx-in-c
+        steps:
+        - name: Load source GIF file 
+          text: Create an instance of Converter class and pass source GIF file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of WordProcessingConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to DOCX and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the WordProcessingConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 A GIF or Graphical Interchange Format is a type of highly compressed image. Owned by Unisys, GIF uses the LZW compression algorithm that does not degrade the image quality. For each image GIF typically allow up to 8 bits per pixel and up to 256 colors are allowed across the image. In contrast to a JPEG image, which can display up to 16 million colors and fairly touches the limits of the human eye.

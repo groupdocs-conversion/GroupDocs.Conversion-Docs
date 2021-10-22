@@ -5,7 +5,31 @@ title: Convert CF2 to PDF
 description: "CF2 format represents Common File Format File with .cf2 extension. Learn how to convert CF2 to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert CF2 to PDF in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert CF2 to PDF in C#
+    appDescription: Convert CF2 to PDF natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert CF2 to PDF in C# 
+        description: Some description
+        url: conversion/net/convert/cf2-to-pdf/#steps-to-convert-cf2-to-pdf-in-c
+        steps:
+        - name: Load source CF2 file 
+          text: Create an instance of Converter class and pass source CF2 file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of PdfConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to PDF and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the PdfConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 A file with .cf2 extension is a CAD file format that contains 3D package designs or other model data for die-cutting. Most of the CAD/CAM machines can process and cut these files. It was created by the National Space Science Data Center (NSSDC) to provide self-describing data storage and manipulation format that matches the structure of scientific data and applications such as statistical and numerical methods, visualization, and management. 

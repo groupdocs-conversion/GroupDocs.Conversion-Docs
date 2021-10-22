@@ -5,7 +5,31 @@ title: Convert OXPS to PDF
 description: "OXPS format represents XML Paper Specification File with .oxps extension. Learn how to convert OXPS to PDF file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert OXPS to PDF in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert OXPS to PDF in C#
+    appDescription: Convert OXPS to PDF natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert OXPS to PDF in C# 
+        description: Some description
+        url: conversion/net/convert/oxps-to-pdf/#steps-to-convert-oxps-to-pdf-in-c
+        steps:
+        - name: Load source OXPS file 
+          text: Create an instance of Converter class and pass source OXPS file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of PdfConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to PDF and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the PdfConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 Open XML Paper Specification (also referred to as OpenXPS) is an open specification for a page description language and a fixed-document format.

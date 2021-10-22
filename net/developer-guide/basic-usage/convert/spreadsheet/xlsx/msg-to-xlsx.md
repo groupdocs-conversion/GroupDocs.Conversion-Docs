@@ -5,7 +5,31 @@ title: Convert MSG to XLSX
 description: "MSG format represents Microsoft Outlook Email Format with .msg extension. Learn how to convert MSG to XLSX file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert MSG to XLSX in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert MSG to XLSX in C#
+    appDescription: Convert MSG to XLSX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert MSG to XLSX in C# 
+        description: Some description
+        url: conversion/net/convert/msg-to-xlsx/#steps-to-convert-msg-to-xlsx-in-c
+        steps:
+        - name: Load source MSG file 
+          text: Create an instance of Converter class and pass source MSG file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of SpreadsheetConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to XLSX and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the SpreadsheetConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 MSG is a file format used by Microsoft Outlook and Exchange to store email messages, contact, appointment, or other tasks. Such messages may contain one or more email fields, with the sender, recipient, subject, date, and message body, or contact information, appointment particulars, and one or more task specifications. The properties that constitute the Message object, including are also a part of the MSG file.

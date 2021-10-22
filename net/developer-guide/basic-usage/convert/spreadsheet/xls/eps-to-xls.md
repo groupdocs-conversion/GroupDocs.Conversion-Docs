@@ -5,7 +5,31 @@ title: Convert EPS to XLS
 description: "EPS format represents Encapsulated PostScript File with .eps extension. Learn how to convert EPS to XLS file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert EPS to XLS in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert EPS to XLS in C#
+    appDescription: Convert EPS to XLS natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert EPS to XLS in C# 
+        description: Some description
+        url: conversion/net/convert/eps-to-xls/#steps-to-convert-eps-to-xls-in-c
+        steps:
+        - name: Load source EPS file 
+          text: Create an instance of Converter class and pass source EPS file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of SpreadsheetConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to XLS and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the SpreadsheetConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 Files with EPS extension essentially describe an Encapsulated PostScript language program that describes the appearance of a single page. The name "Encapsulated" because it can be included or encapsulated in another PostScript language page description. This script based file format may contain any combination of text, graphics and images.

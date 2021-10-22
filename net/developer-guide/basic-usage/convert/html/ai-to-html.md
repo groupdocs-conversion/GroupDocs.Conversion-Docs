@@ -26,7 +26,7 @@ structuredData:
           imageHeight: 196
           imageWidth: 737
         - name: Convert to HTML and save result 
-          text: Call Converter class Convert method and pass the filename for the converted HTML file and the MarkupConvertOptions object from the previous step as parameters.   
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the MarkupConvertOptions object from the previous step as parameters.
           imageUrl: conversion/net/images/convert-file-step-3.png
           imageHeight: 196
           imageWidth: 737

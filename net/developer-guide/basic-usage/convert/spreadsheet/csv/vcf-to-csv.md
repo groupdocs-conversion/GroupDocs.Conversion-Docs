@@ -5,7 +5,31 @@ title: Convert VCF to CSV
 description: "VCF format represents vCard File with .vcf extension. Learn how to convert VCF to CSV file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert VCF to CSV in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert VCF to CSV in C#
+    appDescription: Convert VCF to CSV natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert VCF to CSV in C# 
+        description: Some description
+        url: conversion/net/convert/vcf-to-csv/#steps-to-convert-vcf-to-csv-in-c
+        steps:
+        - name: Load source VCF file 
+          text: Create an instance of Converter class and pass source VCF file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of SpreadsheetConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to CSV and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the SpreadsheetConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 VCF (Virtual Card Format) or vCard is a digital file format for storing contact information. The format is widely used for data interchange among popular information exchange applications. Most operating systems such as Windows and macOS come with default applications to create and open these files. A single VCF file can contain contact information for one or multiple contacts.

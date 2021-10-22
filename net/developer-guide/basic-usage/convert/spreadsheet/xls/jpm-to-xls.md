@@ -5,7 +5,31 @@ title: Convert JPM to XLS
 description: "JPM format represents JPEG 2000 Image File with .jpm extension. Learn how to convert JPM to XLS file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert JPM to XLS in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert JPM to XLS in C#
+    appDescription: Convert JPM to XLS natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert JPM to XLS in C# 
+        description: Some description
+        url: conversion/net/convert/jpm-to-xls/#steps-to-convert-jpm-to-xls-in-c
+        steps:
+        - name: Load source JPM file 
+          text: Create an instance of Converter class and pass source JPM file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of SpreadsheetConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to XLS and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the SpreadsheetConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 JPM is an extension to the JP2 format and was developed for multi-page documents with multiple objects per page.

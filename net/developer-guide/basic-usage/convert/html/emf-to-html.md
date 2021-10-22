@@ -5,7 +5,31 @@ title: Convert EMF to HTML
 description: "EMF format represents Enhanced Metafile Format with .emf extension. Learn how to convert EMF to HTML file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert EMF to HTML in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert EMF to HTML in C#
+    appDescription: Convert EMF to HTML natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert EMF to HTML in C# 
+        description: Some description
+        url: conversion/net/convert/emf-to-html/#steps-to-convert-emf-to-html-in-c
+        steps:
+        - name: Load source EMF file 
+          text: Create an instance of Converter class and pass source EMF file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of MarkupConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to HTML and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the MarkupConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 Enhanced metafile format (EMF) stores graphical images device-independently. Metafiles of EMF comprises of variable-length records in chronological order that can render the stored image after parsing on any output device. These variable-length records can be definitions of enclosed objects, commands for drawing, and graphics properties critical to render the image accurately.

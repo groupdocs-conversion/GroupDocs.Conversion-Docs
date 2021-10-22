@@ -5,7 +5,31 @@ title: Convert EPUB to JPG
 description: "EPUB format represents Digital E-Book File Format with .epub extension. Learn how to convert EPUB to JPG file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert EPUB to JPG in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert EPUB to JPG in C#
+    appDescription: Convert EPUB to JPG natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert EPUB to JPG in C# 
+        description: Some description
+        url: conversion/net/convert/epub-to-jpg/#steps-to-convert-epub-to-jpg-in-c
+        steps:
+        - name: Load source EPUB file 
+          text: Create an instance of Converter class and pass source EPUB file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of ImageConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to JPG and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the ImageConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 Files with .EPUB extension are an e-book file format that provide a standard digital publication format for publishers and consumers. The format has been so common by now that it is supported by many e-readers and software applications. For example, on Mac OS, the pre-installed Books software provides the support for opening such files. In addition, there are a lot of compatible software available for smartphones, tablets and computers.

@@ -5,7 +5,31 @@ title: Convert OTS to PSD
 description: "OTS format represents OpenDocument Spreadsheet Template with .ots extension. Learn how to convert OTS to PSD file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert OTS to PSD in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert OTS to PSD in C#
+    appDescription: Convert OTS to PSD natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert OTS to PSD in C# 
+        description: Some description
+        url: conversion/net/convert/ots-to-psd/#steps-to-convert-ots-to-psd-in-c
+        steps:
+        - name: Load source OTS file 
+          text: Create an instance of Converter class and pass source OTS file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of ImageConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to PSD and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the ImageConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 OTS is a spreadsheet template in OpenDocument format. OTS files are used to create ODS files with same styling and formatting.

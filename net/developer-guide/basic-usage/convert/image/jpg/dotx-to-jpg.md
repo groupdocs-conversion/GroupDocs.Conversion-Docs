@@ -5,7 +5,31 @@ title: Convert DOTX to JPG
 description: "DOTX format represents Word Open XML Document Template with .dotx extension. Learn how to convert DOTX to JPG file programmatically in C# language using GroupDocs.Conversion for .NET library."
 keywords: Convert DOTX to JPG in C#
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+structuredData:
+    productCode: conversion
+    productPlatform: net
+    appName: Convert DOTX to JPG in C#
+    appDescription: Convert DOTX to JPG natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
+    howTo:
+        name: How to convert DOTX to JPG in C# 
+        description: Some description
+        url: conversion/net/convert/dotx-to-jpg/#steps-to-convert-dotx-to-jpg-in-c
+        steps:
+        - name: Load source DOTX file 
+          text: Create an instance of Converter class and pass source DOTX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          imageUrl: conversion/net/images/convert-file-step-1.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Specify convert options 
+          text: Create an instance of ImageConvertOptions class.
+          imageUrl: conversion/net/images/convert-file-step-2.png
+          imageHeight: 196
+          imageWidth: 737
+        - name: Convert to JPG and save result 
+          text: Call Converter class Convert method and pass the filename for the converted HTML file and the ImageConvertOptions object from the previous step as parameters.
+          imageUrl: conversion/net/images/convert-file-step-3.png
+          imageHeight: 196
+          imageWidth: 737
 ---
 
 Files with DOTX extension are template files created by Microsoft Word to have pre-formatted settings for a generation of further DOCX files. A template file is created in order to have specific user settings that should be applied to subsequent files created from this template. These settings include page margins, borders, headers, footers, and other page settings. Such templates are used in official documents such as company letterheads and standardized forms.
