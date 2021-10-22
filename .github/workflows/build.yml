@@ -13,7 +13,6 @@ on:
 
 jobs:
 
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
@@ -39,29 +38,6 @@ jobs:
           #cd common/public
           #zip -r -q conversion.zip conversion
 
-      # Upload artifacts to be used in other jobs
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: hugo-output
-          path: common/public
-          retention-days: 1
-
-  # Deploy job        
-  deploy:
-    runs-on: ubuntu-latest
-    # Run after build job
-    needs: build
-    # Run only when pushed to master and only when build job is complete/succeed
-    if: success() && github.ref == 'refs/heads/master'
-    steps:
-      # Restore artifacts from build job
-      - name: Download artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: hugo-output
-      
-      # Deploy sitemap
       - name: Deploy sitemap
         run: |
           ls -l common
