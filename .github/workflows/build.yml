@@ -25,12 +25,25 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      # Runs submodule update
+      - name: Submodule update
         run: |
           git submodule update --init --recursive
           git submodule foreach git pull origin master
+
+      # Install Hugo
+      - name: Install Hugo
+        run: |
+          curl -LO https://github.com/gohugoio/hugo/releases/download/v0.67.1/hugo_extended_0.67.1_Linux-64bit.deb
+          sudo dpkg -i hugo_extended_0.67.1_Linux-64bit.deb
+          
+      # Run & build Hugo
+      - name: Run and build Hugo
+        run: |
+          mkdir -p common/content/conversion
+          cp -r java common/content/conversion
+          cp -r net common/content/conversion
+          cp _index.md common/content/conversion
+          hugo --source common --minify --config config.toml,ignore-total-config.toml
+          cd common/public
+          zip -r -q conversion.zip conversion
