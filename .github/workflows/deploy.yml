@@ -17,7 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Deploy sitemap
-        run: ls -l
+        run: |
+          cd common/public
+          ls -l
         #uses: nogsantos/scp-deploy@master
         #with:
           #src: product-sitemap.xml
