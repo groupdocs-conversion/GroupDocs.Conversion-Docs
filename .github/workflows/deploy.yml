@@ -1,6 +1,6 @@
 # Deploy documentation to the server
 
-name: deploy
+name: Deploy
 
 # Start deploy after build is finished
 on:
