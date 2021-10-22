@@ -41,6 +41,8 @@ jobs:
       - name: Deploy sitemap
         run: |
           ls -l common
+          ls -l common/content
+          ls -l common/content/conversion
         #uses: nogsantos/scp-deploy@master
         #with:
           #src: product-sitemap.xml
