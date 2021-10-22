@@ -35,18 +35,14 @@ jobs:
           cp -r net common/content/conversion
           cp _index.md common/content/conversion
           hugo --source common --minify --config config.toml,ignore-total-config.toml
-          #cd common/public
+          cd common/public
           #zip -r -q conversion.zip conversion
 
       - name: Deploy sitemap
-        run: |
-          ls -l common
-          ls -l common/public
-          ls -l common/public/conversion
-        #uses: nogsantos/scp-deploy@master
-        #with:
-          #src: product-sitemap.xml
-          #host: ${{ secrets.DOCS_SSH_HOST }}
-          #remote: ${{ secrets.DOCS_SSH_DIR }}/sitemaps/test.xml
-          #user: ${{ secrets.DOCS_SSH_USER }}
-          #key: ${{ secrets.DOCS_SSH_KEY }}
+        uses: nogsantos/scp-deploy@master
+        with:
+          src: product-sitemap.xml
+          host: ${{ secrets.DOCS_SSH_HOST }}
+          remote: ${{ secrets.DOCS_SSH_DIR }}/sitemaps/test.xml
+          user: ${{ secrets.DOCS_SSH_USER }}
+          key: ${{ secrets.DOCS_SSH_KEY }}
