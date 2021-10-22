@@ -1,6 +1,6 @@
-# Build documentation
+# Build & deploy documentation
 
-name: Build
+name: Build & Deploy
 
 # Controls when the workflow will run
 on:
@@ -11,31 +11,24 @@ on:
   # Run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+  # Build job
+  build:
+    runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Run submodule update
       - name: Submodule update
         run: |
           git submodule update --init --recursive
           git submodule foreach git pull origin master
 
-      # Run Hugo install
       - name: Install Hugo
         run: |
           curl -LO https://github.com/gohugoio/hugo/releases/download/v0.67.1/hugo_extended_0.67.1_Linux-64bit.deb
           sudo dpkg -i hugo_extended_0.67.1_Linux-64bit.deb
           
-      # Run & build Hugo
       - name: Run and build Hugo
         run: |
           mkdir -p common/content/conversion
@@ -46,10 +39,36 @@ jobs:
           #cd common/public
           #zip -r -q conversion.zip conversion
 
-      # Store generated output produced by Hugo
-      - name: Store artifacts
+      # Upload artifacts to be used in other jobs
+      - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
           name: hugo-output
           path: common/public
           retention-days: 1
+
+  # Deploy job        
+  deploy:
+    runs-on: ubuntu-latest
+    # Run after build job
+    needs: build
+    # Run only when pushed to master and only when build job is complete/succeed
+    if: success() && github.ref == 'refs/heads/master'
+    steps:
+      # Restore artifacts from build job
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: hugo-output
+      
+      # Deploy sitemap
+      - name: Deploy sitemap
+        run: |
+          ls -l common
+        #uses: nogsantos/scp-deploy@master
+        #with:
+          #src: product-sitemap.xml
+          #host: ${{ secrets.DOCS_SSH_HOST }}
+          #remote: ${{ secrets.DOCS_SSH_DIR }}/sitemaps/test.xml
+          #user: ${{ secrets.DOCS_SSH_USER }}
+          #key: ${{ secrets.DOCS_SSH_KEY }}
