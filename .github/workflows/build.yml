@@ -15,6 +15,9 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    env:
+      PRODUCT: conversion
+
     steps:
       - uses: actions/checkout@v2
 
@@ -30,27 +33,25 @@ jobs:
           
       - name: Run and build Hugo
         run: |
-          mkdir -p common/content/conversion
-          cp -r java common/content/conversion
-          cp -r net common/content/conversion
-          cp _index.md common/content/conversion
+          mkdir -p common/content/${{ env.PRODUCT }}
+          cp -r java common/content/${{ env.PRODUCT }}
+          cp -r net common/content/${{ env.PRODUCT }}
+          cp _index.md common/content/${{ env.PRODUCT }}
           hugo --source common --minify --config config.toml,ignore-total-config.toml
-          #cd common/public
-          #zip -r -q conversion.zip conversion
 
       - name: Deploy sitemap
         uses: nogsantos/scp-deploy@master
         with:
           src: common/public/product-sitemap.xml
           host: ${{ secrets.DOCS_SSH_HOST }}
-          remote: ${{ secrets.DOCS_SSH_DIR }}/sitemaps/conversion.xml
+          remote: ${{ secrets.DOCS_SSH_DIR }}/sitemaps/${{ env.PRODUCT }}.xml
           user: ${{ secrets.DOCS_SSH_USER }}
           key: ${{ secrets.DOCS_SSH_KEY }}
 
       - name: Deploy documentation
         uses: nogsantos/scp-deploy@master
         with:
-          src: common/public/conversion
+          src: common/public/${{ env.PRODUCT }}
           host: ${{ secrets.DOCS_SSH_HOST }}
           remote: ${{ secrets.DOCS_SSH_DIR }}
           user: ${{ secrets.DOCS_SSH_USER }}
