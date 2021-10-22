@@ -43,5 +43,5 @@ jobs:
           cp -r net common/content/conversion
           cp _index.md common/content/conversion
           hugo --source common --minify --config config.toml,ignore-total-config.toml
-          cd common/public
-          zip -r -q conversion.zip conversion
+          #cd common/public
+          #zip -r -q conversion.zip conversion
