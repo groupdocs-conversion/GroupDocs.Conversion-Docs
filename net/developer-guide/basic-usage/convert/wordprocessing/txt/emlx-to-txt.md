@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert EMLX to TXT natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert EMLX to TXT in C# 
-        description: Some description
+        description: Quick guide about how to convert EMLX to TXT in C# with high performance and accuracy.
         url: conversion/net/convert/emlx-to-txt/#steps-to-convert-emlx-to-txt-in-c
         steps:
         - name: Load source EMLX file 

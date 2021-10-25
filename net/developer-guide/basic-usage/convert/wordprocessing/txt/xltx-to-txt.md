@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert XLTX to TXT natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert XLTX to TXT in C# 
-        description: Some description
+        description: Quick guide about how to convert XLTX to TXT in C# with high performance and accuracy.
         url: conversion/net/convert/xltx-to-txt/#steps-to-convert-xltx-to-txt-in-c
         steps:
         - name: Load source XLTX file 

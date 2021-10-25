@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert XML to DOCX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert XML to DOCX in C# 
-        description: Some description
+        description: Quick guide about how to convert XML to DOCX in C# with high performance and accuracy.
         url: conversion/net/convert/xml-to-docx/#steps-to-convert-xml-to-docx-in-c
         steps:
         - name: Load source XML file 

@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert TIF to TXT natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert TIF to TXT in C# 
-        description: Some description
+        description: Quick guide about how to convert TIF to TXT in C# with high performance and accuracy.
         url: conversion/net/convert/tif-to-txt/#steps-to-convert-tif-to-txt-in-c
         steps:
         - name: Load source TIF file 
