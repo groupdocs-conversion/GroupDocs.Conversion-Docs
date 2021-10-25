@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert VSSM to PSD natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert VSSM to PSD in C# 
-        description: Some description
+        description: Quick guide about how to convert VSSM to PSD in C# with high performance and accuracy.
         url: conversion/net/convert/vssm-to-psd/#steps-to-convert-vssm-to-psd-in-c
         steps:
         - name: Load source VSSM file 

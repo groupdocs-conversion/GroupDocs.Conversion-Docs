@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert RTF to TEX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert RTF to TEX in C# 
-        description: Some description
+        description: Quick guide about how to convert RTF to TEX in C# with high performance and accuracy.
         url: conversion/net/convert/rtf-to-tex/#steps-to-convert-rtf-to-tex-in-c
         steps:
         - name: Load source RTF file 

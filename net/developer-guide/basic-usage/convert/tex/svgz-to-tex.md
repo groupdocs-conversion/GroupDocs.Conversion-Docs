@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert SVGZ to TEX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert SVGZ to TEX in C# 
-        description: Some description
+        description: Quick guide about how to convert SVGZ to TEX in C# with high performance and accuracy.
         url: conversion/net/convert/svgz-to-tex/#steps-to-convert-svgz-to-tex-in-c
         steps:
         - name: Load source SVGZ file 

@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DOTX to PSD natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DOTX to PSD in C# 
-        description: Some description
+        description: Quick guide about how to convert DOTX to PSD in C# with high performance and accuracy.
         url: conversion/net/convert/dotx-to-psd/#steps-to-convert-dotx-to-psd-in-c
         steps:
         - name: Load source DOTX file 

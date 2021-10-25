@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert POTX to DOC natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert POTX to DOC in C# 
-        description: Some description
+        description: Quick guide about how to convert POTX to DOC in C# with high performance and accuracy.
         url: conversion/net/convert/potx-to-doc/#steps-to-convert-potx-to-doc-in-c
         steps:
         - name: Load source POTX file 

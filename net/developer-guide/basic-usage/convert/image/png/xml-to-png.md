@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert XML to PNG natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert XML to PNG in C# 
-        description: Some description
+        description: Quick guide about how to convert XML to PNG in C# with high performance and accuracy.
         url: conversion/net/convert/xml-to-png/#steps-to-convert-xml-to-png-in-c
         steps:
         - name: Load source XML file 

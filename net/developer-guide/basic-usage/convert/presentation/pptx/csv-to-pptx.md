@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert CSV to PPTX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert CSV to PPTX in C# 
-        description: Some description
+        description: Quick guide about how to convert CSV to PPTX in C# with high performance and accuracy.
         url: conversion/net/convert/csv-to-pptx/#steps-to-convert-csv-to-pptx-in-c
         steps:
         - name: Load source CSV file 

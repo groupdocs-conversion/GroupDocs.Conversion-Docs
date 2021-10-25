@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DCM to TEX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DCM to TEX in C# 
-        description: Some description
+        description: Quick guide about how to convert DCM to TEX in C# with high performance and accuracy.
         url: conversion/net/convert/dcm-to-tex/#steps-to-convert-dcm-to-tex-in-c
         steps:
         - name: Load source DCM file 

@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DGN to XLSX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DGN to XLSX in C# 
-        description: Some description
+        description: Quick guide about how to convert DGN to XLSX in C# with high performance and accuracy.
         url: conversion/net/convert/dgn-to-xlsx/#steps-to-convert-dgn-to-xlsx-in-c
         steps:
         - name: Load source DGN file 

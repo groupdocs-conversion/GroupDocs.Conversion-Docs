@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DOC to HTML natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DOC to HTML in C# 
-        description: Some description
+        description: Quick guide about how to convert DOC to HTML in C# with high performance and accuracy.
         url: conversion/net/convert/doc-to-html/#steps-to-convert-doc-to-html-in-c
         steps:
         - name: Load source DOC file 

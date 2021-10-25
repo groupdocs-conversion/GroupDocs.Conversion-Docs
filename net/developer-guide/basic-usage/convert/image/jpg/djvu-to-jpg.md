@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DJVU to JPG natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DJVU to JPG in C# 
-        description: Some description
+        description: Quick guide about how to convert DJVU to JPG in C# with high performance and accuracy.
         url: conversion/net/convert/djvu-to-jpg/#steps-to-convert-djvu-to-jpg-in-c
         steps:
         - name: Load source DJVU file 

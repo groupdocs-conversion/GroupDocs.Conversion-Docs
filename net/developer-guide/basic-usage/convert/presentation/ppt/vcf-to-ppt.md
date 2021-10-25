@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert VCF to PPT natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert VCF to PPT in C# 
-        description: Some description
+        description: Quick guide about how to convert VCF to PPT in C# with high performance and accuracy.
         url: conversion/net/convert/vcf-to-ppt/#steps-to-convert-vcf-to-ppt-in-c
         steps:
         - name: Load source VCF file 

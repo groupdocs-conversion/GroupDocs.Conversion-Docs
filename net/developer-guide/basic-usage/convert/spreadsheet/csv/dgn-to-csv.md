@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DGN to CSV natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DGN to CSV in C# 
-        description: Some description
+        description: Quick guide about how to convert DGN to CSV in C# with high performance and accuracy.
         url: conversion/net/convert/dgn-to-csv/#steps-to-convert-dgn-to-csv-in-c
         steps:
         - name: Load source DGN file 

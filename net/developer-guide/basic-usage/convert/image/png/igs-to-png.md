@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert IGS to PNG natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert IGS to PNG in C# 
-        description: Some description
+        description: Quick guide about how to convert IGS to PNG in C# with high performance and accuracy.
         url: conversion/net/convert/igs-to-png/#steps-to-convert-igs-to-png-in-c
         steps:
         - name: Load source IGS file 

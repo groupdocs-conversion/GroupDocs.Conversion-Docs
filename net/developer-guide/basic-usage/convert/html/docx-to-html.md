@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DOCX to HTML natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DOCX to HTML in C# 
-        description: Some description
+        description: Quick guide about how to convert DOCX to HTML in C# with high performance and accuracy.
         url: conversion/net/convert/docx-to-html/#steps-to-convert-docx-to-html-in-c
         steps:
         - name: Load source DOCX file 

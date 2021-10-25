@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert ONE to PDF natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert ONE to PDF in C# 
-        description: Some description
+        description: Quick guide about how to convert ONE to PDF in C# with high performance and accuracy.
         url: conversion/net/convert/one-to-pdf/#steps-to-convert-one-to-pdf-in-c
         steps:
         - name: Load source ONE file 

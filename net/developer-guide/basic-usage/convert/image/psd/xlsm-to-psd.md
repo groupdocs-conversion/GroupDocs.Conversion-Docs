@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert XLSM to PSD natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert XLSM to PSD in C# 
-        description: Some description
+        description: Quick guide about how to convert XLSM to PSD in C# with high performance and accuracy.
         url: conversion/net/convert/xlsm-to-psd/#steps-to-convert-xlsm-to-psd-in-c
         steps:
         - name: Load source XLSM file 

@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert LOG to HTML natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert LOG to HTML in C# 
-        description: Some description
+        description: Quick guide about how to convert LOG to HTML in C# with high performance and accuracy.
         url: conversion/net/convert/log-to-html/#steps-to-convert-log-to-html-in-c
         steps:
         - name: Load source LOG file 

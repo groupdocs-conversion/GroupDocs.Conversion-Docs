@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert PNG to TEX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert PNG to TEX in C# 
-        description: Some description
+        description: Quick guide about how to convert PNG to TEX in C# with high performance and accuracy.
         url: conversion/net/convert/png-to-tex/#steps-to-convert-png-to-tex-in-c
         steps:
         - name: Load source PNG file 

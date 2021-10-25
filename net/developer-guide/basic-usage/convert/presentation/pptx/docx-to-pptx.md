@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DOCX to PPTX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DOCX to PPTX in C# 
-        description: Some description
+        description: Quick guide about how to convert DOCX to PPTX in C# with high performance and accuracy.
         url: conversion/net/convert/docx-to-pptx/#steps-to-convert-docx-to-pptx-in-c
         steps:
         - name: Load source DOCX file 

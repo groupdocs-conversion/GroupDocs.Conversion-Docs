@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert FODP to PPTX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert FODP to PPTX in C# 
-        description: Some description
+        description: Quick guide about how to convert FODP to PPTX in C# with high performance and accuracy.
         url: conversion/net/convert/fodp-to-pptx/#steps-to-convert-fodp-to-pptx-in-c
         steps:
         - name: Load source FODP file 

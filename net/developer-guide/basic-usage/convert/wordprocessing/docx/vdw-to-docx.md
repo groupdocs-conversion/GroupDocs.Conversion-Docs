@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert VDW to DOCX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert VDW to DOCX in C# 
-        description: Some description
+        description: Quick guide about how to convert VDW to DOCX in C# with high performance and accuracy.
         url: conversion/net/convert/vdw-to-docx/#steps-to-convert-vdw-to-docx-in-c
         steps:
         - name: Load source VDW file 

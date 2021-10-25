@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DWG to HTML natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DWG to HTML in C# 
-        description: Some description
+        description: Quick guide about how to convert DWG to HTML in C# with high performance and accuracy.
         url: conversion/net/convert/dwg-to-html/#steps-to-convert-dwg-to-html-in-c
         steps:
         - name: Load source DWG file 

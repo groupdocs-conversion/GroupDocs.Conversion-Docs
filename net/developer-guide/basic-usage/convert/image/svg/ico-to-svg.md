@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert ICO to SVG natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert ICO to SVG in C# 
-        description: Some description
+        description: Quick guide about how to convert ICO to SVG in C# with high performance and accuracy.
         url: conversion/net/convert/ico-to-svg/#steps-to-convert-ico-to-svg-in-c
         steps:
         - name: Load source ICO file 

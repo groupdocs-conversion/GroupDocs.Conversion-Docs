@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DOCX to XLSX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DOCX to XLSX in C# 
-        description: Some description
+        description: Quick guide about how to convert DOCX to XLSX in C# with high performance and accuracy.
         url: conversion/net/convert/docx-to-xlsx/#steps-to-convert-docx-to-xlsx-in-c
         steps:
         - name: Load source DOCX file 

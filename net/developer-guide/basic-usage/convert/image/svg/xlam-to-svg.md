@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert XLAM to SVG natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert XLAM to SVG in C# 
-        description: Some description
+        description: Quick guide about how to convert XLAM to SVG in C# with high performance and accuracy.
         url: conversion/net/convert/xlam-to-svg/#steps-to-convert-xlam-to-svg-in-c
         steps:
         - name: Load source XLAM file 

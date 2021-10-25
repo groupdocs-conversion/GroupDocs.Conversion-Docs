@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert TXT to PPT natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert TXT to PPT in C# 
-        description: Some description
+        description: Quick guide about how to convert TXT to PPT in C# with high performance and accuracy.
         url: conversion/net/convert/txt-to-ppt/#steps-to-convert-txt-to-ppt-in-c
         steps:
         - name: Load source TXT file 

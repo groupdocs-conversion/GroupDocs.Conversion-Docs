@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert VST to PPT natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert VST to PPT in C# 
-        description: Some description
+        description: Quick guide about how to convert VST to PPT in C# with high performance and accuracy.
         url: conversion/net/convert/vst-to-ppt/#steps-to-convert-vst-to-ppt-in-c
         steps:
         - name: Load source VST file 

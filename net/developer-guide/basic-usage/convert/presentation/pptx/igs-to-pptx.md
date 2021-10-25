@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert IGS to PPTX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert IGS to PPTX in C# 
-        description: Some description
+        description: Quick guide about how to convert IGS to PPTX in C# with high performance and accuracy.
         url: conversion/net/convert/igs-to-pptx/#steps-to-convert-igs-to-pptx-in-c
         steps:
         - name: Load source IGS file 

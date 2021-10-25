@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DCM to XLSX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DCM to XLSX in C# 
-        description: Some description
+        description: Quick guide about how to convert DCM to XLSX in C# with high performance and accuracy.
         url: conversion/net/convert/dcm-to-xlsx/#steps-to-convert-dcm-to-xlsx-in-c
         steps:
         - name: Load source DCM file 

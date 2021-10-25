@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DNG to PDF natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DNG to PDF in C# 
-        description: Some description
+        description: Quick guide about how to convert DNG to PDF in C# with high performance and accuracy.
         url: conversion/net/convert/dng-to-pdf/#steps-to-convert-dng-to-pdf-in-c
         steps:
         - name: Load source DNG file 

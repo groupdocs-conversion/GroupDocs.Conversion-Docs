@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert J2K to JPG natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert J2K to JPG in C# 
-        description: Some description
+        description: Quick guide about how to convert J2K to JPG in C# with high performance and accuracy.
         url: conversion/net/convert/j2k-to-jpg/#steps-to-convert-j2k-to-jpg-in-c
         steps:
         - name: Load source J2K file 

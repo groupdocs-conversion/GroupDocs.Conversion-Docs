@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert XLSX to CSV natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert XLSX to CSV in C# 
-        description: Some description
+        description: Quick guide about how to convert XLSX to CSV in C# with high performance and accuracy.
         url: conversion/net/convert/xlsx-to-csv/#steps-to-convert-xlsx-to-csv-in-c
         steps:
         - name: Load source XLSX file 

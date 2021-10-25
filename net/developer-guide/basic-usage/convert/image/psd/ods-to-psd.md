@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert ODS to PSD natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert ODS to PSD in C# 
-        description: Some description
+        description: Quick guide about how to convert ODS to PSD in C# with high performance and accuracy.
         url: conversion/net/convert/ods-to-psd/#steps-to-convert-ods-to-psd-in-c
         steps:
         - name: Load source ODS file 

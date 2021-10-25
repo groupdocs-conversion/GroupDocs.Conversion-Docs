@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert VSDM to DOCX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert VSDM to DOCX in C# 
-        description: Some description
+        description: Quick guide about how to convert VSDM to DOCX in C# with high performance and accuracy.
         url: conversion/net/convert/vsdm-to-docx/#steps-to-convert-vsdm-to-docx-in-c
         steps:
         - name: Load source VSDM file 

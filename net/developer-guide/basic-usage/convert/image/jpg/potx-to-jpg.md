@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert POTX to JPG natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert POTX to JPG in C# 
-        description: Some description
+        description: Quick guide about how to convert POTX to JPG in C# with high performance and accuracy.
         url: conversion/net/convert/potx-to-jpg/#steps-to-convert-potx-to-jpg-in-c
         steps:
         - name: Load source POTX file 

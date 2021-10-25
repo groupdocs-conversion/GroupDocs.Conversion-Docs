@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert MHT to TEX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert MHT to TEX in C# 
-        description: Some description
+        description: Quick guide about how to convert MHT to TEX in C# with high performance and accuracy.
         url: conversion/net/convert/mht-to-tex/#steps-to-convert-mht-to-tex-in-c
         steps:
         - name: Load source MHT file 

@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert TXT to XLSX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert TXT to XLSX in C# 
-        description: Some description
+        description: Quick guide about how to convert TXT to XLSX in C# with high performance and accuracy.
         url: conversion/net/convert/txt-to-xlsx/#steps-to-convert-txt-to-xlsx-in-c
         steps:
         - name: Load source TXT file 

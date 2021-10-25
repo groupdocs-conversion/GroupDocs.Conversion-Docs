@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert PPTM to PPT natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert PPTM to PPT in C# 
-        description: Some description
+        description: Quick guide about how to convert PPTM to PPT in C# with high performance and accuracy.
         url: conversion/net/convert/pptm-to-ppt/#steps-to-convert-pptm-to-ppt-in-c
         steps:
         - name: Load source PPTM file 

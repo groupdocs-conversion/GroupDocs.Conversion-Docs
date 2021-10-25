@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert OTS to TEX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert OTS to TEX in C# 
-        description: Some description
+        description: Quick guide about how to convert OTS to TEX in C# with high performance and accuracy.
         url: conversion/net/convert/ots-to-tex/#steps-to-convert-ots-to-tex-in-c
         steps:
         - name: Load source OTS file 

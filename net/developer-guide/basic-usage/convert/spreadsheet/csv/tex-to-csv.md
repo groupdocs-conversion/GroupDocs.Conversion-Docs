@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert TEX to CSV natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert TEX to CSV in C# 
-        description: Some description
+        description: Quick guide about how to convert TEX to CSV in C# with high performance and accuracy.
         url: conversion/net/convert/tex-to-csv/#steps-to-convert-tex-to-csv-in-c
         steps:
         - name: Load source TEX file 

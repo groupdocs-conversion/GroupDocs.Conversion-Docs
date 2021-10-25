@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DIB to XLSX natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DIB to XLSX in C# 
-        description: Some description
+        description: Quick guide about how to convert DIB to XLSX in C# with high performance and accuracy.
         url: conversion/net/convert/dib-to-xlsx/#steps-to-convert-dib-to-xlsx-in-c
         steps:
         - name: Load source DIB file 

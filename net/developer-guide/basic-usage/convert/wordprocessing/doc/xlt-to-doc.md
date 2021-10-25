@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert XLT to DOC natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert XLT to DOC in C# 
-        description: Some description
+        description: Quick guide about how to convert XLT to DOC in C# with high performance and accuracy.
         url: conversion/net/convert/xlt-to-doc/#steps-to-convert-xlt-to-doc-in-c
         steps:
         - name: Load source XLT file 

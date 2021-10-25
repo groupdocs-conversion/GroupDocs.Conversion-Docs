@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert VSDM to XLS natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert VSDM to XLS in C# 
-        description: Some description
+        description: Quick guide about how to convert VSDM to XLS in C# with high performance and accuracy.
         url: conversion/net/convert/vsdm-to-xls/#steps-to-convert-vsdm-to-xls-in-c
         steps:
         - name: Load source VSDM file 

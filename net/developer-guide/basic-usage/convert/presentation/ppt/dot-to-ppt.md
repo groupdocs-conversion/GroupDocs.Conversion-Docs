@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert DOT to PPT natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert DOT to PPT in C# 
-        description: Some description
+        description: Quick guide about how to convert DOT to PPT in C# with high performance and accuracy.
         url: conversion/net/convert/dot-to-ppt/#steps-to-convert-dot-to-ppt-in-c
         steps:
         - name: Load source DOT file 

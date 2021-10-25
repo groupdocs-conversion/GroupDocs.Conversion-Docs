@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert MPX to CSV natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert MPX to CSV in C# 
-        description: Some description
+        description: Quick guide about how to convert MPX to CSV in C# with high performance and accuracy.
         url: conversion/net/convert/mpx-to-csv/#steps-to-convert-mpx-to-csv-in-c
         steps:
         - name: Load source MPX file 

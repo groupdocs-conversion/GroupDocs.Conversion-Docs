@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert VSS to JPG natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert VSS to JPG in C# 
-        description: Some description
+        description: Quick guide about how to convert VSS to JPG in C# with high performance and accuracy.
         url: conversion/net/convert/vss-to-jpg/#steps-to-convert-vss-to-jpg-in-c
         steps:
         - name: Load source VSS file 

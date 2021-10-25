@@ -12,7 +12,7 @@ structuredData:
     appDescription: Convert TSV to XLS natively with high performance using C# language and server side GroupDocs.Conversion for .NET APIs, without the use of any software like Microsoft or Open Office.
     howTo:
         name: How to convert TSV to XLS in C# 
-        description: Some description
+        description: Quick guide about how to convert TSV to XLS in C# with high performance and accuracy.
         url: conversion/net/convert/tsv-to-xls/#steps-to-convert-tsv-to-xls-in-c
         steps:
         - name: Load source TSV file 
