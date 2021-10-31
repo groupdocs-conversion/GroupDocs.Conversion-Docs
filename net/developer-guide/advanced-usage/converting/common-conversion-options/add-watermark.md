@@ -12,24 +12,24 @@ hideChildren: False
 
 ### WatermarkOptions
 
-*   **[Text](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarkoptions/properties/text)** - watermark text
-*   **[Font](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarkoptions/properties/font)** - watermark font name
-*   **[Color](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarkoptions/properties/color)** - watermark color
-*   **[Width](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarkoptions/properties/width)** - watermark width
-*   **[Height ](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarkoptions/properties/height)** - watermark height
-*   **[Top](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarkoptions/properties/top)** - watermark top position
-*   **[Left ](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarkoptions/properties/left)** - watermark left position
-*   **[RotationAngle](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarkoptions/properties/rotationangle)** - watermark rotation angle
-*   **[Transparency](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarkoptions/properties/transparency)** - watermark transparency
-*   **[Background](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarkoptions/properties/background)** - specifies that the watermark is stamped as background. If the value is true, the watermark is laid at the bottom. By default is false and the watermark is laid on top
+*   **[Text](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/watermarktextoptions/properties/text)** - watermark text
+*   **[Font](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/watermarktextoptions/properties/watermarkfont)** - watermark font name
+*   **[Color](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/watermarktextoptions/properties/color)** - watermark color
+*   **[Width](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarktextoptions/properties/width)** - watermark width
+*   **[Height ](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarktextoptions/properties/height)** - watermark height
+*   **[Top](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarktextoptions/properties/top)** - watermark top position
+*   **[Left ](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarktextoptions/properties/left)** - watermark left position
+*   **[RotationAngle](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarktextoptions/properties/rotationangle)** - watermark rotation angle
+*   **[Transparency](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarktextoptions/properties/transparency)** - watermark transparency
+*   **[Background](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarktextoptions/properties/background)** - specifies that the watermark is stamped as background. If the value is true, the watermark is laid at the bottom. By default is false and the watermark is laid on top
     
 
 Here are the steps to follow:
 
 *   Create new instance of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class and pass source document path as a constructor parameter
 *   Instantiate the proper [ConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/convertoptions) class e.g. **([PdfConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/pdfconvertoptions)**, **[WordProcessingConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/wordprocessingconvertoptions)**, **[SpreadsheetConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/spreadsheetconvertoptions)** etc.)
-*   Create new instance of [WatermarkOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarkoptions) class. Set needed properties to specify the watermark color, width, height, text, image etc.
-*   Set [Watermark](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert.commonconvertoptions/1/properties/watermark) property of the [ConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/convertoptions) instance with the instance of [WatermarkOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/watermarkoptions) class created in the previous step 
+*   Create new instance of [WatermarkTextOptions](https://apireference-qa.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/watermarktextoptions) class. Set needed properties to specify the watermark color, width, height, text, image etc.
+*   Set [Watermark](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert.commonconvertoptions/1/properties/watermark) property of the [ConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/convertoptions) instance with the instance of [WatermarkTextOptions](https://apireference-qa.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/watermarktextoptions) class created in the previous step 
 *   Call [Convert](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter/methods/convert/2) method of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class instance and pass filename for the converted document and the instance of [ConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/convertoptions) from the previous step
 
 Following code snippet shows how to apply watermark to the output document:
@@ -37,9 +37,8 @@ Following code snippet shows how to apply watermark to the output document:
 ```csharp
 using (Converter converter = new Converter("sample.docx"))
 {
-    WatermarkOptions watermark = new WatermarkOptions
+    WatermarkOptions watermark = new WatermarkTextOptions("Sample watermark")
     {
-        Text = "Sample watermark",
         Color = Color.Red,
         Width = 100,
         Height = 100,
