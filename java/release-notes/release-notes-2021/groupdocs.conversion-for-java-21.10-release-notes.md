@@ -13,7 +13,7 @@ hideChildren: False
 
 There are 20+ features, improvements and bug-fixes in this release, most notable are:
 
-*   Conversion from Nsg
+*   Conversion from Nsf
 *   Conversion from image with optical image recognition
 *   Conversions from Chm
 *   Auto scale text watermark depending on the length of the string
