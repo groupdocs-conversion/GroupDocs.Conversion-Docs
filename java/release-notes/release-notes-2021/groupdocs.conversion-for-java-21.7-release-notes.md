@@ -13,34 +13,31 @@ hideChildren: False
 
 There are 20+ features, improvements and bug-fixes in this release, most notable are:
 
+*   Now can set page margins when converting to wordprocessing documents
+*   Improved email to pdf conversions
 *   Conversions from/to Tga
 *   Specified watermark font style (bold, italic) now respected
 *   Fixed issue with custom fonts folders
-*   Diagram to diagram conversion
-*   Project management to project management conversion
-*   CSV to Json conversion
-*   Conversion from Json as a datasource
-*   Conversion from Fodg
-*   Conversion from/to Psb
-*   Improved Email to Html conversion
-
+*   Wordprocessing conversion issue under linux and windows core
 
 
 ## Full List of Issues Covering all Changes in this Release
 
-| Key | Category | Summary |
+| Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-4509 | Feature | Csv to Json conversions |
-| CONVERSIONNET-4510 | Feature | Conversion from Json as datasource |
-| CONVERSIONNET-4554 | Feature | Override the source file type detection by setting Format property in LoadOptions |
-| CONVERSIONNET-4595 | Feature | Implement Diagram to Diagram conversion |
-| CONVERSIONNET-4614 | Feature | Implement conversion from Primavera Xer |
-| CONVERSIONNET-4615 | Feature | Implement ProjectManagement to ProjectManagement conversion |
-| CONVERSIONNET-4624 | Feature | Implement conversion from Apple iWork Numbers format |
-| CONVERSIONNET-4626 | Feature | Implement conversion from/to Psb |
-| CONVERSIONNET-4632 | Feature | Implement conversion from Fodg |
-| CONVERSIONNET-4567 | Improvement | Improve Email to Markup conversion |
+| CONVERSIONNET-4443 | Feature | Option to set page margins when converting to wordprocesing |
+| CONVERSIONNET-4444 | Feature | Conversion from Email to Pdf to respect page size and margins from convert options |
 | CONVERSIONNET-4521 | Feature | Implement conversion from/to Tga |
+| CONVERSIONNET-4448 | Improvement | Make GetPossibleConversions case insensitive for provided file extension |
+| CONVERSIONNET-4220 | Bug | Webp conversion issue |
+| CONVERSIONNET-4265 | Bug | Change page size or line break when converting EML to PDF |
+| CONVERSIONNET-4268 | Bug | Resultant PDF isn't opening properly in Adobe Acrobat |
+| CONVERSIONNET-4341 | Bug | Visio to PDF conversion issue |
+| CONVERSIONNET-4373 | Bug | No table of contents entries found |
+| CONVERSIONNET-4429 | Bug | Html to XLS conversion issue |
+| CONVERSIONNET-4435 | Bug | Tsv to Xls exception: Invalid row index |
+| CONVERSIONNET-4437 | Bug | Pdf to Csv - only the first pdf page is converted |
+| CONVERSIONNET-4452 | Bug | Transparency lost when converting from psd |
 | CONVERSIONNET-1785 | Bug | Docx to PDF conversion characters issue |
 | CONVERSIONNET-4489 | Bug | Improper conversion from Mbox |
 | CONVERSIONNET-4493 | Bug | Options equality comparison not working properly when the class contains arrays |
@@ -48,41 +45,8 @@ There are 20+ features, improvements and bug-fixes in this release, most notable
 | CONVERSIONNET-4546 | Bug | Converting using ConverterSettings.FontDirectories |
 | CONVERSIONNET-4549 | Bug | Watermark font styles not respected when converting to PDF |
 | CONVERSIONNET-4571 | Bug | Wordprocessing conversion issue under linux and windows core |
-| CONVERSIONNET-3819 | Bug | Conversion from XPS to PDF throws OOM or uses too much memory and lasts for 5 minutes |
-| CONVERSIONNET-4200 | Bug | Exception is thrown when converting particular Cdr document |
-| CONVERSIONNET-4312 | Bug | Cannot convert particular EMF to PDF document |
-| CONVERSIONNET-4321 | Bug | Tif to Svg conversion issue |
-| CONVERSIONNET-4337 | Bug | Unable to convert particular Gif |
-| CONVERSIONNET-4434 | Bug | Html to XLS conversion exception: The max length of the font name is 31 |
-| CONVERSIONNET-4566 | Bug | Html improperly detected as Mbox when converting from stream |
-| CONVERSIONNET-4568 | Bug | Missing watermark when converting from Email |
-| CONVERSIONNET-4635 | Bug | Conversion from Pst/Ost do not produce output documents |
-/ CONVERSIONJAVA-1328/ Bug / Convert email with attachment to PDF
-/ CONVERSIONJAVA-1349/ Bug / Word to PDF conversion - formatting issue
+| CONVERSIONJAVA-1349 | Bug | Word to PDF conversion - formatting issue |
 
 ## Public API and Backward Incompatible Changes
 
-1.  **Introduced new property in class WordProcessingLoadOptions**
-
-    ```java
-    /**
-    * Specifies whether to use a text shaper for better kerning display. Default is false.
-    */ 
-    public boolean isUseTextShaper();
-    
-    public void setUseTextShaper(boolean isUseTextShaper)
-    ```
-2.  **Introduced new class DataConvertOptions**
-3.  **Introduced new class DiagramConvertOptions**
-4.  **Introduced new class ProjectManagementConvertOptions**
-5.  **Introduced new class DataLoadOptions**
-6.  **Introduced new property in class XmlLoadOptions**
-
-    ```java
-    /**
-    * Use Xml document as data source
-    */
-    public boolean isUseAsDataSource();
-    
-    public void setUseAsDataSource(boolean useAsDataSource);
-    ```
+None

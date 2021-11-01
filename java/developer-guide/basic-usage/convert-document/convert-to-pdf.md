@@ -24,7 +24,7 @@ converter.convert("converted.pdf", options);
 
 ## More resources
 ### Advanced Usage Topics
-To learn more about document viewing features, please refer to the [advanced usage section]({{< ref "conversion/java/developer-guide/advanced-usage/_index.md" >}}).
+To learn more about convert file features, please refer to the [advanced usage section]({{< ref "conversion/java/developer-guide/advanced-usage/_index.md" >}}).
 
 ### GitHub Examples
 You may easily run the code above and see the feature in action in our GitHub examples:
