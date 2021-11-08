@@ -42,9 +42,3 @@ try{
 ```
 
 {{< alert style="warning" >}}This functionality is introduced in v21.7{{< /alert >}}
-
-## More resources
-
-### Examples and Demos
-
-Please find more [use-cases and complete Java sources]({{< ref "conversion/java/developer-guide/examples-and-demos.md" >}}) of our backend and frontend examples and try them for free!
