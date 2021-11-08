@@ -36,6 +36,45 @@ PdfConvertOptions options = new PdfConvertOptions();
 converter.convert("converted.pdf", options);
 ```
 
+### Converting email attachments
+
+The following code sample shows how to convert Email document and all attachments:
+
+```java
+EmailLoadOptions emailLoadOptions = new EmailLoadOptions();
+emailLoadOptions.setConvertOwned(true);
+emailLoadOptions.setConvertOwner(true);
+emailLoadOptions.setDepth(2);
+Converter converter=new Converter("sample_with_attachments.eml",emailLoadOptions);
+final List<FileOutputStream> fileOutputStreams = new ArrayList<>();
+try{
+    converter.convert(new SaveDocumentStreamForFileType(){
+            @Override
+            public Stream invoke(FileType t){
+                try{
+                    FileOutputStream fileOutputStream=new FileOutputStream("converted-"+fileOutputStreams.size()+".pdf");
+                    fileOutputStreams.add(fileOutputStream);
+                    return new GroupDocsOutputStream(fileOutputStream);
+                } catch(IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }, new PdfConvertOptions());
+    }finally{
+        try{
+            for(OutputStream outputStream:fileOutputStreams){
+            outputStream.close();
+            }
+        } catch(IOException e) {
+            //throw an exception
+        }
+    }
+
+```
+
+{{< alert style="warning" >}}This functionality is introduced in v20.1{{< /alert >}}
+
+
 ## More resources
 
 ### GitHub Examples
