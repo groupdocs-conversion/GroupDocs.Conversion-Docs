@@ -72,7 +72,7 @@ try{
 
 ```
 
-{{< alert style="warning" >}}This functionality is introduced in v20.1{{< /alert >}}
+{{< alert style="warning" >}}This functionality is introduced in v21.7{{< /alert >}}
 
 
 ## More resources
