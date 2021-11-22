@@ -6,7 +6,7 @@ weight: 1
 description: "Learn this documentation and check how to convert files to Microsoft Excel 97-2003 (XLS) format with GroupDocs.Conversion for .NET."
 keywords: Convert to Excel, Convert to XLS
 productName: GroupDocs.Conversion for .NET
-showAllChildrenTable: True
+
 ---
 
 ## About XLS File Format

@@ -6,7 +6,7 @@ weight: 1
 description: "Learn this documentation and check how to convert files to Microsoft Word 2007-2019 (DOCX) format with GroupDocs.Conversion for .NET."
 keywords: Convert to Word, Convert to DOCX, Convert to DOC
 productName: GroupDocs.Conversion for .NET
-showAllChildrenTable: True
+
 ---
 
 ## About DOCX File Format

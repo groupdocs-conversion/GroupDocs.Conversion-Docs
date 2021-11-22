@@ -6,7 +6,7 @@ weight: 1
 description: "Learn this documentation and check how to convert files to PNG format with GroupDocs.Conversion for .NET."
 keywords: Convert to PNG, Convert to image
 productName: GroupDocs.Conversion for .NET
-showAllChildrenTable: True
+
 ---
 
 ## About PNG File Format

@@ -6,7 +6,7 @@ weight: 1
 description: "Learn this documentation and check how to convert files from/to text format with GroupDocs.Conversion for .NET."
 keywords: Convert to text, Convert to TXT, Convert text file
 productName: GroupDocs.Conversion for .NET
-showAllChildrenTable: True
+
 ---
 
 ## About TEXT File Format

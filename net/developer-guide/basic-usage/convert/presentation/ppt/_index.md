@@ -6,7 +6,7 @@ weight: 1
 description: "Learn this documentation and check how to convert files to Microsoft PowerPoint 97-2003 (PPT) format with GroupDocs.Conversion for .NET."
 keywords: Convert to PowerPoint, Convert to PPT
 productName: GroupDocs.Conversion for .NET
-showAllChildrenTable: True
+
 ---
 
 ## About PPT File Format

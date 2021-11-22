@@ -6,7 +6,7 @@ weight: 1
 description: "Learn this documentation and check how to convert files to SVG format with GroupDocs.Conversion for .NET."
 keywords: Convert to SVG, Convert to image
 productName: GroupDocs.Conversion for .NET
-showAllChildrenTable: True
+
 ---
 
 ## About SVG File Format

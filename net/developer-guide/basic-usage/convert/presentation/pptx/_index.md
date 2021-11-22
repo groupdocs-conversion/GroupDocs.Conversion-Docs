@@ -6,7 +6,7 @@ weight: 1
 description: "Learn this documentation and check how to convert files to Microsoft PowerPoint 2017-2019 (PPTX) format with GroupDocs.Conversion for .NET."
 keywords: Convert to PowerPoint, Convert to PPTX
 productName: GroupDocs.Conversion for .NET
-showAllChildrenTable: True
+
 ---
 
 ## About PPTX File Format
