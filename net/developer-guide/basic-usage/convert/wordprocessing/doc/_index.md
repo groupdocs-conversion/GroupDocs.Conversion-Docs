@@ -1,7 +1,7 @@
 ---
 id: convert-to-doc
 url: conversion/net/convert/doc
-title: Convert DOC
+title: Convert to DOC
 weight: 1
 description: "Learn this documentation and check how to convert files to Microsoft Word 97-2003 (DOC) format with GroupDocs.Conversion for .NET."
 keywords: Convert to Word, Convert to DOC, Convert to DOC

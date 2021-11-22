@@ -1,7 +1,7 @@
 ---
 id: convert-to-psd
 url: conversion/net/convert/psd
-title: Convert PSD
+title: Convert to PSD
 weight: 1
 description: "Learn this documentation and check how to convert files to PSD format with GroupDocs.Conversion for .NET."
 keywords: Convert to PSD, Convert to image

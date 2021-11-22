@@ -1,7 +1,7 @@
 ---
 id: convert-to-wordprocessing
 url: conversion/net/convert/wordprocessing
-title: Convert WordProcessing
+title: Convert to WordProcessing
 weight: 1
 description: "Learn this article and check how to convert documents to Word DOCX, DOC, RTF or Open Document ODT, OTT formats with GroupDocs.Conversion for .NET."
 keywords: Convert to Word, Convert to DOCX, Convert to DOC

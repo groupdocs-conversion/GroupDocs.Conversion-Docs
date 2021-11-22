@@ -1,7 +1,7 @@
 ---
 id: convert-to-jpg
 url: conversion/net/convert/jpg
-title: Convert JPG
+title: Convert to JPG
 weight: 1
 description: "Learn this documentation and check how to convert files to JPG/JPEG format with GroupDocs.Conversion for .NET."
 keywords: Convert to JPEG, Convert to JPG, Convert to image

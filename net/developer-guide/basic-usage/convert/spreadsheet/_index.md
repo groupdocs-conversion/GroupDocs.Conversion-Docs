@@ -1,7 +1,7 @@
 ---
 id: convert-to-spreadsheet
 url: conversion/net/convert/spreadsheet
-title: Convert Spreadsheet
+title: Convert to Spreadsheet
 weight: 1
 description: "Follow this guide and learn how to convert documents to spreadsheet of MS Excel formats - XLSX, XLS, XLSB or Open Document formats - ODS, OTS using GroupDocs.Conversion for .NET."
 keywords: Convert to Excel, Convert to Spreadsheet, Convert to XLS, Convert to XLSX

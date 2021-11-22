@@ -1,7 +1,7 @@
 ---
 id: convert-to-image
 url: conversion/net/convert/image
-title: Convert Image
+title: Convert to Image
 weight: 2
 description: "Learn this article and check how to convert documents to JPG, convert documents to PNG, convert documents to TIFF or any supported image format with several lines of C# code and GroupDocs.Conversion for .NET. "
 keywords: Convert to Image, Convert to JPG, Convert to PNG, Convert to PSD, Convert to TIFF

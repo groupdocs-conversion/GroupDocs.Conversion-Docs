@@ -1,7 +1,7 @@
 ---
 id: convert-to-xls
 url: conversion/net/convert/xls
-title: Convert XLS
+title: Convert to XLS
 weight: 1
 description: "Learn this documentation and check how to convert files to Microsoft Excel 97-2003 (XLS) format with GroupDocs.Conversion for .NET."
 keywords: Convert to Excel, Convert to XLS

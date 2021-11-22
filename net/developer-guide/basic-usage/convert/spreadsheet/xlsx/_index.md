@@ -1,7 +1,7 @@
 ---
 id: convert-to-xlsx
 url: conversion/net/convert/xlsx
-title: Convert XLSX
+title: Convert to XLSX
 weight: 1
 description: "Learn this documentation and check how to convert files to Microsoft Excel 2007-2019 (XLSX) format with GroupDocs.Conversion for .NET."
 keywords: Convert to Excel, Convert to XLSX
