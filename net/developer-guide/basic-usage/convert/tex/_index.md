@@ -1,7 +1,7 @@
 ---
 id: convert-tex
 url: conversion/net/convert/tex
-title: Convert to TEX
+title: Convert TEX
 weight: 1
 description: "This article demonstrates how to convert any document to TEX format with couple C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert to TEX, Convert to LaTex
@@ -51,5 +51,3 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
     converter.Convert("converted.tex", options);
 }
 ```
-
-For more detailed code examples of how to convert various file formats to TEX please check articles provided below.

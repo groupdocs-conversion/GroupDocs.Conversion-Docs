@@ -1,8 +1,8 @@
 ---
 id: convert-html
 url: conversion/net/convert/html
-title: Convert to Html
-weight: 1
+title: Convert Html
+weight: 10
 description: "Following this article you will learn how to convert documents to HTML format with couple C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert from HTML, Convert to HTML, Convert to HTM
 productName: GroupDocs.Conversion for .NET
@@ -51,5 +51,3 @@ using (Converter converter = new Converter("sample.pdf"))
     converter.Convert("converted.html", options);
 }
 ```
-
-For more detailed code examples of how to convert various file formats to HTML please check articles provided below.
