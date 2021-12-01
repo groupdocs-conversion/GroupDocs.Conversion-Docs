@@ -72,7 +72,7 @@ using(var converter = new GroupDocs.Conversion.Converter("sample.docx"))
         Format = GroupDocs.Conversion.FileTypes.MarkupFileType.Mhtml
     };
     // Save converted HTML file
-    converter.Convert(“converted.html”, options);
+    converter.Convert("converted.html", options);
 }
 ```
 
@@ -101,7 +101,7 @@ using (Converter converter = new GroupDocs.Conversion.Converter("sample.docx"))
 ## Convert Word document to Markdown
 
 Markdown format gained popularity among developers because of its versatility - while it is used for writing programs description and documentation, its structure is quite simple and plain so it is good for transforming to PDF, HTML, DOCX and other formats.
-GroupDocs.Conversion allows you to convert Microsoft Word documents to markdown files with “.md” extension without too much effort. Let’s see how to convert DOCX to MD using C# programming language.  
+GroupDocs.Conversion allows you to convert Microsoft Word documents to markdown files with ".md" extension without too much effort. Let’s see how to convert DOCX to MD using C# programming language.  
 
 ```csharp
 // Load the source DOCX file
