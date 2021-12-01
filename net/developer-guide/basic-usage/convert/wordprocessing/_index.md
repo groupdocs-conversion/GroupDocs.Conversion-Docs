@@ -7,7 +7,7 @@ weight: 1
 description: "Learn this article and check how to convert Microsoft Word DOCX, DOC, RTF documents to other formats with GroupDocs.Conversion for .NET."
 keywords: Convert Word, Convert DOCX, Convert DOC, Convert DOC to PDF
 productName: GroupDocs.Conversion for .NET
-hideChildren: False
+toc: True
 ---
 
 When it comes to convenient fast creation and editing of textual documents, using Microsoft Word is the first thing that comes to mind. Then there is often a need to transform DOC or DOCX documents into another format like PDF, HTML or image for easier mailing, printing and sharing with other people etc.
