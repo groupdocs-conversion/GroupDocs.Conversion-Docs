@@ -46,7 +46,7 @@ NOTE: Please be aware that the number of pages in a source document affects the 
 
 ## Convert Word document to HTML or MHTML
 
-HTML is a very popular web-page format as it can be viewed on every device and platform that has a web-browser. MHTML format in turn represents a web page archive format that is known as archive format because it saves the web HTML code and associated resources in a single file. These resources include anything linked to the webpage such as images, applets, animations, audio files and so on. MHTML files can be opened in a variety of applications such as Internet Explorer and Microsoft Word. 
+HTML is a very popular web-page format as it can be viewed on every device and platform that has a web-browser. MHTML format in turn represents a web page archive format that is known as archive format because it saves the web HTML code and associated resources in a single file. These resources include anything linked to the webpage such as images, applets, animations, audio files and so on. MHTML files can be opened in a variety of applications such as Internet Explorer and Microsoft Word.  
 
 Converting Microsoft Word documents to HTML or MHTML formats is a popular and demanded feature of GroupDocs.Conversion. Basic use case of DOCX to HTML conversion could be implemented in several lines of C# code - all you need is to specify source file name with extension and call Convert method of Converter class passing target HTML file name to it. Please check the complete code snippet below:
 
