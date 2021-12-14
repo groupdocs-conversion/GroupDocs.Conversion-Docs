@@ -2,8 +2,8 @@
 id: convert-to-spreadsheet
 url: conversion/net/convert/spreadsheet
 title: Convert Excel workbook
-title: Convert Excel workbook
-weight: 1
+linkTitle: Convert Excel
+weight: 30
 description: "Follow this guide and learn how to convert MS Excel workbooks - XLSX, XLS, XLSB using C# language and GroupDocs.Conversion for .NET."
 keywords: Convert Excel, Convert Spreadsheet, Convert XLS, Convert XLSX
 productName: GroupDocs.Conversion for .NET

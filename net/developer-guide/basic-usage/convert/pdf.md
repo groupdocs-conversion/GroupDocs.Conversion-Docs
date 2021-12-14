@@ -1,9 +1,9 @@
 ---
 id: convert-pdf
 url: conversion/net/convert/pdf
-title: Convert PDF files 
+title: Convert PDF files in C# 
 linkTitle: Convert PDF
-weight: 1
+weight: 10
 description: "This article demonstrates how to convert PDF to Word, Excel, PowerPoint and image formats with couple C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert from PDF, Convert to PDF, Convert to PDF/A
 productName: GroupDocs.Conversion for .NET

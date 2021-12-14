@@ -2,8 +2,8 @@
 id: convert-to-wordprocessing
 url: conversion/net/convert/wordprocessing
 title: Convert Microsoft Word documents to various formats
-linkTitle: Convert Word documents
-weight: 1
+linkTitle: Convert Word
+weight: 20
 description: "Learn this article and check how to convert Microsoft Word DOCX, DOC, RTF documents to other formats with GroupDocs.Conversion for .NET."
 keywords: Convert Word, Convert DOCX, Convert DOC, Convert DOC to PDF
 productName: GroupDocs.Conversion for .NET
