@@ -1,7 +1,8 @@
 ---
 id: convert
 url: conversion/net/convert
-title: Convert
+title: Convert files to various formats
+linkTitle: Convert files
 weight: 3
 description: "This documentation explains how to convert a file to PDF, Word, Excel, PowerPoint, Email, JPG, PNG, TIFF and many other formats with just couple of lines of С# (CSharp) code."
 keywords: Convert PDF, Convert Word, Convert Excel, Convert Email, Convert Presentation, Convert a File C#, Convert document C#

@@ -100,18 +100,38 @@ In case you need to convert PDF to another presentation format please use [Prese
 ## Convert PDF to Image
 
 Popular use case is when you need to save the whole PDF document or some specific document pages as a collection of images. GroupDocs.Conversion for .NET allows converting PDF to images of many popular formats like - TIFF, JPG, PNG, GIF, BMP and many others.
-The code snippet for such conversion is a bit different from other conversions as you have to declare a [SavePageStream](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/savepagestream) delegate that specifies saved images name format. You can choose the desired image format by using [ImageFileType](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/imagefiletype) class. Please check a complete code example below:
+The code snippet for such conversion is a bit different from other conversions as you have to declare a [SavePageStream](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/savepagestream) delegate that specifies saved images name format. You can choose the desired image format by using [ImageFileType](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/imagefiletype) class.
+
+### Convert PDF to PNG
+
+Please check a complete code example of PDF to PNG conversion below:
 
 ```csharp
 // Load the source PDF file
 using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 {
-    string outputFileTemplate = Path.Combine(outputFolder, "converted-page-{0}.png");
-    GroupDocs.Conversion.Contracts.SavePageStream getPageStream = page => new FileStream(string.Format(outputFileTemplate, page), FileMode.Create);
+    GroupDocs.Conversion.Contracts.SavePageStream getPageStream = page => new FileStream(string.Format("converted-page-{0}.png", page), FileMode.Create);
 
     // Set the convert options for PNG format
     var options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png };
     // Convert to PNG format
+    converter.Convert(getPageStream, options);
+}
+```
+
+### Convert PDF to JPG
+
+PDF to JPG conversion is another one popular use case and the code snippet for it is similar to what was described before. The only difference is the otput image files extension and `ImageConvertOptions.Format` that should be set to `ImageFileType.Png`:
+
+```csharp
+// Load the source PDF file
+using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
+{
+    GroupDocs.Conversion.Contracts.SavePageStream getPageStream = page => new FileStream(string.Format("converted-page-{0}.jpg", page), FileMode.Create);
+
+    // Set the convert options for JPG format
+    var options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Jpg };
+    // Convert to JPG format
     converter.Convert(getPageStream, options);
 }
 ```

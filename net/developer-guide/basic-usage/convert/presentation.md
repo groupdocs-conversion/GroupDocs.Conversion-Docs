@@ -8,6 +8,7 @@ description: "This article demonstrates how to convert PowerPoint presentations 
 keywords: Convert presentation, Convert PPT, Convert PPTX
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 
 Microsoft PowerPoint presentations of PPT and PPTX formats are widely used for slideshows that contain rich multimedia materials, and as a modern software replacement for old slide projector devices. Microsoft Office suite includes PowerPoint and other tools, like Word and Excel, for better office productivity.  
