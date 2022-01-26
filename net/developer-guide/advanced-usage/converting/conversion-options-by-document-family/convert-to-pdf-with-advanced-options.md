@@ -76,9 +76,3 @@ using (Converter converter = new Converter("sample.docx"))
 *   [NonFullScreenPageMode](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/pdfformattingoptions/properties/nonfullscreenpagemode) - specifying how to display the document on exiting full-screen mode. Available options are: *UseNone, UseOutlines, UseThumbs, FullScreen, UseOC, UseAttachments*
 *   [PageLayout](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/pdfformattingoptions/properties/pagelayout) - sets page layout which shall be used when the document is opened. Available options are: *Default, SinglePage, OneColumn, TwoColumnLeft, TwoColumnRight, TwoPagesLeft, TwoPagesRight*
 *   [PageMode](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/pdfformattingoptions/properties/pagemode) - specifying how document should be displayed when opened. Available options are: *UseNone, UseOutlines, UseThumbs, FullScreen, UseOC, UseAttachments*
-
-## More resources
-
-### Examples and Demos
-
-Please find more [use-cases and complete C# sources]({{< ref "conversion/net/developer-guide/examples-and-demos.md" >}}) of our backend and frontend examples and try them for free!

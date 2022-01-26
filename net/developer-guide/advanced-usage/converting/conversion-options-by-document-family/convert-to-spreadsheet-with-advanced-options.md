@@ -29,9 +29,3 @@ using (Converter converter = new Converter("sample.docx", getLoadOptions))
     converter.Convert("converted.xls", options);
 }
 ```
-
-## More resources
-
-### Examples and Demos
-
-Please find more [use-cases and complete C# sources]({{< ref "conversion/net/developer-guide/examples-and-demos.md" >}}) of our backend and frontend examples and try them for free!

@@ -38,9 +38,3 @@ using (Converter converter = new Converter("sample.docx", settingsFactory))
     Console.WriteLine("Time taken on second call to Convert method {0} (ms).", stopWatch.ElapsedMilliseconds);
 }
 ```
-
-## More resources
-
-### Examples and Demos
-
-Please find more [use-cases and complete C# sources]({{< ref "conversion/net/developer-guide/examples-and-demos.md" >}}) of our backend and frontend examples and try them for free!

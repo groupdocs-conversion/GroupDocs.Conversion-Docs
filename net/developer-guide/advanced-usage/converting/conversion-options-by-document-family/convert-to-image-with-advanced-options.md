@@ -88,9 +88,3 @@ The following options are available:
 
 *   [Lossless](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/webpoptions/properties/lossless) - the compression of the converted image will be lossless.
 *   [Quality](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/webpoptions/properties/quality) - set the quality of converted image
-
-## More resources
-
-### Examples and Demos
-
-Please find more [use-cases and complete C# sources]({{< ref "conversion/net/developer-guide/examples-and-demos.md" >}}) of our backend and frontend examples and try them for free!

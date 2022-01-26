@@ -48,13 +48,3 @@ using (var converter = new Converter("sample.ost", LoadOptionsProvider))
 ```
 
 {{< alert style="warning" >}}This functionality is introduced in v20.6{{< /alert >}}
-
-## More resources
-
-### Advanced Usage Topics
-
-To learn more about convert file features, please refer to the [advanced usage section]({{< ref "conversion/net/developer-guide/advanced-usage/_index.md" >}}).
-
-### Examples and Demos
-
-Please find more [use-cases and complete C# sources]({{< ref "conversion/net/developer-guide/examples-and-demos.md" >}}) of our backend and frontend examples and try them for free!
