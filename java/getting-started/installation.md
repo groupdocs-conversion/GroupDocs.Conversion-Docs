@@ -7,12 +7,13 @@ description: "This guide explains how to install GroupDocs.Conversion for Java t
 keywords: 
 productName: GroupDocs.Conversion for Java
 hideChildren: False
+toc: True
 ---
 GroupDocs hosts all Java APIs on [GroupDocs Repository](https://repository.groupdocs.com/). You can easily use [GroupDocs.Conversion for Java](https://repository.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-conversion) API directly in your Maven projects with simple configurations.
 
-### Specify GroupDocs Repository Configuration
+## Specify GroupDocs Repository Configuration
 
-First, you need to specify GroupDocs repository configuration/location in your Maven `pom.xml` as follows: 
+First, you need to specify GroupDocs repository configuration/location in your Maven `pom.xml` as follows:
 
 ```java
 <repositories>
@@ -33,7 +34,7 @@ Then define GroupDocs.Conversion for Java API dependency in your `pom.xml` as
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-conversion</artifactId>
-        <version>20.2</version> 
+        <version>20.2</version>
     </dependency>
 </dependencies>
 ```
@@ -44,7 +45,7 @@ After performing above-mentioned steps, GroupDocs.Conversion for Java dependency
 
 You can follow the steps below to reference GroupDocs.Conversion for Java downloaded from official website [Downloads section](https://downloads.groupdocs.com/conversion/java):
 
-1.  Unpack zip archive .
-2.  Switch to **lib** folder.
-3.  Run **install.bat** (for Windows) or **install.sh** (for Linux) file to install the library in your local maven repository.
-4.  After this you should add the GroupDocs.Conversion for Java **dependency** block to your .pom.xml project file.
+1. Unpack zip archive.
+2. Switch to **lib** folder.
+3. Run **install.bat** (for Windows) or **install.sh** (for Linux) file to install the library in your local maven repository.
+4. After this you should add the GroupDocs.Conversion for Java **dependency** block to your .pom.xml project file.
