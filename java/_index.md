@@ -44,8 +44,8 @@ Native Java API to accurately convert documents & image file formats in any type
 			<p>DOWNLOAD</p>
 			<ul>
 				<li><a href="https://repository.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-conversion">GroupDocs.Conversion for Java Repository</a></li>
-				</li><li><a href="https://downloads.groupdocs.com/conversion/java">GroupDocs.Conversion for .NET Downloads</a></li>
-				<li><a href="https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET">Download Examples and Demos from GitHub</a></li>
+				</li><li><a href="https://downloads.groupdocs.com/conversion/java">GroupDocs.Conversion for Java Downloads</a></li>
+				<li><a href="https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Java">Download Examples and Demos from GitHub</a></li>
 			</ul>
 	</div>
 	<div class="col-md-4">
@@ -54,11 +54,11 @@ Native Java API to accurately convert documents & image file formats in any type
 			<ul>
 				<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert-document" >}}'>Convert Files</a></li>
 				<li><a href='{{< ref "conversion/java/developer-guide/advanced-usage/converting/conversion-options-by-document-family" >}}'>Customize converted file apperance</a></li>	
-				<li><a href="https://apireference.groupdocs.com/conversion/java">GroupDocs.Conversion for .NET API Reference</a></li>
+				<li><a href="https://apireference.groupdocs.com/conversion/java">GroupDocs.Conversion for Java API Reference</a></li>
 			</ul>
 			<p>WHAT'S NEW?</p>
 			<ul>
-				<li><a href='{{< ref "conversion/java/release-notes" >}}'>GroupDocs.Conversion for .NET Release Notes</a></li>
+				<li><a href='{{< ref "conversion/java/release-notes" >}}'>GroupDocs.Conversion for Java Release Notes</a></li>
 			</ul>
 			<p>TECHNICAL SUPPORT</p>
 			<ul>
