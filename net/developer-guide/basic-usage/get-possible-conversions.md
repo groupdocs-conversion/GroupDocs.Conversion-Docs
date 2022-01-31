@@ -36,6 +36,22 @@ using (Converter converter = new Converter("sample.docx"))
 }
 ```
 
+Or you can use a fluent syntax
+
+```csharp
+PossibleConversions conversions = new Converters().Load("sample.docx").GetPossibleConversions();
+Console.WriteLine("The source document is of type {0} and could be converted to:", conversions.Source.Extension);
+
+foreach (var conversion in conversions.All)
+{
+     Console.WriteLine("\t {0} as {1} conversion.", conversion.Format, conversion.IsPrimary ? "primary" : "secondary");
+}    
+
+```
+
+{{< alert style="warning" >}}Fluent syntax is introduced in v22.1{{< /alert >}}
+
+
 ## Get all available conversions 
 
 If it is required to programmatically obtain collection of all supported conversions it is as easy as calling static [GetAllPossibleConversions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter/methods/getallpossibleconversions) method of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class.

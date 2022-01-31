@@ -30,3 +30,17 @@ using (Converter converter = new Converter("sample_with_password.docx", getLoadO
     converter.Convert("converted.pdf, options);
 }
 ```
+
+or can use fluent syntax
+
+```csharp
+new GroupDocs.Conversion.Converter()
+    .Load("sample_with_password.docx").WithOptions(() => new WordProcessingLoadOptions
+            {
+                Password = "12345"
+            })
+    .ConvertTo("converted.pdf")
+    .Convert();
+```
+
+{{< alert style="warning" >}}Fluent syntax is introduced in v22.1{{< /alert >}}
