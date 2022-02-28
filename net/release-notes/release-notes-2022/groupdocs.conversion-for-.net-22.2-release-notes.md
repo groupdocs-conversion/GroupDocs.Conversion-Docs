@@ -12,62 +12,31 @@ hideChildren: False
 
 ## Major Features
 
-There are 5+ features, improvements and bug-fixes in this release, most notable are:
+There are 4 features, improvements and bug-fixes in this release, most notable are:
 
-*   Introduced fluent syntax
-*   Converting specified sheets from an excel file
-*   Improved conversion quallity from SVG
+*   Converting from archive formats
+*   Conversion from multiple sources
+*   Option to set locale when loading spreadsheet document
 
 ## Full List of Issues Covering all Changes in this Release
 
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-5001 | Feature | Implement fluent syntax when setting conversion options |
-| CONVERSIONNET-5025 | Feature | Converting specified sheets in an excel file |
-| CONVERSIONNET-5078 | Improvement | Improve svg to image conversion quality |
-| CONVERSIONNET-4812 | Bug | How to preserve hyperlinks |
-| CONVERSIONNET-4819 | Bug | PDF to DOCX conversion throws exception |
-| CONVERSIONNET-4895 | Bug | EML to PNG conversion issue |
-| CONVERSIONNET-4999 | Bug | HTML to PDF conversion - output doesn't show controls properly |
-| CONVERSIONNET-5000 | Bug | Issue in resizing JPG |
-| CONVERSIONNET-5045 | Bug | DWG to PNG conversion - output is trimmed |
-| CONVERSIONNET-5047 | Bug | SkiaSharp throws unhandled exception |
+| CONVERSIONNET-5069 | Feature | Conversions from archive formats |
+| CONVERSIONNET-5091 | Feature | Implement conversion from multiple source documents |
+| CONVERSIONNET-5100 | Improvement | Add option to set locale when load a spreadsheet document |
+| CONVERSIONNET-4955 | Bug | CGM to Image conversion - Invalid output |
+
 
 
 ## Public API and Backward Incompatible Changes
 
-1.  **Introduced fluent syntax**
-    
-    ```csharp
-    var converter = new Converter();
-
-    converter.Load("sample.docx")
-             .ConvertTo("converted.pdf")
-             .Convert();
-    
-    converter.WithSettings(() => new ConverterSettings())
-        .Load("sample.pdf").WithOptions(new PdfLoadOptions())
-        .ConvertTo("converted.docx").WithOptions(new WordProcessingConvertOptions())
-        .OnConversionCompleted(convertedDocumentStream => { })
-        .Convert();
-    
-    converter.Load("sample.pdf").WithOptions(new PdfLoadOptions())
-        .ConvertByPageTo((page => new FileStream($"converted-{page}.docx", FileMode.Create))).WithOptions(new WordProcessingConvertOptions())
-        .OnConversionCompleted((page, stream) => {})
-        .Convert();
-    
-    converter.Load("sample.pdf").GetPossibleConversions();
-    converter.Load("sample.pdf").GetDocumentInfo();
-    converter.Load("sample.pdf").WithOptions(new PdfLoadOptions()).GetPossibleConversions();
-    converter.Load("sample.pdf").WithOptions(new PdfLoadOptions()).GetDocumentInfo();
-    ```
-
-2.  **Introduced new property in class SpreadsheetLoadOptions**
+1.  **Introduced new property in class SpreadsheetLoadOptions**
     
     ```csharp
     /// <summary>
-    /// Sheet name to convert
+    /// Get or set the system culture info at the time file is loaded
     /// </summary>
-    public IList<string> Sheets { get; set; }
+    public CultureInfo CultureInfo { get; set; }
     ```
