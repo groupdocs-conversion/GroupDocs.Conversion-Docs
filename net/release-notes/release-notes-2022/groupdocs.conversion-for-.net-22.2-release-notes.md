@@ -32,7 +32,9 @@ There are 4 features, improvements and bug-fixes in this release, most notable a
 
 ## Public API and Backward Incompatible Changes
 
-1.  **Introduced new property in class SpreadsheetLoadOptions**
+1.  **Support of .NET Framework 2.0 is dropped.**\
+    Supported frameworks versions are .NET 3.5, Net Standard 2.1 and .NET 5.0
+2.  **Introduced new property in class SpreadsheetLoadOptions**
     
     ```csharp
     /// <summary>
