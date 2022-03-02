@@ -34,6 +34,7 @@ There are 4 features, improvements and bug-fixes in this release, most notable a
 
 1.  **Support of .NET Framework 2.0 is dropped.**\
     Supported frameworks versions are .NET 3.5, Net Standard 2.1 and .NET 5.0
+
 2.  **Breaking change: delegate ConvertedDocumentStream has updated signature**\
     Before v22.2:
     ```csharp
@@ -53,8 +54,28 @@ There are 4 features, improvements and bug-fixes in this release, most notable a
     public delegate void ConvertedDocumentStream(Stream stream, string sourceFileName);
     ```
 
+3.  **Breaking change: delegate ConvertedPageStream has updated signature**\
+    Before v22.2:
+    ```csharp
+    /// <summary>
+    /// Describes delegate to receive converted document page stream. 
+    /// </summary>
+    /// <param name="pageNumber">Converted page number</param>
+    /// <param name="stream">Converted page stream</param>
+    public delegate void ConvertedPageStream(int pageNumber, Stream stream);
+    ```
+    v22.2 and after:
+    ```csharp
+    /// <summary>
+    /// Describes delegate to receive converted document page stream. 
+    /// </summary>
+    /// <param name="pageNumber">Converted page number</param>
+    /// <param name="stream">Converted page stream</param>
+    /// <param name="sourceFileName">The name of the converted document</param>
+    public delegate void ConvertedPageStream(int pageNumber, Stream stream, string sourceFileName);
+    ```
 
-3.  **Introduced new property in class SpreadsheetLoadOptions**
+4.  **Introduced new property in class SpreadsheetLoadOptions**
     
     ```csharp
     /// <summary>
