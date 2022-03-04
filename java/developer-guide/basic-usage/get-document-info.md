@@ -22,7 +22,7 @@ Along with this GroupDocs.Conversion provides additional information for the fo
 Here is a code snippet to demonstrate how to obtain document info for PDF document.
 
 ```java
-Converter converter = new Converter(("sample.pdf");
+Converter converter = new Converter("sample.pdf");
 IDocumentInfo info = converter.getDocumentInfo();
 PdfDocumentInfo pdfInfo = (PdfDocumentInfo) info;
 
