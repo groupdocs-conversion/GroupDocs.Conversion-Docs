@@ -22,25 +22,30 @@ There are 15+ features, improvements and bug-fixes in this release, most notable
 
 ## Full List of Issues Covering all Changes in this Release
 
-| Key | Category | Summary |
-| --- | --- | --- |
-| CONVERSIONNET-4908 | Feature | Implement image watermark image auto align |
-| CONVERSIONNET-4944 | Feature | Implement Cad to Fbx conversion |
-| CONVERSIONNET-4967 | Feature | Implement conversion from Cad to Dwf and Dxf |
-| CONVERSIONNET-4885 | Improvement | Split watermark options to WatermarkTextOptions and WatermarkImageOptions |
-| CONVERSIONNET-4432 | Bug | Stl to Png conversion exception: Parameter is not valid |
-| CONVERSIONNET-4813 | Bug | TIFF to PDF conversion - output larger in size |
-| CONVERSIONNET-4901 | Bug | Incorrect auto align watermark when targeting .NET framework |
-| CONVERSIONNET-4906 | Bug | Low image quality when converting SVG to image |
-| CONVERSIONNET-4817 | Bug | GIF to PDF conversion issue |
-| CONVERSIONNET-4841 | Bug | HTML to PPTX conversion issue |
-| CONVERSIONNET-4894 | Bug | DOCX to PDF conversion issue on Ubuntu |
-| CONVERSIONNET-4905 | Bug | EML to PNG conversion stuck |
-| CONVERSIONNET-4952 | Bug | QR Code is very small converting DOCX to PDF in .NET |
-| CONVERSIONNET-4953 | Bug | Barcode fields no longer updated |
-| CONVERSIONNET-4954 | Bug | MHT to PDF conversion issue |
-| CONVERSIONNET-4957 | Bug | Converting Pdf to Image on macOS throws exception |
-| CONVERSIONNET-4977 | Bug | Word to PDF conversion exception on debian/Linux 10 with .net core 5 |
+| Key                 | Category | Summary |
+|---------------------| --- | --- |
+| CONVERSIONNET-4908  | Feature | Implement image watermark image auto align |
+| CONVERSIONNET-4944  | Feature | Implement Cad to Fbx conversion |
+| CONVERSIONNET-4967  | Feature | Implement conversion from Cad to Dwf and Dxf |
+| CONVERSIONNET-4885  | Improvement | Split watermark options to WatermarkTextOptions and WatermarkImageOptions |
+| CONVERSIONNET-4432  | Bug | Stl to Png conversion exception: Parameter is not valid |
+| CONVERSIONNET-4813  | Bug | TIFF to PDF conversion - output larger in size |
+| CONVERSIONNET-4901  | Bug | Incorrect auto align watermark when targeting .NET framework |
+| CONVERSIONNET-4906  | Bug | Low image quality when converting SVG to image |
+| CONVERSIONNET-4817  | Bug | GIF to PDF conversion issue |
+| CONVERSIONNET-4841  | Bug | HTML to PPTX conversion issue |
+| CONVERSIONNET-4894  | Bug | DOCX to PDF conversion issue on Ubuntu |
+| CONVERSIONNET-4905  | Bug | EML to PNG conversion stuck |
+| CONVERSIONNET-4952  | Bug | QR Code is very small converting DOCX to PDF in .NET |
+| CONVERSIONNET-4953  | Bug | Barcode fields no longer updated |
+| CONVERSIONNET-4954  | Bug | MHT to PDF conversion issue |
+| CONVERSIONNET-4957  | Bug | Converting Pdf to Image on macOS throws exception |
+| CONVERSIONNET-4977  | Bug | Word to PDF conversion exception on debian/Linux 10 with .net core 5 |
+| CONVERSIONJAVA-1530 | Bug | Conversion of email attachments does not work correctly |
+| CONVERSIONJAVA-1531 | Bug | java.lang.ArrayIndexOutOfBoundsException: 65533 on loading the document |
+| CONVERSIONJAVA-1556 | Bug | HTML to PDF conversion - images are not properly rendered |
+| CONVERSIONJAVA-1557 | Bug | MSG to PDF conversion - date/time is not rendered as it is |
+| CONVERSIONJAVA-1562 | Bug | Cannot set page size to letter or legal |
 
 ## Public API and Backward Incompatible Changes
 
