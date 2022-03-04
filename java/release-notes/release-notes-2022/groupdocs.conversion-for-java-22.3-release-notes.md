@@ -1,14 +1,14 @@
 ---
-id: groupdocs-conversion-for-java-22-2-release-notes
-url: conversion/java/groupdocs-conversion-for-java-22-2-release-notes
-title: GroupDocs.Conversion for Java 22.2 Release Notes
+id: groupdocs-conversion-for-java-22-3-release-notes
+url: conversion/java/groupdocs-conversion-for-java-22-3-release-notes
+title: GroupDocs.Conversion for Java 22.3 Release Notes
 weight: 24
 description: ""
 keywords:
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}This page contains release notes for GroupDocs.Conversion for Java 22.2{{< /alert >}}
+{{< alert style="info" >}}This page contains release notes for GroupDocs.Conversion for Java 22.3{{< /alert >}}
 
 ## Major Features
 
