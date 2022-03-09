@@ -3,8 +3,8 @@ id: system-requirements
 url: conversion/net/system-requirements
 title: System Requirements
 weight: 3
-description: "This article explains GroupDocs.Conversion for .NET system requirements."
-keywords: 
+description: GroupDocs.Conversion for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed
+keywords: GroupDocs.Conversion for .NET, Conversion
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True

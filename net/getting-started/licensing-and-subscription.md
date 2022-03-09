@@ -3,7 +3,8 @@ id: licensing-and-subscription
 url: conversion/net/licensing-and-subscription
 title: Licensing and Subscription
 weight: 5
-description: "This article explains evaluation limitations and licensing of GroupDocs.Conversion for .NET"
+description: "free conversion api version is available to evaluate the API which will be similar as licensed but with few limitations.
+keywords: free conversion,license,conversion,api
 keywords: 
 productName: GroupDocs.Conversion for .NET
 hideChildren: False

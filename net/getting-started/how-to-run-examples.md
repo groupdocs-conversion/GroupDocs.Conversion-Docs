@@ -3,13 +3,15 @@ id: how-to-run-examples
 url: conversion/net/how-to-run-examples
 title: How to Run Examples
 weight: 6
-description: "This article describes how to run GroupDocs.Conversion for .NET code examples."
-keywords: 
+description: "This article describes how to run .NET file conversion API code examples."
+keywords: file conversion, C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: true
 ---
 {{< alert style="warning" >}}Before running an example make sure that GroupDocs.Conversion has been installed successfully.{{< /alert >}}
+
+This article describes how to run .NET file conversion API code examples.
 
 We offer multiple solutions on how you can run GroupDocs.Conversion examples, by building your own or using our back-end or front-end examples out-of-the-box.
 
