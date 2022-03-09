@@ -46,8 +46,9 @@ The code below will explain how to set product license.
 ```csharp
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET
 // Setup license.
-License license = new License();
-license.SetLicense(licensePath);
+string licensePath = "GroupDocs.Conversion.lic";
+GroupDocs.Conversion.License lic = new GroupDocs.Conversion.License();
+lic.SetLicense(licensePath);
 ```
 
 ### Setting License from Stream
