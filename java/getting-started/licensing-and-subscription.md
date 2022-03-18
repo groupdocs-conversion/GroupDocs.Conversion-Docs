@@ -3,7 +3,7 @@ id: licensing-and-subscription
 url: conversion/java/licensing-and-subscription
 title: Licensing and Subscription
 weight: 5
-description: "free conversion api version for java developers is available to evaluate the API which will be similar as licensed but with few limitations.
+description: "free conversion api version for java developers is available to evaluate the API which will be similar as licensed but with few limitations."
 keywords: free conversion,license,conversion,api, java
 productName: GroupDocs.Conversion for Java
 hideChildren: False
