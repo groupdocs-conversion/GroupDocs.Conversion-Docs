@@ -3,8 +3,8 @@ id: how-to-run
 url: conversion/java/how-to-run
 title: How To Run Examples
 weight: 6
-description: "This article describes how to run GroupDocs.Conversion for Java"
-keywords: 
+description: "This article describes how to run Java file conversion API code examples."
+keywords: file conversion, Java
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
