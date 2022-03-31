@@ -5,7 +5,7 @@ title: Listening to conversion process events
 linkTitle: Listening to events
 weight: 4
 description: "Follow this guide and learn how to track conversion process by subscribing to specific events of GroupDocs.Conversion for .NET API."
-keywords: Track conversion process, Subscribe to conversion process events
+keywords: Track conversion process, Subscribe to conversion process events, track conversion
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
