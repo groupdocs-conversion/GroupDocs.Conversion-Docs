@@ -5,7 +5,7 @@ title: Convert Microsoft Word documents to various formats
 linkTitle: Convert Word
 weight: 20
 description: "Learn this article and check how to convert Microsoft Word DOCX, DOC, RTF documents to other formats with GroupDocs.Conversion for .NET."
-keywords: Convert Word, Convert DOCX, Convert DOC, Convert DOC to PDF
+keywords: Convert Word, Convert DOCX, Convert DOC, Convert DOC to PDF, convert Microsoft Word
 productName: GroupDocs.Conversion for .NET
 toc: True
 ---

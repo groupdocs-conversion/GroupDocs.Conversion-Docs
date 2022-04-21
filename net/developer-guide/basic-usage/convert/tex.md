@@ -3,7 +3,7 @@ id: convert-tex
 url: conversion/net/convert/tex
 title: Convert TEX
 weight: 70
-description: "This article demonstrates how to convert any document to TEX format with couple C# code lines and GroupDocs.Conversion for .NET."
+description: "This article demonstrates how you can convert to TEX or convert to latex your any kind of document format with couple C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert to TEX, Convert to LaTex
 productName: GroupDocs.Conversion for .NET
 
