@@ -63,3 +63,39 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
     converter.Convert("converted.docx", options);
 }
 ```
+
+### Set Default Font
+
+GroupDocs.Conversion for .NET allows you to set a default font name when a font is not available in the document. You can use **[DefaultFont](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/properties/defaultfont)** property of **[PdfLoadOptions](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions)** class to set the default font name. In case **[DefaultFont](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/properties/defaultfont)** is not set the Times New Roman font will be used. The following code snippet shows how to set a default font name when converting from PDF into to wordprocessing document:
+
+```csharp
+Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
+{
+    DefaultFont = "Helvetica"
+};
+using (Converter converter = new Converter("sample.pdf", getLoadOptions))
+{
+    WordProcessingConvertOptions options = new WordProcessingConvertOptions();
+    converter.Convert("converted.docx", options);
+}
+```
+
+### Specify font substitution
+
+The following code sample shows how to convert Pdf document and specify font substitution for missing fonts:
+
+```csharp
+Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
+{
+    FontSubstitutes = new List<FontSubstitute>
+    {
+        FontSubstitute.Create("Tahoma", "Arial"),
+        FontSubstitute.Create("Times New Roman", "Arial"),
+    }
+};
+using (Converter converter = new Converter("sample.pdf", getLoadOptions))
+{
+    PdfConvertOptions options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
+}
+```
