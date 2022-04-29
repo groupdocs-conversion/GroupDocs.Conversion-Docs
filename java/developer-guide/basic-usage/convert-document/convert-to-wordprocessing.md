@@ -4,7 +4,7 @@ url: conversion/java/convert-to-wordprocessing
 title: Convert to WordProcessing
 weight: 6
 description: "Learn this article and check how to convert documents to Word DOCX, DOC, RTF or Open Document ODT, OTT formats with GroupDocs.Conversion for Java."
-keywords: Convert to Word, Convert to DOCX, Convert to DOC
+keywords: Convert to Word, Convert to DOCX, Convert to DOC, convert Microsoft Word
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---

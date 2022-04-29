@@ -3,8 +3,8 @@ id: add-watermark
 url: conversion/java/add-watermark
 title: Add watermark
 weight: 1
-description: "Following this article you will learn how to apply watermark to document pages when convert document with GroupDocs.Conversion for Java API."
-keywords: Apply watermark to converted document, Watermark document, Add page watermark
+description: "In this article you will learn how to apply watermark to document pages when convert document with GroupDocs.Conversion for Java API."
+keywords: Apply watermark to converted document, Watermark document, Add page watermark, Apply watermark, convert document
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
