@@ -1,9 +1,9 @@
 ---
-id: convert-document
-url: conversion/java/convert-document
-title: Convert document
+id: convert
+url: conversion/java/convert
+title: Convert files to various formats
 weight: 3
-description: "This documentation explains how to convert document to PDF, Word, Excel, PowerPoint, Email, JPG, PNG, TIFF and many other formats with just couple of lines of Java code."
+description: "This documentation explains how to convert a file to PDF, Word, Excel, PowerPoint, Email, JPG, PNG, TIFF and many other formats with just couple of lines of Java code."
 keywords: Convert PDF, Convert Word, Convert Excel, Convert Email, Convert Presentation
 productName: GroupDocs.Conversion for Java
 hideChildren: False
