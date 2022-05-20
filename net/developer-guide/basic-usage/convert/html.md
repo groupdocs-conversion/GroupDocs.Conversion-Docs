@@ -6,7 +6,24 @@ weight: 60
 description: "Following this article you will learn how to convert documents to HTML format with couple C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert from HTML, Convert to HTML, Convert to HTM
 productName: GroupDocs.Conversion for .NET
-
+structuredData:
+    showOrganization: True
+    application:    
+        name: Convert Html in C#    
+        description: Convert Html to PDF natively with high performance using C# language and GroupDocs.Conversion for .NET APIs
+        productCode: conversion
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to convert Html to PDF in C# 
+        description: Learn how to convert Html to PDF in C# step by step
+        steps:
+        - name: Load source Html file 
+          text: Create an instance of Converter class and pass source Html file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+        - name: Specify convert options 
+          text: Create an instance of PdfConvertOptions class.
+        - name: Convert to PDF and save result 
+          text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
 ## About HTML File Format

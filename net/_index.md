@@ -7,6 +7,8 @@ description: "GroupDocs.Conversion for .NET is an advanced document conversion A
 keywords: GroupDocs.Conversion for .NET, Conversion, document conversion, convert files, C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: True
+structuredData:
+    showOrganization: True
 ---
 <img src="conversion/net/images/home.png" alt="groupdocs-conversion-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 

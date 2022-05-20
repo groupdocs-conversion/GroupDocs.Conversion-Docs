@@ -8,6 +8,8 @@ description: "This documentation explains how to convert a file to PDF, Word, Ex
 keywords: Convert PDF, Convert Word, Convert Excel, Convert Email, Convert Presentation, Convert a File C#, Convert document C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 {{< alert style="info" >}}
 **Try online**  

@@ -9,6 +9,24 @@ keywords: Convert presentation, Convert PPT, Convert PPTX
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
+structuredData:
+    showOrganization: True
+    application:    
+        name: Convert PPTX in C#    
+        description: Convert PowerPoint to PDF natively with high performance using C# language and GroupDocs.Conversion for .NET APIs
+        productCode: conversion
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to convert PPTX to PDF in C# 
+        description: Learn how to convert PPTX to PDF in C# step by step
+        steps:
+        - name: Load source PPTX file 
+          text: Create an instance of Converter class and pass source PPTX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+        - name: Specify convert options 
+          text: Create an instance of PdfConvertOptions class.
+        - name: Convert to PDF and save result 
+          text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
 Microsoft PowerPoint presentations of PPT and PPTX formats are widely used for slideshows that contain rich multimedia materials, and as a modern software replacement for old slide projector devices. Microsoft Office suite includes PowerPoint and other tools, like Word and Excel, for better office productivity.  

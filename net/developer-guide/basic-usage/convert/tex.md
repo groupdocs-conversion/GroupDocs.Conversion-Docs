@@ -6,7 +6,24 @@ weight: 70
 description: "This article demonstrates how you can convert to TEX or convert to latex your any kind of document format with couple C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert to TEX, Convert to LaTex
 productName: GroupDocs.Conversion for .NET
-
+structuredData:
+    showOrganization: True
+    application:    
+        name: Convert TEX in C#    
+        description: Convert TEX to PDF natively with high performance using C# language and GroupDocs.Conversion for .NET APIs
+        productCode: conversion
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to convert TEX to PDF in C# 
+        description: Learn how to convert TEX to PDF in C# step by step
+        steps:
+        - name: Load source TEX file 
+          text: Create an instance of Converter class and pass source TEX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+        - name: Specify convert options 
+          text: Create an instance of PdfConvertOptions class.
+        - name: Convert to PDF and save result 
+          text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
 ## About TEX File Format
