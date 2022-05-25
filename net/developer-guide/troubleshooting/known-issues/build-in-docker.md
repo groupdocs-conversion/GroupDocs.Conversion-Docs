@@ -11,7 +11,7 @@ hideChildren: False
 
 ## Build web api project with GroupDocs.Conversion in Docker
 
-To build an web api which is uses GroupDocs.Conversion for .NET in docker container use this sample Docker file:
+To build an web api which uses GroupDocs.Conversion for .NET in docker container use this sample Docker file:
 
 ```csharp
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
