@@ -8,6 +8,24 @@ description: "Follow this guide and learn how to convert MS Excel workbooks - XL
 keywords: Convert Excel, Convert Spreadsheet, Convert XLS, Convert XLSX
 productName: GroupDocs.Conversion for Java
 toc: True
+structuredData:
+    showOrganization: True
+    application:    
+        name: Convert Excel in Java    
+        description: Convert XLSX to PDF natively with high performance using Java language and GroupDocs.Conversion for Java APIs
+        productCode: conversion
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to convert XLSX to PDF in Java 
+        description: Learn how to convert XLSX to PDF in Java step by step
+        steps:
+        - name: Load source XLSX file 
+          text: Create an instance of Converter class and pass source XLSX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+        - name: Specify convert options 
+          text: Create an instance of PdfConvertOptions class.
+        - name: Convert to PDF and save result 
+          text: Call Converter class convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
 Microsoft Excel with its popular XLS and XLSX formats is a recognized authority in the area of working with tabular data, reports, accounting data and numbers. However there are often situations when installing Excel software for working with spreadsheets is not possible for various reasons. This is exactly the situation when converting the source workbook into another format can be a solution.  

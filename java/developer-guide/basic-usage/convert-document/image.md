@@ -9,6 +9,24 @@ keywords: Convert Image, Convert JPG, Convert PNG, Convert PSD, Convert TIFF
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
+structuredData:
+    showOrganization: True
+    application:    
+        name: Convert Image in Java    
+        description: Convert Image to PDF natively with high performance using Java language and GroupDocs.Conversion for Java APIs
+        productCode: conversion
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to convert Image to PDF in Java 
+        description: Learn how to convert Image to PDF in Java step by step
+        steps:
+        - name: Load source Image file 
+          text: Create an instance of Converter class and pass source Image file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+        - name: Specify convert options 
+          text: Create an instance of PdfConvertOptions class.
+        - name: Convert to PDF and save result 
+          text: Call Converter class convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
 ## About Image File Formats

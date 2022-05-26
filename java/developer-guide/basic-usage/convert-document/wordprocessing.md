@@ -8,6 +8,24 @@ description: "Learn this article and check how to convert Microsoft Word DOCX, D
 keywords: Convert Word, Convert DOCX, Convert DOC, Convert DOC to PDF, convert Microsoft Word
 productName: GroupDocs.Conversion for Java
 toc: True
+structuredData:
+    showOrganization: True
+    application:    
+        name: Convert Word in Java    
+        description: Convert DOCX to PDF natively with high performance using Java language and GroupDocs.Conversion for Java APIs
+        productCode: conversion
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to convert Word to PDF in Java 
+        description: Learn how to convert DOCX to PDF in Java step by step
+        steps:
+        - name: Load source DOCX file 
+          text: Create an instance of Converter class and pass source DOCX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+        - name: Specify convert options 
+          text: Create an instance of PdfConvertOptions class.
+        - name: Convert to PDF and save result 
+          text: Call Converter class convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
 When it comes to convenient fast creation and editing of textual documents, using Microsoft Word is the first thing that comes to mind. Then there is often a need to transform DOC or DOCX documents into another format like PDF, HTML or image for easier mailing, printing and sharing with other people etc.

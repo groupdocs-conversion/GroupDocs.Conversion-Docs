@@ -7,6 +7,8 @@ description: "This documentation explains how to convert a file to PDF, Word, Ex
 keywords: Convert PDF, Convert Word, Convert Excel, Convert Email, Convert Presentation
 productName: GroupDocs.Conversion for Java
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) provides quick and easy way to convert a document to most popular formats.
 

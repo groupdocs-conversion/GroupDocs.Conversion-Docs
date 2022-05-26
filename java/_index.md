@@ -7,6 +7,8 @@ description: "GroupDocs.Conversion for Java is an advanced document conversion A
 keywords: GroupDocs.Conversion for .NET, Conversion, document conversion, convert files, Java
 productName: GroupDocs.Conversion for Java
 hideChildren: True
+structuredData:
+    showOrganization: True
 ---
 <img src="conversion/java/images/home.png" alt="groupdocs-conversion-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 

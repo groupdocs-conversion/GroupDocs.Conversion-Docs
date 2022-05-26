@@ -8,6 +8,24 @@ description: "This article demonstrates how to convert PDF to Word, Excel, Power
 keywords: Convert from PDF, Convert to PDF, Convert to PDF/A
 productName: GroupDocs.Conversion for Java
 toc: True
+structuredData:
+    showOrganization: True
+    application:    
+        name: Convert PDF in Java    
+        description: Convert PDF to Word natively with high performance using Java language and GroupDocs.Conversion for Java APIs
+        productCode: conversion
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to convert PDF to DOCX in Java 
+        description: Learn how to convert PDF to DOCX in Java step by step
+        steps:
+        - name: Load source PDF file 
+          text: Create an instance of Converter class and pass source PDF file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+        - name: Specify convert options 
+          text: Create an instance of WordProcessingConvertOptions class.
+        - name: Convert to DOCX and save result 
+          text: Call Converter class convert method and pass the filename for the converted DOCX file and the WordProcessingConvertOptions object from the previous step as parameters.
 ---
 
 Portable Document Format (PDF) was developed to introduce a standard for document's representation and other reference material in a format that is independent of application software, hardware as well as operating system. Content of PDF files is not limited to text only, it could be hyperlinks, images, interactive buttons and forms, electronic signatures, watermarks and many more. Therefore it's often needed to convert PDF files to some other formats to edit or modify its content. Using **GroupDocs.Conversion for Java** library you can convert PDF files to a wide range of popular file formats, and all you need for this is just several lines of lines code in Java programming language.

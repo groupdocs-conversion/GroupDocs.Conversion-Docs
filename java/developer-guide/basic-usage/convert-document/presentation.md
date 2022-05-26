@@ -9,6 +9,24 @@ keywords: Convert presentation, Convert PPT, Convert PPTX
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
+structuredData:
+    showOrganization: True
+    application:
+        name: Convert PPTX in Java
+        description: Convert PowerPoint to PDF natively with high performance using Java language and GroupDocs.Conversion for Java APIs
+        productCode: conversion
+        productPlatform: java
+    showVideo: True
+    howTo:
+        name: How to convert PPTX to PDF in Java
+        description: Learn how to convert PPTX to PDF in Java step by step
+        steps:
+        - name: Load source PPTX file
+          text: Create an instance of Converter class and pass source PPTX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements.
+        - name: Specify convert options
+          text: Create an instance of PdfConvertOptions class.
+        - name: Convert to PDF and save result 
+          text: Call Converter class convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
 Microsoft PowerPoint presentations of PPT and PPTX formats are widely used for slideshows that contain rich multimedia materials, and as a modern software replacement for old slide projector devices. Microsoft Office suite includes PowerPoint and other tools, like Word and Excel, for better office productivity.  

@@ -28,7 +28,6 @@ structuredData:
         - name: Convert to PDF and save result 
           text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
----
 
 ## About Image File Formats
 
