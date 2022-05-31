@@ -1,6 +1,6 @@
 ---
 id: groupdocs-conversion-for-net-22-5-release-notes
-url: conversion/net/groupdocs-conversion-for-net-22-4-release-notes
+url: conversion/net/groupdocs-conversion-for-net-22-5-release-notes
 title: GroupDocs.Conversion for .NET 22.5 Release Notes
 weight: 21
 description: ""
