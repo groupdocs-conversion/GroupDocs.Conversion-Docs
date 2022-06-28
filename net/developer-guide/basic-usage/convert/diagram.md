@@ -6,6 +6,7 @@ weight: 90
 description: "Following this article you will learn how to convert diagram documents to other formats or to another diagram format with couple C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert from HTML, Convert to HTML, Convert to HTM
 productName: GroupDocs.Conversion for .NET
+toc: True
 structuredData:
     showOrganization: True
     application:    

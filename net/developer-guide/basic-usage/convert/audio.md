@@ -6,6 +6,7 @@ weight: 140
 description: "Following this article you will learn how to convert audio file to another audio format with couple C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert MP3 to FLAC, Convert FLAC to MP3, Convert MP3
 productName: GroupDocs.Conversion for .NET
+toc: True
 structuredData:
     showOrganization: True
     application:    
@@ -148,7 +149,7 @@ AudioLoadOptions loadOptions = new AudioLoadOptions();
 loadOptions.SetAudioConnector(new AudioConnector());
 using (Converter converter = new Converter("sample.mp3", () => loadOptions))
 {
-    // Set the convert options for PDF format
+    // Set the convert options for FLAC format
     AudioConvertOptions options = new AudioConvertOptions {
         Format = AudioFileType.Flac
     };
