@@ -47,7 +47,7 @@ choco install ffmpeg
 Once audio processing library is installed you must implement [IAudioConnector](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.integration.audio/iaudioconnector). For this implementation the [FFMpegCore](https://www.nuget.org/packages/FFMpegCore) nuget package must be installed in your project. The following snippet provides sample implementation:
 
 ```csharp
-pubic class AudioConnector : IAudioConnector
+public class AudioConnector : IAudioConnector
 {
     private readonly Dictionary<AudioFileType, Action<FFMpegArgumentOptions>> _optionsMap = new Dictionary<AudioFileType, Action<FFMpegArgumentOptions>>();
 
@@ -146,12 +146,12 @@ Once `IAudioConnector` is implemented MP3 to FLAC conversion code snippet will l
 // Load the source MP3 file
 AudioLoadOptions loadOptions = new AudioLoadOptions();
 loadOptions.SetAudioConnector(new AudioConnector());
-using (Converter converter = new Converter("sample.mp3"))
+using (Converter converter = new Converter("sample.mp3", () => loadOptions))
 {
     // Set the convert options for PDF format
     AudioConvertOptions options = new AudioConvertOptions {
         Format = AudioFileType.Flac
-    }
+    };
     // Convert to FLAC format
     converter.Convert("converted.flac", options);
 }
