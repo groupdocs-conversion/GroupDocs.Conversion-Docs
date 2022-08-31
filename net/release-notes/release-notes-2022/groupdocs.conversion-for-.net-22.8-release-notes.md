@@ -43,7 +43,7 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
     public bool KeepDateFieldOriginalValue { get; set; }
     ```
 
-2.  **When run GroupDocs.Conversion for .NET under linux with .NET6, the type initializer for 'gdip' throws exception**
+2.  **When run GroupDocs.Conversion for .NET under linux with .NET6, the type initializer for 'gdip' throws exception** \
     To solve this put in runtimeconfig.json or in runtimeconfig.template.json the following:
     ```json
     {
