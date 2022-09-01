@@ -29,6 +29,7 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
 | CONVERSIONNET-5394 | Bug | Cannot convert from multipage Tiff when the source filename extension is "tif" |
 | CONVERSIONNET-5393 | Bug | For a presentation file the value of IsPasswordProtected property is not in PropertiesNames of IDocumentInfo |
 | CONVERSIONNET-5237 | Bug | PDF to JPEG/TIFF conversion problem |
+| CONVERSIONNET-5370 | Bug | HTML to PDF conversion issue |
 
 
 
