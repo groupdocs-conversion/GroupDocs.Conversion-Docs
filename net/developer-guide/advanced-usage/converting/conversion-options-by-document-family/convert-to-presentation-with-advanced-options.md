@@ -8,11 +8,11 @@ keywords: Convert to Presentation, Convert Presentation, convert to powerpoint
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-GroupDocs.Conversion provides [PresentationConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/presentationconvertoptions) to give you control over conversion result when convert to powerpoint presentation format. Along with [common convert options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}}) from base class [PresentationConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/presentationconvertoptions) has the following additional options:
+GroupDocs.Conversion provides [PresentationConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/presentationconvertoptions) to give you control over conversion result when convert to powerpoint presentation format. Along with [common convert options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}}) from base class [PresentationConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/presentationconvertoptions) has the following additional options:
 
-*   ********[Format](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/presentationconvertoptions/properties/zoom)******** - desired result document type. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm*
-*   **[Password](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/presentationconvertoptions/properties/password)** - if set, the converted document will be password protected with the specified password
-*   **[Zoom](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/presentationconvertoptions/properties/zoom)** - specifies the zoom level in percentage
+*   ********[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/presentationconvertoptions/zoom)******** - desired result document type. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm*
+*   **[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/presentationconvertoptions/password)** - if set, the converted document will be password protected with the specified password
+*   **[Zoom](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/presentationconvertoptions/zoom)** - specifies the zoom level in percentage
 
 Following code snippet shows how to convert to Presentation with advanced options.
 

@@ -42,7 +42,7 @@ Before we will take a deeper look at transforming PPT/PPTX presentations into ot
 
 The key difference between these two formats is that PPT specifies the Binary File Format used by Microsoft PowerPoint 97-2003, and the PPTX format is based on the Microsoft PowerPoint open XML presentation file format that you can open on a PC in PowerPoint 2007 (or Mac in PowerPoint 2008) and newer versions.  
   
-The basic PPT to PPTX conversion could be performed using the code snippet below. The sequence of required steps is quite intuitive - load source PPT file into [Converter](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion/converter) object and call [Convert](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.converter/convert/methods/16) method to save converted PPTX file (PPTX format is default when instantiating [PresentationConvertOptions](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/presentationconvertoptions) object without [Format](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert.convertoptions/1/properties/format) property specified.
+The basic PPT to PPTX conversion could be performed using the code snippet below. The sequence of required steps is quite intuitive - load source PPT file into [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) object and call [Convert](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/#convert_16) method to save converted PPTX file (PPTX format is default when instantiating [PresentationConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/presentationconvertoptions) object without [Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/) property specified.
 
 ```csharp
 // Load the source PPT file
@@ -54,7 +54,7 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.ppt"))
 }
 ```
 
-An opposite conversion from PPTX to PPT is also could be implemented with minimum of C# code. The main difference is that  [PresentationConvertOptions](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/presentationconvertoptions) object  [Format](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert.convertoptions/1/properties/format) should be set to [FileTypes.PresentationFileType.Ppt](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/presentationfiletype/fields/ppt).  Please take a look at the code example below:  
+An opposite conversion from PPTX to PPT is also could be implemented with minimum of C# code. The main difference is that  [PresentationConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/presentationconvertoptions) object  [Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/) should be set to [FileTypes.PresentationFileType.Ppt](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/presentationfiletype/ppt/).  Please take a look at the code example below:  
 
 ```csharp
 // Load the source PPTX file

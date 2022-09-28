@@ -13,10 +13,10 @@ In some cases there is the need to monitor conversion process and to receive upd
 
 To enable listening you have to:
 
-*   Implement you own implementation of [IConverterListener](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.reporting/iconverterlistener) interface
-*   Instantiate [ConverterSettings](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/convertersettings) class and pass an instance of the class created in first step
-*   Pass [ConverterSettings](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/convertersettings) object factory to constructor of a [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class
-*   Call [Convert](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter/methods/convert/2) method of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class
+*   Implement you own implementation of [IConverterListener](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.reporting/iconverterlistener) interface
+*   Instantiate [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings) class and pass an instance of the class created in first step
+*   Pass [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings) object factory to constructor of a [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class
+*   Call [Convert](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/#convert_3) method of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class
 
 Here is a code that demonstrates how to enable listening for GroupDocs.Conversion.
 

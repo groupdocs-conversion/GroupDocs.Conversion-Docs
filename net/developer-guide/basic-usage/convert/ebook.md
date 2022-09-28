@@ -51,7 +51,7 @@ Put it simply - you just load a Ebook file into `Converter`, select desired outp
 
 {{< alert style="info" >}}
 For more available conversions and formats compatibility check [supported file formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}}).
-Refer to [API reference](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
+Refer to [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
 {{< /alert >}}
 
 ### Convert to Ebook

@@ -10,8 +10,8 @@ hideChildren: False
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) allows to get default convert options for specific target format by following the below steps:
 
-*   Create new instance of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class by passing source document path as constructor's parameter
-*   Call [GetPossibleConversions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter/methods/getpossibleconversions) method of converter object
+*   Create new instance of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class by passing source document path as constructor's parameter
+*   Call [GetPossibleConversions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getpossibleconversions) method of converter object
 *   Use the file extension or FileType as key to indexer of object received as value in previous step  
 
 The following code sample demonstrates how to get possible conversions of the source document:

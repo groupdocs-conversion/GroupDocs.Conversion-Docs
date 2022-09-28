@@ -8,11 +8,11 @@ keywords: Convert to HTML, Convert HTML
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-GroupDocs.Conversion provides [MarkupConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/markupconvertoptions) to give you control over conversion result. The following options could be set:
+GroupDocs.Conversion provides [MarkupConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/markupconvertoptions) to give you control over conversion result. The following options could be set:
 
-*   [FixedLayout](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/markupconvertoptions/properties/fixedlayout) - controls the html generation. If it's set to *true*, fixed layout will be used e.g. absolutely positioned html element
-*   [Zoom](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/markupconvertoptions/properties/zoom) - specifies the zoom level in percentage. Default is 100  
-*   [UsePdf](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/markupconvertoptions/properties/usepdf) - in some cases, for better rendering and elements positioning the source document should be converted to PDF first. If this property is set to *true*, the input firstly is converted to PDF and after that to desired format
+*   [FixedLayout](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/markupconvertoptions/fixedlayout) - controls the html generation. If it's set to *true*, fixed layout will be used e.g. absolutely positioned html element
+*   [Zoom](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/markupconvertoptions/zoom) - specifies the zoom level in percentage. Default is 100  
+*   [UsePdf](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/markupconvertoptions/usepdf) - in some cases, for better rendering and elements positioning the source document should be converted to PDF first. If this property is set to *true*, the input firstly is converted to PDF and after that to desired format
 
 Following code snippet shows how to convert to HTML with advanced options
 

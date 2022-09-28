@@ -8,11 +8,11 @@ keywords: Convert Excel, Convert to Excel, Convert to spreadsheet, Convert to XL
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-GroupDocs.Conversion provides [SpreadsheetConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/spreadsheetconvertoptions) to give you control over conversion result when convert to spreadsheet format. Along with [common convert options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}}) from base class [SpreadsheetConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/spreadsheetconvertoptions) has the following additional options:
+GroupDocs.Conversion provides [SpreadsheetConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/spreadsheetconvertoptions) to give you control over conversion result when convert to spreadsheet format. Along with [common convert options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}}) from base class [SpreadsheetConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/spreadsheetconvertoptions) has the following additional options:
 
-*   **[Format](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert.convertoptions/1/properties/format)** - desired result document type. Available options are: *Xls, Xlsx, Xlsm, Xlsb, Ods, Ots, Xltx, Xlt, Xltm, Tsc, Xlam, Csv*
-*   **[Password](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/spreadsheetconvertoptions/properties/password)** - if set, the converted document will be password protected with the specified password
-*   **[Zoom](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/spreadsheetconvertoptions/properties/zoom)** - specifies the zoom level in percentage
+*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/)** - desired result document type. Available options are: *Xls, Xlsx, Xlsm, Xlsb, Ods, Ots, Xltx, Xlt, Xltm, Tsc, Xlam, Csv*
+*   **[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/spreadsheetconvertoptions/password)** - if set, the converted document will be password protected with the specified password
+*   **[Zoom](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/spreadsheetconvertoptions/zoom)** - specifies the zoom level in percentage
 
 Following code snippet shows how to convert to Spreadsheet with advanced options.
 

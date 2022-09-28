@@ -8,12 +8,12 @@ keywords: Load document, Load CAD document
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [CadLoadOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/cadloadoptions) to give you control over how source CAD document will be processed. The following options could be set:
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [CadLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions) to give you control over how source CAD document will be processed. The following options could be set:
 
-*   **[Format](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/cadloadoptions/properties/format)** - the source document type is auto detected, but you could set the source document format explicitly with this property. Available options are: Dxf, Dwg, Dgn, Dwf, Stl, Ifc, Plt, Igs, Dwt
-*   **[Width](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/cadloadoptions/properties/width)** - sets desired page width 
-*   **[Height](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/cadloadoptions/properties/height)** - sets desired page height
-*   **[LayoutNames](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/cadloadoptions/properties/layoutnames)** - specifies which CAD layout to be converted
+*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/format)** - the source document type is auto detected, but you could set the source document format explicitly with this property. Available options are: Dxf, Dwg, Dgn, Dwf, Stl, Ifc, Plt, Igs, Dwt
+*   **[Width](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/width)** - sets desired page width 
+*   **[Height](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/height)** - sets desired page height
+*   **[LayoutNames](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/layoutnames)** - specifies which CAD layout to be converted
 
 ### Specify layouts to be converted
 

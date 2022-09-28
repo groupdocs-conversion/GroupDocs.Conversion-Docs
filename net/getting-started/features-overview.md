@@ -18,7 +18,7 @@ GroupDocs.Conversion provides flexible set of settings to customize conversion p
 
 ### Convert specific document page(s)
 
-Along with the whole document conversion to desired target format it may be useful to convert specific document pages or page range. To such partial document conversion you should specify desired pages numbers to convert using [Pages](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert.commonconvertoptions/1/properties/pages) property of ConvertOptions class.
+Along with the whole document conversion to desired target format it may be useful to convert specific document pages or page range. To such partial document conversion you should specify desired pages numbers to convert using [Pages](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/commonconvertoptions-1/pages) property of ConvertOptions class.
 
 ### Auto-detect source document format
 

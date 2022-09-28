@@ -35,7 +35,7 @@ The audio file format is a category of digital file formats for representation o
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your audio file into another audio file format.  
 
-In order to allow audio conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload actual audio conversion to audio processing library, but in the same time to give you the simplicity of conversion setup. The extension point is [IAudioConnector](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.integration.audio/iaudioconnector) interface. 
+In order to allow audio conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload actual audio conversion to audio processing library, but in the same time to give you the simplicity of conversion setup. The extension point is [IAudioConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.audio/iaudioconnector) interface. 
 
 You first must decide which audio processing library will use. Different libraries have different setup process.
 
@@ -45,7 +45,7 @@ To install FFmpeg with Cocolatey, run the following command in console:
 choco install ffmpeg
 ```
 
-Once audio processing library is installed you must implement [IAudioConnector](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.integration.audio/iaudioconnector). For this implementation the [FFMpegCore](https://www.nuget.org/packages/FFMpegCore) nuget package must be installed in your project. The following snippet provides sample implementation:
+Once audio processing library is installed you must implement [IAudioConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.audio/iaudioconnector). For this implementation the [FFMpegCore](https://www.nuget.org/packages/FFMpegCore) nuget package must be installed in your project. The following snippet provides sample implementation:
 
 ```csharp
 public class AudioConnector : IAudioConnector
@@ -162,5 +162,5 @@ Put it simply - you install audio processing library, impement `IAudioConnector`
 
 {{< alert style="info" >}}
 For more available conversions and formats compatibility check [supported file formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}}).
-Refer to [API reference](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
+Refer to [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
 {{< /alert >}}

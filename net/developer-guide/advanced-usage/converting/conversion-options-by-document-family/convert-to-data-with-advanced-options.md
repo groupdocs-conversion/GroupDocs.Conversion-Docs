@@ -8,9 +8,9 @@ keywords: Convert to JSON, Convert to XML
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-GroupDocs.Conversion provides [DataConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/dataconvertoptions) to give you control over conversion result when convert to data format. Along with [common convert options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}}) [DataConvertOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert/dataconvertoptions) has the following additional options:
+GroupDocs.Conversion provides [DataConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/dataconvertoptions) to give you control over conversion result when convert to data format. Along with [common convert options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}}) [DataConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/dataconvertoptions) has the following additional options:
 
-*   [Format](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.convert.convertoptions/1/properties/format) - desired result document type. Available options are: *Json, Xml*
+*   [Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/) - desired result document type. Available options are: *Json, Xml*
 
 Following code snippet shows how to convert to JSON with advanced options.
 

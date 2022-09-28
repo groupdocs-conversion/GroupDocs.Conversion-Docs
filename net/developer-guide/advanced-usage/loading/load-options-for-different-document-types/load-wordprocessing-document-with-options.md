@@ -8,16 +8,16 @@ keywords: Convert Word document in C#, Convert DOC in C#, Convert DOCX C#, Conve
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [WordProcessingLoadOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/wordprocessingloadoptions) to give you control over how original Microsoft Word document will be converted. The following options could be set: 
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [WordProcessingLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions) to give you control over how original Microsoft Word document will be converted. The following options could be set: 
 
-*   **[Format](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/wordprocessingloadoptions/properties/format)** - the document type is auto detected during load, however you can specify explicitly the type of the source WordProcessing document. Available options are: *Doc, Docm, Docx, Dot, Dotm, Dotx, Rtf, Odt, Ott, Mobi, Txt*
-*   **[AutoFontSubstitution](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/wordprocessingloadoptions/properties/autofontsubstitution)** - if false, GroupDocs.Conversion uses the DefaultFont for the substitution of missing fonts. If true, GroupDocs.Conversion evaluates all the related fields in FontInfo (Panose, Sig etc) for the missing font and finds the closest match among the available font sources  
+*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/format)** - the document type is auto detected during load, however you can specify explicitly the type of the source WordProcessing document. Available options are: *Doc, Docm, Docx, Dot, Dotm, Dotx, Rtf, Odt, Ott, Mobi, Txt*
+*   **[AutoFontSubstitution](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/autofontsubstitution)** - if false, GroupDocs.Conversion uses the DefaultFont for the substitution of missing fonts. If true, GroupDocs.Conversion evaluates all the related fields in FontInfo (Panose, Sig etc) for the missing font and finds the closest match among the available font sources  
     Note: that font substitution mechanism will override the DefaultFont in cases when FontInfo for the missing font is available in the document
-*   **[DefaultFont](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/wordprocessingloadoptions/properties/defaultfont)** - default font. The following font will be used if a document font is missing
-*   **[FontSubstitutes](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/wordprocessingloadoptions/properties/fontsubstitutes)** - substitute specific fonts from the source document
-*   **[Password](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/wordprocessingloadoptions/properties/password)** -  password to unlock protected document
-*   **[HideWordTrackedChanges](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/wordprocessingloadoptions/properties/hidewordtrackedchanges)** - specifies that tracked changes should not included in converted document
-*   **[HideComments](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/wordprocessingloadoptions/properties/hidecomments)** - specifies that comments from source document must be hidden during conversion
+*   **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/defaultfont)** - default font. The following font will be used if a document font is missing
+*   **[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/fontsubstitutes)** - substitute specific fonts from the source document
+*   **[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/password)** -  password to unlock protected document
+*   **[HideWordTrackedChanges](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/hidewordtrackedchanges)** - specifies that tracked changes should not included in converted document
+*   **[HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/hidecomments)** - specifies that comments from source document must be hidden during conversion
 
 ## Hide comments
 
@@ -57,7 +57,7 @@ using (Converter converter = new Converter("sample.docx", getLoadOptions))
 
 Microsoft Word document content is often formatted with different fonts like Arial, Calibri, Times New Roman etc., and these fonts are usually stored at the computer where the document is originally created or edited. Sometimes it happens that during DOCX document conversion to another format some fonts used by a particular document are not present at the computer where conversion is performed. So the resulting converted document may look too different from the original file.
 
-Of course GroupDocs.Conversion for .NET will try to select the most appropriate font substitution from available font sources and fonts embedded in the original document, but it also has an ability to specify font substitution explicitly. For doing this it is just needed to call the [Create](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/fontsubstitute/methods/create) method of [FontSubstitute](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/fontsubstitute) class and provide names for original and substitute fonts.
+Of course GroupDocs.Conversion for .NET will try to select the most appropriate font substitution from available font sources and fonts embedded in the original document, but it also has an ability to specify font substitution explicitly. For doing this it is just needed to call the [Create](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/fontsubstitute/create) method of [FontSubstitute](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/fontsubstitute) class and provide names for original and substitute fonts.
 
 The following code sample shows how to convert DOCX document with font substitution for missing fonts:
 

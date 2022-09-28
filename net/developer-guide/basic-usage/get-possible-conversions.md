@@ -16,10 +16,10 @@ Fortunately GroupDocs.Conversion API provides several ways to achieve this, so p
 
 When you need to know possible conversions for a provided source document you can do this by following the below steps:
 
-*   Create new instance of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class by passing source document path as constructor's parameter
-*   Call [GetPossibleConversions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter/methods/getpossibleconversions) method of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) object
+*   Create new instance of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class by passing source document path as constructor's parameter
+*   Call [GetPossibleConversions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getpossibleconversions) method of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) object
 
-[The PossibleConversions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.contracts/possibleconversions) collection returned as method result will contain a complete list of possible conversions for source document type.
+[The PossibleConversions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/possibleconversions) collection returned as method result will contain a complete list of possible conversions for source document type.
 
 The following code sample demonstrates how to get possible conversions of the source document:
 
@@ -54,7 +54,7 @@ foreach (var conversion in conversions.All)
 
 ## Get all available conversions 
 
-If it is required to programmatically obtain collection of all supported conversions it is as easy as calling static [GetAllPossibleConversions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter/methods/getallpossibleconversions) method of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class.
+If it is required to programmatically obtain collection of all supported conversions it is as easy as calling static [GetAllPossibleConversions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getallpossibleconversions) method of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class.
 
 The following code sample demonstrates how to get all possible conversions:
 

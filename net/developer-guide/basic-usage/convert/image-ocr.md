@@ -43,11 +43,11 @@ An image file format is a standard method for organizing and storing images on d
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your image files using ocr.  
 
-In order to allow OCR conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload actual OCR process to ocr processing library, but in the same time to give you the simplicity of conversion setup. The extension point is [IOcrConnector](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector) interface. 
+In order to allow OCR conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload actual OCR process to ocr processing library, but in the same time to give you the simplicity of conversion setup. The extension point is [IOcrConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector) interface. 
 
 You first must decide which ocr processing library will use. Different libraries have different setup process.
 
-In our example we will use Aspose.OCR. Install [Aspose.OCR](https://www.nuget.org/packages/Aspose.OCR) nuget package in your project. Then implement [IOcrConnector](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector). The following snippet provides sample implementation:
+In our example we will use Aspose.OCR. Install [Aspose.OCR](https://www.nuget.org/packages/Aspose.OCR) nuget package in your project. Then implement [IOcrConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector). The following snippet provides sample implementation:
 
 ```csharp
 public class OcrConnector : IOcrConnector
@@ -183,5 +183,5 @@ Put it simply - you install ocr processing library, impement `IOcrConnector`, lo
 
 {{< alert style="info" >}}
 For more available conversions and formats compatibility check [supported file formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}}).
-Refer to [API reference](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
+Refer to [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
 {{< /alert >}}

@@ -8,11 +8,11 @@ keywords: XML to Excel, XML to spreadsheet, XML as data source to XLSX
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-GroupDocs.Conversion provides [XmlLoadOptions](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions) to give you control over how source xml document will be processed. The following options could be set: 
+GroupDocs.Conversion provides [XmlLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions) to give you control over how source xml document will be processed. The following options could be set: 
 
-*   **[Format](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions/properties/format)** - input document file type
-*   **[UseAsDataSource](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions/properties/useasdatasource)** - use source XML document as data source
-*   **[XslFoFactory](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions/properties/xslfofactory)** - XSL document stream to convert XML-FO using XSL.
+*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/loadoptions/format)** - input document file type
+*   **[UseAsDataSource](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions/useasdatasource)** - use source XML document as data source
+*   **[XslFoFactory](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions/xslfofactory)** - XSL document stream to convert XML-FO using XSL.
 
 ### Convert XML as data source to spreadsheet
 

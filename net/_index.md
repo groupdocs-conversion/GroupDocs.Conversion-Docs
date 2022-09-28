@@ -54,7 +54,7 @@ Native .NET API to accurately convert documents & image file formats in any type
 <ul>
 	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/convert" >}}'>Convert Files</a></li>
 	<li><a href='{{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family" >}}'>Customize converted file apperance</a></li>				
-	<li><a href="https://apireference.groupdocs.com/conversion/net">GroupDocs.Conversion for .NET API Reference</a></li>
+	<li><a href="https://reference.groupdocs.com/conversion/net">GroupDocs.Conversion for .NET API Reference</a></li>
 </ul>
 <p>WHAT'S NEW?</p>
 <ul>

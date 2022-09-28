@@ -8,7 +8,7 @@ keywords: Convert document from local disk, Convert file
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-When document is located on the local disk [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) enables you to convert the document by passing the path to the [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class constructor. GroupDocs.Conversion will open the file for reading only when any method of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class is called.
+When document is located on the local disk [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) enables you to convert the document by passing the path to the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class constructor. GroupDocs.Conversion will open the file for reading only when any method of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class is called.
 
 Following code snippet shows how to load document from local disk:
 

@@ -64,25 +64,25 @@ using (FileStream fileStream = File.OpenRead("GroupDocs.Conversion.lic"))
 }
 ```
 
-{{< alert style="info" >}}Calling [License](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/license).[SetLicense](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/license/methods/setlicense) multiple times is not harmful but simply wastes processor time. If you are developing a Windows Forms or console application, call License.SetLicense in your startup code, before using GroupDocs.conversion classes.  
+{{< alert style="info" >}}Calling [License](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/license).[SetLicense](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/license/setlicense/) multiple times is not harmful but simply wastes processor time. If you are developing a Windows Forms or console application, call License.SetLicense in your startup code, before using GroupDocs.conversion classes.  
 When developing an ASP.NET application, you can call License.SetLicense from the Global.asax.cs (Global.asax.vb) file in the Application\_Start protected method. It is called once when the application starts.  
-Do not call [License](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/license).[SetLicense](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/license/methods/setlicense) from within Page\_Load methods since it means the license will be loaded every time a web page is loaded.
+Do not call [License](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/license).[SetLicense](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/license/setlicense/) from within Page\_Load methods since it means the license will be loaded every time a web page is loaded.
 {{< /alert >}}
 
 ### Setting Metered License
 
-{{< alert style="info" >}}You can also set [Metered](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.{{< /alert >}}
+{{< alert style="info" >}}You can also set [Metered](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.{{< /alert >}}
 Here are the simple steps to use the `Metered` class.
 
-1. Create an instance of [Metered](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/metered) class.
-2. Pass public & private keys to [SetMeteredKey](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/metered/methods/setmeteredkey) method.
+1. Create an instance of [Metered](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/metered) class.
+2. Pass public & private keys to [SetMeteredKey](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/metered/setmeteredkey/) method.
 3. Do processing (perform task).
-4. call method [GetConsumptionQuantity](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/metered/methods/getconsumptionquantity) of the `Metered` class.
+4. call method [GetConsumptionQuantity](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/metered/getconsumptionquantity) of the `Metered` class.
 5. It will return the amount/quantity of API requests that you have consumed so far.
-6. call method [GetConsumptionCredit](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/metered/methods/getconsumptioncredit) of the [Metered](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/metered) class.
+6. call method [GetConsumptionCredit](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/metered/getconsumptioncredit) of the [Metered](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/metered) class.
 7. It will return the credit that you have consumed so far.
 
-Following is the sample code demonstrating how to use [Metered](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/metered) class.
+Following is the sample code demonstrating how to use [Metered](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/metered) class.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET

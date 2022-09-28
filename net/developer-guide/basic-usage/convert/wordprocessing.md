@@ -79,7 +79,7 @@ using(var converter = new GroupDocs.Conversion.Converter("sample.docx"))
 }
 ```
 
-When converting a DOC or DOCX file to MHTML format the only difference from the previous code example is that it is needed to set [MarkupConvertOptions](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/markupconvertoptions) Format property to  **MarkupFileType.Mhtml**. The code snippet for DOCX to MHTML conversion will look as following:
+When converting a DOC or DOCX file to MHTML format the only difference from the previous code example is that it is needed to set [MarkupConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/markupconvertoptions) Format property to  **MarkupFileType.Mhtml**. The code snippet for DOCX to MHTML conversion will look as following:
 
 ```csharp
 // Load the source DOCX file

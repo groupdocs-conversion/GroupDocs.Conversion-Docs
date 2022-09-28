@@ -35,7 +35,7 @@ Everyone is familiar of videos that we daily watch on media devices such as Tele
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your video file into another video file format.  
 
-In order to allow video conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload actual video conversion to video processing library, but in the same time to give you the simplicity of conversion setup. The extension point is [IVideoConnector](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.integration.video/ivideoconnector) interface. 
+In order to allow video conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload actual video conversion to video processing library, but in the same time to give you the simplicity of conversion setup. The extension point is [IVideoConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.video/ivideoconnector) interface. 
 
 You first must decide which video processing library will use. Different libraries have different setup process.
 
@@ -45,7 +45,7 @@ To install FFmpeg with Cocolatey, run the following command in console:
 choco install ffmpeg
 ```
 
-Once video processing library is installed you must implement [IVideoConnector](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.integration.video/ivideoconnector). For this implementation the [FFMpegCore](https://www.nuget.org/packages/FFMpegCore) nuget package must be installed in your project. The following snippet provides sample implementation:
+Once video processing library is installed you must implement [IVideoConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.video/ivideoconnector). For this implementation the [FFMpegCore](https://www.nuget.org/packages/FFMpegCore) nuget package must be installed in your project. The following snippet provides sample implementation:
 
 ```csharp
 public class VideoConnector : IVideoConnector
@@ -147,5 +147,5 @@ Put it simply - you install video processing library, impement `IVideoConnector`
 
 {{< alert style="info" >}}
 For more available conversions and formats compatibility check [supported file formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}}).
-Refer to [API reference](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
+Refer to [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
 {{< /alert >}}

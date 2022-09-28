@@ -12,9 +12,9 @@ In some cases document conversion may be a time-consuming operation (dependent 
 
 To enable caching you have to:
 
-*   Instantiate desired cache object (for example [FileCache](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.caching/filecache) will store converted document results at the local drive)
-*   Pass [ConverterSettings](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/convertersettings) object factory to constructor of a [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class
-*   Call [Convert](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter/methods/convert/2) method of [Converter](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion/converter) class
+*   Instantiate desired cache object (for example [FileCache](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.caching/filecache) will store converted document results at the local drive)
+*   Pass [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings) object factory to constructor of a [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class
+*   Call [Convert](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/#convert_3) method of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class
 
 Here is a code that demonstrates how to enable caching for GroupDocs.Conversion.
 

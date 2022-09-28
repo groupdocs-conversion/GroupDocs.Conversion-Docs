@@ -8,13 +8,13 @@ keywords: Load document, Load and convert PDF document, Load and converi EPUB do
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [PdfLoadOptions](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/pdfloadoptions) to give you control over how source PDF document will be processed. The following options could be set:
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [PdfLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions) to give you control over how source PDF document will be processed. The following options could be set:
 
-*   **[Format](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/pdfloadoptions/properties/format)** - the document type is auto detected during loading, however you can specify explicitly the type of the source document. Available options are: *Pdf, Epub, Xps, Tex, Ps, Pcl*
-*   **[RemoveEmbeddedFiles](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/pdfloadoptions/properties/removeembeddedfiles)** - specifies to remove embedded files from source document during conversion
-*   **[Password](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/pdfloadoptions/properties/password)** - password to unlock protected document
-*   **[HidePdfAnnotations](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/pdfloadoptions/properties/hidepdfannotations)** -  specifies that annotations in the source document must be hidden
-*   **[FlattenAllFields](https://apireference.groupdocs.com/net/conversion/groupdocs.conversion.options.load/pdfloadoptions/properties/flattenallfields)** - specifies that all fields in the source document will be flatten during conversion
+*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/format)** - the document type is auto detected during loading, however you can specify explicitly the type of the source document. Available options are: *Pdf, Epub, Xps, Tex, Ps, Pcl*
+*   **[RemoveEmbeddedFiles](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/removeembeddedfiles)** - specifies to remove embedded files from source document during conversion
+*   **[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/password)** - password to unlock protected document
+*   **[HidePdfAnnotations](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/hidepdfannotations)** -  specifies that annotations in the source document must be hidden
+*   **[FlattenAllFields](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/flattenallfields)** - specifies that all fields in the source document will be flatten during conversion
 
 ### Flatten all fields
 
@@ -66,7 +66,7 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 
 ### Set Default Font
 
-GroupDocs.Conversion for .NET allows you to set a default font name when a font is not available in the document. You can use **[DefaultFont](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/properties/defaultfont)** property of **[PdfLoadOptions](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions)** class to set the default font name. In case **[DefaultFont](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/properties/defaultfont)** is not set the Times New Roman font will be used. The following code snippet shows how to set a default font name when converting from PDF into to wordprocessing document:
+GroupDocs.Conversion for .NET allows you to set a default font name when a font is not available in the document. You can use **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/defaultfont)** property of **[PdfLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions)** class to set the default font name. In case **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/defaultfont)** is not set the Times New Roman font will be used. The following code snippet shows how to set a default font name when converting from PDF into to wordprocessing document:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
