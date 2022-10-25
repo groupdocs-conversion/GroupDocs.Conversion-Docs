@@ -4,12 +4,12 @@ url: conversion/java/installation
 title: Installation
 weight: 4
 description: "This guide explains how to install GroupDocs.Conversion for Java to your environment"
-keywords: 
+keywords:
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
 ---
-GroupDocs hosts all Java APIs on [GroupDocs Repository](https://repository.groupdocs.com/). You can easily use [GroupDocs.Conversion for Java](https://repository.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-conversion) API directly in your Maven projects with simple configurations.
+GroupDocs hosts all Java APIs on [GroupDocs Repository](https://releases.groupdocs.com/java/repo/com/). You can easily use [GroupDocs.Conversion for Java](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-conversion) API directly in your Maven projects with simple configurations.
 
 ## Specify GroupDocs Repository Configuration
 
@@ -20,7 +20,7 @@ First, you need to specify GroupDocs repository configuration/location in your M
 	<repository>
 		<id>GroupDocsJavaAPI</id>
 		<name>GroupDocs Java API</name>
-		<url>http://repository.groupdocs.com/repo/</url>
+		<url>https://releases.groupdocs.com/java/repo/</url>
 	</repository>
 </repositories>
 ```
@@ -43,7 +43,7 @@ After performing above-mentioned steps, GroupDocs.Conversion for Java dependency
 
 ## Install from official GroupDocs website
 
-You can follow the steps below to reference GroupDocs.Conversion for Java downloaded from official website [Downloads section](https://downloads.groupdocs.com/conversion/java):
+You can follow the steps below to reference GroupDocs.Conversion for Java downloaded from official website [Downloads section](https://releases.groupdocs.com/conversion/java/):
 
 1. Unpack zip archive.
 2. Switch to **lib** folder.

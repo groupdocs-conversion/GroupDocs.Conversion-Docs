@@ -13,9 +13,9 @@ structuredData:
 <img src="/conversion/java/images/home.png" alt="groupdocs-conversion-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
 GroupDocs.Conversion for Java is a lightweight multi-format document conversion API designed as a middle-ware for Java applications.  
-  
+
 It allows you to enhance your app with the capability to convert back and forth over 50 document and image file formats.  
-  
+
 Native Java API to accurately convert documents & image file formats in any types of Java application. Supports adding image watermarks while conversion.
 
 ------
@@ -44,8 +44,8 @@ Native Java API to accurately convert documents & image file formats in any type
 </ul>
 <p>DOWNLOAD</p>
 <ul>
-	<li><a href="https://repository.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-conversion">GroupDocs.Conversion for Java Repository</a></li>
-	</li><li><a href="https://downloads.groupdocs.com/conversion/java">GroupDocs.Conversion for Java Downloads</a></li>
+	<li><a href="https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-conversion/">GroupDocs.Conversion for Java Repository</a></li>
+	</li><li><a href="https://releases.groupdocs.com/conversion/java/">GroupDocs.Conversion for Java Releases</a></li>
 	<li><a href="https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Java">Download Examples and Demos from GitHub</a></li>
 </ul>
 <--->
@@ -53,7 +53,7 @@ Native Java API to accurately convert documents & image file formats in any type
 <hr><p>GUIDE</p></hr>
 <ul>
 	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert-document" >}}'>Convert Files</a></li>
-	<li><a href='{{< ref "conversion/java/developer-guide/advanced-usage/converting/conversion-options-by-document-family" >}}'>Customize converted file apperance</a></li>	
+	<li><a href='{{< ref "conversion/java/developer-guide/advanced-usage/converting/conversion-options-by-document-family" >}}'>Customize converted file apperance</a></li>
 	<li><a href="https://apireference.groupdocs.com/conversion/java">GroupDocs.Conversion for Java API Reference</a></li>
 </ul>
 <p>WHAT'S NEW?</p>

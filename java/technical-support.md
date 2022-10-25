@@ -19,7 +19,7 @@ Please note that GroupDocs does not provide technical support over the phone. Ph
 
 If you need help with GroupDocs.Conversion, consider the following:
 
-* Make sure you are using the latest GroupDocs.Conversion version before reporting an issue. See [GroupDocs.Conversion for Java Repository](https://repository.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-conversion) to find out about the latest version.
+* Make sure you are using the latest GroupDocs.Conversion version before reporting an issue. See [GroupDocs.Conversion for Java Releases](https://releases.groupdocs.com/conversion/java/) to find out about the latest version.
 * Have a look through the forums, this documentation, and the API Reference before reporting an issue – perhaps your question has already been answered.
 * Post your question at [GroupDocs.Conversion Free Support Forum](https://forum.groupdocs.com/c/conversion), and we'll assist you. Questions are answered directly by the GroupDocs.Conversion development team.
 * When expecting a reply on the forums, please allow for time zone differences.
