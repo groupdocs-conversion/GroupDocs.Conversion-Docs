@@ -134,4 +134,4 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.docx"))
 }
 ```
   
-So again - all you need to do for a quick convert with GroupDocs.Coversion for .NET is to - load source Word document document into Converter class and call Convert method to save converted file. That’s it!
+So again - all you need to do for a quick convert with GroupDocs.Conversion for .NET is to - load source Word document document into Converter class and call Convert method to save converted file. That’s it!

@@ -100,7 +100,7 @@ new GroupDocs.Conversion.Converter()
 
 ## Convert PDF to Excel
 
-Spreadsheet formats are designed to represent data in the form of rows and columns, and this way tables are much easier to use. Therefore, when it's required to transform data from PDF file into Excel format GroupDocs.Conversion library comes to resque.  
+Spreadsheet formats are designed to represent data in the form of rows and columns, and this way tables are much easier to use. Therefore, when it's required to transform data from PDF file into Excel format GroupDocs.Conversion library comes to rescue.  
   
 You can choose from wide range of supported spreadsheet formats:
 
@@ -198,7 +198,7 @@ new GroupDocs.Conversion.Converter()
 
 ### Convert PDF to JPG
 
-PDF to JPG conversion is another one popular use case and the code snippet for it is similar to what was described before. The only difference is the otput image files extension and `ImageConvertOptions.Format` that should be set to `ImageFileType.Jpg`:
+PDF to JPG conversion is another one popular use case and the code snippet for it is similar to what was described before. The only difference is the output image files extension and `ImageConvertOptions.Format` that should be set to `ImageFileType.Jpg`:
 
 ```csharp
 // Load the source PDF file
