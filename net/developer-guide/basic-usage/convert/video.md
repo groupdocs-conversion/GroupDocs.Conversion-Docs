@@ -40,7 +40,7 @@ In order to allow video conversions [GroupDocs.Conversion](https://products.grou
 You first must decide which video processing library will use. Different libraries have different setup process.
 
 In our example we will use FFMPEG. We recommend to use [Chocolatey](https://chocolatey.org/) to install [FFMPG](https://ffmpeg.org/) and all needed dependencies. 
-To install FFmpeg with Cocolatey, run the following command in console:
+To install FFmpeg with Chocolatey, run the following command in console:
 ```
 choco install ffmpeg
 ```
@@ -143,7 +143,7 @@ using (Converter converter = new Converter("sample.avi", () => loadOptions))
 }
 ```
 
-Put it simply - you install video processing library, impement `IVideoConnector` which links `GroupDocs.Conversion` with video processing library, load a video file into `Converter` providing the `IVideoConnector` instance, select desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you install video processing library, implement `IVideoConnector` which links `GroupDocs.Conversion` with video processing library, load a video file into `Converter` providing the `IVideoConnector` instance, select desired output format and all the rest will be done by **GroupDocs.Conversion**.  
 
 {{< alert style="info" >}}
 For more available conversions and formats compatibility check [supported file formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}}).

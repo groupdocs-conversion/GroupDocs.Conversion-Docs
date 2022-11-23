@@ -29,7 +29,7 @@ structuredData:
 
 ## About Diagram File Format
 
-Microsfot Visio comes as part of Microsoft Office suite and is used for diagramming and vector drawing applications. It is used to create several different types of diagrams including flow charts, UML diagrams, network diagrams, and alot of others.
+Microsoft Visio comes as part of Microsoft Office suite and is used for diagramming and vector drawing applications. It is used to create several different types of diagrams including flow charts, UML diagrams, network diagrams, and a lot of others.
 
 Visio file formats include file types such as VSDX, VSX, VTX, VDX, VSSX, VSTX, VSDM, VSSM, VSTM file format that is saved to disc when user creates a project in Microsoft Visio and saves it to disc.
 

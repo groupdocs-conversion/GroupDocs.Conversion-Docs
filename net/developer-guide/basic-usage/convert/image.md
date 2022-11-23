@@ -121,7 +121,7 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.png"))
 
 ## Convert image to Microsoft Word document
 
-To easily transform image into Microsoft Word document programatically please check the following code snippet in C#:
+To easily transform image into Microsoft Word document programmatically please check the following code snippet in C#:
 
 ```csharp
 // Load the source JPG file

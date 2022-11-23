@@ -1,3 +1,7 @@
 {
-    "search.searchEditor.defaultNumberOfContextLines": 0
+    "search.searchEditor.defaultNumberOfContextLines": 0,
+    "cSpell.words": [
+        "Visio",
+        "wordprocessing"
+    ]
 }

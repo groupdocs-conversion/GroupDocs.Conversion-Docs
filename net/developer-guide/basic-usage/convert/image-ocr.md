@@ -179,7 +179,7 @@ using (Converter converter = new Converter("sample.jpg", () => loadOptions))
 }
 ```
 
-Put it simply - you install ocr processing library, impement `IOcrConnector`, load an image file into `Converter` providing the `IOcrConnector` instance, select desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you install ocr processing library, implement `IOcrConnector`, load an image file into `Converter` providing the `IOcrConnector` instance, select desired output format and all the rest will be done by **GroupDocs.Conversion**.  
 
 {{< alert style="info" >}}
 For more available conversions and formats compatibility check [supported file formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}}).
