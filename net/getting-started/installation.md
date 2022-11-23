@@ -1,7 +1,8 @@
 ---
 id: installation
 url: conversion/net/installation
-title: Installation
+title: Install GroupDocs.Conversion for .NET
+linkTitle: Installation
 weight: 4
 description: "This guide explains how to install GroupDocs.Conversion for .NET to your environment"
 keywords: 
@@ -9,42 +10,68 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
 ---
-  
 
-## Install from Nuget
+This topic describes how to add the **GroupDocs.Conversion** library to your .NET project. You can use a NuGet package to install this library or you can download necessary DLLs from the GroupDocs website: [https://downloads.groupdocs.com/conversion/net](https://downloads.groupdocs.com/conversion/net).  
 
-NuGet is the easiest way to download and install GroupDocs.Conversion for .NET. There are ways to install it in your project.
+## Install GroupDocs.Conversion using NuGet packages
 
-### Install via Package Manager GUI
+You can use the following tools to install the [GroupDocs.Conversion](https://www.nuget.org/packages/GroupDocs.Conversion) NuGet package:
 
-Follow these steps to reference GroupDocs.Conversion using Package Manager GUI:
+ * [NuGet Package Manager](#use-the-nuget-package-manager)
+ * [Package Manager Console](#use-the-package-manager-console)
+ * [.NET CLI](#use-the-net-cli)
 
-* Open your solution/project in Visual Studio.
-* Click **Tools** -> **NuGet Package Manager** -> **Manage NuGet Packages for Solution**. You can also access the same option through the Solution Explorer. Right-click the solution or project and select **Manage NuGet Packages** from the context menu
-* Select **Browse** tab and type **"GroupDocs.Conversion"** in the search text box.
-* Click the **Install** button to install the latest version of the API into your project as shown in the following screenshot. 
-![](/conversion/net/images/development-environment-installation-and-configuration.png)
-    
-### Using Package Manager Console
+### Use the NuGet Package Manager
 
-You can follow the steps below to reference GroupDocs.Conversion for .NET using the Package Manager Console:
+Open your project or solution in Visual Studio and follow the steps below to install the **GroupDocs.Conversion** package using the [NuGet Package Manager](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio):
 
-* Open your solution/project in Visual Studio.
-* Select **Tools** -> **NuGet Package Manager** -> **Package Manager Console** from the menu to open package manager console.
-* Type the command "Install-Package GroupDocs.Conversion" and press enter to install the latest release into your application.
-* After successful installation, GroupDocs.Conversion will be referenced in your application. 
-![](/conversion/net/images/development-environment-installation-and-configuration_1.png)
-    
-## Install from official GroupDocs website
+* In **Solution Explorer**, right-click your project name and select **Manage NuGet Packages** to display the NuGet Package Manager.
 
-You can follow the steps below to reference GroupDocs.Conversion for .NET downloaded from official website [Downloads section](https://downloads.groupdocs.com/conversion/net):
+    ![Manage NuGet packages in Visual Studio](/conversion/net/images/getting-started/installation/manage-nuget-packages.png)
 
-1. Unpack zip archive or follow MSI install wizard instructions.
-2. In the Solution Explorer, expand the project node you want to add a reference to.
-3. Right-click the **References** node for the project and select **Add Reference** from the menu.
-4. In the Add Reference dialog box, select the **.NET** tab (it's usually selected by default).
-5. If you have used MSI installer to install GroupDocs.Conversion, you will see GroupDocs.Conversion in the top pane. Select it and then click the **Select** button.
-6. If you have downloaded and unpacked the DLL only, click the **Browse** button and locate the GroupDocs.Conversion.dll file.   
-    You have referenced GroupDocs.Conversion and it should appear in the **SelectedComponents** pane of the dialog box.
-7. Click **OK**.   
-    GroupDocs.Conversion reference appears under the **References** node of the project.
+* Select the **Browse** tab and type **GroupDocs.Conversion** in the search box. Select the latest version of the **GroupDocs.Conversion** package and click **Install**.
+
+    ![Install NuGet packages in Visual Studio](/conversion/net/images/getting-started/installation/install-nuget-package.png)
+
+### Use the Package Manager Console
+
+The [Package Manager Console](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-powershell) uses PowerShell commands to install, update, and remove NuGet packages. Open your project in Visual Studio and click **Tools** -> **NuGet Package Manager** -> **Package Manager Console** to open the console window. Run the the following command to install the latest version of the **GroupDocs.Conversion** library:
+
+{{< tabs "example1">}}
+{{< tab "PowerShell" >}}
+```shell
+PM> Install-Package GroupDocs.Conversion
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+![Use Package Manager Console ](/conversion/net/images/getting-started/installation/package-manager-console.png)
+
+### Use the .NET CLI
+
+You can also use the [.NET CLI tool](https://docs.microsoft.com/en-us/dotnet/core/tools/) to install and update NuGet packages. Open a terminal in your project's folder and execute the following command to install the **GroupDocs.Conversion** package:
+
+{{< tabs "example2">}}
+{{< tab ".NET CLI" >}}
+```shell
+dotnet add package GroupDocs.Conversion
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+## Download GroupDocs.Conversion from the official website
+
+Visit [https://releases.groupdocs.com/conversion/net/](https://releases.groupdocs.com/conversion/net/) and download the **GroupDocs.Conversion** assemblies as a ZIP archive or MSI installer. To reference the downloaded assembly files in your project, do the following:
+
+1. Extract files from the ZIP archive or run the MSI installer to install **GroupDocs.Conversion** to a specific location on your computer.
+2. Open your solution or project in Visual Studio.
+3. In **Solution Explorer**, right-click the **References** or **Dependencies** node, and select **Add Reference** (for a .NET Framework project) or **Add Project Reference** (for a .NET Core project).
+4. In the **Reference Manager** dialog box, select the **Browse** tab and click **Browse** to locate the _GroupDocs.Conversion.dll_ file for the target framework.
+
+    ![Browse for the GroupDocs.Conversion assembly](/conversion/net/images/getting-started/installation/browse-for-groupdocs-dll.png)
+
+5. Click **OK** to add a reference to the **GroupDocs.Conversion** library to your project.
+
+{{< alert style="warning" >}}
+If your application targets .NET Core / .NET 5+, ensure that your project has all the required dependencies installed. Refer to the following page for details: [GroupDocs.Conversion dependencies](https://www.nuget.org/packages/groupdocs.conversion#dependencies-body-tab).
+{{< /alert >}}
