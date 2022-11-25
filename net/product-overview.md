@@ -36,16 +36,16 @@ Using GroupDocs.Conversion for .NET in your project gives you the following bene
 -->
 
 - Thousands of different file conversion pairs for [multiple supported formats:]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}}) office documents, presentations, spreadsheets, images and much more.
-- Independence from other applications. You can convert files without other third-party applications like Microsoft Office or Adobe Acrobat!. 
+- Independence from other applications. You can convert files without other third-party applications like Microsoft Office or Adobe Acrobat. 
 - Ability to [convert whole document]({{< ref "conversion/net/developer-guide/basic-usage/convert" >}}) or [specific pages range]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/convert-specific-pages.md" >}}).
 - [Place watermarks]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/add-watermark.md" >}}) at document pages during conversion.
 - Huge amount of [additional options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/" >}}) provided to customize converted document appearance.
 - [Document information extraction]({{< ref "conversion/net/developer-guide/basic-usage/get-document-info" >}}) - file type, document page count etc.;
 - Increased conversion performance by [caching conversion results]({{< ref "conversion/net/developer-guide/advanced-usage/caching" >}}). Convert document once and use conversion results fast and efficient;
 - [Customizable caching]({{< ref "conversion/net/developer-guide/advanced-usage/caching/how-to-use-custom-cache-implementation.md" >}}). Caching to local disk is implemented by default and any type of storage can be supported by implementing caching interfaces – Amazon S3, Dropbox, Google Drive, Windows Azure and others.
-- Performance. Designed to be used to process thousands of files and utilize as minimum resources as possible.
+- Performance. Designed to process thousands of files and utilize as minimum resources as possible.
 - Scalability. Shipped as a single .NET assembly that can be deployed with any .NET application by simply [copying it]({{< ref "conversion/net/getting-started/installation.md#download-groupdocsconversion-from-the-official-website" >}}) or [installing via NuGet]({{< ref "conversion/net/getting-started/installation.md#install-groupdocsconversion-using-nuget-packages" >}}). You do not need to worry about any other services or modules.
-- Simple and intuitive [public API](https://reference.groupdocs.com/conversion/net). The methods are doing what you wold expect from them and nothing more.
+- Simple and intuitive [public API](https://reference.groupdocs.com/conversion/net). All methods are doing what you would expect from them and nothing more.
 
 <!--
 ### Independence from Other Applications
@@ -60,7 +60,7 @@ GroupDocs.Conversion is a single .NET assembly that can be deployed with any .NE
 
 ### Simple Public API
 
-GroupDocs.Conversion for .NET public API was designed to be simple and intuitive. The methods are doing what you wold expect from them and nothing more.
+GroupDocs.Conversion for .NET public API was designed to be simple and intuitive. All methods are doing what you would expect from them and nothing more.
 -->
 You can use GroupDocs.Conversion across [multiple platforms and operation systems]({{< ref "conversion/net/getting-started/system-requirements" >}}):
 
