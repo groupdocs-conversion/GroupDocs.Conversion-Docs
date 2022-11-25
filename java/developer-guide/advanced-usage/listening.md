@@ -13,10 +13,10 @@ In some cases there is the need to monitor conversion process and to receive upd
 
 To enable listening you have to:
 
-*   Implement you own implementation of [IConverterListener](https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.reporting/IConverterListener) interface.
-*   Instantiate [ConverterSettings](https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/ConverterSettings) class and pass an instance of the class created in first step
-*   Pass [ConverterSettings](https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/ConverterSettings) object factory to constructor of a [Converter](https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) class.
-*   Call [Convert](https://apireference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions))method of [Converter](https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) class.
+*   Implement you own implementation of [IConverterListener](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.reporting/IConverterListener) interface.
+*   Instantiate [ConverterSettings](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/ConverterSettings) class and pass an instance of the class created in first step
+*   Pass [ConverterSettings](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/ConverterSettings) object factory to constructor of a [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) class.
+*   Call [Convert](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions))method of [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) class.
 
 Here is a code that demonstrates how to enable listening for GroupDocs.Conversion.
 

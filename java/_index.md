@@ -54,7 +54,7 @@ Native Java API to accurately convert documents & image file formats in any type
 <ul>
 	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert-document" >}}'>Convert Files</a></li>
 	<li><a href='{{< ref "conversion/java/developer-guide/advanced-usage/converting/conversion-options-by-document-family" >}}'>Customize converted file apperance</a></li>
-	<li><a href="https://apireference.groupdocs.com/conversion/java">GroupDocs.Conversion for Java API Reference</a></li>
+	<li><a href="https://reference.groupdocs.com/conversion/java">GroupDocs.Conversion for Java API Reference</a></li>
 </ul>
 <p>WHAT'S NEW?</p>
 <ul>

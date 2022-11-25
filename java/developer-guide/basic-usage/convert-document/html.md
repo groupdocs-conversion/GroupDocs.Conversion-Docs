@@ -51,7 +51,7 @@ Put it simply - you just load a HTML file into `Converter`, select desired outpu
 
 {{< alert style="info" >}}
 For more available conversions and formats compatibility check [supported file formats]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}}).
-Refer to [API reference](https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/package-summary) for more conversion options and customizations.
+Refer to [API reference](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/package-summary) for more conversion options and customizations.
 {{< /alert >}}
 
 ### Convert to HTML

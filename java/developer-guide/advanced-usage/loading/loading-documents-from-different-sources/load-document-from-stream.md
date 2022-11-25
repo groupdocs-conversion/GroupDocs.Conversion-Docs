@@ -13,7 +13,7 @@ There might be the case when your document is not physically located on the disk
 The following are the steps to be followed:
 
 *   Specify the method to obtain document stream; 
-*   Pass method's name to [Converter](https://apireference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class constructor.
+*   Pass method's name to [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class constructor.
 
 Following code snippet serves this purpose:
 
