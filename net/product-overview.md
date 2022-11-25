@@ -13,9 +13,9 @@ toc: True
 <!--img src="/conversion/net/images/home.png" alt="groupdocs-conversion-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/-->
 
 GroupDocs.Conversion for .NET is a powerful and intuitive library used for file conversion between variety of supported document and image types including all Microsoft Office and OpenDocument file formats, PDF documents, HTML, CAD, raster images (TIFF, JPEG, GIF, PNG, BMP) and many more. Conversion results can be easily customized and tuned with multiple and flexible options.
-
-GroupDocs.Conversion allows to convert files between plenty of  popular  formats such as PDF, DOCX, XLSX, PPTX, EPUB, PNG, JPEG, TIFF and others.
 <!--
+GroupDocs.Conversion allows to convert files between plenty of  popular  formats such as PDF, DOCX, XLSX, PPTX, EPUB, PNG, JPEG, TIFF and others.
+
 By using GroupDocs.Conversion for .NET you can convert files without other  third-party applications like Microsoft Office or Adobe Acrobat!
 
 
