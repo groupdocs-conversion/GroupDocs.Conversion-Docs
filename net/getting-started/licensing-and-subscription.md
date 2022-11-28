@@ -1,7 +1,7 @@
 ---
 id: licensing-and-subscription
 url: conversion/net/licensing-and-subscription
-title: Licensing and Subscription
+title: Licensing
 weight: 5
 description: free conversion api version is available to evaluate the API which will be similar as licensed but with few limitations.
 keywords: free conversion,license,conversion,api
@@ -36,42 +36,61 @@ If you wish to test GroupDocs.Conversion without the limitations of the trial ve
 
 ## How to set a license
 
-The license file contains details such as the product name, number of developers it is licensed to, subscription expiry date and so on. It contains the digital signature, so don't modify the file. Even inadvertent addition of an extra line break into the file will invalidate it. You need to set a license before utilizing GroupDocs.Conversion API if you want to avoid its evaluation limitations. 
-The license can be loaded from a file or stream object. The easiest way to set a license is to put the license file in the same folder as the GroupDocs.Conversion.dll file and specify the file name, without a path, as shown in the examples below.
+{{< alert style="info" >}}
 
-### Setting License from File
+You can find pricing information at ["Pricing Information"](https://purchase.groupdocs.com/pricing/conversion/net) page.
 
-The code below will explain how to set product license.
+{{< /alert >}}
+
+After the license is obtained you need to set the license. This section describes options of how this can be done, and also comments on some common questions.
+
+The license should be set:
+
+- Only once per application domain,
+- and before using any other GroupDocs.Conversion classes.
+
+{{< alert style="info" >}}
+
+The license can be set multiple times per app domain but we recommend doing it once since all calls to `SetLicense` except first will just waste processor time.
+
+{{< /alert >}}
+
+
+### Set License from File
+
+The following code sets a license from file.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET
-// Setup license.
-string licensePath = "GroupDocs.Conversion.lic";
-GroupDocs.Conversion.License lic = new GroupDocs.Conversion.License();
-lic.SetLicense(licensePath);
+string licensePath = "path to the .lic file";
+License license = new License();
+license.SetLicense(licensePath);
 ```
 
-### Setting License from Stream
+### Set License from Stream
 
-The following example shows how to load a license from a stream.
+The following example shows how to set a license from a stream.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET
-using (FileStream fileStream = File.OpenRead("GroupDocs.Conversion.lic"))
+string licensePath = "path to the .lic file";
+using (FileStream fileStream = File.OpenRead(licensePath))
 {
     License license = new License();
     license.SetLicense(fileStream);
 }
 ```
-
+<!--
 {{< alert style="info" >}}Calling [License](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/license).[SetLicense](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/license/setlicense/) multiple times is not harmful but simply wastes processor time. If you are developing a Windows Forms or console application, call License.SetLicense in your startup code, before using GroupDocs.conversion classes.  
 When developing an ASP.NET application, you can call License.SetLicense from the Global.asax.cs (Global.asax.vb) file in the Application\_Start protected method. It is called once when the application starts.  
 Do not call [License](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/license).[SetLicense](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/license/setlicense/) from within Page\_Load methods since it means the license will be loaded every time a web page is loaded.
 {{< /alert >}}
+-->
 
-### Setting Metered License
+### Set Metered License
 
-{{< alert style="info" >}}You can also set [Metered](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.{{< /alert >}}
+You can also set [Metered](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
+
+Following is the sample code demonstrating how to use `Metered` licensing.
+<!--
 Here are the simple steps to use the `Metered` class.
 
 1. Create an instance of [Metered](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/metered) class.
@@ -83,9 +102,9 @@ Here are the simple steps to use the `Metered` class.
 7. It will return the credit that you have consumed so far.
 
 Following is the sample code demonstrating how to use [Metered](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/metered) class.
+-->
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET
 string publicKey = ""; // Your public license key
 string privateKey = ""; // Your private license key
 
