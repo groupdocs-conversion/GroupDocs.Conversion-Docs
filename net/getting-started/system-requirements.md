@@ -1,7 +1,7 @@
 ---
 id: system-requirements
 url: conversion/net/system-requirements
-title: System Requirements
+title: System requirements
 weight: 3
 description: GroupDocs.Conversion for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed
 keywords: GroupDocs.Conversion for .NET, Conversion
@@ -9,9 +9,11 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
 ---
-## Overview
+{{< alert style="info" >}}
 
-GroupDocs.Conversion for .NET does not require any external software or third party tool to be installed. Just follow one of the way as described in [Development Environment Installation and Configuration]({{< ref "conversion/net/getting-started/installation.md" >}}).
+GroupDocs.Conversion for .NET does not require any external software to be installed such as Microsoft Word, Microsoft Excel or Microsoft PowerPoint. To install GroupDocs.Conversion for .NET just follow one of the ways as described in the [Installation]({{< ref "conversion/net/getting-started/installation.md" >}}) section.
+
+{{< /alert >}}
 
 ## Supported Operating Systems
 
@@ -19,18 +21,12 @@ GroupDocs.Conversion for .NET supports any 32-bit or 64-bit operating system wh
 
 ### Windows
 
-*   Microsoft Windows 2003 Server ( x64, x86)
-*   Microsoft Windows 2008 Server ( x64, x86)
-*   Microsoft Windows 2012 Server ( x64, x86)
-*   Microsoft Windows 2012 R2 Server ( x64, x86)
-*   Microsoft Windows 2016 Server ( x64, x86)
-*   Microsoft Windows 2019 Server ( x64, x86)
-*   Microsoft Windows Vista ( x64, x86)
-*   Microsoft Windows XP ( x64, x86)
-*   Microsoft Windows 7 ( x64, x86)
-*   Microsoft Windows 8, 8.1 ( x64, x86)
-*   Microsoft Windows 10 ( x64, x86)
-*   Microsoft Azure
+*   Microsoft Windows Server 2003 and later
+*   Microsoft Windows XP (x64, x86)
+*   Microsoft Windows Vista (x64, x86)
+*   Microsoft Windows 7, 8, 8.1 (x64, x86)
+*   Microsoft Windows 10 (x64, x86)
+*   Microsoft Windows 11 (x64)
 
 ### Linux
 
@@ -77,13 +73,9 @@ Any type of .NET Standard 2.0 application is supported.
 
 GroupDocs.Conversion for .NET can be used to develop applications in any development environment that targets the .NET platform, but the following environments are explicitly supported:
 
-*   Microsoft Visual Studio 2010
-*   Microsoft Visual Studio 2011
-*   Microsoft Visual Studio 2012
-*   Microsoft Visual Studio 2013
-*   Microsoft Visual Studio 2015
-*   Microsoft Visual Studio 2017
-*   Microsoft Visual Studio 2019
+*   Microsoft Visual Studio 2010 and later
+*   Microsoft Visual Studio for Mac
+*   JetBrains Rider 
 *   Xamarin.Android
 *   Xamarin.IOS
 *   Xamarin.Mac
