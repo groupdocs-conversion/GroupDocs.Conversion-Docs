@@ -1,7 +1,7 @@
 ---
 id: how-to-run-examples
 url: conversion/net/how-to-run-examples
-title: How to Run Examples
+title: How to run examples
 weight: 6
 description: "This article describes how to run .NET file conversion API code examples."
 keywords: file conversion, C#
@@ -9,13 +9,14 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: true
 ---
+<!--
 {{< alert style="warning" >}}Before running an example make sure that GroupDocs.Conversion has been installed successfully.{{< /alert >}}
 
 This article describes how to run .NET file conversion API code examples.
-
+-->
 We offer multiple solutions on how you can run GroupDocs.Conversion examples, by building your own or using our back-end or front-end examples out-of-the-box.
 
-Please choose one from the following list:
+<!--Please choose one from the following list:-->
 
 ## Build project from scratch
 
@@ -50,7 +51,7 @@ To run the examples, open the solution file in Visual Studio and build the proje
 Un-comment the function you want to run and comment the rest.
 ![](/conversion/net/images/how-to-run-examples_1.png)
 
-## Run MVC examples
+### Run MVC examples
 
 You can run [GroupDocs.Conversion for .NET MVC Example](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET-MVC) following these steps:
 
@@ -63,9 +64,13 @@ You can run [GroupDocs.Conversion for .NET MVC Example](https://github.com/grou
 * Open solution in the VisualStudio. Update common parameters in **web.config** and example related properties in the **configuration.yml** to meet your requirements.
 * Open [http://localhost:8080/conversion](http://localhost:8080/conversion) in your favorite browser
 
-For more details about project configuration please refer to this [guide](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET-MVC#configuration).
+{{< alert style="info" >}}
 
-## Run WebForms examples
+For more details about demo configuration please refer to ["Configuration"](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET-MVC#configuration) section.
+
+{{< /alert >}}
+
+### Run WebForms examples
 
 You can run [GroupDocs.Conversion for .NET Web.Forms Example](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET-WebForms) following these steps:
 * Download [source code](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET-WebForms/archive/master.zip) from GitHub or clone this repository
@@ -75,9 +80,14 @@ You can run [GroupDocs.Conversion for .NET Web.Forms Example](https://github.co
 * Open solution in the VisualStudio. Update common parameters in **web.config** and example related properties in the **configuration.yml** to meet your requirements.
 * Open [http://localhost:8080/conversion](http://localhost:8080/conversion) in your favorite browser
 
-For more details about project configuration please refer to this [guide](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET-WebForms#configuration).
 
-## Run from Docker
+{{< alert style="info" >}}
+
+For more details about demo configuration please refer to ["Configuration"](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET-WebForms#configuration) section.
+
+{{< /alert >}}
+
+### Run from Docker
 
 Use [Docker](https://www.docker.com/) image to try GroupDocs.Conversion for .NET features in an easy way. Here are the command to run GroupDocs.Conversion for .NET from docker image.
 
