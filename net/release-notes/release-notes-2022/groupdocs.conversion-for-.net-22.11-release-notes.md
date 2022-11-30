@@ -30,8 +30,6 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
 | CONVERSIONNET-5608 | Bug | Archive to archive conversions are not returned as possible conversion pairs |
 | CONVERSIONNET-5609 | Bug | Large temp files are created during conversion to image on macOS |
 | CONVERSIONNET-4976 | Bug | Cannot convert PDF to Excel |
-| CONVERSIONNET-5560 | Bug | Keeping the hyperlink (text with link) format when converting pdf to pptx |
-
 
 ## Public API and Backward Incompatible Changes
 
