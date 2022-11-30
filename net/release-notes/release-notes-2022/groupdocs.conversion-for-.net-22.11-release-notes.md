@@ -12,7 +12,7 @@ hideChildren: False
 
 ## Major Features
 
-There are 5+ bug-fixes in this release, most notable are:
+There are 5+ features, improvements and bug-fixes in this release, most notable are:
 
 * Conversion from PUB (Microsoft Publisher) file format to PDF format
 * Direct conversion from archive to archive (e.g. rar to zip, tar to zip)
