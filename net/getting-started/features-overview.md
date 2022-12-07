@@ -48,6 +48,10 @@ It is a common use case when a source document references to some specific fonts
 
 You can [add a text or an image watermarks]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/add-watermark.md" >}}) to any page of converted document and choose its desired size, color and font size.
 
+## Load documents from different sources
+
+With GroupDocs.Conversion you are not limited to [local files]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/load-document-from-local-disk.md" >}}) only. It also supports loading documents from [stream]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/load-document-from-stream.md" >}}), [FTP]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/load-document-from-ftp.md" >}}), [remote URLs]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/load-document-from-url.md" >}}), as wel as from [Amazon S3]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/load-document-from-amazon-s3-storage.md" >}}) and [Azure]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/load-document-from-azure-blob-storage.md" >}}) clouds.
+
 ## Caching results
 
 GroupDocs.Conversion supports [conversion result caching]({{< ref "conversion/net/developer-guide/advanced-usage/caching/" >}}) to local disk by default. However any type of cache storage can be supported by implementing appropriate interfaces – Amazon S3, Dropbox, Google Drive, Windows Azure, Reddis or any other.
@@ -61,11 +65,3 @@ GroupDocs.Conversion allows to obtain basic information about source document - 
 - [PDF]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-pdf-document-with-options.md" >}}) – information about document printing restrictions;
 - Project Management – project start and end dates.
 
-
-## Load documents from different sources
-
-- [Local disc]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/load-document-from-local-disk.md" >}})
-- [Stream]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/load-document-from-stream.md" >}})
-- [FTP]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/load-document-from-ftp.md" >}})
-- [URL]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/load-document-from-url.md" >}})
-- Cloud: [Amazon S3]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/load-document-from-amazon-s3-storage.md" >}}), [Azure]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/load-document-from-azure-blob-storage.md" >}}).
