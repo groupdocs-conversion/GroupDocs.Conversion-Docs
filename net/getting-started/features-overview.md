@@ -18,7 +18,7 @@ GroupDocs.Conversion provides flexible set of settings to customize conversion p
 
 ### Convert specific document page(s)
 
-Along with the whole document conversion to desired target format it could be useful to convert specific document pages or page range. To such partial document conversion you should specify desired pages numbers to convert using [Pages](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/commonconvertoptions-1/pages) property of ConvertOptions class.
+Along with the whole document conversion to desired target format it could be useful to convert specific document pages or page range. For such partial document conversion you should specify desired pages numbers to convert using [Pages](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/commonconvertoptions-1/pages) property of ConvertOptions class.
 
 ### Auto-detect source document format
 
@@ -27,7 +27,7 @@ Luckily GroupDocs.Conversion for .NET is smart enough to detect source document 
 
 ### Load source document with extended options
 
-There are lots of modifications that are possible during file conversion process:
+There are lots of modifications that are possible during the file conversion process:
 
 - specify password for [password-protected documents]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-password-protected-document.md" >}});
 - show/hide document [comments]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-wordprocessing-document-with-options.md" >}}) and [annotations]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-pdf-document-with-options.md" >}});
@@ -46,7 +46,16 @@ It is a common use case when a source document references to some specific fonts
 
 ### Watermarking converted document
 
-You can [add a text or an image watermarks]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/add-watermark.md" >}}) to any page of converted document and choose its desired size, color and font size.
+You can [add a text or an image watermarks]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/add-watermark.md" >}}) to any page of converted document and choose its desired dimensions, color and font size.
+
+## Document information extraction
+
+GroupDocs.Conversion allows to obtain basic [information about source document]({{< ref "conversion/net/developer-guide/basic-usage/get-document-info.md" >}}) - file type, pages count etc. Dependent on source file type some format specific information can be extracted, for example:
+
+- CAD - list of layers and layouts in a CAD document;
+- Email – list of folders contained in an Outlook data file document;
+- PDF – information about document printing restrictions;
+- Project Management – project start and end dates.
 
 ## Load documents from different sources
 
@@ -55,13 +64,4 @@ With GroupDocs.Conversion you are not limited to [local files]({{< ref "conversi
 ## Caching results
 
 GroupDocs.Conversion supports [conversion result caching]({{< ref "conversion/net/developer-guide/advanced-usage/caching/" >}}) to local disk by default. However any type of cache storage can be supported by implementing appropriate interfaces – Amazon S3, Dropbox, Google Drive, Windows Azure, Reddis or any other.
-
-## Document information extraction
-
-GroupDocs.Conversion allows to obtain basic information about source document - file type, pages count etc. Dependent on source file type some format specific information can be extracted, for example:
-
-- [CAD]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-cad-document-with-options.md" >}}) - list of layers and layouts in a CAD document;
-- [Email]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-email-document-with-options.md" >}}) – list of folders contained in an Outlook data file document;
-- [PDF]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-pdf-document-with-options.md" >}}) – information about document printing restrictions;
-- Project Management – project start and end dates.
 
