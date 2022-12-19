@@ -3,49 +3,49 @@ id: installation
 url: conversion/java/installation
 title: Installation
 weight: 4
-description: "This guide explains how to install GroupDocs.Conversion for Java to your environment"
-keywords:
+description: "GroupDocs.Conversion for Java installation"
+keywords: "groupdocs conversion java, installation, maven"
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
 ---
-GroupDocs hosts all Java APIs on [GroupDocs Repository](https://releases.groupdocs.com/java/repo/com/). You can easily use [GroupDocs.Conversion for Java](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-conversion) API directly in your Maven projects with simple configurations.
 
-## Specify GroupDocs Repository Configuration
+## Install using Maven
 
-First, you need to specify GroupDocs repository configuration/location in your Maven `pom.xml` as follows:
+All Java packages are hosted at [GroupDocs Artifact Repository](https://repository.groupdocs.com/). You can easily reference GroupDocs.Conversion for Java API directly in your Maven project using following steps.
 
-```java
+### Add GroupDocs Artifact Repository
+
+First, you need to specify repository configuration/location in your Maven `pom.xml` as follows:
+
+{{< tabs "example1">}}
+{{< tab "pom.xml" >}}
+```xml
 <repositories>
 	<repository>
-		<id>GroupDocsJavaAPI</id>
-		<name>GroupDocs Java API</name>
-		<url>https://releases.groupdocs.com/java/repo/</url>
+		<id>GroupDocs Artifact Repository</id>
+        	<name>GroupDocs Artifact Repository</name>
+        	<url>https://releases.groupdocs.com/java/repo/</url>
 	</repository>
 </repositories>
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-### Define GroupDocs.Conversion for Java API Dependency
+### Add GroupDocs.Conversion as a dependency
 
 Then define GroupDocs.Conversion for Java API dependency in your `pom.xml` as follows:
 
-```java
+{{< tabs "example2">}}
+{{< tab "pom.xml" >}}
+```xml
 <dependencies>
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-conversion</artifactId>
-        <version>20.2</version>
+        <version>22.11</version>
     </dependency>
 </dependencies>
 ```
-
-After performing above-mentioned steps, GroupDocs.Conversion for Java dependency will finally be added to your Maven project.
-
-## Install from official GroupDocs website
-
-You can follow the steps below to reference GroupDocs.Conversion for Java downloaded from official website [Downloads section](https://releases.groupdocs.com/conversion/java/):
-
-1. Unpack zip archive.
-2. Switch to **lib** folder.
-3. Run **install.bat** (for Windows) or **install.sh** (for Linux) file to install the library in your local maven repository.
-4. After this you should add the GroupDocs.Conversion for Java **dependency** block to your .pom.xml project file.
+{{< /tab >}}
+{{< /tabs >}}
