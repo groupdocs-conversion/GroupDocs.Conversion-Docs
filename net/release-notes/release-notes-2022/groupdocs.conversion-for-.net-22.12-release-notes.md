@@ -38,3 +38,5 @@ There are 5 features, improvements and bug-fixes in this release, most notable a
 4. File type **DataFileType** marked as obsolute. Please use **WebFileType** instead
 3.  New property **ExtractAudioOnly** in **VideoConvertOptions** class
 4.  New property **AudioFormat** in **VideoConvertOptions** class
+
+{{< alert style="info" >}}From GroupDocs.Conversion for .NET v23.1 we will drop support of .NET Framework 3.5. The minimal supported .NET Framework will be 4.0{{< /alert >}}
