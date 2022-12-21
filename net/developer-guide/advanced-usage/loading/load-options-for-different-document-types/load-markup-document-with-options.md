@@ -8,13 +8,30 @@ keywords: Load document, Load HTML document
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-GroupDocs.Conversion provides [MarkupLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/markuploadoptions) to give you control over how source Note document will be processed. The following options could be set:
-*   **[PageNumbering](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/markuploadoptions/pagenumbering)** - enable or disable generation of page numbering in converted document. Default: false  
+GroupDocs.Conversion provides [WebLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/webloadoptions) to give you control over how source Note document will be processed. The following options could be set:
+*   **[PageNumbering](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/webloadoptions/pagenumbering)** - enable or disable generation of page numbering in converted document. Default: false  
 
 ## Enable page numbering when converting to Wordprocessing
 
 The following code sample shows how to convert Note document and specify font substitution for missing fonts:
 
+
+{{< alert style="info" >}}From v22.12 and greater{{< /alert >}}
+```csharp
+var source = "sample.html";
+var loadOptions = new WebLoadOptions
+{
+    PageNumbering = true
+};
+using (var converter = new Converter(source, () => loadOptions))
+{
+    var options = new WordProcessingConvertOptions();
+    converter.Convert("converted.docx" , options);
+}
+```
+
+
+{{< alert style="info" >}}Before v22.12{{< /alert >}}
 ```csharp
 var source = "sample.html";
 var loadOptions = new MarkupLoadOptions

@@ -42,7 +42,54 @@ The following code sample shows how to convert each personal storage content to 
 *   DOCX attachments will be converted to PDF
 *   Emails and all other types will be converted to HTML
 
+{{< alert style="inof" >}}From v22.12 and greater{{< /alert >}}
+```csharp
+using (Converter converter = new Converter("sample.pst", (FileType fileType) =>
+{
+    if (fileType == EmailFileType.Ost)
+    {
+        return new PersonalStorageLoadOptions
+        {
+            Folder = "Inbox",
+        };
+    }
+    if (fileType == EmailFileType.Msg)
+    {
+        return new EmailLoadOptions
+        {
+            ConvertOwner = true,
+            ConvertOwned = true,
+            Depth = 2
+        };
+    }
+    return null;
+}))
+{
+    int index = 0;
+    converter.Convert((FileType fileType) =>
+    {
+        string fileName = $"converted_{++index}.{fileType.Extension}";
+        return new FileStream(fileName, FileMode.Create);
+    }, (string sourceFileName, FileType fileType) =>
+    {
+        if (fileType == ImageFileType.Jpg)
+        {
+            return new ImageConvertOptions
+            {
+                Format = ImageFileType.Png
+            };
+        }
+        if (fileType == WordProcessingFileType.Docx)
+        {
+            return new PdfConvertOptions();
+        }
+        return new WebConvertOptions();
+    });
+}
+```
 
+
+{{< alert style="info" >}}Before v22.12{{< /alert >}}
 ```csharp
 using (Converter converter = new Converter("sample.pst", (FileType fileType) =>
 {
@@ -50,7 +97,7 @@ using (Converter converter = new Converter("sample.pst", (FileType fileType) =>
     {
         return new PersonalStorageLoadOptions
         {
-            Folder = "ROOT/Inbox",
+            Folder = "Inbox",
         };
     }
     if (fileType == EmailFileType.Msg)

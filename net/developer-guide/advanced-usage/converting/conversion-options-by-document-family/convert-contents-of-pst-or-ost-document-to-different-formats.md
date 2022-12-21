@@ -10,6 +10,46 @@ hideChildren: False
 ---
 GroupDocs.Conversion provides flexible API to control conversion of documents that contains other documents. The following code snippet shows how to convert each content of OST document to different format based on content type:
 
+{{< alert style="info" >}}From v22.12 and greater{{< /alert >}}
+```csharp
+var index = 1;
+LoadOptions LoadOptionsProvider(FileType sourceType)
+{
+    if (sourceType == EmailFileType.Ost)
+    {
+        return new PersonalStorageLoadOptions
+        {
+            ConvertOwned = true,
+            ConvertOwner = false,
+            Folder = @"Root - Mailbox", 
+            Depth = 2
+        };
+    }
+    return null;
+}
+Stream ConvertedStreamProvider(FileType targetType)
+{
+    string outputFile = $"converted-{index++}.{targetType.Extension}"
+    return new FileStream(outputFile, FileMode.Create);
+}
+ConvertOptions ConvertOptionsProvider(string sourceDocumentName, FileType sourceType)
+{
+    if (sourceType == EmailFileType.Msg)
+    {
+        return new PdfConvertOptions();
+    }
+    return new WordProcessingConvertOptions();
+}
+
+using (var converter = new Converter("sample.ost", LoadOptionsProvider))
+{
+    converter.Convert(ConvertedStreamProvider, ConvertOptionsProvider);
+}
+
+```
+
+
+{{< alert style="info" >}}Before v22.12{{< /alert >}}
 ```csharp
 var index = 1;
 LoadOptions LoadOptionsProvider(FileType sourceType)

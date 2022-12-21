@@ -64,7 +64,7 @@ The following code sample demonstrates how to convert PDF document to HTML in C#
 using (Converter converter = new Converter("sample.pdf"))
 {
     // Set the convert options for HTML format
-    var options = new MarkupConvertOptions();
+    var options = new WebConvertOptions();
     // Convert to HTML format
     converter.Convert("converted.html", options);
 }
