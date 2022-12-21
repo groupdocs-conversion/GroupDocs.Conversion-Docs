@@ -1,7 +1,7 @@
 ---
 id: convert-compression
 url: conversion/net/convert/compression
-title: Convert Compresion File Formats
+title: Convert Compression File Formats
 weight: 130
 description: "Following this article you will learn how to extract content from compressed file and convert this content to desired format with couple C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert from ZIP, Convert from RAR, Convert from TGZ, Convert from 7Z
