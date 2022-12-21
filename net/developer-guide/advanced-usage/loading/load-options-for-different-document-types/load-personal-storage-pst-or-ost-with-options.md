@@ -42,7 +42,7 @@ The following code sample shows how to convert each personal storage content to 
 *   DOCX attachments will be converted to PDF
 *   Emails and all other types will be converted to HTML
 
-{{< alert style="inof" >}}From v22.12 and greater{{< /alert >}}
+{{< alert style="info" >}}From v22.12 and greater{{< /alert >}}
 ```csharp
 using (Converter converter = new Converter("sample.pst", (FileType fileType) =>
 {
