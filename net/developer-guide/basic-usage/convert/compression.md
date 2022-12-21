@@ -27,7 +27,7 @@ structuredData:
           text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
-## About Compressiion File Formats
+## About Compression File Formats
 
 File Compression is the process to reduce the size of one or more files. It shrinks big files into much smaller ones by removing unneeded data. The compressed file archive makes it easier to send and back up large files or groups of files. Moreover, such files make downloading faster easier and allow more data to be stored on removable media. There are various compression formats. Below we are going to discuss the most popular Compression File Formats and the most recommended software that uses it.
 
@@ -63,7 +63,7 @@ Refer to [API reference](https://apireference.groupdocs.com/conversion/net/group
 
 ### Extract and Convert from a RAR 
 
-You also can convert the archive content during extraction to a desired format. Extraction and convertion to PDF format is also quite simple and natural.
+You also can convert the archive content during extraction to a desired format. Extraction and conversion to PDF format is also quite simple and natural.
 The following code sample demonstrates how to convert content of a RAR document to PDF in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
 
 ```csharp
