@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}This page contains release notes for GroupDocs.Conversion for Java 22.8{{< /alert >}}
+{{< alert style="info" >}}This page contains release notes for GroupDocs.Conversion for Java 22.11{{< /alert >}}
 
 ## Major Features
 
