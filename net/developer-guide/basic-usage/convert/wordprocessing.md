@@ -73,21 +73,21 @@ Converting Microsoft Word documents to HTML or MHTML formats is a popular and de
 using(var converter = new GroupDocs.Conversion.Converter("sample.docx"))
 {
     // Set the convert options for HTML format
-    var options = new MarkupConvertOptions();
+    var options = new WebConvertOptions();
     // Save converted HTML file
     converter.Convert("converted.html", options);
 }
 ```
 
-When converting a DOC or DOCX file to MHTML format the only difference from the previous code example is that it is needed to set [MarkupConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/markupconvertoptions) Format property to  **MarkupFileType.Mhtml**. The code snippet for DOCX to MHTML conversion will look as following:
+When converting a DOC or DOCX file to MHTML format the only difference from the previous code example is that it is needed to set [WebConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions) Format property to  **WebFileType.Mhtml**. The code snippet for DOCX to MHTML conversion will look as following:
 
 ```csharp
 // Load the source DOCX file
 using(var converter = new GroupDocs.Conversion.Converter("sample.docx"))
 {
-    var options = new MarkupConvertOptions
+    var options = new WebConvertOptions
     {  
-        Format = GroupDocs.Conversion.FileTypes.MarkupFileType.Mhtml
+        Format = GroupDocs.Conversion.FileTypes.WebFileType.Mhtml
     };
     // Save converted HTML file
     converter.Convert("converted.html", options);

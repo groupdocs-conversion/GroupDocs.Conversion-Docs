@@ -14,6 +14,21 @@ GroupDocs.Conversion provides [DataConvertOptions](https://reference.groupdocs.
 
 Following code snippet shows how to convert to JSON with advanced options.
 
+
+{{< alert style="info" >}}From v22.12 and greater{{< /alert >}}
+```csharp
+using (Converter converter = new Converter("sample.csv"))
+{
+    WebConvertOptions options = new WebConvertOptions
+    {
+        Format = WebFileType.Json
+    };
+    converter.Convert("converted.json", options);
+}
+```
+
+
+{{< alert style="info" >}}Before v22.12{{< /alert >}}
 ```csharp
 using (Converter converter = new Converter("sample.csv"))
 {

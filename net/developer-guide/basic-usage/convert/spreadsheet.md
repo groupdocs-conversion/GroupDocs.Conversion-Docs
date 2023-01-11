@@ -61,16 +61,16 @@ The code snippet for XLSX to HTML or MHTML conversion using C# programming langu
 // Load the source XLSX file
 using (var converter = new GroupDocs.Conversion.Converter("sample.xlsx"))
 {
-    var options = new MarkupConvertOptions();
+    var options = new WebConvertOptions();
     // Save converted HTML file
     converter.Convert("converted.html", options);
 }
 ```
 
-When converting to MHTML you may use the same code example as above, just specify Format for [MarkupConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/markupconvertoptions) like this:  
+When converting to MHTML you may use the same code example as above, just specify Format for [WebConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions) like this:  
 
 ```csharp
-var options = new MarkupConvertOptions
+var options = new WebConvertOptions
 {  
     Format = GroupDocs.Conversion.FileTypes.MarkupFileType.Mhtml
 };
