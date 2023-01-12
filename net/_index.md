@@ -42,7 +42,7 @@ Native .NET API to accurately convert documents & image file formats in any type
 	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/convert/spreadsheet" >}}'>Convert Excel</a></li>
 	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/convert/presentation" >}}'>Convert PowerPoint</a></li>
 	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/convert/image" >}}'>Convert images</a></li>
-	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/convert/html" >}}'>Convert HTML</a></li>
+	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/convert/web" >}}'>Convert HTML</a></li>
 	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/convert/audio" >}}'>Convert audio</a></li>	
 </ul>
 <p>HOW-TO GUIDES</p>
