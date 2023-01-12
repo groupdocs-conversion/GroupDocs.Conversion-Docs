@@ -80,8 +80,8 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 ## Database
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
-| [LOG](/conversion/net/convert/other/) | Log File |<!--Load--> ✅ |<!--Save-->  |
-| [SQL](/conversion/net/convert/other/) | Sql File |<!--Load--> ✅ |<!--Save-->  |
+| [LOG](/conversion/net/convert/database/) | Log File |<!--Load--> ✅ |<!--Save-->  |
+| [SQL](/conversion/net/convert/database/) | Sql File |<!--Load--> ✅ |<!--Save-->  |
 
 ## Diagram
 | From | Description | Load | Save |
@@ -109,14 +109,14 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 ## Email and Outlook
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
-| [EML](/conversion/net/convert/other/) | E-Mail Message |<!--Load--> ✅ |<!--Save--> ✅ |
-| [EMLX](/conversion/net/convert/other/) | Apple Mail Message |<!--Load--> ✅ |<!--Save--> ✅ |
-| [MBOX](/conversion/net/convert/other/) | Mbox document format |<!--Load--> ✅ |<!--Save-->  |
-| [MSG](/conversion/net/convert/other/) | Outlook Mail Message |<!--Load--> ✅ |<!--Save--> ✅ |
-| [NSF](/conversion/net/convert/other/) | Lotus Notes Storage Format |<!--Load--> ✅ |<!--Save-->  |
-| [OST](/conversion/net/convert/other/) | Outlook Offline Data File |<!--Load--> ✅ |<!--Save-->  |
-| [PST](/conversion/net/convert/other/) | Outlook Personal Information Store File |<!--Load--> ✅ |<!--Save-->  |
-| [VCF](/conversion/net/convert/other/) | Vcf document format |<!--Load--> ✅ |<!--Save-->  |
+| [EML](/conversion/net/convert/email/) | E-Mail Message |<!--Load--> ✅ |<!--Save--> ✅ |
+| [EMLX](/conversion/net/convert/email/) | Apple Mail Message |<!--Load--> ✅ |<!--Save--> ✅ |
+| [MBOX](/conversion/net/convert/email/) | Mbox document format |<!--Load--> ✅ |<!--Save-->  |
+| [MSG](/conversion/net/convert/email/) | Outlook Mail Message |<!--Load--> ✅ |<!--Save--> ✅ |
+| [NSF](/conversion/net/convert/email/) | Lotus Notes Storage Format |<!--Load--> ✅ |<!--Save-->  |
+| [OST](/conversion/net/convert/email/) | Outlook Offline Data File |<!--Load--> ✅ |<!--Save-->  |
+| [PST](/conversion/net/convert/email/) | Outlook Personal Information Store File |<!--Load--> ✅ |<!--Save-->  |
+| [VCF](/conversion/net/convert/email/) | Vcf document format |<!--Load--> ✅ |<!--Save-->  |
 
 ## Image
 | From | Description | Load | Save |
@@ -198,10 +198,10 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 ## Project Management
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
-| [MPP](/conversion/net/convert/other/) | Microsoft Project File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [MPT](/conversion/net/convert/other/) | Microsoft Project Template |<!--Load--> ✅ |<!--Save-->  |
-| [MPX](/conversion/net/convert/other/) | Microsoft Project Exchange File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [XER](/conversion/net/convert/other/) | Primavera XER format |<!--Load--> ✅ |<!--Save--> ✅ |
+| [MPP](/conversion/net/convert/project-management/) | Microsoft Project File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [MPT](/conversion/net/convert/project-management/) | Microsoft Project Template |<!--Load--> ✅ |<!--Save-->  |
+| [MPX](/conversion/net/convert/project-management/) | Microsoft Project Exchange File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [XER](/conversion/net/convert/project-management/) | Primavera XER format |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## Spreadsheet
 | From | Description | Load | Save |
