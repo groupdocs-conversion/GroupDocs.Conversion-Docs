@@ -1,7 +1,8 @@
 ---
 id: convert-audio
 url: conversion/net/convert/audio
-title: Convert Audio
+title: Convert audio formats
+linkTitle: Audios
 weight: 140
 description: "Following this article you will learn how to convert audio file to another audio format with couple C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert MP3 to FLAC, Convert FLAC to MP3, Convert MP3
@@ -30,6 +31,20 @@ structuredData:
 ## About Audio File Formats
 
 The audio file format is a category of digital file formats for representation of audio information along with its meta-data. A number of Audio file formats exist based on the nature of data contained within the audio file. Such files can be stored in compressed as well as uncompressed audio file formats. Popular audio file formats include MP3, WAV, PCM and WMA.
+
+## Supported Audio File Conversions
+
+| From | To |
+| --- | --- |
+| AAC | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
+| AC3 | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
+| AIFF | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
+| FLAC | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
+| M4A | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
+| MP3 | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
+| OGG | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
+| WAV | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
+| WMA | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
 
 ### Convert from MP3
 
