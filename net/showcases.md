@@ -3,7 +3,7 @@ id: showcases
 url: conversion/net/showcases
 title: Showcases
 weight: 3
-description: "Code examples and live demostrations of GroupDocs.Conversion for .NET"
+description: "Code examples and live demonstrations of GroupDocs.Conversion for .NET"
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: False
