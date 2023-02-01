@@ -44,7 +44,7 @@ Everyone is familiar of videos that we daily watch on media devices such as Tele
 | WEBM | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/> Video: [AVI](https://docs.fileformat.com/video/avi/), [FLV](https://docs.fileformat.com/video/flv/), [MKV](https://docs.fileformat.com/video/mkv/), [MOV](https://docs.fileformat.com/video/mov/), [MP4](https://docs.fileformat.com/video/mp4/), [WEBM](https://docs.fileformat.com/video/webm/), [WMV](https://docs.fileformat.com/video/wmv/)<br/>  |
 | WMV | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/> Video: [AVI](https://docs.fileformat.com/video/avi/), [FLV](https://docs.fileformat.com/video/flv/), [MKV](https://docs.fileformat.com/video/mkv/), [MOV](https://docs.fileformat.com/video/mov/), [MP4](https://docs.fileformat.com/video/mp4/), [WEBM](https://docs.fileformat.com/video/webm/), [WMV](https://docs.fileformat.com/video/wmv/)<br/>  |
 
-### Convert from AVI
+## Convert to another video format
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your video file into another video file format.  
 
@@ -159,6 +159,25 @@ using (Converter converter = new Converter("sample.avi", () => loadOptions))
 Put it simply - you install video processing library, implement `IVideoConnector` which links `GroupDocs.Conversion` with video processing library, load a video file into `Converter` providing the `IVideoConnector` instance, select desired output format and all the rest will be done by **GroupDocs.Conversion**.  
 
 {{< alert style="info" >}}
-For more available conversions and formats compatibility check [supported file formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}}).
 Refer to [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
 {{< /alert >}}
+
+## Extract audio track
+Extracting audio track from video is similar to converting video, however you need to set the [`ExtractAudioOnly`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property to `true` and specify the desired output format in the [`AudioFormat`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property:
+
+```csharp
+// Load the source AVI file
+VideoLoadOptions loadOptions = new VideoLoadOptions();
+loadOptions.SetVideoConnector(new VideoConnector());
+using (Converter converter = new Converter("sample_with_audio.avi", () => loadOptions))
+{
+    // Set the convert options
+    VideoConvertOptions options = new VideoConvertOptions
+    {
+        ExtractAudioOnly = true,
+        AudioFormat = AudioFileType.Ogg
+    };
+    // Convert to audio file
+    converter.Convert("extracted_audio.ogg", options);
+}
+```
