@@ -46,7 +46,7 @@ The audio file format is a category of digital file formats for representation o
 | WAV | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
 | WMA | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
 
-### Convert from MP3
+## Convert to another audio format
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your audio file into another audio file format.  
 
@@ -176,6 +176,5 @@ using (Converter converter = new Converter("sample.mp3", () => loadOptions))
 Put it simply - you install audio processing library, implement `IAudioConnector` which links `GroupDocs.Conversion` with audio processing library, load an audio file into `Converter` providing the `IAudioConnector` instance, select desired output format and all the rest will be done by **GroupDocs.Conversion**.  
 
 {{< alert style="info" >}}
-For more available conversions and formats compatibility check [supported file formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}}).
 Refer to [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
 {{< /alert >}}
