@@ -55,7 +55,7 @@ Also please do not forget to add runtimeconfig.template.json file next to your p
 ```json
 {
     "configProperties": {
-        "System.Drawing.EnableUnixSupport": true,
+        "System.Drawing.EnableUnixSupport": true
     }
 }
 ```
