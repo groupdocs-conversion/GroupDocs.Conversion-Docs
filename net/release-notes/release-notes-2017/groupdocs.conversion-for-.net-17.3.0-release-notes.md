@@ -32,7 +32,7 @@ There are 7 new features, improvements and fixes in this regular monthly release
 | CONVERSIONNET-1761 | Ability to hide words comments when converting from word | New Feature |
 | CONVERSIONNET-1760 | Implement conversion from ONE | New Feature |
 | CONVERSIONNET-1719 | Convert Html to Pdf improvements | Improvement |
-| CONVERSIONNET-1597 | Memory leak when converting CAD stream to image | Bug |
+| CONVERSIONNET-1597 | Memory leak when converting CAD stream to image | Fix |
 
 ## Public API and Backward Incompatible Changes
 

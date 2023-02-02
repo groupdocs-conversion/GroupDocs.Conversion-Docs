@@ -28,7 +28,7 @@ There are 5 features, improvements and bug-fixes in this release, most notable a
 | CONVERSIONNET-5252 | Improvement | Implement setting custom font folders when converting from CAD |
 | CONVERSIONNET-5255 | Improvement | Improving archive handling with adding support for saving to archives protected with password |
 | CONVERSIONNET-5254 | Improvement | Improving archive handling with adding support for opening password protected archives |
-| CONVERSIONNET-4314 | Bug | Converting particular DWFX to PDF produce empty result file |
+| CONVERSIONNET-4314 | Fix | Converting particular DWFX to PDF produce empty result file |
 
 
 ## Public API and Backward Incompatible Changes

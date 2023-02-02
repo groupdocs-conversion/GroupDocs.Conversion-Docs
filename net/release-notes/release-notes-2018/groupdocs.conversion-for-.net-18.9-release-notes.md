@@ -37,9 +37,9 @@ This regular monthly release contains 10+ new features, improvements and bug fix
 | 14080 | Improve Image conversion options | Improvement |
 | 14079 | Improve Html conversion options | Improvement |
 | 14078 | Improve Cells conversion options | Improvement |
-| 14087 | XLS to HTML output is too small | Bug |
-| 14074 | Excel to SVG conversion issue | Bug |
-| 13688 | Xps to Pdf conversion issue | Bug |
+| 14087 | XLS to HTML output is too small | Fix |
+| 14074 | Excel to SVG conversion issue | Fix |
+| 13688 | Xps to Pdf conversion issue | Fix |
 
 ## Public API and Backward Incompatible Changes
 

@@ -28,11 +28,11 @@ There are 9 new features, improvements and fixes in this regular monthly release
 | CONVERSIONNET-1693 | Conversion of PDF-A file to PDF | New Feature |
 | CONVERSIONNET-1697 | Implement conversion from Mobi | New Feature |
 | CONVERSIONNET-1722 | Horizontal and Vertical resolutions for conversions to Image | New Feature |
-| CONVERSIONNET-1692 | When converting a Cell to Pdf, the sheet is split into multiple pdf pages | Bug |
-| CONVERSIONNET-1581 | System.ArgumentOutOfRangeException when adding shape to slide and saving | Bug |
-| CONVERSIONNET-1709 | Converting TXT to any format with limiting pages produces wrong output | Bug |
-| CONVERSIONNET-1684 | Exception when trying to access SaveOptions.ConvertFileType | Bug |
-| CONVERSIONNET-1696 | .tif to .png conversion is not as expected | Bug |
+| CONVERSIONNET-1692 | When converting a Cell to Pdf, the sheet is split into multiple pdf pages | Fix |
+| CONVERSIONNET-1581 | System.ArgumentOutOfRangeException when adding shape to slide and saving | Fix |
+| CONVERSIONNET-1709 | Converting TXT to any format with limiting pages produces wrong output | Fix |
+| CONVERSIONNET-1684 | Exception when trying to access SaveOptions.ConvertFileType | Fix |
+| CONVERSIONNET-1696 | .tif to .png conversion is not as expected | Fix |
 
 ## Public API and Backward Incompatible Changes
 

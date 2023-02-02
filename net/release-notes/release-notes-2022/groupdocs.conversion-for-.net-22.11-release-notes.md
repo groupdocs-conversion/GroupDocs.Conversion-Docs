@@ -27,9 +27,9 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
 | CONVERSIONNET-5527 | Feature | Change the producer of PDF file |
 | CONVERSIONNET-5414 | Enhancement | Conversion from PDF to XLSM is freezing |
 | CONVERSIONNET-5611 | Enhancement | Simplifying convert and compress in fluent syntax |
-| CONVERSIONNET-5608 | Bug | Archive to archive conversions are not returned as possible conversion pairs |
-| CONVERSIONNET-5609 | Bug | Large temp files are created during conversion to image on macOS |
-| CONVERSIONNET-4976 | Bug | Cannot convert PDF to Excel |
+| CONVERSIONNET-5608 | Fix | Archive to archive conversions are not returned as possible conversion pairs |
+| CONVERSIONNET-5609 | Fix | Large temp files are created during conversion to image on macOS |
+| CONVERSIONNET-4976 | Fix | Cannot convert PDF to Excel |
 
 ## Public API and Backward Incompatible Changes
 

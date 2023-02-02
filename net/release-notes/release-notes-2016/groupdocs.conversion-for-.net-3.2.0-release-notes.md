@@ -40,16 +40,16 @@ These are improvements and fixes in this regular monthly release. The most notab
 | CONVERSIONNET-816 | Show grid lines when converting Excel files | New Feature |
 | CONVERSIONNET-817 | Show hidden sheets when converting Excel files | New Feature |
 | CONVERSIONNET-765 | Return conversion guid in ConversionProgressEventArgs | Improvement |
-| CONVERSIONNET-710 | Client Response - In-Proper conversion From PPTX to PDF, Image and Word Document formats | Bug |
-| CONVERSIONNET-722 | Exception when converting from ODP to PPT and PPS | Bug |
-| CONVERSIONNET-734 | While Converting Xlsx file to HTML with HtmlSaveOptions Specific Pages (Sheets) does not work | Bug |
-| CONVERSIONNET-740 | Client Response - HTML to Doc and Docx is not proper for Headings and contents are mixed | Bug |
-| CONVERSIONNET-749 | Client Response - Only first page converts to PNG from TIF file (With and Without License) | Bug |
-| CONVERSIONNET-750 | Client Response - Convert to HTML from Excel, PDF, MS Word overlaps the images AND some of Words with styling | Bug |
-| CONVERSIONNET-757 | Can not find CallBack function to get Conversion Progress for MVC/WebForms Applications | Bug |
-| CONVERSIONNET-767 | Client Respose - Could not open the file stream on azure. | Bug |
-| CONVERSIONNET-782 | Client Response - FileType not supported Exceptions are not handled | Bug |
-| CONVERSIONNET-783 | Client Response - Error for Empty Input Documents as Stream for Conversion | Bug |
+| CONVERSIONNET-710 | Client Response - In-Proper conversion From PPTX to PDF, Image and Word Document formats | Fix |
+| CONVERSIONNET-722 | Exception when converting from ODP to PPT and PPS | Fix |
+| CONVERSIONNET-734 | While Converting Xlsx file to HTML with HtmlSaveOptions Specific Pages (Sheets) does not work | Fix |
+| CONVERSIONNET-740 | Client Response - HTML to Doc and Docx is not proper for Headings and contents are mixed | Fix |
+| CONVERSIONNET-749 | Client Response - Only first page converts to PNG from TIF file (With and Without License) | Fix |
+| CONVERSIONNET-750 | Client Response - Convert to HTML from Excel, PDF, MS Word overlaps the images AND some of Words with styling | Fix |
+| CONVERSIONNET-757 | Can not find CallBack function to get Conversion Progress for MVC/WebForms Applications | Fix |
+| CONVERSIONNET-767 | Client Respose - Could not open the file stream on azure. | Fix |
+| CONVERSIONNET-782 | Client Response - FileType not supported Exceptions are not handled | Fix |
+| CONVERSIONNET-783 | Client Response - Error for Empty Input Documents as Stream for Conversion | Fix |
 
 ## Public API and Backward Incompatible Changes
 

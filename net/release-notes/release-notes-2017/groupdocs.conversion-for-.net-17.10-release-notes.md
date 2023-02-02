@@ -37,10 +37,10 @@ There are 10+ new features, improvements and fixes in this regular monthly relea
 | CONVERSIONNET-2153 | Set default transparency of watermark to 0.5 | Improvement |
 | CONVERSIONNET-2155 | Slides To XPS conversion improvement | Improvement |
 | CONVERSIONNET-2161 | Expose FileType and PagesCount properties in ConvertedDocument class | Improvement |
-| CONVERSIONNET-1908 | Incorrect conversion from One to PDF | Bug |
-| CONVERSIONNET-2158 | PsdOptions does not have constructor | Bug |
-| CONVERSIONNET-2163 | Converting HTML with external resources produce wrong output | Bug |
-| CONVERSIONNET-2167 | PDF locked with modification password but without view password cannot be converted | Bug |
+| CONVERSIONNET-1908 | Incorrect conversion from One to PDF | Fix |
+| CONVERSIONNET-2158 | PsdOptions does not have constructor | Fix |
+| CONVERSIONNET-2163 | Converting HTML with external resources produce wrong output | Fix |
+| CONVERSIONNET-2167 | PDF locked with modification password but without view password cannot be converted | Fix |
 
 ## Public API and Backward Incompatible Changes
 

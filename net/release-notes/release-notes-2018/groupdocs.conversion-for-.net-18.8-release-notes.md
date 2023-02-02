@@ -30,7 +30,7 @@ This regular monthly release contains 5+ new features, improvements and bug fixe
 | CONVERSIONNET-2658 | Image to PDF conversion improvement | Improvement |
 | CONVERSIONNET-2686 | Improve per page savings when converting to Words, Images, Slides, Cells, Pdf, Xps, Html | Improvement |
 | CONVERSIONNET-2687 | Security improvements update | Improvement |
-| CONVERSIONNET-2683 | Exception when cache is enabled | Bug |
+| CONVERSIONNET-2683 | Exception when cache is enabled | Fix |
 
 ##   
 Public API and Backward Incompatible Changes

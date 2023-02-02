@@ -29,13 +29,13 @@ There are 10+ features, improvements and bug-fixes in this release, most notable
 | CONVERSIONNET-5463 | Feature | Implement conversion from Cpio archive |
 | CONVERSIONNET-5464 | Feature | Implement conversion to Cpio archive |
 | CONVERSIONNET-5466 | Enhancement | Incorrect detection of password protected spreadsheet document when loaded from stream |
-| CONVERSIONNET-5313 | Bug | DOCX to PDF conversion issue on Red Hat |
-| CONVERSIONNET-5406 | Bug | DOCX to MD to HTML: Missing formatting |
-| CONVERSIONNET-5455 | Bug | Evaluation tag when converting Pdf to Image on Linux/MacOS |
-| CONVERSIONNET-5456 | Bug | DOCX to PDF conversion: bullets list converted to squares |
-| CONVERSIONNET-5493 | Bug | Compressing conversion result to password protected Zip produce broken archive |
-| CONVERSIONNET-5494 | Bug | Particular Excel to PDF conversion - Blank output |
-| CONVERSIONNET-5405 | Bug | DOCX to MD: Unhandled exception |
+| CONVERSIONNET-5313 | Fix | DOCX to PDF conversion issue on Red Hat |
+| CONVERSIONNET-5406 | Fix | DOCX to MD to HTML: Missing formatting |
+| CONVERSIONNET-5455 | Fix | Evaluation tag when converting Pdf to Image on Linux/MacOS |
+| CONVERSIONNET-5456 | Fix | DOCX to PDF conversion: bullets list converted to squares |
+| CONVERSIONNET-5493 | Fix | Compressing conversion result to password protected Zip produce broken archive |
+| CONVERSIONNET-5494 | Fix | Particular Excel to PDF conversion - Blank output |
+| CONVERSIONNET-5405 | Fix | DOCX to MD: Unhandled exception |
 
 ## Public API and Backward Incompatible Changes
 

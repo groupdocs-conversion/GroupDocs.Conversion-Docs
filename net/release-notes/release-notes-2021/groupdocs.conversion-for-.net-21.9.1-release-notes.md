@@ -21,7 +21,7 @@ This is a hot fix release which fix one issue:
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-4884 | Bug | Recognition mode not respected for conversions from pdf to wordprocessing |
+| CONVERSIONNET-4884 | Fix | Recognition mode not respected for conversions from pdf to wordprocessing |
 
 
 ## Public API and Backward Incompatible Changes

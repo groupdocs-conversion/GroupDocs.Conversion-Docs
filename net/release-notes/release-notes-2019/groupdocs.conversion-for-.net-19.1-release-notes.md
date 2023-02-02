@@ -27,11 +27,11 @@ This regular monthly release contains 5+ improvements and bug fixes. Most notabl
 | CONVERSIONNET-2830 | Implement conversion improvement when converting Svg to Slides | Improvement |
 | CONVERSIONNET-2878 | Add support for setting watermark as background when converting to image | Improvement |
 | CONVERSIONNET-2881 | Save converted document to file should return the file name and size | Improvement |
-| CONVERSIONNET-2837 | Spreadsheets sometimes show incorrect graph data | Bug |
-| CONVERSIONNET-2863 | Issue with conversion .docx (with table of content) to .html | Bug |
-| CONVERSIONNET-2864 | Conversion .pdf to .png (or .jpeg) with watermark as background issue | Bug |
-| CONVERSIONNET-2871 | Inconsistent conversion from email file formats when converting to Cells | Bug |
-| CONVERSIONNET-2876 | Receiving Aspose.Pdf.InvalidValueFormatException when converting a PDF file | Bug |
+| CONVERSIONNET-2837 | Spreadsheets sometimes show incorrect graph data | Fix |
+| CONVERSIONNET-2863 | Issue with conversion .docx (with table of content) to .html | Fix |
+| CONVERSIONNET-2864 | Conversion .pdf to .png (or .jpeg) with watermark as background issue | Fix |
+| CONVERSIONNET-2871 | Inconsistent conversion from email file formats when converting to Cells | Fix |
+| CONVERSIONNET-2876 | Receiving Aspose.Pdf.InvalidValueFormatException when converting a PDF file | Fix |
 
 ## Public API and Backward Incompatible Changes
 

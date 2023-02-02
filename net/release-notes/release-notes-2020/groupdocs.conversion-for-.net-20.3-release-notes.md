@@ -29,22 +29,22 @@ There are 20+ features, improvements and bug-fixes in this release, most notable
 | CONVERSIONNET-3748 | Feature | Implement rename email fields when converting an Email file |
 | CONVERSIONNET-3674 | Improvement | Change date format when converting from email formats |
 | CONVERSIONNET-3734 | Improvement | Enhance loading times in general / for Converter |
-| CONVERSIONNET-3596 | Bug | Error in converting a particular DOCX to PDF |
-| CONVERSIONNET-3633 | Bug | Not supported file type exception for certain JPG when using FileStream |
-| CONVERSIONNET-3652 | Bug | Watermark and Zoom are not applied when converting ProjectManagement to Markup |
-| CONVERSIONNET-3653 | Bug | Converting MSG document with attachments fails with NullReference exception |
-| CONVERSIONNET-3655 | Bug | XML support is no more available in 20.1 |
-| CONVERSIONNET-3662 | Bug | XML document type is not listed in the possible conversions pair |
-| CONVERSIONNET-3688 | Bug | Exception while Converting MPP to PDF |
-| CONVERSIONNET-3693 | Bug | Exception while Converting VSDX to PDF |
-| CONVERSIONNET-3721 | Bug | API compatibility with System.Drawing.Common version 4.6.0-preview6.19303.8. |
-| CONVERSIONNET-3708 | Bug | StreamToFileType adapter in Foundation do not detect certain jpg file |
-| CONVERSIONNET-3722 | Bug | Exception while Converting VSDX to PDF |
-| CONVERSIONNET-3736 | Bug | Converting image to Pdf takes too long |
-| CONVERSIONNET-3741 | Bug | Eml to Xlsx conversion issue |
-| CONVERSIONNET-3742 | Bug | Images not resized proportionally when only height or width is set |
-| CONVERSIONNET-3654 | Bug | Particular DWG is not detected correctly from StreamToFileTypeAdapter |
-| CONVERSIONNET-3728 | Bug | Aspect ratio/output dimension issue  |
+| CONVERSIONNET-3596 | Fix | Error in converting a particular DOCX to PDF |
+| CONVERSIONNET-3633 | Fix | Not supported file type exception for certain JPG when using FileStream |
+| CONVERSIONNET-3652 | Fix | Watermark and Zoom are not applied when converting ProjectManagement to Markup |
+| CONVERSIONNET-3653 | Fix | Converting MSG document with attachments fails with NullReference exception |
+| CONVERSIONNET-3655 | Fix | XML support is no more available in 20.1 |
+| CONVERSIONNET-3662 | Fix | XML document type is not listed in the possible conversions pair |
+| CONVERSIONNET-3688 | Fix | Exception while Converting MPP to PDF |
+| CONVERSIONNET-3693 | Fix | Exception while Converting VSDX to PDF |
+| CONVERSIONNET-3721 | Fix | API compatibility with System.Drawing.Common version 4.6.0-preview6.19303.8. |
+| CONVERSIONNET-3708 | Fix | StreamToFileType adapter in Foundation do not detect certain jpg file |
+| CONVERSIONNET-3722 | Fix | Exception while Converting VSDX to PDF |
+| CONVERSIONNET-3736 | Fix | Converting image to Pdf takes too long |
+| CONVERSIONNET-3741 | Fix | Eml to Xlsx conversion issue |
+| CONVERSIONNET-3742 | Fix | Images not resized proportionally when only height or width is set |
+| CONVERSIONNET-3654 | Fix | Particular DWG is not detected correctly from StreamToFileTypeAdapter |
+| CONVERSIONNET-3728 | Fix | Aspect ratio/output dimension issue  |
 
 ## Public API and Backward Incompatible Changes
 

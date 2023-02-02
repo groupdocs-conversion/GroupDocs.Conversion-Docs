@@ -27,7 +27,7 @@ There are 5 features, improvements and bug-fixes in this release, most notable a
 | CONVERSIONNET-5643 | Feature | Video to Audio conversion |
 | CONVERSIONNET-5700 | Enhancement | Improved conversions from composite documents pst/ost, mbox, archives |
 | CONVERSIONNET-5517 | Enhancement | Improve document types classification following https://docs.fileformat.com |
-| CONVERSIONNET-5558 | Bug | Error converting webp to jpg |
+| CONVERSIONNET-5558 | Fix | Error converting webp to jpg |
 
 
 ## Public API and Backward Incompatible Changes

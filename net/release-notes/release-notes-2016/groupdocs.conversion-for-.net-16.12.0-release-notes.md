@@ -27,14 +27,14 @@ There are 12 new features, improvements and fixes in this regular monthly releas
 | CONVERSIONNET-1483 | Implement conversion to Webp | New Feature |
 | CONVERSIONNET-1485 | Use LZW compression for internal tiff compression | Improvement |
 | CONVERSIONNET-1484 | Improve memory handling | Improvement |
-| CONVERSIONNET-1518 | Converting to image with set DPI options without setting image width and height is producing invalid image | Bug |
-| CONVERSIONNET-1557 | HideWordTrackedChanges set to 'true' but still its showing track chnages and markup | Bug |
-| CONVERSIONNET-1564 | Exception when loading EPUB in multithread | Bug |
-| CONVERSIONNET-1566 | Exception when converting DWG to PNG in multithread | Bug |
-| CONVERSIONNET-1567 | Exception is thrown when resizing specific Pdf file | Bug |
-| CONVERSIONNET-1158 | Convert to HTML from PDF - Words in Bold Letters are not properly displayed | Bug |
-| CONVERSIONNET-845 | Pdf to Html conversion formatting issue | Bug |
-| CONVERSIONNET-1568 | Wrong characters when saving in HTML | Bug |
+| CONVERSIONNET-1518 | Converting to image with set DPI options without setting image width and height is producing invalid image | Fix |
+| CONVERSIONNET-1557 | HideWordTrackedChanges set to 'true' but still its showing track chnages and markup | Fix |
+| CONVERSIONNET-1564 | Exception when loading EPUB in multithread | Fix |
+| CONVERSIONNET-1566 | Exception when converting DWG to PNG in multithread | Fix |
+| CONVERSIONNET-1567 | Exception is thrown when resizing specific Pdf file | Fix |
+| CONVERSIONNET-1158 | Convert to HTML from PDF - Words in Bold Letters are not properly displayed | Fix |
+| CONVERSIONNET-845 | Pdf to Html conversion formatting issue | Fix |
+| CONVERSIONNET-1568 | Wrong characters when saving in HTML | Fix |
 
 ## Public API and Backward Incompatible Changes
 

@@ -32,9 +32,9 @@ There are 11 new features, improvements and fixes in this regular monthly releas
 | CONVERSIONNET-1847 | Convert Tasks to Html improvements | Improvement |
 | CONVERSIONNET-1851 | Convert Words to Html improvements with UsePdf=true option set | Improvement |
 | CONVERSIONNET-1871 | Improved handling of extension-less urls | Improvement |
-| CONVERSIONNET-1678 | Failed to validate PDF\_X\_3 and PDF\_X\_1A | Bug |
-| CONVERSIONNET-1844 | Converting Image to Html with UsePdf=true always use direct conversion instead converting through Pdf | Bug |
-| CONVERSIONNET-1676 | Loading Latex document from stream requires FileStream | Bug |
+| CONVERSIONNET-1678 | Failed to validate PDF\_X\_3 and PDF\_X\_1A | Fix |
+| CONVERSIONNET-1844 | Converting Image to Html with UsePdf=true always use direct conversion instead converting through Pdf | Fix |
+| CONVERSIONNET-1676 | Loading Latex document from stream requires FileStream | Fix |
 
 ## Public API and Backward Incompatible Changes
 

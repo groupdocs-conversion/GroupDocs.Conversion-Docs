@@ -21,7 +21,7 @@ This is a hot fix release which fix one issue:
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-4571 | Bug | Wordprocessing conversion issue under linux and windows core |
+| CONVERSIONNET-4571 | Fix | Wordprocessing conversion issue under linux and windows core |
 
 
 ## Public API and Backward Incompatible Changes

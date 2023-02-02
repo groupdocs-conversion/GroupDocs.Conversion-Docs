@@ -34,7 +34,7 @@ There are 10+ new features, improvements and fixes in this regular monthly relea
 | CONVERSIONNET-2392 | Set default font to replace all missing fonts when converting Words document | Improvement |
 | CONVERSIONNET-2394 | Set default font to replace all missing fonts when converting Cells document | Improvement |
 | CONVERSIONNET-2421 | Conversion improvement when converting Psd and Odg to Pdf | Improvement |
-| CONVERSIONNET-2304 | XPS to PDF conversion failed | Bug |
+| CONVERSIONNET-2304 | XPS to PDF conversion failed | Fix |
 
 ## Public API and Backward Incompatible Changes
 

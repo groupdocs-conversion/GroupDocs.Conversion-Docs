@@ -32,10 +32,10 @@ There are 11 new features, improvements and fixes in this regular monthly releas
 | CONVERSIONNET-1645 | Improving memory handling on save | Improvement |
 | CONVERSIONNET-1646 | Improving output file name if converting from/to page | Improvement |
 | CONVERSIONNET-1648 | Improve memory handling in documents | Improvement |
-| CONVERSIONNET-1580 | Multipage Tiff is not converted properly to Pdf | Bug |
-| CONVERSIONNET-1615 | Page mode conversions do not work | Bug |
-| CONVERSIONNET-1643 | HideWordTrackedChanges not respected when converting from word | Bug |
-| CONVERSIONNET-1644 | Dpi resolution not respected when converting Cells to Image | Bug |
+| CONVERSIONNET-1580 | Multipage Tiff is not converted properly to Pdf | Fix |
+| CONVERSIONNET-1615 | Page mode conversions do not work | Fix |
+| CONVERSIONNET-1643 | HideWordTrackedChanges not respected when converting from word | Fix |
+| CONVERSIONNET-1644 | Dpi resolution not respected when converting Cells to Image | Fix |
 
   
 

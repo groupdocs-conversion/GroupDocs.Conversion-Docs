@@ -26,7 +26,7 @@ There are 5 improvements and fixes in this regular monthly release. The most not
 | CONVERSIONNET-1077 | Setting default Fonts | New Feature |
 | CONVERSIONNET-1305 | Add FixedLayout option to Words to Html conversions | New Feature |
 | CONVERSIONNET-1304 | Add FixedLayout option to Pdf to Html conversions | New Feature |
-| CONVERSIONNET-1351 | Coversion with document as Stream input not working | Bug |
+| CONVERSIONNET-1351 | Coversion with document as Stream input not working | Fix |
 
 ## Public API and Backward Incompatible Changes
 

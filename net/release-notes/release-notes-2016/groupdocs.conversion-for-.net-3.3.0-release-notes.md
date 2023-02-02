@@ -29,18 +29,18 @@ There are 16 improvements and fixes in this regular monthly release. The most no
 | CONVERSIONNET-835 | Implement SVG document conversion | New Feature |
 | CONVERSIONNET-846 | Implement XPS document conversion | New Feature |
 | CONVERSIONNET-886 | Implement conversion to ICO | New Feature |
-| CONVERSIONNET-844 | xlsx to png Object null Reference exception | Bug |
-| CONVERSIONNET-889 | Conversion from XLSX to PNG/JPG/HTML not Working Properly | Bug |
-| CONVERSIONNET-890 | Converted File Name issue in Excel file to PNG | Bug |
-| CONVERSIONNET-897 | Converting large XLS file to image with UsePdf=false is producing blurred images | Bug |
-| CONVERSIONNET-898 | Missing pages when converting XLS file to image with UsePdf=true | Bug |
-| CONVERSIONNET-899 | Excel to PNG/JPG/JPEG Low Image Quality Dpi not effecing | Bug |
-| CONVERSIONNET-907 | PDF to Image conversion - target resolution is not changed when setting Dpi | Bug |
-| CONVERSIONNET-908 | Words to Image conversion - target resolution is not changed when setting Dpi | Bug |
-| CONVERSIONNET-909 | Slides to Image conversion - target resolution is not changed when setting Dpi | Bug |
-| CONVERSIONNET-910 | Tasks to Image conversion - target resolution is not changed when setting Dpi | Bug |
-| CONVERSIONNET-911 | Image to Image conversion - target resolution is not changed when setting Dpi | Bug |
-| CONVERSIONNET-912 | Diagram to Image conversion - target resolution is not changed when setting Dpi | Bug |
+| CONVERSIONNET-844 | xlsx to png Object null Reference exception | Fix |
+| CONVERSIONNET-889 | Conversion from XLSX to PNG/JPG/HTML not Working Properly | Fix |
+| CONVERSIONNET-890 | Converted File Name issue in Excel file to PNG | Fix |
+| CONVERSIONNET-897 | Converting large XLS file to image with UsePdf=false is producing blurred images | Fix |
+| CONVERSIONNET-898 | Missing pages when converting XLS file to image with UsePdf=true | Fix |
+| CONVERSIONNET-899 | Excel to PNG/JPG/JPEG Low Image Quality Dpi not effecing | Fix |
+| CONVERSIONNET-907 | PDF to Image conversion - target resolution is not changed when setting Dpi | Fix |
+| CONVERSIONNET-908 | Words to Image conversion - target resolution is not changed when setting Dpi | Fix |
+| CONVERSIONNET-909 | Slides to Image conversion - target resolution is not changed when setting Dpi | Fix |
+| CONVERSIONNET-910 | Tasks to Image conversion - target resolution is not changed when setting Dpi | Fix |
+| CONVERSIONNET-911 | Image to Image conversion - target resolution is not changed when setting Dpi | Fix |
+| CONVERSIONNET-912 | Diagram to Image conversion - target resolution is not changed when setting Dpi | Fix |
 
 ## Public API and Backward Incompatible Changes
 

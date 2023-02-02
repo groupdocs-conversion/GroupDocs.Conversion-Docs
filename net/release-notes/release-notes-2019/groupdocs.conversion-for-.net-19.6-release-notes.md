@@ -34,7 +34,7 @@ This regular monthly release contains 5+ new features, improvements and bug fixe
 | CONVERSIONNET-3100 | Feature | Implement conversion from Dwt |
 | CONVERSIONNET-3113 | Feature | Implement conversion from JPEG-LS (Jls) |
 | CONVERSIONNET-3117 | Improvement | Improve Diagram to Word conversion |
-| CONVERSIONNET-2839 | Bug | PowerPoint with black SmartArt Text gets changed into white text when converted to a PDF |
+| CONVERSIONNET-2839 | Fix | PowerPoint with black SmartArt Text gets changed into white text when converted to a PDF |
 
 ## Public API and Backward Incompatible Changes
 

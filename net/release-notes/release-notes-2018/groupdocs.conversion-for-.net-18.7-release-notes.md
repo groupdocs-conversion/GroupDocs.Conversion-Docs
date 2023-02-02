@@ -28,7 +28,7 @@ This regular monthly release contains 5+ new features, improvements and bug fixe
 | CONVERSIONNET-2620 | Implement automatic font substitution option when converting from Words | New Feature |
 | CONVERSIONNET-2622 | Implement font substitution option when converting from Slides | New Feature |
 | CONVERSIONNET-2624 | Implement font substitution option when converting from Cells | New Feature |
-| CONVERSIONNET-2616 | Fonts loading folder is not properly set when converting from Words | Bug |
+| CONVERSIONNET-2616 | Fonts loading folder is not properly set when converting from Words | Fix |
 
 ## Public API and Backward Incompatible Changes
 

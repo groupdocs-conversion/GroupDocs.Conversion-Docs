@@ -34,10 +34,10 @@ There are 10+ features, improvements and bug-fixes in this release, most notable
 | CONVERSIONNET-3587 | Feature | GetPossibleConversions for a document extension without instantiating a Converter |
 | CONVERSIONNET-3597 | Improvement | Improve document info classes  |
 | CONVERSIONNET-3626 | Improvement | Make proportional image If only Width or Height is provided when converting to image |
-| CONVERSIONNET-3576 | Bug | Email to Excel conversion issue |
-| CONVERSIONNET-3581 | Bug | Email to Word or PDF License Not working |
-| CONVERSIONNET-3625 | Bug | PageNumber and PagesCount not respected when converting to image |
-| CONVERSIONNET-3634 | Bug | 'Index was out of range.' exception when converting particular .mpx file to .html |
+| CONVERSIONNET-3576 | Fix | Email to Excel conversion issue |
+| CONVERSIONNET-3581 | Fix | Email to Word or PDF License Not working |
+| CONVERSIONNET-3625 | Fix | PageNumber and PagesCount not respected when converting to image |
+| CONVERSIONNET-3634 | Fix | 'Index was out of range.' exception when converting particular .mpx file to .html |
 
 ## Public API and Backward Incompatible Changes
 

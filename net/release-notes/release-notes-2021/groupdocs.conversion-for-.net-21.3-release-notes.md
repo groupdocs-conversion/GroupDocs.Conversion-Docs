@@ -24,12 +24,12 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
 | Key | Category | Summary |
 | --- | --- | --- |
 | CONVERSIONNET-4521 | Feature | Implement conversion from/to Tga |
-| CONVERSIONNET-1785 | Bug | Docx to PDF conversion characters issue |
-| CONVERSIONNET-4489 | Bug | Improper conversion from Mbox |
-| CONVERSIONNET-4493 | Bug | Options equality comparison not working properly when the class contains arrays |
-| CONVERSIONNET-4519 | Bug | Exception when trying to convert WordML document stream to PDF |
-| CONVERSIONNET-4546 | Bug | Converting using ConverterSettings.FontDirectories |
-| CONVERSIONNET-4549 | Bug | Watermark font styles not respected when converting to PDF |
+| CONVERSIONNET-1785 | Fix | Docx to PDF conversion characters issue |
+| CONVERSIONNET-4489 | Fix | Improper conversion from Mbox |
+| CONVERSIONNET-4493 | Fix | Options equality comparison not working properly when the class contains arrays |
+| CONVERSIONNET-4519 | Fix | Exception when trying to convert WordML document stream to PDF |
+| CONVERSIONNET-4546 | Fix | Converting using ConverterSettings.FontDirectories |
+| CONVERSIONNET-4549 | Fix | Watermark font styles not respected when converting to PDF |
 
 
 

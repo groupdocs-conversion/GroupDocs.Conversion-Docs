@@ -25,10 +25,10 @@ There are 5+ new features, improvements and fixes in this regular monthly releas
 | --- | --- | --- |
 | CONVERSIONNET-1943 | Implement conversion from DWF | New Feature |
 | CONVERSIONNET-2340 | Improve caching with provided LocalCacheDataHandler | Improvement |
-| CONVERSIONNET-2284 | Unable to set watermark text | Bug |
-| CONVERSIONNET-2339 | Converting specific docx document fails with Value cannot be null, parameter trueTypeFont | Bug |
-| CONVERSIONNET-2341 | Fix failing conversion from Odg | Bug |
-| CONVERSIONNET-2342 | Fix failing conversion from Ifc | Bug |
+| CONVERSIONNET-2284 | Unable to set watermark text | Fix |
+| CONVERSIONNET-2339 | Converting specific docx document fails with Value cannot be null, parameter trueTypeFont | Fix |
+| CONVERSIONNET-2341 | Fix failing conversion from Odg | Fix |
+| CONVERSIONNET-2342 | Fix failing conversion from Ifc | Fix |
 
 ## Public API and Backward Incompatible Changes
 

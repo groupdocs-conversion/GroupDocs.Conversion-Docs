@@ -26,13 +26,13 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
 | CONVERSIONNET-5001 | Feature | Implement fluent syntax when setting conversion options |
 | CONVERSIONNET-5025 | Feature | Converting specified sheets in an excel file |
 | CONVERSIONNET-5078 | Improvement | Improve svg to image conversion quality |
-| CONVERSIONNET-4812 | Bug | How to preserve hyperlinks |
-| CONVERSIONNET-4819 | Bug | PDF to DOCX conversion throws exception |
-| CONVERSIONNET-4895 | Bug | EML to PNG conversion issue |
-| CONVERSIONNET-4999 | Bug | HTML to PDF conversion - output doesn't show controls properly |
-| CONVERSIONNET-5000 | Bug | Issue in resizing JPG |
-| CONVERSIONNET-5045 | Bug | DWG to PNG conversion - output is trimmed |
-| CONVERSIONNET-5047 | Bug | SkiaSharp throws unhandled exception |
+| CONVERSIONNET-4812 | Fix | How to preserve hyperlinks |
+| CONVERSIONNET-4819 | Fix | PDF to DOCX conversion throws exception |
+| CONVERSIONNET-4895 | Fix | EML to PNG conversion issue |
+| CONVERSIONNET-4999 | Fix | HTML to PDF conversion - output doesn't show controls properly |
+| CONVERSIONNET-5000 | Fix | Issue in resizing JPG |
+| CONVERSIONNET-5045 | Fix | DWG to PNG conversion - output is trimmed |
+| CONVERSIONNET-5047 | Fix | SkiaSharp throws unhandled exception |
 
 
 ## Public API and Backward Incompatible Changes

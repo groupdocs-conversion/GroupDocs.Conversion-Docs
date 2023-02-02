@@ -32,7 +32,7 @@ There are 5+ new features, improvements and fixes in this regular monthly releas
 | CONVERSIONNET-2459 | Implement option for resource optimization when converting to PDF | New Feature |
 | CONVERSIONNET-2471 | Implement option for applying image watermark | New Feature |
 | CONVERSIONNET-2454 | Create HTML 5 compliant markup when converting to html | Improvement |
-| CONVERSIONNET-2432 | Index was outside the bound of the array, when cache is enabled and watermarks are applied | Bug |
+| CONVERSIONNET-2432 | Index was outside the bound of the array, when cache is enabled and watermarks are applied | Fix |
 
 ## Public API and Backward Incompatible Changes
 

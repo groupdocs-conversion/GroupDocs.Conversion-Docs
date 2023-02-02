@@ -33,7 +33,7 @@ There are 9 new features, improvements and fixes in this regular monthly release
 | CONVERSIONNET-1756 | PPTX to HTML Conversion - Slide zoom level property | New Feature |
 | CONVERSIONNET-1881 | Improve SlidesToHtml saver | Improvement |
 | CONVERSIONNET-1885 | Update CellsToImageSaver and CellsToPdfSaver to remove empty rows and columns before saving document | Improvement |
-| CONVERSIONNET-1884 | PPt to PDF Conversion - Tables borders are showing - showgridline property is also not working for this | Bug |
+| CONVERSIONNET-1884 | PPt to PDF Conversion - Tables borders are showing - showgridline property is also not working for this | Fix |
 
 ## Public API and Backward Incompatible Changes
 

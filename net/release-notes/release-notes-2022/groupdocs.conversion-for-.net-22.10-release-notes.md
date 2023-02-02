@@ -21,13 +21,13 @@ There are 5+ bug-fixes in this release, most notable are:
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-5564 | Bug | Converting to image may produce larger file size than expected |
-| CONVERSIONNET-5470 | Bug | PDF to JPG - Large File Size of Converted Images |
-| CONVERSIONNET-5299 | Bug | Page orientation issue when converting from DWG to PDF |
-| CONVERSIONNET-4719 | Bug | Exception `Parameter is not valid.` when converting DOCX to PPT using license file |
-| CONVERSIONNET-4796 | Bug | PDF to DOCX - malformed output |
-| CONVERSIONNET-4122 | Bug | PostScript files are converted to a single blank page |
-| CONVERSIONNET-5518 | Bug | Object reference not set to an instance of an object excetpion when converting pdf to docx with fluent syntax |
+| CONVERSIONNET-5564 | Fix | Converting to image may produce larger file size than expected |
+| CONVERSIONNET-5470 | Fix | PDF to JPG - Large File Size of Converted Images |
+| CONVERSIONNET-5299 | Fix | Page orientation issue when converting from DWG to PDF |
+| CONVERSIONNET-4719 | Fix | Exception `Parameter is not valid.` when converting DOCX to PPT using license file |
+| CONVERSIONNET-4796 | Fix | PDF to DOCX - malformed output |
+| CONVERSIONNET-4122 | Fix | PostScript files are converted to a single blank page |
+| CONVERSIONNET-5518 | Fix | Object reference not set to an instance of an object excetpion when converting pdf to docx with fluent syntax |
 
 ## Public API and Backward Incompatible Changes
 

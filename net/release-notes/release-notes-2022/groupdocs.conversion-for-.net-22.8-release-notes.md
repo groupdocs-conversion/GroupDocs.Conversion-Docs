@@ -24,12 +24,12 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
 | --- | --- | --- |
 | CONVERSIONNET-5429 | Feature | Conversion from Amazon Kindle AZW3 format |
 | CONVERSIONNET-5433 | Enhancement | New load option to keep original date field value when converting from wordprocessing document |
-| CONVERSIONNET-5416 | Bug | Comments still visible despite using HideComments when converting docx to pdf |
-| CONVERSIONNET-5419 | Bug | File damaged or corrupt |
-| CONVERSIONNET-5394 | Bug | Cannot convert from multipage Tiff when the source filename extension is "tif" |
-| CONVERSIONNET-5393 | Bug | For a presentation file the value of IsPasswordProtected property is not in PropertiesNames of IDocumentInfo |
-| CONVERSIONNET-5237 | Bug | PDF to JPEG/TIFF conversion problem |
-| CONVERSIONNET-5370 | Bug | HTML to PDF conversion issue |
+| CONVERSIONNET-5416 | Fix | Comments still visible despite using HideComments when converting docx to pdf |
+| CONVERSIONNET-5419 | Fix | File damaged or corrupt |
+| CONVERSIONNET-5394 | Fix | Cannot convert from multipage Tiff when the source filename extension is "tif" |
+| CONVERSIONNET-5393 | Fix | For a presentation file the value of IsPasswordProtected property is not in PropertiesNames of IDocumentInfo |
+| CONVERSIONNET-5237 | Fix | PDF to JPEG/TIFF conversion problem |
+| CONVERSIONNET-5370 | Fix | HTML to PDF conversion issue |
 
 
 

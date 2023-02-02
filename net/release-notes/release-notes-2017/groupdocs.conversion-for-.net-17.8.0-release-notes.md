@@ -28,7 +28,7 @@ There are 4 new features, improvements and fixes in this regular monthly release
 | CONVERSIONNET-1999 | Hide comments for Cells documents | New Feature |
 | CONVERSIONNET-1984 | Implement possibility to convert specific pages | New Feature |
 | CONVERSIONNET-2003 | Simplify the generated HTML markup | Improvement |
-| CONVERSIONNET-2020 | Converting to Html with SaveOptions.FixedLayout=false always produce fixed layout html conversion | Bug |
+| CONVERSIONNET-2020 | Converting to Html with SaveOptions.FixedLayout=false always produce fixed layout html conversion | Fix |
 
 ## Public API and Backward Incompatible Changes
 

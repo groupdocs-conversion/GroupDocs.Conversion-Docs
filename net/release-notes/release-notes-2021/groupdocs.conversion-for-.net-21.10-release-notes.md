@@ -23,10 +23,10 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
 | --- | --- | --- |
 | CONVERSIONNET-4908 | Feature | Implement image watermark image auto align |
 | CONVERSIONNET-4885 | Improvement | Split watermark options to WatermarkTextOptions and WatermarkImageOptions |
-| CONVERSIONNET-4432 | Bug | Stl to Png conversion exception: Parameter is not valid |
-| CONVERSIONNET-4813 | Bug | TIFF to PDF conversion - output larger in size |
-| CONVERSIONNET-4901 | Bug | Incorrect auto align watermark when targeting .NET framework |
-| CONVERSIONNET-4906 | Bug | Low image quality when converting SVG to image |
+| CONVERSIONNET-4432 | Fix | Stl to Png conversion exception: Parameter is not valid |
+| CONVERSIONNET-4813 | Fix | TIFF to PDF conversion - output larger in size |
+| CONVERSIONNET-4901 | Fix | Incorrect auto align watermark when targeting .NET framework |
+| CONVERSIONNET-4906 | Fix | Low image quality when converting SVG to image |
 
 
 

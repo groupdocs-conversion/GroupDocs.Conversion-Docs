@@ -37,15 +37,15 @@ There are 15+ features, improvements and bug-fixes in this release, most notable
 | CONVERSIONNET-4626 | Feature | Implement conversion from/to Psb |
 | CONVERSIONNET-4632 | Feature | Implement conversion from Fodg |
 | CONVERSIONNET-4567 | Improvement | Improve Email to Markup conversion |
-| CONVERSIONNET-3819 | Bug | Conversion from XPS to PDF throws OOM or uses too much memory and lasts for 5 minutes |
-| CONVERSIONNET-4200 | Bug | Exception is thrown when converting particular Cdr document |
-| CONVERSIONNET-4312 | Bug | Cannot convert particular EMF to PDF document |
-| CONVERSIONNET-4321 | Bug | Tif to Svg conversion issue |
-| CONVERSIONNET-4337 | Bug | Unable to convert particular Gif |
-| CONVERSIONNET-4434 | Bug | Html to XLS conversion exception: The max length of the font name is 31 |
-| CONVERSIONNET-4566 | Bug | Html improperly detected as Mbox when converting from stream |
-| CONVERSIONNET-4568 | Bug | Missing watermark when converting from Email |
-| CONVERSIONNET-4635 | Bug | Conversion from Pst/Ost do not produce output documents |
+| CONVERSIONNET-3819 | Fix | Conversion from XPS to PDF throws OOM or uses too much memory and lasts for 5 minutes |
+| CONVERSIONNET-4200 | Fix | Exception is thrown when converting particular Cdr document |
+| CONVERSIONNET-4312 | Fix | Cannot convert particular EMF to PDF document |
+| CONVERSIONNET-4321 | Fix | Tif to Svg conversion issue |
+| CONVERSIONNET-4337 | Fix | Unable to convert particular Gif |
+| CONVERSIONNET-4434 | Fix | Html to XLS conversion exception: The max length of the font name is 31 |
+| CONVERSIONNET-4566 | Fix | Html improperly detected as Mbox when converting from stream |
+| CONVERSIONNET-4568 | Fix | Missing watermark when converting from Email |
+| CONVERSIONNET-4635 | Fix | Conversion from Pst/Ost do not produce output documents |
 
 
 ## Public API and Backward Incompatible Changes

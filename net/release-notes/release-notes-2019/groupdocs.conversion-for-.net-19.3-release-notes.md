@@ -36,9 +36,9 @@ This regular monthly release contains 10+ improvements and bug fixes. Most notab
 | CONVERSIONNET-2965 | Remove HideComments from SaveOptions | Improvement |
 | CONVERSIONNET-2966 | Remove HidePdfAnnotations from SaveOptions | Improvement |
 | CONVERSIONNET-2967 | Remove HideWordTrackedChanges from SaveOptions | Improvement |
-| CONVERSIONNET-2880 | ImageSaveOptions.JpegQuality issue when converting .pdf to .jpeg | Bug |
-| CONVERSIONNET-2916 | Multi-line merged cell in excel renders only the first line | Bug |
-| CONVERSIONNET-1937 | Arrows point in the wrong direction in ODP output | Bug |
+| CONVERSIONNET-2880 | ImageSaveOptions.JpegQuality issue when converting .pdf to .jpeg | Fix |
+| CONVERSIONNET-2916 | Multi-line merged cell in excel renders only the first line | Fix |
+| CONVERSIONNET-1937 | Arrows point in the wrong direction in ODP output | Fix |
 
 ##   
 Public API and Backward Incompatible Changes
