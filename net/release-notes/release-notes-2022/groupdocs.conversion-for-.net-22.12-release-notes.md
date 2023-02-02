@@ -22,7 +22,7 @@ There are 5 features, improvements and bug-fixes in this release.
 | CONVERSIONNET-5517 | Enhancement | Improved document types classification following the [File Format Guide](https://docs.fileformat.com) |
 | CONVERSIONNET-5558 | Fix | Error converting WEBP to JPG |
 
-## Major Features
+## Major features
 
 * Conversion to AZW3 format
 * Options to extract audio from video 
@@ -32,6 +32,8 @@ There are 5 features, improvements and bug-fixes in this release.
 ### Conversion to AZW3 format
 To convert any of the supported file types to the AZW3 file type, just specify it in the `Format` property of the [`EBookConvertOptions`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/ebookconvertoptions/) class instance:
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 // Load the source PDF file
 using (Converter converter = new Converter("sample.pdf"))
@@ -44,9 +46,14 @@ using (Converter converter = new Converter("sample.pdf"))
     converter.Convert("converted.azw3", options);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
+
 ### Extracting audio track from video formats
 Extracting audio track from video is similar to [converting video]({{< ref "conversion/net/developer-guide/basic-usage/convert/video.md" >}}), however you need to set the [`ExtractAudioOnly`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property to `true` and specify the desired output format in the [`AudioFormat`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property:
 
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 ```csharp
 // Load the source AVI file
 VideoLoadOptions loadOptions = new VideoLoadOptions();
@@ -63,8 +70,10 @@ using (Converter converter = new Converter("sample_with_audio.avi", () => loadOp
     converter.Convert("extracted_audio.ogg", options);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-## Public API and Backward Incompatible Changes
+## Public API and backward incompatible changes
 
 1. Introduced a new file type: [`WebFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/webfiletype/).
 2. The `PersonalStorageFileType` file type becomes obsolete. Please use the [`EmailFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/emailfiletype/) or the [`DatabaseFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/databasefiletype/) types instead.

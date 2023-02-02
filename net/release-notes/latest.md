@@ -1,8 +1,8 @@
 ---
-id: groupdocs-conversion-for-net-23-1-release-notes
-url: conversion/net/groupdocs-conversion-for-net-23-1-release-notes
-title: GroupDocs.Conversion for .NET 23.1 Release Notes
-weight: 24
+id: groupdocs-conversion-for-net-latest-release-notes
+url: conversion/net/latest-release-notes
+title: Latest release (January 2023)
+weight: 1
 description: ""
 keywords: 
 productName: GroupDocs.Conversion for .NET
