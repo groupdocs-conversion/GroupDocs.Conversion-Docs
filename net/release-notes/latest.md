@@ -1,6 +1,6 @@
 ---
 id: groupdocs-conversion-for-net-latest-release-notes
-url: conversion/net/latest-release-notes
+url: conversion/net/release-notes/latest
 title: Latest release (January 2023)
 weight: 1
 description: ""
