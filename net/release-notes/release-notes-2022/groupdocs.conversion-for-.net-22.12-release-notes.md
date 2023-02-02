@@ -7,44 +7,30 @@ description: ""
 keywords: 
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
-{{< alert style="info" >}}This page contains release notes for GroupDocs.Conversion for .NET 22.12{{< /alert >}}
+
+There are 5 features, improvements and bug-fixes in this release.
+
+## Full list of changes in this release
+
+| Key | Category | Summary |
+| --- | --- | --- |
+| CONVERSIONNET-5432 | Feature | [Implement conversion to Amazon Kindle AZW3 format](#conversion-to-azw3-format) |
+| CONVERSIONNET-5643 | Feature | [Video to Audio conversion](#extracting-audio-track-from-video-formats) |
+| CONVERSIONNET-5700 | Enhancement | Improved conversions from composite documents: PST/OST, MBOX, and archives |
+| CONVERSIONNET-5517 | Enhancement | Improved document types classification following the [File Format Guide](https://docs.fileformat.com) |
+| CONVERSIONNET-5558 | Fix | Error converting WEBP to JPG |
 
 ## Major Features
-
-There are 5 features, improvements and bug-fixes in this release, most notable are:
 
 * Conversion to AZW3 format
 * Options to extract audio from video 
 * Improved document types classification
 * Improved conversion from composite documents
 
-## Full List of Issues Covering all Changes in this Release
-
-| Key | Category | Summary |
-| --- | --- | --- |
-| CONVERSIONNET-5432 | Feature | Implement conversion to Amazon Kindle AZW3 format |
-| CONVERSIONNET-5643 | Feature | Video to Audio conversion |
-| CONVERSIONNET-5700 | Enhancement | Improved conversions from composite documents pst/ost, mbox, archives |
-| CONVERSIONNET-5517 | Enhancement | Improve document types classification following https://docs.fileformat.com |
-| CONVERSIONNET-5558 | Fix | Error converting webp to jpg |
-
-
-## Public API and Backward Incompatible Changes
-
-1. Introduced a new file type: [`WebFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/webfiletype/).
-2. The `PersonalStorageFileType` file type becomes obsolete. Please use the [`EmailFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/emailfiletype/) or the [`DatabaseFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/databasefiletype/) types instead.
-3. The `MarkupFileType` file type becomes obsolete. Please use the  [`WebFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/webfiletype/) type instead.
-4. The `DataFileType` file type becomes obsolete. Please use the  [`WebFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/webfiletype/) type instead.
-5.  Introduced a new property [`ExtractAudioOnly`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) in `VideoConvertOptions` class.
-6.  Introduced a new property [`AudioFormat`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) in `VideoConvertOptions` class.
-
-{{< alert style="info" >}}From GroupDocs.Conversion for .NET v23.1 we will drop support of .NET Framework 3.5. The minimal supported .NET Framework will be 4.0{{< /alert >}}
-
-## Usage examples
-
 ### Conversion to AZW3 format
-To convert any of the supported file types to the AZW3 file type, just specify it in the `Format` property:
+To convert any of the supported file types to the AZW3 file type, just specify it in the `Format` property of the [`EBookConvertOptions`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/ebookconvertoptions/) class instance:
 
 ```csharp
 // Load the source PDF file
@@ -77,3 +63,16 @@ using (Converter converter = new Converter("sample_with_audio.avi", () => loadOp
     converter.Convert("extracted_audio.ogg", options);
 }
 ```
+
+## Public API and Backward Incompatible Changes
+
+1. Introduced a new file type: [`WebFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/webfiletype/).
+2. The `PersonalStorageFileType` file type becomes obsolete. Please use the [`EmailFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/emailfiletype/) or the [`DatabaseFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/databasefiletype/) types instead.
+3. The `MarkupFileType` file type becomes obsolete. Please use the  [`WebFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/webfiletype/) type instead.
+4. The `DataFileType` file type becomes obsolete. Please use the  [`WebFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/webfiletype/) type instead.
+5.  Introduced new [`ExtractAudioOnly`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property of the `VideoConvertOptions` class.
+6.  Introduced new [`AudioFormat`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property of the `VideoConvertOptions` class.
+
+{{< alert style="info" >}}From GroupDocs.Conversion for .NET v23.1 we will drop support of .NET Framework 3.5. The minimal supported .NET Framework will be 4.0{{< /alert >}}
+
+
