@@ -81,6 +81,7 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
 | [LOG](/conversion/net/convert/database/) | Log File |<!--Load--> ✅ |<!--Save-->  |
+| [NSF](/conversion/net/convert/database/) | Lotus Notes Storage Format |<!--Load--> ✅ |<!--Save-->  |
 | [SQL](/conversion/net/convert/database/) | Sql File |<!--Load--> ✅ |<!--Save-->  |
 
 ## Diagram
@@ -113,10 +114,20 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 | [EMLX](/conversion/net/convert/email/) | Apple Mail Message |<!--Load--> ✅ |<!--Save--> ✅ |
 | [MBOX](/conversion/net/convert/email/) | Mbox document format |<!--Load--> ✅ |<!--Save-->  |
 | [MSG](/conversion/net/convert/email/) | Outlook Mail Message |<!--Load--> ✅ |<!--Save--> ✅ |
-| [NSF](/conversion/net/convert/email/) | Lotus Notes Storage Format |<!--Load--> ✅ |<!--Save-->  |
 | [OST](/conversion/net/convert/email/) | Outlook Offline Data File |<!--Load--> ✅ |<!--Save-->  |
 | [PST](/conversion/net/convert/email/) | Outlook Personal Information Store File |<!--Load--> ✅ |<!--Save-->  |
 | [VCF](/conversion/net/convert/email/) | Vcf document format |<!--Load--> ✅ |<!--Save-->  |
+
+## Font
+| From | Description | Load | Save |
+| --- | --- | :---: | :---: |
+| [CFF](/conversion/net/convert/font/) | Compact Font Format |<!--Load--> ✅ |<!--Save-->  |
+| [EOT](/conversion/net/convert/font/) | Embedded OpenType Font Format |<!--Load--> ✅ |<!--Save-->  |
+| [OTF](/conversion/net/convert/font/) | OpenType font |<!--Load--> ✅ |<!--Save-->  |
+| [PFB](/conversion/net/convert/font/) | PostScript Fonts |<!--Load--> ✅ |<!--Save-->  |
+| [TTF](/conversion/net/convert/font/) | TrueType Font |<!--Load--> ✅ |<!--Save--> ✅ |
+| [WOFF](/conversion/net/convert/font/) | Web Open Font Format |<!--Load--> ✅ |<!--Save--> ✅ |
+| [WOFF2](/conversion/net/convert/font/) | Web Open Font Format 2 |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## Image
 | From | Description | Load | Save |

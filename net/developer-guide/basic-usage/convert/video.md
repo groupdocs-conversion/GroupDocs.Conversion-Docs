@@ -28,11 +28,11 @@ structuredData:
           text: Call Converter class Convert method and pass the filename for the converted MP4 file and the VideoConvertOptions object from the previous step as parameters.
 ---
 
-## About Video File Formats
+## About video file formats
 
 Everyone is familiar of videos that we daily watch on media devices such as Televisions, Cinema screens, and social media channels such as Facebook, Twitter, YouTube and many others. But have you ever wondered how these videos are saved and the formats in which these can be uploaded for viewing? What is the best file format for your video to be hosted on different storage media? Video file formats comprise of a number of different video types for storing videos and to be used for various purpose. Popular video file formats that you may have come across include AVI, MOV, WMV, M4V, and MP4.
 
-## Supported Video File Conversions
+## Supported video file conversions
 
 | From | To |
 | --- | --- |
