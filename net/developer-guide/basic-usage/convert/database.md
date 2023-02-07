@@ -31,7 +31,7 @@ A database is a collection of data that is organized in tables and maintained on
 
 Popular database file extensions and their file formats include SQLite, DB, ACCDB, and MDB.
 
-## Supported Database File Conversions
+## Supported database file conversions
 
 | From | To |
 | --- | --- |

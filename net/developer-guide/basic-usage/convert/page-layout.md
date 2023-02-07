@@ -28,11 +28,11 @@ structuredData:
           text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
-## About Page Layout Formats
+## About page layout formats
 
 Page layout languages are used in desktop and electronic publishing. The main focus of these languages is to facilitate the two-dimensional graphic design. Popular page layout formats include TEX, SVG, PS and EPS.
 
-## Supported Page Layout Conversions
+## Supported page layout conversions
 
 | From | To |
 | --- | --- |

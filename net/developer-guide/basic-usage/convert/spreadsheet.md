@@ -32,7 +32,7 @@ Microsoft Excel with its popular XLS and XLSX formats is a recognized authority 
 
 Despite the fact that direct converting tables to other formats can be a very complicated process, **GroupDocs.Conversion for .NET** successfully solves this class of tasks - from developers point of view it is needed to load the source workbook and save the converted document in some other format. That’s it!
 
-## Supported Spreadsheet File Conversions
+## Supported spreadsheet file conversions
 
 | From | To |
 | --- | --- |

@@ -28,7 +28,7 @@ structuredData:
           text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
-## About HTML and Other Web File Formats
+## About HTML and other web file formats
 
 HTML (Hyper Text Markup Language) is the extension for web pages created for display in browsers. Known as language of the web, HTML has evolved with requirements of new information requirements to be displayed as part of web pages. 
 
@@ -36,7 +36,7 @@ It takes a number of file types when building a webpage. Web file formats define
 
 Common web file extensions and their associate file formats include HTML (Hypertext Markup Language), ASP (Active Server Pages), XML (Extensible Markup Language), CSS (Cascading Style Sheets), JSON (JavaScript Object Notation) and others.
 
-## Supported Web File Conversions
+## Supported web file conversions
 
 | From | To |
 | --- | --- |

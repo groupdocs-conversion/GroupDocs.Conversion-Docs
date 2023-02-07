@@ -29,7 +29,7 @@ structuredData:
 ---
 Email file formats are used by email applications to store their various data including email messages, attachments, folders, address books etc. Email file formats are mainly associated with Outlook Express Email Message file. Additional types of files may also be using the Email file extension.
 
-## Supported Email and Outlook File Conversions
+## Supported email file conversions
 
 | From | To |
 | --- | --- |

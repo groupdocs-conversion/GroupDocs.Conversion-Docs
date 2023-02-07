@@ -12,7 +12,7 @@ toc: True
 
 Font files contain information about font tables, glyphs, and script outlines that can be accessed by operating system and applications to render text. Popular file formats include TTF, OTF, CFF and EOT.
 
-## Supported Font File Conversions
+## Supported font file conversions
 
 | From | To |
 | --- | --- |

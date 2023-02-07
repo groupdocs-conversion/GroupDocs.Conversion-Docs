@@ -28,13 +28,13 @@ structuredData:
           text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
-## About Note-taking File Formats
+## About note-taking file formats
 
 Note-taking program files contain sections and pages for storing notes. A note document can be as simple as a text document as well as more detailed consisting of digital images, audio/video clips, and hand sketch drawings.
 
 Common OneNote file extensions and their associated file formats is .ONE.
 
-## Supported Note Taking File Conversions
+## Supported note-taking file conversions
 
 | From | To |
 | --- | --- |

@@ -28,11 +28,11 @@ structuredData:
           text: Call Converter class Convert method and pass the filename for the converted FLAC file and the AudioConvertOptions object from the previous step as parameters.
 ---
 
-## About Audio File Formats
+## About audio file formats
 
 The audio file format is a category of digital file formats for representation of audio information along with its meta-data. A number of Audio file formats exist based on the nature of data contained within the audio file. Such files can be stored in compressed as well as uncompressed audio file formats. Popular audio file formats include MP3, WAV, PCM and WMA.
 
-## Supported Audio File Conversions
+## Supported audio file conversions
 
 | From | To |
 | --- | --- |

@@ -36,7 +36,7 @@ In such a situation, GroupDocs.Conversion for .NET will help you with converting
   
 This article explains how to convert PPT (or PPTX) presentations to another file formats programmatically with C# language.
 
-## Supported Presentation File Conversions
+## Supported presentation file conversions
 
 | From | To |
 | --- | --- |

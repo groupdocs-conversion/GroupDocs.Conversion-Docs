@@ -28,13 +28,13 @@ structuredData:
           text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
-## About Diagram File Formats
+## About diagram formats
 
 Microsoft Visio comes as part of Microsoft Office suite and is used for diagramming and vector drawing applications. It is used to create several different types of diagrams including flow charts, UML diagrams, network diagrams, and a lot of others.
 
 Visio file formats include file types such as VSDX, VSX, VTX, VDX, VSSX, VSTX, VSDM, VSSM, VSTM file format that is saved to disc when user creates a project in Microsoft Visio and saves it to disc.
 
-## Supported Diagram File Conversions
+## Supported diagram file conversions
 
 | From | To |
 | --- | --- |

@@ -30,7 +30,7 @@ structuredData:
 A project file is a collection of tasks, resources, and scheduling to get a measurable output in the form of a product or a service. Gantt charts are used to establish a visual flow of activities against time for the identified tasks that can also be exported to PDF or image formats for documentation.
 Common Project Management file extensions and their associated file formats include MPP, MPX and XER.
 
-## Supported Project Management File Conversions
+## Supported project management file conversions
 
 | From | To |
 | --- | --- |

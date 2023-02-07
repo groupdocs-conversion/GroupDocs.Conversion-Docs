@@ -33,7 +33,7 @@ GroupDocs.Conversion for .NET allows you to convert Word documents into other fo
 
 This section explains how to convert word processing documents with the help of GroupDocs.Conversion for .NET.
 
-## Supported Word Processing File Conversions
+## Supported word processing file conversions
 
 | From | To |
 | --- | --- |
