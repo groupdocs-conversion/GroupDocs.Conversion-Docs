@@ -48,7 +48,29 @@ There are 20+ features, improvements and bug-fixes in this release.
 * Improved conversions from ICO format
 * Improved spreadsheet to wordprocessing document conversions
 * Improved logging during conversion
-* Improved conversions from container type document (pst/ost/archives)
+* Improved conversions from container type document (PST/OST/archives)
+
+### Conversion between font formats
+Now you can convert your font file from one format into another.
+For example CFF to TTF conversion code snippet will look like this:
+
+```csharp
+using GroupDocs.Conversion;
+using GroupDocs.Conversion.FileTypes;
+using GroupDocs.Conversion.Options.Convert;
+
+// Load the source font file
+using (Converter converter = new Converter("Lato-Regular.cff"))
+{
+    // Set the convert options
+    var options = new FontConvertOptions
+    {
+        Format = FontFileType.Ttf
+    };
+    // Convert to TTF format
+    converter.Convert("Lato-Regular.ttf", options);
+}
+```
 
 ## Public API and backward incompatible changes
 
