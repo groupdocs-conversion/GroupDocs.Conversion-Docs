@@ -51,7 +51,7 @@ There are 20+ features, improvements and bug-fixes in this release.
 * Improved conversions from container type document (PST/OST/archives)
 
 ### Conversion between font formats
-Now you can convert your font file from one format into another.
+Now you can [convert your font file]({{< ref "conversion/net/developer-guide/basic-usage/convert/font" >}}) from one format into another.
 For example CFF to TTF conversion code snippet will look like this:
 
 ```csharp
