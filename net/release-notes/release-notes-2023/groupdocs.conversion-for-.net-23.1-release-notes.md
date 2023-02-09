@@ -16,7 +16,7 @@ There are 20+ features, improvements and bug-fixes in this release.
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-5407 | Feature | Implemented font formats conversion |
+| CONVERSIONNET-5407 | Feature | [Implemented font formats conversion](#conversion-between-font-formats) |
 | CONVERSIONNET-5746 | Enhancement | Improve Ico format conversion |
 | CONVERSIONNET-5748 | Enhancement | Improve Spreadsheet to WordProcessing document conversion |
 | CONVERSIONNET-5724 | Enhancement | Return list of available folders from PST/OST and other composite documents in document info class |
