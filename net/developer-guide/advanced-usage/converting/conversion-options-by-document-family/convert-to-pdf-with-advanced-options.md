@@ -7,6 +7,7 @@ description: "Follow this guide and learn how a file convert to pdf with height,
 keywords: Convert PDF, Convert to PDF/A, file convert to pdf
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 GroupDocs.Conversion provides the [PdfConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions) class to give you control over conversion results. Along with [common convert options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}}) you can specify the following additional options via the [PdfConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions) class:
 
