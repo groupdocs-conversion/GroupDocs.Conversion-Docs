@@ -3,5 +3,11 @@
     "cSpell.words": [
         "Visio",
         "wordprocessing"
+    ],
+    "grammarly.selectors": [
+        {
+            "language": "markdown",
+            "scheme": "file"
+        }
     ]
 }
