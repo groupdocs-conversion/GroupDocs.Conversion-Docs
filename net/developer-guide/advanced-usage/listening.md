@@ -9,16 +9,16 @@ keywords: Track conversion process, Subscribe to conversion process events, trac
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-In some cases there is the need to monitor conversion process and to receive update for start, progress and completion of a conversion. For such situations [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) expose extension point where the client application may hook up and receive updates.. 
+In some cases, there is a need to monitor the conversion process and to receive updates upon a start, progress and completion of a conversion. For such situations, [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) exposes an extension point where the client application may hook up and receive updates. 
 
 To enable listening you have to:
 
-*   Implement you own implementation of [IConverterListener](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.reporting/iconverterlistener) interface
-*   Instantiate [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings) class and pass an instance of the class created in first step
-*   Pass [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings) object factory to constructor of a [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class
-*   Call [Convert](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/#convert_3) method of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class
+*   Create your own implementation of the [IConverterListener](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.reporting/iconverterlistener) interface.
+*   Instantiate the [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings) class and pass an instance of the class created in the first step.
+*   Pass the [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings) object factory to the constructor of the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class.
+*   Call the [Convert](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/#convert_3) method of the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class.
 
-Here is a code that demonstrates how to enable listening for GroupDocs.Conversion.
+Here is a code that demonstrates how to enable listening for GroupDocs.Conversion events.
 
 ```csharp
 public class ConverterListener : IConverterListener
