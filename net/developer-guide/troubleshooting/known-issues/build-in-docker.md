@@ -21,6 +21,7 @@ EXPOSE 443
 
 RUN apt-get update && apt-get install -y ffmpeg libgdiplus
 
+RUN sed -i'.bak' 's/$/ contrib/' /etc/apt/sources.list
 RUN apt-get update; apt-get install -y ttf-mscorefonts-installer fontconfig
 RUN fc-cache -f -v
 
