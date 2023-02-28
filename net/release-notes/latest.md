@@ -1,7 +1,7 @@
 ---
 id: groupdocs-conversion-for-net-latest-release-notes
 url: conversion/net/release-notes/latest
-title: Latest release (January 2023)
+title: Latest release (February 2023)
 weight: 1
 description: ""
 keywords: 
@@ -10,102 +10,41 @@ hideChildren: False
 toc: True
 ---
 
-There are 20+ features, improvements and bug-fixes in this release.
+There are 10+ features, improvements and bug-fixes in this release.
 
 ## Full list of changes in this release
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-5407 | Feature | [Implemented font formats conversion](#conversion-between-font-formats) |
-| CONVERSIONNET-5746 | Enhancement | Improve Ico format conversion |
-| CONVERSIONNET-5748 | Enhancement | Improve Spreadsheet to WordProcessing document conversion |
-| CONVERSIONNET-5724 | Enhancement | Return list of available folders from PST/OST and other composite documents in document info class |
-| CONVERSIONNET-5750 | Enhancement | Improve Spreadsheet to Presentation document conversion |
-| CONVERSIONNET-5732 | Enhancement | EML with attachments to PDF conversion issue |
-| CONVERSIONNET-5761 | Enhancement | Improve logging during conversion |
-| CONVERSIONNET-5234 | Fix | Cannot convert ASE to 3DS and OBJ |
-| CONVERSIONNET-5233 | Fix | Cannot convert from 3D VRML file format |
-| CONVERSIONNET-5232 | Fix | Cannot convert from 3D X file format |
-| CONVERSIONNET-5231 | Fix | Cannot convert from 3D GLTF file format |
-| CONVERSIONNET-5726 | Fix | When converting from PST/OST no files are processed |
-| CONVERSIONNET-5560 | Fix | Keeping the hyperlink (text with link) format when converting PDF to PPTX |
-| CONVERSIONNET-4742 | Fix | PDF to image conversion issue |
-| CONVERSIONNET-5728 | Fix | During extraction from a ZIP, last extracted document is always truncated to zero file size |
-| CONVERSIONNET-5727 | Fix | RAR to XIP conversion throws exception |
-| CONVERSIONNET-5415 | Fix | Evaluation tag when converting to Image |
-| CONVERSIONNET-5457 | Fix | Particular PDF to PNG conversion crashes |
-| CONVERSIONNET-5563 | Fix | PDF to PNG: Path conversion requested exception |
-| CONVERSIONNET-5280 | Fix | Word to PDF conversion issue |
-| CONVERSIONNET-5236 | Fix | Cannot convert USD to DRC |
-| CONVERSIONNET-5235 | Fix | Cannot convert USD to 3DS |
-| CONVERSIONNET-5736 | Fix | Converter.GetAllPossibleConversions method returns enum with duplicates |
-| CONVERSIONNET-5477 | Fix | Regression: EPUB to HTML raises "CorruptOrDamagedFileException" |
-| CONVERSIONNET-5698 | Fix | Cannot convert from Note on macOS due to missing fonts |
+| CONVERSIONNET-5803 | Feature | Implement conversion to Mobi |
+| CONVERSIONNET-5833 | Feature | XLSX load options: Select sheet by index number|
+| CONVERSIONNET-5810 | Enhancement | Refactor Conversion and replace delegates with Func<T> |
+| CONVERSIONNET-5837 | Enhancement | Do not process hidden worksheets when convert from spreadsheet |
+| CONVERSIONNET-5825 | Enhancement | Improve FileType from Stream detection |
+| CONVERSIONNET-5808 | Enhancement | Return meaningful data in DocumentInfo classes that have IEnumerable properties when accessed through the indexer |
+| CONVERSIONNET-5831 | Bug | Error while Converting XLSX to PDF: Same key added |
+| CONVERSIONNET-5823 | Bug | Converting Numbers to Pptx produce broken result |
+| CONVERSIONNET-5794 | Bug | Converting particular Xlsx to Pptx produce broken result |
+| CONVERSIONNET-5341 | Bug | DWG to PDF conversion - Its messing the image |
+| CONVERSIONNET-5835 | Bug | XSLX to PDF: #REF! instead of 0 |
+| CONVERSIONNET-5836 | Bug | XLS to PDF: ConversionNotSupportedException |
+
 
 ## Major features
 
-* Conversions between font formats
-* Improved conversions from ICO format
-* Improved spreadsheet to wordprocessing document conversions
-* Improved logging during conversion
-* Improved conversions from container type document (PST/OST/archives)
-
-### Conversion between font formats
-Now you can [convert your font file]({{< ref "conversion/net/developer-guide/basic-usage/convert/font" >}}) from one format into another.
-For example CFF to TTF conversion code snippet will look like this:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-
-// Load the source font file
-using (Converter converter = new Converter("Lato-Regular.cff"))
-{
-    // Set the convert options
-    var options = new FontConvertOptions
-    {
-        Format = FontFileType.Ttf
-    };
-    // Convert to TTF format
-    converter.Convert("Lato-Regular.ttf", options);
-}
-```
+* Conversions to Mobi
+* New load options when converting from spreadsheet - Select sheet by index number
+* Simplified method signatures with generic delegate types
+* Improved file type detection from a stream
 
 ## Public API and backward incompatible changes
 
-1.  Introduced new `PersonalStorageFolderInfo` class:
-
+1.  Introduced new `SheetIndexes` property in the `SpreadsheetLoadOptions` class:
+    
     ```csharp
     /// <summary>
-    /// Personal Storage Folder info
+    /// List of sheet indexes to convert.
+    /// The indexes must be zero-based
     /// </summary>
-    public sealed class PersonalStorageFolderInfo
-    {
-        /// <summary>
-        /// Name of the folder
-        /// </summary>
-        public string  Name { get; }
-
-        /// <summary>
-        /// Count of the items in the folder
-        /// </summary>
-        public int ItemsCount { get; }
-
-    }
+    public IList<int> SheetIndexes { get; set; }
     ```
-
-2.  Changed the `Folders` property  in the `PersonalStorageDocumentInfo` class:
-    
-    before v23.1
-
-    ```csharp
-    public IList<string> Folders { get; }
-    ```
-
-    from v23.1 and greater
-
-    ```csharp
-    public IList<PersonalStorageFolderInfo> Folders { get; }
-    ```
-
