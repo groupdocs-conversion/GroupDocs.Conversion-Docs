@@ -1,14 +1,15 @@
 ---
 id: load-document-from-amazon-s3-storage
 url: conversion/net/load-document-from-amazon-s3-storage
-title: Load document from Amazon S3 Storage
-weight: 1
+title: Load document from Amazon S3 storage
+linkTitle: From Amazon S3 storage
+weight: 5
 description: " This article demonstrates how to convert document stored in Amazon S3 storage using GroupDocs.Conversion for .NET API."
 keywords: Convert document from Amazon S3 storage, Convert file
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-Following code snippet shows how to convert a document from Amazon S3 Storage:
+The following code snippet shows how to convert a document from Amazon S3 Storage:
 
 ```csharp
 public static void Run()
