@@ -48,7 +48,7 @@ Native .NET API to accurately convert documents & image file formats in any type
 <p>HOW-TO GUIDES</p>
 <ul>
 	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/get-possible-conversions" >}}'>Get supported conversions</a></li>
-	<li><a href='{{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-documents-from-different-sources" >}}'>Load documents from different sources</a></li>
+	<li><a href='{{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-files-from-different-sources" >}}'>Load files from different sources</a></li>
 	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/get-document-info" >}}'>Retrieve document information</a></li>
 	<li><a href='{{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/add-watermark" >}}'>Add watermarks</a></li>
 	<li><a href='{{< ref "conversion/net/developer-guide/advanced-usage/caching" >}}'>Cache rendering results</a></li>

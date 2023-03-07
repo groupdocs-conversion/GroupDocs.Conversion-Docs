@@ -1,6 +1,6 @@
 ---
-id: load-document-from-ftp
-url: conversion/net/load-document-from-ftp
+id: load-file-from-ftp
+url: conversion/net/load-file-from-ftp
 title: Load file from FTP
 weight: 4
 description: "This article demonstrates how to convert file stored in FTP storage using GroupDocs.Conversion for .NET API."

@@ -1,6 +1,6 @@
 ---
-id: load-document-from-azure-blob-storage
-url: conversion/net/load-document-from-azure-blob-storage
+id: load-file-from-azure-blob-storage
+url: conversion/net/load-file-from-azure-blob-storage
 title: Load file from Azure blob storage
 weight: 6
 description: "This article demonstrates how to convert file stored in Azure Blob storage using GroupDocs.Conversion for .NET API."

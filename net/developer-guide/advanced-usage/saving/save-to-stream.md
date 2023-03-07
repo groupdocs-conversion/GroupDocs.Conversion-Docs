@@ -1,6 +1,6 @@
 ---
-id: save-to-stream
-url: conversion/net/save-to-stream
+id: save-file-to-stream
+url: conversion/net/save-file-to-stream
 title: Save file to stream
 weight: 4
 description: "This article demonstrates how to convert a file and save it as a stream using GroupDocs.Conversion for .NET API."

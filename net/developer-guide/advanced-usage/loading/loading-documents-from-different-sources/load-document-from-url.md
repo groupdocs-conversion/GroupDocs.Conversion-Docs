@@ -1,6 +1,6 @@
 ---
-id: load-document-from-url
-url: conversion/net/load-document-from-url
+id: load-file-from-url
+url: conversion/net/load-file-from-url
 title: Load file from URL
 weight: 3
 description: "This article explains how to load PDF, Word, Excel, PowerPoint documents from URL when using GroupDocs.Conversion for .NET."

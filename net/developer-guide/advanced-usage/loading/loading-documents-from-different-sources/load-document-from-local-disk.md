@@ -1,6 +1,6 @@
 ---
-id: load-document-from-local-disk
-url: conversion/net/load-document-from-local-disk
+id: load-file-from-local-disk
+url: conversion/net/load-file-from-local-disk
 title: Load file from local disk
 weight: 1
 description: "This article demonstrates how to convert file stored on local disk using GroupDocs.Conversion for .NET API."
