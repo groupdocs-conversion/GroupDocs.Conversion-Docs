@@ -1,15 +1,14 @@
 ---
 id: load-document-from-url
 url: conversion/net/load-document-from-url
-title: Load document from URL
-linkTitle: From URL
+title: Load file from URL
 weight: 3
 description: "This article explains how to load PDF, Word, Excel, PowerPoint documents from URL when using GroupDocs.Conversion for .NET."
-keywords: Load document from URL, Load document by URL GroupDocs.Conversion
+keywords: Load file from URL, Load file by URL GroupDocs.Conversion
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-The following code snippet shows how to convert a document from the URL:
+The following code snippet shows how to convert a file from the URL:
 
 ```csharp
 public static void Run()
@@ -29,6 +28,7 @@ private static Stream GetRemoteFile(string url)
     using (WebResponse response = request.GetResponse())
         return GetFileStream(response);
 }
+
 private static Stream GetFileStream(WebResponse response)
 {
     MemoryStream fileStream = new MemoryStream();

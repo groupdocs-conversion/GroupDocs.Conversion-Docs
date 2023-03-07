@@ -1,15 +1,14 @@
 ---
 id: load-document-from-azure-blob-storage
 url: conversion/net/load-document-from-azure-blob-storage
-title: Load document from Azure blob storage
-linkTitle: From Azure storage
+title: Load file from Azure blob storage
 weight: 6
-description: "This article demonstrates how to convert document stored in Azure Blob storage using GroupDocs.Conversion for .NET API."
-keywords: Convert document from Azure Blob storage, Convert file
+description: "This article demonstrates how to convert file stored in Azure Blob storage using GroupDocs.Conversion for .NET API."
+keywords: Convert file from Azure Blob storage, Convert file
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-The following code snippet shows how to convert a document from Azure Blob Storage:
+The following code snippet shows how to convert a file from Azure Blob Storage:
 
 ```csharp
 public static void Run()
@@ -32,6 +31,7 @@ public static Stream DownloadFile(string blobName)
     memoryStream.Position = 0;
     return memoryStream;
 }
+
 private static CloudBlobContainer GetContainer()
 {
     string accountName = "***";
