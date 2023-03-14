@@ -4,7 +4,7 @@ url: conversion/net/convert/audio
 title: Convert audio formats
 linkTitle: Audios
 weight: 140
-description: "Following this article you will learn how to convert audio file to another audio format with couple C# code lines and GroupDocs.Conversion for .NET."
+description: "Following this article you will learn how to convert an audio file to another audio format with a couple of C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert MP3 to FLAC, Convert FLAC to MP3, Convert MP3
 productName: GroupDocs.Conversion for .NET
 toc: True
@@ -21,7 +21,7 @@ structuredData:
         description: Learn how to convert MP3 to FLAC in C# step by step
         steps:
         - name: Load source MP3 file 
-          text: Create an instance of Converter class and pass source MP3 file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          text: Create an instance of Converter class and pass source MP3 file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements. 
         - name: Specify convert options 
           text: Create an instance of AudioConvertOptions class.
         - name: Convert to FLAC and save result 
@@ -30,7 +30,7 @@ structuredData:
 
 ## About audio file formats
 
-The audio file format is a category of digital file formats for representation of audio information along with its meta-data. A number of Audio file formats exist based on the nature of data contained within the audio file. Such files can be stored in compressed as well as uncompressed audio file formats. Popular audio file formats include MP3, WAV, PCM and WMA.
+The audio file format is a category of digital file formats for representation of audio information along with its meta-data. Multiple audio file formats exist based on the nature of data contained within the audio file. Such files can be stored in compressed as well as uncompressed audio file formats. Popular audio file formats include MP3, WAV, PCM and WMA.
 
 ## Supported audio file conversions
 
@@ -48,19 +48,19 @@ The audio file format is a category of digital file formats for representation o
 
 ## Convert to another audio format
 
-With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your audio file into another audio file format.  
+With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your audio file into another audio file format.
 
-In order to allow audio conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload actual audio conversion to audio processing library, but in the same time to give you the simplicity of conversion setup. The extension point is [IAudioConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.audio/iaudioconnector) interface. 
+To allow audio conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload actual audio conversion to an audio processing library, but at the same time gives you the simplicity of conversion setup. The extension point is the [IAudioConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.audio/iaudioconnector) interface. 
 
-You first must decide which audio processing library will use. Different libraries have different setup process.
+You first must decide which audio processing library will use. Different libraries have different setup processes.
 
-In our example we will use FFMPEG. We recommend to use [Chocolatey](https://chocolatey.org/) to install [FFMPG](https://ffmpeg.org/) and all needed dependencies. 
-To install FFmpeg with Chocolatey, run the following command in console:
-```
+In our example, we will use the FFMPEG library. We recommend using [Chocolatey](https://chocolatey.org/) to install the [FFMPG](https://ffmpeg.org/) library and all needed dependencies. 
+To install FFMPEG with Chocolatey, run the following console command:
+```shell
 choco install ffmpeg
 ```
 
-Once audio processing library is installed you must implement [IAudioConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.audio/iaudioconnector). For this implementation the [FFMpegCore](https://www.nuget.org/packages/FFMpegCore) nuget package must be installed in your project. The following snippet provides sample implementation:
+Once the audio processing library is installed you must implement an [IAudioConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.audio/iaudioconnector) interface. For this implementation, the [FFMpegCore](https://www.nuget.org/packages/FFMpegCore) NuGet package must be installed in your project. The following snippet provides a sample implementation:
 
 ```csharp
 public class AudioConnector : IAudioConnector
@@ -156,7 +156,7 @@ public class AudioConnector : IAudioConnector
 }
 ```
 
-Once `IAudioConnector` is implemented MP3 to FLAC conversion code snippet will look like this:
+Once the `IAudioConnector` interface is implemented, the MP3 to FLAC conversion code snippet will look like this:
 
 ```csharp
 // Load the source MP3 file
@@ -173,8 +173,8 @@ using (Converter converter = new Converter("sample.mp3", () => loadOptions))
 }
 ```
 
-Put it simply - you install audio processing library, implement `IAudioConnector` which links `GroupDocs.Conversion` with audio processing library, load an audio file into `Converter` providing the `IAudioConnector` instance, select desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you install the audio processing library, implement the `IAudioConnector` interface which links `GroupDocs.Conversion` with the audio processing library, load an audio file into the `Converter` class providing the `IAudioConnector` instance, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
 
 {{< alert style="info" >}}
-Refer to [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
+Refer to the [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
 {{< /alert >}}
