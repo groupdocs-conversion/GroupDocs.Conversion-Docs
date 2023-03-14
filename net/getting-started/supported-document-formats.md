@@ -22,6 +22,7 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 | [DRC](/conversion/net/convert/3d/) | Google Draco |<!--Load--> ✅ |<!--Save--> ✅ |
 | [FBX](/conversion/net/convert/3d/) | FilmBox format |<!--Load--> ✅ |<!--Save--> ✅ |
 | [GLTF](/conversion/net/convert/3d/) | Khronos Group’s glTF |<!--Load--> ✅ |<!--Save--> ✅ |
+| [IXBRL](/conversion/net/convert/3d/) | Inline XBRL. |<!--Load--> ✅ |<!--Save--> ✅ |
 | [JT](/conversion/net/convert/3d/) | Siemens JT File |<!--Load--> ✅ |<!--Save-->  |
 | [OBJ](/conversion/net/convert/3d/) | Wavefront Obj |<!--Load--> ✅ |<!--Save--> ✅ |
 | [PLY](/conversion/net/convert/3d/) | Polygon File Format or Stanford Triangle Format |<!--Load--> ✅ |<!--Save--> ✅ |
@@ -31,19 +32,20 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 | [USDZ](/conversion/net/convert/3d/) | Universal Scene Description Archive |<!--Load--> ✅ |<!--Save-->  |
 | [VRML](/conversion/net/convert/3d/) | The Virtual Reality Modeling Language |<!--Load--> ✅ |<!--Save-->  |
 | [X](/conversion/net/convert/3d/) | DirectX’s X file |<!--Load--> ✅ |<!--Save-->  |
+| [XBRL](/conversion/net/convert/3d/) | Extensible Business Reporting Language. |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## Audio
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
-| [AAC](/conversion/net/convert/audio/) | Aac Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [AC3](/conversion/net/convert/audio/) | Ac3 Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [AIFF](/conversion/net/convert/audio/) | Aiff Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [FLAC](/conversion/net/convert/audio/) | Flac Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [M4A](/conversion/net/convert/audio/) | M4a Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [MP3](/conversion/net/convert/audio/) | Mp3 Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [OGG](/conversion/net/convert/audio/) | Ogg Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [WAV](/conversion/net/convert/audio/) | Wav Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [WMA](/conversion/net/convert/audio/) | Wma Format File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [AAC](/conversion/net/convert/audio/) | Advanced Audio Coding File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [AC3](/conversion/net/convert/audio/) | Audio Codec 3 File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [AIFF](/conversion/net/convert/audio/) | Audio Interchange File Format |<!--Load--> ✅ |<!--Save--> ✅ |
+| [FLAC](/conversion/net/convert/audio/) | Free Lossless Audio Codec File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [M4A](/conversion/net/convert/audio/) | MPEG-4 Audio File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [MP3](/conversion/net/convert/audio/) | MP3 Audio File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [OGG](/conversion/net/convert/audio/) | Ogg Vorbis Audio File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [WAV](/conversion/net/convert/audio/) | WAVE Audio File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [WMA](/conversion/net/convert/audio/) | Windows Media Audio File |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## CAD
 | From | Description | Load | Save |
@@ -63,19 +65,19 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 ## Compression
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
-| [7Z](/conversion/net/convert/compression/) | 7z Document |<!--Load--> ✅ |<!--Save--> ✅ |
-| [BZ2](/conversion/net/convert/compression/) | Bz2 Document |<!--Load--> ✅ |<!--Save-->  |
-| [CAB](/conversion/net/convert/compression/) | Cab Document |<!--Load--> ✅ |<!--Save-->  |
+| [7Z](/conversion/net/convert/compression/) | 7-Zip Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [BZ2](/conversion/net/convert/compression/) | Bzip2 Compressed File |<!--Load--> ✅ |<!--Save-->  |
+| [CAB](/conversion/net/convert/compression/) | Windows Cabinet File |<!--Load--> ✅ |<!--Save-->  |
 | [CPIO](/conversion/net/convert/compression/) | CPIO Document |<!--Load--> ✅ |<!--Save--> ✅ |
-| [GZ](/conversion/net/convert/compression/) | Gz Document |<!--Load--> ✅ |<!--Save-->  |
+| [GZ](/conversion/net/convert/compression/) | Gnu Zipped Archive |<!--Load--> ✅ |<!--Save-->  |
 | [GZIP](/conversion/net/convert/compression/) | Gzip Document |<!--Load--> ✅ |<!--Save-->  |
-| [LZ](/conversion/net/convert/compression/) | Lzip Document |<!--Load--> ✅ |<!--Save-->  |
-| [LZMA](/conversion/net/convert/compression/) | Lzma Document |<!--Load--> ✅ |<!--Save-->  |
-| [RAR](/conversion/net/convert/compression/) | RAR Document |<!--Load--> ✅ |<!--Save-->  |
-| [TAR](/conversion/net/convert/compression/) | Tar Document |<!--Load--> ✅ |<!--Save--> ✅ |
+| [LZ](/conversion/net/convert/compression/) | Lzip Compressed File |<!--Load--> ✅ |<!--Save-->  |
+| [LZMA](/conversion/net/convert/compression/) | LZMA Compressed File |<!--Load--> ✅ |<!--Save-->  |
+| [RAR](/conversion/net/convert/compression/) | WinRAR Compressed Archive |<!--Load--> ✅ |<!--Save-->  |
+| [TAR](/conversion/net/convert/compression/) | Consolidated Unix File Archive |<!--Load--> ✅ |<!--Save--> ✅ |
 | [XZ](/conversion/net/convert/compression/) | Xz Document |<!--Load--> ✅ |<!--Save-->  |
-| [Z](/conversion/net/convert/compression/) | Z Document |<!--Load--> ✅ |<!--Save-->  |
-| [ZIP](/conversion/net/convert/compression/) | ZIP Document |<!--Load--> ✅ |<!--Save--> ✅ |
+| [Z](/conversion/net/convert/compression/) | Unix Compressed File |<!--Load--> ✅ |<!--Save-->  |
+| [ZIP](/conversion/net/convert/compression/) | Zipped File |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## Database
 | From | Description | Load | Save |
@@ -105,7 +107,7 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 | --- | --- | :---: | :---: |
 | [AZW3](/conversion/net/convert/ebook/) | Amazon Kindle’s proprietary e-book file format |<!--Load--> ✅ |<!--Save--> ✅ |
 | [EPUB](/conversion/net/convert/ebook/) | Open eBook File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [MOBI](/conversion/net/convert/ebook/) | Mobipocket eBook |<!--Load--> ✅ |<!--Save-->  |
+| [MOBI](/conversion/net/convert/ebook/) | Mobipocket eBook |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## Email and Outlook
 | From | Description | Load | Save |
@@ -173,11 +175,6 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 | --- | --- | :---: | :---: |
 | [ONE](/conversion/net/convert/note/) | OneNote Document |<!--Load--> ✅ |<!--Save-->  |
 
-## PDF
-| From | Description | Load | Save |
-| --- | --- | :---: | :---: |
-| [PDF](/conversion/net/convert/pdf/) | Portable Document Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-
 ## Page Description Language
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
@@ -189,6 +186,11 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 | [SVG](/conversion/net/convert/page-layout/) | Scalable Vector Graphics File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [TEX](/conversion/net/convert/page-layout/) | LaTeX Source Document |<!--Load--> ✅ |<!--Save--> ✅ |
 | [XPS](/conversion/net/convert/page-layout/) | XML Paper Specification File |<!--Load--> ✅ |<!--Save--> ✅ |
+
+## PDF
+| From | Description | Load | Save |
+| --- | --- | :---: | :---: |
+| [PDF](/conversion/net/convert/pdf/) | Portable Document Format File |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## Presentation
 | From | Description | Load | Save |
@@ -214,6 +216,11 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 | [MPX](/conversion/net/convert/project-management/) | Microsoft Project Exchange File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [XER](/conversion/net/convert/project-management/) | Primavera XER format |<!--Load--> ✅ |<!--Save--> ✅ |
 
+## Publisher
+| From | Description | Load | Save |
+| --- | --- | :---: | :---: |
+| [PUB](/conversion/net/convert/publisher/) | Microsoft Publisher format |<!--Load--> ✅ |<!--Save-->  |
+
 ## Spreadsheet
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
@@ -236,13 +243,13 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 ## Video
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
-| [AVI](/conversion/net/convert/video/) | Avi Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [FLV](/conversion/net/convert/video/) | Flv Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [MKV](/conversion/net/convert/video/) | Mkv Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [MOV](/conversion/net/convert/video/) | Mov Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [MP4](/conversion/net/convert/video/) | Mp4 Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [WEBM](/conversion/net/convert/video/) | Webm Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [WMV](/conversion/net/convert/video/) | Wmv Format File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [AVI](/conversion/net/convert/video/) | Audio Video Interleave File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [FLV](/conversion/net/convert/video/) | Flash Video File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [MKV](/conversion/net/convert/video/) | Matroska Video File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [MOV](/conversion/net/convert/video/) | Apple QuickTime Movie |<!--Load--> ✅ |<!--Save--> ✅ |
+| [MP4](/conversion/net/convert/video/) | MPEG-4 Video File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [WEBM](/conversion/net/convert/video/) | WebM Video |<!--Load--> ✅ |<!--Save--> ✅ |
+| [WMV](/conversion/net/convert/video/) | Windows Media Video |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## Web
 | From | Description | Load | Save |
@@ -270,3 +277,5 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 | [OTT](/conversion/net/convert/wordprocessing/) | OpenDocument Document Template |<!--Load--> ✅ |<!--Save--> ✅ |
 | [RTF](/conversion/net/convert/wordprocessing/) | Rich Text Format File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [TXT](/conversion/net/convert/wordprocessing/) | Plain Text File |<!--Load--> ✅ |<!--Save--> ✅ |
+
+

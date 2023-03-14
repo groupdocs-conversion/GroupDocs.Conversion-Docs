@@ -4,7 +4,7 @@ url: conversion/net/convert/video
 title: Convert videos
 linkTitle: Videos
 weight: 150
-description: "Following this article you will learn how to convert video file to another video format with couple C# code lines and GroupDocs.Conversion for .NET."
+description: "Following this article you will learn how to convert a video file to another video format with a couple of C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert AVI to MP4, Convert MP4 to AVI, Convert MOV to AVI, Convert MOV, Convert MP3, Convert WMV
 productName: GroupDocs.Conversion for .NET
 toc: True
@@ -21,7 +21,7 @@ structuredData:
         description: Learn how to convert AVI to MP4 in C# step by step
         steps:
         - name: Load source AVI file 
-          text: Create an instance of Converter class and pass source AVI file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          text: Create an instance of Converter class and pass source AVI file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements. 
         - name: Specify convert options 
           text: Create an instance of VideoConvertOptions class.
         - name: Convert to MP4 and save result 
@@ -30,7 +30,7 @@ structuredData:
 
 ## About video file formats
 
-Everyone is familiar of videos that we daily watch on media devices such as Televisions, Cinema screens, and social media channels such as Facebook, Twitter, YouTube and many others. But have you ever wondered how these videos are saved and the formats in which these can be uploaded for viewing? What is the best file format for your video to be hosted on different storage media? Video file formats comprise of a number of different video types for storing videos and to be used for various purpose. Popular video file formats that you may have come across include AVI, MOV, WMV, M4V, and MP4.
+Everyone is familiar with videos that we daily watch on media devices such as Televisions, Cinema screens, and social media channels such as Facebook, Twitter, YouTube and many others. But have you ever wondered how these videos are stored and the formats in which these can be uploaded for viewing? What is the best file format for your video to be hosted on different storage media? Video file formats comprise many different video types for storing videos and to be used for various purposes. Popular video file formats that you may have come across include AVI, MOV, WMV, M4V, and MP4.
 
 ## Supported video file conversions
 
@@ -48,17 +48,17 @@ Everyone is familiar of videos that we daily watch on media devices such as Tele
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your video file into another video file format.  
 
-In order to allow video conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload actual video conversion to video processing library, but in the same time to give you the simplicity of conversion setup. The extension point is [IVideoConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.video/ivideoconnector) interface. 
+To allow video conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload actual video conversion to the video processing library, but at the same time gives you the simplicity of conversion setup. The extension point is the [IVideoConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.video/ivideoconnector) interface. 
 
-You first must decide which video processing library will use. Different libraries have different setup process.
+At first, you must decide which video processing library you will use. Different libraries have different setup processes.
 
-In our example we will use FFMPEG. We recommend to use [Chocolatey](https://chocolatey.org/) to install [FFMPG](https://ffmpeg.org/) and all needed dependencies. 
-To install FFmpeg with Chocolatey, run the following command in console:
-```
+In our example, we will use the FFMPEG library. We recommend using [Chocolatey](https://chocolatey.org/) to install [FFMPG](https://ffmpeg.org/) and all needed dependencies. 
+To install FFMPEG with Chocolatey, run the following console command:
+```shell
 choco install ffmpeg
 ```
 
-Once video processing library is installed you must implement [IVideoConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.video/ivideoconnector). For this implementation the [FFMpegCore](https://www.nuget.org/packages/FFMpegCore) nuget package must be installed in your project. The following snippet provides sample implementation:
+Once the video processing library is installed, you must implement the [IVideoConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.video/ivideoconnector) interface. For this implementation, the [FFMpegCore](https://www.nuget.org/packages/FFMpegCore)](https://www.nuget.org/packages/FFMpegCore) NuGet package must be installed in your project. The following snippet provides a sample implementation:
 
 ```csharp
 public class VideoConnector : IVideoConnector
@@ -139,7 +139,7 @@ public class VideoConnector : IVideoConnector
 }
 ```
 
-Once `IVideoConnector` is implemented AVI to MP4 conversion code snippet will look like this:
+Once the `IVideoConnector` interface is implemented, the AVI to MP4 conversion code snippet will look like this:
 
 ```csharp
 // Load the source AVI file
@@ -156,14 +156,14 @@ using (Converter converter = new Converter("sample.avi", () => loadOptions))
 }
 ```
 
-Put it simply - you install video processing library, implement `IVideoConnector` which links `GroupDocs.Conversion` with video processing library, load a video file into `Converter` providing the `IVideoConnector` instance, select desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you install the video processing library, implement the `IVideoConnector` interface which links the `GroupDocs.Conversion` with video processing library, load a video file into the `Converter` class providing the `IVideoConnector` instance, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
 
 {{< alert style="info" >}}
-Refer to [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
+Refer to the [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
 {{< /alert >}}
 
 ## Extract audio track
-Extracting audio track from video is similar to converting video, however you need to set the [`ExtractAudioOnly`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property to `true` and specify the desired output format in the [`AudioFormat`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property:
+Extracting an audio track from a video is similar to converting video, however, you need to set the [`ExtractAudioOnly`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property to `true` and specify the desired output format in the [`AudioFormat`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property:
 
 ```csharp
 // Load the source AVI file

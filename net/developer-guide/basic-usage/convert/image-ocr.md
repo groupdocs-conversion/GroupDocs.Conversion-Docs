@@ -4,7 +4,7 @@ url: conversion/net/convert/image-with-ocr
 title: Convert images with optical character recognition
 linkTitle: Images OCR
 weight: 55
-description: "Following this article you will learn how to convert an image file to word or pdf using OCR with couple C# code lines and GroupDocs.Conversion for .NET."
+description: "Following this article you will learn how to convert an image file to word or pdf using OCR with a couple of C# code lines and GroupDocs.Conversion for .NET."
 keywords: Convert JPG to DOCX, Convert PNG to PDF, OCR image, Image ocr, 
 productName: GroupDocs.Conversion for .NET
 toc: True
@@ -21,7 +21,7 @@ structuredData:
         description: Learn how to convert JPG to DOCX in C# step by step
         steps:
         - name: Load source JPG file 
-          text: Create an instance of Converter class and pass source JPG file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
+          text: Create an instance of Converter class and pass source JPG file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements. 
         - name: Specify convert options 
           text: Create an instance of WordProcessingConvertOptions class.
         - name: Convert to DOCX and save result 
@@ -30,25 +30,25 @@ structuredData:
 
 ## About image file formats
 
-An image file format is a standard method for organizing and storing images on devices like computers, tablets and smartphones. Digital images store image data in a 2-dimensional grid of pixels where each pixel is a representation of colour in terms of number of bits. Image file types are classified into vector image formats and raster image formats. 3D Images are another type of vector image file format that is used for managing 3D images.
+An image file format is a standard method for organizing and storing images on devices like computers, tablets and smartphones. Digital images store image data in a 2-dimensional grid of pixels where each pixel is a representation of color in terms of a number of bits. Image file types are classified into vector image formats and raster image formats. 3D Images are another type of vector image file format that is used for managing 3D images.
 
 ### Raster formats
 
-**Raster Graphics** are digital images that comprise of pixels data for representation of colours. These are the most common image types for graphics used for web as well as digital photos. Some of the raster images can be compressed to reduce image file size. Common raster image file extensions and their file formats include **BMP** (Bitmap image file), **PNG** (Portable Network Graphics) and **GIF** (Graphics Interchange File).
+**Raster Graphics** are digital images that comprise of pixels data for the representation of colors. These are the most common image types for graphics used for the web as well as digital photos. Some of the raster images can be compressed to reduce image file size. Common raster image file extensions and their file formats include **BMP** (Bitmap image file), **PNG** (Portable Network Graphics) and **GIF** (Graphics Interchange File).
 
 ### Vector formats
 
 **Vector images** are defined by 2D points, instead of pixels, which are connected to give a geometric shape to the image. The points have properties that define the direction of paths, color, shape, curve, thickness, and fill. Common vector image file extensions and their file formats include **SVG** (Scalable Vector Graphics), **EPS** (Encapsulated PostScript language) and **PDF** (Portable Document Format).
 
-## Convert from image using OCR
+## Convert from an image using OCR
 
-With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your image files using ocr.  
+With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your image files using OCR.  
 
-In order to allow OCR conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload actual OCR process to ocr processing library, but in the same time to give you the simplicity of conversion setup. The extension point is [IOcrConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector) interface. 
+To allow OCR conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload the actual OCR process to the OCR processing library, but at the same time gives you the simplicity of conversion setup. The extension point is the [IOcrConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector) interface. 
 
-You first must decide which ocr processing library will use. Different libraries have different setup process.
+You first must decide which OCR processing library will use. Different libraries have different setup processes.
 
-In our example we will use Aspose.OCR. Install [Aspose.OCR](https://www.nuget.org/packages/Aspose.OCR) nuget package in your project. Then implement [IOcrConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector). The following snippet provides sample implementation:
+In our example? we will use Aspose.OCR. Install the [Aspose.OCR](https://www.nuget.org/packages/Aspose.OCR) nuget package in your project. Then implement [IOcrConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector). The following snippet provides a sample implementation:
 
 ```csharp
 public class OcrConnector : IOcrConnector
@@ -165,7 +165,7 @@ public class OcrConnector : IOcrConnector
 }
 ```
 
-Once `IOcrConnector` is implemented JPG to DOCX conversion code snippet will look like this:
+Once the `IOcrConnector` interface is implemented, the JPG to DOCX conversion code snippet will look like this:
 
 ```csharp
 // Load the source JPG file
@@ -180,8 +180,8 @@ using (Converter converter = new Converter("sample.jpg", () => loadOptions))
 }
 ```
 
-Put it simply - you install ocr processing library, implement `IOcrConnector`, load an image file into `Converter` providing the `IOcrConnector` instance, select desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you install an OCR processing library, implement the `IOcrConnector` interface, load an image file into the `Converter` class providing the `IOcrConnector` instance, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
 
 {{< alert style="info" >}}
-Refer to [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
+Refer to the [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
 {{< /alert >}}
