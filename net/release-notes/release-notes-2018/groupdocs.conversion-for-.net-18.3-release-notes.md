@@ -24,17 +24,17 @@ There are 10+ new features, improvements and fixes in this regular monthly relea
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-2397 | Implement specific options for converting CSV documents | New Feature |
-| CONVERSIONNET-2414 | Implement setting default zoom when converting to Cells | New Feature |
-| CONVERSIONNET-2417 | Implement setting default zoom when converting to Words | New Feature |
-| CONVERSIONNET-2418 | Implement setting default zoom when converting to Slides | New Feature |
-| CONVERSIONNET-2423 | Implement configurable option for setting a watermark as background | New Feature |
-| CONVERSIONNET-2395 | Set zoom when converting to Pdf document | Improvement |
-| CONVERSIONNET-2406 | Update API for getting document info to detect page orientation for the supported formats | Improvement |
-| CONVERSIONNET-2392 | Set default font to replace all missing fonts when converting Words document | Improvement |
-| CONVERSIONNET-2394 | Set default font to replace all missing fonts when converting Cells document | Improvement |
-| CONVERSIONNET-2421 | Conversion improvement when converting Psd and Odg to Pdf | Improvement |
-| CONVERSIONNET-2304 | XPS to PDF conversion failed | Fix |
+| CONVERSIONNET&#8209;2397 | Implement specific options for converting CSV documents | New Feature |
+| CONVERSIONNET&#8209;2414 | Implement setting default zoom when converting to Cells | New Feature |
+| CONVERSIONNET&#8209;2417 | Implement setting default zoom when converting to Words | New Feature |
+| CONVERSIONNET&#8209;2418 | Implement setting default zoom when converting to Slides | New Feature |
+| CONVERSIONNET&#8209;2423 | Implement configurable option for setting a watermark as background | New Feature |
+| CONVERSIONNET&#8209;2395 | Set zoom when converting to Pdf document | Improvement |
+| CONVERSIONNET&#8209;2406 | Update API for getting document info to detect page orientation for the supported formats | Improvement |
+| CONVERSIONNET&#8209;2392 | Set default font to replace all missing fonts when converting Words document | Improvement |
+| CONVERSIONNET&#8209;2394 | Set default font to replace all missing fonts when converting Cells document | Improvement |
+| CONVERSIONNET&#8209;2421 | Conversion improvement when converting Psd and Odg to Pdf | Improvement |
+| CONVERSIONNET&#8209;2304 | XPS to PDF conversion failed | Fix |
 
 ## Public API and Backward Incompatible Changes
 

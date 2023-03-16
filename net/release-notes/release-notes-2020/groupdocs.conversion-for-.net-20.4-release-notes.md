@@ -25,27 +25,27 @@ There are 20+ features, improvements and bug-fixes in this release, most notable
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-3225 | Feature | Support for auto page numbering while export to PDF |
-| CONVERSIONNET-3710 | Feature | Convert each email attachment to different type |
-| CONVERSIONNET-3778 | Feature | Convert from PST, OST |
-| CONVERSIONNET-3812 | Feature | Implement conversion from Oxps |
-| CONVERSIONNET-3816 | Feature | Implement conversion from Fods |
-| CONVERSIONNET-3822 | Feature | Implement conversion to Fods |
-| CONVERSIONNET-3823 | Feature | Implement conversion from Otg |
-| CONVERSIONNET-2875 | Feature | Introduced in memory caching |
-| CONVERSIONNET-3659 | Improvement | Improve font substitution when converting from PDF |
-| CONVERSIONNET-3874 | Improvement | Improved caching |
-| CONVERSIONNET-1702 | Fix | A generic error occurred in GDI+ while saving document to LZW TIFF |
-| CONVERSIONNET-3699 | Fix | Exception while Converting PST to CSV using GroupDocs.Conversion .NET API v20.1.0 As The Not supported file type |
-| CONVERSIONNET-3724 | Fix | Exception while Converting XLSB to XLS using GroupDocs.Conversion .NET API v20.1.0 |
-| CONVERSIONNET-3729 | Fix | Exception while Converting XLSB to XLSX As The column index should not be inside the pivot table report |
-| CONVERSIONNET-3745 | Fix | XLSB to XLS conversion issue  |
-| CONVERSIONNET-3768 | Fix | "System.DllNotFoundException : Unable to load DLL 'libgdiplus': The specified module could not be found." exception on MacOS targeting .NET Standard |
-| CONVERSIONNET-3770 | Fix | VSD to DOC conversion issue |
-| CONVERSIONNET-3790 | Fix | Xps and Tex files are converted in trial mode when using venture licensing |
-| CONVERSIONNET-3804 | Fix | PCL to DOT file conversion |
-| CONVERSIONNET-3810 | Fix | XLSX to XLS conversion - The column index should not be inside the pivottable report |
-| CONVERSIONNET-3821 | Fix | GroupDocs.Conversion.Exceptions.GroupDocsConversionException was unhandled |
+| CONVERSIONNET&#8209;3225 | Feature | Support for auto page numbering while export to PDF |
+| CONVERSIONNET&#8209;3710 | Feature | Convert each email attachment to different type |
+| CONVERSIONNET&#8209;3778 | Feature | Convert from PST, OST |
+| CONVERSIONNET&#8209;3812 | Feature | Implement conversion from Oxps |
+| CONVERSIONNET&#8209;3816 | Feature | Implement conversion from Fods |
+| CONVERSIONNET&#8209;3822 | Feature | Implement conversion to Fods |
+| CONVERSIONNET&#8209;3823 | Feature | Implement conversion from Otg |
+| CONVERSIONNET&#8209;2875 | Feature | Introduced in memory caching |
+| CONVERSIONNET&#8209;3659 | Improvement | Improve font substitution when converting from PDF |
+| CONVERSIONNET&#8209;3874 | Improvement | Improved caching |
+| CONVERSIONNET&#8209;1702 | Fix | A generic error occurred in GDI+ while saving document to LZW TIFF |
+| CONVERSIONNET&#8209;3699 | Fix | Exception while Converting PST to CSV using GroupDocs.Conversion .NET API v20.1.0 As The Not supported file type |
+| CONVERSIONNET&#8209;3724 | Fix | Exception while Converting XLSB to XLS using GroupDocs.Conversion .NET API v20.1.0 |
+| CONVERSIONNET&#8209;3729 | Fix | Exception while Converting XLSB to XLSX As The column index should not be inside the pivot table report |
+| CONVERSIONNET&#8209;3745 | Fix | XLSB to XLS conversion issue  |
+| CONVERSIONNET&#8209;3768 | Fix | "System.DllNotFoundException : Unable to load DLL 'libgdiplus': The specified module could not be found." exception on MacOS targeting .NET Standard |
+| CONVERSIONNET&#8209;3770 | Fix | VSD to DOC conversion issue |
+| CONVERSIONNET&#8209;3790 | Fix | Xps and Tex files are converted in trial mode when using venture licensing |
+| CONVERSIONNET&#8209;3804 | Fix | PCL to DOT file conversion |
+| CONVERSIONNET&#8209;3810 | Fix | XLSX to XLS conversion - The column index should not be inside the pivottable report |
+| CONVERSIONNET&#8209;3821 | Fix | GroupDocs.Conversion.Exceptions.GroupDocsConversionException was unhandled |
 
 ## Public API and Backward Incompatible Changes
 

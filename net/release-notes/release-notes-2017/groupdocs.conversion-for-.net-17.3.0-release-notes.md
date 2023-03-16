@@ -26,13 +26,13 @@ There are 7 new features, improvements and fixes in this regular monthly release
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-1729 | Implement conversion from DNG | New Feature |
-| CONVERSIONNET-1737 | Implement conversion from DGN | New Feature |
-| CONVERSIONNET-1745 | Implement conversion from VSSX and VSTX | New Feature |
-| CONVERSIONNET-1761 | Ability to hide words comments when converting from word | New Feature |
-| CONVERSIONNET-1760 | Implement conversion from ONE | New Feature |
-| CONVERSIONNET-1719 | Convert Html to Pdf improvements | Improvement |
-| CONVERSIONNET-1597 | Memory leak when converting CAD stream to image | Fix |
+| CONVERSIONNET&#8209;1729 | Implement conversion from DNG | New Feature |
+| CONVERSIONNET&#8209;1737 | Implement conversion from DGN | New Feature |
+| CONVERSIONNET&#8209;1745 | Implement conversion from VSSX and VSTX | New Feature |
+| CONVERSIONNET&#8209;1761 | Ability to hide words comments when converting from word | New Feature |
+| CONVERSIONNET&#8209;1760 | Implement conversion from ONE | New Feature |
+| CONVERSIONNET&#8209;1719 | Convert Html to Pdf improvements | Improvement |
+| CONVERSIONNET&#8209;1597 | Memory leak when converting CAD stream to image | Fix |
 
 ## Public API and Backward Incompatible Changes
 

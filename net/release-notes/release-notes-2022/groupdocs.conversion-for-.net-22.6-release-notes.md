@@ -21,8 +21,8 @@ There are 2 bug-fixes in this release, most notable are:
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-5279 | Fix | Converted MD to HTM file displayed as plain text |
-| CONVERSIONNET-4818 | Fix | Exception - Object reference not set |
+| CONVERSIONNET&#8209;5279 | Fix | Converted MD to HTM file displayed as plain text |
+| CONVERSIONNET&#8209;4818 | Fix | Exception - Object reference not set |
 
 
 ## Public API and Backward Incompatible Changes

@@ -23,14 +23,14 @@ This regular monthly release contains 5+ new features, improvements and bug fixe
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-2640 | Implement PdfFormattingOptions when converting to PDF | New Feature |
-| CONVERSIONNET-2661 | Implement specific options for converting TXT documents | New Feature |
-| CONVERSIONNET-2633 | Automatically add extension of the converted file if not set | Improvement |
-| CONVERSIONNET-2649 | Remove obsolete constructors and properties | Improvement |
-| CONVERSIONNET-2658 | Image to PDF conversion improvement | Improvement |
-| CONVERSIONNET-2686 | Improve per page savings when converting to Words, Images, Slides, Cells, Pdf, Xps, Html | Improvement |
-| CONVERSIONNET-2687 | Security improvements update | Improvement |
-| CONVERSIONNET-2683 | Exception when cache is enabled | Fix |
+| CONVERSIONNET&#8209;2640 | Implement PdfFormattingOptions when converting to PDF | New Feature |
+| CONVERSIONNET&#8209;2661 | Implement specific options for converting TXT documents | New Feature |
+| CONVERSIONNET&#8209;2633 | Automatically add extension of the converted file if not set | Improvement |
+| CONVERSIONNET&#8209;2649 | Remove obsolete constructors and properties | Improvement |
+| CONVERSIONNET&#8209;2658 | Image to PDF conversion improvement | Improvement |
+| CONVERSIONNET&#8209;2686 | Improve per page savings when converting to Words, Images, Slides, Cells, Pdf, Xps, Html | Improvement |
+| CONVERSIONNET&#8209;2687 | Security improvements update | Improvement |
+| CONVERSIONNET&#8209;2683 | Exception when cache is enabled | Fix |
 
 ##   
 Public API and Backward Incompatible Changes

@@ -24,15 +24,15 @@ There are 9 new features, improvements and fixes in this regular monthly release
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-1685 | Implement conversion to PDF with setting PDF file format | New Feature |
-| CONVERSIONNET-1693 | Conversion of PDF-A file to PDF | New Feature |
-| CONVERSIONNET-1697 | Implement conversion from Mobi | New Feature |
-| CONVERSIONNET-1722 | Horizontal and Vertical resolutions for conversions to Image | New Feature |
-| CONVERSIONNET-1692 | When converting a Cell to Pdf, the sheet is split into multiple pdf pages | Fix |
-| CONVERSIONNET-1581 | System.ArgumentOutOfRangeException when adding shape to slide and saving | Fix |
-| CONVERSIONNET-1709 | Converting TXT to any format with limiting pages produces wrong output | Fix |
-| CONVERSIONNET-1684 | Exception when trying to access SaveOptions.ConvertFileType | Fix |
-| CONVERSIONNET-1696 | .tif to .png conversion is not as expected | Fix |
+| CONVERSIONNET&#8209;1685 | Implement conversion to PDF with setting PDF file format | New Feature |
+| CONVERSIONNET&#8209;1693 | Conversion of PDF-A file to PDF | New Feature |
+| CONVERSIONNET&#8209;1697 | Implement conversion from Mobi | New Feature |
+| CONVERSIONNET&#8209;1722 | Horizontal and Vertical resolutions for conversions to Image | New Feature |
+| CONVERSIONNET&#8209;1692 | When converting a Cell to Pdf, the sheet is split into multiple pdf pages | Fix |
+| CONVERSIONNET&#8209;1581 | System.ArgumentOutOfRangeException when adding shape to slide and saving | Fix |
+| CONVERSIONNET&#8209;1709 | Converting TXT to any format with limiting pages produces wrong output | Fix |
+| CONVERSIONNET&#8209;1684 | Exception when trying to access SaveOptions.ConvertFileType | Fix |
+| CONVERSIONNET&#8209;1696 | .tif to .png conversion is not as expected | Fix |
 
 ## Public API and Backward Incompatible Changes
 

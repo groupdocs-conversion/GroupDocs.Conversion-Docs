@@ -18,9 +18,9 @@ There are general improvements and performance improvements in this version (al
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-1078 | % symbol in the file name trowns an exception | Fix |
-| CONVERSIONNET-1206 | Exception in HTML to Excel Conversion | Fix |
-| CONVERSIONNET-1207 | Convert Excel from Html - Table with background colour and some html controls are not converted properly | Fix |
+| CONVERSIONNET&#8209;1078 | % symbol in the file name trowns an exception | Fix |
+| CONVERSIONNET&#8209;1206 | Exception in HTML to Excel Conversion | Fix |
+| CONVERSIONNET&#8209;1207 | Convert Excel from Html - Table with background colour and some html controls are not converted properly | Fix |
 
 ## Public API and Backward Incompatible Changes
 

@@ -26,12 +26,12 @@ This regular monthly release contains 5+ new features, improvements and bug fixe
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-3053 | Feature | Enabled metered licensing |
-| CONVERSIONNET-3058 | Feature | Implement conversion from Dib |
-| CONVERSIONNET-3059 | Feature | Implement conversion from Xlt |
-| CONVERSIONNET-3061 | Feature | Implement conversion to Wmf |
-| CONVERSIONNET-3062 | Feature | Implement conversion to Emf |
-| CONVERSIONNET-3087 | Feature | Implement conversion from Pot |
+| CONVERSIONNET&#8209;3053 | Feature | Enabled metered licensing |
+| CONVERSIONNET&#8209;3058 | Feature | Implement conversion from Dib |
+| CONVERSIONNET&#8209;3059 | Feature | Implement conversion from Xlt |
+| CONVERSIONNET&#8209;3061 | Feature | Implement conversion to Wmf |
+| CONVERSIONNET&#8209;3062 | Feature | Implement conversion to Emf |
+| CONVERSIONNET&#8209;3087 | Feature | Implement conversion from Pot |
 
 ## Public API and Backward Incompatible Changes
 

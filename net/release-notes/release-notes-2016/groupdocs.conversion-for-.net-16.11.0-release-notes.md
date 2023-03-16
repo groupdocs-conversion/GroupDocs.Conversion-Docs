@@ -28,18 +28,18 @@ There are 12 new features, improvements and fixes in this regular monthly releas
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-1387 | Implement OTP file format conversion | New Feature |
-| CONVERSIONNET-1413 | Implement DICOM file format conversion | New Feature |
-| CONVERSIONNET-1418 | Implement conversion from WMF | New Feature |
-| CONVERSIONNET-1419 | Implement conversion from EMF | New Feature |
-| CONVERSIONNET-1447 | Count total pages of a document | New Feature |
-| CONVERSIONNET-1458 | Return all possible conversions from file extension or stream | New Feature |
-| CONVERSIONNET-1425 | Implement conversion from DjVu | New Feature |
-| CONVERSIONNET-1376 | Improve performance of Word to Pdf and Word to Epub conversions | Improvement |
-| CONVERSIONNET-1400 | Improve progress reporting | Improvement |
-| CONVERSIONNET-1399 | Progress report is not working | Fix |
-| CONVERSIONNET-1424 | Mssing "Fixedlayout" Property while Updating VB Example | Fix |
-| CONVERSIONNET-1414 | File name contains extra symbols | Fix |
+| CONVERSIONNET&#8209;1387 | Implement OTP file format conversion | New Feature |
+| CONVERSIONNET&#8209;1413 | Implement DICOM file format conversion | New Feature |
+| CONVERSIONNET&#8209;1418 | Implement conversion from WMF | New Feature |
+| CONVERSIONNET&#8209;1419 | Implement conversion from EMF | New Feature |
+| CONVERSIONNET&#8209;1447 | Count total pages of a document | New Feature |
+| CONVERSIONNET&#8209;1458 | Return all possible conversions from file extension or stream | New Feature |
+| CONVERSIONNET&#8209;1425 | Implement conversion from DjVu | New Feature |
+| CONVERSIONNET&#8209;1376 | Improve performance of Word to Pdf and Word to Epub conversions | Improvement |
+| CONVERSIONNET&#8209;1400 | Improve progress reporting | Improvement |
+| CONVERSIONNET&#8209;1399 | Progress report is not working | Fix |
+| CONVERSIONNET&#8209;1424 | Mssing "Fixedlayout" Property while Updating VB Example | Fix |
+| CONVERSIONNET&#8209;1414 | File name contains extra symbols | Fix |
 
 ## Public API and Backward Incompatible Changes
 

@@ -26,15 +26,15 @@ This regular monthly release contains 5+ new features, improvements and bug fixe
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-3089 | Feature | Implement conversion from Xlam |
-| CONVERSIONNET-3091 | Feature | Implement conversion to Xlam |
-| CONVERSIONNET-3093 | Feature | Implement conversion from Mpx |
-| CONVERSIONNET-3096 | Feature | Introduce Metered.GetConsumptionCredit |
-| CONVERSIONNET-3098 | Feature | Implement conversion from Jpc |
-| CONVERSIONNET-3100 | Feature | Implement conversion from Dwt |
-| CONVERSIONNET-3113 | Feature | Implement conversion from JPEG-LS (Jls) |
-| CONVERSIONNET-3117 | Improvement | Improve Diagram to Word conversion |
-| CONVERSIONNET-2839 | Fix | PowerPoint with black SmartArt Text gets changed into white text when converted to a PDF |
+| CONVERSIONNET&#8209;3089 | Feature | Implement conversion from Xlam |
+| CONVERSIONNET&#8209;3091 | Feature | Implement conversion to Xlam |
+| CONVERSIONNET&#8209;3093 | Feature | Implement conversion from Mpx |
+| CONVERSIONNET&#8209;3096 | Feature | Introduce Metered.GetConsumptionCredit |
+| CONVERSIONNET&#8209;3098 | Feature | Implement conversion from Jpc |
+| CONVERSIONNET&#8209;3100 | Feature | Implement conversion from Dwt |
+| CONVERSIONNET&#8209;3113 | Feature | Implement conversion from JPEG-LS (Jls) |
+| CONVERSIONNET&#8209;3117 | Improvement | Improve Diagram to Word conversion |
+| CONVERSIONNET&#8209;2839 | Fix | PowerPoint with black SmartArt Text gets changed into white text when converted to a PDF |
 
 ## Public API and Backward Incompatible Changes
 

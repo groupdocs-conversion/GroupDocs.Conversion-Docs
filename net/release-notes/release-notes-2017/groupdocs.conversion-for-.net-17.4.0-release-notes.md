@@ -24,17 +24,17 @@ There are 11 new features, improvements and fixes in this regular monthly releas
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-1810 | Implement method for getting extended document information | New Feature |
-| CONVERSIONNET-1835 | Convert Html to Cells improvements | Improvement |
-| CONVERSIONNET-1845 | Convert Cad to Html improvements | Improvement |
-| CONVERSIONNET-1846 | Convert Note to Html improvements | Improvement |
-| CONVERSIONNET-1840 | Convert Slides to Html improvements | Improvement |
-| CONVERSIONNET-1847 | Convert Tasks to Html improvements | Improvement |
-| CONVERSIONNET-1851 | Convert Words to Html improvements with UsePdf=true option set | Improvement |
-| CONVERSIONNET-1871 | Improved handling of extension-less urls | Improvement |
-| CONVERSIONNET-1678 | Failed to validate PDF\_X\_3 and PDF\_X\_1A | Fix |
-| CONVERSIONNET-1844 | Converting Image to Html with UsePdf=true always use direct conversion instead converting through Pdf | Fix |
-| CONVERSIONNET-1676 | Loading Latex document from stream requires FileStream | Fix |
+| CONVERSIONNET&#8209;1810 | Implement method for getting extended document information | New Feature |
+| CONVERSIONNET&#8209;1835 | Convert Html to Cells improvements | Improvement |
+| CONVERSIONNET&#8209;1845 | Convert Cad to Html improvements | Improvement |
+| CONVERSIONNET&#8209;1846 | Convert Note to Html improvements | Improvement |
+| CONVERSIONNET&#8209;1840 | Convert Slides to Html improvements | Improvement |
+| CONVERSIONNET&#8209;1847 | Convert Tasks to Html improvements | Improvement |
+| CONVERSIONNET&#8209;1851 | Convert Words to Html improvements with UsePdf=true option set | Improvement |
+| CONVERSIONNET&#8209;1871 | Improved handling of extension-less urls | Improvement |
+| CONVERSIONNET&#8209;1678 | Failed to validate PDF\_X\_3 and PDF\_X\_1A | Fix |
+| CONVERSIONNET&#8209;1844 | Converting Image to Html with UsePdf=true always use direct conversion instead converting through Pdf | Fix |
+| CONVERSIONNET&#8209;1676 | Loading Latex document from stream requires FileStream | Fix |
 
 ## Public API and Backward Incompatible Changes
 

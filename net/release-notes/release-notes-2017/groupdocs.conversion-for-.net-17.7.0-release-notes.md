@@ -25,10 +25,10 @@ There are 4 new features, improvements and fixes in this regular monthly release
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-1968 | Update DocumentInfo class to return all layouts for CAD document types | New Feature |
-| CONVERSIONNET-1969 | Implement possibility to convert specific layouts when converting from CAD document | New Feature |
-| CONVERSIONNET-1970 | Convert Pdf documents without annotations | New Feature |
-| CONVERSIONNET-1962 | Implement possibility to set Width and Height when converting from CAD document | Improvement |
+| CONVERSIONNET&#8209;1968 | Update DocumentInfo class to return all layouts for CAD document types | New Feature |
+| CONVERSIONNET&#8209;1969 | Implement possibility to convert specific layouts when converting from CAD document | New Feature |
+| CONVERSIONNET&#8209;1970 | Convert Pdf documents without annotations | New Feature |
+| CONVERSIONNET&#8209;1962 | Implement possibility to set Width and Height when converting from CAD document | Improvement |
 
 ## Public API and Backward Incompatible Changes
 

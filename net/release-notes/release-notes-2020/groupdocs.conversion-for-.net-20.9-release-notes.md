@@ -23,13 +23,13 @@ There are 5+ improvements and bug-fixes in this release, most notable are:
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-4146 |	Improvement | Introduce new load option to exclude Excel checks when converting from Spreadsheet document types |
-| CONVERSIONNET-3786 |	Bug	        | XLSB to XLSX conversion issue for a particular file |
-| CONVERSIONNET-3788 |	Bug	        | WMF to GIF conversion issue |
-| CONVERSIONNET-3934 |	Bug	        | XLSX to PNG conversion produces only black image |
-| CONVERSIONNET-4143 |	Bug	        | Conversion take to much time |
-| CONVERSIONNET-4152 |	Bug	        | DWG to DOCX conversion issue |
-| CONVERSIONNET-4161 |	Bug	        | Cannot convert Email document if the file format doesn't match file extension |
+| CONVERSIONNET&#8209;4146 |	Improvement | Introduce new load option to exclude Excel checks when converting from Spreadsheet document types |
+| CONVERSIONNET&#8209;3786 | Fix | XLSB to XLSX conversion issue for a particular file |
+| CONVERSIONNET&#8209;3788 | Fix | WMF to GIF conversion issue |
+| CONVERSIONNET&#8209;3934 | Fix | XLSX to PNG conversion produces only black image |
+| CONVERSIONNET&#8209;4143 | Fix | Conversion take to much time |
+| CONVERSIONNET&#8209;4152 | Fix | DWG to DOCX conversion issue |
+| CONVERSIONNET&#8209;4161 | Fix | Cannot convert Email document if the file format doesn't match file extension |
 
 
 ## Public API and Backward Incompatible Changes

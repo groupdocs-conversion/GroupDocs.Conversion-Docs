@@ -18,7 +18,7 @@ This is hot fix release which fixes issues with licensing in the legacy namespac
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-3556 | Fix | GroupDocs.Conversion.Legacy.License not working with Word Documents |
+| CONVERSIONNET&#8209;3556 | Fix | GroupDocs.Conversion.Legacy.License not working with Word Documents |
 
 ## Public API and Backward Incompatible Changes
 

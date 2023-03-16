@@ -23,22 +23,22 @@ This regular monthly release contains 10+ improvements and bug fixes. Most notab
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-2892 | Implement conversion from Cdr | Feature |
-| CONVERSIONNET-2911 | Set color mode when converting to Jpeg | Feature |
-| CONVERSIONNET-2912 | Set compression mode when converting to Jpeg | Feature |
-| CONVERSIONNET-2925 | Implement option for adjusting brightness when converting to image | Feature |
-| CONVERSIONNET-2926 | Implement option for adjusting contrast when converting to image | Feature |
-| CONVERSIONNET-2927 | Implement option for adjusting gamma when converting to image | Feature |
-| CONVERSIONNET-2928 | Implement option for flip image when converting to image | Feature |
-| CONVERSIONNET-2891 | Support conversion from Excel95/5.0 XLS files | Improvement |
-| CONVERSIONNET-2913 | Set image quality when converting to WebP | Improvement |
-| CONVERSIONNET-2914 | Extend DocumentInfo with new property IsPasswordProtected | Improvement |
-| CONVERSIONNET-2965 | Remove HideComments from SaveOptions | Improvement |
-| CONVERSIONNET-2966 | Remove HidePdfAnnotations from SaveOptions | Improvement |
-| CONVERSIONNET-2967 | Remove HideWordTrackedChanges from SaveOptions | Improvement |
-| CONVERSIONNET-2880 | ImageSaveOptions.JpegQuality issue when converting .pdf to .jpeg | Fix |
-| CONVERSIONNET-2916 | Multi-line merged cell in excel renders only the first line | Fix |
-| CONVERSIONNET-1937 | Arrows point in the wrong direction in ODP output | Fix |
+| CONVERSIONNET&#8209;2892 | Implement conversion from Cdr | Feature |
+| CONVERSIONNET&#8209;2911 | Set color mode when converting to Jpeg | Feature |
+| CONVERSIONNET&#8209;2912 | Set compression mode when converting to Jpeg | Feature |
+| CONVERSIONNET&#8209;2925 | Implement option for adjusting brightness when converting to image | Feature |
+| CONVERSIONNET&#8209;2926 | Implement option for adjusting contrast when converting to image | Feature |
+| CONVERSIONNET&#8209;2927 | Implement option for adjusting gamma when converting to image | Feature |
+| CONVERSIONNET&#8209;2928 | Implement option for flip image when converting to image | Feature |
+| CONVERSIONNET&#8209;2891 | Support conversion from Excel95/5.0 XLS files | Improvement |
+| CONVERSIONNET&#8209;2913 | Set image quality when converting to WebP | Improvement |
+| CONVERSIONNET&#8209;2914 | Extend DocumentInfo with new property IsPasswordProtected | Improvement |
+| CONVERSIONNET&#8209;2965 | Remove HideComments from SaveOptions | Improvement |
+| CONVERSIONNET&#8209;2966 | Remove HidePdfAnnotations from SaveOptions | Improvement |
+| CONVERSIONNET&#8209;2967 | Remove HideWordTrackedChanges from SaveOptions | Improvement |
+| CONVERSIONNET&#8209;2880 | ImageSaveOptions.JpegQuality issue when converting .pdf to .jpeg | Fix |
+| CONVERSIONNET&#8209;2916 | Multi-line merged cell in excel renders only the first line | Fix |
+| CONVERSIONNET&#8209;1937 | Arrows point in the wrong direction in ODP output | Fix |
 
 ##   
 Public API and Backward Incompatible Changes

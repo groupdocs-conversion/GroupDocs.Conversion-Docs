@@ -22,17 +22,17 @@ There are 10+ features, improvements and bug-fixes in this release, most notable
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-4944 | Feature | Implement Cad to Fbx conversion |
-| CONVERSIONNET-4967 | Feature | Implement conversion from Cad to Dwf and Dxf |
-| CONVERSIONNET-4817 | Fix | GIF to PDF conversion issue |
-| CONVERSIONNET-4841 | Fix | HTML to PPTX conversion issue |
-| CONVERSIONNET-4894 | Fix | DOCX to PDF conversion issue on Ubuntu |
-| CONVERSIONNET-4905 | Fix | EML to PNG conversion stuck |
-| CONVERSIONNET-4952 | Fix | QR Code is very small converting DOCX to PDF in .NET |
-| CONVERSIONNET-4953 | Fix | Barcode fields no longer updated |
-| CONVERSIONNET-4954 | Fix | MHT to PDF conversion issue |
-| CONVERSIONNET-4957 | Fix | Converting Pdf to Image on macOS throws exception |
-| CONVERSIONNET-4977 | Fix | Word to PDF conversion exception on debian/Linux 10 with .net core 5 |
+| CONVERSIONNET&#8209;4944 | Feature | Implement Cad to Fbx conversion |
+| CONVERSIONNET&#8209;4967 | Feature | Implement conversion from Cad to Dwf and Dxf |
+| CONVERSIONNET&#8209;4817 | Fix | GIF to PDF conversion issue |
+| CONVERSIONNET&#8209;4841 | Fix | HTML to PPTX conversion issue |
+| CONVERSIONNET&#8209;4894 | Fix | DOCX to PDF conversion issue on Ubuntu |
+| CONVERSIONNET&#8209;4905 | Fix | EML to PNG conversion stuck |
+| CONVERSIONNET&#8209;4952 | Fix | QR Code is very small converting DOCX to PDF in .NET |
+| CONVERSIONNET&#8209;4953 | Fix | Barcode fields no longer updated |
+| CONVERSIONNET&#8209;4954 | Fix | MHT to PDF conversion issue |
+| CONVERSIONNET&#8209;4957 | Fix | Converting Pdf to Image on macOS throws exception |
+| CONVERSIONNET&#8209;4977 | Fix | Word to PDF conversion exception on debian/Linux 10 with .net core 5 |
 
 
 

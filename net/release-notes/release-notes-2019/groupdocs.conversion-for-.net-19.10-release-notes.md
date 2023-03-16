@@ -23,11 +23,11 @@ There are 5 features, improvements and bug-fixes in this release, most notable a
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-3323 | Feature | Keep the timezone of the SENT field |
-| CONVERSIONNET-3330 | Feature | Add .NET Standard 2.0 support |
-| CONVERSIONNET-3416 | Improvement | Converting multi-page TIFF to PDF |
-| CONVERSIONNET-3356 | Fix | Converting spreadsheet to html, ranges are not respected |
-| CONVERSIONNET-3376 | Fix | Exception stream is not expandable when converting to html |
+| CONVERSIONNET&#8209;3323 | Feature | Keep the timezone of the SENT field |
+| CONVERSIONNET&#8209;3330 | Feature | Add .NET Standard 2.0 support |
+| CONVERSIONNET&#8209;3416 | Improvement | Converting multi-page TIFF to PDF |
+| CONVERSIONNET&#8209;3356 | Fix | Converting spreadsheet to html, ranges are not respected |
+| CONVERSIONNET&#8209;3376 | Fix | Exception stream is not expandable when converting to html |
 
 ## Public API and Backward Incompatible Changes
 

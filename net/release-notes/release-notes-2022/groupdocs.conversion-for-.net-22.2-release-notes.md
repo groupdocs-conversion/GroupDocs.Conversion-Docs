@@ -23,10 +23,10 @@ There are 4 features, improvements and bug-fixes in this release, most notable a
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-5069 | Feature | Conversions from archive formats |
-| CONVERSIONNET-5091 | Feature | Implement conversion from multiple source documents |
-| CONVERSIONNET-5100 | Improvement | Add option to set locale when load a spreadsheet document |
-| CONVERSIONNET-4955 | Fix | CGM to Image conversion - Invalid output |
+| CONVERSIONNET&#8209;5069 | Feature | Conversions from archive formats |
+| CONVERSIONNET&#8209;5091 | Feature | Implement conversion from multiple source documents |
+| CONVERSIONNET&#8209;5100 | Improvement | Add option to set locale when load a spreadsheet document |
+| CONVERSIONNET&#8209;4955 | Fix | CGM to Image conversion - Invalid output |
 
 
 

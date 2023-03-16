@@ -23,16 +23,16 @@ There are 10 features, improvements and bug-fixes in this release, most notable 
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-4054 | Feature     | LOG file format support |
-| CONVERSIONNET-4095 | Improvement | Extend WordprocessingDocumentInfo with TableOfContents property |
-| CONVERSIONNET-4096 | Improvement | Extend PdfDocumentInfo with TableOfContents property |
-| CONVERSIONNET-3772 | Bug         | XLSB to XLS conversion - The column index should not be inside the pivottable report |
-| CONVERSIONNET-3826 | Bug         | PDF to HTML conversion taking too long |
-| CONVERSIONNET-3851 | Bug         | PDF to HTML conversion issue, additional space in a word |
-| CONVERSIONNET-3936 | Bug         | ODG to PPT conversion issue |
-| CONVERSIONNET-3985 | Bug         | Could not load the file \'Aspose.Slides\'. exception when targeting Xamarin.Mac Full / .NET Framework 4.5 |
-| CONVERSIONNET-3999 | Bug         | XLSM to PDF - The row index should not be inside the pivottable report |
-| CONVERSIONNET-4124 | Bug         | JPG to BMP conversion throws an exception |
+| CONVERSIONNET&#8209;4054 | Feature     | LOG file format support |
+| CONVERSIONNET&#8209;4095 | Improvement | Extend WordprocessingDocumentInfo with TableOfContents property |
+| CONVERSIONNET&#8209;4096 | Improvement | Extend PdfDocumentInfo with TableOfContents property |
+| CONVERSIONNET&#8209;3772 | Fix | XLSB to XLS conversion - The column index should not be inside the pivottable report |
+| CONVERSIONNET&#8209;3826 | Fix | PDF to HTML conversion taking too long |
+| CONVERSIONNET&#8209;3851 | Fix | PDF to HTML conversion issue, additional space in a word |
+| CONVERSIONNET&#8209;3936 | Fix | ODG to PPT conversion issue |
+| CONVERSIONNET&#8209;3985 | Fix | Could not load the file \'Aspose.Slides\'. exception when targeting Xamarin.Mac Full / .NET Framework 4.5 |
+| CONVERSIONNET&#8209;3999 | Fix | XLSM to PDF - The row index should not be inside the pivottable report |
+| CONVERSIONNET&#8209;4124 | Fix | JPG to BMP conversion throws an exception |
 
 
 ## Public API and Backward Incompatible Changes

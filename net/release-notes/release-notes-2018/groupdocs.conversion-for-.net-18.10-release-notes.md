@@ -23,10 +23,10 @@ This regular monthly release contains several improvements and bug fixes. Most n
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-1957 | Implement option for removing embedded files in Pdf | Improvement |
-| CONVERSIONNET-1873 | The image inside presentation isn't the same in ODP output | Fix |
-| CONVERSIONNET-1874 | Missing border in ODS Excel output | Fix |
-| CONVERSIONNET-1923 | XLSX file eats almost 2 GB RAM while converting and the process never completes | Fix |
+| CONVERSIONNET&#8209;1957 | Implement option for removing embedded files in Pdf | Improvement |
+| CONVERSIONNET&#8209;1873 | The image inside presentation isn't the same in ODP output | Fix |
+| CONVERSIONNET&#8209;1874 | Missing border in ODS Excel output | Fix |
+| CONVERSIONNET&#8209;1923 | XLSX file eats almost 2 GB RAM while converting and the process never completes | Fix |
 
 ## Public API and Backward Incompatible Changes
 

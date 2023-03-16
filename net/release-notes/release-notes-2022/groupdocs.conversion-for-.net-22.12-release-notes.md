@@ -16,11 +16,11 @@ There are 5 features, improvements and bug-fixes in this release.
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-5432 | Feature | [Implement conversion to Amazon Kindle AZW3 format](#conversion-to-azw3-format) |
-| CONVERSIONNET-5643 | Feature | [Video to Audio conversion](#extracting-audio-track-from-video-formats) |
-| CONVERSIONNET-5700 | Enhancement | Improved conversions from composite documents: PST/OST, MBOX, and archives |
-| CONVERSIONNET-5517 | Enhancement | Improved document types classification following the [File Format Guide](https://docs.fileformat.com) |
-| CONVERSIONNET-5558 | Fix | Error converting WEBP to JPG |
+| CONVERSIONNET&#8209;5432 | Feature | [Implement conversion to Amazon Kindle AZW3 format](#conversion-to-azw3-format) |
+| CONVERSIONNET&#8209;5643 | Feature | [Video to Audio conversion](#extracting-audio-track-from-video-formats) |
+| CONVERSIONNET&#8209;5700 | Enhancement | Improved conversions from composite documents: PST/OST, MBOX, and archives |
+| CONVERSIONNET&#8209;5517 | Enhancement | Improved document types classification following the [File Format Guide](https://docs.fileformat.com) |
+| CONVERSIONNET&#8209;5558 | Fix | Error converting WEBP to JPG |
 
 ## Major features
 
