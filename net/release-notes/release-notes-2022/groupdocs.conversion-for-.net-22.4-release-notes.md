@@ -24,15 +24,15 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-5081 | Feature | Implement conversions from archive formats (Zip, RAR, 7z, Tar, Gz, Bz2) |
-| CONVERSIONNET-5085 | Feature | Support for compressing conversion result to Zip, RAR, 7z, Tar, Gz, Bz2 |
-| CONVERSIONNET-5094 | Feature | Set background color when convert from CAD |
-| CONVERSIONNET-5095 | Feature | Set draw type when converting from CAD |
-| CONVERSIONNET-5096 | Feature | Implement fixed size conversion from CAD when no CadLoadOptions.Width and CarLoadOptions.Height is set |
-| CONVERSIONNET-5137 | Feature | Implement Audio conversion |
-| CONVERSIONNET-5147 | Feature | Implement Video conversion |
-| CONVERSIONNET-4943 | Fix | Word table formatting issue using Customer XML data |
-| CONVERSIONNET-5187 | Fix | Getting document info of a particular PSD raises exception |
+| CONVERSIONNET&#8209;5081 | Feature | Implement conversions from archive formats (Zip, RAR, 7z, Tar, Gz, Bz2) |
+| CONVERSIONNET&#8209;5085 | Feature | Support for compressing conversion result to Zip, RAR, 7z, Tar, Gz, Bz2 |
+| CONVERSIONNET&#8209;5094 | Feature | Set background color when convert from CAD |
+| CONVERSIONNET&#8209;5095 | Feature | Set draw type when converting from CAD |
+| CONVERSIONNET&#8209;5096 | Feature | Implement fixed size conversion from CAD when no CadLoadOptions.Width and CarLoadOptions.Height is set |
+| CONVERSIONNET&#8209;5137 | Feature | Implement Audio conversion |
+| CONVERSIONNET&#8209;5147 | Feature | Implement Video conversion |
+| CONVERSIONNET&#8209;4943 | Fix | Word table formatting issue using Customer XML data |
+| CONVERSIONNET&#8209;5187 | Fix | Getting document info of a particular PSD raises exception |
 
 
 ## Public API and Backward Incompatible Changes

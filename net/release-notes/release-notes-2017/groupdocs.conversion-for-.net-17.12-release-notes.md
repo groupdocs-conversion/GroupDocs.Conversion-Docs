@@ -25,13 +25,13 @@ There are 5+ new features, improvements and fixes in this regular monthly releas
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-2277 | Implement conversion from/to Jpeg2000 | New Feature |
-| CONVERSIONNET-2257 | Implement possibility to convert one sheet per page or depending on print area when converting Cells to Pdf | Improvement |
-| CONVERSIONNET-2258 | Implement possibility to optimize target Pdf for minimum file size when converting Cells to Pdf | Improvement |
-| CONVERSIONNET-2262 | Image to SVG conversion improvement | Improvement |
-| CONVERSIONNET-2266 | Words to Gif conversion improvement | Improvement |
-| CONVERSIONNET-2240 | PDF to TIF conversion, InvalidValueFormatException | Fix |
-| CONVERSIONNET-2234 | Index was outside the bounds of the array, while Converting .xlsx File To PDF | Fix |
+| CONVERSIONNET&#8209;2277 | Implement conversion from/to Jpeg2000 | New Feature |
+| CONVERSIONNET&#8209;2257 | Implement possibility to convert one sheet per page or depending on print area when converting Cells to Pdf | Improvement |
+| CONVERSIONNET&#8209;2258 | Implement possibility to optimize target Pdf for minimum file size when converting Cells to Pdf | Improvement |
+| CONVERSIONNET&#8209;2262 | Image to SVG conversion improvement | Improvement |
+| CONVERSIONNET&#8209;2266 | Words to Gif conversion improvement | Improvement |
+| CONVERSIONNET&#8209;2240 | PDF to TIF conversion, InvalidValueFormatException | Fix |
+| CONVERSIONNET&#8209;2234 | Index was outside the bounds of the array, while Converting .xlsx File To PDF | Fix |
 
 ## Public API and Backward Incompatible Changes
 

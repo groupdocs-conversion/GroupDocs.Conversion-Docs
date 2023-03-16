@@ -22,16 +22,16 @@ This regular monthly release contains 5+ improvements and bug fixes. Most notabl
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-2980 | Feature | Implement automatic naming when saving converted document to file |
-| CONVERSIONNET-2983 | Feature | Implement conversion from Cmx |
-| CONVERSIONNET-3011 | Improvement | Implement getting page orientation for specific page |
-| CONVERSIONNET-1747 | Fix | HTML output file is not rendered properly in Edge |
-| CONVERSIONNET-1919 | Fix | Arrows point in the wrong direction in ODP output |
-| CONVERSIONNET-2964 | Fix | AutoCAD(.ifc) to Image conversion issue |
-| CONVERSIONNET-2995 | Fix | Evaluation message is not visible when converting to ODS |
-| CONVERSIONNET-3002 | Fix | Incorrect Html after applying evaluation message when converting from Email |
-| CONVERSIONNET-3003 | Fix | Incorrect Html structure after applying watermark over Html |
-| CONVERSIONNET-3048 | Fix | GroupDocs.Conversion with several GroupDocs products in same project throws exception |
+| CONVERSIONNET&#8209;2980 | Feature | Implement automatic naming when saving converted document to file |
+| CONVERSIONNET&#8209;2983 | Feature | Implement conversion from Cmx |
+| CONVERSIONNET&#8209;3011 | Improvement | Implement getting page orientation for specific page |
+| CONVERSIONNET&#8209;1747 | Fix | HTML output file is not rendered properly in Edge |
+| CONVERSIONNET&#8209;1919 | Fix | Arrows point in the wrong direction in ODP output |
+| CONVERSIONNET&#8209;2964 | Fix | AutoCAD(.ifc) to Image conversion issue |
+| CONVERSIONNET&#8209;2995 | Fix | Evaluation message is not visible when converting to ODS |
+| CONVERSIONNET&#8209;3002 | Fix | Incorrect Html after applying evaluation message when converting from Email |
+| CONVERSIONNET&#8209;3003 | Fix | Incorrect Html structure after applying watermark over Html |
+| CONVERSIONNET&#8209;3048 | Fix | GroupDocs.Conversion with several GroupDocs products in same project throws exception |
 
 ## Public API and Backward Incompatible Changes
 

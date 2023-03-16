@@ -22,13 +22,13 @@ This regular monthly release contains 5+ new features, improvements and bug fixe
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-2615 | MailOption to control conversions from email | New Feature |
-| CONVERSIONNET-2625 | Add support for password protected ODT and OTT documents | New Feature |
-| CONVERSIONNET-2618 | Implement font substitution option when converting from Words | New Feature |
-| CONVERSIONNET-2620 | Implement automatic font substitution option when converting from Words | New Feature |
-| CONVERSIONNET-2622 | Implement font substitution option when converting from Slides | New Feature |
-| CONVERSIONNET-2624 | Implement font substitution option when converting from Cells | New Feature |
-| CONVERSIONNET-2616 | Fonts loading folder is not properly set when converting from Words | Fix |
+| CONVERSIONNET&#8209;2615 | MailOption to control conversions from email | New Feature |
+| CONVERSIONNET&#8209;2625 | Add support for password protected ODT and OTT documents | New Feature |
+| CONVERSIONNET&#8209;2618 | Implement font substitution option when converting from Words | New Feature |
+| CONVERSIONNET&#8209;2620 | Implement automatic font substitution option when converting from Words | New Feature |
+| CONVERSIONNET&#8209;2622 | Implement font substitution option when converting from Slides | New Feature |
+| CONVERSIONNET&#8209;2624 | Implement font substitution option when converting from Cells | New Feature |
+| CONVERSIONNET&#8209;2616 | Fonts loading folder is not properly set when converting from Words | Fix |
 
 ## Public API and Backward Incompatible Changes
 

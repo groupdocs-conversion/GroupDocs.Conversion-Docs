@@ -26,14 +26,14 @@ There are 9 new features, improvements and fixes in this regular monthly release
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-1892 | Implement conversion from XML-FO/XSL | New Feature |
-| CONVERSIONNET-1910 | Option to set zoom when converting to HTML | New Feature |
-| CONVERSIONNET-1917 | Conversion from Vsdm, Vssm, Vstm | New Feature |
-| CONVERSIONNET-1928 | Implement conversion from LaTex | New Feature |
-| CONVERSIONNET-1756 | PPTX to HTML Conversion - Slide zoom level property | New Feature |
-| CONVERSIONNET-1881 | Improve SlidesToHtml saver | Improvement |
-| CONVERSIONNET-1885 | Update CellsToImageSaver and CellsToPdfSaver to remove empty rows and columns before saving document | Improvement |
-| CONVERSIONNET-1884 | PPt to PDF Conversion - Tables borders are showing - showgridline property is also not working for this | Fix |
+| CONVERSIONNET&#8209;1892 | Implement conversion from XML-FO/XSL | New Feature |
+| CONVERSIONNET&#8209;1910 | Option to set zoom when converting to HTML | New Feature |
+| CONVERSIONNET&#8209;1917 | Conversion from Vsdm, Vssm, Vstm | New Feature |
+| CONVERSIONNET&#8209;1928 | Implement conversion from LaTex | New Feature |
+| CONVERSIONNET&#8209;1756 | PPTX to HTML Conversion - Slide zoom level property | New Feature |
+| CONVERSIONNET&#8209;1881 | Improve SlidesToHtml saver | Improvement |
+| CONVERSIONNET&#8209;1885 | Update CellsToImageSaver and CellsToPdfSaver to remove empty rows and columns before saving document | Improvement |
+| CONVERSIONNET&#8209;1884 | PPt to PDF Conversion - Tables borders are showing - showgridline property is also not working for this | Fix |
 
 ## Public API and Backward Incompatible Changes
 

@@ -23,11 +23,11 @@ There are 5 improvements and fixes in this regular monthly release. The most not
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-924 | Option when converting from Words for show/hide markup and tack changes | New Feature |
-| CONVERSIONNET-979 | Html to image conversion | New Feature |
-| CONVERSIONNET-911 | Image to Image conversion - target resolution is not changed when setting Dpi | Fix |
-| CONVERSIONNET-912 | Diagram to Image conversion - target resolution is not changed when setting Dpi | Fix |
-| CONVERSIONNET-1072 | Txt to Pdf is causing "Unknown format" exception | Fix |
+| CONVERSIONNET&#8209;924 | Option when converting from Words for show/hide markup and tack changes | New Feature |
+| CONVERSIONNET&#8209;979 | Html to image conversion | New Feature |
+| CONVERSIONNET&#8209;911 | Image to Image conversion - target resolution is not changed when setting Dpi | Fix |
+| CONVERSIONNET&#8209;912 | Diagram to Image conversion - target resolution is not changed when setting Dpi | Fix |
+| CONVERSIONNET&#8209;1072 | Txt to Pdf is causing "Unknown format" exception | Fix |
 
 ## Public API and Backward Incompatible Changes
 

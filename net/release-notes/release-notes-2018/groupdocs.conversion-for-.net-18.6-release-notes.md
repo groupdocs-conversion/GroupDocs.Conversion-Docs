@@ -22,9 +22,9 @@ This regular monthly release contains simplified instantiation of the conversion
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-2597 | Reducing ConversionHandler constructors to one | Improvement |
-| CONVERSIONNET-2598 | Introduced ITempDataHandler for handling temp operations stream | Improvement |
-| CONVERSIONNET-2599 | Introducing new properties in ConversionConfig for different handler types | Improvement |
+| CONVERSIONNET&#8209;2597 | Reducing ConversionHandler constructors to one | Improvement |
+| CONVERSIONNET&#8209;2598 | Introduced ITempDataHandler for handling temp operations stream | Improvement |
+| CONVERSIONNET&#8209;2599 | Introducing new properties in ConversionConfig for different handler types | Improvement |
 
 ## Public API and Backward Incompatible Changes
 

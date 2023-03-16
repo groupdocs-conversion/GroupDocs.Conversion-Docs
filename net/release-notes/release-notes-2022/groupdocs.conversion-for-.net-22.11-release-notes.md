@@ -22,14 +22,14 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-5619 | Feature | Conversions between archive formats |
-| CONVERSIONNET-5257 | Feature | .PUB file to PDF conversion support |
-| CONVERSIONNET-5527 | Feature | Change the producer of PDF file |
-| CONVERSIONNET-5414 | Enhancement | Conversion from PDF to XLSM is freezing |
-| CONVERSIONNET-5611 | Enhancement | Simplifying convert and compress in fluent syntax |
-| CONVERSIONNET-5608 | Fix | Archive to archive conversions are not returned as possible conversion pairs |
-| CONVERSIONNET-5609 | Fix | Large temp files are created during conversion to image on macOS |
-| CONVERSIONNET-4976 | Fix | Cannot convert PDF to Excel |
+| CONVERSIONNET&#8209;5619 | Feature | Conversions between archive formats |
+| CONVERSIONNET&#8209;5257 | Feature | .PUB file to PDF conversion support |
+| CONVERSIONNET&#8209;5527 | Feature | Change the producer of PDF file |
+| CONVERSIONNET&#8209;5414 | Enhancement | Conversion from PDF to XLSM is freezing |
+| CONVERSIONNET&#8209;5611 | Enhancement | Simplifying convert and compress in fluent syntax |
+| CONVERSIONNET&#8209;5608 | Fix | Archive to archive conversions are not returned as possible conversion pairs |
+| CONVERSIONNET&#8209;5609 | Fix | Large temp files are created during conversion to image on macOS |
+| CONVERSIONNET&#8209;4976 | Fix | Cannot convert PDF to Excel |
 
 ## Public API and Backward Incompatible Changes
 

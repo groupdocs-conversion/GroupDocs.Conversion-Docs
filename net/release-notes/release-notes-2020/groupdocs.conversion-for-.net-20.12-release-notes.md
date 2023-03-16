@@ -24,26 +24,26 @@ There are 15+ features, improvements and bug-fixes in this release, most notable
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-4024 | Feature | Provide specific load options to the client application based on the source file type |
-| CONVERSIONNET-4207 | Feature | Implement conversion from MBOX file format |
-| CONVERSIONNET-4327 | Feature | Implement conversion from Vss |
-| CONVERSIONNET-4331 | Feature | Implement conversion to Tex |
-| CONVERSIONNET-4322 | Improvement | Return PasswordProtectedDocumentInfo for password protected files loaded without password |
-| CONVERSIONNET-4323 | Improvement | Skip unsupported files when converting contained documents from a container document |
-| CONVERSIONNET-3986 | Fix | PSD to XLS conversion issue |
-| CONVERSIONNET-4002 | Fix | ODS to XLSM conversion issue |
-| CONVERSIONNET-4081 | Fix | Font issues when converting particular word document to spreadsheet |
-| CONVERSIONNET-4082 | Fix | Converting particular word document to excel hangs |
-| CONVERSIONNET-4213 | Fix | Exception when converting particular Htm to Xlsx |
-| CONVERSIONNET-4214 | Fix | Exception when converting particular Htm to Xlsx |
-| CONVERSIONNET-4216 | Fix | Exception is thrown when converting particular Html document to Xlsx |
-| CONVERSIONNET-4217 | Fix | Exception is thrown when converting particular Html document to Xlsx |
-| CONVERSIONNET-4266 | Fix | Failing to convert attachments in MSG file |
-| CONVERSIONNET-4301 | Fix | Missing images when converting word to pdf with netstandard version |
-| CONVERSIONNET-4302 | Fix | Can't convert to xls |
-| CONVERSIONNET-4305 | Fix | FileTypeNotSupportedException: 'Not supported file type' when extracting MSG file attachments |
-| CONVERSIONNET-4317 | Fix | Null reference exception when converting a particular Word file to PDF |
-| CONVERSIONNET-4340 | Fix | SVG to PDF conversion issue |
+| CONVERSIONNET&#8209;4024 | Feature | Provide specific load options to the client application based on the source file type |
+| CONVERSIONNET&#8209;4207 | Feature | Implement conversion from MBOX file format |
+| CONVERSIONNET&#8209;4327 | Feature | Implement conversion from Vss |
+| CONVERSIONNET&#8209;4331 | Feature | Implement conversion to Tex |
+| CONVERSIONNET&#8209;4322 | Improvement | Return PasswordProtectedDocumentInfo for password protected files loaded without password |
+| CONVERSIONNET&#8209;4323 | Improvement | Skip unsupported files when converting contained documents from a container document |
+| CONVERSIONNET&#8209;3986 | Fix | PSD to XLS conversion issue |
+| CONVERSIONNET&#8209;4002 | Fix | ODS to XLSM conversion issue |
+| CONVERSIONNET&#8209;4081 | Fix | Font issues when converting particular word document to spreadsheet |
+| CONVERSIONNET&#8209;4082 | Fix | Converting particular word document to excel hangs |
+| CONVERSIONNET&#8209;4213 | Fix | Exception when converting particular Htm to Xlsx |
+| CONVERSIONNET&#8209;4214 | Fix | Exception when converting particular Htm to Xlsx |
+| CONVERSIONNET&#8209;4216 | Fix | Exception is thrown when converting particular Html document to Xlsx |
+| CONVERSIONNET&#8209;4217 | Fix | Exception is thrown when converting particular Html document to Xlsx |
+| CONVERSIONNET&#8209;4266 | Fix | Failing to convert attachments in MSG file |
+| CONVERSIONNET&#8209;4301 | Fix | Missing images when converting word to pdf with netstandard version |
+| CONVERSIONNET&#8209;4302 | Fix | Can't convert to xls |
+| CONVERSIONNET&#8209;4305 | Fix | FileTypeNotSupportedException: 'Not supported file type' when extracting MSG file attachments |
+| CONVERSIONNET&#8209;4317 | Fix | Null reference exception when converting a particular Word file to PDF |
+| CONVERSIONNET&#8209;4340 | Fix | SVG to PDF conversion issue |
 
 
 ## Public API and Backward Incompatible Changes

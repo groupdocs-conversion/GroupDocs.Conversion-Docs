@@ -26,16 +26,16 @@ There are 5+ new features, improvements and fixes in this regular monthly releas
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-2183 | Implement conversion from/to POTX and POTM | New Feature |
-| CONVERSIONNET-2209 | Implement conversion from/to PPTM and PPSM | New Feature |
-| CONVERSIONNET-2218 | Implement conversion from/to XLTX and XLTM | New Feature |
-| CONVERSIONNET-2206 | Check for unsupported Excel 95 XLS file format and throw an exception | Improvement |
-| CONVERSIONNET-2225 | Cells to SVG conversion improvement | Improvement |
-| CONVERSIONNET-2235 | Diagram to SVG conversion improvement | Improvement |
-| CONVERSIONNET-2245 | Set custom font directories | Improvement |
-| CONVERSIONNET-2180 | Conversion for Doc with macro to Docx failed | Fix |
-| CONVERSIONNET-2103 | System.ArgumentException when converting Mobi to Ppt or Pps | Fix |
-| CONVERSIONNET-2173 | Conversion of specific pptx to jpg results wrong output | Fix |
+| CONVERSIONNET&#8209;2183 | Implement conversion from/to POTX and POTM | New Feature |
+| CONVERSIONNET&#8209;2209 | Implement conversion from/to PPTM and PPSM | New Feature |
+| CONVERSIONNET&#8209;2218 | Implement conversion from/to XLTX and XLTM | New Feature |
+| CONVERSIONNET&#8209;2206 | Check for unsupported Excel 95 XLS file format and throw an exception | Improvement |
+| CONVERSIONNET&#8209;2225 | Cells to SVG conversion improvement | Improvement |
+| CONVERSIONNET&#8209;2235 | Diagram to SVG conversion improvement | Improvement |
+| CONVERSIONNET&#8209;2245 | Set custom font directories | Improvement |
+| CONVERSIONNET&#8209;2180 | Conversion for Doc with macro to Docx failed | Fix |
+| CONVERSIONNET&#8209;2103 | System.ArgumentException when converting Mobi to Ppt or Pps | Fix |
+| CONVERSIONNET&#8209;2173 | Conversion of specific pptx to jpg results wrong output | Fix |
 
 ## Public API and Backward Incompatible Changes
 

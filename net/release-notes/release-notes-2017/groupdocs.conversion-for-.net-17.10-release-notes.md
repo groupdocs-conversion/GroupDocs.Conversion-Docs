@@ -28,19 +28,19 @@ There are 10+ new features, improvements and fixes in this regular monthly relea
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-2170 | Implement conversion from STL | New Feature |
-| CONVERSIONNET-2171 | Implement conversion from IFC | New Feature |
-| CONVERSIONNET-2176 | Conversion of document containing images to RTF with "old readers" compatibility | New Feature |
-| CONVERSIONNET-2108 | Improve document savers for saving complete document and save by page | Improvement |
-| CONVERSIONNET-2130 | Cells To XPS conversion improvement | Improvement |
-| CONVERSIONNET-2152 | WatermarkOptions is instantiated default Width and Height of the watermark | Improvement |
-| CONVERSIONNET-2153 | Set default transparency of watermark to 0.5 | Improvement |
-| CONVERSIONNET-2155 | Slides To XPS conversion improvement | Improvement |
-| CONVERSIONNET-2161 | Expose FileType and PagesCount properties in ConvertedDocument class | Improvement |
-| CONVERSIONNET-1908 | Incorrect conversion from One to PDF | Fix |
-| CONVERSIONNET-2158 | PsdOptions does not have constructor | Fix |
-| CONVERSIONNET-2163 | Converting HTML with external resources produce wrong output | Fix |
-| CONVERSIONNET-2167 | PDF locked with modification password but without view password cannot be converted | Fix |
+| CONVERSIONNET&#8209;2170 | Implement conversion from STL | New Feature |
+| CONVERSIONNET&#8209;2171 | Implement conversion from IFC | New Feature |
+| CONVERSIONNET&#8209;2176 | Conversion of document containing images to RTF with "old readers" compatibility | New Feature |
+| CONVERSIONNET&#8209;2108 | Improve document savers for saving complete document and save by page | Improvement |
+| CONVERSIONNET&#8209;2130 | Cells To XPS conversion improvement | Improvement |
+| CONVERSIONNET&#8209;2152 | WatermarkOptions is instantiated default Width and Height of the watermark | Improvement |
+| CONVERSIONNET&#8209;2153 | Set default transparency of watermark to 0.5 | Improvement |
+| CONVERSIONNET&#8209;2155 | Slides To XPS conversion improvement | Improvement |
+| CONVERSIONNET&#8209;2161 | Expose FileType and PagesCount properties in ConvertedDocument class | Improvement |
+| CONVERSIONNET&#8209;1908 | Incorrect conversion from One to PDF | Fix |
+| CONVERSIONNET&#8209;2158 | PsdOptions does not have constructor | Fix |
+| CONVERSIONNET&#8209;2163 | Converting HTML with external resources produce wrong output | Fix |
+| CONVERSIONNET&#8209;2167 | PDF locked with modification password but without view password cannot be converted | Fix |
 
 ## Public API and Backward Incompatible Changes
 

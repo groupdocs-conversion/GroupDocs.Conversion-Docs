@@ -23,31 +23,31 @@ There are 20+ features, improvements and bug-fixes in this release, most notable
 
 | Key |  Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-3848 | Feature | Implement conversion from/to Fodp |
-| CONVERSIONNET-3901 | Feature | Implement conversion from Md |
-| CONVERSIONNET-3903 | Feature | Implement conversion to Md |
-| CONVERSIONNET-3913 | Feature | Convert XML files as data source |
-| CONVERSIONNET-3888 | Improvement | Improved document info for pst/ost documents |
-| CONVERSIONNET-3680 | Fix | Exception while Converting TXT to CSV using GroupDocs.Conversion .NET API v20.1.0 |
-| CONVERSIONNET-3694 | Fix | Exception while Converting PDF to XLSM using GroupDocs.Conversion .NET API v20.1.0 |
-| CONVERSIONNET-3730 | Fix | Exception while Converting VSDX to XLSX using GroupDocs.Conversion .NET API v20.1 |
-| CONVERSIONNET-3785 | Fix | Cc filed missing in EmailField  |
-| CONVERSIONNET-3795 | Fix | PDF to XLSM Conversion issue |
-| CONVERSIONNET-3818 | Fix | DOC to XLS conversion issue for a particular file |
-| CONVERSIONNET-3820 | Fix | Can't convert docx to xls |
-| CONVERSIONNET-3833 | Fix | VTX to JPG conversion issue |
-| CONVERSIONNET-3850 | Fix | Xlsx to xlsm conversion issue  |
-| CONVERSIONNET-3852 | Fix | Docx to csv conversion issue - cannot conver the file is corrupt or damaged |
-| CONVERSIONNET-3876 | Fix | Exception if provided folder not exist in ost/pst documents |
-| CONVERSIONNET-3878 | Fix | VTX to PNG conversion issue  |
-| CONVERSIONNET-3879 | Fix | Cannot convert a particular eml file to xls |
-| CONVERSIONNET-3884 | Fix | Implement conversion from CFF2 |
-| CONVERSIONNET-3885 | Fix | PDF to TSV conversion issue |
-| CONVERSIONNET-3890 | Fix | DOCX/DOC to XLS conversion issue |
-| CONVERSIONNET-3894 | Fix | TXT to CSV/XLSX conversion issue |
-| CONVERSIONNET-3926 | Fix | HTML to XLS conversion issue |
-| CONVERSIONNET-3928 | Fix | Doc to Xlsx conversion issue |
-| CONVERSIONNET-3938 | Fix | Wrong Height and Width are returning from GetDocumentInfo method  |
+| CONVERSIONNET&#8209;3848 | Feature | Implement conversion from/to Fodp |
+| CONVERSIONNET&#8209;3901 | Feature | Implement conversion from Md |
+| CONVERSIONNET&#8209;3903 | Feature | Implement conversion to Md |
+| CONVERSIONNET&#8209;3913 | Feature | Convert XML files as data source |
+| CONVERSIONNET&#8209;3888 | Improvement | Improved document info for pst/ost documents |
+| CONVERSIONNET&#8209;3680 | Fix | Exception while Converting TXT to CSV using GroupDocs.Conversion .NET API v20.1.0 |
+| CONVERSIONNET&#8209;3694 | Fix | Exception while Converting PDF to XLSM using GroupDocs.Conversion .NET API v20.1.0 |
+| CONVERSIONNET&#8209;3730 | Fix | Exception while Converting VSDX to XLSX using GroupDocs.Conversion .NET API v20.1 |
+| CONVERSIONNET&#8209;3785 | Fix | Cc filed missing in EmailField  |
+| CONVERSIONNET&#8209;3795 | Fix | PDF to XLSM Conversion issue |
+| CONVERSIONNET&#8209;3818 | Fix | DOC to XLS conversion issue for a particular file |
+| CONVERSIONNET&#8209;3820 | Fix | Can't convert docx to xls |
+| CONVERSIONNET&#8209;3833 | Fix | VTX to JPG conversion issue |
+| CONVERSIONNET&#8209;3850 | Fix | Xlsx to xlsm conversion issue  |
+| CONVERSIONNET&#8209;3852 | Fix | Docx to csv conversion issue - cannot conver the file is corrupt or damaged |
+| CONVERSIONNET&#8209;3876 | Fix | Exception if provided folder not exist in ost/pst documents |
+| CONVERSIONNET&#8209;3878 | Fix | VTX to PNG conversion issue  |
+| CONVERSIONNET&#8209;3879 | Fix | Cannot convert a particular eml file to xls |
+| CONVERSIONNET&#8209;3884 | Fix | Implement conversion from CFF2 |
+| CONVERSIONNET&#8209;3885 | Fix | PDF to TSV conversion issue |
+| CONVERSIONNET&#8209;3890 | Fix | DOCX/DOC to XLS conversion issue |
+| CONVERSIONNET&#8209;3894 | Fix | TXT to CSV/XLSX conversion issue |
+| CONVERSIONNET&#8209;3926 | Fix | HTML to XLS conversion issue |
+| CONVERSIONNET&#8209;3928 | Fix | Doc to Xlsx conversion issue |
+| CONVERSIONNET&#8209;3938 | Fix | Wrong Height and Width are returning from GetDocumentInfo method  |
 
 ## Public API and Backward Incompatible Changes
 

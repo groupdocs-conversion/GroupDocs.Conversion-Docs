@@ -22,14 +22,14 @@ There are 5+ features, improvements and bug-fixes in this release, most notable 
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-3539 | Feature | Convert XML documents without transformation |
-| CONVERSIONNET-3526 | Improvement | New overload Convert methods which accepts ConvertedDocumentStream or ConvertedPageStream delegates |
-| CONVERSIONNET-2922 | Fix | Error converting RTL/HTML to PDF |
-| CONVERSIONNET-3357 | Fix | Cross reference table or cross reference stream not found exception thrown when converting a particular PDF to image |
-| CONVERSIONNET-3507 | Fix | Convert from XML to any format throw exception - The file is corrupt or damaged. |
-| CONVERSIONNET-3508 | Fix | Exception "The process cannot access the file because it is being used by another process." when converting to file |
-| CONVERSIONNET-3525 | Fix | Convert to image doesn't release the last image |
-| CONVERSIONNET-3534 | Fix | Pages limit for TXT file adds additional empty page at the end |
+| CONVERSIONNET&#8209;3539 | Feature | Convert XML documents without transformation |
+| CONVERSIONNET&#8209;3526 | Improvement | New overload Convert methods which accepts ConvertedDocumentStream or ConvertedPageStream delegates |
+| CONVERSIONNET&#8209;2922 | Fix | Error converting RTL/HTML to PDF |
+| CONVERSIONNET&#8209;3357 | Fix | Cross reference table or cross reference stream not found exception thrown when converting a particular PDF to image |
+| CONVERSIONNET&#8209;3507 | Fix | Convert from XML to any format throw exception - The file is corrupt or damaged. |
+| CONVERSIONNET&#8209;3508 | Fix | Exception "The process cannot access the file because it is being used by another process." when converting to file |
+| CONVERSIONNET&#8209;3525 | Fix | Convert to image doesn't release the last image |
+| CONVERSIONNET&#8209;3534 | Fix | Pages limit for TXT file adds additional empty page at the end |
 
 ## Public API and Backward Incompatible Changes
 

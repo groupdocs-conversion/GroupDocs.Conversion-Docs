@@ -16,18 +16,18 @@ There are 10+ features, improvements and bug-fixes in this release.
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-5803 | Feature | [Implement conversion to MOBI format](#conversion-to-mobi-format)|
-| CONVERSIONNET-5833 | Feature | [Specify converted worksheets by indexes](#specify-converted-worksheets-by-their-indexes)|
-| CONVERSIONNET-5810 | Enhancement | Refactor Conversion and replace delegates with Func<T> |
-| CONVERSIONNET-5837 | Enhancement | Do not process hidden worksheets when convert from spreadsheet |
-| CONVERSIONNET-5825 | Enhancement | Improve FileType from Stream detection |
-| CONVERSIONNET-5808 | Enhancement | Return meaningful data in DocumentInfo classes that have IEnumerable properties when accessed through the indexer |
-| CONVERSIONNET-5831 | Fix | Error while Converting XLSX to PDF: Same key added |
-| CONVERSIONNET-5823 | Fix | Converting Numbers to Pptx produce broken result |
-| CONVERSIONNET-5794 | Fix | Converting particular Xlsx to Pptx produce broken result |
-| CONVERSIONNET-5341 | Fix | DWG to PDF conversion - Its messing the image |
-| CONVERSIONNET-5835 | Fix | XSLX to PDF: #REF! instead of 0 |
-| CONVERSIONNET-5836 | Fix | XLS to PDF: ConversionNotSupportedException |
+| CONVERSIONNET&#8209;5803 | Feature | [Implement conversion to MOBI format](#conversion-to-mobi-format)|
+| CONVERSIONNET&#8209;5833 | Feature | [Specify converted worksheets by indexes](#specify-converted-worksheets-by-their-indexes)|
+| CONVERSIONNET&#8209;5810 | Enhancement | Refactor Conversion and replace delegates with Func<T> |
+| CONVERSIONNET&#8209;5837 | Enhancement | Do not process hidden worksheets when convert from spreadsheet |
+| CONVERSIONNET&#8209;5825 | Enhancement | Improve FileType from Stream detection |
+| CONVERSIONNET&#8209;5808 | Enhancement | Return meaningful data in DocumentInfo classes that have IEnumerable properties when accessed through the indexer |
+| CONVERSIONNET&#8209;5831 | Fix | Error while Converting XLSX to PDF: Same key added |
+| CONVERSIONNET&#8209;5823 | Fix | Converting Numbers to Pptx produce broken result |
+| CONVERSIONNET&#8209;5794 | Fix | Converting particular Xlsx to Pptx produce broken result |
+| CONVERSIONNET&#8209;5341 | Fix | DWG to PDF conversion - Its messing the image |
+| CONVERSIONNET&#8209;5835 | Fix | XSLX to PDF: #REF! instead of 0 |
+| CONVERSIONNET&#8209;5836 | Fix | XLS to PDF: ConversionNotSupportedException |
 
 
 ## Major features

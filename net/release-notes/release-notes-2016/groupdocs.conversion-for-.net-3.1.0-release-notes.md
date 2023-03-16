@@ -21,10 +21,10 @@ There are 4 new features in this regular monthly release. The most notable are:
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-680 | Implement document conversion from stream with auto detect source file type | New Feature |
-| CONVERSIONNET-662 | Autodetect source document type when converting from stream | New Feature |
-| CONVERSIONNET-655 | Report conversion progress | New Feature |
-| CONVERSIONNET-654 | Return all supported conversions types with single method | New Feature |
+| CONVERSIONNET&#8209;680 | Implement document conversion from stream with auto detect source file type | New Feature |
+| CONVERSIONNET&#8209;662 | Autodetect source document type when converting from stream | New Feature |
+| CONVERSIONNET&#8209;655 | Report conversion progress | New Feature |
+| CONVERSIONNET&#8209;654 | Return all supported conversions types with single method | New Feature |
 
 ## Public API and Backward Incompatible Changes
 

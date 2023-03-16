@@ -27,25 +27,25 @@ There are 15+ features, improvements and bug-fixes in this release, most notable
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-4509 | Feature | Csv to Json conversions |
-| CONVERSIONNET-4510 | Feature | Conversion from Json as datasource |
-| CONVERSIONNET-4554 | Feature | Override the source file type detection by setting Format property in LoadOptions |
-| CONVERSIONNET-4595 | Feature | Implement Diagram to Diagram conversion |
-| CONVERSIONNET-4614 | Feature | Implement conversion from Primavera Xer |
-| CONVERSIONNET-4615 | Feature | Implement ProjectManagement to ProjectManagement conversion |
-| CONVERSIONNET-4624 | Feature | Implement conversion from Apple iWork Numbers format |
-| CONVERSIONNET-4626 | Feature | Implement conversion from/to Psb |
-| CONVERSIONNET-4632 | Feature | Implement conversion from Fodg |
-| CONVERSIONNET-4567 | Improvement | Improve Email to Markup conversion |
-| CONVERSIONNET-3819 | Fix | Conversion from XPS to PDF throws OOM or uses too much memory and lasts for 5 minutes |
-| CONVERSIONNET-4200 | Fix | Exception is thrown when converting particular Cdr document |
-| CONVERSIONNET-4312 | Fix | Cannot convert particular EMF to PDF document |
-| CONVERSIONNET-4321 | Fix | Tif to Svg conversion issue |
-| CONVERSIONNET-4337 | Fix | Unable to convert particular Gif |
-| CONVERSIONNET-4434 | Fix | Html to XLS conversion exception: The max length of the font name is 31 |
-| CONVERSIONNET-4566 | Fix | Html improperly detected as Mbox when converting from stream |
-| CONVERSIONNET-4568 | Fix | Missing watermark when converting from Email |
-| CONVERSIONNET-4635 | Fix | Conversion from Pst/Ost do not produce output documents |
+| CONVERSIONNET&#8209;4509 | Feature | Csv to Json conversions |
+| CONVERSIONNET&#8209;4510 | Feature | Conversion from Json as datasource |
+| CONVERSIONNET&#8209;4554 | Feature | Override the source file type detection by setting Format property in LoadOptions |
+| CONVERSIONNET&#8209;4595 | Feature | Implement Diagram to Diagram conversion |
+| CONVERSIONNET&#8209;4614 | Feature | Implement conversion from Primavera Xer |
+| CONVERSIONNET&#8209;4615 | Feature | Implement ProjectManagement to ProjectManagement conversion |
+| CONVERSIONNET&#8209;4624 | Feature | Implement conversion from Apple iWork Numbers format |
+| CONVERSIONNET&#8209;4626 | Feature | Implement conversion from/to Psb |
+| CONVERSIONNET&#8209;4632 | Feature | Implement conversion from Fodg |
+| CONVERSIONNET&#8209;4567 | Improvement | Improve Email to Markup conversion |
+| CONVERSIONNET&#8209;3819 | Fix | Conversion from XPS to PDF throws OOM or uses too much memory and lasts for 5 minutes |
+| CONVERSIONNET&#8209;4200 | Fix | Exception is thrown when converting particular Cdr document |
+| CONVERSIONNET&#8209;4312 | Fix | Cannot convert particular EMF to PDF document |
+| CONVERSIONNET&#8209;4321 | Fix | Tif to Svg conversion issue |
+| CONVERSIONNET&#8209;4337 | Fix | Unable to convert particular Gif |
+| CONVERSIONNET&#8209;4434 | Fix | Html to XLS conversion exception: The max length of the font name is 31 |
+| CONVERSIONNET&#8209;4566 | Fix | Html improperly detected as Mbox when converting from stream |
+| CONVERSIONNET&#8209;4568 | Fix | Missing watermark when converting from Email |
+| CONVERSIONNET&#8209;4635 | Fix | Conversion from Pst/Ost do not produce output documents |
 
 
 ## Public API and Backward Incompatible Changes

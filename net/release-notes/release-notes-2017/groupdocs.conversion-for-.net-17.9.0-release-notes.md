@@ -26,14 +26,14 @@ There are 8 new features, improvements and fixes in this regular monthly release
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-1841 | Convert Diagram to Html improvements | Improvement |
-| CONVERSIONNET-2044 | Conversion from SVG improvement | Improvement |
-| CONVERSIONNET-2056 | Email to Html conversion improvement | Improvement |
-| CONVERSIONNET-2072 | Improved public API | Improvement |
-| CONVERSIONNET-1754 | PPTX to HTML Conversion - While converting pptx to html found improper text formatting of Header or missing text | Fix |
-| CONVERSIONNET-2042 | ImageSaveOptions.TiffOptions.Compression does not seem to work | Fix |
-| CONVERSIONNET-1755 | PPTX to HTML Conversion - Image without background converted with white background also white dot is added near Header Text | Fix |
-| CONVERSIONNET-809 | Images are missing when PDF is saved to EPUB | Fix |
+| CONVERSIONNET&#8209;1841 | Convert Diagram to Html improvements | Improvement |
+| CONVERSIONNET&#8209;2044 | Conversion from SVG improvement | Improvement |
+| CONVERSIONNET&#8209;2056 | Email to Html conversion improvement | Improvement |
+| CONVERSIONNET&#8209;2072 | Improved public API | Improvement |
+| CONVERSIONNET&#8209;1754 | PPTX to HTML Conversion - While converting pptx to html found improper text formatting of Header or missing text | Fix |
+| CONVERSIONNET&#8209;2042 | ImageSaveOptions.TiffOptions.Compression does not seem to work | Fix |
+| CONVERSIONNET&#8209;1755 | PPTX to HTML Conversion - Image without background converted with white background also white dot is added near Header Text | Fix |
+| CONVERSIONNET&#8209;809 | Images are missing when PDF is saved to EPUB | Fix |
 
 ## Public API and Backward Incompatible Changes
 

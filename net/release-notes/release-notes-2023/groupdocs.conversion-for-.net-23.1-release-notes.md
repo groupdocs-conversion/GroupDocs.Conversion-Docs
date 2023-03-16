@@ -16,31 +16,31 @@ There are 20+ features, improvements and bug-fixes in this release.
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-5407 | Feature | [Implemented font formats conversion](#conversion-between-font-formats) |
-| CONVERSIONNET-5746 | Enhancement | Improve Ico format conversion |
-| CONVERSIONNET-5748 | Enhancement | Improve Spreadsheet to WordProcessing document conversion |
-| CONVERSIONNET-5724 | Enhancement | Return list of available folders from PST/OST and other composite documents in document info class |
-| CONVERSIONNET-5750 | Enhancement | Improve Spreadsheet to Presentation document conversion |
-| CONVERSIONNET-5732 | Enhancement | EML with attachments to PDF conversion issue |
-| CONVERSIONNET-5761 | Enhancement | Improve logging during conversion |
-| CONVERSIONNET-5234 | Fix | Cannot convert ASE to 3DS and OBJ |
-| CONVERSIONNET-5233 | Fix | Cannot convert from 3D VRML file format |
-| CONVERSIONNET-5232 | Fix | Cannot convert from 3D X file format |
-| CONVERSIONNET-5231 | Fix | Cannot convert from 3D GLTF file format |
-| CONVERSIONNET-5726 | Fix | When converting from PST/OST no files are processed |
-| CONVERSIONNET-5560 | Fix | Keeping the hyperlink (text with link) format when converting PDF to PPTX |
-| CONVERSIONNET-4742 | Fix | PDF to image conversion issue |
-| CONVERSIONNET-5728 | Fix | During extraction from a ZIP, last extracted document is always truncated to zero file size |
-| CONVERSIONNET-5727 | Fix | RAR to XIP conversion throws exception |
-| CONVERSIONNET-5415 | Fix | Evaluation tag when converting to Image |
-| CONVERSIONNET-5457 | Fix | Particular PDF to PNG conversion crashes |
-| CONVERSIONNET-5563 | Fix | PDF to PNG: Path conversion requested exception |
-| CONVERSIONNET-5280 | Fix | Word to PDF conversion issue |
-| CONVERSIONNET-5236 | Fix | Cannot convert USD to DRC |
-| CONVERSIONNET-5235 | Fix | Cannot convert USD to 3DS |
-| CONVERSIONNET-5736 | Fix | Converter.GetAllPossibleConversions method returns enum with duplicates |
-| CONVERSIONNET-5477 | Fix | Regression: EPUB to HTML raises "CorruptOrDamagedFileException" |
-| CONVERSIONNET-5698 | Fix | Cannot convert from Note on macOS due to missing fonts |
+| CONVERSIONNET&#8209;5407 | Feature | [Implemented font formats conversion](#conversion-between-font-formats) |
+| CONVERSIONNET&#8209;5746 | Enhancement | Improve Ico format conversion |
+| CONVERSIONNET&#8209;5748 | Enhancement | Improve Spreadsheet to WordProcessing document conversion |
+| CONVERSIONNET&#8209;5724 | Enhancement | Return list of available folders from PST/OST and other composite documents in document info class |
+| CONVERSIONNET&#8209;5750 | Enhancement | Improve Spreadsheet to Presentation document conversion |
+| CONVERSIONNET&#8209;5732 | Enhancement | EML with attachments to PDF conversion issue |
+| CONVERSIONNET&#8209;5761 | Enhancement | Improve logging during conversion |
+| CONVERSIONNET&#8209;5234 | Fix | Cannot convert ASE to 3DS and OBJ |
+| CONVERSIONNET&#8209;5233 | Fix | Cannot convert from 3D VRML file format |
+| CONVERSIONNET&#8209;5232 | Fix | Cannot convert from 3D X file format |
+| CONVERSIONNET&#8209;5231 | Fix | Cannot convert from 3D GLTF file format |
+| CONVERSIONNET&#8209;5726 | Fix | When converting from PST/OST no files are processed |
+| CONVERSIONNET&#8209;5560 | Fix | Keeping the hyperlink (text with link) format when converting PDF to PPTX |
+| CONVERSIONNET&#8209;4742 | Fix | PDF to image conversion issue |
+| CONVERSIONNET&#8209;5728 | Fix | During extraction from a ZIP, last extracted document is always truncated to zero file size |
+| CONVERSIONNET&#8209;5727 | Fix | RAR to XIP conversion throws exception |
+| CONVERSIONNET&#8209;5415 | Fix | Evaluation tag when converting to Image |
+| CONVERSIONNET&#8209;5457 | Fix | Particular PDF to PNG conversion crashes |
+| CONVERSIONNET&#8209;5563 | Fix | PDF to PNG: Path conversion requested exception |
+| CONVERSIONNET&#8209;5280 | Fix | Word to PDF conversion issue |
+| CONVERSIONNET&#8209;5236 | Fix | Cannot convert USD to DRC |
+| CONVERSIONNET&#8209;5235 | Fix | Cannot convert USD to 3DS |
+| CONVERSIONNET&#8209;5736 | Fix | Converter.GetAllPossibleConversions method returns enum with duplicates |
+| CONVERSIONNET&#8209;5477 | Fix | Regression: EPUB to HTML raises "CorruptOrDamagedFileException" |
+| CONVERSIONNET&#8209;5698 | Fix | Cannot convert from Note on macOS due to missing fonts |
 
 ## Major features
 

@@ -23,7 +23,7 @@ Additionally one bug is fixed: 
 
 | Key |Category | Summary | 
 | --- | --- | --- |
-| CONVERSIONNET-3142 | Fix | Specified argument was out of the range of valid values when converting a spreadsheet document to pdf |
+| CONVERSIONNET&#8209;3142 | Fix | Specified argument was out of the range of valid values when converting a spreadsheet document to pdf |
 
 ## Public API and Backward Incompatible Changes
 

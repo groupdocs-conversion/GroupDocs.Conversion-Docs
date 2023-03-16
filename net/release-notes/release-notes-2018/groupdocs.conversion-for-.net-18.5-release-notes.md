@@ -22,11 +22,11 @@ This regular monthly release contains improved code base, improved performance, 
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-2553 | Docx to Tiff G3 conversion with shading option | Improvement |
-| CONVERSIONNET-2554 | Improved code coverage | Improvement |
-| CONVERSIONNET-2508 | Eml to tiff conversion issue with stream parameters | Fix |
-| CONVERSIONNET-2430 | System.ArgumentOutOfRangeException occurred | Fix |
-| CONVERSIONNET-2495 | Tiff to Html conversion is not rendered properly in Chrome | Fix |
+| CONVERSIONNET&#8209;2553 | Docx to Tiff G3 conversion with shading option | Improvement |
+| CONVERSIONNET&#8209;2554 | Improved code coverage | Improvement |
+| CONVERSIONNET&#8209;2508 | Eml to tiff conversion issue with stream parameters | Fix |
+| CONVERSIONNET&#8209;2430 | System.ArgumentOutOfRangeException occurred | Fix |
+| CONVERSIONNET&#8209;2495 | Tiff to Html conversion is not rendered properly in Chrome | Fix |
 
 ## Public API and Backward Incompatible Changes
 

@@ -26,13 +26,13 @@ There are 5+ new features, improvements and fixes in this regular monthly releas
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| CONVERSIONNET-2434 | Specify bookmark level, headings level and expanded level when converting from Words to PDF and XPS | New Feature |
-| CONVERSIONNET-2457 | Implement option for creating linearized PDF when converting to PDF | New Feature |
-| CONVERSIONNET-2458 | Implement option for converting to grayscale PDF | New Feature |
-| CONVERSIONNET-2459 | Implement option for resource optimization when converting to PDF | New Feature |
-| CONVERSIONNET-2471 | Implement option for applying image watermark | New Feature |
-| CONVERSIONNET-2454 | Create HTML 5 compliant markup when converting to html | Improvement |
-| CONVERSIONNET-2432 | Index was outside the bound of the array, when cache is enabled and watermarks are applied | Fix |
+| CONVERSIONNET&#8209;2434 | Specify bookmark level, headings level and expanded level when converting from Words to PDF and XPS | New Feature |
+| CONVERSIONNET&#8209;2457 | Implement option for creating linearized PDF when converting to PDF | New Feature |
+| CONVERSIONNET&#8209;2458 | Implement option for converting to grayscale PDF | New Feature |
+| CONVERSIONNET&#8209;2459 | Implement option for resource optimization when converting to PDF | New Feature |
+| CONVERSIONNET&#8209;2471 | Implement option for applying image watermark | New Feature |
+| CONVERSIONNET&#8209;2454 | Create HTML 5 compliant markup when converting to html | Improvement |
+| CONVERSIONNET&#8209;2432 | Index was outside the bound of the array, when cache is enabled and watermarks are applied | Fix |
 
 ## Public API and Backward Incompatible Changes
 

@@ -23,19 +23,19 @@ There are 10+ features, improvements and bug-fixes in this release, most notable
 
 | Key | Category | Summary |
 | --- | --- | --- |
-| CONVERSIONNET-4683 | Feature | Conversion from image with optical image recognition |
-| CONVERSIONNET-4757 | Feature | Implement conversion from Chm |
-| CONVERSIONNET-4790 | Feature | Auto scale text watermark depending on the length of the string |
-| CONVERSIONNET-3873 | Fix | PDF to HTML conversion issue, parameter is not valid |
-| CONVERSIONNET-4034 | Fix | XPS to XLS conversion issue |
-| CONVERSIONNET-4275 | Fix | Cannot convert particular Xps document |
-| CONVERSIONNET-4315 | Fix | Failed to convert Plt |
-| CONVERSIONNET-4332 | Fix | PDF to DOCX conversion adds a frame around paragraphs |
-| CONVERSIONNET-4674 | Fix | 'Can not save ??? to csv' exception when converting PST to CSV |
-| CONVERSIONNET-4805 | Fix | Incorrect text watermark angle when applying on image |
-| CONVERSIONNET-4811 | Fix | Excel to PDF conversion issue |
-| CONVERSIONNET-4820 | Fix | PDF to DOCX: "Object reference not set to an instance of an object" exception |
-| CONVERSIONNET-4829 | Fix | Wrong pdf layout when converting a specific eml |
+| CONVERSIONNET&#8209;4683 | Feature | Conversion from image with optical image recognition |
+| CONVERSIONNET&#8209;4757 | Feature | Implement conversion from Chm |
+| CONVERSIONNET&#8209;4790 | Feature | Auto scale text watermark depending on the length of the string |
+| CONVERSIONNET&#8209;3873 | Fix | PDF to HTML conversion issue, parameter is not valid |
+| CONVERSIONNET&#8209;4034 | Fix | XPS to XLS conversion issue |
+| CONVERSIONNET&#8209;4275 | Fix | Cannot convert particular Xps document |
+| CONVERSIONNET&#8209;4315 | Fix | Failed to convert Plt |
+| CONVERSIONNET&#8209;4332 | Fix | PDF to DOCX conversion adds a frame around paragraphs |
+| CONVERSIONNET&#8209;4674 | Fix | 'Can not save ??? to csv' exception when converting PST to CSV |
+| CONVERSIONNET&#8209;4805 | Fix | Incorrect text watermark angle when applying on image |
+| CONVERSIONNET&#8209;4811 | Fix | Excel to PDF conversion issue |
+| CONVERSIONNET&#8209;4820 | Fix | PDF to DOCX: "Object reference not set to an instance of an object" exception |
+| CONVERSIONNET&#8209;4829 | Fix | Wrong pdf layout when converting a specific eml |
 
 
 
