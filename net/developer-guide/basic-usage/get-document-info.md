@@ -7,6 +7,7 @@ description: "This article explains how to detect the document's file type and c
 keywords: detect document, calculate pages, detect document file type
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 To get document information use the [`Converter.GetDocumentInfo()`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getdocumentinfo/) method. It returns a [`DocumentInfo`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/documentinfo/) object with common information common for every supported document - format, creation date, size, and page count. 
 
