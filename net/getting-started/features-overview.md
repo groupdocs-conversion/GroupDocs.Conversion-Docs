@@ -13,7 +13,7 @@ toc: True
 ## File conversion
 This article describes the salient features of file conversion API using C#.
 
-GroupDocs.Conversion main feature is the ability to convert any document from a wide list of supported source document formats into any supported target format (check the full list of supported conversions [here]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}})). All these conversions are possible without any additional software installed (like Microsoft Office, Apache Open Office, Adobe Acrobat Reader and others).
+GroupDocs.Conversion main feature is the ability to convert any document from a wide list of supported source document formats into any supported target format (check the full list of [supported formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}})). All these conversions are possible without any additional software installed (like Microsoft Office, Apache Open Office, Adobe Acrobat Reader and others).
 GroupDocs.Conversion provides a flexible set of settings to customize the conversion process to fulfill your needs:
 
 ### Convert specific document page(s)
@@ -41,7 +41,7 @@ You can programmatically obtain the [complete list of possible conversions]({{< 
 
 ### Fonts replacement
 
-It is a common use case when a source document references to some specific fonts that are not present in the environment where you launch your application. GroupDocs.Conversion for .NET provides a solution - you can [substitute missing fonts]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-wordprocessing-document-with-options#specify-font-substitution" >}}) with fonts of your choice that will preserve your document appearance.
+It is a common use case when a source document references some specific fonts that are not present in the environment where you launch your application. GroupDocs.Conversion for .NET provides a solution - you can [substitute missing fonts]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-wordprocessing-document-with-options#specify-font-substitution" >}}) with fonts of your choice that will preserve your document appearance.
 
 ### Watermarking converted document
 
@@ -51,10 +51,10 @@ You can [add a text or an image watermark]({{< ref "conversion/net/developer-gui
 
 GroupDocs.Conversion allows to obtain basic [information about source document]({{< ref "conversion/net/developer-guide/basic-usage/get-document-info.md" >}}) - file type, pages count etc. Dependent on the source file type some format-specific information can be extracted, for example:
 
-- CAD - list of layers and layouts in a CAD document;
-- Email – list of folders contained in an Outlook data file document;
-- PDF – information about document printing restrictions;
-- Project Management – project start and end dates.
+- [CAD]({{< ref "conversion/net/developer-guide/basic-usage/get-document-info.md#cad-drawings" >}}) - list of layers and layouts in a CAD document;
+- [Email]({{< ref "conversion/net/developer-guide/basic-usage/get-document-info.md#emails" >}}) – list of attachments;
+- [PDF]({{< ref "conversion/net/developer-guide/basic-usage/get-document-info.md#pdf-documents" >}}) – title, author, table of contents and more;
+- [Project Management]({{< ref "conversion/net/developer-guide/basic-usage/get-document-info.md#project-management-documents" >}}) – project start and end dates.
 
 ## Load documents from different sources
 
