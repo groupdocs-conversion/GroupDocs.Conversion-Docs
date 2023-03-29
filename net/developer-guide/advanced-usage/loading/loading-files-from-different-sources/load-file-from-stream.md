@@ -56,3 +56,25 @@ private static Stream GetMemoryStream()
     return memStream;
 }
 ```
+
+## Get information about files from a stream
+When loading files from a stream, you may not know beforehand the exact types of files you are receiving. However, to find out this and other information about the source file, you can use the [`Converter.GetDocumentInfo()`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getdocumentinfo/) method, as described in the [Getting document info]({{< ref "conversion/net/developer-guide/basic-usage/get-document-info.md" >}}) article.
+
+For example, the following code displays the format of the source file loaded from a stream:
+```csharp
+public static void Run()
+{
+    // Pass the source stream as parameter
+    using (Converter converter = new Converter(GetFileStream)) 
+    {
+        IDocumentInfo docInfo = converter.GetDocumentInfo();
+        Console.WriteLine("Source file format: {0}", docInfo.Format);
+
+        PdfConvertOptions options = new PdfConvertOptions();
+        converter.Convert("converted.pdf", options);
+    }
+}
+
+// Obtain the stream for the source file
+private static Stream GetFileStream() => File.OpenRead("sample.docx");
+```
