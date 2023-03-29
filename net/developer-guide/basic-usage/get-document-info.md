@@ -9,6 +9,8 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
 ---
+GroupDocs.Conversion provides a standard way of obtaining information about the source document. It works regardless of how the document was loaded: from a disk, a stream, or cloud storage.
+
 To get document information use the [`Converter.GetDocumentInfo()`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getdocumentinfo/) method. It returns a [`DocumentInfo`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/documentinfo/) object with common information common for every supported document - format, creation date, size, and page count. 
 
 To iterate through the document information properties, you can use the `PropertyNames` and `Item` enumerators. The following code snippet demonstrates how to list all the available document information properties:
