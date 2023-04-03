@@ -21,6 +21,21 @@ To enable listening you have to:
 Here is a code that demonstrates how to enable listening for GroupDocs.Conversion events.
 
 ```csharp
+using GroupDocs.Conversion;
+using GroupDocs.Conversion.Options.Convert;
+using GroupDocs.Conversion.Reporting;
+
+IConverterListener listener = new ConverterListener();
+Func<ConverterSettings> settingsFactory = () => new ConverterSettings
+{
+    Listener = listener
+};
+using (Converter converter = new Converter("sample.docx", settingsFactory))
+{
+    PdfConvertOptions options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
+}
+
 public class ConverterListener : IConverterListener
 {
     public void Started()
@@ -35,19 +50,6 @@ public class ConverterListener : IConverterListener
     {
         Console.WriteLine("... conversion completed");
     }
-}
-```
-
-```csharp
-IConverterListener listener = new ConverterListener();
-Contracts.Func<ConverterSettings> settingsFactory = () => new ConverterSettings
-{
-    Listener = listener
-};
-using (Converter converter = new Converter("sample.docx", settingsFactory))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
 }
 ```
 
