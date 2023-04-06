@@ -22,7 +22,6 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 | [DRC](/conversion/net/convert/3d/) | Google Draco |<!--Load--> ✅ |<!--Save--> ✅ |
 | [FBX](/conversion/net/convert/3d/) | FilmBox format |<!--Load--> ✅ |<!--Save--> ✅ |
 | [GLTF](/conversion/net/convert/3d/) | Khronos Group’s glTF |<!--Load--> ✅ |<!--Save--> ✅ |
-| [IXBRL](/conversion/net/convert/3d/) | Inline XBRL. |<!--Load--> ✅ |<!--Save--> ✅ |
 | [JT](/conversion/net/convert/3d/) | Siemens JT File |<!--Load--> ✅ |<!--Save-->  |
 | [OBJ](/conversion/net/convert/3d/) | Wavefront Obj |<!--Load--> ✅ |<!--Save--> ✅ |
 | [PLY](/conversion/net/convert/3d/) | Polygon File Format or Stanford Triangle Format |<!--Load--> ✅ |<!--Save--> ✅ |
@@ -32,7 +31,6 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 | [USDZ](/conversion/net/convert/3d/) | Universal Scene Description Archive |<!--Load--> ✅ |<!--Save-->  |
 | [VRML](/conversion/net/convert/3d/) | The Virtual Reality Modeling Language |<!--Load--> ✅ |<!--Save-->  |
 | [X](/conversion/net/convert/3d/) | DirectX’s X file |<!--Load--> ✅ |<!--Save-->  |
-| [XBRL](/conversion/net/convert/3d/) | Extensible Business Reporting Language. |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## Audio
 | From | Description | Load | Save |
@@ -130,6 +128,16 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 | [TTF](/conversion/net/convert/font/) | TrueType Font |<!--Load--> ✅ |<!--Save--> ✅ |
 | [WOFF](/conversion/net/convert/font/) | Web Open Font Format |<!--Load--> ✅ |<!--Save--> ✅ |
 | [WOFF2](/conversion/net/convert/font/) | Web Open Font Format 2 |<!--Load--> ✅ |<!--Save--> ✅ |
+
+## GIS
+| From | Description | Load | Save |
+| --- | --- | :---: | :---: |
+| [GEOJSON](/conversion/net/convert/gis/) | GeoJSON File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [GML](/conversion/net/convert/gis/) | Geography Markup Language File |<!--Load--> ✅ |<!--Save-->  |
+| [GPX](/conversion/net/convert/gis/) | GPS Exchange File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [KML](/conversion/net/convert/gis/) | Keyhole Markup Language File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [OSM](/conversion/net/convert/gis/) | OpenStreetMap Map File |<!--Load--> ✅ |<!--Save-->  |
+| [TOPOJSON](/conversion/net/convert/gis/) | TopoJSON File |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## Image
 | From | Description | Load | Save |
@@ -277,5 +285,3 @@ This topic lists file formats supported by GroupDocs.Conversion for .NET.
 | [OTT](/conversion/net/convert/wordprocessing/) | OpenDocument Document Template |<!--Load--> ✅ |<!--Save--> ✅ |
 | [RTF](/conversion/net/convert/wordprocessing/) | Rich Text Format File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [TXT](/conversion/net/convert/wordprocessing/) | Plain Text File |<!--Load--> ✅ |<!--Save--> ✅ |
-
-
