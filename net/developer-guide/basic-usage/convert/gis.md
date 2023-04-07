@@ -1,6 +1,6 @@
 ---
-id: convert-cad
-url: conversion/net/convert/cad
+id: convert-gis
+url: conversion/net/convert/gis
 title: Convert GIS formats
 linkTitle: GIS formats
 weight: 80
