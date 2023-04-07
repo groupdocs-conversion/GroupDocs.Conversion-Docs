@@ -82,7 +82,7 @@ using (Converter converter = new Converter("sample.gpx"))
     var options = new GisConvertOptions {
         Format = GisFileType.Kml;
     };
-    // Convert to VDW format
+    // Convert to KML format
     converter.Convert("converted.kml", options);
 }
 ```
