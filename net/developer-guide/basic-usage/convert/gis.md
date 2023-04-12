@@ -4,7 +4,7 @@ url: conversion/net/convert/gis
 title: Convert GIS formats
 linkTitle: GIS formats
 weight: 80
-description: "Following this article you will learn how to convert GIS formats to other formats or another GIS format with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "In this article, you will learn how to convert GIS formats to other formats or another GIS format with GroupDocs.Conversion for .NET."
 keywords: Convert from GIS, Convert to GIS, Convert GIS to GIS
 productName: GroupDocs.Conversion for .NET
 toc: True

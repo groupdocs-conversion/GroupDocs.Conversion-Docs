@@ -4,7 +4,7 @@ url: conversion/net/convert/video
 title: Convert videos
 linkTitle: Videos
 weight: 150
-description: "Following this article you will learn how to convert a video file to another video format with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "In this article, you will learn how to convert a video file to another video format with GroupDocs.Conversion for .NET."
 keywords: Convert AVI to MP4, Convert MP4 to AVI, Convert MOV to AVI, Convert MOV, Convert MP3, Convert WMV
 productName: GroupDocs.Conversion for .NET
 toc: True

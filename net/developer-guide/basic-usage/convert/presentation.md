@@ -13,7 +13,7 @@ structuredData:
     showOrganization: True
     application:    
         name: Convert PPTX in C#    
-        description: Convert PowerPoint to PDF natively with high performance using C# language and GroupDocs.Conversion for .NET APIs
+        description: Convert PowerPoint to PDF and other formats with high performance using C# language and GroupDocs.Conversion for .NET
         productCode: conversion
         productPlatform: net 
     showVideo: True

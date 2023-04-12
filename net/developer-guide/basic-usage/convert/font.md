@@ -4,7 +4,7 @@ url: conversion/net/convert/font
 title: Convert font formats
 linkTitle: Font formats
 weight: 80
-description: "This article demonstrates how you can convert font formats with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "This article demonstrates how you can convert font formats with GroupDocs.Conversion for .NET."
 keywords: Convert fonts
 productName: GroupDocs.Conversion for .NET
 toc: True

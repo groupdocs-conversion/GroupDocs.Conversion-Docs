@@ -4,7 +4,7 @@ url: conversion/net/convert/cad
 title: Convert CAD formats
 linkTitle: CAD formats
 weight: 80
-description: "Following this article you will learn how to convert cad documents to other formats or another cad format with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "In this article, you will learn how to convert CAD documents to other formats or another CAD format with GroupDocs.Conversion for .NET."
 keywords: Convert from CAD, Convert to CAD, Convert CAD to CAD
 productName: GroupDocs.Conversion for .NET
 toc: True

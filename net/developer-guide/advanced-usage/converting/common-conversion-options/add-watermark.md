@@ -3,7 +3,7 @@ id: add-watermark
 url: conversion/net/add-watermark
 title: Add watermark
 weight: 2
-description: "In this article you will learn how to apply watermark to document pages when convert document with GroupDocs.Conversion for .NET API."
+description: "In this article, you will learn how to apply watermark to document pages when convert document with GroupDocs.Conversion for .NET API."
 keywords: Apply watermark to converted document, Watermark document, Add page watermark, Apply watermark, convert document
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
