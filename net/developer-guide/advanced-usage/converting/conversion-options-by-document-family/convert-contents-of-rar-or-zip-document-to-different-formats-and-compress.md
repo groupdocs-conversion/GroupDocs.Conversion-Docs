@@ -1,15 +1,16 @@
 ---
-id: convert-contents-of-rar-or-zip-document-to-different-formats-and-compress
+id: convert-contents-of-rar-or-zip-to-different-formats-and-compress
 url: conversion/net/convert-contents-of-rar-or-zip-document-to-different-formats-and-compress
-title: Convert RAR or ZIP document contents to different formats and compress
+title: Convert contents of RAR or ZIP to different formats and compress
 weight: 12
-description: "Follow this guide and learn how to convert contents of RAR/ZIP documents to different format based on content type using GroupDocs.Conversion for .NET."
+description: "Learn how to convert contents of RAR/ZIP archives to a different format based on content type using GroupDocs.Conversion for .NET."
 keywords: Convert RAR, Convert ZIP
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-GroupDocs.Conversion provides flexible API to control conversion of documents that contains other documents. The following code snippet shows how to convert each content of RAR document to a PDF and put it in a single zip:
+GroupDocs.Conversion provides a flexible API to control the conversion of archives that contain other documents. The following code snippet shows how to convert each constituent
+ file of a RAR archive into a PDF format and then compress them to a single ZIP archive:
 
 ```csharp
 var converter = new Converter();
@@ -28,7 +29,8 @@ converter.Load("sample.rar")
 ```
 
 
-The following code snippet shows how to convert each content of ZIP document to a PDF and put it in a password protected zip:
+The following code snippet shows how to convert each constituent
+ file of a ZIP archive to a PDF format and then compress them as password-protected ZIP archive:
 
 ```csharp
 var converter = new Converter();
