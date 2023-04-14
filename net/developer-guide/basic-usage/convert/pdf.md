@@ -4,7 +4,7 @@ url: conversion/net/convert/pdf
 title: Convert PDF files
 linkTitle: PDFs
 weight: 10
-description: "This article demonstrates how to convert PDF to Word, Excel, PowerPoint and image formats with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "This article demonstrates how to convert PDF to Word, Excel, PowerPoint, image and other formats with GroupDocs.Conversion for .NET."
 keywords: Convert from PDF, Convert to PDF, Convert to PDF/A
 productName: GroupDocs.Conversion for .NET
 toc: True

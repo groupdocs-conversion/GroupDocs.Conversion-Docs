@@ -4,11 +4,11 @@ url: conversion/net/convert-each-email-attachment-to-different-format
 title: Convert each email attachment to different format
 weight: 2
 description: "Follow this guide and learn how to convert email attachments to different format based on attachment type using GroupDocs.Conversion for .NET."
-keywords: Convert email attachments, Convert MSG attachements, Convert EML attachments
+keywords: Convert email attachments, Convert MSG attachments, Convert EML attachments
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-GroupDocs.Conversion provides flexible API to control conversion of documents that contains other documents. The following code snippet shows how to convert each attachment to different format based on attachment type:
+GroupDocs.Conversion provides a flexible API to control the conversion of documents that contains other documents. The following code snippet shows how to convert each attachment to a different format based on the attachment type:
 
 ```csharp
 var index = 1;

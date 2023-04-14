@@ -4,7 +4,7 @@ url: conversion/net/convert/publisher
 title: Convert publisher formats
 linkTitle: Publisher
 weight: 80
-description: "Following this article you will learn how to convert Publisher formats to other formats with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "In this article, you will learn how to convert Publisher formats to other formats with GroupDocs.Conversion for .NET."
 keywords: Convert from Publisher, Convert Publisher
 productName: GroupDocs.Conversion for .NET
 toc: True

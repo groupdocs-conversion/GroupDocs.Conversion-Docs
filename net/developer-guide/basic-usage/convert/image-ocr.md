@@ -4,7 +4,7 @@ url: conversion/net/convert/image-with-ocr
 title: Convert images with optical character recognition
 linkTitle: Images OCR
 weight: 55
-description: "Following this article you will learn how to convert an image file to word or pdf using OCR with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "In this article, you will learn how to convert an image file to text or PDF using OCR with GroupDocs.Conversion for .NET."
 keywords: Convert JPG to DOCX, Convert PNG to PDF, OCR image, Image ocr, 
 productName: GroupDocs.Conversion for .NET
 toc: True

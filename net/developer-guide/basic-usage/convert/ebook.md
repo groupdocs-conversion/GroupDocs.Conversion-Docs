@@ -4,7 +4,7 @@ url: conversion/net/convert/ebook
 title: Convert eBook formats
 linkTitle: eBooks
 weight: 80
-description: "Following this article you will learn how to convert eBook documents with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "In this article, you will learn how to convert eBook formats with GroupDocs.Conversion for .NET."
 keywords: Convert from eBook, Convert to eBook
 productName: GroupDocs.Conversion for .NET
 toc: True

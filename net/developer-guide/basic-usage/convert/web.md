@@ -4,7 +4,7 @@ url: conversion/net/convert/web
 title: Convert web formats
 linkTitle: Web formats
 weight: 60
-description: "Following this article you will learn how to convert documents to HTML format with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "In this article, you will learn how to convert documents to HTML format with GroupDocs.Conversion for .NET."
 keywords: Convert from HTML, Convert to HTML, Convert to HTM, Convert from CHM, Convert from MHTML, Convert to MHTML, Convert from XML, Convert to XML, Convert from JSON, Convert to JSON
 productName: GroupDocs.Conversion for .NET
 toc: True

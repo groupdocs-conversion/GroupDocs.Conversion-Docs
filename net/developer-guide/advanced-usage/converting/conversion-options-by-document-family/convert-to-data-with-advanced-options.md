@@ -1,21 +1,17 @@
 ---
 id: convert-to-data-with-advanced-options
 url: conversion/net/convert-to-data-with-advanced-options
-title: Convert to data (xml/json) with advanced options
+title: Convert to XML or JSON data with advanced options
 weight: 9
-description: "Follow this guide and learn how to convert documents to data (xml/json) using GroupDocs.Conversion for .NET."
+description: "Learn how to convert documents to XML or JSON data using GroupDocs.Conversion for .NET."
 keywords: Convert to JSON, Convert to XML
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-GroupDocs.Conversion provides [DataConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/dataconvertoptions) to give you control over conversion result when convert to data format. Along with [common convert options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}}) [DataConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/dataconvertoptions) has the following additional options:
+GroupDocs.Conversion provides the [WebConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/) class to give you control over the conversion result while converting to JSON, XML or other web data formats. To convert your document to XML or JSON format, just specify the desired format using the [`Format`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/) property.
 
-*   [Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/) - desired result document type. Available options are: *Json, Xml*
+The following code snippet shows how to convert a CSV spreadsheet to JSON format:
 
-Following code snippet shows how to convert to JSON with advanced options.
-
-
-{{< alert style="info" >}}From v22.12 and greater{{< /alert >}}
 ```csharp
 using (Converter converter = new Converter("sample.csv"))
 {
@@ -28,7 +24,7 @@ using (Converter converter = new Converter("sample.csv"))
 ```
 
 
-{{< alert style="info" >}}Before v22.12{{< /alert >}}
+{{< alert style="info" >}}Before version 22.12, the XML and JSON formats were specified using the `DataConvertOptions` class:{{< /alert >}}
 ```csharp
 using (Converter converter = new Converter("sample.csv"))
 {
@@ -40,4 +36,3 @@ using (Converter converter = new Converter("sample.csv"))
 }
 ```
 
-{{< alert style="warning" >}}This functionality is introduced in v21.5{{< /alert >}}

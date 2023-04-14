@@ -3,7 +3,7 @@ id: get-default-convert-options-for-target-format
 url: conversion/net/get-default-convert-options-for-target-format
 title: Get default convert options for a target format
 weight: 1
-description: "Following this article you will learn how to get predefined default convert options for desired target format with GroupDocs.Conversion for .NET API."
+description: "In this article, you will learn how to get predefined default convert options for desired target format with GroupDocs.Conversion for .NET API."
 keywords: Get default convert options, Convert options
 productName: GroupDocs.Conversion for .NET
 hideChildren: False

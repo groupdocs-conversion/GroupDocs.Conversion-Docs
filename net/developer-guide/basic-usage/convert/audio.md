@@ -4,7 +4,7 @@ url: conversion/net/convert/audio
 title: Convert audio formats
 linkTitle: Audios
 weight: 140
-description: "Following this article you will learn how to convert an audio file to another audio format with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "In this article, you will learn how to convert an audio file to another audio format with GroupDocs.Conversion for .NET."
 keywords: Convert MP3 to FLAC, Convert FLAC to MP3, Convert MP3
 productName: GroupDocs.Conversion for .NET
 toc: True

@@ -4,7 +4,7 @@ url: conversion/net/convert/project-management
 title: Convert project management formats
 linkTitle: Project management formats
 weight: 80
-description: "This article demonstrates how you can convert to and from project management formats with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "This article demonstrates how you can convert to and from project management formats with GroupDocs.Conversion for .NET."
 keywords: Convert to Project, Convert from Project
 productName: GroupDocs.Conversion for .NET
 toc: True

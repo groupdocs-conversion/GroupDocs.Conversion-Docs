@@ -4,7 +4,7 @@ url: conversion/net/convert/image
 title: Convert images
 linkTitle: Images
 weight: 50
-description: "Learn this article and check how to convert JPG, PNG, TIFF and other images into various file formats with several lines of C# code"
+description: "In this article, you can learn how to convert JPG, PNG, TIFF and other images into various file formats with several lines of C# code"
 keywords: Convert Image, Convert JPG, Convert PNG, Convert PSD, Convert TIFF
 productName: GroupDocs.Conversion for .NET
 hideChildren: False

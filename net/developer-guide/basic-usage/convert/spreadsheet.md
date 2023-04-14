@@ -12,7 +12,7 @@ structuredData:
     showOrganization: True
     application:    
         name: Convert Excel in C#    
-        description: Convert XLSX to PDF natively with high performance using C# language and GroupDocs.Conversion for .NET APIs
+        description: Convert spreadsheets to PDF and many other formats with high performance using C# language and GroupDocs.Conversion for .NET
         productCode: conversion
         productPlatform: net 
     showVideo: True

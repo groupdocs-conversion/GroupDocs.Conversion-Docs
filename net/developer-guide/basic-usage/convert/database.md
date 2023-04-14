@@ -4,7 +4,7 @@ url: conversion/net/convert/database
 title: Convert database formats
 linkTitle: Database formats
 weight: 80
-description: "This article demonstrates how you can convert to and from database formats with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "This article demonstrates how you can convert to and from database formats with GroupDocs.Conversion for .NET."
 keywords: Convert from Database
 productName: GroupDocs.Conversion for .NET
 toc: True

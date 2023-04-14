@@ -4,7 +4,7 @@ url: conversion/net/convert/page-layout
 title: Convert page layout formats
 linkTitle: Page layout formats
 weight: 80
-description: "This article demonstrates how you can convert to and from page layout formats with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "This article demonstrates how you can convert to and from page layout formats with GroupDocs.Conversion for .NET."
 keywords: Convert to TEX, Convert to LaTex, Convert to Page Description Language, Convert from Page Layout Language, Convert to Page Layout, Convert from Page Layout
 productName: GroupDocs.Conversion for .NET
 toc: True

@@ -4,7 +4,7 @@ url: conversion/net/convert/note
 title: Convert note-taking formats
 linkTitle: Notes
 weight: 80
-description: "Following this article you will learn how to convert Note documents to other formats with a couple of C# code lines and GroupDocs.Conversion for .NET."
+description: "In this article, you will learn how to convert note-taking formats to other formats with GroupDocs.Conversion for .NET."
 keywords: Convert from Notes, Convert from OneNote, Convert OneNote
 productName: GroupDocs.Conversion for .NET
 toc: True
