@@ -10,8 +10,11 @@ hideChildren: False
 toc: True
 ---
 
-This is a nuget only hot fix release. It fixes external dependencies installation during nuget install. Everything else is the same as in [v23.3](/conversion/net/groupdocs-conversion-for-net-23-3-release-notes) major release.
+This is a Nuget-only hotfix release. It fixes external dependencies installation during the Nuget package install.  Everything else is the same as in [v23.3](/conversion/net/groupdocs-conversion-for-net-23-3-release-notes) major release.
 
+## Full list of changes in this release
+
+See [v23.3](/conversion/net/groupdocs-conversion-for-net-23-3-release-notes)
 
 ## Public API and backward incompatible changes
 
