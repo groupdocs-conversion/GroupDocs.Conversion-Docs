@@ -22,14 +22,14 @@ Along with the whole document conversion to the desired target format, it could 
 
 ### Auto-detect source document format
 
-In some cases the source file could be presented in a form of a byte stream, so the file extension is unknown.
-Luckily GroupDocs.Conversion for .NET is smart enough to detect source document format on the fly.
+In some cases, the source file could be presented in a form of a byte stream, so the file extension is unknown.
+Luckily GroupDocs.Conversion for .NET is smart enough to [detect source document format](({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-files-from-different-sources/load-file-from-stream.md#get-information-about-files-from-a-stream" >}})) on the fly.
 
 ### Load source document with extended options
 
 There are lots of modifications that are possible during the file conversion process:
 
-- specify password for [password-protected documents]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-password-protected-document.md" >}});
+- specify a password for [password-protected documents]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-password-protected-document.md" >}});
 - show/hide document [comments]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-wordprocessing-document-with-options.md" >}}) and [annotations]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-pdf-document-with-options.md" >}});
 - [show/hide markup and track changes]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-wordprocessing-document-with-options.md" >}}) for Word documents;
 - [show hidden sheets]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-spreadsheet-document-with-options.md" >}}) when converting Excel files or not;
@@ -37,7 +37,7 @@ There are lots of modifications that are possible during the file conversion pro
 
 ### Obtain all supported conversion formats list
 
-You can programmatically obtain the [complete list of possible conversions]({{< ref "conversion/net/developer-guide/advanced-usage/loading/get-default-load-options-for-source-document.md" >}}) that are supported by GroupDocs.Conversion for .NET library. Also, it's possible to get [allowed conversions]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/get-default-convert-options-for-target-format.md" >}}) for the specific file format.
+You can programmatically obtain the [complete list of possible conversions]({{< ref "conversion/net/developer-guide/basic-usage/get-possible-conversions.md" >}}) that are supported by GroupDocs.Conversion for .NET library. Also, it's possible to get [allowed conversions]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/get-default-convert-options-for-target-format.md" >}}) for the specific file format.
 
 ### Fonts replacement
 
