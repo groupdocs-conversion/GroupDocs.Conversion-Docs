@@ -1,7 +1,7 @@
 ---
 id: system-requirements
 url: conversion/java/system-requirements
-title: System Requirements
+title: System requirements
 weight: 3
 description: "GroupDocs.Conversion for Java does not require any external software or third party tool to be installed."
 keywords: conversion
@@ -9,18 +9,24 @@ productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
 ---
-## Overview
+{{< alert style="info" >}}
 
-GroupDocs.Conversion for Java does not require any external software or third party tool to be installed. Just follow one of the way as described in [Development Environment Installation and Configuration]({{< ref "conversion/net/getting-started/installation.md" >}}).
+GroupDocs.Conversion for Java does not require any external software or third-party tool to be installed. To install it, just follow one of the ways described in the [Installation]({{< ref "conversion/java/getting-started/installation.md" >}}) section.
+
+{{< /alert >}}
 
 ## Supported Operating Systems
 
-GroupDocs.Conversion for Java supports any 32-bit or 64-bit operating system where Java or Mono framework is installed including, but not limited to:
+GroupDocs.Conversion for Java supports any 32-bit or 64-bit operating system where the Java framework is installed including, but not limited to:
 
 ### Windows
 
-* J2SE 8.0 (1.8)
-* or above (*for example Java 10*)
+*   Microsoft Windows Server 2003 and later
+*   Microsoft Windows XP (x64, x86)
+*   Microsoft Windows Vista (x64, x86)
+*   Microsoft Windows 7, 8, 8.1 (x64, x86)
+*   Microsoft Windows 10 (x64, x86)
+*   Microsoft Windows 11 (x64)
 
 ### Linux
 
@@ -29,6 +35,10 @@ GroupDocs.Conversion for Java supports any 32-bit or 64-bit operating system wh
 ### Mac
 
 * Mac OS X
+
+## Supported Frameworks
+
+* Java 8 and higher
 
 ## Development Environments
 
