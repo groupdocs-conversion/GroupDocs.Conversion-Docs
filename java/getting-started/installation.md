@@ -18,26 +18,20 @@ All Java packages are hosted at [GroupDocs Artifact Repository](https://reposit
 
 First, you need to specify the repository configuration/location in your Maven `pom.xml` file as follows:
 
-{{< tabs "example1">}}
-{{< tab "pom.xml" >}}
 ```xml
 <repositories>
-	<repository>
-		<id>GroupDocs Artifact Repository</id>
-        	<name>GroupDocs Artifact Repository</name>
-        	<url>https://releases.groupdocs.com/java/repo/</url>
-	</repository>
+    <repository>
+        <id>GroupDocs Artifact Repository</id>
+        <name>GroupDocs Artifact Repository</name>
+        <url>https://releases.groupdocs.com/java/repo/</url>
+    </repository>
 </repositories>
 ```
-{{< /tab >}}
-{{< /tabs >}}
 
 ### Add GroupDocs.Conversion as a dependency
 
 Then define GroupDocs.Conversion for Java API dependency in your `pom.xml` file as follows:
 
-{{< tabs "example2">}}
-{{< tab "pom.xml" >}}
 ```xml
 <dependencies>
     <dependency>
@@ -47,5 +41,4 @@ Then define GroupDocs.Conversion for Java API dependency in your `pom.xml` fil
     </dependency>
 </dependencies>
 ```
-{{< /tab >}}
-{{< /tabs >}}
+
