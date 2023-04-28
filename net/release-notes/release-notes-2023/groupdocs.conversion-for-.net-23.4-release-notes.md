@@ -2,7 +2,7 @@
 id: groupdocs-conversion-for-net-23-4-release-notes
 url: conversion/net/groupdocs-conversion-for-net-23-4-release-notes
 title: GroupDocs.Conversion for .NET 23.4 Release Notes
-weight: 21
+weight: 20
 description: "Features and enhancements introduced in GroupDocs.Conversion for .NET 23.4."
 keywords: 
 productName: GroupDocs.Conversion for .NET
