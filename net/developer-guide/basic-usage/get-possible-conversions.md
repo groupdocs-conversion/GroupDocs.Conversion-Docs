@@ -7,19 +7,20 @@ description: "This article explains how to obtain supported conversions when con
 keywords: obtain supported conversions
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
-There are multiple target formats available when convert documents with **[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net)** and you can always refer to [supported document formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}}) documentation for more details.  
-But what about getting possible conversions programmatically - for example it's needed to allow end user to select target format for a specific document or it's required to display the complete list of supported formats?  
-Fortunately GroupDocs.Conversion API provides several ways to achieve this, so please check available options below.
+There are multiple target formats available when converting documents with **[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net)** and you can always refer to [supported document formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}}) documentation for more details.  
+But what about getting possible conversions programmatically? For example, it could allow end-users to select the target format for a specific document or to display the complete list of supported formats. 
+Fortunately GroupDocs.Conversion API provides several ways to achieve this, so please check the available options below.
 
-## Get possible conversions for specific document
+## Get possible conversions for a specific document
 
 When you need to know possible conversions for a provided source document you can do this by following the below steps:
 
-*   Create new instance of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class by passing source document path as constructor's parameter
-*   Call [GetPossibleConversions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getpossibleconversions) method of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) object
+*   Create a new instance of the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class by passing the source document path as the constructor's parameter.
+*   Call the [GetPossibleConversions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getpossibleconversions) method of the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) object.
 
-[The PossibleConversions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/possibleconversions) collection returned as method result will contain a complete list of possible conversions for source document type.
+The method will return the [PossibleConversions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/possibleconversions) collection with a complete list of possible conversions for the source document type.
 
 The following code sample demonstrates how to get possible conversions of the source document:
 
@@ -31,7 +32,9 @@ using (Converter converter = new Converter("sample.docx"))
 
     foreach (var conversion in conversions.All)
     {
-        Console.WriteLine("\t {0} as {1} conversion.", conversion.Format, conversion.IsPrimary ? "primary" : "secondary");
+        Console.WriteLine("\t {0} as {1} conversion.",
+            conversion.Format,
+            conversion.IsPrimary ? "primary" : "secondary");
     }    
 }
 ```
@@ -44,7 +47,9 @@ Console.WriteLine("The source document is of type {0} and could be converted to:
 
 foreach (var conversion in conversions.All)
 {
-     Console.WriteLine("\t {0} as {1} conversion.", conversion.Format, conversion.IsPrimary ? "primary" : "secondary");
+     Console.WriteLine("\t {0} as {1} conversion.",
+        conversion.Format,
+        conversion.IsPrimary ? "primary" : "secondary");
 }    
 
 ```
@@ -54,7 +59,7 @@ foreach (var conversion in conversions.All)
 
 ## Get all available conversions 
 
-If it is required to programmatically obtain collection of all supported conversions it is as easy as calling static [GetAllPossibleConversions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getallpossibleconversions) method of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class.
+If it is required to programmatically obtain a collection of all supported conversions it is as easy as calling a static [GetAllPossibleConversions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getallpossibleconversions) method of the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class.
 
 The following code sample demonstrates how to get all possible conversions:
 
@@ -63,13 +68,11 @@ var allPossibleConversions = Converter.GetAllPossibleConversions();
 foreach (var possibleConversions in allPossibleConversions)
 {
     Console.WriteLine($"Source format: {possibleConversions.Source.Description}");
-    foreach (var primary in possibleConversions.Primary)
+    foreach (var conversion in possibleConversions.All)
     {
-        Console.WriteLine($"\t...can be converted to {primary.Description}");
-    }
-    foreach (var secondary in possibleConversions.Secondary)
-    {
-        Console.WriteLine($"\t...can be converted to {secondary.Description}");
+        Console.WriteLine("\t...can be converted to {0} format as {1} conversion.",
+            conversion.Format,
+            conversion.IsPrimary ? "primary" : "secondary");        
     }
 }
 ```
