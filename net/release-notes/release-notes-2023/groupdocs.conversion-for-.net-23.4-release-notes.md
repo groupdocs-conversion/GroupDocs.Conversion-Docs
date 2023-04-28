@@ -35,48 +35,8 @@ There are 5+ features, improvements and bug-fixes in this release.
 * Conversions to Pcl format.
 * Improved Diagram to Spreadsheet conversions.
 
-### Conversions of GIS formats
-Support for GIS (Geographic Information System) formats was added. You can now [convert GIS format]({{< ref "conversion/net/developer-guide/basic-usage/convert/gis.md" >}}) to another GIS format, or another format family - PDF, Markup, Image, Word-processing, Spreadsheet or Presentation. 
-For example, the following code sample demonstrates how to convert a GPX file to KML:
-
-```csharp
-// Load the source GPX file
-using (Converter converter = new Converter("sample.gpx"))
-{
-    // Set the convert options for KML format
-    var options = new GisConvertOptions {
-        Format = GisFileType.Kml;
-    };
-    // Convert to KML format
-    converter.Convert("converted.kml", options);
-}
-```
-
-### Improved conversion and compression behavior
-
-Now is possible to convert a document to images by page and compress all generated pages into an archive.
-For example, to convert a PDF to images by page and compress them into an archive you could use the following snippet:
-
-```csharp
-var converter = new Converter();
-
-converter.Load("sample.pdf")
-    .ConvertByPageTo(p => new MemoryStream()).WithOptions(new ImageConvertOptions
-    {
-        Format = ImageFileType.Png
-    })
-    .Compress(new CompressionConvertOptions { Format = CompressionFileType.Zip }).OnCompressionCompleted(
-        compressedStream =>
-        {
-            using (var fs = new FileStream("converted.zip", FileMode.Create))
-            {
-                compressedStream.CopyTo(fs);
-            }
-        })
-    .Convert();
-```
 
 ## Public API and backward incompatible changes
 
-1. Introduced new [`GisLoadOptions`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/gisloadoptions/), [`GisConvertOptions`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/gisconvertoptions/) and [`GisFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/gisfiletype/) classes.
-2. Removed obsolete file types that were marked for removal in v23.3.
+1. Introduced new [`FinanceLoadOptions`](https://reference2.groupdocs.com/conversion/net/groupdocs.conversion.options.load/financeloadoptions/), [`FinanceConvertOptions`](https://reference2.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/financeconvertoptions/) and [`FinanceFileType`](https://reference2.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/financefiletype/) classes.
+
