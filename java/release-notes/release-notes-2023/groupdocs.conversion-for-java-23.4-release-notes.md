@@ -91,7 +91,7 @@ try (Converter converter = new Converter("sample.pdf")) {
 ```
 
 ### Extracting audio track from video formats
-Extracting audio track from video is similar to [converting video]({{< ref "conversion/java/developer-guide/basic-usage/convert/video.md" >}}), however you need to set the [`ExtractAudioOnly`](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property to `true` and specify the desired output format in the [`AudioFormat`](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property:
+Extracting audio track from video is similar to [converting video]({{< ref "conversion/net/developer-guide/basic-usage/convert/video.md" >}}), however you need to set the [`ExtractAudioOnly`](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property to `true` and specify the desired output format in the [`AudioFormat`](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property:
 
 ```java
 // Load the source AVI file
@@ -109,7 +109,7 @@ try(Converter converter = new Converter("sample_with_audio.avi", () -> loadOptio
 ```
 
 ### Conversion between font formats
-Now you can [convert your font file]({{< ref "conversion/java/developer-guide/basic-usage/convert/font" >}}) from one format into another.
+Now you can [convert your font file](https://docs.groupdocs.com/conversion/net/convert/font/) from one format into another.
 For example CFF to TTF conversion code snippet will look like this:
 
 ```java
@@ -139,7 +139,7 @@ try (Converter converter = new Converter("sample.pdf")) {
 ```
 
 ### Specify converted worksheets by their indexes
-When [converting spreadsheets]({{< ref "conversion/java/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-spreadsheet-document-with-options.md" >}}), you can now specify the desired sheets by their zero-based index numbers. To do this use the `SheetIndexes` property of the [SpreadsheetLoadOptions](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.load/spreadsheetloadoptions) class:
+When [converting spreadsheets](https://docs.groupdocs.com/conversion/java/load-spreadsheet-document-with-options/), you can now specify the desired sheets by their zero-based index numbers. To do this use the `SheetIndexes` property of the [SpreadsheetLoadOptions](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.load/spreadsheetloadoptions) class:
 
 ```java
 LoadOptionsProvider getLoadOptions = () -> {
