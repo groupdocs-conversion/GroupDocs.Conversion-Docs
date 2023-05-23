@@ -38,5 +38,4 @@ There are 5+ features, improvements and bug-fixes in this release.
 
 ## Public API and backward incompatible changes
 
-1. Introduced new [`FinanceLoadOptions`](https://reference2.groupdocs.com/conversion/net/groupdocs.conversion.options.load/financeloadoptions/), [`FinanceConvertOptions`](https://reference2.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/financeconvertoptions/) and [`FinanceFileType`](https://reference2.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/financefiletype/) classes.
-
+1. Introduced new [`FinanceLoadOptions`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/financeloadoptions/), [`FinanceConvertOptions`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/financeconvertoptions/) and [`FinanceFileType`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/financefiletype/) classes.
