@@ -12,7 +12,7 @@ hideChildren: False
 
 ## Major Features
 
-There are 10+ features, improvements and bug-fixes in this release, most notable are:
+There are 10+ features, improvements and bug-fixes in this release, the most notable are:
 
 * Conversion from PUB (Microsoft Publisher) file format to PDF format
 * Improved performance of PDF to XLSM conversion
@@ -21,7 +21,7 @@ There are 10+ features, improvements and bug-fixes in this release, most notable
 * Improved document types classification
 * Improved conversion from composite documents
 * Conversions between font formats
-* Improved conversions from ICO format
+* Improved conversions from the ICO format
 * Improved spreadsheet to wordprocessing document conversions
 * Improved logging during conversion
 * Conversions to MOBI format.
@@ -91,7 +91,7 @@ try (Converter converter = new Converter("sample.pdf")) {
 ```
 
 ### Extracting audio track from video formats
-Extracting audio track from video is similar to [converting video]({{< ref "conversion/net/developer-guide/basic-usage/convert/video.md" >}}), however you need to set the [`ExtractAudioOnly`](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property to `true` and specify the desired output format in the [`AudioFormat`](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property:
+Extracting audio track from a video is similar to [converting video]({{< ref "conversion/net/developer-guide/basic-usage/convert/video.md" >}}), however, you need to set the [`ExtractAudioOnly`](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property to `true` and specify the desired output format in the [`AudioFormat`](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property:
 
 ```java
 // Load the source AVI file
@@ -110,7 +110,7 @@ try(Converter converter = new Converter("sample_with_audio.avi", () -> loadOptio
 
 ### Conversion between font formats
 Now you can [convert your font file](https://docs.groupdocs.com/conversion/net/convert/font/) from one format into another.
-For example CFF to TTF conversion code snippet will look like this:
+For example, CFF to TTF conversion code snippet will look like this:
 
 ```java
 
@@ -184,15 +184,13 @@ public class PersonalStorageFolderInfo {
 
     before v23.4
 
-```java
+    ```java
     public List<String> getFolders();
- ```
-
+    ```
     from v23.4 and greater
-
-```java
+    ```java
     public List<PersonalStorageFolderInfo> getFolders();
-```
+    ```
 
 9. Introduced new `SheetIndexes` property of the `SpreadsheetLoadOptions` class:
 

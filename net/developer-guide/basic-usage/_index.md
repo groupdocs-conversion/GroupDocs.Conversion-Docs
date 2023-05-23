@@ -10,5 +10,6 @@ hideChildren: False
 structuredData:
     showOrganization: True
 ---
-Convert documents fast and easy with our intuitive and powerful API just with few lines of code.
-Let’s review common usage scenarios when source document is stored at a local drive and you want to convert it to some other format.
+Convert documents fast and easily with our intuitive and powerful API with just a few lines of code.
+
+Let’s review common usage scenarios when the source file is stored on a local drive and you want to convert it to some other format.
