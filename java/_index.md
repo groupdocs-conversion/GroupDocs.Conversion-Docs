@@ -58,7 +58,7 @@ Native Java API to accurately convert documents & image file formats in any type
 </ul>
 <p>WHAT'S NEW?</p>
 <ul>
-	<li><a href='{{< ref "conversion/java/release-notes" >}}'>GroupDocs.Conversion for Java Release Notes</a></li>
+	<li><a href="https://releases.groupdocs.com/conversion/java/release-notes/">GroupDocs.Conversion for Java Release Notes</a></li>
 </ul>
 <p>TECHNICAL SUPPORT</p>
 <ul>

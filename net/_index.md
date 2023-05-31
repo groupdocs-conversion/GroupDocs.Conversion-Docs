@@ -43,7 +43,7 @@ Native .NET API to accurately convert documents & image file formats in any type
 	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/convert/presentation" >}}'>Convert PowerPoint</a></li>
 	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/convert/image" >}}'>Convert images</a></li>
 	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/convert/web" >}}'>Convert HTML</a></li>
-	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/convert/audio" >}}'>Convert audio</a></li>	
+	<li><a href='{{< ref "conversion/net/developer-guide/basic-usage/convert/audio" >}}'>Convert audio</a></li>
 </ul>
 <p>HOW-TO GUIDES</p>
 <ul>
@@ -67,11 +67,11 @@ Native .NET API to accurately convert documents & image file formats in any type
 </ul>
 <p>VERSION HISTORY</p>
 <ul>
-	<li><a href='{{< ref "conversion/net/release-notes" >}}'>GroupDocs.Conversion for .NET Release Notes</a></li>
+	<li><a href="https://releases.groupdocs.com/conversion/net/release-notes/">GroupDocs.Conversion for .NET Release Notes</a></li>
 </ul>
 <p>TECHNICAL SUPPORT</p>
 <ul>
 	<li><a href="https://forum.groupdocs.com">Free Support Forum for GroupDocs Products</a></li>
 	<li><a href="https://helpdesk.groupdocs.com">Paid Support Helpdesk for GroupDocs Products</a></li>
 </ul>
-{{< /columns >}}	
+{{< /columns >}}
