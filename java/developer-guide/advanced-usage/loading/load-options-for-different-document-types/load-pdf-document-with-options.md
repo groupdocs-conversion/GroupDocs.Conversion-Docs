@@ -4,21 +4,21 @@ url: conversion/java/load-pdf-document-with-options
 title: Load PDF document with options
 weight: 5
 description: "Learn this article and check how to load and convert PDF documents with advanced options using GroupDocs.Conversion for Java API."
-keywords: Load document, Load and convert PDF document, Load and converi EPUB document, Load and convert XPS document
+keywords: Load document, Load and convert PDF document
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-GroupDocs.Conversion provides [PdfLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PdfLoadOptions) to give you control over how source PDF document will be processed. The following options could be set:
+GroupDocs.Conversion provides [PdfLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PdfLoadOptions) to give you control over how the source PDF document will be processed. The following options could be set:
 
-*   **[setFormat](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PdfLoadOptions#setFormat(com.groupdocs.conversion.filetypes.PdfFileType))** -  the document type is auto detected during loading, however you can specify explicitly the type of the source document. Available options are: *Pdf, Epub, Xps, Tex, Ps, Pcl*
-*   **[setRemoveEmbeddedFiles](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PdfLoadOptions#getRemoveEmbeddedFiles())** -  specifies to remove embedded files from source document during conversion       
-*   **[setPassword](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PdfLoadOptions#setPassword(java.lang.String))** -  password to unlock protected document
-*   **[setHidePdfAnnotations](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PdfLoadOptions#setHidePdfAnnotations(boolean))** -  specifies that annotations in the source document must be hidden
-*   **[setFlattenAllFields](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PdfLoadOptions#setFlattenAllFields(boolean))** - specifies that all fields in the source document will be flatten during conversion
+*   **[setFormat](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PdfLoadOptions#setFormat(com.groupdocs.conversion.filetypes.PdfFileType))** -  the document type is auto-detected during loading, however, you can specify explicitly the type of the source document. Available options are: *Pdf, Epub, Xps, Tex, Ps, Pcl*
+*   **[setRemoveEmbeddedFiles](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PdfLoadOptions#getRemoveEmbeddedFiles())** -  whether to remove the embedded files from the source document during the conversion
+*   **[setPassword](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PdfLoadOptions#setPassword(java.lang.String))** - a password to unlock the protected document
+*   **[setHidePdfAnnotations](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PdfLoadOptions#setHidePdfAnnotations(boolean))** -  specifies that annotations in the source document should be hidden
+*   **[setFlattenAllFields](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PdfLoadOptions#setFlattenAllFields(boolean))** - specifies that all fields in the source document should be flattened during the conversion
 
 ### Flatten all fields
 
-The following code sample shows how to convert PDF document and flatten all fields:
+The following code sample shows how to convert a PDF document and flatten all fields:
 
 ```java
  
@@ -32,7 +32,7 @@ converter.convert("converted.docx", options);
 
 ### Hide annotations
 
-The following code sample shows how to convert PDF document and hide annotations:
+The following code sample shows how to convert a PDF document and hide annotations:
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();
@@ -45,7 +45,7 @@ converter.convert("converted.docx", options);
 
 ### Remove embedded files
 
-The following code sample shows how to convert PDF document and remove embedded files:
+The following code sample shows how to convert a PDF document and remove embedded files:
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();

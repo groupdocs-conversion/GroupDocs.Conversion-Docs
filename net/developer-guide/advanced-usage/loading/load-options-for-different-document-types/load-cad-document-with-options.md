@@ -8,16 +8,16 @@ keywords: Load document, Load CAD document
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [CadLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions) to give you control over how source CAD document will be processed. The following options could be set:
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [CadLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions) to give you control over how the source CAD document will be processed. The following options could be set:
 
-*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/format)** - the source document type is auto detected, but you could set the source document format explicitly with this property. Available options are: Dxf, Dwg, Dgn, Dwf, Stl, Ifc, Plt, Igs, Dwt
-*   **[Width](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/width)** - sets desired page width 
-*   **[Height](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/height)** - sets desired page height
+*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/format)** - the source document type is auto-detected, but you could set the source document format explicitly with this property. Available options are: Dxf, Dwg, Dgn, Dwf, Stl, Ifc, Plt, Igs, Dwt
+*   **[Width](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/width)** - sets the desired page width 
+*   **[Height](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/height)** - sets the desired page height
 *   **[LayoutNames](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/layoutnames)** - specifies which CAD layout to be converted
 
 ### Specify layouts to be converted
 
-The following code sample shows how to convert cad document and convert only certain layouts:
+The following code sample shows how to convert a CAD document and convert only certain layouts:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
@@ -33,7 +33,7 @@ using (Converter converter = new Converter("with_layers_and_layouts.dwg", getLoa
 
 ### Specify width and height
 
-The following code sample shows how to convert cad document and specify width and height
+The following code sample shows how to convert a CAD document and specify the width and height:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new CadLoadOptions

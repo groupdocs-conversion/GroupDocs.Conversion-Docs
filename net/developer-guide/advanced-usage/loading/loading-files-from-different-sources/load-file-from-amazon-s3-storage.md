@@ -3,7 +3,7 @@ id: load-file-from-amazon-s3-storage
 url: conversion/net/load-file-from-amazon-s3-storage
 title: Load file from Amazon S3 storage
 weight: 5
-description: " This article demonstrates how to convert file stored in Amazon S3 storage using GroupDocs.Conversion for .NET API."
+description: "This article demonstrates how to convert file stored in Amazon S3 storage using GroupDocs.Conversion for .NET API."
 keywords: Convert file from Amazon S3 storage, Convert file
 productName: GroupDocs.Conversion for .NET
 hideChildren: False

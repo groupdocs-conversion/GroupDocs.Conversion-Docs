@@ -2,13 +2,13 @@
 id: load-document-from-azure-blob-storage
 url: conversion/java/load-document-from-azure-blob-storage
 title: Load document from Azure Blob Storage
-weight: 2
+weight: 6
 description: "This article demonstrates how to convert document stored in Azure Blob storage using GroupDocs.Conversion for Java API."
 keywords: Convert document from Azure Blob storage, Convert file
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-Following code snippet shows how to convert a document from Azure Blob Storage:
+The following code snippet shows how to convert a document from Azure Blob Storage:
 
 ```java
   package com.groupdocs.conversion.examples.advanced_usage.loading.loading_documents_from_different_sources;

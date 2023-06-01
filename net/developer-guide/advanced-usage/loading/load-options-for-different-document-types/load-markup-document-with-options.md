@@ -8,12 +8,12 @@ keywords: Load document, Load HTML document
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-GroupDocs.Conversion provides [WebLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/webloadoptions) to give you control over how source Note document will be processed. The following options could be set:
-*   **[PageNumbering](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/webloadoptions/pagenumbering)** - enable or disable generation of page numbering in converted document. Default: false  
+GroupDocs.Conversion provides [WebLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/webloadoptions) to give you control over how the source markup document will be processed. The following options could be set:
+*   **[PageNumbering](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/webloadoptions/pagenumbering)** - Whether to generate page numbers for the converted document. Default: false  
 
 ## Enable page numbering when converting to Wordprocessing
 
-The following code sample shows how to convert Note document and specify font substitution for missing fonts:
+The following code sample shows how to convert a markup document and insert page numbering:
 
 
 {{< alert style="info" >}}From v22.12 and greater{{< /alert >}}

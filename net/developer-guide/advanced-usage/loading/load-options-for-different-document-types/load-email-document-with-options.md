@@ -8,9 +8,9 @@ keywords: Load document, Load Email document
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [EmailLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions) to give you control over how source email document will be processed. The following options could be set:
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [EmailLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions) to give you control over how the source email document will be processed. The following options could be set:
 
-*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/format)** - the document type is auto detected during loading, however you can specify explicitly the type of the source email document. Available options are: Msg, Eml, Emlx, Pst, Ost, Vcf, Mht 
+*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/format)** - the document type is auto-detected during loading, however, you can specify explicitly the type of the source email document. Available options are: Msg, Eml, Emlx, Pst, Ost, Vcf, Mht 
 *   **[DisplayHeader](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayheader)** - option to display or hide the email header  
 *   **[DisplayFromEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayfromemailaddress)** - option to display or hide "from" email address
 *   **[DisplayEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayemailaddress)** - option to display or hide email address
@@ -19,14 +19,14 @@ hideChildren: False
 *   **[DisplayBccEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displaybccemailaddress)** - option to display or hide "Bcc" email address
 *   **[ConvertOwned ](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/convertowned)** - controls whether the owned documents in the documents container must be converted
 *   **[ConvertOwner](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/convertowner)** - controls whether the documents container itself must be converted If this property is true the documents container will be the first converted document
-*   **[Depth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/depth)** - controls how many levels in depth to perform conversion
+*   **[Depth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/depth)** - controls how many levels in depth to perform the conversion
 *   **[FieldTextMap](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/fieldtextmap)** - the mapping between email message [EmailField](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailfield) and field text representation
-*   **[PreserveOriginalDate](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/preserveoriginaldate)** - defines whether need to keep original date header string in mail message when saving or not (Default value is true)
-*   **[TimeZoneOffset](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/timezoneoffset)** - gets or sets the Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the localtime and UTC.
+*   **[PreserveOriginalDate](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/preserveoriginaldate)** - defines whether to keep the original date header string in the mail message when saving (Default value is true)
+*   **[TimeZoneOffset](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/timezoneoffset)** - gets or sets the Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the local time and UTC.
 
 ### Control fields visibility
 
-The following code sample shows how to convert Email document and control the fields visibility:
+The following code sample shows how to convert an Email document and control the visibility of the fields:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
@@ -47,7 +47,7 @@ using (Converter converter = new Converter("sample.msg", getLoadOptions))
 
 ### Converting email attachments
 
-The following code sample shows how to convert Email document and all attachments:
+The following code sample shows how to convert an Email document and all attachments:
 
 ```csharp
 var source = "sample-with-attachment.eml";
@@ -70,7 +70,7 @@ using (var converter = new Converter(source, () => loadOptions))
 
 ### Localize email fields captions
 
-The following code sample shows how to convert Email document and localize email fields
+The following code sample shows how to convert an Email document and localize the Email fields
 
 ```csharp
 var source = "sample.eml";
@@ -96,7 +96,7 @@ using (var converter = new Converter(source, () => loadOptions))
 
 ### Control date/time format
 
-The following code sample shows how to convert Email document and modify date/time format
+The following code sample shows how to convert an Email document and modify the date/time format
 
 ```csharp
 var source = "sample.eml";
