@@ -8,9 +8,9 @@ keywords: Load document, Load Email document
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-GroupDocs.Conversion provides [EmailLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions) to give you control over how source email document will be processed. The following options could be set:
+GroupDocs.Conversion provides [EmailLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions) to give you control over how the source email document will be processed. The following options could be set:
 
-*   **[**set**Format](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions#setFormat(com.groupdocs.conversion.filetypes.EmailFileType))** -  the document type is auto detected during loading, however you can specify explicitly the type of the source email document. Available options are: Msg, Eml, Emlx, Pst, Ost, Vcf, Mht 
+*   **[**set**Format](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions#setFormat(com.groupdocs.conversion.filetypes.EmailFileType))** -  the document type is auto-detected during loading, however, you can specify explicitly the type of the source email document. Available options are: Msg, Eml, Emlx, Pst, Ost, Vcf, Mht 
 *   **[**setD**isplayHeader](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions#setDisplayHeader(boolean))** -  option to display or hide the email header      
 *   **[**setD**isplayFromEmailAddress](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions#setDisplayFromEmailAddress(boolean))** -  option to display or hide "from" email address
 *   **[**setD**isplayEmailAddress](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions#setDisplayEmailAddress(boolean))** - option to display or hide email address
@@ -20,7 +20,7 @@ GroupDocs.Conversion provides [EmailLoadOptions](https://reference.groupdocs.co
 
 ### Control fields visibility
 
-The following code sample shows how to convert Email document and control the fields visibility:
+The following code sample shows how to convert an Email document and control the visibility of the fields:
 
 ```java
 EmailLoadOptions loadOptions = new EmailLoadOptions();
@@ -38,7 +38,7 @@ converter.convert("converted.pdf", options);
 
 ### Converting email attachments
 
-The following code sample shows how to convert Email document and all attachments:
+The following code sample shows how to convert an Email document and all attachments:
 
 ```java
 EmailLoadOptions emailLoadOptions = new EmailLoadOptions();

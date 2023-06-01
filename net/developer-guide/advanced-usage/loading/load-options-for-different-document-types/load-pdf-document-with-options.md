@@ -8,17 +8,17 @@ keywords: Load document, Load and convert PDF document, Load and convert EPUB do
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [PdfLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions) to give you control over how source PDF document will be processed. The following options could be set:
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [PdfLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions) to give you control over how the source PDF document will be processed. The following options could be set:
 
-*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/format)** - the document type is auto detected during loading, however you can specify explicitly the type of the source document. Available options are: *Pdf, Epub, Xps, Tex, Ps, Pcl*
-*   **[RemoveEmbeddedFiles](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/removeembeddedfiles)** - specifies to remove embedded files from source document during conversion
-*   **[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/password)** - password to unlock protected document
-*   **[HidePdfAnnotations](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/hidepdfannotations)** -  specifies that annotations in the source document must be hidden
-*   **[FlattenAllFields](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/flattenallfields)** - specifies that all fields in the source document will be flatten during conversion
+*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/format)** - the document type is auto-detected during loading, however, you can specify explicitly the type of the source document. Available options are: *Pdf, Epub, Xps, Tex, Ps, Pcl*
+*   **[RemoveEmbeddedFiles](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/removeembeddedfiles)** - whether to remove the embedded files from the source document during the conversion
+*   **[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/password)** - a password to unlock the protected document
+*   **[HidePdfAnnotations](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/hidepdfannotations)** -  specifies that annotations in the source document should be hidden
+*   **[FlattenAllFields](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/flattenallfields)** - specifies that all fields in the source document should be flattened during conversion
 
 ### Flatten all fields
 
-The following code sample shows how to convert PDF document and flatten all fields:
+The following code sample shows how to convert a PDF document and flatten all fields:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
@@ -34,7 +34,7 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 
 ### Hide annotations
 
-The following code sample shows how to convert PDF document and hide annotations:
+The following code sample shows how to convert a PDF document and hide annotations:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
@@ -50,7 +50,7 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 
 ### Remove embedded files
 
-The following code sample shows how to convert PDF document and remove embedded files:
+The following code sample shows how to convert a PDF document and remove embedded files:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
@@ -66,7 +66,7 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 
 ### Set Default Font
 
-GroupDocs.Conversion for .NET allows you to set a default font name when a font is not available in the document. You can use **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/defaultfont)** property of **[PdfLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions)** class to set the default font name. In case **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/defaultfont)** is not set the Times New Roman font will be used. The following code snippet shows how to set a default font name when converting from PDF into to wordprocessing document:
+GroupDocs.Conversion for .NET allows you to set a default font name when a font is not available in the document. You can use the **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/defaultfont)** property of the **[PdfLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions)** class to set the default font name. In case the **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/defaultfont)** property is not set the Times New Roman font will be used. The following code snippet shows how to set a default font name when converting from PDF into to wordprocessing document:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
@@ -82,7 +82,7 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 
 ### Specify font substitution
 
-The following code sample shows how to convert Pdf document and specify font substitution for missing fonts:
+The following code sample shows how to convert a PDF document and specify font substitution for missing fonts:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions

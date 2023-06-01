@@ -8,15 +8,15 @@ keywords: XML to Excel, XML to spreadsheet, XML as data source to XLSX
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-GroupDocs.Conversion provides [XmlLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions) to give you control over how source xml document will be processed. The following options could be set: 
+GroupDocs.Conversion provides [XmlLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions) to give you control over how the source XML document will be processed. The following options could be set: 
 
 *   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/loadoptions/format)** - input document file type
-*   **[UseAsDataSource](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions/useasdatasource)** - use source XML document as data source
+*   **[UseAsDataSource](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions/useasdatasource)** - use source XML document as a data source
 *   **[XslFoFactory](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions/xslfofactory)** - XSL document stream to convert XML-FO using XSL.
 
-### Convert XML as data source to spreadsheet
+### Convert XML as a data source to a spreadsheet
 
-The following code sample shows how to use XML as data source and convert it to spreadsheet:
+The following code sample shows how to use XML as a data source and convert it to a spreadsheet:
 
 ```csharp
 using (Converter converter = new Converter("data.xml", () => new XmlLoadOptions

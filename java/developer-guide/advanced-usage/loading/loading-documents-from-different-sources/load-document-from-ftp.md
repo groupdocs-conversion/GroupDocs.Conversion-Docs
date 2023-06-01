@@ -2,13 +2,13 @@
 id: load-document-from-ftp
 url: conversion/java/load-document-from-ftp
 title: Load document from FTP
-weight: 3
+weight: 4
 description: "This article demonstrates how to convert document stored in FTP storage using GroupDocs.Conversion for Java API."
 keywords: Convert document from FTP storage, Convert file
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-Following code snippet shows how to convert a document from FTP:
+The following code snippet shows how to convert a document from FTP:
 
 ```java
 package com.groupdocs.conversion.examples.advanced_usage.loading.loading_documents_from_different_sources;

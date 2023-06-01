@@ -8,22 +8,22 @@ keywords: Load and convert document, Load and convert Microsoft Excel workbook, 
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-GroupDocs.Conversion provides [SpreadsheetLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions) to give you control over how source spreadsheet document will be processed. The following options could be set:
+GroupDocs.Conversion provides [SpreadsheetLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions) to give you control over how the source spreadsheet document will be processed. The following options could be set:
 
-*   **[setFormat](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setFormat(com.groupdocs.conversion.filetypes.SpreadsheetFileType))** -  the document type is auto detected during loading, however you can specify explicitly the type of the source spreadsheet document. Available options are: *Xls, Xlsx, Xlsm, Xlsb, Ods, Ots, Xltx, Xlt, Xltm, Tsv, Xlam, Csv*
+*   **[setFormat](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setFormat(com.groupdocs.conversion.filetypes.SpreadsheetFileType))** -  the document type is auto-detected during loading, however, you can specify explicitly the type of the source spreadsheet document. Available options are: *Xls, Xlsx, Xlsm, Xlsb, Ods, Ots, Xltx, Xlt, Xltm, Tsv, Xlam, Csv*
 *   **[setDefaultFont](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setDefaultFont(java.lang.String))** -  default font. The following font will be used if a spreadsheet font is missing.      
 *   **[setFontSubstitutes](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setFontSubstitutes(java.util.List))** -  substitute specific fonts from the source spreadsheet document
 *   **[setShowGridLines](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setShowGridLines(boolean))** - specifies that grid lines should be visible      
-*   **[setShowHiddenSheets](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setShowHiddenSheets(boolean))** - specifies that hidden sheet should be included in converted document      
-*   **[setOnePagePerSheet](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setOnePagePerSheet(boolean))** - specifies that one sheet from the spreadsheet must be converted to single page     
-*   **[setConvertRange](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setConvertRange(java.lang.String))** - specifies that specific range must be converted. Example: "D1:F8"
+*   **[setShowHiddenSheets](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setShowHiddenSheets(boolean))** - specifies that hidden sheet should be included in the converted document      
+*   **[setOnePagePerSheet](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setOnePagePerSheet(boolean))** - specifies that one sheet from the spreadsheet must be converted to a single page     
+*   **[setConvertRange](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setConvertRange(java.lang.String))** - specifies that a specific range of cells must be converted. Example: "D1:F8"
 *   **[setSkipEmptyRowsAndColumns](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setSkipEmptyRowsAndColumns(boolean))** - specifies that empty rows and columns must be ignored.
-*   **[setPassword](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setPassword(java.lang.String))** -  password to unlock protected document
-*   **[setHideComments](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setHideComments(boolean))** - specifies that comments from source spreadsheet must be hidden during conversion
+*   **[setPassword](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setPassword(java.lang.String))** -  a password to unlock the protected document
+*   **[setHideComments](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setHideComments(boolean))** - specifies that comments from the source spreadsheet must be hidden during conversion
 
 ### Hide comments
 
-The following code sample shows how to convert Spreadsheet document and hide comments:
+The following code sample shows how to convert a spreadsheet and hide comments:
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
@@ -37,7 +37,7 @@ converter.convert("converted.pdf", options);
 
 ### Show grid lines
 
-The following code sample shows how to convert Spreadsheet document and show grid lines:
+The following code sample shows how to convert a spreadsheet and show grid lines:
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
@@ -51,7 +51,7 @@ converter.convert("converted.pdf", options);
 
 ### Skip empty rows and columns
 
-The following code sample shows how to convert Spreadsheet document and skip empty rows and columns:
+The following code sample shows how to convert a spreadsheet and skip empty rows and columns:
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
@@ -65,7 +65,7 @@ converter.convert("converted.pdf", options);
 
 ### Specify font substitution
 
-The following code sample shows how to convert Spreadsheet document and specify font substitution for missing fonts:
+The following code sample shows how to convert a spreadsheet and specify font substitution for missing fonts:
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
@@ -83,7 +83,7 @@ converter.convert("converted.pdf", options);
 
 ### Specify range
 
-The following code sample shows how to convert Spreadsheet document and specify exact range of rows and columns to be converted
+The following code sample shows how to convert a spreadsheet and specify the exact range of rows and columns to be converted
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
@@ -97,7 +97,7 @@ converter.convert("converted.pdf", options);
 
 ### Include hidden sheets
 
-The following code sample shows how to convert Spreadsheet document including the hidden sheets
+The following code sample shows how to convert a spreadsheet including the hidden sheets
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();

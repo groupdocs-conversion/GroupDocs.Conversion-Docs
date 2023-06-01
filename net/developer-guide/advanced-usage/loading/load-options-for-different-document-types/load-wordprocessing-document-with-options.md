@@ -8,20 +8,20 @@ keywords: Convert Word document in C#, Convert DOC in C#, Convert DOCX C#, Conve
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [WordProcessingLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions) to give you control over how original Microsoft Word document will be converted. The following options could be set: 
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [WordProcessingLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions) to give you control over how the source Microsoft Word document will be converted. The following options could be set: 
 
-*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/format)** - the document type is auto detected during load, however you can specify explicitly the type of the source WordProcessing document. Available options are: *Doc, Docm, Docx, Dot, Dotm, Dotx, Rtf, Odt, Ott, Mobi, Txt*
-*   **[AutoFontSubstitution](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/autofontsubstitution)** - if false, GroupDocs.Conversion uses the DefaultFont for the substitution of missing fonts. If true, GroupDocs.Conversion evaluates all the related fields in FontInfo (Panose, Sig etc) for the missing font and finds the closest match among the available font sources  
-    Note: that font substitution mechanism will override the DefaultFont in cases when FontInfo for the missing font is available in the document
-*   **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/defaultfont)** - default font. The following font will be used if a document font is missing
-*   **[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/fontsubstitutes)** - substitute specific fonts from the source document
-*   **[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/password)** -  password to unlock protected document
-*   **[HideWordTrackedChanges](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/hidewordtrackedchanges)** - specifies that tracked changes should not included in converted document
-*   **[HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/hidecomments)** - specifies that comments from source document must be hidden during conversion
+*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/format)** - the document type is auto-detected during loading, however, you can specify explicitly the type of the source WordProcessing document. Available options are: *Doc, Docm, Docx, Dot, Dotm, Dotx, Rtf, Odt, Ott, Mobi, Txt*
+*   **[AutoFontSubstitution](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/autofontsubstitution)** - if false, GroupDocs.Conversion uses the DefaultFont for the substitution of missing fonts. If true, GroupDocs.Conversion evaluates all the related fields in FontInfo (Panose, Sig etc) for the missing font and finds the closest match among the available font sources.
+    Note: that the font substitution mechanism will override the DefaultFont in cases when FontInfo for the missing font is available in the document.
+*   **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/defaultfont)** - specifies the font to use if a document font is missing.
+*   **[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/fontsubstitutes)** - substitute specific fonts from the source document.
+*   **[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/password)** -  a password to unlock the protected document.
+*   **[HideWordTrackedChanges](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/hidewordtrackedchanges)** - specifies that tracked changes should not be included in the converted document.
+*   **[HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/hidecomments)** - specifies that comments from the source document should be hidden in the converted document.
 
 ## Hide comments
 
-Microsoft Word provides a Comment feature that allows multiple authors or reviewers to discuss a document when they are not working at it simultaneously. All added comments are displayed in an area from the right of document text. After DOCX document with comments is converted to another format Comments pane is also present in a resultant document. If it's required to hide comments in a converted document programmatically you can use the following code sample that shows how to do this in a couple lines of C# code:
+Microsoft Word provides the "Comment" feature that allows multiple authors or reviewers to discuss a document when they are not working with it simultaneously. All added comments are displayed in an area to the right of the document text. After the DOCX document with comments is converted to another format, the Comments pane is also present in a resultant document. If it's required to hide comments in a converted document programmatically, you can use the following code sample to do this with a couple of lines of C# code:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
@@ -37,9 +37,9 @@ using (Converter converter = new Converter("sample.docx", getLoadOptions))
 
 ## Hide tracked changes
 
-Track Changes is another feature of Microsoft Word that provides a handy way to collaborate during document proofread and review - it's like you're marking errors with a pen and making some notes in the margins. All changes made by coworkers are highlighted and may be rejected or accepted and become permanent. By default Track Changes panel will also be displayed when converting a DOCX document to another format, however there is an option to hide it completely using GroupDocs.Conversion for .NET API. 
+Track Changes is another feature of Microsoft Word that provides a handy way to collaborate during document proofreading and review - it's like you're marking errors with a pen and making some notes in the margins. All changes made by coworkers are highlighted and may be rejected or accepted and become permanent. By default, the Track Changes panel will also be displayed when converting a DOCX document to another format, however, there is an option to hide it completely using GroupDocs.Conversion for .NET API. 
 
-The following code sample shows how to convert DOCX document to PDF and hide tracked changes pane:
+The following code sample shows how to convert a DOCX document to PDF and hide tracked changes pane:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
@@ -55,11 +55,11 @@ using (Converter converter = new Converter("sample.docx", getLoadOptions))
 
 ## Specify font substitution
 
-Microsoft Word document content is often formatted with different fonts like Arial, Calibri, Times New Roman etc., and these fonts are usually stored at the computer where the document is originally created or edited. Sometimes it happens that during DOCX document conversion to another format some fonts used by a particular document are not present at the computer where conversion is performed. So the resulting converted document may look too different from the original file.
+Microsoft Word document content is often formatted with different fonts like Arial, Calibri, Times New Roman etc., and these fonts are usually stored at the computer where the document is originally created or edited. Sometimes it happens that during DOCX document conversion to another format, some fonts used by a particular document are not present on the computer where conversion is performed. So the resulting converted document may look too different from the original file.
 
-Of course GroupDocs.Conversion for .NET will try to select the most appropriate font substitution from available font sources and fonts embedded in the original document, but it also has an ability to specify font substitution explicitly. For doing this it is just needed to call the [Create](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/fontsubstitute/create) method of [FontSubstitute](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/fontsubstitute) class and provide names for original and substitute fonts.
+Of course GroupDocs.Conversion for .NET will try to select the most appropriate font substitution from available font sources and fonts embedded in the original document, but you can also specify font substitution explicitly. For doing this it is just needed to call the [Create](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/fontsubstitute/create) method of [FontSubstitute](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/fontsubstitute) class and provide names for original and substitute fonts.
 
-The following code sample shows how to convert DOCX document with font substitution for missing fonts:
+The following code sample shows how to convert a DOCX document with font substitution for missing fonts:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
