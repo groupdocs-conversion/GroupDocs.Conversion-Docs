@@ -36,9 +36,7 @@ Publisher file formats include file types such as PUB file format that is saved 
 
 ## Supported Publisher file conversions
 
-| From | To |
-| --- | --- |
-| PUB | PDF: [PDF](https://docs.fileformat.com/view/pdf/)<br/>  |
+{{< include file="/conversion/net/_includes/supported-conversions/publisher.md" type="page" >}}
 
 ## Convert from Publisher formats
 
