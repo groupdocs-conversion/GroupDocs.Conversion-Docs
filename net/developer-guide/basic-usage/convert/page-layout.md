@@ -67,8 +67,11 @@ The following code sample demonstrates how to convert a DOCX document to TEX for
 // Load the source PDF file
 using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 {
-    // Set the convert options for TEX format
-   var options = new PdfConvertOptions { Format = GroupDocs.Conversion.FileTypes.PdfFileType.Tex };
+    // Set the convert options
+    var options = new PageDescriptionLanguageConvertOptions()
+    {
+        Format = PageDescriptionLanguageFileType.Tex
+    };
     // Convert to TEX format
     converter.Convert("converted.tex", options);
 }
