@@ -30,7 +30,7 @@ structuredData:
 
 ## About page layout formats
 
-Page layout languages are used in desktop and electronic publishing. The main focus of these languages is to facilitate a two-dimensional graphic design. Popular page layout formats include TEX, SVG, PS and EPS.
+Page layout languages are used in desktop and electronic publishing. The main focus of these languages is to facilitate a two-dimensional graphic design. Popular page layout formats include TEX, SVG, PS, and EPS.
 
 ## Supported page layout conversions
 

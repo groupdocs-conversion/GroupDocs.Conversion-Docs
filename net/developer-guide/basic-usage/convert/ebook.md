@@ -30,7 +30,7 @@ structuredData:
 
 ## About eBook file formats
 
-eBook files are electronic files that can be opened on digital devices known as eReaders. An eReader can be any device such as a computer, a tablet or a smartphone. The most popular eBook file format is the XML-based ePub. An eBook can contain different types of content such as text, images, and video. Common eBook file extensions and their file formats include EPUB (electronic publication), FB2 (FictionBook 2.0) and Mobi (MobiPocket eBook File).
+eBook files are electronic files that can be opened on digital devices known as eReaders. An eReader can be any device such as a computer, a tablet, or a smartphone. The most popular eBook file format is the XML-based ePub. An eBook can contain different types of content such as text, images, and video. Common eBook file extensions and their file formats include EPUB (electronic publication), FB2 (FictionBook 2.0), and Mobi (MobiPocket eBook File).
 
 ## Supported eBook file conversions
 
@@ -62,7 +62,7 @@ Refer to the [API reference](https://reference.groupdocs.com/conversion/net/grou
 
 On the other hand, converting your files to eBook format is also quite simple and natural. Minimally, all you need is to specify the desired output format in the `Format` property of the [`EBookConvertOptions`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/ebookconvertoptions/) class instance.
 
-The following code sample demonstrates how to convert a PDF document to eBook in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
+The following code sample demonstrates how to convert a PDF document to eBook format in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
 
 ```csharp
 // Load the source PDF file

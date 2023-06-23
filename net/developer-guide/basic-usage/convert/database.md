@@ -27,7 +27,7 @@ structuredData:
         - name: Convert to PDF and save result 
           text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
-A database is a collection of data that is organized in tables and maintained on a computer storage device and accessed electronically. Relational databases store data in database tables that are linked to each other via formal design and modeling techniques. Data in a database is analyzed using the Database Management System (DBMS) which is the main source of interaction with end users, applications and the database itself.
+A database is a collection of data that is organized in tables and maintained on a computer storage device and accessed electronically. Relational databases store data in database tables that are linked to each other via formal design and modeling techniques. Data in a database is analyzed using the Database Management System (DBMS) which is the main source of interaction with end users, applications, and the database itself.
 
 Popular database file extensions and their file formats include SQLite, DB, ACCDB, and MDB.
 
@@ -38,7 +38,7 @@ Popular database file extensions and their file formats include SQLite, DB, ACCD
 ## Convert from database formats
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your document into another file format.  
-For example, LOG to PDF conversion code snippet will look like this:
+For example, a LOG to PDF conversion code snippet will look like this:
 
 ```csharp
 // Load the source LOG file
