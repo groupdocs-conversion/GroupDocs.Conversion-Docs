@@ -1,6 +1,6 @@
 ---
-id: convert-html
-url: conversion/java/convert/html
+id: convert-web
+url: conversion/java/convert/web
 title: Convert web formats
 linkTitle: Web formats
 weight: 60
