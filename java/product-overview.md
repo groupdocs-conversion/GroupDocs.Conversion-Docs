@@ -34,7 +34,7 @@ Using GroupDocs.Conversion for Java in your project gives you the following bene
 -->
 - Thousands of different file conversion pairs for [multiple supported formats:]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}}) office documents, presentations, spreadsheets, images and much more.
 - Independence from other applications. You can convert files without other third-party applications like Microsoft Office or Adobe Acrobat. 
-- Ability to [convert whole document]({{< ref "conversion/java/developer-guide/basic-usage/convert-document" >}}) or [specific pages range]({{< ref "conversion/java/developer-guide/advanced-usage/converting/common-conversion-options/convert-specific-pages.md" >}}).
+- Ability to [convert whole document]({{< ref "conversion/java/developer-guide/basic-usage/convert" >}}) or [specific pages range]({{< ref "conversion/java/developer-guide/advanced-usage/converting/common-conversion-options/convert-specific-pages.md" >}}).
 - [Place watermarks]({{< ref "conversion/java/developer-guide/advanced-usage/converting/common-conversion-options/add-watermark.md" >}}) at document pages during conversion.
 - Huge amount of [additional options]({{< ref "conversion/java/developer-guide/advanced-usage/converting/conversion-options-by-document-family/" >}}) to customize the appearance of the converted document.
 - [Document information extraction]({{< ref "conversion/java/developer-guide/basic-usage/get-document-info" >}}) - file type, document page count etc.;
