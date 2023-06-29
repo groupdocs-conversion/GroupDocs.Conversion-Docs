@@ -24,7 +24,7 @@ Native Java API to accurately convert documents & image file formats in any type
 <hr><p>OVERVIEW</p></hr>
 <ul>
 	<li><a href='{{< ref "product-overview" >}}'>Product Overview</a></li>
-	<li><a href='{{< ref "conversion/java/getting-started/supported-document-formats.md" >}}'>Supported Document Formats</a></li>
+	<li><a href='{{< ref "conversion/java/getting-started/supported-document-formats.md" >}}'>Supported File Formats</a></li>
 </ul>
 <p>LICENSING</p>
 <ul>
