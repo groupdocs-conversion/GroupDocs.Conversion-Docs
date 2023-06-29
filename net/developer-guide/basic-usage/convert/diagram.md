@@ -5,7 +5,7 @@ title: Convert diagrams
 linkTitle: Diagrams
 weight: 80
 description: "In this article, you will learn how to convert diagram documents to other formats or another diagram format with GroupDocs.Conversion for .NET."
-keywords: Convert from HTML, Convert to HTML, Convert to HTM
+keywords: Convert from Visio, Convert to Visio, Convert diagrams
 productName: GroupDocs.Conversion for .NET
 toc: True
 structuredData:

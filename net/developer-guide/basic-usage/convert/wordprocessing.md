@@ -28,7 +28,7 @@ structuredData:
           text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
-When it comes to convenient fast creation and editing of textual documents, using Microsoft Word is the first thing that comes to mind. Then there is often a need to transform DOC or DOCX documents into another format like PDF, HTML or image for easier mailing, printing and sharing with other people etc.
+When it comes to convenient fast creation and editing of textual documents, using Microsoft Word is the first thing that comes to mind. Then there is often a need to transform DOC or DOCX documents into another format like PDF, HTML, or image for easier mailing, printing, and sharing with other people.
 GroupDocs.Conversion for .NET allows you to convert Word documents into other formats with minimal effort - all you need is just several lines of C# code.
 
 This section explains how to convert word-processing documents with the help of GroupDocs.Conversion for .NET.
@@ -41,7 +41,7 @@ This section explains how to convert word-processing documents with the help of 
 
 While converting a file from Microsoft Office Word to PDF format GroupDocs.Conversion for .NET performs multiple calculations under the hood to preserve the document's original appearance and to correctly reproduce the layout of the converted PDF document like it was designed for the initial DOC or DOCX document in Microsoft Word. All this is necessary because Word documents are in flow-layout format and their appearance may differ depending on the device and platform that are used for viewing them. On the contrary PDF format is fixed-layout and has the same appearance on different devices.  
   
-The following section is explaining how to convert DOC or DOCX to PDF programmatically without Microsoft Office and with help of GroupDocs.Conversion for .NET.  
+The following section is explaining how to convert DOC or DOCX to PDF programmatically without Microsoft Office and with the help of GroupDocs.Conversion for .NET.  
 
 ### Convert DOCX (or DOC) to PDF
 
@@ -69,7 +69,7 @@ NOTE: Please be aware that the number of pages in a source document affects the 
 
 ## Convert Word document to HTML or MHTML
 
-HTML is a very popular web page format as it can be viewed on every device and platform that has a web browser. MHTML format in turn represents a web page archive format that is known as archive format because it saves the web HTML code and associated resources in a single file. These resources include anything linked to the webpage such as images, applets, animations, audio files and so on. MHTML files can be opened in a variety of applications such as Internet Explorer and Microsoft Word.  
+HTML is a very popular web page format as it can be viewed on every device and platform that has a web browser. MHTML format in turn represents a web page archive format that is known as archive format because it saves the web HTML code and associated resources in a single file. These resources include anything linked to the webpage such as images, applets, animations, audio files, and so on. MHTML files can be opened in a variety of applications such as Internet Explorer and Microsoft Word.  
 
 Converting Microsoft Word documents to HTML or MHTML formats is a popular and demanded feature of GroupDocs.Conversion. The basic use case of DOCX to HTML conversion could be implemented in several lines of C# code - all you need is to specify the source file name with the extension and call the `Convert` method of the `Converter` class passing the name of the target HTML file to it. Please check the complete code snippet below:
 
@@ -84,7 +84,7 @@ using(var converter = new GroupDocs.Conversion.Converter("sample.docx"))
 }
 ```
 
-When converting a DOC or DOCX file to MHTML format the only difference from the previous code example is that it is needed to set the  [WebConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions) Format property to  **WebFileType.Mhtml**. The code snippet for DOCX to MHTML conversion will look as follows:
+When converting a DOC or DOCX file to MHTML format the only difference from the previous code example is that it is needed to set the  [WebConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions) `Format` property to  **WebFileType.Mhtml**. The code snippet for DOCX to MHTML conversion will look as follows:
 
 ```csharp
 // Load the source DOCX file

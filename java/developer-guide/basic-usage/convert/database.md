@@ -1,24 +1,24 @@
 ---
 id: convert-database
-url: conversion/net/convert/database
+url: conversion/java/convert/database
 title: Convert database formats
 linkTitle: Database formats
 weight: 80
-description: "This article demonstrates how you can convert to and from database formats with GroupDocs.Conversion for .NET."
+description: "This article demonstrates how you can convert to and from database formats with GroupDocs.Conversion for Java."
 keywords: Convert from Database
-productName: GroupDocs.Conversion for .NET
+productName: GroupDocs.Conversion for Java
 toc: True
 structuredData:
     showOrganization: True
     application:    
-        name: Convert Database Formats in C#    
-        description: Convert database formats natively with high performance using C# language and GroupDocs.Conversion for .NET APIs
+        name: Convert Database Formats in Java    
+        description: Convert database formats natively with high performance using Java language and GroupDocs.Conversion for Java APIs
         productCode: conversion
-        productPlatform: net 
+        productPlatform: java 
     showVideo: True
     howTo:
-        name: How to convert database formats to PDF in C# 
-        description: Learn how to convert database formats to PDF in C# step by step
+        name: How to convert database formats to PDF in Java 
+        description: Learn how to convert database formats to PDF in Java step by step
         steps:
         - name: Load source file 
           text: Create an instance of Converter class and pass the source file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements. 
@@ -33,22 +33,20 @@ Popular database file extensions and their file formats include SQLite, DB, ACCD
 
 ## Supported database file conversions
 
-{{< include file="/conversion/net/_includes/supported-conversions/database.md" type="page" >}}
+{{< include file="/conversion/java/_includes/supported-conversions/database.md" type="page" >}}
 
 ## Convert from database formats
 
-With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your document into another file format.  
+With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert your document into another file format.  
 For example, a LOG to PDF conversion code snippet will look like this:
 
-```csharp
+```java
 // Load the source LOG file
-using (var converter = new GroupDocs.Conversion.Converter("sample.log"))
-{
-    // Set the convert options for PDF format
-   var options = new PdfConvertOptions();
-    // Convert to PDF format
-    converter.Convert("converted.pdf", options);
-}
+Converter converter = new Converter("sample.log");
+// Set the convert options for PDF format
+PdfConvertOptions options = new PdfConvertOptions();
+// Convert to PDF format
+converter.convert("converted.pdf", options);
 ```
 
 Put it simply - you just load a LOG file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**. 

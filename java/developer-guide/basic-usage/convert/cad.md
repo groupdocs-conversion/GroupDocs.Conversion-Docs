@@ -1,24 +1,24 @@
 ---
 id: convert-cad
-url: conversion/net/convert/cad
+url: conversion/java/convert/cad
 title: Convert CAD formats
 linkTitle: CAD formats
 weight: 80
-description: "In this article, you will learn how to convert CAD documents to other formats or another CAD format with GroupDocs.Conversion for .NET."
+description: "In this article, you will learn how to convert CAD documents to other formats or another CAD format with GroupDocs.Conversion for Java."
 keywords: Convert from CAD, Convert to CAD, Convert CAD to CAD
-productName: GroupDocs.Conversion for .NET
+productName: GroupDocs.Conversion for Java
 toc: True
 structuredData:
     showOrganization: True
     application:    
-        name: Convert CAD in C#    
-        description: Convert CAD to PDF natively with high performance using C# language and GroupDocs.Conversion for .NET APIs
+        name: Convert CAD in Java    
+        description: Convert CAD to PDF natively with high performance using Java language and GroupDocs.Conversion for Java APIs
         productCode: conversion
-        productPlatform: net 
+        productPlatform: java 
     showVideo: True
     howTo:
-        name: How to convert CAD to PDF in C# 
-        description: Learn how to convert CAD to PDF in C# step by step
+        name: How to convert CAD to PDF in Java 
+        description: Learn how to convert CAD to PDF in Java step by step
         steps:
         - name: Load source diagram file 
           text: Create an instance of Converter class and pass source diagram file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements. 
@@ -34,44 +34,39 @@ CAD stands for Computer-Aided Design. The term CADD (for Computer-Aided Design a
 
 ## Supported CAD file conversions
 
-{{< include file="/conversion/net/_includes/supported-conversions/cad.md" type="page" >}}
+{{< include file="/conversion/java/_includes/supported-conversions/cad.md" type="page" >}}
 
 ## Convert from CAD formats
 
-With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your CAD document into another file format.  
+With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert your CAD document into another file format.  
 For example, a DWG to PDF conversion code snippet will look like this:
 
-```csharp
+```java
 // Load the source DWG file
-using (Converter converter = new Converter("sample.dwg"))
-{
-    // Set the convert options for PDF format
-    PdfConvertOptions options = new PdfConvertOptions();
-    // Convert to PDF format
-    converter.Convert("converted.pdf", options);
-}
+Converter converter = new Converter("sample.dwg");
+// Set the convert options for PDF format
+PdfConvertOptions options = new CadConvertOptions();
+// Convert to PDF format
+converter.convert("converted.pdf", options);
 ```
 
 Put it simply - you just load a CAD file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
 
 {{< alert style="info" >}}
-Refer to the [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
+Refer to the [API reference](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert) for more conversion options and customizations.
 {{< /alert >}}
 
 ## Convert to another CAD format
 
 On the other hand, converting your CAD files to another CAD format is also quite simple and natural.
-The following code sample demonstrates how to convert a DWG document to STL in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
+The following code sample demonstrates how to convert a DWG document to STL in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
 
-```csharp
+```java
 // Load the source DWG file
-using (Converter converter = new Converter("sample.dwg"))
-{
-    // Set the convert options for STL format
-    var options = new CadConvertOptions {
-        Format = CadFileType.Stl;
-    };
-    // Convert to STL format
-    converter.Convert("converted.stl", options);
-}
+Converter converter = new Converter("sample.dwg");
+// Set the convert options for STL format
+CadConvertOptions options = new CadConvertOptions();
+options.setFormat(CadFileType.Stl);
+// Convert to STL format
+converter.convert("converted.stl", options);
 ```

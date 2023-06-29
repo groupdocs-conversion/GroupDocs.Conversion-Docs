@@ -30,7 +30,7 @@ structuredData:
 ---
 
 Microsoft PowerPoint presentations of PPT and PPTX formats are widely used for slideshows that contain rich multimedia materials and as a modern software replacement for old slide projector devices. Microsoft Office suite includes PowerPoint and other tools, like Word and Excel, for better office productivity.  
-Although Microsoft Office provides a possibility to save PPT or PPTX presentations to other formats like images, HTML, XML etc. It may be boring, time-consuming and ineffective to save a large number of files manually.  
+Although Microsoft Office provides a possibility to save PPT or PPTX presentations to other formats like images, HTML, XML, etc. It may be boring, time-consuming and ineffective to save a large number of files manually.  
   
 In such a situation, GroupDocs.Conversion for .NET will help you with converting presentations into a wide range of output file formats. And you don't even need to install any third-party software for that! Everything can be made with just several lines of C# code.  
   
@@ -72,7 +72,7 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pptx"))
 
 ## Convert PowerPoint to PDF
 
-Portable Document Format (PDF) is very popular nowadays for many reasons, therefore converting PowerPoint presentations to PDF format is also quite a demanding feature for customers from different areas. PowerPoint presentations could be presented in multiple file formats like PPT, PPTX, PPSM, PPS etc., so let’s see how to convert them into PDF using C# code.  
+Portable Document Format (PDF) is very popular nowadays for many reasons, therefore converting PowerPoint presentations to PDF format is also quite a demanding feature for customers from different areas. PowerPoint presentations could be presented in multiple file formats like PPT, PPTX, PPSM, PPS, etc. So let’s see how to convert them into PDF using C# code.  
   
 The actual process of conversion is very simple - provide your presentation file to the `Converter` class, call the `Convert` method which will do all necessary transformations and save the output PDF file where you want it to be saved. Let’s review just several code examples of PDF conversion, as for other presentation formats it’s almost the same - the only difference is a file extension of your input presentation file.
 
@@ -108,7 +108,7 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.ppsm"))
 
 ## Convert presentation to image
 
-There is often a need to transform a PowerPoint presentation into a collection of images. Of course, it could be manually exported with help of Microsoft PowerPoint, but in case you don't have it at hand or when there is a big number of presentations to be converted,  it’s more convenient to convert the presentation to images programmatically.  
+There is often a need to transform a PowerPoint presentation into a collection of images. Of course, it could be manually exported with the help of Microsoft PowerPoint, but in case you don't have it at hand or when there is a big number of presentations to be converted,  it’s more convenient to convert the presentation to images programmatically.  
 No matter which image format you choose - GroupDocs.Conversion supports a wide range of them - **PNG**, **JPG/JPEG**, **TIF/TIFF**, **GIF** (and many [others]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}})).  
   
 Here is a code snippet that shows how to convert PPTX to PNG image in C# programming language:

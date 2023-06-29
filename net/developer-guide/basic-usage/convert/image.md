@@ -31,15 +31,15 @@ structuredData:
 
 ## About image file formats
 
-An image file format is a standard method for organizing and storing images on devices like computers, tablets and smartphones. Digital images store image data in a 2-dimensional grid of pixels where each pixel is a representation of color in terms of a number of bits. Image file types are classified into vector image formats and raster image formats. 3D Images are another type of vector image file format that is used for managing 3D images.
+An image file format is a standard method for organizing and storing images on devices like computers, tablets, and smartphones. Digital images store image data in a 2-dimensional grid of pixels where each pixel is a representation of color in terms of a number of bits. Image file types are classified into vector image formats and raster image formats. 3D Images are another type of vector image file format that is used for managing 3D images.
 
 ### Raster formats
 
-**Raster Graphics** are digital images that comprise of pixels data for the representation of colors. These are the most common image types for graphics used for the web as well as digital photos. Some of the raster images can be compressed to reduce image file size. Common raster image file extensions and their file formats include **BMP** (Bitmap image file), **PNG** (Portable Network Graphics) and **GIF** (Graphics Interchange File).
+**Raster Graphics** are digital images that comprise pixels data for the representation of colors. These are the most common image types for graphics used for the web as well as digital photos. Some of the raster images can be compressed to reduce image file size. Common raster image file extensions and their file formats include **BMP** (Bitmap image file), **PNG** (Portable Network Graphics), and **GIF** (Graphics Interchange File).
 
 ### Vector formats
 
-**Vector images** are defined by 2D points, instead of pixels, which are connected to give a geometric shape to the image. The points have properties that define the direction of paths, color, shape, curve, thickness, and fill. Common vector image file extensions and their file formats include **SVG** (Scalable Vector Graphics), **EPS** (Encapsulated PostScript language) and **PDF** (Portable Document Format).
+**Vector images** are defined by 2D points, instead of pixels, which are connected to give a geometric shape to the image. The points have properties that define the direction of paths, color, shape, curve, thickness, and fill. Common vector image file extensions and their file formats include **SVG** (Scalable Vector Graphics), **EPS** (Encapsulated PostScript language), and **PDF** (Portable Document Format).
 
 ## Supported image file conversions
 
@@ -47,7 +47,7 @@ An image file format is a standard method for organizing and storing images on d
 
 ## Convert image to PDF
 
-Converting an image into a PDF file is a common use case for example when you need to create a PDF document from a scanned paper. [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows to resolve this task easily and intuitively just using a few lines of C# code as described below:
+Converting an image into a PDF file is a common use case for example when you need to create a PDF document from a scanned paper. [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows resolving this task easily and intuitively just using a few lines of C# code as described below:
 
 - Create an instance of the `Converter` class and pass the source JPG file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements.
 - Create an instance of the `PdfConvertOptions` class.
@@ -96,7 +96,7 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.png"))
 
 ## Convert image to PowerPoint presentation
 
-In case it’s needed to make a PowerPoint presentation from images of **PNG**, **JPG/JPEG**, **TIF/TIFF**, **GIF** or other formats, a possible solution is to convert them programmatically.  
+In case it’s needed to make a PowerPoint presentation from images of **PNG**, **JPG/JPEG**, **TIF/TIFF**, **GIF**, or other formats, a possible solution is to convert them programmatically.  
 Let’s review several code examples in C# language below and see how to transform an image into a PPT/PPTX presentation.
 
 ### Convert JPG to PPT

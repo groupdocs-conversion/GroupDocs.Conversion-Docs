@@ -28,7 +28,7 @@ structuredData:
           text: Call Converter class Convert method and pass the filename for the converted DOCX file and the WordProcessingConvertOptions object from the previous step as parameters.
 ---
 
-Portable Document Format (PDF) was developed to introduce a standard for document representation and other reference material in a format that is independent of application software, hardware as well as from operating systems. Content of PDF files is not limited to text only, it could be hyperlinks, images, interactive buttons and forms, electronic signatures, watermarks and many more. Therefore it's often needed to convert PDF files to some other formats to edit or modify their content. Using **GroupDocs.Conversion for .NET** library you can convert PDF files to a wide range of popular file formats, and all you need for this is just several lines of lines code in C# programming language.
+Portable Document Format (PDF) was developed to introduce a standard for document representation and other reference material in a format that is independent of application software, hardware as well as from operating systems. Content of PDF files is not limited to text only, it could be hyperlinks, images, interactive buttons and forms, electronic signatures, watermarks, and many more. Therefore it's often needed to convert PDF files to some other formats to edit or modify their content. Using **GroupDocs.Conversion for .NET** library you can convert PDF files to a wide range of popular file formats, and all you need for this is just several lines of lines code in C# programming language.
 
 GroupDocs.Conversion for .NET supports different kinds of conversions from PDF documents to other file formats and also conversion from different formats to PDF. You can examine conversion quality and accuracy online by using [GroupDocs.Conversion App](https://products.groupdocs.app/conversion/family) live demo. It works on any device and is absolutely free.  
   
@@ -39,9 +39,9 @@ GroupDocs.Conversion for .NET supports different kinds of conversions from PDF d
 ## Convert PDF to Word
 
 Microsoft Word is one of the most convenient ways to edit and manage document content, that's why PDF to Word conversion is so popular. Transforming a PDF file to a Word document in a manual way could be a tricky and lengthy process. Much easier is to convert PDF to Word programmatically in C#.
-This way any file created as PDF could be converted to a Word document for later content manipulations and editing text, tables, images, lists etc.
+This way any file created as PDF could be converted to a Word document for later content manipulations and editing text, tables, images, lists, etc.
 
-GroupDocs.Conversion for .NET supports PDF conversion to all popular formats of Microsoft Word like - DOC, DOCX, RTF etc. The document transformation process is quite simple and straightforward from the user's point of view - all you need is two-three lines of code. The default format for PDF to Word conversion is DOCX - it's a well-known format for Microsoft Word 2007 and later versions which is a combination of XML and binary files.  
+GroupDocs.Conversion for .NET supports PDF conversion to all popular formats of Microsoft Word like - DOC, DOCX, RTF, etc. The document transformation process is quite simple and straightforward from the user's point of view - all you need is two-three lines of code. The default format for PDF to Word conversion is DOCX - it's a well-known format for Microsoft Word 2007 and later versions which is a combination of XML and binary files.  
 Here is a code snippet for PDF to DOCX conversion:
 
 ```csharp
@@ -131,8 +131,9 @@ new GroupDocs.Conversion.Converter()
 
 ## Convert PDF to PowerPoint
 
-Presentation file formats store collections of records to accommodate data such as slides, shapes, text, animations, video, audio and embedded objects. The most popular app for creating and editing presentations is Microsoft PowerPoint with its PPT and PPTX file formats, though there are plenty of applications that work with OpenDocument formats like ODP and OTP.
-GroupDocs.Conversion for .NET is a wise choice when you have to convert a PDF file into PowerPoint format, and here is what code snippet looks like for PDF to PPTX conversion in C# language:
+Presentation file formats store collections of records to accommodate data such as slides, shapes, text, animations, video, audio, and embedded objects. The most popular app for creating and editing presentations is Microsoft PowerPoint with its PPT and PPTX file formats, though there are plenty of applications that work with OpenDocument formats like ODP and OTP.
+
+GroupDocs.Conversion for .NET is a wise choice when you have to convert a PDF file into PowerPoint format, and here is what the code snippet looks like for PDF to PPTX conversion in C# language:
 
 ```csharp
 // Load the source PDF file
@@ -156,11 +157,11 @@ new GroupDocs.Conversion.Converter()
 
 
 
-In case you need to convert PDF to another presentation format please use [PresentationFileType](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/presentationfiletype) to specify it.
+In case you need to convert PDF to another presentation format please use the [PresentationFileType](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/presentationfiletype) class to specify it.
 
 ## Convert PDF to Image
 
-A popular use case is when you need to save the whole PDF document or some specific document pages as a collection of images. GroupDocs.Conversion for .NET allows converting PDF to images of many popular formats like - TIFF, JPG, PNG, GIF, BMP and many others.
+A popular use case is when you need to save the whole PDF document or some specific document pages as a collection of images. GroupDocs.Conversion for .NET allows converting PDF to images of many popular formats like - TIFF, JPG, PNG, GIF, BMP, and many others.
 The code snippet for such conversion is a bit different from other conversions as you have to declare a [SavePageStream](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/savepagestream) delegate that specifies the name format for the saved images. You can choose the desired image format by using the [ImageFileType](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/imagefiletype) class.
 
 ### Convert PDF to PNG
