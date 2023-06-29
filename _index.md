@@ -32,7 +32,7 @@ hideChildren: true
                 <p>Start quickly with our getting started documentation</p>
                 <ul style="text-align: left;list-style:none">
                     <li>{{< icon "file-alt" >}} <a href='{{< ref "/conversion/net/getting-started/features-overview.md" >}}'>Features Overview</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/conversion/net/getting-started/supported-document-formats.md" >}}'>Supported Document Formats</a></li>
+                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/conversion/net/getting-started/supported-document-formats.md" >}}'>Supported File Formats</a></li>
                     <li>{{< icon "file-alt" >}} <a href='{{< ref "/conversion/net/getting-started/system-requirements.md" >}}'>System Requirements</a></li>
                     <li>{{< icon "file-alt" >}} <a href='{{< ref "/conversion/net/getting-started/installation.md" >}}'>Installation</a></li>
                 </ul>
@@ -61,7 +61,7 @@ hideChildren: true
                 <p>Start quickly with our getting started documentation</p>
                 <ul style="text-align: left;list-style:none">
                     <li>{{< icon "file-alt" >}} <a href='{{< ref "/conversion/java/getting-started/features-overview.md" >}}'>Features  Overview</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/conversion/java/getting-started/supported-document-formats.md" >}}'>Supported Document Formats</a></li>
+                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/conversion/java/getting-started/supported-document-formats.md" >}}'>Supported File Formats</a></li>
                     <li>{{< icon "file-alt" >}} <a href='{{< ref "/conversion/java/getting-started/system-requirements.md" >}}'>System Requirements</a></li>
                     <li>{{< icon "file-alt" >}} <a href='{{< ref "/conversion/java/getting-started/installation.md" >}}'>Installation</a></li>
                 </ul>
