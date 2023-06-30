@@ -39,10 +39,10 @@ using (Converter converter = new Converter("sample.docx"))
 }
 ```
 
-Or you can use a fluent syntax
+Or you can use a [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
 
 ```csharp
-PossibleConversions conversions = new Converters().Load("sample.docx").GetPossibleConversions();
+PossibleConversions conversions = FluentConverter.Load("sample.docx").GetPossibleConversions();
 Console.WriteLine("The source document is of type {0} and could be converted to:", conversions.Source.Extension);
 
 foreach (var conversion in conversions.All)

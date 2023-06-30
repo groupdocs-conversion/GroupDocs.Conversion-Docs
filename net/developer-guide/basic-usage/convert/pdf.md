@@ -55,10 +55,10 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 }
 ```
 
-or using fluent syntax
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
 
 ```csharp
-new GroupDocs.Conversion.Converter()
+FluentConverter
     .Load("sample.pdf")
     .ConvertTo("converted.docx")
     .Convert();
@@ -82,10 +82,10 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 }
 ```
 
-or using fluent syntax
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
 
 ```csharp
-new GroupDocs.Conversion.Converter()
+FluentConverter
     .Load("sample.pdf")
     .ConvertTo("converted.doc").WithOptions(new WordProcessingConvertOptions  
     {  
@@ -118,10 +118,10 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 }
 ```
 
-or using fluent syntax
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
 
 ```csharp
-new GroupDocs.Conversion.Converter()
+FluentConverter
     .Load("sample.pdf")
     .ConvertTo("converted.xlsx")
     .Convert();
@@ -146,10 +146,10 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 }
 ```
 
-or using fluent syntax
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
 
 ```csharp
-new GroupDocs.Conversion.Converter()
+FluentConverter
     .Load("sample.pdf")
     .ConvertTo("converted.pptx")
     .Convert();
@@ -181,10 +181,10 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 }
 ```
 
-or using fluent syntax
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
 
 ```csharp
-new GroupDocs.Conversion.Converter()
+FluentConverter
     .Load("sample.pdf")
     .ConvertByPageTo(page => new FileStream(string.Format("converted-page-{0}.png", page), FileMode.Create))
     .WithOptions(new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png })
@@ -210,10 +210,10 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 }
 ```
 
-or using fluent syntax
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
 
 ```csharp
-new GroupDocs.Conversion.Converter()
+FluentConverter
     .Load("sample.pdf")
     .ConvertByPageTo(page => new FileStream(string.Format("converted-page-{0}.jpg", page), FileMode.Create))
     .WithOptions(new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Jpg })
@@ -239,10 +239,10 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 }
 ```
 
-or using fluent syntax
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
 
 ```csharp
-new GroupDocs.Conversion.Converter()
+FluentConverter
     .Load("sample.pdf")
     .ConvertByPageTo(page => new FileStream(string.Format("converted-page-{0}.tiff", page), FileMode.Create))
     .WithOptions(new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Tiff })
@@ -262,10 +262,10 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 }
 ```
 
-or using fluent syntax
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
 
 ```csharp
-new GroupDocs.Conversion.Converter()
+FluentConverter
     .Load("sample.pdf")
     .ConvertTo("multi-page.tiff")
     .WithOptions(new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Tiff })

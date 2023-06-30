@@ -36,12 +36,12 @@ public static void Run()
 }
 ```
 
-You can also use the [`Converter().Load(string fileName)`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/load/#load_2) and [`Converter().Load(string[] fileName)`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/load/#load_3) fluent syntax methods to load the source file from a local disk.
+You can also use the [`FluentConverter.Load(string fileName)`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/fluentconverter/load/#load_2) and [`FluentConverter.Load(string[] fileName)`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/fluentconverter/load/#load_3) [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}}) methods to load the source file from a local disk.
 
 ```csharp
 public static void Run()
 {
-    new GroupDocs.Conversion.Converter()
+FluentConverter
     // Specify source file location
     .Load("c:\\files\\sample.docx")
     // Specify output file location
