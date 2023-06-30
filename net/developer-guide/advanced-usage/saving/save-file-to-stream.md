@@ -39,14 +39,14 @@ public static Stream GetFileStream(string outFile)
 }
 ```
 
-You can also use the [`Converter().ConvertTo(Func<Stream> convertedStreamProvider)`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.fluent/iconversionto/convertto/#convertto) fluent syntax method to save a file to a stream:
+You can also use the [`ConvertTo(Func<Stream> convertedStreamProvider)`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.fluent/iconversionto/convertto/#convertto) [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}}) method to save a file to a stream:
 
 ```csharp
 public static void Run()
 {
     Func<Stream> getOutputStream = () => GetFileStream("c:\\files\\converted.pdf");
 
-    new GroupDocs.Conversion.Converter()
+    FluentConverter
     // Specify source file location
     .Load("c:\\files\\sample.docx")
     // Pass the output stream as parameter

@@ -27,12 +27,12 @@ public static void Run()
 }
 ```
 
-You can also use the [`Converter().ConvertTo(string fileName)`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.fluent/iconversionto/convertto/#convertto_2) fluent syntax method to save a file to a local disk:
+You can also use the [`ConvertTo(string fileName)`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.fluent/iconversionto/convertto/#convertto_2) [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}}) method to save a file to a local disk:
 
 ```csharp
 public static void Run()
 {
-    new GroupDocs.Conversion.Converter()
+FluentConverter
     // Specify source file location
     .Load("c:\\files\\sample.docx")
     // Specify output file location
