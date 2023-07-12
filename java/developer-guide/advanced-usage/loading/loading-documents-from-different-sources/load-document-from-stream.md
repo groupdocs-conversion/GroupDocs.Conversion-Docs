@@ -28,4 +28,4 @@ try{
 }
 ```
 
-The snippet above uses the `FileInputStream` class instance. Similarly, you can use any other type of stream. Just make sure that the source stream contains any of the [supported file formats]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}}).
+The snippet above uses the [`FileInputStream`]("https://docs.oracle.com/javase/8/docs/api/java/io/FileInputStream.html") class instance. Similarly, you can use any other type of stream. Just make sure that the source stream contains any of the [supported file formats]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}}).
