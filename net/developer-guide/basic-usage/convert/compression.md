@@ -11,7 +11,7 @@ toc: True
 structuredData:
     showOrganization: True
     application:    
-        name: Convert Compressed file in C#    
+        name: Convert compressed file in C#    
         description: Convert content from a RAR file to PDF natively with high performance using C# language and GroupDocs.Conversion for .NET APIs
         productCode: conversion
         productPlatform: net 
@@ -30,7 +30,7 @@ structuredData:
 
 ## About compression file formats
 
-File Compression is the process to reduce the size of one or more files. It shrinks big files into much smaller ones by removing unneeded data. The compressed file archive makes it easier to send and back up large files or groups of files. Moreover, such files make downloading faster and easier, besides, they allow more data to be stored on removable media. There are various compression formats. Below we are going to describe how to convert the most popular compression file formats using GroupDocs.Conversion.
+File compression is the process of reducing the size of one or more files. It shrinks big files into much smaller ones by removing unneeded data. The compressed file archive makes it easier to send and back up large files or groups of files. Moreover, such files make downloading faster and easier, besides, they allow more data to be stored on removable media. There are various compression formats. Below we are going to describe how to convert the most popular compression file formats using GroupDocs.Conversion.
 
 ## Supported compression file conversions
 
@@ -73,10 +73,10 @@ The following code sample demonstrates how to convert the content of a RAR archi
 // Load the source RAR file
 using (Converter converter = new Converter("sample.rar"))
 {
-    // Set the convert option for PDF format. This will convert each file in the archive ot pdf
+    // Set the convert option for PDF format. This will convert each file in the archive to PDF
     PdfConvertOptions options = new PdfConvertOptions();
     int i = 0;
-    // Extract and convert to pdf
+    // Extract and convert to PDF
     converter.Convert(() => new FileStream(Path.Combine(outputFolder, $"converted-{++i}.pdf"), FileMode.Create), options);
 }
 ```
