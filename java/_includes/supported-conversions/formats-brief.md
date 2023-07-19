@@ -13,6 +13,23 @@
 | [PLT](/conversion/java/convert/cad/) | PLT (HPGL) |<!--Load--> ✅ |<!--Save-->  |
 | [STL](/conversion/java/convert/cad/) | Stereolithography File |<!--Load--> ✅ |<!--Save-->  |
 
+## Compression
+| From | Description | Load | Save |
+| --- | --- | :---: | :---: |
+| [7Z](/conversion/java/convert/compression/) | 7z Document |<!--Load--> ✅ |<!--Save--> ✅ |
+| [BZ2](/conversion/java/convert/compression/) | Bz2 Document |<!--Load--> ✅ |<!--Save-->  |
+| [CAB](/conversion/java/convert/compression/) | Cab Document |<!--Load--> ✅ |<!--Save-->  |
+| [CPIO](/conversion/java/convert/compression/) | CPIO Document |<!--Load--> ✅ |<!--Save--> ✅ |
+| [GZ](/conversion/java/convert/compression/) | Gz Document |<!--Load--> ✅ |<!--Save-->  |
+| [GZIP](/conversion/java/convert/compression/) | Gzip Document |<!--Load--> ✅ |<!--Save-->  |
+| [LZ](/conversion/java/convert/compression/) | Lzip Document |<!--Load--> ✅ |<!--Save-->  |
+| [LZMA](/conversion/java/convert/compression/) | Lzma Document |<!--Load--> ✅ |<!--Save-->  |
+| [RAR](/conversion/java/convert/compression/) | RAR Document |<!--Load--> ✅ |<!--Save-->  |
+| [TAR](/conversion/java/convert/compression/) | Tar Document |<!--Load--> ✅ |<!--Save--> ✅ |
+| [XZ](/conversion/java/convert/compression/) | Xz Document |<!--Load--> ✅ |<!--Save-->  |
+| [Z](/conversion/java/convert/compression/) | Z Document |<!--Load--> ✅ |<!--Save-->  |
+| [ZIP](/conversion/java/convert/compression/) | ZIP Document |<!--Load--> ✅ |<!--Save--> ✅ |
+
 ## Database
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
