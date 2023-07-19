@@ -19,7 +19,13 @@ The following code snippet serves this purpose:
 
 ```java
 try{
-    Converter converter = new Converter(new FileInputStream("sample.docx"));
+    Converter converter = new Converter(() -> {
+                try {
+                    return new FileInputStream("sample.docx");
+                } catch (FileNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
+            });
     PdfConvertOptions options = new PdfConvertOptions();
 
     converter.convert("converted.pdf", options);
