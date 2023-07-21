@@ -4,7 +4,7 @@ url: conversion/java
 title: GroupDocs.Conversion for Java
 weight: 1
 description: "GroupDocs.Conversion for Java is an advanced document conversion API developed to convert files of different formats from within Java applications."
-keywords: GroupDocs.Conversion for .NET, Conversion, document conversion, convert files, Java
+keywords: GroupDocs.Conversion for Java, Conversion, document conversion, convert files, Java
 productName: GroupDocs.Conversion for Java
 hideChildren: True
 structuredData:
