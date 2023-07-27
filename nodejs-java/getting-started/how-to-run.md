@@ -17,24 +17,12 @@ The complete project [GroupDocs.Conversion Examples](https://github.com/groupdoc
 To get started make sure that [Node.js](https://nodejs.org) is installed.
 
 1. Clone repository with examples `git clone https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Node.js-via-Java.git`
-2. Navigate to the examples folder `cd ./GroupDocs.Conversion-for-Node.js-via-Java/Examples/`
-3. Resolve dependencies and build the examples with the `mvn compile` command.
-4. Run the examples with the `mvn exec:java` command.
+2. Navigate to the project folder `cd ./GroupDocs.Conversion-for-Node.js-via-Java`
+3. Install the necessary packages with the `npm install` command.
+4. Navigate to the examples folder `cd ./Examples`
+4. Run the examples with the `node runExamples.js` command.
 
-To check what examples are available open `./src/main/java/com/groupdocs/conversion/examples/RunExamples.java` file using your favorite text editor. Uncomment examples that you want to run and type `mvn compile exec:java` to start them.
-
-## Run examples using Eclipse IDE
-
-To run the examples using Eclipse IDE import the project to get started with it:
-
-1. Go to the `File` menu and click `Open Projects from File System...`
-2. Open the `Examples` folder.
-3. Open the `RunExamples.java` file and uncomment the examples you want to run.
-4. Go to the `Run` menu and click `Run`.
-
-The following screenshot shows the Examples project opened in Eclipse IDE.
-
-![GroupDocs.Conversion for Java Examples in Eclipse IDE](/conversion/java/images/how-to-run_1.png)
+To check what examples are available open `Examples/runExamples.js` file using your favorite text editor. Uncomment examples that you want to run and type `node runExamples.js` to start them.
 
 
 ## Contribute

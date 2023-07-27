@@ -60,9 +60,9 @@ The license can be set multiple times per app domain but we recommend doing it o
 The following code sets a license from a file.
 
 ```js
-String licensePath = "path to the .lic file";
-License license = new License();
-license.setLicense(licensePath);
+const licensePath = "path to the .lic file";
+const license = new groupdocs.conversion.License()
+license.setLicense(licensePath); 
 ```
 
 ### Set License from Stream
@@ -70,31 +70,14 @@ license.setLicense(licensePath);
 The following example shows how to load a license from a stream.
 
 ```js
-String licensePath = "path to the .lic file";
-try (InputStream fileStream = new FileInputStream(licensePath)) {
-    License license = new License();
-    license.setLicense(fileStream);
-}
-```
-
-### Set Metered License
-
-You can also set `Metered` license as an alternative to the license file. It is a new licensing mechanism that will be used along with the existing licensing method. It is useful for customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
-
-Following is the sample code demonstrating how to use the `Metered` class.
-
-```js
-String publicKey = ""; // Your public license key
-String privateKey = ""; // Your private license key
-
-Metered metered = new Metered();
-metered.setMeteredKey(publicKey, privateKey);
-
-// Get amount (MB) consumed
-Double consumption = metered.getConsumptionQuantity();
-System.out.print("Metered consumption = " + consumption);
-
-// Get count of credits consumed
-Double credit = metered.getConsumptionCredit();
-System.out.print("Metered credit = " + credit);
+const licensePath = "path to the .lic file"
+const license = new groupdocs.conversion.License()
+const licStream = fs.createReadStream(licensePath)
+groupdocs.conversion.License.setLicenseFromStream(license, licStream, err => {
+  if (err) {
+    console.log(`Set license error: ${err}`)
+  } else {
+    console.log('License set OK')
+  }
+})
 ```
