@@ -70,6 +70,8 @@ license.setLicense(licensePath);
 The following example shows how to load a license from a stream.
 
 ```js
+const fs = require('fs')  
+  
 const licensePath = "path to the .lic file"
 const license = new groupdocs.conversion.License()
 const licStream = fs.createReadStream(licensePath)

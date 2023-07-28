@@ -1,20 +1,15 @@
 ---
-id: developer-guide
-url: conversion/nodejs-java/developer-guide
-title: Developer guide
-weight: 3
-description: "Explains GroupDocs.Conversion for Node.js via Java converter features and shows how to convert PDF, Word, Excel, PowerPoint documents, PNG, JPG images and other formats inside your JavaScript applications"
-keywords: GroupDocs.Conversion Developer Guide, GroupDocs.Conversion Java Developer Guide, Using GroupDocs.Conversion for Node.js, GroupDocs.Conversion for JavaScript use cases
+id: basic-usage
+url: conversion/nodejs-java/basic-usage
+title: Basic usage
+weight: 1
+description: "Quick Start section about main features of GroupDocs.Conversion API, describes how to convert files in JavaScript."
+keywords: GroupDocs.Conversion for Node.js Quick Start, GroupDocs.Conversion JavaScript Basic Usage, 
 productName: GroupDocs.Conversion for Node.js via Java
-hideChildren: true
+hideChildren: False
+structuredData:
+    showOrganization: True
 ---
- 
-<!-- TODO** -->
+Convert documents fast and easily with our intuitive and powerful API with just a few lines of code.
 
-<!-- * [Load files]({{< ref "conversion/java/developer-guide/advanced-usage/loading/" >}})
-* [Get possible conversions]({{< ref "conversion/java/developer-guide/basic-usage/get-possible-conversions.md" >}})
-* [Get document info]({{< ref "conversion/java/developer-guide/basic-usage/get-document-info.md" >}})
-* [Convert files]({{< ref "conversion/java/developer-guide/basic-usage/convert/" >}})
-* [Listening to conversion process events]({{< ref "conversion/java/developer-guide/advanced-usage/listening.md" >}})
-* [Cache results]({{< ref "conversion/java/developer-guide/advanced-usage/caching/" >}}) -->
-
+Let’s review common usage scenarios when the source file is stored on a local drive and you want to convert it to some other format.
