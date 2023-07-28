@@ -42,6 +42,9 @@ With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you 
 For example, an eBook to PDF conversion code snippet will look like this:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 // Load the source eBook file
 Converter converter = new Converter("sample.mobi");
 // Set the convert options for PDF format
@@ -63,6 +66,9 @@ On the other hand, converting your files to eBook format is also quite simple an
 The following code sample demonstrates how to convert a PDF document to eBook format in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.EBookConvertOptions;
+...
 // Load the source PDF file
 Converter converter = new Converter("sample.pdf");
 // Set the convert options for eBook format

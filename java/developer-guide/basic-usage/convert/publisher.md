@@ -43,6 +43,9 @@ Publisher file formats include file types such as PUB file format that is saved 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert your Publisher file into another file format. For example, the Publisher to PDF conversion code snippet will look like this:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 // Load the source Publisher file
 Converter converter = new Converter("sample.pub");
 // Set the convert options for PDF format

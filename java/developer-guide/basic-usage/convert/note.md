@@ -43,6 +43,9 @@ Common OneNote file extensions and their associated file formats is .ONE.
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert your OneNote document into another file format. For example, OneNote to PDF conversion code snippet will look like this:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 // Load the source OneNote file
 Converter converter = new Converter("sample.one");
 // Set the convert options for PDF format

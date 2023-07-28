@@ -44,6 +44,9 @@ With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you 
 For example, VSDX to PDF conversion code snippet will look like this:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 // Load the source VSDX file
 Converter converter = new Converter("sample.vsdx");
 // Set the convert options for PDF format
@@ -64,6 +67,9 @@ On the other hand, converting your diagram files to another diagram format is al
 The following code sample demonstrates how to convert a VSDX format to a VDW format in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.DiagramConvertOptions;
+...
 // Load the source VSDX file
 Converter converter = new Converter("sample.vsdx");
 // Set the convert options for VDW format

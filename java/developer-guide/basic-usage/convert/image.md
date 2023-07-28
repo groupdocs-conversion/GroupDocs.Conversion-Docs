@@ -54,6 +54,9 @@ Converting an image into a PDF file is a common use case for example when you ne
 - Call the `convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 // Load the source JPG file
 Converter converter = new Converter("sample.jpg");
 // Set the convert options for PDF format
@@ -71,6 +74,9 @@ If you’d like to get data from your previous tax returns into Excel and you on
 ### Convert JPG to XLSX
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
+...
 // Load the source JPG file
 Converter converter = new Converter("sample.jpg");
 SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
@@ -81,6 +87,9 @@ converter.convert("jpg-converted-to.xlsx", options);
 ### Convert PNG to XLSX
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
+...
 // Load the source PNG  file
 Converter converter = new Converter("sample.png");
 SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
@@ -96,6 +105,9 @@ Let’s review several code examples in Java language below and see how to trans
 ### Convert JPG to PPTX
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PresentationConvertOptions;
+...
 // Load the source JPG file
 Converter converter = new Converter("sample.jpg");
 PresentationConvertOptions options = new PresentationConvertOptions();
@@ -106,6 +118,9 @@ converter.convert("jpg-converted-to.pptx", options);
 ### Convert PNG to PPTX
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PresentationConvertOptions;
+...
 // Load the source PNG file
 Converter converter = new Converter("sample.png");
 PresentationConvertOptions options = new PresentationConvertOptions();
@@ -118,6 +133,9 @@ converter.convert("png-converted-to.pptx", options);
 To easily transform images into Microsoft Word documents programmatically, please check the following code snippet in Java:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.WordProcessingConvertOptions;
+...
 // Load the source JPG file
 Converter converter = new Converter("sample.jpg");
 WordProcessingConvertOptions options = new WordProcessingConvertOptions();

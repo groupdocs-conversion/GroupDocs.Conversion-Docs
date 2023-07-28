@@ -49,6 +49,9 @@ The key difference between these two formats is that PPT specifies the Binary Fi
 The basic PPT to PPTX conversion could be performed using the code snippet below. The sequence of required steps is quite intuitive - load source PPT file into [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) object and call [convert](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)) method to save converted PPTX file. The PPTX format is chosen as the default format when instantiating the [PresentationConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PresentationConvertOptions) object without calling the [setFormat](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/ConvertOptions#setFormat(com.groupdocs.conversion.filetypes.FileType)) method explicitly.
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PresentationConvertOptions;
+...
 // Load the source PPT file
 Converter converter = new Converter("sample.ppt");
 PresentationConvertOptions options = new PresentationConvertOptions();
@@ -59,6 +62,10 @@ converter.convert("converted.pptx", options);
 An opposite conversion from PPTX to PPT is also could be implemented with a minimum of Java code. The main difference is that you should call the [setFormat](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/ConvertOptions#setFormat(com.groupdocs.conversion.filetypes.FileType)) method with the [FileTypes.PresentationFileType.Ppt](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.filetypes/PresentationFileType#Ppt) argument. Please take a look at the code example below:  
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PresentationConvertOptions;
+import com.groupdocs.conversion.filetypes.PresentationFileType;
+...
 // Load the source PPTX file
 Converter converter = new Converter("sample.pptx");
 PresentationConvertOptions options = new PresentationConvertOptions();
@@ -78,6 +85,9 @@ The actual process of conversion is very simple - provide your presentation file
 Here is an example of converting a PPTX presentation to PDF format. As you can see it's pretty simple and straightforward.  
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 // Load the source PPTX file
 Converter converter = new Converter("sample.pptx");
 PdfConvertOptions options = new PdfConvertOptions();
@@ -92,6 +102,9 @@ Files with PPSM extension represent Macro-enabled Slide Show file format created
 The Java code required for converting PPSM into PDF is provided below.
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 // Load the source PPSM file
 Converter converter = new Converter("sample.ppsm");
 PdfConvertOptions options = new PdfConvertOptions();
@@ -107,6 +120,12 @@ No matter which image format you choose - GroupDocs.Conversion supports a wide r
 Here is a code snippet that shows how to convert PPTX to PNG image in Java programming language:
 
 ```java
+import java.io.FileOutputStream;
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.SavePageStream;
+import com.groupdocs.conversion.options.convert.ImageConvertOptions;
+import com.groupdocs.conversion.filetypes.ImageFileType;
+...
 SavePageStream getPageStream = page => new FileOutputStream(String.format("converted-slide-%s.png", page));
 // Load the source PPTX file
 Converter converter = new Converter("sample.pptx");

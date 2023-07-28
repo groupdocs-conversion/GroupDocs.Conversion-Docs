@@ -39,6 +39,9 @@ With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you 
 For example, MSG to PDF conversion code snippet will look like this:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 // Load the source MSG file
 Converter converter = new Converter("sample.msg");
 // Set the convert options for PDF format

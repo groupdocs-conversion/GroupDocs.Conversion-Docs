@@ -25,6 +25,11 @@ The method will return the [PossibleConversions](https://reference.groupdocs.com
 The following code sample demonstrates how to get possible conversions of the source document:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.PossibleConversions;
+import com.groupdocs.conversion.contracts.Pair;
+import com.groupdocs.conversion.filetypes.FileType;
+...
 String sourceFile = "sample.docx";
 Converter converter = new Converter(sourceFile);
 
@@ -46,6 +51,10 @@ If it is required to programmatically obtain a collection of all supported conve
 
 The following code sample demonstrates how to get all possible conversions:
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.PossibleConversions;
+import com.groupdocs.conversion.contracts.TargetConversion;
+...
 Converter converter = new Converter();
 
 for(PossibleConversions conversions : converter.getAllPossibleConversions())

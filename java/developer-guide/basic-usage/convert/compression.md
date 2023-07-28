@@ -63,6 +63,15 @@ Using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java), yo
 To illustrate, here is a code sample showcasing how to convert the content of a ZIP archive to PDF format:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import java.io.FileOutputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+...
 try (Converter converter = new Converter("sample.zip")) {
             converter.convert(() -> new ByteArrayOutputStream(), (convertedStream, sourceFileName) -> {
                 String outputFolder = "C:\\Output";

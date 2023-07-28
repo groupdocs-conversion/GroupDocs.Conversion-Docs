@@ -42,6 +42,9 @@ With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you 
 For example, TEX to PDF conversion code snippet will look like this:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 // Load the source TEX file
 Converter converter = new Converter("sample.tex");
 // Set the convert options for PDF format
@@ -62,6 +65,10 @@ On the other hand, converting your files to page layout format is also quite sim
 The following code sample demonstrates how to convert a DOCX document to TEX format in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.filetypes.PdfFileType;
+...
 // Load the source PDF file
 Converter converter = Converter("sample.pdf");
 // Set the convert options for TEX format
