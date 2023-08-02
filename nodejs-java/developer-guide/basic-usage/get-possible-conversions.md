@@ -25,19 +25,29 @@ The method will return the [PossibleConversions](#) collection with a complete l
 The following code sample demonstrates how to get possible conversions of the source document:
 
 ```js
-String sourceFile = "sample.docx";
-Converter converter = new Converter(sourceFile);
+const sourceFile = "sample.docx";
+const converter = new groupdocs.conversion.Converter(sourceFile);
+const conversions = converter.getPossibleConversions();
+console.log(
+  util.format(
+    '%s is of type %s and could be converted to:\n',
+    inputFilePath,
+    conversions.getSource().getExtension()
+  )
+);
 
-PossibleConversions conversions = converter.getPossibleConversions();
+const items = conversions.getAll();
+console.log(items);
 
-System.out.print(String.format("%s is of type %s and could be converted to:\n",
-        sourceFile, conversions.getSource().getExtension()));
+items.spliterator().getExactSizeIfKnown();
 
-for (Pair<FileType, Boolean> conversion : conversions.getAll()) 
-{
-    System.out.print(String.format("\t %s as %s conversion.\n", 
-        conversion.getKey().getExtension(),
-        conversion.getValue() ? "primary" : "secondary"));
+for (let i = 0; i < items.size(); i += 1) {
+  const item = items.get(i);
+  console.log(
+    `\t ${item.getFormat().getExtension()} as ${
+      item.isPrimary() ? 'primary' : 'secondary'
+    } conversion.\n`
+  );
 }
 ```
 ## Get all available conversions 
@@ -47,16 +57,21 @@ If it is required to programmatically obtain a collection of all supported conve
 The following code sample demonstrates how to get all possible conversions:
 
 ```js
-Converter converter = new Converter();
+const sourceFile = "sample.docx";
+const converter = new groupdocs.conversion.Converter(sourceFile);
+const conversions = converter.getPossibleConversions();
+console.log(
+  util.format(
+    'Source format: %s \n',
+    conversions.getSource().getDescription()
+  )
+);
 
-for(PossibleConversions conversions : converter.getAllPossibleConversions())
-{
-    System.out.print(String.format("Source format: %s \n", conversions.getSource().getDescription() ));
-    for(TargetConversion conversion : conversions.getAll())
-    {
-        System.out.print(String.format("\t...can be converted to %s format as %s conversion.\n",
-            conversion.getFormat(),
-            conversion.isPrimary()?"primary": "secondary" ));
-    }
+const items = conversions.getAll();
+items.spliterator().getExactSizeIfKnown();
+
+for (let i = 0; i < items.size(); i += 1) {
+  const item = items.get(i)
+  console.log(util.format('\t...can be converted to %s format as %s conversion.\n'), item.getFormat(),  item.isPrimary() ? 'primary' : 'secondary');
 }
 ```

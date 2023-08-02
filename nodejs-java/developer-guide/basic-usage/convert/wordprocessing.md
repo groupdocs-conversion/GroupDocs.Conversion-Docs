@@ -36,9 +36,9 @@ The following code example demonstrates how to convert a document from DOCX into
 
 ```js
 // Load the source DOCX file
-Converter converter = new Converter("sample.docx");
+const converter = new groupdocs.conversion.Converter("sample.docx");
 // Set the convert options for PDF format
-PdfConvertOptions options = new PdfConvertOptions();
+const options = new groupdocs.conversion.PdfConvertOptions();
 // Convert to PDF format
 converter.convert("converted.pdf", options);
 ```
@@ -55,9 +55,9 @@ Converting Microsoft Word documents to HTML or MHTML formats is a popular and de
 
 ```js
 // Load the source DOCX file
-Converter converter = new Converter("sample.docx");
+const converter = new groupdocs.conversion.Converter("sample.docx");
 // Set the convert options for HTML format
-MarkupConvertOptions options = new MarkupConvertOptions();
+const options = new groupdocs.conversion.MarkupConvertOptions();
 // Save converted HTML file
 converter.convert("converted.html", options);
 ```
@@ -66,9 +66,9 @@ When converting a DOC or DOCX file to MHTML format the only difference from the 
 
 ```js
 // Load the source DOCX file
-Converter converter = new Converter("sample.docx");
-MarkupConvertOptions options = new MarkupConvertOptions();
-options.setFormat(MarkupFileType.Mhtml);
+const converter = new groupdocs.conversion.Converter("sample.docx");
+const options = new groupdocs.conversion.MarkupConvertOptions();
+options.setFormat(groupdocs.conversion.MarkupFileType.Mhtml);
 // Save converted HTML file
 converter.convert("converted.html", options);
 ```
@@ -82,14 +82,13 @@ Similarly to other code examples that were explained already, all you need to co
 Please check the complete code example of how to convert DOCX to PNG below:
 
 ```js
-string outputFileNameFormat = "converted-page-%s.png";
-SavePageStream getPageStream = page => new FileOutputStream(String.format(outputFileNameFormat, page));
+const getPageStream = (page) => fs.createWriteStream(util.format("converted-page-%s.png", page));
 
 // Load the source DOCX file
-Converter converter = new Converter("sample.docx");
+const converter = new groupdocs.conversion.Converter("sample.docx");
 // Set the convert options for PNG format
-ImageConvertOptions options = new ImageConvertOptions();
-options.setFormat(ImageFileType.Png);  
+const options = new groupdocs.conversion.ImageConvertOptions();
+options.setFormat(groupdocs.conversion.ImageFileType.Png);  
 // Convert to PNG format
 converter.convert(getPageStream, options);
 ```
@@ -101,11 +100,11 @@ GroupDocs.Conversion allows you to convert Microsoft Word documents to markdown 
 
 ```js
 // Load the source DOCX file
-Converter converter = new Converter("sample.docx");
-WordProcessingConvertOptions options = new WordProcessingConvertOptions();
-options.setFormat(WordProcessingFileType.Md);
+const converter = new groupdocs.conversion.Converter("sample.docx");
+const options = new groupdocs.conversion.WordProcessingConvertOptions();
+options.setFormat(groupdocs.conversion.WordProcessingFileType.Md);
 // Save converted TXT file
-converter.convert(outputFile, options);
+converter.convert("converted.txt", options);
 ```
   
 So again - all you need to do for a quick convert with GroupDocs.Conversion for Java is to - load the source Word document into the `Converter` class and call the `convert` method to save the converted file. That’s it!

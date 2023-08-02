@@ -15,12 +15,13 @@ To get document information use the [`Converter.getDocumentInfo()`](#) method. I
 To iterate through the document information properties, you can use the [`getPropertyNames()`](#) and [`getProperty()`](#) methods. The following code snippet demonstrates how to list all the available document information properties:
 
 ```js
-try (Converter converter = new Converter("sample.txt")) {
-	IDocumentInfo info = converter.getDocumentInfo();			
-	for(String propertyName : info.getPropertyNames())
-	{
-		System.out.println("Property name: " + propertyName + " value:" + info.getProperty(propertyName));	
-	}
+const converter = new groupdocs.conversion.Converter("sample.txt");
+const info = converter.getDocumentInfo();
+const props = info.getPropertyNames();
+props.spliterator().getExactSizeIfKnown();
+for (let i = 0; i < props.size(); i++) {
+  const propertyName = props.get(i);
+  console.log(`Property name: ${propertyName}. Value: ${info.getProperty(propertyName)}`);
 }
 ```
 Depending on the format type, the resulting `DocumentInfo` object also contains some additional information:
@@ -40,140 +41,131 @@ The samples below show how to obtain document info for various formats.
 ### PDF documents
 
 ```js
-try (Converter converter = new Converter("sample-toc.pdf")) 
-{
-    IDocumentInfo info = converter.getDocumentInfo();
-    PdfDocumentInfo pdfInfo = (PdfDocumentInfo) info;
+const converter = new groupdocs.conversion.Converter("sample-toc.pdf");
+const pdfInfo = converter.getDocumentInfo();
 
-    System.out.println("Author: "+ pdfInfo.getAuthor());
-    System.out.println("Creation date: "+ pdfInfo.getCreationDate());
-    System.out.println("Title: "+ pdfInfo.getTitle());
-    System.out.println("Version: "+ pdfInfo.getVersion());
-    System.out.println("Pages count: "+ pdfInfo.getPagesCount());
-    System.out.println("Width: "+ pdfInfo.getWidth());
-    System.out.println("Height: "+ pdfInfo.getHeight());
-    System.out.println("Is landscaped: "+ pdfInfo.getIsLandscape());
-    System.out.println("Is Encrypted: "+ pdfInfo.getIsEncrypted());
-    for(TableOfContentsItem tocItem : pdfInfo.getTableOfContents())			
-        {
-            System.out.println(tocItem.getTitle()+" : "+ tocItem.getPage());
-        }
+console.log("Author: " + pdfInfo.getAuthor());
+console.log("Creation date: " + pdfInfo.getCreationDate());
+console.log("Title: " + pdfInfo.getTitle());
+console.log("Version: " + pdfInfo.getVersion());
+console.log("Pages count: " + pdfInfo.getPagesCount());
+console.log("Width: " + pdfInfo.getWidth());
+console.log("Height: " + pdfInfo.getHeight());
+console.log("Is landscaped: " + pdfInfo.getIsLandscape());
+console.log("Is Encrypted: " + pdfInfo.getIsEncrypted());
+
+const pdfTOC = pdfInfo.getTableOfContents();
+pdfTOC.spliterator().getExactSizeIfKnown();
+for(let i = 0; i < pdfTOC.size(); i++) {
+    const tocItem = pdfTOC.get(i);
+    console.log(tocItem.getTitle() + " : " + tocItem.getPage());
 }
 ```
 
 ### Project management documents
 
 ```js
-try (Converter converter = new Converter("foobar.mpp"))
-{
-    IDocumentInfo info = converter.getDocumentInfo();
-    ProjectManagementDocumentInfo docInfo = (ProjectManagementDocumentInfo) info;
+const converter = new groupdocs.conversion.Converter("foobar.mpp");
+const docInfo = converter.getDocumentInfo();
 
-    System.out.println("Creation date: " + docInfo.getCreationDate());
-    System.out.println("Start date: " + docInfo.getStartDate());
-    System.out.println("End date: " + docInfo.getEndDate());
-    System.out.println("Format: " + docInfo.getFormat());
-    System.out.println("Size: " + docInfo.getSize());
-    System.out.println("Tasks count: " + docInfo.getTasksCount());        
-}
+console.log("Creation date: " + docInfo.getCreationDate());
+console.log("Start date: " + docInfo.getStartDate());
+console.log("End date: " + docInfo.getEndDate());
+console.log("Format: " + docInfo.getFormat());
+console.log("Size: " + docInfo.getSize());
+console.log("Tasks count: " + docInfo.getTasksCount());        
 ```
 
 ### Images
 
 ```js
-try (Converter converter = new Converter("image.png"))
-{
-    IDocumentInfo info = converter.getDocumentInfo();
-    ImageDocumentInfo docInfo = (ImageDocumentInfo) info;
+const converter = new groupdocs.conversion.Converter("image.png");
+const docInfo = converter.getDocumentInfo();
 
-    System.out.println("Bits per pixel: " + docInfo.getBitsPerPixel());
-    System.out.println("Creation date: " + docInfo.getCreationDate());
-    System.out.println("Format: " + docInfo.getFormat());
-    System.out.println("Height: " + docInfo.getHeight());
-    System.out.println("Width: " + docInfo.getWidth());    
-    System.out.println("Size: " + docInfo.getSize());
-}
+console.log("Bits per pixel: " + docInfo.getBitsPerPixel());
+console.log("Creation date: " + docInfo.getCreationDate());
+console.log("Format: " + docInfo.getFormat());
+console.log("Height: " + docInfo.getHeight());
+console.log("Width: " + docInfo.getWidth());    
+console.log("Size: " + docInfo.getSize());
 ```
 
 ### Presentations
 
 ```js
-try (Converter converter = new Converter("presentation.ppt"))
-{
-    IDocumentInfo info = converter.getDocumentInfo();
-    PresentationDocumentInfo docInfo = (PresentationDocumentInfo) info;
+const converter = new groupdocs.conversion.Converter("presentation.ppt");
+const docInfo = converter.getDocumentInfo();
 
-    System.out.println("Author: " + docInfo.getAuthor());
-    System.out.println("Creation date: " + docInfo.getCreationDate());
-    System.out.println("Format: " + docInfo.getFormat());
-    System.out.println("Is Password Protected: " + docInfo.isPasswordProtected());    
-    System.out.println("Pages count: " + docInfo.getPagesCount());
-    System.out.println("Size: " + docInfo.getSize());
-    System.out.println("Title: " + docInfo.getTitle());               
-}
+console.log("Author: " + docInfo.getAuthor());
+console.log("Creation date: " + docInfo.getCreationDate());
+console.log("Format: " + docInfo.getFormat());
+console.log("Is Password Protected: " + docInfo.isPasswordProtected());    
+console.log("Pages count: " + docInfo.getPagesCount());
+console.log("Size: " + docInfo.getSize());
+console.log("Title: " + docInfo.getTitle());               
 ```
 
 ### Spreadsheets
 
 ```js
-try (Converter converter = new Converter("table.xlsx"))
-{
-    IDocumentInfo info = converter.getDocumentInfo();
-    SpreadsheetDocumentInfo docInfo = (SpreadsheetDocumentInfo) info;
+const converter = new groupdocs.conversion.Converter("table.xlsx");
+const docInfo = converter.getDocumentInfo();
 
-    System.out.println("Author: " + docInfo.getAuthor());
-    System.out.println("Creation date: " + docInfo.getCreationDate());
-    System.out.println("Format: " + docInfo.getFormat());
-    System.out.println("Is Password Protected: " + docInfo.isPasswordProtected());    
-    System.out.println("Pages count: " + docInfo.getPagesCount());
-    System.out.println("Size: " + docInfo.getSize());
-    System.out.println("Title: " + docInfo.getTitle());
-    System.out.println("Worksheets Count : " + docInfo.getWorksheetsCount());
-}
+console.log("Author: " + docInfo.getAuthor());
+console.log("Creation date: " + docInfo.getCreationDate());
+console.log("Format: " + docInfo.getFormat());
+console.log("Is Password Protected: " + docInfo.isPasswordProtected());    
+console.log("Pages count: " + docInfo.getPagesCount());
+console.log("Size: " + docInfo.getSize());
+console.log("Title: " + docInfo.getTitle());
+console.log("Worksheets Count : " + docInfo.getWorksheetsCount());
 ```
 ### CAD drawings
 
 ```js
-try (Converter converter = new Converter("sample.dwg"))
-{
-    IDocumentInfo info = converter.getDocumentInfo();
-    CadDocumentInfo docInfo = (CadDocumentInfo) info;
+const converter = new groupdocs.conversion.Converter("sample.dwg");
+const docInfo = converter.getDocumentInfo();
 
-    System.out.println("Creation date: " + docInfo.getCreationDate());
-    System.out.println("Format: " + docInfo.getFormat());
-    System.out.println("Height: " + docInfo.getHeight());
-    System.out.println("Width: " + docInfo.getWidth());
-    System.out.println("Size: " + docInfo.getSize());
+console.log("Creation date: " + docInfo.getCreationDate());
+console.log("Format: " + docInfo.getFormat());
+console.log("Height: " + docInfo.getHeight());
+console.log("Width: " + docInfo.getWidth());
+console.log("Size: " + docInfo.getSize());
 
-    for(String layout : docInfo.getLayouts())			
-       	{
-    	    System.out.println("Layout: " + layout);
-        }
-    for(String layer : docInfo.getLayers())			
-      	{
-            System.out.println("Layer: " + layer);
-        }
+
+const layouts = docInfo.getLayouts();
+layouts.spliterator().getExactSizeIfKnown();
+for(let i = 0; i < layouts.size(); i++) {
+    const layout = layouts.get(i);
+    console.log("Layout: " + layout);
+}
+
+const layers = docInfo.getLayers();
+layers.spliterator().getExactSizeIfKnown();
+for(let i = 0; i < layers.size(); i++) {
+    const layer = layers.get(i);
+    console.log("Layer: " + layer);
 }
 ```
 
 ### Emails
 
 ```js
-try (Converter converter = new Converter("sample.msg"))
-{
-    IDocumentInfo info = converter.getDocumentInfo();
-    EmailDocumentInfo docInfo = (EmailDocumentInfo) info;
+const converter = new groupdocs.conversion.Converter("sample.msg");
+const docInfo = converter.getDocumentInfo();
 
-    System.out.println("Creation date: " + docInfo.getCreationDate());
-    System.out.println("Format: " + docInfo.getFormat());
-    System.out.println("Is Encrypted: " + docInfo.isEncrypted());
-    System.out.println("Is body in HTML: " + docInfo.isHtml());
-    System.out.println("Is Signed: " + docInfo.isSigned());
-    System.out.println("Size: " + docInfo.getSize());
-    System.out.println("Attachments Count: " + docInfo.getAttachmentsCount());
-    for(String attachmentName : docInfo.getAttachmentsNames())			
-       	{
-    	    System.out.println("Attachment Name: " + attachmentName);
-        }
+console.log("Creation date: " + docInfo.getCreationDate());
+console.log("Format: " + docInfo.getFormat());
+console.log("Is Encrypted: " + docInfo.isEncrypted());
+console.log("Is body in HTML: " + docInfo.isHtml());
+console.log("Is Signed: " + docInfo.isSigned());
+console.log("Size: " + docInfo.getSize());
+console.log("Attachments Count: " + docInfo.getAttachmentsCount());
+
+const attachments = docInfo.getAttachmentsNames();
+attachments.spliterator().getExactSizeIfKnown();
+for(let i = 0; i < attachments.size(); i++) {
+    const attchName = attachments.get(i);
+    console.log("Attachment Name: " + attchName);
 }
 ```

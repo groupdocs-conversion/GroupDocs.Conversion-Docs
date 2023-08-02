@@ -35,11 +35,11 @@ Converting an image into a PDF file is a common use case for example when you ne
 - Create an instance of the `PdfConvertOptions` class.
 - Call the `convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
-```java
+```js
 // Load the source JPG file
-Converter converter = new Converter("sample.jpg");
+const converter = new groupdocs.conversion.Converter("sample.jpg");
 // Set the convert options for PDF format
-PdfConvertOptions options = new PdfConvertOptions();
+const options = new groupdocs.conversion.PdfConvertOptions();
 // Convert to PDF format
 converter.convert("converted.pdf", options);
 ```
@@ -52,20 +52,20 @@ If you’d like to get data from your previous tax returns into Excel and you on
 
 ### Convert JPG to XLSX
 
-```java
+```js
 // Load the source JPG file
-Converter converter = new Converter("sample.jpg");
-SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
+const converter = new groupdocs.conversion.Converter("sample.jpg");
+const options = new groupdocs.conversion.SpreadsheetConvertOptions();
 // Save converted XLS file
 converter.convert("jpg-converted-to.xlsx", options);
 ```
 
 ### Convert PNG to XLSX
 
-```java
+```js
 // Load the source PNG  file
-Converter converter = new Converter("sample.png");
-SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
+const converter = new groupdocs.conversion.Converter("sample.png");
+const options = new groupdocs.conversion.SpreadsheetConvertOptions();
 // Save converted XLS file
 converter.convert("png-converted-to.xlsx", options);
 ```
@@ -77,20 +77,20 @@ Let’s review several code examples in JavaScript language below and see how to
 
 ### Convert JPG to PPTX
 
-```java
+```js
 // Load the source JPG file
-Converter converter = new Converter("sample.jpg");
-PresentationConvertOptions options = new PresentationConvertOptions();
+const converter = new groupdocs.conversion.Converter("sample.jpg");
+const options = new groupdocs.conversion.PresentationConvertOptions();
 // Save converted PPT file  
 converter.convert("jpg-converted-to.pptx", options);
 ```
 
 ### Convert PNG to PPTX
 
-```java
+```js
 // Load the source PNG file
-Converter converter = new Converter("sample.png");
-PresentationConvertOptions options = new PresentationConvertOptions();
+const converter = new groupdocs.conversion.Converter("sample.jpg");
+const options = new groupdocs.conversion.PresentationConvertOptions();
 // Save converted PPT file
 converter.convert("png-converted-to.pptx", options);
 ```
@@ -101,8 +101,8 @@ To easily transform images into Microsoft Word documents programmatically, pleas
 
 ```java
 // Load the source JPG file
-Converter converter = new Converter("sample.jpg");
-WordProcessingConvertOptions options = new WordProcessingConvertOptions();
+const converter = new groupdocs.conversion.Converter("sample.jpg");
+const options = new groupdocs.conversion.WordProcessingConvertOptions();
 // Save converted DOCX file
 converter.convert("jpg-converted-to.docx", options);
 ```

@@ -32,8 +32,8 @@ The basic PPT to PPTX conversion could be performed using the code snippet below
 
 ```js
 // Load the source PPT file
-Converter converter = new Converter("sample.ppt");
-PresentationConvertOptions options = new PresentationConvertOptions();
+const converter = new groupdocs.conversion.Converter("sample.ppt");
+const options = new groupdocs.conversion.PresentationConvertOptions();
 // Save converted PPTX file
 converter.convert("converted.pptx", options);
 ```
@@ -42,8 +42,8 @@ An opposite conversion from PPTX to PPT is also could be implemented with a mini
 
 ```js
 // Load the source PPTX file
-Converter converter = new Converter("sample.pptx");
-PresentationConvertOptions options = new PresentationConvertOptions();
+const converter = new groupdocs.conversion.Converter("sample.ppt");
+const options = new groupdocs.conversion.PresentationConvertOptions();
 options.setFormat(PresentationFileType.Ppt);
 // Save converted PPT file
 converter.convert("converted.ppt", options);
@@ -61,8 +61,8 @@ Here is an example of converting a PPTX presentation to PDF format. As you can s
 
 ```js
 // Load the source PPTX file
-Converter converter = new Converter("sample.pptx");
-PdfConvertOptions options = new PdfConvertOptions();
+const converter = new groupdocs.conversion.Converter("sample.ppt");
+const options = new groupdocs.conversion.PdfConvertOptions();
 // Save converted PDF file
 converter.convert("converted.pdf", options);
 ```
@@ -75,8 +75,8 @@ The JavaScript code required for converting PPSM into PDF is provided below.
 
 ```js
 // Load the source PPSM file
-Converter converter = new Converter("sample.ppsm");
-PdfConvertOptions options = new PdfConvertOptions();
+const converter = new groupdocs.conversion.Converter("sample.ppsm");
+const options = new groupdocs.conversion.PdfConvertOptions();
 // Save converted PDF file
 converter.convert("converted.pdf", options);
 ```
@@ -89,12 +89,12 @@ No matter which image format you choose - GroupDocs.Conversion supports a wide r
 Here is a code snippet that shows how to convert PPTX to PNG image in JavaScript programming language:
 
 ```js
-SavePageStream getPageStream = page => new FileOutputStream(String.format("converted-slide-%s.png", page));
+const getPageStream = (page) => fs.createWriteStream(util.format("converted-page-%s.png", page));
 // Load the source PPTX file
-Converter converter = new Converter("sample.pptx");
+const converter = new groupdocs.conversion.Converter("sample.pptx");
 // Set the convert options for PNG format
-ImageConvertOptions options = new ImageConvertOptions();
-options.setFormat(ImageFileType.Png);  
+const options = new groupdocs.conversion.ImageConvertOptions();
+options.setFormat(groupdocs.conversion.ImageFileType.Png);  
 // Convert to PNG format
 converter.convert(getPageStream, options);
 ```

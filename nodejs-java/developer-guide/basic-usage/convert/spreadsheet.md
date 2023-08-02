@@ -46,8 +46,8 @@ Use the [Converter](#) class to save an Excel workbook to PDF using its [convert
 
 ```js
 // Load the source XLSX file
-Converter converter = new Converter("sample.xlsx");
-PdfConvertOptions options = new PdfConvertOptions();
+const converter = new groupdocs.conversion.Converter("sample.xlsx");
+const options = new groupdocs.conversion.PdfConvertOptions();
 // Save converted PDF file
 converter.convert("converted.pdf", options);
 ```
@@ -60,8 +60,8 @@ The code snippet for XLSX to HTML or MHTML conversion using JavaScript programmi
 
 ```js
 // Load the source XLSX file
-Converter converter = new Converter("sample.xlsx");
-MarkupConvertOptions options = new MarkupConvertOptions();
+const converter = new groupdocs.conversion.Converter("sample.xlsx");
+const options = new groupdocs.conversion.MarkupConvertOptions();
 // Save converted HTML file
 converter.convert("converted.html", options);
 ```
@@ -69,8 +69,8 @@ converter.convert("converted.html", options);
 When converting to MHTML you may use the same code example as above, just call the `setFormat` method of the [MarkupConvertOptions](#) like this:  
 
 ```js
-MarkupConvertOptions options = new MarkupConvertOptions();
-options.setFormat(MarkupFileType.Mhtml);
+const options = new groupdocs.conversion.MarkupConvertOptions();
+options.setFormat(groupdocs.conversion.MarkupFileType.Mhtml);
 ```
 
 ## Convert Excel workbook to DOCX
@@ -81,8 +81,8 @@ Here is a complete code example for XLSX to DOCX conversion using JavaScript lan
 
 ```js
 // Load the source XLSX file
-Converter converter = new Converter("sample.xlsx");
-WordProcessingConvertOptions options = new WordProcessingConvertOptions();
+const converter = new groupdocs.conversion.Converter("sample.xlsx");
+const options = new groupdocs.conversion.WordProcessingConvertOptions();
 // Save converted DOCX file
 converter.convert("converted.docx", options);
 ```
@@ -97,8 +97,8 @@ Please examine the code snippet that demonstrates how to convert XLSX to PPTX us
 
 ```js
 // Load the source XLS file
-Converter converter = new Converter("sample.xlsx");
-PresentationConvertOptions options = new PresentationConvertOptions();
+const converter = new groupdocs.conversion.Converter("sample.xlsx");
+cosnt options = new groupdocs.conversion.PresentationConvertOptions();
 // Save converted PPTX file
 converter.convert("converted.pptx", options);
 ```
