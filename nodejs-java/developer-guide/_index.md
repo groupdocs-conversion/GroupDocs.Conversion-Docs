@@ -11,9 +11,9 @@ hideChildren: true
 
 <!-- TODO -->
 <!-- * [Load files]({{< ref "conversion/java/developer-guide/advanced-usage/loading/" >}})-->
-* [Get possible conversions]({{< ref "conversion/java/developer-guide/basic-usage/get-possible-conversions.md" >}})
-* [Get document info]({{< ref "conversion/java/developer-guide/basic-usage/get-document-info.md" >}})
-* [Convert files]({{< ref "conversion/java/developer-guide/basic-usage/convert/" >}})
+* [Get possible conversions]({{< ref "conversion/nodejs-java/developer-guide/basic-usage/get-possible-conversions.md" >}})
+* [Get document info]({{< ref "conversion/nodejs-java/developer-guide/basic-usage/get-document-info.md" >}})
+* [Convert files]({{< ref "conversion/nodejs-java/developer-guide/basic-usage/convert/" >}})
 <!-- * [Listening to conversion process events]({{< ref "conversion/java/developer-guide/advanced-usage/listening.md" >}})
 * [Cache results]({{< ref "conversion/java/developer-guide/advanced-usage/caching/" >}}) -->
 
