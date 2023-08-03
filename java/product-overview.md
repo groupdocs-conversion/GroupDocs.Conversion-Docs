@@ -42,7 +42,7 @@ Using GroupDocs.Conversion for Java in your project gives you the following bene
 - [Customizable caching]({{< ref "conversion/java/developer-guide/advanced-usage/caching/how-to-use-custom-cache-implementation.md" >}}). Caching to local disk is implemented by default and any type of storage can be supported by implementing caching interfaces – Amazon S3, Dropbox, Google Drive, Windows Azure and others.
 - Performance. Designed to process thousands of files and utilize as minimum resources as possible. We do performance testing to make sure we do not have performance degradation from version to version.
 - Scalability. Shipped as a single Java package that can be deployed with any Java application by [installing via Maven]({{< ref "conversion/java/getting-started/installation.md" >}}). You do not need to worry about any other services or modules.
-- Simple and intuitive [public API](https://reference.groupdocs.com/conversion/net). All methods are doing what you would expect from them and nothing more.
+- Simple and intuitive [public API](https://reference.groupdocs.com/conversion/java). All methods are doing what you would expect from them and nothing more.
 
 You can use GroupDocs.Conversion across [multiple platforms and operation systems]({{< ref "conversion/java/getting-started/system-requirements" >}}):
 
@@ -61,7 +61,7 @@ If you are new to GroupDocs.Conversion, see the following topics first:
 
 ## Technical support
 
-If you encounter an issue while using GroupDocs.Conversion or have a technical question, feel free to create a post in our [Free Support Forum](https://forum.groupdocs.com/c/viewer/9). If free support is not sufficient, you can submit a ticket to our [Paid Support Helpdesk](https://helpdesk.groupdocs.com/).
+If you encounter an issue while using GroupDocs.Conversion or have a technical question, feel free to create a post in our [Free Support Forum](https://forum.groupdocs.com/c/conversion). If free support is not sufficient, you can submit a ticket to our [Paid Support Helpdesk](https://helpdesk.groupdocs.com/).
 
 <!--
 - Thousands of different file conversion pairs supported for office documents, presentations, spreadsheets and images.
