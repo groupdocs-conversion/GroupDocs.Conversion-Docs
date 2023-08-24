@@ -8,7 +8,7 @@ keywords: Load document, Load and convert PowerPoint document, Load and convert 
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-GroupDocs.Conversion provides [PresentationLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PresentationLoadOptions) to give you control over how the source presentation document will be processed. The following options could be set:
+GroupDocs.Conversion provides the [PresentationLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PresentationLoadOptions) class to give you better control over how the source presentation document will be processed. The following options could be set:
 
 *   **[setFormat](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PresentationLoadOptions#setFormat(com.groupdocs.conversion.filetypes.PresentationFileType))** -  the document type is auto-detected during loading, however, you can specify explicitly the type of the source presentation document. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm*
 *   **[setDefaultFont](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PresentationLoadOptions#setDefaultFont(java.lang.String))** -  default font for rendering the presentation. The following font will be used if a presentation font is missing.      
@@ -22,6 +22,10 @@ GroupDocs.Conversion provides [PresentationLoadOptions](https://reference.group
 The following code sample shows how to convert a presentation and hide comments:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.PresentationLoadOptions;
+...
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
 loadOptions.setHideComments(true);
 
@@ -35,6 +39,13 @@ converter.convert("converted.pdf", options);
 The following code sample shows how to convert a presentation and specify font substitutions for missing fonts:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.FontSubstitute;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.PresentationLoadOptions;
+import java.util.ArrayList;
+import java.util.List;
+...
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
 
 List<FontSubstitute> fontSubstitutes = new ArrayList<FontSubstitute>();
@@ -53,6 +64,10 @@ converter.convert("converted.pdf", options);
 The following code sample shows how to convert a presentation including the hidden slides:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.PresentationLoadOptions;
+...
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
 loadOptions.setShowHiddenSlides(true);
 

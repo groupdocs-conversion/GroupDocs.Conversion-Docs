@@ -25,6 +25,9 @@ GroupDocs.Conversion will open the file for reading only when any other methods 
 The following code snippet shows how to load a file from a local disk:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 Converter converter = new Converter("c:\\files\\sample.docx");
 PdfConvertOptions options = new PdfConvertOptions();
 

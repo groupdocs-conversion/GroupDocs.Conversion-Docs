@@ -8,7 +8,7 @@ keywords: Load and convert document, Load and convert Microsoft Excel workbook, 
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-GroupDocs.Conversion provides [SpreadsheetLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions) to give you control over how the source spreadsheet document will be processed. The following options could be set:
+GroupDocs.Conversion provides the [SpreadsheetLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions) class to give you better control over how the source spreadsheet document will be processed. The following options could be set:
 
 *   **[setFormat](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setFormat(com.groupdocs.conversion.filetypes.SpreadsheetFileType))** -  the document type is auto-detected during loading, however, you can specify explicitly the type of the source spreadsheet document. Available options are: *Xls, Xlsx, Xlsm, Xlsb, Ods, Ots, Xltx, Xlt, Xltm, Tsv, Xlam, Csv*
 *   **[setDefaultFont](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/SpreadsheetLoadOptions#setDefaultFont(java.lang.String))** -  default font. The following font will be used if a spreadsheet font is missing.      
@@ -26,6 +26,10 @@ GroupDocs.Conversion provides [SpreadsheetLoadOptions](https://reference.groupd
 The following code sample shows how to convert a spreadsheet and hide comments:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.SpreadsheetLoadOptions;
+...
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 loadOptions.setHideComments(true);
 loadOptions.setOnePagePerSheet(true);
@@ -40,6 +44,10 @@ converter.convert("converted.pdf", options);
 The following code sample shows how to convert a spreadsheet and show grid lines:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.SpreadsheetLoadOptions;
+...
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 loadOptions.setShowGridLines(true);
 loadOptions.setOnePagePerSheet(true);
@@ -54,6 +62,10 @@ converter.convert("converted.pdf", options);
 The following code sample shows how to convert a spreadsheet and skip empty rows and columns:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.SpreadsheetLoadOptions;
+...
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 loadOptions.setSkipEmptyRowsAndColumns(true);
 loadOptions.setOnePagePerSheet(true);
@@ -68,6 +80,13 @@ converter.convert("converted.pdf", options);
 The following code sample shows how to convert a spreadsheet and specify font substitution for missing fonts:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.FontSubstitute;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.SpreadsheetLoadOptions;
+import java.util.ArrayList;
+import java.util.List;
+...
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 List<FontSubstitute> fontSubstitutes = new ArrayList<FontSubstitute>();
 fontSubstitutes.add(FontSubstitute.create("Tahoma", "Arial"));
@@ -86,6 +105,10 @@ converter.convert("converted.pdf", options);
 The following code sample shows how to convert a spreadsheet and specify the exact range of rows and columns to be converted
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.SpreadsheetLoadOptions;
+...
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 loadOptions.setConvertRange("10:30");
 loadOptions.setOnePagePerSheet(true);
@@ -100,6 +123,10 @@ converter.convert("converted.pdf", options);
 The following code sample shows how to convert a spreadsheet including the hidden sheets
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.SpreadsheetLoadOptions;
+...
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 loadOptions.setShowHiddenSheets(true);
 loadOptions.setOnePagePerSheet(true);

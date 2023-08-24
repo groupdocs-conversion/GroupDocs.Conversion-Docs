@@ -8,7 +8,7 @@ keywords: Load document, Load CSV document
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-GroupDocs.Conversion provides [CsvLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions) to give you control over how the source CSV document will be processed. The following options could be set:
+GroupDocs.Conversion provides the [CsvLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions) class to give you control over how the source CSV document will be processed. The following options could be set:
 
 *   **[setSeparator](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#setSeparator(char))** -  specifies the delimiter 
 *   **[setIsMultiEncoded](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#setMultiEncoded(boolean))** -  if *true*, this means that the document contains several encodings
@@ -22,6 +22,10 @@ GroupDocs.Conversion provides [CsvLoadOptions](https://reference.groupdocs.com/
 The following code sample shows how to convert a CSV document and control the way the date/time and numeric data have been processed:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.CsvLoadOptions;
+...
 CsvLoadOptions loadOptions = new CsvLoadOptions();
 loadOptions.setConvertDateTimeData(true);
 loadOptions.setConvertNumericData(true);
@@ -36,6 +40,10 @@ converter.convert("converted.pdf", options);
 The following code sample shows how to convert a CSV document and specify the delimiter
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.CsvLoadOptions;
+...
 CsvLoadOptions loadOptions = new CsvLoadOptions();
 loadOptions.setSeparator(',');
 
@@ -49,6 +57,10 @@ converter.convert("converted.pdf", options);
 The following code sample shows how to convert a CSV document and specify the encoding
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.CsvLoadOptions;
+...
 CsvLoadOptions loadOptions = new CsvLoadOptions();
 loadOptions.setEncoding(java.nio.charset.Charset.forName("shift_jis"));
 

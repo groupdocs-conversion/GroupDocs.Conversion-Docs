@@ -11,6 +11,13 @@ hideChildren: False
 The following code snippet shows how to convert a document from a URL:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.exceptions.GroupDocsConversionException;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
+...
 String url = "https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Java/blob/master/Examples/Resources/SampleFiles/sample.docx?raw=true";
 String outputFile = "c:\\output\\converted.pdf";
 

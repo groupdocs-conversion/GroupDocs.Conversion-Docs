@@ -18,6 +18,12 @@ To load a file from a stream:
 The following code snippet serves this purpose:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.exceptions.GroupDocsConversionException;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+...
 try{
     Converter converter = new Converter(() -> {
                 try {
