@@ -8,7 +8,7 @@ keywords: Load document, Load CAD document
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-GroupDocs.Conversion provides [CadLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CadLoadOptions) to give you control over how the source CAD document will be processed. The following options could be set:
+GroupDocs.Conversion provides the [CadLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CadLoadOptions) class to give you control over how the source CAD document will be processed. The following options could be set:
 
 *   [**setFormat**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CadLoadOptions#setFormat(com.groupdocs.conversion.filetypes.CadFileType)) - the source document type is auto-detected, but you could set the source document format explicitly with this property. Available options are: Dxf, Dwg, Dgn, Dwf, Stl, Ifc, Plt, Igs, Dwt
 *   [**setWidth**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CadLoadOptions#setWidth(int)) - sets the desired page width      
@@ -20,6 +20,10 @@ GroupDocs.Conversion provides [CadLoadOptions](https://reference.groupdocs.com/
 The following code sample shows how to convert a CAD document and convert only certain layouts:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.CadLoadOptions;
+...
 CadLoadOptions loadOptions =  new CadLoadOptions();
 loadOptions.setLayoutNames(new  String[]{ "Layout1", "Layout3" });
 
@@ -33,6 +37,10 @@ converter.convert("converted.pdf", options);
 The following code sample shows how to convert a CAD document and specify the width and height
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.load.CadLoadOptions;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 CadLoadOptions loadOptions =  new CadLoadOptions();
 loadOptions.setWidth(1920);
 loadOptions.setHeight(1080);

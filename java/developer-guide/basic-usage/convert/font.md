@@ -22,6 +22,9 @@ With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you 
 For example, CFF to TTF conversion code snippet will look like this:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.FontConvertOptions;
+...
 // Load the source font file
 Converter converter = new Converter("Lato-Regular.cff");
 // Set the convert options

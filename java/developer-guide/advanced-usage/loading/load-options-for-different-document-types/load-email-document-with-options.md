@@ -8,7 +8,7 @@ keywords: Load document, Load Email document
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-GroupDocs.Conversion provides [EmailLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions) to give you control over how the source email document will be processed. The following options could be set:
+GroupDocs.Conversion provides the [EmailLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions) class to give you better control over how the source email document will be processed. The following options could be set:
 
 *   **[**set**Format](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions#setFormat(com.groupdocs.conversion.filetypes.EmailFileType))** -  the document type is auto-detected during loading, however, you can specify explicitly the type of the source email document. Available options are: Msg, Eml, Emlx, Pst, Ost, Vcf, Mht 
 *   **[**setD**isplayHeader](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions#setDisplayHeader(boolean))** -  option to display or hide the email header      
@@ -23,6 +23,10 @@ GroupDocs.Conversion provides [EmailLoadOptions](https://reference.groupdocs.co
 The following code sample shows how to convert an Email document and control the visibility of the fields:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.EmailLoadOptions;
+...
 EmailLoadOptions loadOptions = new EmailLoadOptions();
 loadOptions.setDisplayHeader(false);
 loadOptions.setDisplayFromEmailAddress(false);
@@ -41,6 +45,17 @@ converter.convert("converted.pdf", options);
 The following code sample shows how to convert an Email document and all attachments:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.SaveDocumentStreamForFileType;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.EmailLoadOptions;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+...
 EmailLoadOptions emailLoadOptions = new EmailLoadOptions();
 emailLoadOptions.setConvertOwned(true);
 emailLoadOptions.setConvertOwner(true);

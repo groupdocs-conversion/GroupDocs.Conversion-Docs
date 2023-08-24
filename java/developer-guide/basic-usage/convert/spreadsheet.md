@@ -27,9 +27,9 @@ structuredData:
         - name: Convert to PDF and save result 
           text: Call Converter class convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
-Microsoft Excel with its popular XLS and XLSX formats is a recognized authority in the area of working with tabular data, reports, accounting data and numbers. However, there are often situations when installing Excel software for working with spreadsheets is not possible for various reasons. This is exactly the situation when converting the source workbook into another format can be a solution. 
+Microsoft Excel with its popular XLS and XLSX formats is a recognized authority in the area of working with tabular data, reports, accounting data, and numbers. However, there are often situations when installing Excel software for working with spreadsheets is not possible for various reasons. This is exactly the situation when converting the source workbook into another format can be a solution. 
 
-Even though direct converting tables to other formats can be a very complicated process, **GroupDocs.Conversion for Java** successfully solves this class of tasks - from the developer's point of view, it is needed to load the source workbook and save the converted document in some other format. That’s it!
+Even though a direct conversion of tables to other formats can be a very complicated process, the **GroupDocs.Conversion for Java** successfully solves this class of tasks - from the developer's point of view, it is needed to load the source workbook and save the converted document in some other format. That’s it!
 
 ## Supported spreadsheet file conversions
 
@@ -45,6 +45,9 @@ Use the [Converter](https://reference.groupdocs.com/conversion/java/com.groupdoc
 2. Call the `convert` method and specify the output file name along with the [PdfConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PdfConvertOptions) object as we are converting the workbook into PDF format. The converted PDF file will be saved under the selected file name.  
 
 ```Java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 // Load the source XLSX file
 Converter converter = new Converter("sample.xlsx");
 PdfConvertOptions options = new PdfConvertOptions();
@@ -59,6 +62,9 @@ The main difference between HTML and MHTML is that the latter combines all docum
 The code snippet for XLSX to HTML or MHTML conversion using Java programming language is pretty simple:  
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.MarkupConvertOptions;
+...
 // Load the source XLSX file
 Converter converter = new Converter("sample.xlsx");
 MarkupConvertOptions options = new MarkupConvertOptions();
@@ -69,8 +75,16 @@ converter.convert("converted.html", options);
 When converting to MHTML you may use the same code example as above, just call the `setFormat` method of the [MarkupConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/MarkupConvertOptions) like this:  
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.MarkupConvertOptions;
+import com.groupdocs.conversion.filetypes.MarkupFileType;
+...
+// Load the source XLSX file
+Converter converter = new Converter("sample.xlsx");
 MarkupConvertOptions options = new MarkupConvertOptions();
 options.setFormat(MarkupFileType.Mhtml);
+// Save converted MHTML file
+converter.convert("converted.mhtml", options);
 ```
 
 ## Convert Excel workbook to DOCX
@@ -80,6 +94,9 @@ The GroupDocs.Conversion library empowers you with the ability to convert Micros
 Here is a complete code example for XLSX to DOCX conversion using Java language below:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.WordProcessingConvertOptions;
+...
 // Load the source XLSX file
 Converter converter = new Converter("sample.xlsx");
 WordProcessingConvertOptions options = new WordProcessingConvertOptions();
@@ -96,6 +113,9 @@ Similarly to other conversions, you may choose the desired presentation file for
 Please examine the code snippet that demonstrates how to convert XLSX to PPTX using Java language:  
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PresentationConvertOptions;
+...
 // Load the source XLS file
 Converter converter = new Converter("sample.xlsx");
 PresentationConvertOptions options = new PresentationConvertOptions();

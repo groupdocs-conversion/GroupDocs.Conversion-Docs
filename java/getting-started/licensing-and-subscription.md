@@ -60,6 +60,9 @@ The license can be set multiple times per app domain but we recommend doing it o
 The following code sets a license from a file.
 
 ```java
+import com.groupdocs.conversion.licensing.License;
+import java.io.File;
+...
 String licensePath = "path to the .lic file";
 License license = new License();
 license.setLicense(licensePath);
@@ -70,6 +73,11 @@ license.setLicense(licensePath);
 The following example shows how to load a license from a stream.
 
 ```java
+import com.groupdocs.conversion.licensing.License;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+...
 String licensePath = "path to the .lic file";
 try (InputStream fileStream = new FileInputStream(licensePath)) {
     License license = new License();
@@ -102,6 +110,8 @@ Here are the simple steps to use the `Metered` class.
 Following is the sample code demonstrating how to use the [Metered](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.licensing/Metered) class.
 
 ```java
+import com.groupdocs.conversion.licensing.Metered;
+...
 String publicKey = ""; // Your public license key
 String privateKey = ""; // Your private license key
 

@@ -42,6 +42,9 @@ With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you 
 For example, a DWG to PDF conversion code snippet will look like this:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 // Load the source DWG file
 Converter converter = new Converter("sample.dwg");
 // Set the convert options for PDF format
@@ -62,6 +65,10 @@ On the other hand, converting your CAD files to another CAD format is also quite
 The following code sample demonstrates how to convert a DWG document to STL in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.CadConvertOptions;
+import com.groupdocs.conversion.filetypes.CadFileType;
+...
 // Load the source DWG file
 Converter converter = new Converter("sample.dwg");
 // Set the convert options for STL format

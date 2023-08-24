@@ -35,7 +35,7 @@ HTML (Hyper Text Markup Language) is the extension for web pages created for dis
 
 It takes a number of file types when building a webpage. Web file formats define the standards for the development of webpages and are related to the platform in which these are built. A complete website can be built consisting of static as well as dynamic web pages. 
 
-Common web file extensions and their associate file formats include HTML (Hypertext Markup Language), ASP (Active Server Pages), XML (Extensible Markup Language), CSS (Cascading Style Sheets), JSON (JavaScript Object Notation) and others.
+Common web file extensions and their associate file formats include HTML (Hypertext Markup Language), ASP (Active Server Pages), XML (Extensible Markup Language), CSS (Cascading Style Sheets), JSON (JavaScript Object Notation), and others.
 
 ## Supported web file conversions
 
@@ -47,6 +47,9 @@ With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java/) you
 For example, HTML to PDF conversion code snippet will look like this:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+...
 // Load the source HTML file
 Converter converter = new Converter("sample.html");
 // Set the convert options for PDF format
@@ -67,6 +70,9 @@ On the other hand, converting your files to web formats is also quite simple and
 The following code sample demonstrates how to convert a PDF document to HTML format in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.MarkupConvertOptions;
+...
 // Load the source PDF file
 Converter converter = new Converter("sample.pdf");
 // Set the convert options for HTML format

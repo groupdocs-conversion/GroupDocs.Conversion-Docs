@@ -15,6 +15,9 @@ To get document information use the [`Converter.getDocumentInfo()`](https://refe
 To iterate through the document information properties, you can use the [`getPropertyNames()`](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.contracts.documentinfo/documentinfo/#getPropertyNames--) and [`getProperty()`](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.contracts.documentinfo/documentinfo/#getProperty-java.lang.String-) methods. The following code snippet demonstrates how to list all the available document information properties:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.documentinfo.IDocumentInfo;
+...
 try (Converter converter = new Converter("sample.txt")) {
 	IDocumentInfo info = converter.getDocumentInfo();			
 	for(String propertyName : info.getPropertyNames())
@@ -40,6 +43,10 @@ The samples below show how to obtain document info for various formats.
 ### PDF documents
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.documentinfo.IDocumentInfo;
+import com.groupdocs.conversion.contracts.documentinfo.PdfDocumentInfo;
+...
 try (Converter converter = new Converter("sample-toc.pdf")) 
 {
     IDocumentInfo info = converter.getDocumentInfo();
@@ -64,6 +71,10 @@ try (Converter converter = new Converter("sample-toc.pdf"))
 ### Project management documents
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.documentinfo.IDocumentInfo;
+import com.groupdocs.conversion.contracts.documentinfo.ProjectManagementDocumentInfo;
+...
 try (Converter converter = new Converter("foobar.mpp"))
 {
     IDocumentInfo info = converter.getDocumentInfo();
@@ -81,6 +92,10 @@ try (Converter converter = new Converter("foobar.mpp"))
 ### Images
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.documentinfo.IDocumentInfo;
+import com.groupdocs.conversion.contracts.documentinfo.ImageDocumentInfo;
+...
 try (Converter converter = new Converter("image.png"))
 {
     IDocumentInfo info = converter.getDocumentInfo();
@@ -98,6 +113,10 @@ try (Converter converter = new Converter("image.png"))
 ### Presentations
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.documentinfo.IDocumentInfo;
+import com.groupdocs.conversion.contracts.documentinfo.PresentationDocumentInfo;
+...
 try (Converter converter = new Converter("presentation.ppt"))
 {
     IDocumentInfo info = converter.getDocumentInfo();
@@ -116,6 +135,10 @@ try (Converter converter = new Converter("presentation.ppt"))
 ### Spreadsheets
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.documentinfo.IDocumentInfo;
+import com.groupdocs.conversion.contracts.documentinfo.SpreadsheetDocumentInfo;
+...
 try (Converter converter = new Converter("table.xlsx"))
 {
     IDocumentInfo info = converter.getDocumentInfo();
@@ -134,6 +157,10 @@ try (Converter converter = new Converter("table.xlsx"))
 ### CAD drawings
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.documentinfo.IDocumentInfo;
+import com.groupdocs.conversion.contracts.documentinfo.CadDocumentInfo;
+...
 try (Converter converter = new Converter("sample.dwg"))
 {
     IDocumentInfo info = converter.getDocumentInfo();
@@ -159,6 +186,10 @@ try (Converter converter = new Converter("sample.dwg"))
 ### Emails
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.documentinfo.IDocumentInfo;
+import com.groupdocs.conversion.contracts.documentinfo.EmailDocumentInfo;
+...
 try (Converter converter = new Converter("sample.msg"))
 {
     IDocumentInfo info = converter.getDocumentInfo();
