@@ -38,7 +38,7 @@ If you wish to test GroupDocs.Conversion without the limitations of the trial ve
 
 {{< alert style="info" >}}
 
-You can find pricing information on the ["Pricing Information"](https://purchase.groupdocs.com/pricing/conversion/net) page.
+You can find pricing information on the ["Pricing Information"](https://purchase.groupdocs.com/pricing/conversion/java) page.
 
 {{< /alert >}}
 
