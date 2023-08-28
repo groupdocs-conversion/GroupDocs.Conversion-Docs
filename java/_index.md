@@ -12,7 +12,9 @@ structuredData:
 ---
 <img src="/conversion/java/images/home.png" alt="groupdocs-conversion-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
-GroupDocs.Conversion for Java serves as a lightweight API for document conversion in various formats within Java applications. Acting as middleware, it empowers your application to seamlessly convert between more than 50 document and image file formats. 
+GroupDocs.Conversion for Java serves as a lightweight API for document conversion in various formats within Java applications. 
+
+Acting as middleware, it empowers your application to seamlessly convert between more than 50 document and image file formats. 
 
 This native Java API ensures precise conversion of both documents and image files in any type of Java application. Moreover, it offers the functionality to add text or image watermarks during the conversion process.
 
