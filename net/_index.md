@@ -14,9 +14,9 @@ structuredData:
 
 GroupDocs.Conversion for .NET is an advanced document conversion API developed to convert files of different formats from within any .NET application.  
 
-This feature-rich API provides up to 10 000 conversion combinations for numerous [supported documents and images]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}}). Using the document converter API is very simple as it uses just one method with set of options to convert between different formats.  
+This feature-rich API provides up to 10 000 conversion combinations for numerous [supported documents and images]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}}). Using the document converter API is very simple as it uses just one method with a set of options to convert between different formats.  
 
-Native .NET API to accurately convert documents & image file formats in any types of .NET application. Supports adding image watermarks while conversion.
+Native .NET API to accurately convert documents & image file formats in any type of .NET application. Supports adding text or image watermarks during the conversion.
 
 ------
 {{< columns >}}
