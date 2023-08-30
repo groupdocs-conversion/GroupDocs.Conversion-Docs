@@ -12,57 +12,66 @@ structuredData:
 ---
 <img src="/conversion/java/images/home.png" alt="groupdocs-conversion-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
-GroupDocs.Conversion for Java is a lightweight multi-format document conversion API designed as a middle-ware for Java applications.  
+GroupDocs.Conversion for Java serves as a lightweight API for document conversion in various formats within Java applications. 
 
-It allows you to enhance your app with the capability to convert back and forth over 50 document and image file formats.  
+Acting as middleware, it empowers your application to seamlessly convert between more than 50 document and image file formats. 
 
-Native Java API to accurately convert documents & image file formats in any types of Java application. Supports adding image watermarks while conversion.
+This native Java API ensures precise conversion of both documents and image files in any type of Java application. Moreover, it offers the functionality to add text or image watermarks during the conversion process.
 
 ------
 {{< columns >}}
 <p><b>About GroupDocs.Conversion</b></p>
 <hr><p>OVERVIEW</p></hr>
 <ul>
-	<li><a href='{{< ref "product-overview" >}}'>Product Overview</a></li>
-	<li><a href='{{< ref "conversion/java/getting-started/supported-document-formats.md" >}}'>Supported File Formats</a></li>
+	<li><a href='{{< ref "product-overview" >}}'>Product overview</a></li>
+	<li><a href='{{< ref "conversion/java/getting-started/features-overview" >}}'>Main features</a></li>
+	<li><a href='{{< ref "conversion/java/getting-started/supported-document-formats.md" >}}'>Supported file formats</a></li>
 </ul>
-<p>LICENSING</p>
+<p>GET STARTED</p>
 <ul>
-	<li><a href='{{< ref "conversion/java/getting-started/licensing-and-subscription.md" >}}'>Licensing and Subscription</a></li>
-</ul>
-<--->
-<p><b>Get Started</b></p>
-<hr><p>GETTING STARTED</p></hr>
-<ul>
-	<li><a href='{{< ref "conversion/java/getting-started" >}}'>Getting Started</a></li>
-	<li><a href='{{< ref "conversion/java/getting-started/system-requirements.md" >}}'>System Requirements</a></li>
+	<li><a href='{{< ref "conversion/java/getting-started/system-requirements.md" >}}'>System requirements</a></li>
 	<li><a href='{{< ref "conversion/java/getting-started/installation.md" >}}'>Installation</a></li>
-</ul>
-<p>LEARN</p>
-<ul>
-	<li><a href='{{< ref "conversion/java/getting-started/how-to-run.md" >}}'>How to Run Examples</a></li>
-</ul>
-<p>DOWNLOAD</p>
-<ul>
-	<li><a href="https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-conversion/">GroupDocs.Conversion for Java Repository</a></li>
-	</li><li><a href="https://releases.groupdocs.com/conversion/java/">GroupDocs.Conversion for Java Releases</a></li>
-	<li><a href="https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Java">Download Examples and Demos from GitHub</a></li>
+	<li><a href='{{< ref "conversion/java/getting-started/licensing-and-subscription.md" >}}'>Licensing</a></li>
 </ul>
 <--->
-<p><b>RESOURCES</b></p>
-<hr><p>GUIDE</p></hr>
+<p><b>Developer Guide</b></p>
+<hr><p>CONVERSION BASICS</p></hr>
 <ul>
-	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert" >}}'>Convert Files</a></li>
-	<li><a href='{{< ref "conversion/java/developer-guide/advanced-usage/converting/conversion-options-by-document-family" >}}'>Customize converted file appearance</a></li>
+	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/pdf" >}}'>Convert PDF</a></li>
+	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/wordprocessing" >}}'>Convert Word</a></li>
+	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/spreadsheet" >}}'>Convert Excel</a></li>
+	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/presentation" >}}'>Convert PowerPoint</a></li>
+	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/image" >}}'>Convert images</a></li>
+	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/web" >}}'>Convert HTML</a></li>
+	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/cad" >}}'>Convert CAD</a></li>
+</ul>
+<p>HOW-TO GUIDES</p>
+<ul>
+	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/get-possible-conversions" >}}'>Get supported conversions</a></li>
+	<li><a href='{{< ref "conversion/java/developer-guide/advanced-usage/loading/loading-documents-from-different-sources" >}}'>Load files from different sources</a></li>
+	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/get-document-info" >}}'>Retrieve document information</a></li>
+	<li><a href='{{< ref "conversion/java/developer-guide/advanced-usage/converting/common-conversion-options/add-watermark" >}}'>Add watermarks</a></li>
+	<li><a href='{{< ref "conversion/java/developer-guide/advanced-usage/caching" >}}'>Cache rendering results</a></li>
+</ul>
+<p>API REFERENCE</p>
+<ul>
 	<li><a href="https://reference.groupdocs.com/conversion/java">GroupDocs.Conversion for Java API Reference</a></li>
 </ul>
-<p>WHAT'S NEW?</p>
+<--->
+<p><b>Useful Resources</b></p>
+<hr><p>DEMOS AND EXAMPLES</p></hr>
+<ul>
+	<li><a href="https://products.groupdocs.app/conversion/total/">Convert files online</a></li>
+	<li><a href="https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Java">Download examples and demos from GitHub</a></li>
+	<li><a href='{{< ref "conversion/java/getting-started/how-to-run.md" >}}'>How to run examples</a></li>	
+</ul>
+<p>VERSION HISTORY</p>
 <ul>
 	<li><a href="https://releases.groupdocs.com/conversion/java/release-notes/">GroupDocs.Conversion for Java Release Notes</a></li>
 </ul>
 <p>TECHNICAL SUPPORT</p>
 <ul>
-	<li><a href="https://forum.groupdocs.com/">GroupDocs Free Support Forum</a></li>
-	<li><a href="https://helpdesk.groupdocs.com/">GroupDocs Paid Support Helpdesk</a></li>
+	<li><a href="https://forum.groupdocs.com">Free Support Forum for GroupDocs Products</a></li>
+	<li><a href="https://helpdesk.groupdocs.com">Paid Support Helpdesk for GroupDocs Products</a></li>
 </ul>
 {{< /columns >}}
