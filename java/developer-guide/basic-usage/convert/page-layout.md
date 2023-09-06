@@ -69,8 +69,8 @@ import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.filetypes.PdfFileType;
 ...
-// Load the source PDF file
-Converter converter = Converter("sample.pdf");
+// Load the source DOCX file
+Converter converter = Converter("sample.docx");
 // Set the convert options for TEX format
 PdfConvertOptions options = new PdfConvertOptions();
 options.setFormat(PdfFileType.Tex);
