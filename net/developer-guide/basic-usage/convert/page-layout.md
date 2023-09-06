@@ -64,8 +64,8 @@ On the other hand, converting your files to page layout format is also quite sim
 The following code sample demonstrates how to convert a DOCX document to TEX format in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
 
 ```csharp
-// Load the source PDF file
-using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
+// Load the source DOCX file
+using (var converter = new GroupDocs.Conversion.Converter("sample.docx"))
 {
     // Set the convert options
     var options = new PageDescriptionLanguageConvertOptions()
