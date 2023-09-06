@@ -101,6 +101,7 @@
 | [EMLX](/conversion/net/convert/email/) | Apple Mail Message |<!--Load--> ✅ |<!--Save--> ✅ |
 | [MBOX](/conversion/net/convert/email/) | Mbox document format |<!--Load--> ✅ |<!--Save-->  |
 | [MSG](/conversion/net/convert/email/) | Outlook Mail Message |<!--Load--> ✅ |<!--Save--> ✅ |
+| [OLM](/conversion/net/convert/email/) | Microsoft Outlook file for Mac Operating System. |<!--Load--> ✅ |<!--Save-->  |
 | [OST](/conversion/net/convert/email/) | Outlook Offline Data File |<!--Load--> ✅ |<!--Save-->  |
 | [PST](/conversion/net/convert/email/) | Outlook Personal Information Store File |<!--Load--> ✅ |<!--Save-->  |
 | [VCF](/conversion/net/convert/email/) | Vcf document format |<!--Load--> ✅ |<!--Save-->  |
@@ -180,7 +181,7 @@
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
 | [CGM](/conversion/net/convert/page-layout/) | Computer Graphics Metafile |<!--Load--> ✅ |<!--Save-->  |
-| [EPS](/conversion/net/convert/page-layout/) | Encapsulated PostScript File |<!--Load--> ✅ |<!--Save-->  |
+| [EPS](/conversion/net/convert/page-layout/) | Encapsulated PostScript File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [OXPS](/conversion/net/convert/page-layout/) | XML Paper Specification File |<!--Load--> ✅ |<!--Save-->  |
 | [PCL](/conversion/net/convert/page-layout/) | Printer Command Language Document |<!--Load--> ✅ |<!--Save--> ✅ |
 | [PS](/conversion/net/convert/page-layout/) | PostScript File |<!--Load--> ✅ |<!--Save--> ✅ |
