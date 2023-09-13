@@ -91,7 +91,7 @@ In case you need to convert PDF to another presentation format please use the [P
 A popular use case is when you need to save the whole PDF document or some specific document pages as a collection of images. GroupDocs.Conversion for Node.js via Java allows converting PDF to images of many popular formats like - TIFF, JPG, PNG, GIF, BMP, and many others.
 The code snippet for such conversion is a bit different from other conversions as you have to declare a [SavePageStream](#) delegate that specifies the name format for the saved images. You can choose the desired image format by using the [ImageFileType](#) class.
 
-### Convert PDF to PNG
+## Convert PDF to PNG
 
 Please check a complete code example of PDF to PNG conversion below:
 
@@ -107,7 +107,7 @@ options.setFormat(groupdocs.conversion.ImageFileType.Png);
  converter.convert(getPageStream, options);
 ```
 
-### Convert PDF to JPG
+## Convert PDF to JPG
 
 The PDF to JPG conversion is another popular use case and the code snippet for it is similar to what was described before. The only difference is the output image files extension and that the `ImageFileType.Jpg` argument should be passed to the `setFormat` method:
 

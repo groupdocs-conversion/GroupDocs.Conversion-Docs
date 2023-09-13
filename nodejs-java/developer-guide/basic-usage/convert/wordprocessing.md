@@ -25,7 +25,7 @@ While converting a file from Microsoft Office Word to PDF format GroupDocs.Conve
   
 The following section is explaining how to convert DOC or DOCX to PDF programmatically without Microsoft Office and with the help of GroupDocs.Conversion for Java.  
 
-### Convert DOCX (or DOC) to PDF
+## Convert DOCX (or DOC) to PDF
 
 GroupDocs.Conversion provides an easy and concise way to convert DOCX to PDF - all you need is a couple of lines of code to:
 
