@@ -8,14 +8,14 @@ keywords: Load document, Load and convert PowerPoint document, Load and convert 
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-GroupDocs.Conversion provides [PresentationLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PresentationLoadOptions) to give you control over how the source presentation document will be processed. The following options could be set:
+GroupDocs.Conversion provides [PresentationLoadOptions](#) to give you control over how the source presentation document will be processed. The following options could be set:
 
-*   **[setFormat](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PresentationLoadOptions#setFormat(com.groupdocs.conversion.filetypes.PresentationFileType))** -  the document type is auto-detected during loading, however, you can specify explicitly the type of the source presentation document. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm*
-*   **[setDefaultFont](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PresentationLoadOptions#setDefaultFont(java.lang.String))** -  default font for rendering the presentation. The following font will be used if a presentation font is missing.      
-*   **[setFontSubstitutes](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PresentationLoadOptions#setFontSubstitutes(java.util.List))** -  substitute specific fonts from the source presentation document.
-*   **[setPassword](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PresentationLoadOptions#setPassword(java.lang.String))** -  a password to unlock the protected document.
-*   **[setHideComments](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PresentationLoadOptions#setHideComments(boolean))** - specifies that comments from source presentation must be hidden during conversion.
-*   **[setShowHiddenSlides](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/PresentationLoadOptions#setShowHiddenSlides(boolean))** - specifies that hidden slides should be included in the converted document.
+*   **[setFormat](#)** -  the document type is auto-detected during loading, however, you can specify explicitly the type of the source presentation document. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm*
+*   **[setDefaultFont](#)** -  default font for rendering the presentation. The following font will be used if a presentation font is missing.      
+*   **[setFontSubstitutes](#)** -  substitute specific fonts from the source presentation document.
+*   **[setPassword](#)** -  a password to unlock the protected document.
+*   **[setHideComments](#)** - specifies that comments from source presentation must be hidden during conversion.
+*   **[setShowHiddenSlides](#)** - specifies that hidden slides should be included in the converted document.
 
 ### Hide comments
 

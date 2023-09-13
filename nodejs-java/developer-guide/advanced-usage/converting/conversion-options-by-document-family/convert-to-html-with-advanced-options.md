@@ -8,11 +8,10 @@ keywords: Convert to HTML, Convert HTML
 productName: GroupDocs.Conversion for Node.js via Java
 hideChildren: False
 ---
-**[GroupDocs.Conversion](https://products.groupdocs.com/conversion/nodejs-java)** provides [MarkupConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/MarkupConvertOptions) to give you control over conversion result. The following options could be set:
-*   [setFixedLayout](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/MarkupConvertOptions#setFixedLayout(boolean)) - controls the html generation. If it's set to *true*, fixed layout will be used e.g. absolutely positioned html element. 
-*   [setZoom](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/MarkupConvertOptions#setZoom(int)) - specifies the zoom level in percentage. Default is 100.      
-*   [setUsePdf](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/MarkupConvertOptions#setUsePdf(boolean)) - in some cases, for better rendering and elements positioning the source document should be converted to PDF first. If this property is set to *true*, the input firstly is converted to PDF and after that to desired format.  
-    
+**[GroupDocs.Conversion](#)** provides [MarkupConvertOptions](#) to give you control over conversion result. The following options could be set:
+*   [setFixedLayout](#) - controls the html generation. If it's set to *true*, fixed layout will be used e.g. absolutely positioned html element.
+*   [setZoom](#) - specifies the zoom level in percentage. Default is 100.
+*   [setUsePdf](#) - in some cases, for better rendering and elements positioning the source document should be converted to PDF first. If this property is set to *true*, the input firstly is converted to PDF and after that to desired format.   
 
  Following code snippet shows how to convert to HTML with advanced options
 

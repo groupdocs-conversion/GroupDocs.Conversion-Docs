@@ -62,7 +62,7 @@ const options = new groupdocs.conversion.MarkupConvertOptions();
 converter.convert("converted.html", options);
 ```
 
-When converting a DOC or DOCX file to MHTML format the only difference from the previous code example is that it is needed to call [MarkupConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/MarkupConvertOptions) `setFormat` method with **MarkupFileType.Mhtml**. The code snippet for DOCX to MHTML conversion will look as follows:
+When converting a DOC or DOCX file to MHTML format the only difference from the previous code example is that it is needed to call [MarkupConvertOptions](#) `setFormat` method with **MarkupFileType.Mhtml**. The code snippet for DOCX to MHTML conversion will look as follows:
 
 ```js
 // Load the source DOCX file

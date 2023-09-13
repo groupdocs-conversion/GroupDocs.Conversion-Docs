@@ -8,12 +8,12 @@ keywords: Convert document from stream, Convert file
 productName: GroupDocs.Conversion for Node.js via Java
 hideChildren: False
 ---
-There might be a case when your file is not physically located on the disk. Instead, you have the file in the form of a stream. In this case, to avoid the overhead of saving the stream as a file on disk, [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) enables you to convert the file streams directly.
+There might be a case when your file is not physically located on the disk. Instead, you have the file in the form of a stream. In this case, to avoid the overhead of saving the stream as a file on disk, [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/nodejs-java) enables you to convert the file streams directly.
 
 To load a file from a stream:
 
 *   Specify the method to obtain the file stream.
-*   Pass the method's name to the [`Converter`](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class constructor.
+*   Pass the method's name to the [`Converter`](#) class constructor.
 
 The following code snippet serves this purpose:
 
@@ -35,4 +35,4 @@ try{
 }
 ```
 
-The snippet above uses the [`FileInputStream`](https://docs.oracle.com/javase/8/docs/api/java/io/FileInputStream.html) class instance. Similarly, you can use any other type of stream. Just make sure that the source stream contains any of the [supported file formats]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}}).
+The snippet above uses the [`createReadStream`](https://nodejs.org/api/fs.html#filehandlecreatereadstreamoptions) method. Similarly, you can use any other type of stream. Just make sure that the source stream contains any of the [supported file formats]({{< ref "conversion/nodejs-java/getting-started/supported-document-formats.md" >}}).
