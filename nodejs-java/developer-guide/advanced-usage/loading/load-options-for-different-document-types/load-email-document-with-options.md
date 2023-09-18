@@ -71,6 +71,3 @@ try{
     }
 
 ```
-
-{{< alert style="warning" >}}This functionality is introduced in v21.7{{< /alert >}}
-

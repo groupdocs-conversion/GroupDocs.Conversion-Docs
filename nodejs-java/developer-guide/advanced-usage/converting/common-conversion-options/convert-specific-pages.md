@@ -25,8 +25,8 @@ const converter = new groupdocs.conversion.Converter('sample.docx')
 const convertOptions = new groupdocs.conversion.PdfConvertOptions()
 
 const pages = new ArrayList()
-pages.add(4)
-pages.add(7)
+pages.add(1)
+pages.add(3)
 convertOptions.setPages(pages);
 
 converter.convert('outputSpecPages.pdf', convertOptions)
