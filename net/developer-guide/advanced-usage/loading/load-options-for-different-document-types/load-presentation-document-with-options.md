@@ -7,6 +7,7 @@ description: "Learn this article and check how to load and convert Microsoft Pow
 keywords: Load document, Load and convert PowerPoint document, Load and convert PPTX presentation, Load and convert PPT
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [PresentationLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions) to give you control over how Microsoft PowerPoint or Open Document presentation will be converted into the target format. The following options could be set:
 | Option | Description |

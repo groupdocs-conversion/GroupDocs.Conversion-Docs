@@ -7,6 +7,7 @@ description: "Learn this article and check how to convert Microsoft Word DOC/DOC
 keywords: Convert Word document in C#, Convert DOC in C#, Convert DOCX C#, Convert ODT file C#, Convert OTT file C#
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [WordProcessingLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions) to give you control over how the source Microsoft Word document will be converted. The following options could be set:
 | Option | Description |

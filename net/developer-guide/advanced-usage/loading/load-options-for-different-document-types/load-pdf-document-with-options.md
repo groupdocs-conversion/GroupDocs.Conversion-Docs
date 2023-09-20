@@ -7,6 +7,7 @@ description: "Learn this article and check how to load and convert PDF documents
 keywords: Load document, Load and convert PDF document, Load and convert EPUB document, Load and convert XPS document 
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [PdfLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions) to give you control over how the source PDF document will be processed. The following options could be set:
 | Option | Description |

@@ -7,6 +7,7 @@ description: "Learn this article and check how to load and convert Microsoft One
 keywords: Load document, Load Microsoft OneNote document
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [NoteLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions) to give you control over how the source Note document will be processed. The following options could be set:
 | Option | Description |

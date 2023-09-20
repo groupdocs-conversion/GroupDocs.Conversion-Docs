@@ -7,6 +7,7 @@ description: "Learn this article and check how to load and convert CSV documents
 keywords: Load document, Load CSV document
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [CsvLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions) to give you control over how the source CSV document will be processed. The following options could be set:
 | Option | Description |

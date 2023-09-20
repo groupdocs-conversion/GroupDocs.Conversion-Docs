@@ -7,6 +7,7 @@ description: "Learn this article and check how to restrict loading of external r
 keywords: Restrict loading of external resources during conversion, external resources, Skip loading of external resources during conversion, Loading external resources
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 ## What are external resources?
 *External resources* refer to various types of content or files that are not directly embedded within the document but are instead referenced and loaded from external locations. These resources enhance the functionality, appearance, and interactivity of the document. Common external resources include images, audio, video, fonts, CSS, scripts, frameworks, and so on. **GroupDocs.Conversion** considers external any resource that a document is trying to load from an external URL.

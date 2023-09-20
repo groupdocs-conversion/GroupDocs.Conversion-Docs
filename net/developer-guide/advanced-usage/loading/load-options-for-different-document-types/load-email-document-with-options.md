@@ -7,6 +7,7 @@ description: "Learn this article and check how to load and convert Email documen
 keywords: Load document, Load Email document
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [EmailLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions) to give you control over how the source email document will be processed. The following options could be set:
 | Option | Description |

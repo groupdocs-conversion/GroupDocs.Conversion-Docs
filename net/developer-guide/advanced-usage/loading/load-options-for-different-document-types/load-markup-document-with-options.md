@@ -7,6 +7,7 @@ description: "Learn this article and check how to load and convert HTML document
 keywords: Load document, Load HTML document
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 GroupDocs.Conversion provides [WebLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/webloadoptions) to give you control over how the source markup document will be processed. The following options could be set:
 | Option | Description |

@@ -7,6 +7,7 @@ description: "Learn this article and check how to load and convert CAD documents
 keywords: Load document, Load CAD document
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [CadLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions) to give you control over how the source CAD document will be processed. The following options could be set:
 | Option | Description |

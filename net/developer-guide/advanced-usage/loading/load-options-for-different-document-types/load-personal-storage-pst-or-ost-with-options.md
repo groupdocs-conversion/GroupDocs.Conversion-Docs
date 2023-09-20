@@ -7,6 +7,7 @@ description: "Learn this article and check how to load and convert PST/OST docum
 keywords: Load PST, Load OST, Convert PST content, Convert OST content
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 GroupDocs.Conversion provides [PersonalStorageLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions) to give you control over how the source personal storage (PST/OST) document will be processed. The following options could be set:
 | Option | Description |

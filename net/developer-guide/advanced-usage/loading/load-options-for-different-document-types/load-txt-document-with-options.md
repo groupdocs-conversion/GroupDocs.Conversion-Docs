@@ -7,6 +7,7 @@ description: "Learn this article and check how to load and convert text files wi
 keywords: Load and convert text file, Load and convert TXT
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [TxtLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/txtloadoptions) to give you control over how the source text document will be processed. The following options could be set:
 | Option | Description |
