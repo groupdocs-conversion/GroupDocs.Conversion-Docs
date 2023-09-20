@@ -82,3 +82,8 @@ using (Converter converter = new Converter("sample.docx", getLoadOptions))
     converter.Convert("converted.pdf", options);
 }
 ```
+## Skip loading of external resources
+
+In the context of word-processing documents, external resources refer to any elements, materials, or data that are not directly embedded within the document itself but are referenced or linked to enhance the document's content or functionality. These external resources can take various forms and are often used to supplement the text and improve the overall quality and richness of the document. Common external resources include images and graphics, tables and spreadsheets, audio and video, fonts, styles, data sources, mathematical equations and so on. 
+
+In some cases, you may want to skip loading all or just some of the external resources during the conversion. For example, when these resources become unavailable. Read the [Skip loading of external resources]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md" >}}) article to learn how to do this with **GroupDocs.Conversion for .NET** 

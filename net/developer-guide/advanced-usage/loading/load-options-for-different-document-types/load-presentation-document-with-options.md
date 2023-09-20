@@ -74,3 +74,9 @@ using (Converter converter = new Converter("sample.pptx", getLoadOptions))
     converter.Convert("converted.pdf", options);
 }
 ```
+
+## Skip loading of external resources
+
+In the context of presentations, external resources typically refer to elements or materials that are not directly embedded within the presentation file itself but are instead referenced or linked to enhance the presentation's content or functionality. These external resources can include various types of content and tools that complement the presentation. Common external resources include images, audio, video, fonts, styles, data sources, and so on. 
+
+In some cases, you may want to skip loading all or just some of the external resources during the conversion. For example, when these resources become unavailable. Read the [Skip loading of external resources]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md" >}}) article to learn how to do this with **GroupDocs.Conversion for .NET** 

@@ -53,3 +53,8 @@ using (var converter = new Converter(source, () => loadOptions))
 ```
 
 {{< alert style="warning" >}}This functionality is introduced in v20.3{{< /alert >}}
+
+## Skip loading of external resources
+External resources in the context of web documents refer to any files or data that a web page or website fetches from sources outside of its own domain or server. These external resources are essential for creating dynamic and feature-rich web experiences. Common external resources include images, audio, video, fonts, CSS, scripts, frameworks, and so on. 
+
+In some cases you may want to skip loading of all or just some of the external resources during the conversion. For example, when these resources become unavailable. Read the [Skip loading of external resources]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md" >}}) article to learn how to do this with **GroupDocs.Conversion for .NET** 
