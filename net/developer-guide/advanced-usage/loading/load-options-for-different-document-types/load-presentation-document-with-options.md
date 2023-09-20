@@ -17,6 +17,8 @@ hideChildren: False
 |**[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/password)** | A password to unlock the protected document |
 |**[HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/hidecomments)** | Specifies that comments from source presentation must be hidden during conversion |
 |**[ShowHiddenSlides](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/showhiddenslides)** | Specifies that hidden slides should be included in the converted document |
+|**[SkipExternalResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/skipexternalresources)** |  If enabled, the external resources (except for those listed in `WhitelistedResources`) will not be loaded during the conversion. |
+|**[WhitelistedResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/whitelistedresources)** | Specifies which external resources will be loaded even when the loading of other external resources is restricted. |
 
 ## Hide comments
 
