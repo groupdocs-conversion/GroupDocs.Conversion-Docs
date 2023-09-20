@@ -12,18 +12,20 @@ toc: True
 
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides the [SpreadsheetLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions) class which controls how the source spreadsheet will be processed. Below are some of the load options that you can use while [converting spreadsheets]({{< ref "conversion/net/developer-guide/basic-usage/convert/spreadsheet" >}}):
 
-*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/format)** - The document type is auto-detected while loading. However, you can explicitly specify the type of the source spreadsheet document. Available options are: *Csv, Fods, Ods, Ots, Tsv, Xlam, Xls, Xlsb, Xlsm, Xlsx, Xlt, Xltm, Xltx*
-*   **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/defaultfont)** - Specify the default font to use if a spreadsheet font is missing.
-*   **[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/fontsubstitutes)** - Substitute specific fonts from the source spreadsheet.
-*   **[ShowGridLines](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/showgridlines)** - Specify if the grid lines should be visible.
-*   **[ShowHiddenSheets](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/showhiddensheets)** - Specify if the hidden sheets should be included in the converted document.
-*   **[OnePagePerSheet](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/onepagepersheet)** - If specified, each spreadsheet will be converted into a single page.
-*   **[Sheets](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/sheets/)** - Defines the names of the particular sheets to be converted.
-*   **[SheetIndexes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/sheetindexes/)** - Defines the indexes of the particular sheets to be converted.
-*   **[ConvertRange](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/convertrange)** - Defines a specific range of cells to be converted. For example: "D1:F8"
-*   **[SkipEmptyRowsAndColumns](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/skipemptyrowsandcolumns)** - Specify if empty rows and columns should be ignored.
-*   **[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/password)** -  Defines a password to unlock a protected document.
-*   **[HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/hidecomments)** - Specify if the comments from the source spreadsheet should be hidden during conversion.
+| Option | Description |
+|--------|-------------|
+|**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/format)** | The document type is auto-detected while loading. However, you can explicitly specify the type of the source spreadsheet document. Available options are: *Csv, Fods, Ods, Ots, Tsv, Xlam, Xls, Xlsb, Xlsm, Xlsx, Xlt, Xltm, Xltx* |
+|**[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/defaultfont)** | Specify the default font to use if a spreadsheet font is missing. |
+|**[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/fontsubstitutes)** | Substitute specific fonts from the source spreadsheet. |
+|**[ShowGridLines](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/showgridlines)** | Specify if the grid lines should be visible. |
+|**[ShowHiddenSheets](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/showhiddensheets)** | Specify if the hidden sheets should be included in the converted document. |
+|**[OnePagePerSheet](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/onepagepersheet)** | If specified, each spreadsheet will be converted into a single page. |
+|**[Sheets](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/sheets/)** | Defines the names of the particular sheets to be converted. |
+|**[SheetIndexes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/sheetindexes/)** | Defines the indexes of the particular sheets to be converted. |
+|**[ConvertRange](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/convertrange)** | Defines a specific range of cells to be converted. For example: "D1:F8" |
+|**[SkipEmptyRowsAndColumns](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/skipemptyrowsandcolumns)** | Specify if empty rows and columns should be ignored. |
+|**[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/password)** | Defines a password to unlock a protected document. |
+|**[HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/hidecomments)** | Specify if the comments from the source spreadsheet should be hidden during conversion. |
 
 ### Hide comments
 

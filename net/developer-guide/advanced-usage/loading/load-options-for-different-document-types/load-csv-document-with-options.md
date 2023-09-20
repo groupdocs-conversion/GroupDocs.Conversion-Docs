@@ -9,13 +9,14 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [CsvLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions) to give you control over how the source CSV document will be processed. The following options could be set:
-
-*   **[Separator](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions/separator)** - specifies the delimiter 
-*   **[IsMultiEncoded](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions/ismultiencoded)** - if *true*, this means that the document contains several encodings  
-*   **[HasFormula](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions/hasformula)** - specifies that if text starts with "=" it should be parsed as a formula
-*   **[ConvertNumericData](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions/convertnumericdata)** - specifies that strings with digits should be parsed as numbers
-*   **[ConvertDateTimeData](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions/convertdatetimedata)** - specifies that date/time strings should be detected and parsed to DateTime
-*   **[Encoding](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions/encoding)** - specifies the encoding to be used during loading
+| Option | Description |
+|--------|-------------|
+|**[Separator](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions/separator)** | Specifies the delimiter |
+|**[IsMultiEncoded](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions/ismultiencoded)** | If *true*, this means that the document contains several encodings  |
+|**[HasFormula](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions/hasformula)** | Specifies that if text starts with "=" it should be parsed as a formula |
+|**[ConvertNumericData](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions/convertnumericdata)** | Specifies that strings with digits should be parsed as numbers |
+|**[ConvertDateTimeData](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions/convertdatetimedata)** | Specifies that date/time strings should be detected and parsed to DateTime |
+|**[Encoding](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/csvloadoptions/encoding)** | Specifies the encoding to be used during loading |
 
 ### Control behavior of converting date/time and numeric data
 

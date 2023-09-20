@@ -9,11 +9,12 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [CadLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions) to give you control over how the source CAD document will be processed. The following options could be set:
-
-*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/format)** - the source document type is auto-detected, but you could set the source document format explicitly with this property. Available options are: Dxf, Dwg, Dgn, Dwf, Stl, Ifc, Plt, Igs, Dwt
-*   **[Width](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/width)** - sets the desired page width 
-*   **[Height](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/height)** - sets the desired page height
-*   **[LayoutNames](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/layoutnames)** - specifies which CAD layout to be converted
+| Option | Description |
+|--------|-------------|
+|**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/format)** | The source document type is auto-detected, but you could set the source document format explicitly with this property. Available options are: Dxf, Dwg, Dgn, Dwf, Stl, Ifc, Plt, Igs, Dwt |
+|**[Width](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/width)** | Sets the desired page width |
+|**[Height](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/height)** | Sets the desired page height |
+|**[LayoutNames](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/layoutnames)** | Specifies which CAD layout to be converted |
 
 ### Specify layouts to be converted
 
