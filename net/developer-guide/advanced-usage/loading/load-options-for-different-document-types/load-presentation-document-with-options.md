@@ -7,15 +7,19 @@ description: "Learn this article and check how to load and convert Microsoft Pow
 keywords: Load document, Load and convert PowerPoint document, Load and convert PPTX presentation, Load and convert PPT
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [PresentationLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions) to give you control over how Microsoft PowerPoint or Open Document presentation will be converted into the target format. The following options could be set:
-
-*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/format)** - the document type is auto-detected during loading, however, you can specify explicitly the type of the source presentation document. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm*
-*   **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/defaultfont)** - default font for rendering the presentation. The following font will be used if a presentation font is missing.  
-*   **[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/fontsubstitutes)** - substitute specific fonts from the source presentation document.
-*   **[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/password)** -  a password to unlock the protected document
-*   **[HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/hidecomments)** - specifies that comments from source presentation must be hidden during conversion
-*   **[ShowHiddenSlides](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/showhiddenslides)** - specifies that hidden slides should be included in the converted document
+| Option | Description |
+|--------|-------------|
+|**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/format)** | The document type is auto-detected during loading, however, you can specify explicitly the type of the source presentation document. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm* |
+|**[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/defaultfont)** | A default font for rendering the presentation. The following font will be used if a presentation font is missing. |
+|**[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/fontsubstitutes)** | Substitute specific fonts from the source presentation document. |
+|**[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/password)** | A password to unlock the protected document |
+|**[HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/hidecomments)** | Specifies that comments from source presentation must be hidden during conversion |
+|**[ShowHiddenSlides](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/showhiddenslides)** | Specifies that hidden slides should be included in the converted document |
+|**[SkipExternalResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/skipexternalresources)** |  If enabled, the external resources (except for those listed in `WhitelistedResources`) will not be loaded during the conversion. |
+|**[WhitelistedResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/whitelistedresources)** | Specifies which external resources will be loaded even when the loading of other external resources is restricted. |
 
 ## Hide comments
 
@@ -73,3 +77,9 @@ using (Converter converter = new Converter("sample.pptx", getLoadOptions))
     converter.Convert("converted.pdf", options);
 }
 ```
+
+## Skip loading of external resources
+
+In the context of presentations, external resources typically refer to elements or materials that are not directly embedded within the presentation file itself but are instead referenced or linked to enhance the presentation's content or functionality. These external resources can include various types of content and tools that complement the presentation. Common external resources include images, audio, video, fonts, styles, data sources, and so on. 
+
+In some cases, you may want to skip loading all or just some of the external resources during the conversion. For example, when these resources become unavailable. Read the [Skip loading of external resources]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md" >}}) article to learn how to do this with **GroupDocs.Conversion for .NET** 

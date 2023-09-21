@@ -7,13 +7,15 @@ description: "Learn this article and check how to load and convert PST/OST docum
 keywords: Load PST, Load OST, Convert PST content, Convert OST content
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 GroupDocs.Conversion provides [PersonalStorageLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions) to give you control over how the source personal storage (PST/OST) document will be processed. The following options could be set:
-
-*   **[ConvertOwned](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/convertowned)** - controls whether owned documents of the document container must be converted.
-*   **[ConvertOwner](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/convertowner)** - controls whether the document container itself must be converted. If this property is true the document container will be the first converted document.
-*   **[Depth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/depth)** - controls how many levels in depth to perform the conversion.
-*   **[Folder](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/folder)** -  a folder to be processed. Default is Inbox.
+| Option | Description |
+|--------|-------------|
+|**[ConvertOwned](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/convertowned)** | Controls whether owned documents of the document container must be converted. |
+|**[ConvertOwner](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/convertowner)** | Controls whether the document container itself must be converted. If this property is true the document container will be the first converted document. |
+|**[Depth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/depth)** | Controls how many levels in depth to perform the conversion. |
+|**[Folder](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/folder)** |  A folder to be processed. Default is Inbox. |
 
 ### Get folders from personal storage
 
