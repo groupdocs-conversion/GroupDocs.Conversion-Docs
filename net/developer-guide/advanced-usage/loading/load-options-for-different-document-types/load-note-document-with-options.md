@@ -13,8 +13,8 @@ toc: True
 | Option | Description |
 |--------|-------------|
 |**[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions/defaultfont)** | A default font for Note document. The specified font will be used if a font is missing. An absolute path to the font file must be provided. |
-|**[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions/fontsubstitutes)** | Substitutes specific fonts from the Note document |
-|**[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions/password)** | A password to unlock the protected document |
+|**[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions/fontsubstitutes)** | Substitutes specific fonts from the Note document. |
+|**[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions/password)** | A password to unlock the protected document. |
 
 ### Set Default Font
 
