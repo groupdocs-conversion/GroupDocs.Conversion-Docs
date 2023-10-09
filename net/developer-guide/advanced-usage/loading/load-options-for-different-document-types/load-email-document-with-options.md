@@ -13,17 +13,18 @@ toc: True
 | Option | Description |
 |--------|-------------|
 |**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/format)** | The document type is auto-detected during loading, however, you can specify explicitly the type of the source email document. Available options are: Msg, Eml, Emlx, Pst, Ost, Vcf, Mht |
-|**[DisplayHeader](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayheader)** | Option to display or hide the email header |
-|**[DisplayFromEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayfromemailaddress)** | Option to display or hide "from" email address |
-|**[DisplayEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayemailaddress)** | Option to display or hide email address |
-|**[DisplayToEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displaytoemailaddress)** | Option to display or hide "to" email address |
-|**[DisplayCcEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayccemailaddress)** | Option to display or hide "Cc" email address |
-|**[DisplayBccEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displaybccemailaddress)** | Option to display or hide "Bcc" email address |
 |**[ConvertOwned ](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/convertowned)** | Controls whether the owned documents in the documents container must be converted |
 |**[ConvertOwner](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/convertowner)** | Controls whether the documents container itself must be converted If this property is true the documents container will be the first converted document |
 |**[Depth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/depth)** | Controls how many levels in depth to perform the conversion |
+|**[DisplayBccEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displaybccemailaddress)** | Option to display or hide "Bcc" email address |
+|**[DisplayCcEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayccemailaddress)** | Option to display or hide "Cc" email address |
+|**[DisplayEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayemailaddress)** | Option to display or hide email address |
+|**[DisplayFromEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayfromemailaddress)** | Option to display or hide "from" email address |
+|**[DisplayHeader](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayheader)** | Option to display or hide the email header |
+|**[DisplayToEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displaytoemailaddress)** | Option to display or hide "to" email address |
 |**[FieldTextMap](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/fieldtextmap)** | The mapping between email message [EmailField](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailfield) and field text representation |
 |**[PreserveOriginalDate](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/preserveoriginaldate)** | defines whether to keep the original date header string in the mail message when saving (Default value is true) |
+|**[ResourceLoadingTimeout](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/resourceloadingtimeout/)** | Specifies the timeout of loading the external resources. |
 |**[TimeZoneOffset](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/timezoneoffset)** | Gets or sets the Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the local time and UTC. |
 
 ### Control fields visibility

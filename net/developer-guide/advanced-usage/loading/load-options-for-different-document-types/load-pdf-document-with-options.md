@@ -13,10 +13,15 @@ toc: True
 | Option | Description |
 |--------|-------------|
 |**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/format)** | The document type is auto-detected during loading, however, you can specify explicitly the type of the source document. Available options are: *Pdf, Epub, Xps, Tex, Ps, Pcl* |
-|**[RemoveEmbeddedFiles](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/removeembeddedfiles)** | Whether to remove the embedded files from the source document during the conversion |
-|**[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/password)** | A password to unlock the protected document |
-|**[HidePdfAnnotations](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/hidepdfannotations)** | Specifies that annotations in the source document should be hidden |
-|**[FlattenAllFields](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/flattenallfields)** | Specifies that all fields in the source document should be flattened during conversion |
+|**[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/defaultfont/)** | A default font for PDF document. The specified font will be used if a font is missing. An absolute path to the font file must be provided. |
+|**[FlattenAllFields](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/flattenallfields)** | Specifies that all fields in the source document should be flattened during conversion. |
+|**[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/fontsubstitutes)** | Substitute specific fonts from the source document. |
+|**[HidePdfAnnotations](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/hidepdfannotations)** | Specifies that annotations in the source document should be hidden. |
+|**[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/password)** | A password to unlock the protected document. |
+|**[RemoveEmbeddedFiles](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/removeembeddedfiles)** | Whether to remove the embedded files from the source document during the conversion. |
+
+
+
 
 ### Flatten all fields
 
@@ -68,7 +73,7 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 
 ### Set Default Font
 
-GroupDocs.Conversion for .NET allows you to set a default font name when a font is not available in the document. You can use the **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/defaultfont)** property of the **[PdfLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions)** class to set the default font name. In case the **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/defaultfont)** property is not set the Times New Roman font will be used. The following code snippet shows how to set a default font name when converting from PDF into to wordprocessing document:
+GroupDocs.Conversion for .NET allows you to set a default font name when a font is not available in the document. You can use the **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/defaultfont)** property of the **[PdfLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions)** class to set the default font name. In case the **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/defaultfont)** property is not set the Times New Roman font will be used. The following code snippet shows how to set a default font name when converting from PDF to word-processing document:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions

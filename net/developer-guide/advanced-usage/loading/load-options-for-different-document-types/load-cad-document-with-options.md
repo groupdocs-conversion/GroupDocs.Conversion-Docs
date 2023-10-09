@@ -13,6 +13,8 @@ toc: True
 | Option | Description |
 |--------|-------------|
 |**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/format)** | The source document type is auto-detected, but you could set the source document format explicitly with this property. Available options are: Dxf, Dwg, Dgn, Dwf, Stl, Ifc, Plt, Igs, Dwt |
+|**[BackgroundColor](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/backgroundcolor/)** | Specifies the background color for a CAD document. |
+|**[DrawType](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/drawtype/)** | Specifies the type of drawing of a CAD document. |
 |**[Width](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/width)** | Sets the desired page width |
 |**[Height](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/height)** | Sets the desired page height |
 |**[LayoutNames](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/cadloadoptions/layoutnames)** | Specifies which CAD layout to be converted |
@@ -44,6 +46,22 @@ Contracts.Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
     Height = 1080
 };
 using (Converter converter = new Converter("with_layers_and_layouts.dwg", getLoadOptions))
+{
+    PdfConvertOptions options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
+}
+```
+
+### Specify background color
+
+The following code sample shows how to convert a CAD document and specify its desired background color:
+
+```csharp
+Contracts.Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
+{
+    BackgroundColor = System.Drawing.Color.White
+};
+using (Converter converter = new Converter("sample.dwg", getLoadOptions))
 {
     PdfConvertOptions options = new PdfConvertOptions();
     converter.Convert("converted.pdf", options);
