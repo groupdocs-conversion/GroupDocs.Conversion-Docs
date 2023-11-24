@@ -16,19 +16,19 @@
 ## Compression
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
-| [7Z](/conversion/java/convert/compression/) | 7z Document |<!--Load--> ✅ |<!--Save--> ✅ |
-| [BZ2](/conversion/java/convert/compression/) | Bz2 Document |<!--Load--> ✅ |<!--Save-->  |
-| [CAB](/conversion/java/convert/compression/) | Cab Document |<!--Load--> ✅ |<!--Save-->  |
-| [CPIO](/conversion/java/convert/compression/) | CPIO Document |<!--Load--> ✅ |<!--Save--> ✅ |
-| [GZ](/conversion/java/convert/compression/) | Gz Document |<!--Load--> ✅ |<!--Save-->  |
-| [GZIP](/conversion/java/convert/compression/) | Gzip Document |<!--Load--> ✅ |<!--Save-->  |
-| [LZ](/conversion/java/convert/compression/) | Lzip Document |<!--Load--> ✅ |<!--Save-->  |
-| [LZMA](/conversion/java/convert/compression/) | Lzma Document |<!--Load--> ✅ |<!--Save-->  |
-| [RAR](/conversion/java/convert/compression/) | RAR Document |<!--Load--> ✅ |<!--Save-->  |
-| [TAR](/conversion/java/convert/compression/) | Tar Document |<!--Load--> ✅ |<!--Save--> ✅ |
-| [XZ](/conversion/java/convert/compression/) | Xz Document |<!--Load--> ✅ |<!--Save-->  |
-| [Z](/conversion/java/convert/compression/) | Z Document |<!--Load--> ✅ |<!--Save-->  |
-| [ZIP](/conversion/java/convert/compression/) | ZIP Document |<!--Load--> ✅ |<!--Save--> ✅ |
+| [7Z](/conversion/java/convert/compression/) | 7-Zip Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [BZ2](/conversion/java/convert/compression/) | Bzip2 Compressed File |<!--Load--> ✅ |<!--Save-->  |
+| [CAB](/conversion/java/convert/compression/) | Windows Cabinet File |<!--Load--> ✅ |<!--Save-->  |
+| [CPIO](/conversion/java/convert/compression/) | CPIO Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [GZ](/conversion/java/convert/compression/) | Gnu Zipped Archive |<!--Load--> ✅ |<!--Save-->  |
+| [GZIP](/conversion/java/convert/compression/) | Gzip Compressed File |<!--Load--> ✅ |<!--Save-->  |
+| [LZ](/conversion/java/convert/compression/) | Lzip Compressed File |<!--Load--> ✅ |<!--Save-->  |
+| [LZMA](/conversion/java/convert/compression/) | LZMA Compressed File |<!--Load--> ✅ |<!--Save-->  |
+| [RAR](/conversion/java/convert/compression/) | RAR Compressed Archive |<!--Load--> ✅ |<!--Save-->  |
+| [TAR](/conversion/java/convert/compression/) | Consolidated Unix File Archive |<!--Load--> ✅ |<!--Save--> ✅ |
+| [XZ](/conversion/java/convert/compression/) | Xz Compressed File |<!--Load--> ✅ |<!--Save-->  |
+| [Z](/conversion/java/convert/compression/) | Unix Compressed File |<!--Load--> ✅ |<!--Save-->  |
+| [ZIP](/conversion/java/convert/compression/) | ZIP Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## Database
 | From | Description | Load | Save |
@@ -132,8 +132,8 @@
 | [CGM](/conversion/java/convert/page-layout/) | Computer Graphics Metafile |<!--Load--> ✅ |<!--Save-->  |
 | [EPS](/conversion/java/convert/page-layout/) | Encapsulated PostScript File |<!--Load--> ✅ |<!--Save-->  |
 | [OXPS](/conversion/java/convert/page-layout/) | XML Paper Specification File |<!--Load--> ✅ |<!--Save-->  |
-| [PCL](/conversion/java/convert/page-layout/) | Printer Command Language Document |<!--Load--> ✅ |<!--Save-->  |
-| [PS](/conversion/java/convert/page-layout/) | PostScript File |<!--Load--> ✅ |<!--Save-->  |
+| [PCL](/conversion/java/convert/page-layout/) | Printer Command Language Document |<!--Load--> ✅ |<!--Save--> ✅ |
+| [PS](/conversion/java/convert/page-layout/) | PostScript File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [SVG](/conversion/java/convert/page-layout/) | Scalable Vector Graphics File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [TEX](/conversion/java/convert/page-layout/) | LaTeX Source Document |<!--Load--> ✅ |<!--Save--> ✅ |
 | [XPS](/conversion/java/convert/page-layout/) | XML Paper Specification File |<!--Load--> ✅ |<!--Save--> ✅ |
