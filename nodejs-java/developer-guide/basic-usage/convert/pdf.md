@@ -91,33 +91,33 @@ In case you need to convert PDF to another presentation format please use the [P
 A popular use case is when you need to save the whole PDF document or some specific document pages as a collection of images. GroupDocs.Conversion for Node.js via Java allows converting PDF to images of many popular formats like - TIFF, JPG, PNG, GIF, BMP, and many others.
 The code snippet for such conversion is a bit different from other conversions as you have to declare a [SavePageStream](#) delegate that specifies the name format for the saved images. You can choose the desired image format by using the [ImageFileType](#) class.
 
-### Convert PDF to PNG
+## Convert PDF to PNG
 
 Please check a complete code example of PDF to PNG conversion below:
 
 ```js
 // Load the source PDF file
 const converter = new groupdocs.conversion.Converter("sample.pdf");
-const getPageStream = (page) => fs.createWriteStream(util.format("converted-page-%s.png", page));
+const outputFileTemplate = "converted-page-.png";
 
 // Set the convert options for PNG format
 const options = new groupdocs.conversion.ImageConvertOptions();
 options.setFormat(groupdocs.conversion.ImageFileType.Png);
 // Convert to PNG format
- converter.convert(getPageStream, options);
+converter.convert(outputFileTemplate, options);
 ```
 
-### Convert PDF to JPG
+## Convert PDF to JPG
 
 The PDF to JPG conversion is another popular use case and the code snippet for it is similar to what was described before. The only difference is the output image files extension and that the `ImageFileType.Jpg` argument should be passed to the `setFormat` method:
 
 ```js
 // Load the source PDF file
 const converter = new groupdocs.conversion.Converter("sample.pdf");
-const getPageStream = (page) => fs.createWriteStream(util.format("converted-page-%s.png", page));
+const outputFileTemplate = "converted-page-.jpg";
 // Set the convert options for JPG format
 const options = new groupdocs.conversion.ImageConvertOptions();
 options.setFormat(groupdocs.conversion.ImageFileType.Jpg);
 // Convert to JPG format
-converter.convert(getPageStream, options);
+converter.convert(outputFileTemplate, options);
 ```

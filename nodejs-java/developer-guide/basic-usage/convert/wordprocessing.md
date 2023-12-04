@@ -25,7 +25,7 @@ While converting a file from Microsoft Office Word to PDF format GroupDocs.Conve
   
 The following section is explaining how to convert DOC or DOCX to PDF programmatically without Microsoft Office and with the help of GroupDocs.Conversion for Java.  
 
-### Convert DOCX (or DOC) to PDF
+## Convert DOCX (or DOC) to PDF
 
 GroupDocs.Conversion provides an easy and concise way to convert DOCX to PDF - all you need is a couple of lines of code to:
 
@@ -62,7 +62,7 @@ const options = new groupdocs.conversion.MarkupConvertOptions();
 converter.convert("converted.html", options);
 ```
 
-When converting a DOC or DOCX file to MHTML format the only difference from the previous code example is that it is needed to call [MarkupConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/MarkupConvertOptions) `setFormat` method with **MarkupFileType.Mhtml**. The code snippet for DOCX to MHTML conversion will look as follows:
+When converting a DOC or DOCX file to MHTML format the only difference from the previous code example is that it is needed to call [MarkupConvertOptions](#) `setFormat` method with **MarkupFileType.Mhtml**. The code snippet for DOCX to MHTML conversion will look as follows:
 
 ```js
 // Load the source DOCX file
@@ -82,7 +82,7 @@ Similarly to other code examples that were explained already, all you need to co
 Please check the complete code example of how to convert DOCX to PNG below:
 
 ```js
-const getPageStream = (page) => fs.createWriteStream(util.format("converted-page-%s.png", page));
+const outputFileTemplate = "converted-page-.png";
 
 // Load the source DOCX file
 const converter = new groupdocs.conversion.Converter("sample.docx");
@@ -90,7 +90,7 @@ const converter = new groupdocs.conversion.Converter("sample.docx");
 const options = new groupdocs.conversion.ImageConvertOptions();
 options.setFormat(groupdocs.conversion.ImageFileType.Png);  
 // Convert to PNG format
-converter.convert(getPageStream, options);
+converter.convert(outputFileTemplate, options);
 ```
 
 ## Convert Word document to Markdown
