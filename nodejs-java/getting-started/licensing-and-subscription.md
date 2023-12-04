@@ -62,7 +62,7 @@ The following code sets a license from a file.
 ```js
 const licensePath = "path to the .lic file";
 const license = new groupdocs.conversion.License()
-license.setLicense(licensePath); 
+await license.setLicense(licensePath); 
 ```
 
 ### Set License from Stream
@@ -71,15 +71,19 @@ The following example shows how to load a license from a stream.
 
 ```js
 const fs = require('fs')  
-  
+
 const licensePath = "path to the .lic file"
-const license = new groupdocs.conversion.License()
-const licStream = fs.createReadStream(licensePath)
-groupdocs.conversion.License.setLicenseFromStream(license, licStream, err => {
-  if (err) {
-    console.log(`Set license error: ${err}`)
-  } else {
-    console.log('License set OK')
-  }
-})
+try {
+  const licenseStream = fs.createReadStream(licensePath)
+  const stream = await groupdocs.conversion.readDataFromStream(licenseStream)
+
+  const license = new groupdocs.conversion.License()
+  await license.setLicense(stream);
+  console.log('License set successfully.');
+} catch {
+  console.log("\nWe do not ship any license with this example. " +
+    "\nVisit the GroupDocs site to obtain either a temporary or permanent license. " +
+    "\nLearn more about licensing at https://purchase.groupdocs.com/faqs/licensing. " +
+    "\nLearn how to request a temporary license at https://purchase.groupdocs.com/temporary-license.");
+}
 ```
