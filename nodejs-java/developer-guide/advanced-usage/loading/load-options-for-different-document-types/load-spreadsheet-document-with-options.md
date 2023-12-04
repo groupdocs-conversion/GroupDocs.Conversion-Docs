@@ -25,86 +25,113 @@ GroupDocs.Conversion provides [SpreadsheetLoadOptions](#) to give you control o
 
 The following code sample shows how to convert a spreadsheet and hide comments:
 
-```java
-SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
+```js
+const loadOptions = new groupdocs.conversion.SpreadsheetLoadOptions();
 loadOptions.setHideComments(true);
 loadOptions.setOnePagePerSheet(true);
 
-Converter converter = new Converter("sample.xlsx", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = "ConvertSpreadsheetAndHideComments.pdf";
+
+const converter = new groupdocs.conversion.Converter("sample.xlsx", loadOptions);
+const convertOptions = new groupdocs.conversion.PdfConvertOptions();
+
+console.log(`Spreadsheet document converted successfully to ${outputPath} (hide comments)`);
+converter.convert(outputPath, convertOptions);
 ```
 
 ### Show grid lines
 
 The following code sample shows how to convert a spreadsheet and show grid lines:
 
-```java
-SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
+```js
+const loadOptions = new groupdocs.conversion.SpreadsheetLoadOptions();
 loadOptions.setShowGridLines(true);
 loadOptions.setOnePagePerSheet(true);
 
-Converter converter = new Converter("sample.xlsx", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = "ConvertSpreadsheetByShowingGridLines.pdf";
+
+const converter = new groupdocs.conversion.Converter("sample.xlsx", loadOptions);
+const convertOptions = new groupdocs.conversion.PdfConvertOptions();
+
+console.log(`Spreadsheet document converted successfully to ${outputPath} (show grid lines)`);
+converter.convert(outputPath, convertOptions);
 ```
 
 ### Skip empty rows and columns
 
 The following code sample shows how to convert a spreadsheet and skip empty rows and columns:
 
-```java
-SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
+```js
+const loadOptions = new groupdocs.conversion.SpreadsheetLoadOptions();
 loadOptions.setSkipEmptyRowsAndColumns(true);
 loadOptions.setOnePagePerSheet(true);
 
-Converter converter = new Converter("sample.xlsx", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = "ConvertSpreadsheetBySkippingEmptyRowsAndColumns.pdf";
+
+const converter = new groupdocs.conversion.Converter("sample.xlsx", loadOptions);
+const convertOptions = new groupdocs.conversion.PdfConvertOptions();
+
+console.log(`Spreadsheet document converted successfully to ${outputPath} (skip empty rows & columns)`);
+converter.convert(outputPath, convertOptions);
 ```
 
 ### Specify font substitution
 
 The following code sample shows how to convert a spreadsheet and specify font substitution for missing fonts:
 
-```java
-SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-List<FontSubstitute> fontSubstitutes = new ArrayList<FontSubstitute>();
-fontSubstitutes.add(FontSubstitute.create("Tahoma", "Arial"));
-fontSubstitutes.add(FontSubstitute.create("Times New Roman", "Arial"));
-loadOptions.setDefaultFont("Helvetica");
+```js
+const java = require('java');
+
+const outputPath = "ConvertSpreadsheetBySpecifyingFontsubstitution.pdf";
+
+const fontSubstitutes = java.newInstanceSync("java.util.ArrayList");
+fontSubstitutes.add(groupdocs.conversion.FontSubstitute.create("Tahoma", "Arial"));
+fontSubstitutes.add(groupdocs.conversion.FontSubstitute.create("Times New Roman", "Arial"));
+
+const loadOptions = new groupdocs.conversion.SpreadsheetLoadOptions();
+loadOptions.setDefaultFont("Helvetica.ttf");
 loadOptions.setOnePagePerSheet(true);
 loadOptions.setFontSubstitutes(fontSubstitutes);
 
-Converter converter = new Converter("sample.xlsx", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const converter = new groupdocs.conversion.Converter("sample.xlsx", loadOptions);
+const convertOptions = new groupdocs.conversion.PdfConvertOptions();
+
+console.log(`Spreadsheet document converted successfully to ${outputPath} (by specifying font subs)`);
+converter.convert(outputPath, convertOptions);
 ```
 
 ### Specify range
 
 The following code sample shows how to convert a spreadsheet and specify the exact range of rows and columns to be converted
 
-```java
-SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-loadOptions.setConvertRange("10:30");
+```js
+const loadOptions = new groupdocs.conversion.SpreadsheetLoadOptions();
+loadOptions.setConvertRange('10:30');
 loadOptions.setOnePagePerSheet(true);
 
-Converter converter = new Converter("sample.xlsx", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = "ConvertSpreadsheetBySpecifyingRange.pdf";
+
+const converter = new groupdocs.conversion.Converter("sample.xlsx", loadOptions);
+const convertOptions = new groupdocs.conversion.PdfConvertOptions();
+
+console.log(`Spreadsheet document converted successfully to ${outputPath} (by specifying range)`);
+converter.convert(outputPath, convertOptions);
 ```
 
 ### Include hidden sheets
 
 The following code sample shows how to convert a spreadsheet including the hidden sheets
 
-```java
-SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
+```js
+const loadOptions = new groupdocs.conversion.SpreadsheetLoadOptions();
 loadOptions.setShowHiddenSheets(true);
 loadOptions.setOnePagePerSheet(true);
 
-Converter converter = new Converter("sample.xlsx", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = "ConvertSpreadsheetWithHiddenSheetsIncluded.pdf";
+
+const converter = new groupdocs.conversion.Converter("sample.xlsx", loadOptions);
+const convertOptions = new groupdocs.conversion.PdfConvertOptions();
+
+console.log(`Spreadsheet document converted successfully to ${outputPath} (with hidden sheets included)`);
+converter.convert(outputPath, convertOptions);
 ```

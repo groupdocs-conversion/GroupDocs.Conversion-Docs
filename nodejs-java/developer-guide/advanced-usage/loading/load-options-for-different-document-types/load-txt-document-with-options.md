@@ -19,38 +19,50 @@ GroupDocs.Conversion provides [TxtLoadOptions](#) to give you control over how 
 
 The following code sample shows how to convert a TXT document and control the way the leading spaces are processed:
 
-```java
-TxtLoadOptions loadOptions =  new TxtLoadOptions();
-loadOptions.setLeadingSpacesOptions(TxtLeadingSpacesOptions.ConvertToIndent);
+```js
+const loadOptions = new groupdocs.conversion.TxtLoadOptions()
+loadOptions.setLeadingSpacesOptions(groupdocs.conversion.TxtLeadingSpacesOptions.ConvertToIndent);
 loadOptions.setDetectNumberingWithWhitespaces(true);
 
-Converter converter = new Converter("sample.txt", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = "ConvertTxtByControllingLeadingSpacesBehavior.pdf"
+
+const converter = new groupdocs.conversion.Converter("sample.txt", loadOptions)
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+
+console.log(`Txt document converted successfully to ${outputPath} (by controlling leading spaces behavior)`)
+converter.convert(outputPath, convertOptions)
 ```
 
 ### Control behavior of processing trailing spaces
 
 The following code sample shows how to convert a TXT document and the way the trailing spaces are processed:
 
-```java
-TxtLoadOptions loadOptions =  new TxtLoadOptions();
-loadOptions.setTrailingSpacesOptions(TxtTrailingSpacesOptions.Trim);
+```js
+const loadOptions = new groupdocs.conversion.TxtLoadOptions()
+loadOptions.setTrailingSpacesOptions(groupdocs.conversion.TxtTrailingSpacesOptions.Trim);
 
-Converter converter = new Converter("sample.txt", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = "ConvertTxtByControllingTrailingSpacesBehavior.pdf"
+
+const converter = new groupdocs.conversion.Converter("sample.txt", loadOptions)
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+
+console.log(`Txt document converted successfully to ${outputPath} (by controlling trailing spaces behavior)`)
+converter.convert(outputPath, convertOptions)
 ```
 
 ### Specify encoding
 
 The following code sample shows how to convert a TXT document and specify the encoding
 
-```java
-TxtLoadOptions loadOptions =  new TxtLoadOptions();
-loadOptions.setEncoding(Charset.forName("shift_jis"));
+```js
+const loadOptions = new groupdocs.conversion.TxtLoadOptions()
+loadOptions.setEncoding("Shift_JIS")
 
-Converter converter = new Converter("sample.txt", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = "ConvertTxtBySpecifyingEncoding.pdf"
+
+const converter = new groupdocs.conversion.Converter("sample.txt", loadOptions)
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+
+console.log(`Txt document converted successfully to ${outputPath} (by specifying encoding)`)
+converter.convert(outputPath, convertOptions)
 ```

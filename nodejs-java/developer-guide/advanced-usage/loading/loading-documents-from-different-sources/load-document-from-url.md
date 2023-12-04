@@ -28,12 +28,13 @@ async function fetchUrl(url) {
     }
 }
 
-const url = "https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Node.js-via-Java/blob/master/Examples/Resources/SampleFiles/sample.docx?raw=true";
+const url = 'https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Node.js-via-Java/blob/master/Examples/Resources/SampleFiles/sample.docx?raw=true'
+
 try {
     const stream = await fetchUrl(url)
     const converter = new groupdocs.conversion.Converter(stream);
     const convertOptions = new groupdocs.conversion.PdfConvertOptions();
-    converter.convert('converted.pdf', convertOptions);
+    converter.convert('loadDocumentFromUrl.pdf', convertOptions);
 
 }catch(e){
     throw new Error(e);

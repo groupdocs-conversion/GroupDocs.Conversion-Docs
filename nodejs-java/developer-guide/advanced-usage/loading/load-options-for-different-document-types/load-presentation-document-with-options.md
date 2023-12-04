@@ -21,42 +21,56 @@ GroupDocs.Conversion provides [PresentationLoadOptions](#) to give you control 
 
 The following code sample shows how to convert a presentation and hide comments:
 
-```java
-PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-loadOptions.setHideComments(true);
+```js
+const loadOptions = new groupdocs.conversion.PresentationLoadOptions()
+loadOptions.setHideComments(true)
 
-Converter converter = new Converter("sample.pptx", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = "ConvertPresentationByHidingComments.pdf"
+
+const converter = new groupdocs.conversion.Converter("sample.pptx", loadOptions)
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+
+console.log(`Pdf document converted successfully to ${outputPath} (by hiding comments)`)
+converter.convert(outputPath, convertOptions)
 ```
 
 ### Specify font substitutions
 
 The following code sample shows how to convert a presentation and specify font substitutions for missing fonts:
 
-```java
-PresentationLoadOptions loadOptions = new PresentationLoadOptions();
+```js
+const java = require('java') 
 
-List<FontSubstitute> fontSubstitutes = new ArrayList<FontSubstitute>();
-fontSubstitutes.add(FontSubstitute.create("Tahoma", "Arial"));
-fontSubstitutes.add(FontSubstitute.create("Times New Roman", "Arial"));
-loadOptions.setDefaultFont("Helvetica");
+const outputPath = "ConvertPresentationBySpecifyingFontSubstitution.pdf";
+
+const fontSubstitutes = java.newInstanceSync("java.util.ArrayList");
+fontSubstitutes.add(groupdocs.conversion.FontSubstitute.create("Tahoma", "Arial"));
+fontSubstitutes.add(groupdocs.conversion.FontSubstitute.create("Times New Roman", "Arial"));
+
+const loadOptions = new groupdocs.conversion.PresentationLoadOptions()
+loadOptions.setDefaultFont("Helvetica.ttf");
 loadOptions.setFontSubstitutes(fontSubstitutes);
 
-Converter converter = new Converter("sample.pptx", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const converter = new groupdocs.conversion.Converter("sample.pptx", loadOptions);
+const convertOptions = new groupdocs.conversion.PdfConvertOptions();
+
+console.log(`Pdf document converted successfully to ${outputPath} (by specifying font subs)`);
+converter.convert(outputPath, convertOptions);
 ```
 
 ### Include hidden slides
 
 The following code sample shows how to convert a presentation including the hidden slides:
 
-```java
-PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-loadOptions.setShowHiddenSlides(true);
+```js
+const loadOptions = new groupdocs.conversion.PresentationLoadOptions()
+loadOptions.setShowHiddenSlides(true)
 
-Converter converter = new Converter("sample.pptx", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = "ConvertPresentationWithHiddenSlidesIncluded.pdf"
+
+const converter = new groupdocs.conversion.Converter("sample.pptx", loadOptions)
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+
+console.log(`Pdf document converted successfully to ${outputPath} (with hidden slides included)`)
+converter.convert(outputPath, convertOptions)
 ```

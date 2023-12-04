@@ -18,16 +18,21 @@ GroupDocs.Conversion provides [NoteLoadOptions](#) to give you control over how
 
 The following code sample shows how to convert a Note document and specify font substitution for missing fonts:
 
-```java
-NoteLoadOptions loadOptions = new NoteLoadOptions();
+```js
+const java = require('java')
 
-List<FontSubstitute> fontSubstitutes = new ArrayList<FontSubstitute>();
-fontSubstitutes.add(FontSubstitute.create("Tahoma", "Arial"));
-fontSubstitutes.add(FontSubstitute.create("Times New Roman", "Arial"));
+const outputPath = "convertNoteBySpecifyingFontSubstitution.pdf"
+
+const fontSubstitutes = java.newInstanceSync("java.util.ArrayList")
+fontSubstitutes.add(groupdocs.conversion.FontSubstitute.create("Tahoma", "Arial"));
+fontSubstitutes.add(groupdocs.conversion.FontSubstitute.create("Times New Roman", "Arial"));
+
+const loadOptions = new groupdocs.conversion.NoteLoadOptions();
 loadOptions.setFontSubstitutes(fontSubstitutes);
-loadOptions.setDefaultFont("Helvetica");
 
-Converter converter = new Converter("sample.one", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const converter = new groupdocs.conversion.Converter("sample.one", loadOptions)
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+
+console.log(`Note document converted successfully to ${outputPath} (specifying font subs)`)
+converter.convert(outputPath, convertOptions)
 ```

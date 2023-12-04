@@ -23,43 +23,57 @@ GroupDocs.Conversion provides [WordProcessingLoadOptions](#) to give you contro
 
 The following code sample shows how to convert a WordProcessing document and hide comments:
 
-```java
-WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-loadOptions.setHideComments(true);
+```js
+const loadOptions = new groupdocs.conversion.WordProcessingLoadOptions()
+loadOptions.setHideComments(true)
 
-Converter converter = new Converter("sample.docx", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = "ConvertWordProcessingByHidingComments.pdf"
+
+const converter = new groupdocs.conversion.Converter("sample.docx", loadOptions)
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+
+console.log(`WordProcessing document converted successfully to ${outputPath} (by hiding comments)`)
+converter.convert(outputPath, convertOptions)
 ```
 
 ### Hide tracked changes
 
 The following code sample shows how to convert a WordProcessing document and hide tracked changes
 
-```java
-WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-loadOptions.setHideWordTrackedChanges(true);
+```js
+const loadOptions = new groupdocs.conversion.WordProcessingLoadOptions()
+loadOptions.setHideWordTrackedChanges(true)
 
-Converter converter = new Converter("sample.docx", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = "ConvertWordProcessingByHidingTrackedChanges.pdf"
+
+const converter = new groupdocs.conversion.Converter("sample.docx", loadOptions)
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+
+console.log(`WordProcessing document converted successfully to ${outputPath} (By hiding tracked changes)`)
+converter.convert(outputPath, convertOptions)
 ```
 
 ### Specify font substitution
 
 The following code sample shows how to convert a WordProcessing document and specify font substitution for missing fonts:
 
-```java
-WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-loadOptions.setAutoFontSubstitution(false);
-loadOptions.setDefaultFont("Helvetica");
-List<FontSubstitute> fontSubstitutes = new ArrayList<FontSubstitute>();
-fontSubstitutes.add(FontSubstitute.create("Tahoma", "Arial"));
-fontSubstitutes.add(FontSubstitute.create("Times New Roman", "Arial"));
+```js
+const java = require('java') 
+
+const outputPath = "ConvertWordProcessingBySpecifyingFontSubstitution.pdf"
+
+const fontSubstitutes = java.newInstanceSync("java.util.ArrayList")
+fontSubstitutes.add(groupdocs.conversion.FontSubstitute.create("Tahoma", "Arial"));
+fontSubstitutes.add(groupdocs.conversion.FontSubstitute.create("Times New Roman", "Arial"));
+
+const loadOptions = new groupdocs.conversion.WordProcessingLoadOptions()
+loadOptions.setDefaultFont("Helvetica.ttf");
 loadOptions.setAutoFontSubstitution(false);
 loadOptions.setFontSubstitutes(fontSubstitutes);
 
-Converter converter = new Converter("sample.docx", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const converter = new groupdocs.conversion.Converter("sample.docx", loadOptions)
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+
+console.log(`WordProcessing document converted successfully to ${outputPath} (by specifying font subs)`)
+converter.convert(outputPath, convertOptions)
 ```

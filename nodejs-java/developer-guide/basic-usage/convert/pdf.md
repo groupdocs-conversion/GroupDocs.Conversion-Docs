@@ -98,13 +98,13 @@ Please check a complete code example of PDF to PNG conversion below:
 ```js
 // Load the source PDF file
 const converter = new groupdocs.conversion.Converter("sample.pdf");
-const getPageStream = (page) => fs.createWriteStream(util.format("converted-page-%s.png", page));
+const outputFileTemplate = "converted-page-.png";
 
 // Set the convert options for PNG format
 const options = new groupdocs.conversion.ImageConvertOptions();
 options.setFormat(groupdocs.conversion.ImageFileType.Png);
 // Convert to PNG format
- converter.convert(getPageStream, options);
+converter.convert(outputFileTemplate, options);
 ```
 
 ## Convert PDF to JPG
@@ -114,10 +114,10 @@ The PDF to JPG conversion is another popular use case and the code snippet for i
 ```js
 // Load the source PDF file
 const converter = new groupdocs.conversion.Converter("sample.pdf");
-const getPageStream = (page) => fs.createWriteStream(util.format("converted-page-%s.png", page));
+const outputFileTemplate = "converted-page-.jpg";
 // Set the convert options for JPG format
 const options = new groupdocs.conversion.ImageConvertOptions();
 options.setFormat(groupdocs.conversion.ImageFileType.Jpg);
 // Convert to JPG format
-converter.convert(getPageStream, options);
+converter.convert(outputFileTemplate, options);
 ```

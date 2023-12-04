@@ -82,7 +82,7 @@ Similarly to other code examples that were explained already, all you need to co
 Please check the complete code example of how to convert DOCX to PNG below:
 
 ```js
-const getPageStream = (page) => fs.createWriteStream(util.format("converted-page-%s.png", page));
+const outputFileTemplate = "converted-page-.png";
 
 // Load the source DOCX file
 const converter = new groupdocs.conversion.Converter("sample.docx");
@@ -90,7 +90,7 @@ const converter = new groupdocs.conversion.Converter("sample.docx");
 const options = new groupdocs.conversion.ImageConvertOptions();
 options.setFormat(groupdocs.conversion.ImageFileType.Png);  
 // Convert to PNG format
-converter.convert(getPageStream, options);
+converter.convert(outputFileTemplate, options);
 ```
 
 ## Convert Word document to Markdown

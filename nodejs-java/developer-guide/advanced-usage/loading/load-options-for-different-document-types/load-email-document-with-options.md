@@ -22,52 +22,21 @@ GroupDocs.Conversion provides [EmailLoadOptions](#) to give you control over ho
 
 The following code sample shows how to convert an Email document and control the visibility of the fields:
 
-```java
-EmailLoadOptions loadOptions = new EmailLoadOptions();
+```js
+const outputPath = "ConvertEmailWithAlteringFieldsVisibility.pdf"
+
+const loadOptions = new groupdocs.conversion.EmailLoadOptions();
 loadOptions.setDisplayHeader(false);
 loadOptions.setDisplayFromEmailAddress(false);
 loadOptions.setDisplayToEmailAddress(false);
 loadOptions.setDisplayEmailAddress(false);
 loadOptions.setDisplayCcEmailAddress(false);
 loadOptions.setDisplayBccEmailAddress(false);
+loadOptions.setConvertOwned(false);
 
-Converter converter = new Converter("sample.msg", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
-```
+const converter = new groupdocs.conversion.Converter("sample.msg", loadOptions)
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
 
-### Converting email attachments
-
-The following code sample shows how to convert an Email document and all attachments:
-
-```java
-EmailLoadOptions emailLoadOptions = new EmailLoadOptions();
-emailLoadOptions.setConvertOwned(true);
-emailLoadOptions.setConvertOwner(true);
-emailLoadOptions.setDepth(2);
-Converter converter=new Converter("sample_with_attachments.eml",emailLoadOptions);
-final List<FileOutputStream> fileOutputStreams = new ArrayList<>();
-try{
-    converter.convert(new SaveDocumentStreamForFileType(){
-            @Override
-            public Stream invoke(FileType t){
-                try{
-                    FileOutputStream fileOutputStream=new FileOutputStream("converted-"+fileOutputStreams.size()+".pdf");
-                    fileOutputStreams.add(fileOutputStream);
-                    return new GroupDocsOutputStream(fileOutputStream);
-                } catch(IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }, new PdfConvertOptions());
-    }finally{
-        try{
-            for(OutputStream outputStream:fileOutputStreams){
-            outputStream.close();
-            }
-        } catch(IOException e) {
-            //throw an exception
-        }
-    }
-
+console.log(`Email document converted successfully to ${outputPath} (with altering fields visibility)`)
+converter.convert(outputPath, convertOptions)
 ```

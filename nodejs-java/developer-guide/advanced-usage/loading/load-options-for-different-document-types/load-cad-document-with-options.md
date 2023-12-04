@@ -19,25 +19,34 @@ GroupDocs.Conversion provides [CadLoadOptions](#) to give you control over how 
 
 The following code sample shows how to convert a CAD document and convert only certain layouts:
 
-```java
-CadLoadOptions loadOptions =  new CadLoadOptions();
-loadOptions.setLayoutNames(new  String[]{ "Layout1", "Layout3" });
+```js
+const outputPath = "ConvertCadAndSpecifyLayouts.pdf"
+  
+const loadOptions = new groupdocs.conversion.CadLoadOptions()
+loadOptions.setLayoutNames(["Layout1", "Layout3"]);
+const converter = new groupdocs.conversion.Converter("with_layers_and_layouts.dwg", () => loadOptions);
 
-Converter converter = new Converter("with_layers_and_layouts.dwg", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+console.log(`Cad document converted successfully to ${outputPath} (cad & specify layouts)`)
+converter.convert(outputPath, convertOptions)
 ```
 
 ### Specify width and height
 
 The following code sample shows how to convert a CAD document and specify the width and height
 
-```java
-CadLoadOptions loadOptions =  new CadLoadOptions();
+```js
+const outputPath = "convertCadAndSpecifyWidthAndHeight.tiff"
+
+const loadOptions = new groupdocs.conversion.CadLoadOptions()
 loadOptions.setWidth(1920);
 loadOptions.setHeight(1080);
 
-Converter converter = new Converter("with_layers_and_layouts.dwg", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const converter = new groupdocs.conversion.Converter("with_layers_and_layouts.dwg", () => loadOptions);
+
+const convertOptions = new groupdocs.conversion.ImageConvertOptions();
+convertOptions.setFormat_ConvertOptions_New(groupdocs.conversion.ImageFileType.Tiff);
+
+console.log(`Cad document converted successfully to ${outputPath} (cad & specify width and height)`)
+converter.convert(outputPath, convertOptions)
 ```

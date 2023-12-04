@@ -99,7 +99,7 @@ converter.convert("png-converted-to.pptx", options);
 
 To easily transform images into Microsoft Word documents programmatically, please check the following code snippet in JavaScript:
 
-```java
+```js
 // Load the source JPG file
 const converter = new groupdocs.conversion.Converter("sample.jpg");
 const options = new groupdocs.conversion.WordProcessingConvertOptions();

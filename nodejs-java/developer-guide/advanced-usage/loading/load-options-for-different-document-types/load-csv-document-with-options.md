@@ -21,38 +21,50 @@ GroupDocs.Conversion provides [CsvLoadOptions](#) to give you control over how 
 
 The following code sample shows how to convert a CSV document and control the way the date/time and numeric data have been processed:
 
-```java
-CsvLoadOptions loadOptions = new CsvLoadOptions();
-loadOptions.setConvertDateTimeData(true);
-loadOptions.setConvertNumericData(true);
+```js
+const loadOptions = new groupdocs.conversion.CsvLoadOptions()
+loadOptions.setConvertDateTimeData(true)
+loadOptions.setConvertNumericData(true)
 
-Converter converter = new Converter("sample.csv", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = "ConvertCsvByConvertingDateTimeAndNumericData.pdf"
+
+const converter = new groupdocs.conversion.Converter("sample.csv", loadOptions)
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+
+console.log(`CSV document converted successfully to ${outputPath} (converting dateTime & numeric data)`)
+converter.convert(outputPath, convertOptions)
 ```
 
 ### Specify delimiter
 
 The following code sample shows how to convert a CSV document and specify the delimiter
 
-```java
-CsvLoadOptions loadOptions = new CsvLoadOptions();
-loadOptions.setSeparator(',');
+```js
+const loadOptions = new groupdocs.conversion.CsvLoadOptions()
+loadOptions.setSeparator(",")
 
-Converter converter = new Converter("sample.csv", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = `ConvertCsvBySpecifyingDelimiter.pdf`
+
+const converter = new groupdocs.conversion.Converter("sample.csv", loadOptions)
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+
+console.log(`CSV document converted successfully to ${outputPath} (specifying delimiter)`)
+converter.convert(outputPath, convertOptions)
 ```
 
 ### Specify encoding
 
 The following code sample shows how to convert a CSV document and specify the encoding
 
-```java
-CsvLoadOptions loadOptions = new CsvLoadOptions();
-loadOptions.setEncoding(java.nio.charset.Charset.forName("shift_jis"));
+```js
+const loadOptions = new groupdocs.conversion.CsvLoadOptions()
+loadOptions.setEncoding("Shift_JIS")
 
-Converter converter = new Converter("sample.csv", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+const outputPath = `ConvertCsvBySpecifyingEncoding.pdf`
+
+const converter = new groupdocs.conversion.Converter("sample.csv", loadOptions)
+const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+
+console.log(`CSV document converted successfully to ${outputPath} (encoding specified)`)
+converter.convert(outputPath, convertOptions)
 ```

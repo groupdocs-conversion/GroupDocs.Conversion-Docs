@@ -20,38 +20,52 @@ GroupDocs.Conversion provides [PdfLoadOptions](#) to give you control over how 
 
 The following code sample shows how to convert a PDF document and flatten all fields:
 
-```java
- 
-PdfLoadOptions loadOptions = new PdfLoadOptions();
-loadOptions.setFlattenAllFields(true);
+```js
+const loadOptions = new groupdocs.conversion.PdfLoadOptions()
+loadOptions.setFlattenAllFields(true)
 
-Converter converter = new Converter("sample.pdf", loadOptions);
-WordProcessingConvertOptions options = new WordProcessingConvertOptions();
-converter.convert("converted.docx", options);
+const converter = new groupdocs.conversion.Converter("sample.pdf", loadOptions)
+
+const outputPath = "ConvertPdfAndFlattenAllFields.docx"
+
+const convertOptions = new groupdocs.conversion.WordProcessingConvertOptions()
+
+console.log(`Pdf document converted successfully to ${outputPath} (pdf & flatten all fields)`)
+converter.convert(outputPath, convertOptions)
 ```
 
 ### Hide annotations
 
 The following code sample shows how to convert a PDF document and hide annotations:
 
-```java
-PdfLoadOptions loadOptions = new PdfLoadOptions();
-loadOptions.setHidePdfAnnotations(true);
+```js
+const loadOptions = new groupdocs.conversion.PdfLoadOptions()
+loadOptions.setHidePdfAnnotations(true)
 
-Converter converter = new Converter("sample.pdf", loadOptions);
-WordProcessingConvertOptions options = new WordProcessingConvertOptions();
-converter.convert("converted.docx", options);
+const converter = new groupdocs.conversion.Converter("sample.pdf", loadOptions)
+
+const outputPath = "ConvertPdfAndHideAnnotations.docx"
+
+const convertOptions = new groupdocs.conversion.WordProcessingConvertOptions()
+
+console.log(`Pdf document converted successfully to ${outputPath} (pdf & hide annotations)`)
+converter.convert(outputPath, convertOptions)
 ```
 
 ### Remove embedded files
 
 The following code sample shows how to convert a PDF document and remove embedded files:
 
-```java
-PdfLoadOptions loadOptions = new PdfLoadOptions();
-loadOptions.setRemoveEmbeddedFiles(true);
+```js
+const loadOptions = new groupdocs.conversion.PdfLoadOptions()
+loadOptions.setRemoveEmbeddedFiles(true)
 
-Converter converter = new Converter("sample.pdf", loadOptions);
-WordProcessingConvertOptions options = new WordProcessingConvertOptions();
-converter.convert("converted.docx", options);
+const converter = new groupdocs.conversion.Converter("sample.pdf", loadOptions)
+
+const outputPath = "ConvertPdfAndRemoveEmbeddedFiles.docx"
+
+const convertOptions = new groupdocs.conversion.WordProcessingConvertOptions()
+
+console.log(`Pdf document converted successfully to ${outputPath} (pdf & remove embedded files)`)
+converter.convert(outputPath, convertOptions)
 ```

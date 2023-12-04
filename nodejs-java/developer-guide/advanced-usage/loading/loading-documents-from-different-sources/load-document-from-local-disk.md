@@ -25,8 +25,8 @@ GroupDocs.Conversion will open the file for reading only when any other methods 
 The following code snippet shows how to load a file from a local disk:
 
 ```js
-const converter =  new groupdocs.conversion.Converter("c:\\files\\sample.docx");
+const converter =  new groupdocs.conversion.Converter("sample.docx");
 const convertOptions =  new groupdocs.conversion.PdfConvertOptions();
 
-converter.convert("converted.pdf", convertOptions);
+converter.convert("loadDocumentFromLocalDisk.pdf", convertOptions);
 ```

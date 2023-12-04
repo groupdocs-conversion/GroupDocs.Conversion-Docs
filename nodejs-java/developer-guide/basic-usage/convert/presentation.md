@@ -89,12 +89,12 @@ No matter which image format you choose - GroupDocs.Conversion supports a wide r
 Here is a code snippet that shows how to convert PPTX to PNG image in JavaScript programming language:
 
 ```js
-const getPageStream = (page) => fs.createWriteStream(util.format("converted-page-%s.png", page));
+const outputFileTemplate = "converted-page-.png";
 // Load the source PPTX file
 const converter = new groupdocs.conversion.Converter("sample.pptx");
 // Set the convert options for PNG format
 const options = new groupdocs.conversion.ImageConvertOptions();
 options.setFormat(groupdocs.conversion.ImageFileType.Png);  
 // Convert to PNG format
-converter.convert(getPageStream, options);
+converter.convert(outputFileTemplate, options);
 ```

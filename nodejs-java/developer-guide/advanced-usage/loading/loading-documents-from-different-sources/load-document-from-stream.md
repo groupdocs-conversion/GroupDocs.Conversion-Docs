@@ -19,19 +19,19 @@ The following code snippet serves this purpose:
 
 ```js
 const fs = require('fs')
-try{
-    const converter = new groupdocs.conversion.Converter(() => {
-        try {
-            return fs.createReadStream('sample.docx');
-        } catch (e) {
-            throw new Error(e);
-        }
-    });
-    const convertOptions = new groupdocs.conversion.PdfConvertOptions();
+const outputPath = "LoadDocumentFromStream.pdf"
 
-    converter.convert("converted.pdf", convertOptions);
-} catch (e){
-    throw new Error(e);
+try {
+  const readStream = fs.createReadStream("sample.docx")
+  const stream = await groupdocs.conversion.readDataFromStream(readStream)
+  const converter = new groupdocs.conversion.Converter(stream);
+  const convertOptions = new groupdocs.conversion.PdfConvertOptions()
+
+  console.log(`Source document converted successfully to ${outputPath}`)
+  return converter.convert(outputPath, convertOptions)
+
+} catch (error) {
+  throw new Error(error)
 }
 ```
 
