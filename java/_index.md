@@ -7,10 +7,24 @@ description: "GroupDocs.Conversion for Java is an advanced document conversion A
 keywords: GroupDocs.Conversion for Java, Conversion, document conversion, convert files, Java
 productName: GroupDocs.Conversion for Java
 hideChildren: True
+AddLibInfoScript: True
 structuredData:
     showOrganization: True
 ---
 <img src="/conversion/java/images/home.png" alt="groupdocs-conversion-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
+
+<dt class="flex flex-wrap align-center gdoc-props__meta">
+    <a href='https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-conversion/23.12/' class="release-version-link">
+        <span class="gdoc-props__tag tip">Latest version
+            <i class="release-version-number">23.12</i>
+            <i class="release-version-month">(December 2023)</i>
+        </span> 
+    </a>
+</dt>
+
+{{< button style="primary" link="https://releases.groupdocs.com/conversion/java/release-notes/" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg> Release notes {{< /button >}} 
+{{< button style="primary" link="https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-conversion/" >}} {{< icon "gdoc_download" >}} Package repository {{< /button >}}
+
 
 GroupDocs.Conversion for Java serves as a lightweight API for document conversion in various formats within Java applications. 
 
