@@ -21,6 +21,7 @@ GroupDocs.Conversion provides [XmlLoadOptions](https://reference.groupdocs.com/
 |**[UseAsDataSource](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions/useasdatasource)** | Use source XML document as a data source |
 |**[WhitelistedResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/webloadoptions/whitelistedresources)** | Specifies which external resources will be loaded even when the loading of other external resources is restricted. |
 |**[XslFoFactory](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions/xslfofactory)** | XSL document stream to convert XML-FO using XSL. |
+|**[XsltFactory](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/xmlloadoptions/xsltfactory/)** | XSLT document stream to convert XML performing XSL transformation to HTML. |
 
 ### Convert XML as a data source to a spreadsheet
 
@@ -34,6 +35,21 @@ using (Converter converter = new Converter("data.xml", () => new XmlLoadOptions
 {
     SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
     converter.Convert("converted.xlsx", options);
+}
+```
+
+### Convert XML transformed through XSLT to a PDF:
+
+The following code shows how to convert a XML transformed through XSLT to a PDF:
+
+```csharp
+using (var converter = new Converter("books.xml", () => new XmlLoadOptions
+   {
+       XsltFactory = () => File.OpenRead("books.xsl")
+   }))
+{
+    var options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
 }
 ```
 
