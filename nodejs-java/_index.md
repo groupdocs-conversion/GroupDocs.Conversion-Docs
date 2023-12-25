@@ -7,10 +7,23 @@ description: "GroupDocs.Conversion for Node.js via Java is an advanced document 
 keywords: GroupDocs.Conversion for Node.js, Conversion, document conversion, convert files, Node.js
 productName: GroupDocs.Conversion for Node.js via Java
 hideChildren: True
+AddLibInfoScript: True
 structuredData:
     showOrganization: True
 ---
 <img src="/conversion/nodejs-java/images/home.png" alt="groupdocs-conversion-nodejs-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
+
+<dt class="flex flex-wrap align-center gdoc-props__meta">
+    <a href='https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-conversion/23.12/' class="release-version-link">
+        <span class="gdoc-props__tag tip">Latest version
+            <i class="release-version-number">23.12</i>
+            <i class="release-version-month">(December 2023)</i>
+        </span> 
+    </a>
+</dt>
+
+{{< button style="primary" link="https://releases.groupdocs.com/conversion/nodejs-java/release-notes/" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg> Release notes {{< /button >}} 
+{{< button style="primary" link="https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-conversion-nodejs/" >}} {{< icon "gdoc_download" >}} Package repository {{< /button >}}
 
 GroupDocs.Conversion for Node.js via Java is a powerful multi-format document conversion API designed as a middle-ware for JavaScript applications.  
 
