@@ -25,11 +25,11 @@ You can use the following tools to install the [GroupDocs.Conversion](https://ww
 
 Open your project or solution in Visual Studio and follow the steps below to install the **GroupDocs.Conversion** package using the [NuGet Package Manager](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio):
 
-* In **Solution Explorer**, right-click your project name and select **Manage NuGet Packages** to display the NuGet Package Manager.
+1. In **Solution Explorer**, right-click your project name and select **Manage NuGet Packages** to display the NuGet Package Manager.
 
     ![Manage NuGet packages in Visual Studio](/conversion/net/images/getting-started/installation/manage-nuget-packages.png)
 
-* Select the **Browse** tab and type **GroupDocs.Conversion** in the search box. Select the latest version of the **GroupDocs.Conversion** package and click **Install**.
+2. Select the **Browse** tab and type **GroupDocs.Conversion** in the search box. Select the latest version of the **GroupDocs.Conversion** package and click **Install**.
 
     ![Install NuGet packages in Visual Studio](/conversion/net/images/getting-started/installation/install-nuget-package.png)
 

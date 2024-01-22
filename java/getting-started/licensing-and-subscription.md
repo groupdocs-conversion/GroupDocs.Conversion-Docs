@@ -10,7 +10,7 @@ hideChildren: False
 toc: True
 ---
 
-Sometimes, in order to study the system better, you want to dive into the code as fast as possible. To make this easier, GroupDocs.Conversion provides different purchase plans or offers a Free Trial and a 30-day Temporary License for evaluation.
+Sometimes, to study the system better, you want to dive into the code as fast as possible. To make this easier, GroupDocs.Conversion offers a Free Trial and a 30-day Temporary License for evaluation and provides different purchase plans.
 
 {{< alert style="info" >}}
 Note that there are a number of general policies and practices that guide you on how to evaluate, properly license, and purchase our products. You can find them in the ["Purchase Policies and FAQ"](https://purchase.groupdocs.com/policies) section.

@@ -39,7 +39,7 @@ Page layout languages are used in desktop and electronic publishing. The main fo
 ## Convert from page layout formats
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert a page layout file format into another file format.  
-For example, the TEX to PDF conversion code snippet will look like this:
+For example, the TEX to PDF conversion code snippet looks like this:
 
 ```csharp
 // Load the source TEX file
@@ -52,7 +52,7 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.tex"))
 }
 ```
 
-Put it simply - you just load a page layout file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you just load a page layout file into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
@@ -61,7 +61,7 @@ Refer to the [API reference](https://reference.groupdocs.com/conversion/net/grou
 ## Convert to page layout formats
 
 On the other hand, converting your files to page layout format is also quite simple and natural.
-The following code sample demonstrates how to convert a DOCX document to TEX format in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
+The following code snippet shows how to convert a DOCX document to TEX format in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
 
 ```csharp
 // Load the source DOCX file

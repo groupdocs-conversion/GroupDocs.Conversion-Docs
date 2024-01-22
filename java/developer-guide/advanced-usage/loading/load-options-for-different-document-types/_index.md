@@ -8,4 +8,4 @@ keywords: Load PDF, Load Word, Load Excel, Load PowerPoint, Load CAD, Load Image
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-**[GroupDocs.Conversion](https://products.groupdocs.com/conversion/java)** allows you to convert documents with a huge set of additional options to customize the way the source document will be processed. For more details please refer to the following guides:
+**[GroupDocs.Conversion](https://products.groupdocs.com/conversion/java)** allows you to convert documents with a huge set of additional options to customize the way the source document will be processed. For details please refer to the following guides:

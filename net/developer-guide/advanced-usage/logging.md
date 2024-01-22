@@ -9,7 +9,7 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: true
 toc: True
 ---
-To enable logging you can use the `ConsoleLogger` class or implement a custom logger via the `ILogger` interface.
+To enable logging, use the `ConsoleLogger` class or implement a custom logger via the `ILogger` interface.
 
 * The [ILogger](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.logging/ilogger/) interface declares the methods used to perform logging.
 * The [ConsoleLogger](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.logging/consolelogger/) class implements the methods that output log messages to a standard console.

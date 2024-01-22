@@ -10,13 +10,13 @@ hideChildren: False
 ---
 GroupDocs.Conversion provides [NoteLoadOptions](#) to give you control over how the source Note document will be processed. The following options could be set:
 
-*   **[setDefaultFont](#)** -  default font for Note document. The specified font will be used if a font is missing
-*   **[setFontSubstitutes](#)** -  substitutes specific fonts from the Note document
-*   **[setPassword](#)** - a password to unlock the protected document
+*   **[setDefaultFont](#)** specifies a default font for Note document. The specified font will be used if a font is missing.
+*   **[setFontSubstitutes](#)** specifies substitutes specific fonts from the Note document.
+*   **[setPassword](#)** specifies a password to unlock the protected document.
 
 ### Specify font substitution
 
-The following code sample shows how to convert a Note document and specify font substitution for missing fonts:
+The following code snippet shows how to convert a Note document and specify font substitution for missing fonts:
 
 ```js
 const java = require('java')

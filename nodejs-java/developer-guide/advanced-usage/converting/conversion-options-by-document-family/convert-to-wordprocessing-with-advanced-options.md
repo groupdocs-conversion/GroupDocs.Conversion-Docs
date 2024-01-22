@@ -8,17 +8,17 @@ keywords: Convert to Word, Convert to WordProcessing, Convert to DOCX, Convert t
 productName: GroupDocs.Conversion for Node.js via Java
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](#) provides [WordProcessingConvertOptions](#) to give you control over conversion result when convert to WordProcessing formats. Along with [common convert options](#) from base class [WordProcessingConvertOptions](#) has the following additional options:
+[**GroupDocs.Conversion**](#) provides the [WordProcessingConvertOptions](#) class to give you control over conversion result when convert to WordProcessing formats. Along with [common convert options](#) from base class [WordProcessingConvertOptions](#) has the following additional options:
 
-*   [setFormat](#) -  desired result document type. Available options are: *Doc, Docm, Docx, Dot, Dotx, Rtf, Odt, Ott, Mobi, Txt*
-*   [setWidth](#) - desired page width after conversion      
-*   [setHeight](#) -  desired page height after conversion      
-*   [setDpi](#) - desired page dpi after conversion      
-*   [setPassword](#) -  if set, the converted document will be password protected with the specified password
-*   [setRtfOptions](#) - RTF specific options. [RtfOptions](#) class has single option [setExportImagesForOldReaders](#) -  specifies whether the keywords for "old readers" are written to RTF or not. This can significantly affect the size of the RTF document.
-*   [setZoom](#) - specifies the zoom level in percentage
+*   [setFormat](#) specifies desired result document type. Available options are: *Doc, Docm, Docx, Dot, Dotx, Rtf, Odt, Ott, Mobi, Txt*.
+*   [setWidth](#) specifies desired page width after conversion.  
+*   [setHeight](#) specifies desired page height after conversion.     
+*   [setDpi](#) specifies desired page dpi after conversion.
+*   [setPassword](#) whether the converted document will be password protected with the specified password.
+*   [setRtfOptions](#) specifies RTF specific options. [RtfOptions](#) class has single option [setExportImagesForOldReaders](#) specifies whether the keywords for "old readers" are written to RTF or not. This can significantly affect the size of the RTF document.
+*   [setZoom](#) specifies the zoom level in percentage.
 
-Following code snippet shows how to convert to WordProcessing document with advanced options
+The following code snippet shows how to convert to WordProcessing document with advanced options:
 
 ```js
 const converter = new groupdocs.conversion.Converter("sample.pdf");

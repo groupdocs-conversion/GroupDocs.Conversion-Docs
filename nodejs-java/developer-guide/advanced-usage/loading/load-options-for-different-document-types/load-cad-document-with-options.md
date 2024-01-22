@@ -10,14 +10,14 @@ hideChildren: False
 ---
 GroupDocs.Conversion provides [CadLoadOptions](#) to give you control over how the source CAD document will be processed. The following options could be set:
 
-*   [**setFormat**](#) - the source document type is auto-detected, but you could set the source document format explicitly with this property. Available options are: Dxf, Dwg, Dgn, Dwf, Stl, Ifc, Plt, Igs, Dwt
-*   [**setWidth**](#) - sets the desired page width      
-*   [**setHeight**](#) - sets the desired page height
-*   [**setLayoutNames**](#) - specifies which CAD layout to be converted
+*   [**setFormat**](#) allows you to set the source document format explicitly with this property. Available options are: Dxf, Dwg, Dgn, Dwf, Stl, Ifc, Plt, Igs, Dwt.
+*   [**setWidth**](#) sets the desired page width. 
+*   [**setHeight**](#) sets the desired page height.
+*   [**setLayoutNames**](#) specifies which CAD layout to be converted.
 
 ### Specify layouts to be converted
 
-The following code sample shows how to convert a CAD document and convert only certain layouts:
+The following code snippet shows how to convert a CAD document and convert only certain layouts:
 
 ```js
 const outputPath = "ConvertCadAndSpecifyLayouts.pdf"
@@ -33,7 +33,7 @@ converter.convert(outputPath, convertOptions)
 
 ### Specify width and height
 
-The following code sample shows how to convert a CAD document and specify the width and height
+The following code snippet shows how to convert a CAD document and specify the width and height:
 
 ```js
 const outputPath = "convertCadAndSpecifyWidthAndHeight.tiff"

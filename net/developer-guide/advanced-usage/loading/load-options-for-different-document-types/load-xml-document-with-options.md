@@ -25,7 +25,7 @@ GroupDocs.Conversion provides [XmlLoadOptions](https://reference.groupdocs.com/
 
 ### Convert XML as a data source to a spreadsheet
 
-The following code sample shows how to use XML as a data source and convert it to a spreadsheet:
+The following code snippet shows how to use XML as a data source and convert it to a spreadsheet:
 
 ```csharp
 using (Converter converter = new Converter("data.xml", () => new XmlLoadOptions
@@ -57,4 +57,4 @@ using (var converter = new Converter("books.xml", () => new XmlLoadOptions
 
 External resources refer to data or content that is referenced or linked from within an XML document but is stored separately, typically in separate files or locations.  Common external resources include DTDs or XML schemas, entities, XSLT Stylesheets, data sources, images, multimedia, and so on. 
 
-In some cases, you may want to skip loading all or just some of the external resources during the conversion. For example, when these resources become unavailable. Read the [Skip loading of external resources]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md" >}}) article to learn how to do this with **GroupDocs.Conversion for .NET** 
+In some cases, you may want to skip loading all or just some of the external resources during the conversion. For example, when these resources become unavailable. Read the [Skip loading of external resources]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md" >}}) article to learn how to do this with **GroupDocs.Conversion for .NET**.

@@ -24,12 +24,12 @@ You can build a project from scratch using Visual Studio or [.NET CLI](https://d
 
 ### Build a project using .NET CLI
 
-* Make sure you have .NET Core or .NET SDK installed <https://dotnet.microsoft.com/download>.
-* Create a directory for your console app by executing the `mkdir my-console-app` command in your terminal.
-* Navigate to the `my-console-app` directory by executing the `cd my-console-app` command.
-* Create an empty console app by executing the `dotnet new console` command.
-* Add the GroupDocs.Conversion for .NET package by executing the `dotnet add package GroupDocs.Conversion` command.
-* Edit `Program.cs` and add the following lines to the `Main` method:
+1. Make sure you have .NET Core or .NET SDK installed <https://dotnet.microsoft.com/download>.
+2. Create a directory for your console app by executing the `mkdir my-console-app` command in your terminal.
+3. Navigate to the `my-console-app` directory by executing the `cd my-console-app` command.
+4. Create an empty console app by executing the `dotnet new console` command.
+5. Add the GroupDocs.Conversion for .NET package by executing the `dotnet add package GroupDocs.Conversion` command.
+6. Edit `Program.cs` and add the following lines to the `Main` method:
   
   ```csharp
     using GroupDocs.Conversion;
@@ -45,16 +45,16 @@ You can build a project from scratch using Visual Studio or [.NET CLI](https://d
     }
   ```
   
-* Replace the `documentPath` value with the actual path to the document you're going to convert.
-* Run the project by executing the `dotnet run` command.
-* The converted document will be saved in the `C:\\output\\` directory.
+7. Replace the `documentPath` value with the actual path to the document you're going to convert.
+8. Run the project by executing the `dotnet run` command.
+9. The converted document will be saved in the `C:\\output\\` directory.
 
 ### Build a project using Visual Studio
 
-* Open Visual Studio and go to **File** -> **New** -> **Project**.
-* Select the appropriate project type - Console App, ASP.NET Web Application etc.
-* Install **GroupDocs.Conversion for .NET** from Nuget or the official GroupDocs website following this [guide]({{< ref "conversion/net/getting-started/installation.md" >}}).
-* Add the following code to the `Main` method:
+1. Open Visual Studio and go to **File** -> **New** -> **Project**.
+2. Select the appropriate project type - Console App, ASP.NET Web Application etc.
+3. Install **GroupDocs.Conversion for .NET** from Nuget or the official GroupDocs website following this [guide]({{< ref "conversion/net/getting-started/installation.md" >}}).
+4. Add the following code to the `Main` method:
 
   ```csharp
     using GroupDocs.Conversion;
@@ -70,22 +70,22 @@ You can build a project from scratch using Visual Studio or [.NET CLI](https://d
     }
   ```
 
-* Replace the `documentPath` value with the actual path to the document you're going to convert.
-* Build and Run your project.
-* The converted document will be saved in the `C:\\output\\` directory.
+5. Replace the `documentPath` value with the actual path to the document you're going to convert.
+6. Build and Run your project.
+7. The converted document will be saved in the `C:\\output\\` directory.
 
 ## Run back-end examples
 
 You can find many back-end examples in our [GitHub](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET) repository. You can either download the ZIP file from [here](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/archive/master.zip) or clone the repository from GitHub using your favorite Git client.  
 In case you download the ZIP file, extract the folders on your local disk.
 
-* Navigate to the `Examples` directory and open the `GroupDocs.Conversion.Examples.CSharp.sln` solution using Visual Studio.
-* Open the `RunExamples.cs` file and uncomment the example(s) that you would like to run.
-* Optionally, you can set the path to the license in `Utils.cs` file.
+1. Navigate to the `Examples` directory and open the `GroupDocs.Conversion.Examples.CSharp.sln` solution using Visual Studio.
+2. Open the `RunExamples.cs` file and uncomment the example(s) that you would like to run.
+3. Optionally, you can set the path to the license in `Utils.cs` file.
 
 ## Run demo projects
 
-To run any demo from [GroupDocs.Conversion for .NET Demo projects](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Demos/) you can either:
+To run any demo from [GroupDocs.Conversion for .NET Demo projects](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Demos/), you can either:
 
 * Clone the repository:
 
@@ -93,17 +93,17 @@ To run any demo from [GroupDocs.Conversion for .NET Demo projects](https://githu
   git clone git@github.com:groupdocs-conversion/GroupDocs.Conversion-for-.NET.git  
   ```
 
-* Or [download](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/archive/master.zip) the source code.
+* or [download](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/archive/master.zip) the source code.
 
 ### ASP.NET MVC demo
 
-* Clone or download the [GroupDocs.Conversion-for-.NET](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET) repository from GitHub or skip this step if you already have the code.
-* Navigate to the `Demos/MVC` directory.
-* Open the `GroupDocs.Conversion.MVC.sln` solution using Visual Studio.
-* Update common parameters in the `**web.config**` file and demo-related properties in the `**configuration.yml**` file to meet your requirements.
+1. Clone or download the [GroupDocs.Conversion-for-.NET](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET) repository from GitHub or skip this step if you already have the code.
+2. Navigate to the `Demos/MVC` directory.
+3. Open the `GroupDocs.Conversion.MVC.sln` solution using Visual Studio.
+4. Update common parameters in the `**web.config**` file and demo-related properties in the `**configuration.yml**` file to meet your requirements.
 <!--
  see more about configuring the demo at ["Configuration"](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/tree/master/Demos/MVC#configuration) section. -->
-* Run the project and open [http://localhost:8080/conversion](http://localhost:8080/conversion) in your favorite browser.
+5. Run the project and open [http://localhost:8080/conversion](http://localhost:8080/conversion) in your favorite browser.
 <!--
 {{< alert style="info" >}}
 
@@ -113,11 +113,11 @@ For more details about demo configuration please refer to ["Configuration"](http
 -->
 ### ASP.NET Web Forms demo
 
-* Clone or download the [GroupDocs.Conversion-for-.NET](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET) repository from GitHub or skip this step if you already have the code.
-* Navigate to `Demos/WebForms` directory.
-* Open the `GroupDocs.Conversion.WebForms.sln` solution using Visual Studio.
-* Update common parameters in the `**web.config**` file and demo-related properties in the `**configuration.yml**` file to meet your requirements.
-* Open [http://localhost:8080/conversion](http://localhost:8080/conversion) in your favorite browser.
+1. Clone or download the [GroupDocs.Conversion-for-.NET](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET) repository from GitHub or skip this step if you already have the code.
+2. Navigate to `Demos/WebForms` directory.
+3. Open the `GroupDocs.Conversion.WebForms.sln` solution using Visual Studio.
+4. Update common parameters in the `**web.config**` file and demo-related properties in the `**configuration.yml**` file to meet your requirements.
+5. Open [http://localhost:8080/conversion](http://localhost:8080/conversion) in your favorite browser.
 
 <!--
 {{< alert style="info" >}}

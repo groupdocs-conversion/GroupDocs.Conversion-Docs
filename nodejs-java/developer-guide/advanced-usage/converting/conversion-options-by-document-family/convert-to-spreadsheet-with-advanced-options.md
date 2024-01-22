@@ -10,11 +10,11 @@ hideChildren: False
 ---
 [**GroupDocs.Conversion**](#) provides [SpreadsheetConvertOptions](#) to give you control over conversion result when convert to spreadsheet format. Along with [common convert options](#) from base class [SpreadsheetConvertOptions](#) has the following additional options:
 
-*   [setFormat](#) -  desired result document type. Available options are: *Xls, Xlsx, Xlsm, Xlsb, Ods, Ots, Xltx, Xlt, Xltm, Tsc, Xlam, Csv*
-*   [setPassword](#) -  if set, the converted document will be password protected with the specified password
-*   [setZoom](#) -  specifies the zoom level in percentage
+*   [setFormat](#) specifies desired result document type. Available options are: *Xls, Xlsx, Xlsm, Xlsb, Ods, Ots, Xltx, Xlt, Xltm, Tsc, Xlam, Csv*.
+*   [setPassword](#) whether the converted document will be password protected with the specified password.
+*   [setZoom](#) specifies the zoom level in percentage.
 
-Following code snippet shows how to convert to Spreadsheet with advanced options
+The following code snippet shows how to convert to Spreadsheet with advanced options:
 
 ```js
 const converter = new groupdocs.conversion.Converter("sample.docx");

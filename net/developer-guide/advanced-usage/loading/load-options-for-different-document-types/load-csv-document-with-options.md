@@ -40,7 +40,7 @@ toc: True
 
 ### Control behavior of converting date/time and numeric data
 
-The following code sample shows how to convert a CSV document and control the way the date/time and numeric data have been processed:
+The following code snippet shows how to convert a CSV document and control the way the date/time and numeric data have been processed:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new CsvLoadOptions
@@ -57,7 +57,7 @@ using (Converter converter = new Converter("sample.csv", getLoadOptions))
 
 ### Specify delimiter
 
-The following code sample shows how to convert a CSV document and specify the delimiter
+The following code snippet shows how to convert a CSV document and specify the delimiter:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new CsvLoadOptions
@@ -73,7 +73,7 @@ using (Converter converter = new Converter("sample.csv", getLoadOptions))
 
 ### Specify encoding
 
-The following code sample shows how to convert a CSV document and specify the encoding
+The following code snippet shows how to convert a CSV document and specify the encoding:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new CsvLoadOptions
@@ -88,7 +88,7 @@ using (Converter converter = new Converter("sample.csv", getLoadOptions))
 ```
 ### Automatically fit rows
 
-To fit the row content of all rows while converting, set the [AutoFitRows](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/autofitrows/) property to `true`.
+To fit the row content of all rows while converting, set the [AutoFitRows](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/autofitrows/) property to `true`:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new CsvLoadOptions

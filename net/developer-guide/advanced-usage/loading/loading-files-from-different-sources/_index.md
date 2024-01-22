@@ -8,7 +8,7 @@ keywords: Load from file path, Load from URL, Load from stream
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-With [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) you can process files from various sources: from local disk, from streams, from cloud storage and so on.
+With [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) you can process files from various sources: from local disk, from stream, from cloud storage and so on.
 <!--
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) also enables you to convert remotely located documents. The conversion of a remote document would be similar to [loading a document from a stream]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-files-from-different-sources/load-file-from-stream.md" >}}). To convert a remotely located document you must:
 *   Specify the method to obtain remotely located document stream; 

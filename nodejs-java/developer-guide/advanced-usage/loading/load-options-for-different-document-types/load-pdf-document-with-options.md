@@ -10,15 +10,15 @@ hideChildren: False
 ---
 GroupDocs.Conversion provides [PdfLoadOptions](#) to give you control over how the source PDF document will be processed. The following options could be set:
 
-*   **[setFormat](#)** -  the document type is auto-detected during loading, however, you can specify explicitly the type of the source document. Available options are: *Pdf, Epub, Xps, Tex, Ps, Pcl*
-*   **[setRemoveEmbeddedFiles](#)** -  whether to remove the embedded files from the source document during the conversion
-*   **[setPassword](#)** - a password to unlock the protected document
-*   **[setHidePdfAnnotations](#)** -  specifies that annotations in the source document should be hidden
-*   **[setFlattenAllFields](#)** - specifies that all fields in the source document should be flattened during the conversion
+*   **[setFormat](#)** allows you to specify explicitly the type of the source document. Available options are: *Pdf, Epub, Xps, Tex, Ps, Pcl*.
+*   **[setRemoveEmbeddedFiles](#)** whether to remove the embedded files from the source document during the conversion.
+*   **[setPassword](#)** specifies a password to unlock the protected document.
+*   **[setHidePdfAnnotations](#)** specifies that annotations in the source document should be hidden.
+*   **[setFlattenAllFields](#)** specifies that all fields in the source document should be flattened during the conversion.
 
 ### Flatten all fields
 
-The following code sample shows how to convert a PDF document and flatten all fields:
+The following code snippet shows how to convert a PDF document and flatten all fields:
 
 ```js
 const loadOptions = new groupdocs.conversion.PdfLoadOptions()
@@ -36,7 +36,7 @@ converter.convert(outputPath, convertOptions)
 
 ### Hide annotations
 
-The following code sample shows how to convert a PDF document and hide annotations:
+The following code snippet shows how to convert a PDF document and hide annotations:
 
 ```js
 const loadOptions = new groupdocs.conversion.PdfLoadOptions()
@@ -54,7 +54,7 @@ converter.convert(outputPath, convertOptions)
 
 ### Remove embedded files
 
-The following code sample shows how to convert a PDF document and remove embedded files:
+The following code snippet shows how to convert a PDF document and remove embedded files:
 
 ```js
 const loadOptions = new groupdocs.conversion.PdfLoadOptions()

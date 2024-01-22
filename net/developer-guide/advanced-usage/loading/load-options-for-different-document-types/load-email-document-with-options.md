@@ -9,7 +9,7 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [EmailLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions) to give you control over how the source email document will be processed. The following options could be set:
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides the [EmailLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions) class to give you control over how the source email document will be processed. The following options could be set:
 | Option | Description |
 |--------|-------------|
 |**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/format)** | The document type is auto-detected during loading, however, you can specify explicitly the type of the source email document. Available options are: Msg, Eml, Emlx, Pst, Ost, Vcf, Mht |
@@ -29,7 +29,7 @@ toc: True
 
 ### Control fields visibility
 
-The following code sample shows how to convert an Email document and control the visibility of the fields:
+The following code snippet shows how to convert an Email document and control the visibility of the fields:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
@@ -50,7 +50,7 @@ using (Converter converter = new Converter("sample.msg", getLoadOptions))
 
 ### Converting email attachments
 
-The following code sample shows how to convert an Email document and all attachments:
+The following code snippet shows how to convert an Email document and all attachments:
 
 ```csharp
 var source = "sample-with-attachment.eml";
@@ -73,7 +73,7 @@ using (var converter = new Converter(source, () => loadOptions))
 
 ### Localize email fields captions
 
-The following code sample shows how to convert an Email document and localize the Email fields
+The following code snippet shows how to convert an Email document and localize the Email fields:
 
 ```csharp
 var source = "sample.eml";
@@ -99,7 +99,7 @@ using (var converter = new Converter(source, () => loadOptions))
 
 ### Control date/time format
 
-The following code sample shows how to convert an Email document and modify the date/time format
+The following code snippet shows how to convert an Email document and modify the date/time format:
 
 ```csharp
 var source = "sample.eml";

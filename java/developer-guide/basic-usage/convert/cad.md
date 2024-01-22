@@ -30,7 +30,7 @@ structuredData:
 
 ## About CAD file formats
 
-CAD stands for Computer-Aided Design. The term CADD (for Computer-Aided Design and Drafting) is also used. It is used for a 3D graphics file format and may contain 2D or 3D designs. A CAD file is a digital file format of an object generated and used by CAD software. A CAD file contains a technical drawing, blueprint, schematic, or 3D rendering of an object. There may be other CAD tools that can be used to create, open, edit, and export these .cad files to more widely used CAD drawing file formats. Below we are going to describe how to convert the most popular CAD file formats.
+CAD stands for Computer-Aided Design. The term CADD (for Computer-Aided Design and Drafting) is also used. It is used for a 3D graphics file format and may contain 2D or 3D designs. A CAD file is a digital file format of an object generated and used by CAD software. A CAD file contains a technical drawing, blueprint, schematic, or 3D rendering of an object. There may be other CAD tools that can be used to create, open, edit, and export these .cad files to more widely used CAD drawing file formats. Below, we are going to describe how to convert the most popular CAD file formats.
 
 ## Supported CAD file conversions
 
@@ -39,7 +39,7 @@ CAD stands for Computer-Aided Design. The term CADD (for Computer-Aided Design a
 ## Convert from CAD formats
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert your CAD document into another file format.  
-For example, a DWG to PDF conversion code snippet will look like this:
+For example, a DWG to PDF conversion code snippet looks like this:
 
 ```java
 import com.groupdocs.conversion.Converter;
@@ -53,7 +53,7 @@ PdfConvertOptions options = new CadConvertOptions();
 converter.convert("converted.pdf", options);
 ```
 
-Put it simply - you just load a CAD file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you just load a CAD file into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert) for more conversion options and customizations.
@@ -62,7 +62,7 @@ Refer to the [API reference](https://reference.groupdocs.com/conversion/java/gro
 ## Convert to another CAD format
 
 On the other hand, converting your CAD files to another CAD format is also quite simple and natural.
-The following code sample demonstrates how to convert a DWG document to STL in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
+The following code snippet shows how to convert a DWG document to STL in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
 
 ```java
 import com.groupdocs.conversion.Converter;

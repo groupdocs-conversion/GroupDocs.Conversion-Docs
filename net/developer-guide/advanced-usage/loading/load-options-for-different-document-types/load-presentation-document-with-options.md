@@ -23,7 +23,7 @@ toc: True
 
 ## Hide comments
 
-Like many other Microsoft Office applications PowerPoint provides the "Comments" feature to simplify the presentation review. By default, the Comments pane will be present in a converted document. In case you want to hide comments set the [HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/hidecomments) property to *true* as shown in a code sample below:
+Like many other Microsoft Office applications PowerPoint provides the "Comments" feature to simplify the presentation review. By default, the Comments pane will be present in a converted document. If you want to hide comments, set the [HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/hidecomments) property to *true* as shown in a code snippet below:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PresentationLoadOptions
@@ -41,7 +41,7 @@ using (Converter converter = new Converter("sample.pptx", getLoadOptions))
 
 Original PowerPoint presentations may use some specific and non-standard fonts for text formatting that are not available at the time of conversion. GroupDocs.Conversion for .NET allows you to provide substitutions for missing fonts by setting the [FontSubstitues](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/fontsubstitutes) collection with original/substitute font pairs.
 
-The following code sample shows how to convert a PPTX presentation and specify substitutions for missing fonts:
+The following code snippet shows how to convert a PPTX presentation and specify substitutions for missing fonts:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PresentationLoadOptions
@@ -64,7 +64,7 @@ using (Converter converter = new Converter("sample.pptx", getLoadOptions))
 
 Just like you can show or hide slides in a Microsoft PowerPoint presentation manually, GroupDocs.Conversion for .NET allows displaying of the hidden slides in the converted document programmatically (by default all hidden slides are excluded from the converted document). You just have to set the [ShowHiddenSlides](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/showhiddenslides) property to *true*.
 
-The following code sample shows how to convert a PPTX presentation including the hidden slides:
+The following code snippet shows how to convert a PPTX presentation including the hidden slides:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PresentationLoadOptions

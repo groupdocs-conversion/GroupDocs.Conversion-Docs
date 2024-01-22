@@ -20,7 +20,7 @@ Here are the key reasons to use the new updated API provided by GroupDocs.Conver
 
 ## How to migrate?
 
-Here is a brief comparison of how to convert a document into PDF format using old and new APIs.  
+Here is a brief comparison of how to convert a document into PDF format using old API and new one.  
 
 **Old coding style**
 

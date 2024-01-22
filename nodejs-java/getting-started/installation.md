@@ -12,7 +12,7 @@ toc: True
 
 ## Install using NPM
 
-All Java packages are hosted at [NPM](https://www.npmjs.com/package/@groupdocs/groupdocs.conversion). You can easily reference GroupDocs.Conversion for Node.js via Java API directly in your Node.js project by installing it with the following command.
+All Java packages are hosted at [NPM](https://www.npmjs.com/package/@groupdocs/groupdocs.conversion). You can easily reference the GroupDocs.Conversion for Node.js via Java API directly in your Node.js project by installing it with the following command:
 
 ```batch
 npm install @groupdocs/groupdocs.conversion

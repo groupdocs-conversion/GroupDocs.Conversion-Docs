@@ -36,7 +36,7 @@ Email file formats are used by email applications to store their various data in
 ## Convert from email formats
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your document into another file format.  
-For example, MSG to PDF conversion code snippet will look like this:
+For example, MSG to PDF conversion code snippet looks like this:
 
 ```csharp
 // Load the source MSG file
@@ -49,4 +49,4 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.msg"))
 }
 ```
 
-Put it simply - you just load an MSG file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**. 
+Put it simply - you just load an MSG file into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest. 

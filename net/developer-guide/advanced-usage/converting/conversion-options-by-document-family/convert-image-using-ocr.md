@@ -10,9 +10,9 @@ hideChildren: False
 ---
 ### Convert Image using OCR
 
-GroupDocs.Conversion for .NET provide an extension point which allows convert images using OCR processing. In order to use this you have to implement **[IOcrConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector)** interface and provide instance of it in **[ImageLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/imageloadoptions)**
+GroupDocs.Conversion for .NET provide an extension point which allows convert images using OCR processing. To use this you have to implement **[IOcrConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector)** interface and provide instance of it in **[ImageLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/imageloadoptions)**.
 
-The following code sample shows how to convert image using OCR processing and extract text from image and convert it to PDF:
+The following code snippet shows how to convert image using OCR processing and extract text from image and convert it to PDF:
 
 First create a class that implements [IOcrConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector)**
 ```csharp
@@ -113,7 +113,7 @@ internal class OcrConnector : IOcrConnector
 }
 ```
 
-Than provide **OcrConnector** instance in **[ImageLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/imageloadoptions)**
+Then provide **OcrConnector** instance in **[ImageLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/imageloadoptions)**:
 
 ```csharp
 var imageLoadOptions = new ImageLoadOptions();

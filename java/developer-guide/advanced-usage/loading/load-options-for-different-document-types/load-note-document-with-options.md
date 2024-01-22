@@ -10,13 +10,13 @@ hideChildren: False
 ---
 GroupDocs.Conversion provides the [NoteLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions) class to give you better control over how the source Note document will be processed. The following options could be set:
 
-*   **[setDefaultFont](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions#setDefaultFont(java.lang.String))** -  default font for Note document. The specified font will be used if a font is missing
-*   **[setFontSubstitutes](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions#setFontSubstitutes(java.util.List))** -  substitutes specific fonts from the Note document
-*   **[setPassword](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions#setPassword(java.lang.String))** - a password to unlock the protected document
+*   **[setDefaultFont](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions#setDefaultFont(java.lang.String))** specifies a default font for Note document. The specified font will be used if a font is missing.
+*   **[setFontSubstitutes](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions#setFontSubstitutes(java.util.List))** specifies substitutes specific fonts from the Note document.
+*   **[setPassword](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions#setPassword(java.lang.String))** specifies a password to unlock the protected document.
 
 ### Specify font substitution
 
-The following code sample shows how to convert a Note document and specify font substitution for missing fonts:
+The following code snippet shows how to convert a Note document and specify font substitution for missing fonts:
 
 ```java
 import com.groupdocs.conversion.Converter;

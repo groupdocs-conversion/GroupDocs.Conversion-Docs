@@ -11,9 +11,9 @@ toc: True
 ---
 GroupDocs.Conversion provides a standard way of obtaining information about the source document. It works regardless of how the document was loaded: from a disk, a stream, or cloud storage.
 
-To get document information use the [`Converter.GetDocumentInfo()`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getdocumentinfo/) method. It returns a [`DocumentInfo`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/documentinfo/) object with common information common for every supported document - format, creation date, size, and page count. 
+To get document information, use the [Converter.GetDocumentInfo()](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getdocumentinfo/) method. It returns a [DocumentInfo](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/documentinfo/) object with common information common for every supported document - format, creation date, size, and page count. 
 
-To iterate through the document information properties, you can use the `PropertyNames` and `Item` enumerators. The following code snippet demonstrates how to list all the available document information properties:
+To iterate through the document information properties, use the `PropertyNames` and `Item` enumerators. The following code snippet shows how to list all the available document information properties:
 
 ```csharp
 using (Converter converter = new Converter("sample.txt"))
@@ -28,14 +28,14 @@ using (Converter converter = new Converter("sample.txt"))
 ```
 Depending on the format type, the resulting `DocumentInfo` object also contains some additional information:
 
-* [`PDF documents`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/pdfdocumentinfo/) - title, table of contents, author, whether it is encrypted and so on;
-* [`Wordprocessing documents`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/wordprocessingdocumentinfo/) - title, table of contents, author, lines count, words count, whether it is password protected and so on;
-* [`Project management documents`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/projectmanagementdocumentinfo/) - project start and end dates, number of tasks;
-* [`Images`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/imagedocumentinfo/) - width, height, bits per pixel;
-* [`Presentations`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/presentationdocumentinfo/) - title, author, whether it is password protected;
-* [`Spreadsheets`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/spreadsheetdocumentinfo/) - title, author, worksheets count, whether it is password protected;
-* [`CAD drawings`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/caddocumentinfo/) - width, height, collections of layouts and layers;
-* [`Emails`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/emaildocumentinfo/) - number and names of attachments, whether it is encrypted, whether it is signed, whether its body is in HTML format;
+* [PDF documents](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/pdfdocumentinfo/) - title, table of contents, author, whether it is encrypted and so on;
+* [Wordprocessing documents](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/wordprocessingdocumentinfo/) - title, table of contents, author, lines count, words count, whether it is password protected and so on;
+* [Project management documents](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/projectmanagementdocumentinfo/) - project start and end dates, number of tasks;
+* [Images](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/imagedocumentinfo/) - width, height, bits per pixel;
+* [Presentations](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/presentationdocumentinfo/) - title, author, whether it is password protected;
+* [Spreadsheets](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/spreadsheetdocumentinfo/) - title, author, worksheets count, whether it is password protected;
+* [CAD drawings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/caddocumentinfo/) - width, height, collections of layouts and layers;
+* [Emails](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/emaildocumentinfo/) - number and names of attachments, whether it is encrypted, whether it is signed, whether its body is in HTML format;
 
 See the [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/) for a complete list of format-specific document metadata.
 

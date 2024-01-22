@@ -39,7 +39,7 @@ Page layout languages are used in desktop and electronic publishing. The main fo
 ## Convert from page layout formats
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert a page layout file format into another file format.
-For example, TEX to PDF conversion code snippet will look like this:
+For example, TEX to PDF conversion code snippet looks like this:
 
 ```java
 import com.groupdocs.conversion.Converter;
@@ -53,7 +53,7 @@ PdfConvertOptions options = new PdfConvertOptions();
 converter.convert("converted.pdf", options);
 ```
 
-Put it simply - you just load a TEX file into `Converter`, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you just load a TEX file into `Converter`, select the desired output format and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/package-frame) for more conversion options and customizations.
@@ -62,7 +62,7 @@ Refer to the [API reference](https://reference.groupdocs.com/conversion/java/com
 ### Convert to page layout formats
 
 On the other hand, converting your files to page layout format is also quite simple and natural.
-The following code sample demonstrates how to convert a DOCX document to TEX format in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
+The following code snippet shows how to convert a DOCX document to TEX format in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
 
 ```java
 import com.groupdocs.conversion.Converter;

@@ -8,4 +8,4 @@ keywords: Load document from local path, Load document from stream, PDF, Word, E
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-GroupDocs.Conversion allows you to load password-protected documents and load documents from different sources. For more details please refer to the following guides:
+GroupDocs.Conversion allows you to load password-protected documents and load documents from different sources. For details please refer to the following guides:

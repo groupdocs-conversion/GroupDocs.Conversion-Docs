@@ -10,15 +10,15 @@ hideChildren: False
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) provides the feature to convert N consecutive pages. 
 
-Here are the steps to follow:
+To convert consecutive pages, follow these steps:
 
-*   Create new instance of [Converter](#) class and pass source document path as a constructor parameter
-*   Instantiate the proper [ConvertOptions](#) class e.g. (**[PdfConvertOptions](#)**, **[WordProcessingConvertOptions](#)**, **[SpreadsheetConvertOptions](#)** etc.)
-*   Set [setPageNumber](#) property of the [ConvertOptions](#) instance with the starting page number
-*   Set [setPagesCount](#) property of the [ConvertOptions](#) instance with the number of pages to be converted      
-*   Call [convert](#) method of [Converter](#) class instance and pass filename for the converted document and the instance of [ConvertOptions](#) from the previous steps
+1.   Create an instance of [Converter](#) class and pass source document path as a constructor parameter
+2.   Instantiate the appropriate [ConvertOptions](#) class e.g. (**[PdfConvertOptions](#)**, **[WordProcessingConvertOptions](#)**, **[SpreadsheetConvertOptions](#)** etc.).
+3.   Set the [setPageNumber](#) property of the [ConvertOptions](#) instance to the starting page number.
+4.   Set the [setPagesCount](#) property of the [ConvertOptions](#) instance to the number of pages to be converted.     
+5.   Call the [convert](#) method of [Converter](#) class instance and pass the filename of the converted document and the instance of [ConvertOptions](#) from the previous steps.
 
-Following code snippet shows how to convert 3 consecutive pages starting from second page of the source document:
+The following code snippet shows how to convert 3 consecutive pages starting from second page of the source document:
 
 ```js
 const converter = new groupdocs.conversion.Converter('sample.docx')

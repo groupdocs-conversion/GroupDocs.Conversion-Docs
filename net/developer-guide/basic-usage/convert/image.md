@@ -49,9 +49,9 @@ An image file format is a standard method for organizing and storing images on d
 
 Converting an image into a PDF file is a common use case for example when you need to create a PDF document from a scanned paper. [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) allows resolving this task easily and intuitively just using a few lines of C# code as described below:
 
-- Create an instance of the `Converter` class and pass the source JPG file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements.
-- Create an instance of the `PdfConvertOptions` class.
-- Call the `Convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
+1. Create an instance of the `Converter` class and pass the source JPG file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements.
+2. Create an instance of the `PdfConvertOptions` class.
+3. Call the `Convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
 ```csharp
 // Load the source JPG file
@@ -68,7 +68,7 @@ NOTE: The code example above is the same for other image formats into PDF conver
 
 ## Convert image to Excel
 
-If you’d like to get data from your previous tax returns into Excel and you only have printed copies just take a picture of each one and convert these images into XLS/XLSX workbook.
+If you need to get data from your previous tax returns into Excel and you only have printed copies just take a picture of each one and convert these images into XLS/XLSX workbook.
 
 ### Convert JPG to XLS
 
@@ -96,7 +96,7 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.png"))
 
 ## Convert image to PowerPoint presentation
 
-In case it’s needed to make a PowerPoint presentation from images of **PNG**, **JPG/JPEG**, **TIF/TIFF**, **GIF**, or other formats, a possible solution is to convert them programmatically.  
+If you need to make a PowerPoint presentation from images of **PNG**, **JPG/JPEG**, **TIF/TIFF**, **GIF**, or other formats, a possible solution is to convert them programmatically.  
 Let’s review several code examples in C# language below and see how to transform an image into a PPT/PPTX presentation.
 
 ### Convert JPG to PPT

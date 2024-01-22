@@ -15,8 +15,8 @@ structuredData:
 
 The common conversion workflow always includes the following steps:
 
-*   Create a new instance of the [**Converter**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) class and pass the source file path as a constructor parameter
-*   Instantiate the needed [**ConvertOptions**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/ConvertOptions) object according to your requirements.
-*   Call the [**convert**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.io.OutputStream,%20com.groupdocs.conversion.options.convert.ConvertOptions)) method of the [**Converter**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) class instance and pass the name of the converted document and the instance of the conversion options from the previous step
+1.   Create an instance of the [**Converter**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) class and pass the source file path as a constructor parameter
+2.   Instantiate the needed [**ConvertOptions**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/ConvertOptions) object according to your requirements.
+3.   Call the [**convert**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.io.OutputStream,%20com.groupdocs.conversion.options.convert.ConvertOptions)) method of the [**Converter**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) class instance and pass the name of the converted document and the instance of the conversion options from the previous step
 
 These documentation articles explain how to convert files to the most popular formats:

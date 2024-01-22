@@ -10,11 +10,11 @@ hideChildren: False
 ---
 GroupDocs.Conversion provides [WebConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions) to give you control over conversion result. The following options could be set:
 
-*   [FixedLayout](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/fixedlayout) - controls the html generation. If it's set to *true*, fixed layout will be used e.g. absolutely positioned html element
-*   [Zoom](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/zoom) - specifies the zoom level in percentage. Default is 100  
-*   [UsePdf](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/usepdf) - in some cases, for better rendering and elements positioning the source document should be converted to PDF first. If this property is set to *true*, the input firstly is converted to PDF and after that to desired format
+*   [FixedLayout](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/fixedlayout) controls the HTML generation. If it's set to *true*, fixed layout will be used e.g. absolutely positioned HTML element.
+*   [Zoom](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/zoom) specifies the zoom level in percentage. The default value is 100.  
+*   [UsePdf](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/usepdf). Sometimes, for better rendering and elements positioning the source document should be converted to PDF first. If this property is set to *true*, the input firstly is converted to PDF and after that to desired format.
 
-Following code snippet shows how to convert to HTML with advanced options
+The following code snippet shows how to convert to HTML with advanced options
 
 {{< alert style="info" >}}From v22.12 and greater{{< /alert >}}
 ```csharp
@@ -47,7 +47,7 @@ using (Converter converter = new Converter("sample.docx"))
 
 ### Control page borders visibility
 
-The following code sample shows how to convert to Html and control page borders visibility
+The following code snippet shows how to convert to HTML and control page borders visibility
 
 ```csharp
 var source = "sample.docx";

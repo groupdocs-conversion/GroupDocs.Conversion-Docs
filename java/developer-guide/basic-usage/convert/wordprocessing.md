@@ -39,7 +39,7 @@ This section explains how to convert word-processing documents with the help of 
 
 ## Convert Word document to PDF
 
-While converting a file from Microsoft Office Word to PDF format GroupDocs.Conversion for Java performs multiple calculations under the hood to preserve the document's original appearance and to correctly reproduce the layout of the converted PDF document like it was designed for the initial DOC or DOCX document in Microsoft Word. All this is necessary because Word documents are in flow-layout format and their appearance may differ depending on the device and platform that are used for viewing them. On the contrary PDF format is fixed-layout and has the same appearance on different devices.  
+While converting a file from Microsoft Office Word to PDF format, GroupDocs.Conversion for Java performs multiple calculations under the hood to preserve the document's original appearance and to correctly reproduce the layout of the converted PDF document like it was designed for the initial DOC or DOCX document in Microsoft Word. All this is necessary because Word documents are in flow-layout format and their appearance may differ depending on the device and platform that are used for viewing them. On the contrary, PDF format is fixed-layout and has the same appearance on different devices.  
   
 The following section explains how to convert DOC or DOCX to PDF programmatically without Microsoft Office and with the help of GroupDocs.Conversion for Java.  
 

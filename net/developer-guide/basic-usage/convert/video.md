@@ -30,7 +30,7 @@ structuredData:
 
 ## About video file formats
 
-Everyone is familiar with videos that we daily watch on media devices such as Televisions, Cinema screens, and social media channels such as Facebook, Twitter, YouTube and many others. But have you ever wondered how these videos are stored and the formats in which these can be uploaded for viewing? What is the best file format for your video to be hosted on different storage media? Video file formats comprise many different video types for storing videos and to be used for various purposes. Popular video file formats that you may have come across include AVI, MOV, WMV, M4V, and MP4.
+Everyone is familiar with videos that we daily watch on media devices such as Televisions, Cinema screens, and social media channels such as Facebook, Twitter, YouTube, and many others. But have you ever wondered how these videos are stored and the formats in which these can be uploaded for viewing? What is the best file format for your video to be hosted on different storage media? Video file formats comprise many different video types for storing videos and to be used for various purposes. Popular video file formats that you may have come across include AVI, MOV, WMV, M4V, and MP4.
 
 ## Supported video file conversions
 
@@ -131,7 +131,7 @@ public class VideoConnector : IVideoConnector
 }
 ```
 
-Once the `IVideoConnector` interface is implemented, the AVI to MP4 conversion code snippet will look like this:
+Once the `IVideoConnector` interface is implemented, the AVI to MP4 conversion code snippet looks like this:
 
 ```csharp
 // Load the source AVI file
@@ -148,14 +148,14 @@ using (Converter converter = new Converter("sample.avi", () => loadOptions))
 }
 ```
 
-Put it simply - you install the video processing library, implement the `IVideoConnector` interface which links the `GroupDocs.Conversion` with video processing library, load a video file into the `Converter` class providing the `IVideoConnector` instance, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you install the video processing library, implement the `IVideoConnector` interface which links the `GroupDocs.Conversion` with video processing library, load a video file into the `Converter` class providing the `IVideoConnector` instance, select the desired output format and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
 {{< /alert >}}
 
 ## Extract audio track
-Extracting an audio track from a video is similar to converting video, however, you need to set the [`ExtractAudioOnly`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property to `true` and specify the desired output format in the [`AudioFormat`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property:
+Extracting an audio track from a video is similar to converting video, however, you need to set the [ExtractAudioOnly](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property to `true` and specify the desired output format in the [AudioFormat](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property:
 
 ```csharp
 // Load the source AVI file

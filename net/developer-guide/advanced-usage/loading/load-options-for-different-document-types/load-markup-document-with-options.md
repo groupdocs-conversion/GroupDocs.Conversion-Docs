@@ -21,7 +21,7 @@ GroupDocs.Conversion provides [WebLoadOptions](https://reference.groupdocs.com/
 
 ## Enable page numbering when converting to Word-processing formats
 
-The following code sample shows how to convert a markup document and insert page numbering:
+The following code snippet shows how to convert a markup document and insert page numbering:
 
 
 {{< alert style="info" >}}From v22.12 and greater{{< /alert >}}
@@ -59,4 +59,4 @@ using (var converter = new Converter(source, () => loadOptions))
 
 External resources in the context of web documents refer to any files or data that a web page or website fetches from sources outside of its own domain or server. These external resources are essential for creating dynamic and feature-rich web experiences. Common external resources include images, audio, video, fonts, CSS, scripts, frameworks, and so on. 
 
-In some cases, you may want to skip loading all or just some of the external resources during the conversion. For example, when these resources become unavailable. Read the [Skip loading of external resources]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md" >}}) article to learn how to do this with **GroupDocs.Conversion for .NET** 
+In some cases, you may want to skip loading all or just some of the external resources during the conversion. For example, when these resources become unavailable. Read the [Skip loading of external resources]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md" >}}) article to learn how to do this with **GroupDocs.Conversion for .NET**.

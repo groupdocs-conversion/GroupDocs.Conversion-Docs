@@ -37,7 +37,7 @@ Popular finance file extensions and their file formats include XBRL, IXBRL and O
 ## Convert from finance formats
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your finance document into another file format.  
-For example, the XBRL to XLSX conversion code snippet will look like this:
+For example, the XBRL to XLSX conversion code snippet looks like this:
 
 ```csharp
 // Load the source XBRL file
@@ -50,12 +50,12 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.xbrl"))
 }
 ```
 
-Put it simply - you just load your finance document into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**. 
+Put it simply - you just load your finance document into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest. 
 
 ## Convert to another finance format
 
 On the other hand, converting your files to another finance format is also quite simple and natural.
-The following code sample demonstrates how to convert an XBRL document to an IXBRL format in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
+The following code snippet shows how to convert an XBRL document to an IXBRL format in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
 
 ```csharp
 // Load the source XBRL file

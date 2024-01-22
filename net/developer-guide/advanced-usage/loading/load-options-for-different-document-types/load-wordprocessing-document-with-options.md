@@ -51,7 +51,7 @@ using (Converter converter = new Converter("sample.docx", getLoadOptions))
 
 Track Changes is another feature of Microsoft Word that provides a handy way to collaborate during document proofreading and review - it's like you're marking errors with a pen and making some notes in the margins. All changes made by coworkers are highlighted and may be rejected or accepted and become permanent. By default, the Track Changes panel will also be displayed when converting a DOCX document to another format, however, there is an option to hide it completely using GroupDocs.Conversion for .NET API. 
 
-The following code sample shows how to convert a DOCX document to PDF and hide tracked changes pane:
+The following code snippet shows how to convert a DOCX document to PDF and hide tracked changes pane:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
@@ -71,7 +71,7 @@ Microsoft Word document content is often formatted with different fonts like Ari
 
 Of course GroupDocs.Conversion for .NET will try to select the most appropriate font substitution from available font sources and fonts embedded in the original document, but you can also specify font substitution explicitly. For doing this it is just needed to call the [Create](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/fontsubstitute/create) method of [FontSubstitute](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/fontsubstitute) class and provide names for original and substitute fonts.
 
-The following code sample shows how to convert a DOCX document with font substitution for missing fonts:
+The following code snippet shows how to convert a DOCX document with font substitution for missing fonts:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
@@ -94,4 +94,4 @@ using (Converter converter = new Converter("sample.docx", getLoadOptions))
 
 In the context of word-processing documents, external resources refer to any elements, materials, or data that are not directly embedded within the document itself but are referenced or linked to enhance the document's content or functionality. These external resources can take various forms and are often used to supplement the text and improve the overall quality and richness of the document. Common external resources include images and graphics, tables and spreadsheets, audio and video, fonts, styles, data sources, mathematical equations and so on. 
 
-In some cases, you may want to skip loading all or just some of the external resources during the conversion. For example, when these resources become unavailable. Read the [Skip loading of external resources]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md" >}}) article to learn how to do this with **GroupDocs.Conversion for .NET** 
+In some cases, you may want to skip loading all or just some of the external resources during the conversion. For example, when these resources become unavailable. Read the [Skip loading of external resources]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md" >}}) article to learn how to do this with **GroupDocs.Conversion for .NET**.

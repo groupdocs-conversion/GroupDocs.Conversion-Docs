@@ -10,13 +10,13 @@ hideChildren: False
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/nodejs-java) supports the conversion of documents that are protected with a password.
 
-Here are the steps to follow to load and convert a password-protected document:
+To load and convert a password-protected document, follow these steps:
 
-*   Create a new instance of the [Converter](#) class and pass the source document path and the load options delegate as constructor parameters.
-*   Instantiate the proper [ConvertOptions](#) class e.g. (**[PdfConvertOptions](#)**, **[WordProcessingConvertOptions](#)**, **[SpreadsheetConvertOptions](#)** etc.)
-*   Call the [convert](#) method of the [Converter](#) class instance and pass the filename for the converted document and the instance of [ConvertOptions](#) from the previous step.
+1.   Create an instance of the [Converter](#) class and pass the source document path and the load options delegate as constructor parameters.
+2.   Instantiate the appropriate [ConvertOptions](#) class e.g. (**[PdfConvertOptions](#)**, **[WordProcessingConvertOptions](#)**, **[SpreadsheetConvertOptions](#)** etc.)
+3.   Call the [convert](#) method of the [Converter](#) class instance and pass the filename for the converted document and the instance of [ConvertOptions](#) from the previous step.
 
-The following code sample shows how to convert password-protected document:
+The following code snippet shows how to convert password-protected document:
 
 ```js
 const loadOptions = new groupdocs.conversion.WordProcessingLoadOptions()

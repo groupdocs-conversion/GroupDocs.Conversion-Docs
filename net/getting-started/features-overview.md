@@ -13,7 +13,7 @@ toc: True
 ## File conversion
 This article describes the salient features of file conversion API using C#.
 
-GroupDocs.Conversion main feature is the ability to convert any document from a wide list of supported source document formats into any supported target format (check the full list of [supported formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}})). All these conversions are possible without any additional software installed (like Microsoft Office, Apache Open Office, Adobe Acrobat Reader and others).
+GroupDocs.Conversion main feature is the ability to convert any document from any of supported source document formats into any supported target format (check the list of [supported formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}})). All these conversions are possible without any additional software installed (like Microsoft Office, Apache Open Office, Adobe Acrobat Reader and others).
 GroupDocs.Conversion provides a flexible set of settings to customize the conversion process to fulfill your needs:
 
 ### Convert specific document page(s)
@@ -37,7 +37,7 @@ There are lots of modifications that are possible during the file conversion pro
 
 ### Obtain all supported conversion formats list
 
-You can programmatically obtain the [complete list of possible conversions]({{< ref "conversion/net/developer-guide/basic-usage/get-possible-conversions.md" >}}) that are supported by GroupDocs.Conversion for .NET library. Also, it's possible to get [allowed conversions]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/get-default-convert-options-for-target-format.md" >}}) for the specific file format.
+You can obtain the [complete list of possible conversions]({{< ref "conversion/net/developer-guide/basic-usage/get-possible-conversions.md" >}}) that are supported by GroupDocs.Conversion for .NET library. Also, it is possible to get [allowed conversions]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/get-default-convert-options-for-target-format.md" >}}) for the specific file format.
 
 ### Fonts replacement
 
@@ -62,5 +62,5 @@ With GroupDocs.Conversion you are not limited to [local files]({{< ref "conversi
 
 ## Caching results
 
-GroupDocs.Conversion supports [conversion result caching]({{< ref "conversion/net/developer-guide/advanced-usage/caching/" >}}) to local disk by default. However, any type of cache storage can be supported by implementing appropriate interfaces – Amazon S3, Dropbox, Google Drive, Windows Azure, Reddis or any other.
+GroupDocs.Conversion supports [conversion result caching]({{< ref "conversion/net/developer-guide/advanced-usage/caching/" >}}) to local disk by default. However, any type of cache storage can be supported by implementing appropriate interfaces – Amazon S3, Dropbox, Google Drive, Windows Azure, Redis or any other.
 

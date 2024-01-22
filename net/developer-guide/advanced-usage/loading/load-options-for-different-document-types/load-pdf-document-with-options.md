@@ -25,7 +25,7 @@ toc: True
 
 ### Flatten all fields
 
-The following code sample shows how to convert a PDF document and flatten all fields:
+The following code snippet shows how to convert a PDF document and flatten all fields:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
@@ -41,7 +41,7 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 
 ### Hide annotations
 
-The following code sample shows how to convert a PDF document and hide annotations:
+The following code snippet shows how to convert a PDF document and hide annotations:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
@@ -57,7 +57,7 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 
 ### Remove embedded files
 
-The following code sample shows how to convert a PDF document and remove embedded files:
+The following code snippet shows how to convert a PDF document and remove embedded files:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
@@ -89,7 +89,7 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 
 ### Specify font substitution
 
-The following code sample shows how to convert a PDF document and specify font substitution for missing fonts:
+The following code snippet shows how to convert a PDF document and specify font substitution for missing fonts:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions

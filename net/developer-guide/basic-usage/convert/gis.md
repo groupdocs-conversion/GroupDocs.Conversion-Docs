@@ -41,7 +41,7 @@ Common GIS file extensions and their file formats include GPX (GPS Exchange File
 ## Convert from GIS formats
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your GIS map file into another file format.  
-For example, GPX to PDF conversion code snippet will look like this:
+For example, GPX to PDF conversion code snippet looks like this:
 
 ```csharp
 // Load the source GPX file
@@ -54,7 +54,7 @@ using (Converter converter = new Converter("sample.gpx"))
 }
 ```
 
-Put it simply - you just load a GIS file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you just load a GIS file into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
@@ -63,7 +63,7 @@ Refer to the [API reference](https://reference.groupdocs.com/conversion/net/grou
 ## Convert to another GIS format
 
 On the other hand, converting your GIS files to another GIS format is also quite simple and natural.
-The following code sample demonstrates how to convert a GPX file to KML in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
+The following code snippet shows how to convert a GPX file to KML in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
 
 ```csharp
 // Load the source GPX file

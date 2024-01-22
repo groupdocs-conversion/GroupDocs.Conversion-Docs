@@ -28,7 +28,7 @@ structuredData:
           text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
-Microsoft Excel with its popular XLS and XLSX formats is a recognized authority in the area of working with tabular data, reports, accounting data and numbers. However, there are often situations when installing Excel software for working with spreadsheets is not possible for various reasons. This is exactly the situation when converting the source workbook into another format can be a solution. 
+Microsoft Excel with its popular XLS and XLSX formats is a recognized authority in the area of working with tabular data, reports, accounting data, and numbers. However, there are often situations when installing Excel software for working with spreadsheets is not possible for various reasons. This is exactly the situation when converting the source workbook into another format can be a solution. 
 
 Even though direct converting tables to other formats can be a very complicated process, **GroupDocs.Conversion for .NET** successfully solves this class of tasks - from the developer's point of view, it is needed to load the source workbook and save the converted document in some other format. That’s it!
 
@@ -38,7 +38,7 @@ Even though direct converting tables to other formats can be a very complicated 
 
 ## Convert Excel workbook to PDF
 
-Nowadays PDF format has become one of the common ways to share documents between people and organizations of any kind. In software development, it is also quite a popular use case to convert Excel workbooks into PDF format. GroupDocs.Conversion keeps great display accuracy when converting XLSX/XLS workbooks to PDF and no additional software is required.  
+Nowadays, PDF format has become one of the common ways to share documents between people and organizations of any kind. In software development, it is also quite a popular use case to convert Excel workbooks into PDF format. GroupDocs.Conversion keeps great display accuracy when converting XLSX/XLS workbooks to PDF, and no additional software is required.  
 
 Use the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class to save an Excel workbook to PDF using its [Convert](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/#convert_16) method. There is a complete list of steps that should be followed for XLSX to PDF conversion:  
 

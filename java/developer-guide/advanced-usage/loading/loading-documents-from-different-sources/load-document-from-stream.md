@@ -10,10 +10,10 @@ hideChildren: False
 ---
 There might be a case when your file is not physically located on the disk. Instead, you have the file in the form of a stream. In this case, to avoid the overhead of saving the stream as a file on disk, [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) enables you to convert the file streams directly.
 
-To load a file from a stream:
+To load a file from a stream, follow these steps:
 
-*   Specify the method to obtain the file stream.
-*   Pass the method's name to the [`Converter`](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class constructor.
+1.  Specify the method to obtain the file stream.
+2.  Pass the method's name to the [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class constructor.
 
 The following code snippet serves this purpose:
 
@@ -40,4 +40,4 @@ try{
 }
 ```
 
-The snippet above uses the [`FileInputStream`](https://docs.oracle.com/javase/8/docs/api/java/io/FileInputStream.html) class instance. Similarly, you can use any other type of stream. Just make sure that the source stream contains any of the [supported file formats]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}}).
+The snippet above uses the [FileInputStream](https://docs.oracle.com/javase/8/docs/api/java/io/FileInputStream.html) class instance. Similarly, you can use any other type of stream. Just make sure that the source stream contains any of the [supported file formats]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}}).

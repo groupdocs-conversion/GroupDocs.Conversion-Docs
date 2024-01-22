@@ -10,15 +10,15 @@ hideChildren: False
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) also provides the feature to convert selected page number. 
 
-Here are the steps to follow: 
+To convert specific pages, follow these steps: 
 
-*   Create new instance of [Converter](#) class and pass source document path as a constructor parameter
-*   Instantiate the proper [ConvertOptions](#) class e.g. (**[PdfConvertOptions](#)**, **[WordProcessingConvertOptions](#)**, **[SpreadsheetConvertOptions](#)** etc.)
-*   Set [setPages](#) property of the [ConvertOptions](#) instance with list of desired page number to be converted
-*   Call [convert](#) method of [Converter](#) class instance and pass filename for the converted document and the instance of [ConvertOptions](#) from the previous steps
+1.   Create an instance of the [Converter](#) class and pass source document path as a constructor parameter.
+2.   Instantiate the appropriate [ConvertOptions](#) class e.g. (**[PdfConvertOptions](#)**, **[WordProcessingConvertOptions](#)**, **[SpreadsheetConvertOptions](#)** etc.)
+3.   Set the [setPages](#) property of the [ConvertOptions](#) instance to the list of desired page number to be converted.
+*   Call the [convert](#) method of the [Converter](#) class instance and pass the filename of the converted document and the instance of [ConvertOptions](#) from the previous steps.
 
   
-Following code snippet shows how to convert first and third pages from the source document:
+The following code snippet shows how to convert first and third pages from the source document:
 
 ```js
 const converter = new groupdocs.conversion.Converter('sample.docx')

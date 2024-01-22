@@ -14,14 +14,14 @@ These actions include:
 * Loading files from various sources, 
 * Configuring conversion settings,
 * Converting to the target format,
-* Saving converted files to various locations
+* Saving converted files to various locations,
 * and so on.
 
 Fluent syntax was introduced in version 22.1. and later reworked in version 23.6.
 
-The fluent syntax is implemented by the [`FluentConverter`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/fluentconverter/) class and several helper interfaces from the [`GroupDocs.Conversion.Fluent`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.fluent/) namespace. 
+The fluent syntax is implemented by the [FluentConverter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/fluentconverter/) class and several helper interfaces from the [GroupDocs.Conversion.Fluent](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.fluent/) namespace. 
 
-The following code samples demonstrate how to use the fluent syntax:
+The following code snippets show how to use the fluent syntax:
 
 ```csharp
 FluentConverter.Load("sample.docx")

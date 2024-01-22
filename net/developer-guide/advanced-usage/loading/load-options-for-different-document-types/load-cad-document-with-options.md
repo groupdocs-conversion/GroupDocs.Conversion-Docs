@@ -21,7 +21,7 @@ toc: True
 
 ### Specify layouts to be converted
 
-The following code sample shows how to convert a CAD document and convert only certain layouts:
+The following code snippet shows how to convert a CAD document and convert only certain layouts:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
@@ -37,7 +37,7 @@ using (Converter converter = new Converter("with_layers_and_layouts.dwg", getLoa
 
 ### Specify width and height
 
-The following code sample shows how to convert a CAD document and specify the width and height:
+The following code snippet shows how to convert a CAD document and specify the width and height:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
@@ -54,7 +54,7 @@ using (Converter converter = new Converter("with_layers_and_layouts.dwg", getLoa
 
 ### Specify background color
 
-The following code sample shows how to convert a CAD document and specify its desired background color:
+The following code snippet shows how to convert a CAD document and specify its desired background color:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
