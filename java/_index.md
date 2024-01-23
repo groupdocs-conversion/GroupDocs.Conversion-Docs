@@ -77,7 +77,7 @@ This native Java API ensures precise conversion of both documents and image file
 <ul>
 	<li><a href="https://products.groupdocs.app/conversion/total/">Convert files online</a></li>
 	<li><a href="https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Java">Download examples and demos from GitHub</a></li>
-	<li><a href='{{< ref "conversion/java/getting-started/how-to-run.md" >}}'>How to run examples</a></li>	
+	<li><a href='{{< ref "conversion/java/getting-started/how-to-run-examples.md" >}}'>How to run examples</a></li>	
 </ul>
 <p>VERSION HISTORY</p>
 <ul>

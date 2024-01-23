@@ -53,7 +53,7 @@ Node.js API to accurately convert documents & image file formats in any types of
 </ul>
 <p>LEARN</p>
 <ul>
-	<li><a href='{{< ref "conversion/nodejs-java/getting-started/how-to-run.md" >}}'>How to Run Examples</a></li>
+	<li><a href='{{< ref "conversion/nodejs-java/getting-started/how-to-run-examples.md" >}}'>How to Run Examples</a></li>
 </ul>
 <p>DOWNLOAD</p>
 <ul>
