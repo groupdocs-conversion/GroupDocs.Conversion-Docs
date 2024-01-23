@@ -12,11 +12,11 @@ toc: True
 
 ## Install using Maven
 
-All Java packages are hosted at [GroupDocs Artifact Repository](https://repository.groupdocs.com/). You can easily reference GroupDocs.Conversion for Java API directly in your Maven project using the following steps.
+All Java packages are hosted at [GroupDocs Artifact Repository](https://repository.groupdocs.com/). You can easily reference the GroupDocs.Conversion for Java API directly in your Maven project using the following steps.
 
 ### Add GroupDocs Artifact Repository
 
-First, you need to specify the repository configuration/location in your Maven `pom.xml` file as follows:
+First, specify the repository configuration/location in your Maven `pom.xml` file as follows:
 
 ```xml
 <repositories>
@@ -30,7 +30,7 @@ First, you need to specify the repository configuration/location in your Maven 
 
 ### Add GroupDocs.Conversion as a dependency
 
-Then define GroupDocs.Conversion for Java API dependency in your `pom.xml` file as follows:
+Then define the GroupDocs.Conversion for Java API dependency in your `pom.xml` file as follows:
 
 ```xml
 <dependencies>

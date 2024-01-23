@@ -35,7 +35,7 @@ toc: True
 
 ### Hide comments
 
-The following code sample shows how to convert a spreadsheet and hide comments:
+The following code snippet shows how to convert a spreadsheet and hide comments:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -52,7 +52,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 ### Show grid lines
 
-The following code sample shows how to convert a spreadsheet and show grid lines:
+The following code snippet shows how to convert a spreadsheet and show grid lines:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -69,7 +69,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 ### Skip empty rows and columns
 
-The following code sample shows how to convert a spreadsheet and skip empty rows and columns:
+The following code snippet shows how to convert a spreadsheet and skip empty rows and columns:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -86,7 +86,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 ### Specify font substitution
 
-The following code sample shows how to convert a spreadsheet and specify font substitution for missing fonts:
+The following code snippet shows how to convert a spreadsheet and specify font substitution for missing fonts:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -109,7 +109,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 You can specify the sheets to be converted either by names or by indexes. 
 
-The following code sample shows how to convert a spreadsheet and specify the desired sheets by their names:
+The following code snippet shows how to convert a spreadsheet and specify the desired sheets by their names:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -124,7 +124,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 }
 ```
 
-The following code sample shows how to convert a spreadsheet and specify the desired sheets by their zero-based indexes:
+The following code snippet shows how to convert a spreadsheet and specify the desired sheets by their zero-based indexes:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -141,7 +141,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 ### Specify range
 
-The following code sample shows how to convert a spreadsheet and specify the exact range of rows and columns to be converted:
+The following code snippet shows how to convert a spreadsheet and specify the exact range of rows and columns to be converted:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -158,7 +158,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 ### Include hidden sheets
 
-The following code sample shows how to convert a spreadsheet including the hidden sheets:
+The following code snippet shows how to convert a spreadsheet including the hidden sheets:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -174,7 +174,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 ```
 ### Automatically fit rows
 
-To fit the row content of all rows while converting from a spreadsheet, set the [AutoFitRows](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/autofitrows/) property to `true`.
+To fit the row content of all rows while converting from a spreadsheet, set the [AutoFitRows](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/autofitrows/) property to `true`:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions

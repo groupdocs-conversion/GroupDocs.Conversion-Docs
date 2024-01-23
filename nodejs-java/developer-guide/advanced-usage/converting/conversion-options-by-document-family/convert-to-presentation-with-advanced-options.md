@@ -10,11 +10,11 @@ hideChildren: False
 ---
 [**GroupDocs.Conversion**](#) provides [PresentationConvertOptions](#) to give you control over conversion result when convert to presentation format. Along with [common convert options](#) from base class [PresentationConvertOptions](#) has the following additional options:
 
-*   [setFormat](#) -  desired result document type. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm*
-*   [setPassword](#) -  if set, the converted document will be password protected with the specified password
-*   [setZoom](#) -  specifies the zoom level in percentage
+*   [setFormat](#) specifies desired result document type. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm*.
+*   [setPassword](#) whether the converted document will be password protected with the specified password.
+*   [setZoom](#) specifies the zoom level in percentage.
 
-Following code snippet shows how to convert to Presentation with advanced options
+The following code snippet shows how to convert to Presentation with advanced options:
 
 ```js
 const converter = new groupdocs.conversion.Converter("sample.docx");

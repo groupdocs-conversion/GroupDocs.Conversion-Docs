@@ -9,7 +9,7 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-The following code sample shows how to convert a JSON file to a spreadsheet. It means that you will use this JSON as the data source and convert it to a spreadsheet:
+The following code snippet shows how to convert a JSON file to a spreadsheet. It means that you use this JSON as the data source and convert it to a spreadsheet:
 
 ```csharp
 using (Converter converter = new Converter("data.json"))

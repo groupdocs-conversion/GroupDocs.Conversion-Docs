@@ -1,6 +1,6 @@
 ---
-id: how-to-run
-url: conversion/java/how-to-run
+id: how-to-run-examples
+url: conversion/java/how-to-run-examples
 title: How to run examples
 weight: 6
 description: "This article describes how to run Java file conversion API code examples."
@@ -9,7 +9,7 @@ productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
 ---
-The complete project [GroupDocs.Conversion Examples](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Java) with code examples and sample files is hosted on GitHub.
+The complete [GroupDocs.Conversion Examples](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Java) project with code examples and sample files is hosted on GitHub.
 
 ## Run examples using Maven
 

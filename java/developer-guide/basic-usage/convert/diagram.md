@@ -41,7 +41,7 @@ Visio file formats include file types such as VSDX, VSX, VTX, VDX, VSSX, VSTX, V
 ## Convert from diagram formats
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert your diagram document into another file format.  
-For example, VSDX to PDF conversion code snippet will look like this:
+For example, VSDX to PDF conversion code snippet looks like this:
 
 ```java
 import com.groupdocs.conversion.Converter;
@@ -55,7 +55,7 @@ PdfConvertOptions options = new PdfConvertOptions();
 converter.convert("converted.pdf", options);
 ```
 
-Put it simply - you just load a diagram file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you just load a diagram file into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert) for more conversion options and customizations.
@@ -64,7 +64,7 @@ Refer to the [API reference](https://reference.groupdocs.com/conversion/java/gro
 ## Convert to another diagram format
 
 On the other hand, converting your diagram files to another diagram format is also quite simple and natural.
-The following code sample demonstrates how to convert a VSDX format to a VDW format in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
+The following code snippet shows how to convert a VSDX format to a VDW format in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
 
 ```java
 import com.groupdocs.conversion.Converter;

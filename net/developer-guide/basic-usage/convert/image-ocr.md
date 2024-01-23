@@ -46,9 +46,9 @@ With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you c
 
 To allow OCR conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload the actual OCR process to the OCR processing library, but at the same time gives you the simplicity of conversion setup. The extension point is the [IOcrConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector) interface. 
 
-You first must decide which OCR processing library will use. Different libraries have different setup processes.
+First, you must decide which OCR processing library will use. Different libraries have different setup processes.
 
-In our example? we will use Aspose.OCR. Install the [Aspose.OCR](https://www.nuget.org/packages/Aspose.OCR) nuget package in your project. Then implement [IOcrConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector). The following snippet provides a sample implementation:
+In our example, we will use Aspose.OCR. Install the [Aspose.OCR](https://www.nuget.org/packages/Aspose.OCR) nuget package in your project. Then implement [IOcrConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.ocr/iocrconnector). The following code snippet provides a sample implementation:
 
 ```csharp
 public class OcrConnector : IOcrConnector
@@ -165,7 +165,7 @@ public class OcrConnector : IOcrConnector
 }
 ```
 
-Once the `IOcrConnector` interface is implemented, the JPG to DOCX conversion code snippet will look like this:
+Once the `IOcrConnector` interface is implemented, the JPG to DOCX conversion code snippet looks like this:
 
 ```csharp
 // Load the source JPG file
@@ -180,7 +180,7 @@ using (Converter converter = new Converter("sample.jpg", () => loadOptions))
 }
 ```
 
-Put it simply - you install an OCR processing library, implement the `IOcrConnector` interface, load an image file into the `Converter` class providing the `IOcrConnector` instance, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you install an OCR processing library, implement the `IOcrConnector` interface, load an image file into the `Converter` class providing the `IOcrConnector` instance, select the desired output format and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.

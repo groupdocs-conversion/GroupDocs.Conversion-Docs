@@ -15,8 +15,8 @@ structuredData:
 
 The common conversion workflow always includes the following steps:
 
-*   Create a new instance of the **Converter** class and pass the source file path as a constructor parameter
-*   Instantiate the needed **ConvertOptions** object according to your requirements.
-*   Call the **convert** method of the **Converter** class instance and pass the name of the converted document and the instance of the conversion options from the previous step
+1.   Create an instance of the **Converter** class and pass the source file path as a constructor parameter
+2.   Instantiate the needed **ConvertOptions** object according to your requirements.
+3.   Call the **convert** method of the **Converter** class instance and pass the name of the converted document and the instance of the conversion options from the previous step
 
 These documentation articles explain how to convert files to the most popular formats:

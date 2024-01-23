@@ -39,7 +39,7 @@ eBook files are electronic files that can be opened on digital devices known as 
 ## Convert from eBook formats
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert your eBook document into another file format.  
-For example, an eBook to PDF conversion code snippet will look like this:
+For example, an eBook to PDF conversion code snippet looks like this:
 
 ```java
 import com.groupdocs.conversion.Converter;
@@ -53,7 +53,7 @@ PdfConvertOptions options = new PdfConvertOptions();
 converter.convert("converted.pdf", options);
 ```
 
-Put it simply - you just load an eBook file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you just load an eBook file into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert) for more conversion options and customizations.
@@ -61,9 +61,9 @@ Refer to the [API reference](https://reference.groupdocs.com/conversion/java/gro
 
 ## Convert to eBook formats
 
-On the other hand, converting your files to eBook format is also quite simple and natural. Minimally, all you need is to specify the desired output format in the `setFormat` method of the [`EBookConvertOptions`](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert/ebookconvertoptions/) class instance.
+On the other hand, converting your files to eBook format is also quite simple and natural. Minimally, all you need is to specify the desired output format in the `setFormat` method of the [EBookConvertOptions](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert/ebookconvertoptions/) class instance.
 
-The following code sample demonstrates how to convert a PDF document to eBook format in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
+The following code snippet shows how to convert a PDF document to eBook format in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
 
 ```java
 import com.groupdocs.conversion.Converter;

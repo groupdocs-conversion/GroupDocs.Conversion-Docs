@@ -38,7 +38,7 @@ Popular database file extensions and their file formats include SQLite, DB, ACCD
 ## Convert from database formats
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your document into another file format.  
-For example, a LOG to PDF conversion code snippet will look like this:
+For example, a LOG to PDF conversion code snippet looks like this:
 
 ```csharp
 // Load the source LOG file
@@ -51,4 +51,4 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.log"))
 }
 ```
 
-Put it simply - you just load a LOG file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**. 
+Put it simply - you just load a LOG file into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest. 

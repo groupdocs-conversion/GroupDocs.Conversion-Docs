@@ -20,7 +20,7 @@ toc: True
 
 ### Control behavior of processing leading spaces
 
-The following code sample shows how to convert a TXT document and control the way the leading spaces are processed:
+The following code snippet shows how to convert a TXT document and control the way the leading spaces are processed:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new TxtLoadOptions
@@ -37,7 +37,7 @@ using (Converter converter = new Converter("sample.txt", getLoadOptions))
 
 ### Control behavior of processing trailing spaces
 
-The following code sample shows how to convert a TXT document and the way the trailing spaces are processed:
+The following code snippet shows how to convert a TXT document and the way the trailing spaces are processed:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new TxtLoadOptions
@@ -53,7 +53,7 @@ using (Converter converter = new Converter("sample.txt", getLoadOptions))
 
 ### Specify encoding
 
-The following code sample shows how to convert a TXT document and specify the encoding
+The following code snippet shows how to convert a TXT document and specify the encoding:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new TxtLoadOptions

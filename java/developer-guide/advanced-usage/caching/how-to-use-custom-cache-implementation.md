@@ -13,14 +13,14 @@ Let's see how to implement some custom cache implementation using this extension
 
 ## Using Redis cache
 
-The following steps should be followed.
+To implement the Redis cache, follow these steps:
 
-*   Create the *RedisCache* class which implements the [ICache](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.caching/ICache) interface.
-*   Instantiate the *RedisCache* class.
-*   Declare a delegate that will be used from the [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class as a factory of [ConverterSettings](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/ConverterSettings). In the body of this delegate, instantiate the [ConverterSettings](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/ConverterSettings) class and call the [setCache](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/ConverterSettings#setCache(com.groupdocs.conversion.caching.ICache)) method with the *RedisCache* class instance from the previous step.
-*   Instantiate the [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class with a path to the source document and the delegate from the previous step as the constructor's parameters.
-*   Create an instance of the [PdfConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions) class.
-*   Call the [Convert](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)) method of the [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) instance.
+1.   Create the *RedisCache* class which implements the [ICache](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.caching/ICache) interface.
+2,   Instantiate the *RedisCache* class.
+3.   Declare a delegate that will be used from the [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class as a factory of [ConverterSettings](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/ConverterSettings). In the body of this delegate, instantiate the [ConverterSettings](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/ConverterSettings) class and call the [setCache](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/ConverterSettings#setCache(com.groupdocs.conversion.caching.ICache)) method with the *RedisCache* class instance from the previous step.
+4.   Instantiate the [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class with a path to the source document and the delegate from the previous step as the constructor's parameters.
+5.   Create an instance of the [PdfConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions) class.
+6.   Call the [Convert](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)) method of the [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) instance.
 
 Below is the code that demonstrates how to use custom caching for GroupDocs.Conversion:
 

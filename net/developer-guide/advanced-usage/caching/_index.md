@@ -10,11 +10,11 @@ hideChildren: False
 ---
 In some cases document conversion may be a time-consuming operation (dependent on source document content, structure and complexity). For such situations caching can be a solution - converted document is stored into cache (for example at the local drive) and in a case of repetitive conversions of the document, **[GroupDocs.Conversion](https://products.groupdocs.com/conversion/net)** uses cached representation. 
 
-To enable caching you have to:
+To enable caching, follow these steps:
 
-*   Instantiate desired cache object (for example [FileCache](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.caching/filecache) will store converted document results at the local drive)
-*   Pass [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings) object factory to constructor of a [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class
-*   Call [Convert](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/#convert_3) method of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class
+1.   Instantiate desired cache object (for example [FileCache](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.caching/filecache) will store converted document results at the local drive)
+2.   Pass [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings) object factory to constructor of a [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class
+3.   Call [Convert](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/#convert_3) method of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class
 
 Here is a code that demonstrates how to enable caching for GroupDocs.Conversion.
 

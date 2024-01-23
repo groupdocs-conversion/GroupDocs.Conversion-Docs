@@ -1,6 +1,6 @@
 ---
-id: how-to-run
-url: conversion/nodejs-java/how-to-run
+id: how-to-run-examples
+url: conversion/nodejs-java/how-to-run-examples
 title: How to run examples
 weight: 6
 description: "This article describes how to run Node.js file conversion API code examples."
@@ -9,7 +9,7 @@ productName: GroupDocs.Conversion for Node.js via Java
 hideChildren: False
 toc: True
 ---
-The complete project [GroupDocs.Conversion Examples](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Node.js-via-Java) with code examples and sample files is hosted on GitHub.
+The complete [GroupDocs.Conversion Examples](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Node.js-via-Java) project with code examples and sample files is hosted on GitHub.
 
 
 ## Run examples using NPM

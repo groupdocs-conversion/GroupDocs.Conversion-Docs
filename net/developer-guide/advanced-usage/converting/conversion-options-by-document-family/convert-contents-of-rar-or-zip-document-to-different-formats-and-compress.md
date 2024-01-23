@@ -9,7 +9,9 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-GroupDocs.Conversion provides a flexible API to control the conversion of archives that contain other documents. The following code snippet shows how to convert each constituent
+GroupDocs.Conversion provides a flexible API to control the conversion of archives that contain other documents. 
+
+The following code snippet shows how to convert each constituent
  file of a RAR archive into a PDF format and then compress them to a single ZIP archive:
 
 ```csharp

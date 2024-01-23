@@ -18,7 +18,7 @@ toc: True
 
 ### Set Default Font
 
-GroupDocs.Conversion for .NET allows you to set a default font name when a font is not available in the document. You can use **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions/defaultfont)** property of **[NoteLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions)** class to set the default font name. In case **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions/defaultfont)** is not set the Times New Roman font will be used. The following code snippet shows how to set a default font name when converting from PDF into to wordprocessing document:
+GroupDocs.Conversion for .NET allows you to set a default font name when a font is not available in the document. You can use **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions/defaultfont)** property of **[NoteLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions)** class to set the default font name. In case **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions/defaultfont)** is not set the Times New Roman font will be used. The following code snippet shows how to set a default font name when converting from PDF into to Word processing document:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new NoteLoadOptions
@@ -34,7 +34,7 @@ using (Converter converter = new Converter("sample.one", getLoadOptions))
 
 ### Specify font substitution
 
-The following code sample shows how to convert Note document and specify font substitution for missing fonts:
+The following code snippet shows how to convert Note document and specify font substitution for missing fonts:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new NoteLoadOptions

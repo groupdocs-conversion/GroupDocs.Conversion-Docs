@@ -37,7 +37,7 @@ Common Project Management file extensions and their associated file formats incl
 ## Convert from project management formats
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your document into another file format.  
-For example, the MPP to PDF conversion code snippet will look like this:
+For example, the MPP to PDF conversion code snippet looks like this:
 
 ```csharp
 // Load the source MPP file
@@ -50,4 +50,4 @@ using (var converter = new GroupDocs.Conversion.Converter("sample-project.mpp"))
 }
 ```
 
-Put it simply - you just load an MPP file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**. 
+Put it simply - you just load an MPP file into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest. 

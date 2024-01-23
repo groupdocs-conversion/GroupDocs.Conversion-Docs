@@ -30,7 +30,7 @@ structuredData:
 
 ## About compression file formats
 
-File compression is the process of reducing the size of one or more files. It shrinks big files into much smaller ones by removing unneeded data. The compressed file archive makes it easier to send and back up large files or groups of files. Moreover, such files make downloading faster and easier, besides, they allow more data to be stored on removable media. There are various compression formats. Below we are going to describe how to convert the most popular compression file formats using GroupDocs.Conversion.
+File compression is the process of reducing the size of one or more files. It shrinks big files into much smaller ones by removing unneeded data. The compressed file archive makes it easier to send and back up large files or groups of files. Moreover, such files make downloading faster and easier, besides, they allow more data to be stored on removable media. There are various compression formats. Below, we are going to describe how to convert the most popular compression file formats using GroupDocs.Conversion.
 
 ## Supported compression file conversions
 
@@ -58,7 +58,7 @@ using (Converter converter = new Converter("sample.zip"))
 
 ```
 
-Put it simply - you just load a ZIP file into the `Converter` class, provide null convert options and a handler in which to store the result and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you just load a ZIP file into the `Converter` class, provide null convert options and a handler in which to store the result and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.
@@ -67,7 +67,7 @@ Refer to the [API reference](https://apireference.groupdocs.com/conversion/net/g
 ## Extract and convert from a RAR 
 
 You also can convert the archive content during extraction to a desired format. Extraction and conversion to PDF format are also quite simple and natural.
-The following code sample demonstrates how to convert the content of a RAR archive to PDF in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
+The following code snippet shows how to convert the content of a RAR archive to PDF in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
 
 ```csharp
 // Load the source RAR file

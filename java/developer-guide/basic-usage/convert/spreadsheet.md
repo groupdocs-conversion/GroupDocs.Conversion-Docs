@@ -37,7 +37,7 @@ Even though a direct conversion of tables to other formats can be a very complic
 
 ## Convert Excel workbook to PDF
 
-Nowadays PDF format has become one of the common ways to share documents between people and organizations of any kind. In software development, it is also quite a popular use case to convert Excel workbooks into PDF format. GroupDocs.Conversion keeps great display accuracy when converting XLSX/XLS workbooks to PDF and no additional software is required.  
+Nowadays, PDF format has become one of the common ways to share documents between people and organizations of any kind. In software development, it is also quite a popular use case to convert Excel workbooks into PDF format. GroupDocs.Conversion keeps great display accuracy when converting XLSX/XLS workbooks to PDF, and no additional software is required.  
 
 Use the [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) class to save an Excel workbook to PDF using its [convert](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)) method. There is a complete list of steps that should be followed for XLSX to PDF conversion:  
 

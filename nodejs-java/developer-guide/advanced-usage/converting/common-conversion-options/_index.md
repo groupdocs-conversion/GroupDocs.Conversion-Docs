@@ -10,9 +10,8 @@ hideChildren: False
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/nodejs-java) has many different [**ConvertOptions**](#) which gives control over required conversion result. All [**ConvertOptions**](#) have some common properties which are:
 
-*   [**PageNumber**](#) - specifies the page number from which the conversion should start from
-*   [**PagesCount**](#) - specifies the number of pages to be converted
-*   [**Pages**](#) - list of specific page number to be converted
-*   [**Watermark**](#) - watermark options
+*   [**PageNumber**](#) specifies the page number from which the conversion should start from.
+*   [**PagesCount**](#) specifies the number of pages to be converted.
+*   [**Pages**](#) is a list of specific page number to be converted.
 
 The samples below shows how each of these options could be used:

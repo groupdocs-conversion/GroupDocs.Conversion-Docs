@@ -19,7 +19,7 @@ GroupDocs.Conversion provides [PersonalStorageLoadOptions](https://reference.gr
 
 ### Get folders from personal storage
 
-The following code sample shows how to get folders within the personal storage document:
+The following code snippet shows how to get folders within the personal storage document:
 
 ```csharp
 using (Converter converter = new Converter("sample.pst"))
@@ -38,7 +38,7 @@ using (Converter converter = new Converter("sample.pst"))
 
 ### Convert each personal storage content to different formats
 
-The following code sample shows how to convert each personal storage content to a different format based on the content type.  
+The following code snippet shows how to convert each personal storage content to a different format based on the content type: 
 
 *   JPG attachments will be converted to PNG
 *   DOCX attachments will be converted to PDF

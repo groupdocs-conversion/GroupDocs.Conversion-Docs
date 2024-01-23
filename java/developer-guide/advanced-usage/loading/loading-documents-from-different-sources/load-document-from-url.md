@@ -8,7 +8,7 @@ keywords: Load document from URL, Load document by URL GroupDocs.Conversion
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-The following code snippet shows how to convert a document from a URL:
+The following code snippet shows how to convert a document from an URL:
 
 ```java
 import com.groupdocs.conversion.Converter;

@@ -38,7 +38,7 @@ Popular database file extensions and their file formats include SQLite, DB, ACCD
 ## Convert from database formats
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert your document into another file format.  
-For example, a LOG to PDF conversion code snippet will look like this:
+For example, a LOG to PDF conversion code snippet looks like this:
 
 ```java
 import com.groupdocs.conversion.Converter;
@@ -52,4 +52,4 @@ PdfConvertOptions options = new PdfConvertOptions();
 converter.convert("converted.pdf", options);
 ```
 
-Put it simply - you just load a LOG file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**. 
+Put it simply - you just load a LOG file into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest. 

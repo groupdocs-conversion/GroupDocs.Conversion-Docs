@@ -9,24 +9,24 @@ productName: GroupDocs.Conversion for Node.js via Java
 hideChildren: False
 ---
 [**GroupDocs.Conversion**](#) provides [ImageConvertOptions](#) to give you control over conversion result when convert to image.  Along with [common convert options](#) from base class [ImageConvertOptions](#) has the following additional options:
-*   [setFormat](#) - desired result document type. Available options are: *Tiff, Tif, Jpg, Jpeg, Png, Gig, Bmp, Ico, Psd, Wmf, Emf, Dcm, Webp, Dng, Svg, Jp2, Odg, J2c, J2k, Jpx, Jpf, Jpm, Eps, Cgm, Cdr, Cmx, Dib, Jpc, Jls, DjVu*
-*   [setWidth](#) -  desired image width after conversion
-*   [setHeight](#) -  desired image height after conversion
-*   [setHorizontalResolution](#) -  desired image horizontal resolution after conversion
-*   [setVerticalResolution](#) -  desired image vertical resolution after conversion
-*   [setGrayscale](#) -  if true converted image will be grayscaled
-*   [setRotateAngle](#) -  image rotation angle
-*   [setFlipMode](#) -  image flip mode. Available options are: *None, FlipX, FlipY, FlipXY*
-*   [setBrightness](#) -  adjusts image brightness
-*   [setContrast](#) -  adjusts image contrast
-*   [setGamma](#) -  adjust image gamma      
-*   [setJpegOptions](#) -  JPEG specific convert options
-*   [setTiffOptions](#) -  TIFF specific convert options
-*   [setPsdOptions](#) -  PSD specific convert options
-*   [setWebpOptions](#) - WebP specific convert options    
-*   [setUsePdf](#) -  in some cases, for better rendering and elements positioning the source document should be converted to PDF first. If this property is set to *true*, the input firstly is converted to PDF and after that to desired format.
+*   [setFormat](#) specifies desired result document type. Available options are: *Tiff, Tif, Jpg, Jpeg, Png, Gig, Bmp, Ico, Psd, Wmf, Emf, Dcm, Webp, Dng, Svg, Jp2, Odg, J2c, J2k, Jpx, Jpf, Jpm, Eps, Cgm, Cdr, Cmx, Dib, Jpc, Jls, DjVu*
+*   [setWidth](#) specifies desired image width after conversion.
+*   [setHeight](#) specifies desired image height after conversion.
+*   [setHorizontalResolution](#) specifies desired image horizontal resolution after conversion.
+*   [setVerticalResolution](#) specifies desired image vertical resolution after conversion.
+*   [setGrayscale](#) specifies if true converted image will be grayscaled.
+*   [setRotateAngle](#) specifies image rotation angle.
+*   [setFlipMode](#) specifies image flip mode. Available options are: *None, FlipX, FlipY, FlipXY*.
+*   [setBrightness](#) adjusts image brightness.
+*   [setContrast](#) adjusts image contrast.
+*   [setGamma](#) adjust image gamma. 
+*   [setJpegOptions](#) sets JPEG specific convert options.
+*   [setTiffOptions](#) sets TIFF specific convert options.
+*   [setPsdOptions](#) sets PSD specific convert options.
+*   [setWebpOptions](#) sets WebP specific convert options.  
+*   [setUsePdf](#). Sometimes, for better rendering and elements positioning the source document should be converted to PDF first. If this property is set to *true*, the input firstly is converted to PDF and after that to desired format.
 
-Following code snippet shows how to convert to image with advanced options
+The following code snippet shows how to convert to image with advanced options
 
 ```js
 const util = require('util')
@@ -63,9 +63,9 @@ try {
 
 The following options are available:
 
-*   [setQuality](#) - desired image quality.
-*   [setColorMode](#) - JPEG color mode. Available options are: *Rgb, YCbCr, Cmyk, Ycck, Grayscale*
-*   [setCompression](#) - JPEG compression methods. Available options are: *Baseline, Progressive, Lossless, JpegLs*
+*   [setQuality](#) specifies desired image quality.
+*   [setColorMode](#) sets JPEG color mode. Available options are: *Rgb, YCbCr, Cmyk, Ycck, Grayscale*.
+*   [setCompression](#) sets JPEG compression methods. Available options are: *Baseline, Progressive, Lossless, JpegLs*.
 
 ### TiffOptions
 
@@ -73,7 +73,7 @@ The following options are available:
 
 The following options are available:
 
-*   [setCompression](#) - TIFF compression method. Available options are: None, Lzw, Ccitt3, Ccitt4, Rle
+*   [setCompression](#) sets TIFF compression method. Available options are: None, Lzw, Ccitt3, Ccitt4, Rle.
 
 ### PsdOptions
 
@@ -81,11 +81,11 @@ The following options are available:
 
 The following options are available:
 
-*   [setChannelBitsCount](#) - bits count per channel
-*   [setChannelsCount](#) - color channels count
-*   [setColorMode](#) - PSD color mode. Available options are: *Bitmap, Grayscale, Indexed, Rgb, Cmyk, Multichannel, Duotone, Lab*
-*   [setCompression](#) - PSD compression method. Available options are: *Raw, Rle, ZipWithoutPrediction, ZipWithPrediction*
-*   [setVersion](#) - desired PSD version
+*   [setChannelBitsCount](#) sets bits count per channel.
+*   [setChannelsCount](#) sets color channels count.
+*   [setColorMode](#) sets PSD color mode. Available options are: *Bitmap, Grayscale, Indexed, Rgb, Cmyk, Multichannel, Duotone, Lab*.
+*   [setCompression](#) sets PSD compression method. Available options are: *Raw, Rle, ZipWithoutPrediction, ZipWithPrediction*.
+*   [setVersion](#) sets desired PSD version.
 
 ### WebpOptions
 
@@ -93,5 +93,5 @@ The following options are available:
 
 The following options are available:
 
-*   [setLossless](#) - the compression of the converted image will be lossless.
-*   [setQuality](#) - set the quality of converted image
+*   [setLossless](#) specifies if the compression of the converted image will be lossless.
+*   [setQuality](#) sets the quality of converted image.

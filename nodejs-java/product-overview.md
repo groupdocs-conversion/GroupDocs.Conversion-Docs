@@ -9,35 +9,26 @@ keywords: javascript converter, typescript converter, file conversion, convert f
 productName: GroupDocs.Conversion for Node.js via Java
 toc: True
 ---
+GroupDocs.Conversion for Node.js via Java is a powerful and intuitive JavaScript package for file conversion between a variety of supported document and image types, including all Microsoft Office and OpenDocument file formats, PDF documents, HTML, CAD, raster images (TIFF, JPEG, GIF, PNG, BMP) and many more. Conversion results can be easily customized and tuned with multiple and flexible options.
 
-GroupDocs.Conversion for Node.js via Java is a robust and user-friendly JavaScript package for converting files among numerous supported document and image formats, encompassing all Microsoft Office and OpenDocument file types, PDF documents, HTML, CAD, and raster images like TIFF, JPEG, GIF, PNG, BMP, and others. The conversion outcomes can be effortlessly tailored and adjusted using a range of versatile customization options.
+Using GroupDocs.Conversion for Node.js via Java in your project gives you the following benefits:
+<!--
+- Rich set of document conversion features;
+- Platform independence;
+- Independence from third-party applications;
+- Performance and scalability;
+- Simple public API.
 
-By utilizing GroupDocs.Conversion for Java in your project, you can enjoy the following advantages:
-
-- Diverse file conversion options: Thousands of [supported formats]({{< ref "conversion/nodejs-java/getting-started/supported-document-formats.md" >}}), including office documents, presentations, spreadsheets, images, and more.
-- Independence from other applications: No need for third-party applications like Microsoft Office or Adobe Acrobat to convert files.
-
-<!-- TODO - Add link to relevant article -->
-- Flexibility in conversion: [Convert the entire document]({{< ref "conversion/nodejs-java/developer-guide/basic-usage/convert" >}}) or set [specific 
-pages range](#).
-
-<!-- TODO - Add link to relevant article -->
-- Watermarking: Easily [add watermarks](#) to document pages during the conversion process.
-
-<!-- TODO - Add link to relevant article -->
-- Extensive customization: A wide array of [additional options](#) to personalize the appearance of the converted document.
-- [Document information extraction]({{< ref "conversion/nodejs-java/developer-guide/basic-usage/get-document-info" >}}) - file type, document page count etc.;
-
-<!-- TODO - Add link to relevant article -->
-- Enhanced conversion performance: [Caching results](#) for faster and more efficient conversion usage.
-
-<!-- TODO - Add link to relevant article -->
-- [Customizable caching](#): Default caching to the local disk, with support for various storage options like Amazon S3, Dropbox, Google Drive, Windows Azure, and more.
-
-
-- Optimized performance: Designed to process numerous files with minimal resource usage, backed by rigorous performance testing to ensure no degradation between versions.
-- Scalability: Provided as a single NPM package, easily deployable with any JavaScript application using NPM, eliminating concerns about additional services or modules.
-- User-friendly API: The [public API](https://reference.groupdocs.com/conversion/nodejs-java) is simple and intuitive, offering methods that deliver exactly what you expect and nothing more.
+### Rich set of document conversion features
+-->
+- Thousands of different file conversion pairs for [multiple supported formats:]({{< ref "conversion/nodejs-java/getting-started/supported-document-formats.md" >}}) office documents, presentations, spreadsheets, images and much more.
+- Independence from other applications. You can convert files without other third-party applications like Microsoft Office or Adobe Acrobat. 
+- Ability to [convert whole document]({{< ref "conversion/nodejs-java/developer-guide/basic-usage/convert" >}}) or [specific pages range]({{< ref "conversion/nodejs-java/developer-guide/advanced-usage/converting/common-conversion-options/convert-specific-pages.md" >}}).
+- Huge amount of [additional options]({{< ref "conversion/nodejs-java/developer-guide/advanced-usage/converting/conversion-options-by-document-family/" >}}) to customize the appearance of the converted document.
+- [Document information extraction]({{< ref "conversion/nodejs-java/developer-guide/basic-usage/get-document-info" >}}) - file type, document page count etc.
+- Performance. Designed to process thousands of files and utilize as minimum resources as possible. We do performance testing to make sure we do not have performance degradation from version to version.
+- Provided as a single NPM package, easily deployable with any JavaScript application using NPM. You do not need to worry about any other services or modules.
+- Simple and intuitive [public API](https://reference.groupdocs.com/conversion/nodejs-java). All methods are doing what you would expect from them and nothing more.
 
 
 You can use GroupDocs.Conversion across [multiple platforms and operation systems]({{< ref "conversion/nodejs-java/getting-started/system-requirements" >}}):

@@ -10,9 +10,9 @@ productName: GroupDocs.Conversion for Node.js via Java
 toc: True
 ---
 
-Portable Document Format (PDF) was developed to introduce a standard for document representation and other reference material in a format that is independent of application software, hardware as well as from operating systems. Content of PDF files is not limited to text only, it could be hyperlinks, images, interactive buttons and forms, electronic signatures, watermarks, and many more. Therefore it's often needed to convert PDF files to some other formats to edit or modify their content. Using **GroupDocs.Conversion for Node.js via Java** library you can convert PDF files to a wide range of popular file formats, and all you need for this is just several lines of lines code in Java programming language.
+Portable Document Format (PDF) was developed to introduce a standard for document representation and other reference material in a format that is independent of application software, hardware as well as from operating systems. Content of PDF files is not limited to text only, it could be hyperlinks, images, interactive buttons and forms, electronic signatures, watermarks, and many more. Therefore, it is often needed to convert PDF files to some other formats to edit or modify their content. Using **GroupDocs.Conversion for Node.js via Java** library you can convert PDF files to a wide range of popular file formats, and all you need for this is just several lines of lines code in Java programming language.
 
-GroupDocs.Conversion for Node.js via Java supports different kinds of conversions from PDF documents to other file formats and also conversion from different formats to PDF. You can examine conversion quality and accuracy online by using [GroupDocs.Conversion App](https://products.groupdocs.app/conversion/family) live demo. It works on any device and is absolutely free.  
+GroupDocs.Conversion for Node.js via Java supports different kinds of conversions from PDF documents to other file formats, and also conversion from different formats to PDF. You can examine conversion quality and accuracy online by using [GroupDocs.Conversion App](https://products.groupdocs.app/conversion/family) live demo. It works on any device and is free.  
   
 ## Supported PDF file Conversions
 

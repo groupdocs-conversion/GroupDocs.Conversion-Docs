@@ -8,7 +8,9 @@ keywords: Convert email attachments, Convert MSG attachments, Convert EML attach
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-GroupDocs.Conversion provides a flexible API to control the conversion of documents that contain other documents. The following code snippet shows how to convert each attachment to a different format based on attachment type:
+GroupDocs.Conversion provides a flexible API to control the conversion of documents that contain other documents. 
+
+The following code snippet shows how to convert each attachment to a different format based on attachment type:
 
 ```java
 import com.groupdocs.conversion.Converter;

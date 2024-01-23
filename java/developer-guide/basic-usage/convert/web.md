@@ -33,9 +33,9 @@ structuredData:
 
 HTML (Hyper Text Markup Language) is the extension for web pages created for display in browsers. Known as the language of the web, HTML has evolved with requirements of new information to be displayed as part of web pages. 
 
-It takes a number of file types when building a webpage. Web file formats define the standards for the development of webpages and are related to the platform in which these are built. A complete website can be built consisting of static as well as dynamic web pages. 
+It takes many file types when building a webpage. Web file formats define the standards for the development of webpages and are related to the platform in which these are built. A complete website can be built consisting of static as well as dynamic web pages. 
 
-Common web file extensions and their associate file formats include HTML (Hypertext Markup Language), ASP (Active Server Pages), XML (Extensible Markup Language), CSS (Cascading Style Sheets), JSON (JavaScript Object Notation), and others.
+Common web file extensions and their associate file formats include HTML (HyperText Markup Language), ASP (Active Server Pages), XML (Extensible Markup Language), CSS (Cascading Style Sheets), JSON (JavaScript Object Notation), and others.
 
 ## Supported web file conversions
 
@@ -44,7 +44,7 @@ Common web file extensions and their associate file formats include HTML (Hypert
 ## Convert from web formats
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java/) you can easily convert web format into another file format.  
-For example, HTML to PDF conversion code snippet will look like this:
+For example, HTML to PDF conversion code snippet looks like this:
 
 ```java
 import com.groupdocs.conversion.Converter;
@@ -58,7 +58,7 @@ PdfConvertOptions options = new PdfConvertOptions();
 converter.convert("converted.pdf", options);
 ```
 
-Put it simply - you just load an HTML file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you just load an HTML file into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/package-summary) for more conversion options and customizations.
@@ -67,7 +67,7 @@ Refer to the [API reference](https://reference.groupdocs.com/conversion/java/com
 ### Convert to web formats
 
 On the other hand, converting your files to web formats is also quite simple and natural.
-The following code sample demonstrates how to convert a PDF document to HTML format in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
+The following code snippet shows how to convert a PDF document to HTML format in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
 
 ```java
 import com.groupdocs.conversion.Converter;

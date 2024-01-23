@@ -10,16 +10,16 @@ hideChildren: False
 ---
 GroupDocs.Conversion provides [PresentationLoadOptions](#) to give you control over how the source presentation document will be processed. The following options could be set:
 
-*   **[setFormat](#)** -  the document type is auto-detected during loading, however, you can specify explicitly the type of the source presentation document. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm*
-*   **[setDefaultFont](#)** -  default font for rendering the presentation. The following font will be used if a presentation font is missing.      
-*   **[setFontSubstitutes](#)** -  substitute specific fonts from the source presentation document.
-*   **[setPassword](#)** -  a password to unlock the protected document.
-*   **[setHideComments](#)** - specifies that comments from source presentation must be hidden during conversion.
-*   **[setShowHiddenSlides](#)** - specifies that hidden slides should be included in the converted document.
+*   **[setFormat](#)** allows you to specify explicitly the type of the source presentation document. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm*.
+*   **[setDefaultFont](#)** sets a default font for rendering the presentation. The following font will be used if a presentation font is missing.      
+*   **[setFontSubstitutes](#)** sets substitute specific fonts from the source presentation document.
+*   **[setPassword](#)** specifies a password to unlock the protected document.
+*   **[setHideComments](#)** specifies that comments from source presentation must be hidden during conversion.
+*   **[setShowHiddenSlides](#)** specifies that hidden slides should be included in the converted document.
 
 ### Hide comments
 
-The following code sample shows how to convert a presentation and hide comments:
+The following code snippet shows how to convert a presentation and hide comments:
 
 ```js
 const loadOptions = new groupdocs.conversion.PresentationLoadOptions()
@@ -36,7 +36,7 @@ converter.convert(outputPath, convertOptions)
 
 ### Specify font substitutions
 
-The following code sample shows how to convert a presentation and specify font substitutions for missing fonts:
+The following code snippet shows how to convert a presentation and specify font substitutions for missing fonts:
 
 ```js
 const java = require('java') 
@@ -60,7 +60,7 @@ converter.convert(outputPath, convertOptions);
 
 ### Include hidden slides
 
-The following code sample shows how to convert a presentation including the hidden slides:
+The following code snippet shows how to convert a presentation including the hidden slides:
 
 ```js
 const loadOptions = new groupdocs.conversion.PresentationLoadOptions()

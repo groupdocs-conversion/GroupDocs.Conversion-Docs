@@ -8,7 +8,7 @@ keywords: Load document from a file path, Load document from URL, Load document 
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-With [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) you can process files from various sources: from local disk, from streams, from cloud storage and so on.
+With [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) you can process files from various sources: from local disk, from stream, from cloud storage and so on.
 <!--
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) also enables you to convert remotely located documents. The conversion of a remote document would be similar to [Loading documents from different sources]({{< ref "conversion/java/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/_index.md" >}}). In order to convert a remotely located document you must:
 

@@ -8,7 +8,7 @@ keywords: Load document from URL, Load document by URL GroupDocs.Conversion
 productName: GroupDocs.Conversion for Node.js via Java
 hideChildren: False
 ---
-The following code snippet shows how to convert a document from a URL:
+The following code snippet shows how to convert a document from an URL:
 
 ```js
 const fetch = require('node-fetch');

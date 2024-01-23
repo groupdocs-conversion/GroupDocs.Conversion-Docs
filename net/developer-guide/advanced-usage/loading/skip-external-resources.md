@@ -19,7 +19,7 @@ While loading [web]({{< ref "conversion/net/developer-guide/advanced-usage/loadi
 
 To restrict the loading of external resources during the conversion, use the `SkipExternalResources` boolean property of the respective [WebLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/webloadoptions), [PresentationLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions), or [WordProcessingLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions) class.
 
-The following code sample shows how to skip loading of external resources while loading an HTML document:
+The following code snippet shows how to skip loading of external resources while loading an HTML document:
 
 ```csharp
 using GroupDocs.Conversion;
@@ -37,11 +37,11 @@ using (var converter = new Converter("sample.html", () => loadOptions))
 }
 ```
 
-## Whitelisting some of the external resources
+## Allowlisting some of the external resources
 Sometimes you may want to skip loading most of the external resources, but still load some particular resources.
-To white-list specific resources during the conversion, use the `WhitelistedResources` property of the respective [WebLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/webloadoptions), [PresentationLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions), or [WordProcessingLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions) class. The property is effective when the `SkipExternalResources` property is enabled. The `WhitelistedResources` property accepts the string list containing the portions of URLs to be loaded while restricting the loading of other external resources. 
+To allow-list specific resources during the conversion, use the `WhitelistedResources` property of the respective [WebLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/webloadoptions), [PresentationLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions), or [WordProcessingLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions) class. The property is effective when the `SkipExternalResources` property is enabled. The `WhitelistedResources` property accepts the string list containing the portions of URLs to be loaded while restricting the loading of other external resources. 
 
-The following code sample shows how to load the JPG and JPEG images and any resources from the `example.com` domain while restricting any other external resources:
+The following code snippet shows how to load the JPG and JPEG images and any resources from the `example.com` domain while restricting any other external resources:
 
 ```csharp
 using GroupDocs.Conversion;

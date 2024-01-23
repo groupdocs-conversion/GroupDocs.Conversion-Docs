@@ -10,9 +10,9 @@ hideChildren: False
 ---
 GroupDocs.Conversion provides a standard way of obtaining information about the source document. It works regardless of how the document was loaded: from a disk, a stream, or cloud storage.
 
-To get document information use the [`Converter.getDocumentInfo()`](#) method. It returns a [`DocumentInfo`](#) object with common information common for every supported document - format, creation date, size, and page count. 
+To get document information, use the [Converter.getDocumentInfo()](#) method. It returns a [DocumentInfo](#) object with common information common for every supported document - format, creation date, size, and page count. 
 
-To iterate through the document information properties, you can use the [`getPropertyNames()`](#) and [`getProperty()`](#) methods. The following code snippet demonstrates how to list all the available document information properties:
+To iterate through the document information properties, use the [getPropertyNames()](#) and [getProperty()](#) methods. The following code snippet shows how to list all the available document information properties:
 
 ```js
 const converter = new groupdocs.conversion.Converter("sample.txt");
@@ -26,13 +26,13 @@ for (let i = 0; i < props.size(); i++) {
 ```
 Depending on the format type, the resulting `DocumentInfo` object also contains some additional information:
 
-* [`PDF documents`](#) - title, table of contents, author, whether it is encrypted and so on;
-* [`Project management documents`](#) - project start and end dates, number of tasks;
-* [`Images`](#) - width, height, bits per pixel;
-* [`Presentations`](#) - title, author, whether it is password protected;
-* [`Spreadsheets`](#) - title, author, worksheets count, whether it is password protected;
-* [`CAD drawings`](#) - width, height, collections of layouts and layers;
-* [`Emails`](#) - number and names of attachments, whether it is encrypted, whether it is signed, whether its body is in HTML format;
+* [PDF documents](#) - title, table of contents, author, whether it is encrypted and so on;
+* [Project management documents](#) - project start and end dates, number of tasks;
+* [Images](#) - width, height, bits per pixel;
+* [Presentations](#) - title, author, whether it is password protected;
+* [Spreadsheets](#) - title, author, worksheets count, whether it is password protected;
+* [CAD drawings](#) - width, height, collections of layouts and layers;
+* [Emails](#) - number and names of attachments, whether it is encrypted, whether it is signed, whether its body is in HTML format;
 
 See the [API reference](#) for a complete list of format-specific document metadata.
 

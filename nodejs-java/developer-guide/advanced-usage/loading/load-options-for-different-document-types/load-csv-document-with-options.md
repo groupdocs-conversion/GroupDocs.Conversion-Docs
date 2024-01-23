@@ -10,16 +10,16 @@ hideChildren: False
 ---
 GroupDocs.Conversion provides [CsvLoadOptions](#) to give you control over how the source CSV document will be processed. The following options could be set:
 
-*   **[setSeparator](#)** -  specifies the delimiter 
-*   **[setIsMultiEncoded](#)** -  if *true*, this means that the document contains several encodings
-*   **[hasFormula](#)** -  specifies that if text starts with "=" it should be parsed as a formula
-*   **[setConvertNumericData](#)** - specifies that strings with digits should be parsed as numbers
-*   **[setConvertDateTimeData](#)** - specifies that date/time strings should be detected and parsed to DateTime
-*   **[setEncoding](#)** - specifies the encoding to be used during loading
+*   **[setSeparator](#)**  specifies the delimiter.
+*   **[setIsMultiEncoded](#)** whether *true*, this means that the document contains several encodings.
+*   **[hasFormula](#)** specifies that if text starts with "=" it should be parsed as a formula.
+*   **[setConvertNumericData](#)** specifies that strings with digits should be parsed as numbers.
+*   **[setConvertDateTimeData](#)** specifies that date/time strings should be detected and parsed to DateTime.
+*   **[setEncoding](#)** specifies the encoding to be used during loading.
 
 ### Control behavior of converting date/time and numeric data
 
-The following code sample shows how to convert a CSV document and control the way the date/time and numeric data have been processed:
+The following code snippet shows how to convert a CSV document and control the way the date/time and numeric data have been processed:
 
 ```js
 const loadOptions = new groupdocs.conversion.CsvLoadOptions()
@@ -37,7 +37,7 @@ converter.convert(outputPath, convertOptions)
 
 ### Specify delimiter
 
-The following code sample shows how to convert a CSV document and specify the delimiter
+The following code snippet shows how to convert a CSV document and specify the delimiter:
 
 ```js
 const loadOptions = new groupdocs.conversion.CsvLoadOptions()
@@ -54,7 +54,7 @@ converter.convert(outputPath, convertOptions)
 
 ### Specify encoding
 
-The following code sample shows how to convert a CSV document and specify the encoding
+The following code snippet shows how to convert a CSV document and specify the encoding:
 
 ```js
 const loadOptions = new groupdocs.conversion.CsvLoadOptions()

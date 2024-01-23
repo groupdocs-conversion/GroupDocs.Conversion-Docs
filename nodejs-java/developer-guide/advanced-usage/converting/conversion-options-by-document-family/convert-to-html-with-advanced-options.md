@@ -9,11 +9,11 @@ productName: GroupDocs.Conversion for Node.js via Java
 hideChildren: False
 ---
 **[GroupDocs.Conversion](#)** provides [MarkupConvertOptions](#) to give you control over conversion result. The following options could be set:
-*   [setFixedLayout](#) - controls the html generation. If it's set to *true*, fixed layout will be used e.g. absolutely positioned html element.
-*   [setZoom](#) - specifies the zoom level in percentage. Default is 100.
-*   [setUsePdf](#) - in some cases, for better rendering and elements positioning the source document should be converted to PDF first. If this property is set to *true*, the input firstly is converted to PDF and after that to desired format.   
+*   [setFixedLayout](#) controls the HTML generation. If it's set to *true*, fixed layout will be used e.g. absolutely positioned HTML element.
+*   [setZoom](#) specifies the zoom level in percentage. The default value is 100.
+*   [setUsePdf](#). Sometimes, for better rendering and elements positioning the source document should be converted to PDF first. If this property is set to *true*, the input firstly is converted to PDF and after that to desired format.   
 
- Following code snippet shows how to convert to HTML with advanced options
+The following code snippet shows how to convert to HTML with advanced options:
 
 ```js
 const loadOptions = new groupdocs.conversion.WordProcessingLoadOptions()

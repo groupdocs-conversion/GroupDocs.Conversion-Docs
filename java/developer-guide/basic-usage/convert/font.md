@@ -19,7 +19,7 @@ Font files contain information about font tables, glyphs, and script outlines th
 ## Convert to another font format
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert your font file from one format into another.
-For example, CFF to TTF conversion code snippet will look like this:
+For example, CFF to TTF conversion code snippet looks like this:
 
 ```java
 import com.groupdocs.conversion.Converter;
@@ -34,4 +34,4 @@ options.setFormat(FontFileType.Ttf);
 converter.convert("Lato-Regular.ttf", options);
 ```
 
-Put it simply - you just load a CFF file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**. 
+Put it simply - you just load a CFF file into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest. 

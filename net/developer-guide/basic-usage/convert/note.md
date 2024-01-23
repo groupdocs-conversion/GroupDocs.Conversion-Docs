@@ -40,7 +40,7 @@ Common OneNote file extensions and their associated file formats is .ONE.
 
 ## Convert from note-taking formats
 
-With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your OneNote document into another file format. For example, OneNote to PDF conversion code snippet will look like this:
+With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your OneNote document into another file format. For example, OneNote to PDF conversion code snippet looks like this:
 
 ```csharp
 // Load the source OneNote file
@@ -53,7 +53,7 @@ using (Converter converter = new Converter("sample.one"))
 }
 ```
 
-Put it simply - you just load a OneNote file into the `Converter` class instance, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you just load a OneNote file into the `Converter` class instance, select the desired output format and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.

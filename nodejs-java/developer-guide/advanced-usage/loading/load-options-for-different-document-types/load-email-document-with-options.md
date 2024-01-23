@@ -10,17 +10,17 @@ hideChildren: False
 ---
 GroupDocs.Conversion provides [EmailLoadOptions](#) to give you control over how the source email document will be processed. The following options could be set:
 
-*   **[**set**Format](#)** -  the document type is auto-detected during loading, however, you can specify explicitly the type of the source email document. Available options are: Msg, Eml, Emlx, Pst, Ost, Vcf, Mht 
-*   **[**setD**isplayHeader](#)** -  option to display or hide the email header      
-*   **[**setD**isplayFromEmailAddress](#)** -  option to display or hide "from" email address
-*   **[**setD**isplayEmailAddress](#)** - option to display or hide email address
-*   **[**setD**isplayToEmailAddress](#)** - option to display or hide "to" email address
-*   **[**setD**isplayCcEmailAddress](#)** - option to display or hide "Cc" email address
-*   **[setDisplayBccEmailAddress](#)** -  option to display or hide "Bcc" email address
+*   **[**set**Format](#)** specifies the document type is auto-detected during loading, however, you can specify explicitly the type of the source email document. Available options are: Msg, Eml, Emlx, Pst, Ost, Vcf, Mht. 
+*   **[**setD**isplayHeader](#)** specifies option to display or hide the email header.     
+*   **[**setD**isplayFromEmailAddress](#)** specifies option to display or hide "from" email address.
+*   **[**setD**isplayEmailAddress](#)** specifies option to display or hide email address
+*   **[**setD**isplayToEmailAddress](#)** specifies option to display or hide "to" email address.
+*   **[**setD**isplayCcEmailAddress](#)** specifies option to display or hide "Cc" email address.
+*   **[setDisplayBccEmailAddress](#)** specifies  option to display or hide "Bcc" email address.
 
 ### Control fields visibility
 
-The following code sample shows how to convert an Email document and control the visibility of the fields:
+The following code snippet shows how to convert an Email document and control the visibility of the fields:
 
 ```js
 const outputPath = "ConvertEmailWithAlteringFieldsVisibility.pdf"
