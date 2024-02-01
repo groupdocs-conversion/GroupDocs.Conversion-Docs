@@ -10,7 +10,7 @@ hideChildren: False
 toc: True
 ---
 
-Sometimes, in order to study the system better, you want to dive into the code as fast as possible. To make this easier, GroupDocs.Conversion provides different purchase plans or offers a Free Trial and a 30-day Temporary License for evaluation.
+Sometimes, to study the system better, you want to dive into the code as fast as possible. To make this easier, GroupDocs.Conversion offers a Free Trial and a 30-day Temporary License for evaluation and provides different purchase plans.
 
 {{< alert style="info" >}}
 Note that there are a number of general policies and practices that guide you on how to evaluate, properly license, and purchase our products. You can find them in the ["Purchase Policies and FAQ"](https://purchase.groupdocs.com/policies) section.
@@ -38,7 +38,7 @@ If you wish to test GroupDocs.Conversion without the limitations of the trial ve
 
 {{< alert style="info" >}}
 
-You can find pricing information on the ["Pricing Information"](https://purchase.groupdocs.com/pricing/conversion/net) page.
+You can find pricing information on the ["Pricing Information"](https://purchase.groupdocs.com/pricing/conversion/java) page.
 
 {{< /alert >}}
 
@@ -60,6 +60,9 @@ The license can be set multiple times per app domain but we recommend doing it o
 The following code sets a license from a file.
 
 ```java
+import com.groupdocs.conversion.licensing.License;
+import java.io.File;
+...
 String licensePath = "path to the .lic file";
 License license = new License();
 license.setLicense(licensePath);
@@ -70,6 +73,11 @@ license.setLicense(licensePath);
 The following example shows how to load a license from a stream.
 
 ```java
+import com.groupdocs.conversion.licensing.License;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+...
 String licensePath = "path to the .lic file";
 try (InputStream fileStream = new FileInputStream(licensePath)) {
     License license = new License();
@@ -102,6 +110,8 @@ Here are the simple steps to use the `Metered` class.
 Following is the sample code demonstrating how to use the [Metered](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.licensing/Metered) class.
 
 ```java
+import com.groupdocs.conversion.licensing.Metered;
+...
 String publicKey = ""; // Your public license key
 String privateKey = ""; // Your private license key
 

@@ -8,7 +8,9 @@ keywords: Convert OST, Convert PST
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-GroupDocs.Conversion provides a flexible API to control the conversion of documents that contain other documents. The following code snippet shows how to convert each constituent
+GroupDocs.Conversion provides a flexible API to control the conversion of documents that contain other documents. 
+
+The following code snippet shows how to convert each constituent
  file of the Outlook Offline Data File (OST) to a different format based on its content type:
 
 {{< alert style="info" >}}From v22.12 and greater{{< /alert >}}

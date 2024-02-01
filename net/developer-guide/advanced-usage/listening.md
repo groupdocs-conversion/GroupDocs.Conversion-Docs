@@ -11,14 +11,14 @@ hideChildren: False
 ---
 In some cases, there is a need to monitor the conversion process and to receive updates upon a start, progress and completion of a conversion. For such situations, [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) exposes an extension point where the client application may hook up and receive updates. 
 
-To enable listening you have to:
+To enable listening, follow these steps:
 
-*   Create your own implementation of the [IConverterListener](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.reporting/iconverterlistener) interface.
-*   Instantiate the [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings) class and pass an instance of the class created in the first step.
-*   Pass the [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings) object factory to the constructor of the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class.
-*   Call the [Convert](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/#convert_3) method of the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class.
+1.  Create your own implementation of the [IConverterListener](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.reporting/iconverterlistener) interface.
+2.  Instantiate the [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings) class and pass an instance of the class created in the first step.
+3.  Pass the [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings) object factory to the constructor of the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class.
+4.  Call the [Convert](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/#convert_3) method of the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class.
 
-Here is a code that demonstrates how to enable listening for GroupDocs.Conversion events.
+The following code snippet shows how to enable listening for GroupDocs.Conversion events:
 
 ```csharp
 using GroupDocs.Conversion;

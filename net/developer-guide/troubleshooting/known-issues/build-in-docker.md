@@ -9,9 +9,9 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
 
-## Build web api project with GroupDocs.Conversion in Docker
+## Build web API project with GroupDocs.Conversion in Docker
 
-To build an web api which is using GroupDocs.Conversion for .NET in docker container use this sample Docker file:
+To build an web API which is using GroupDocs.Conversion for .NET in docker container use this sample Docker file:
 
 ```docker
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
@@ -42,7 +42,7 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "YourApi.dll"]
 ```
 
-As you can see the process is the same as building a regular web api project in docker. The main difference is the installation of needed libraries which allows GroupDocs.Conversion for .NET to work properly in a docker container:
+As you can see the process is the same as building a regular web API project in docker. The main difference is the installation of needed libraries which allows GroupDocs.Conversion for .NET to work properly in a docker container:
 
 ```docker
 RUN apt-get update && apt-get install -y ffmpeg libgdiplus

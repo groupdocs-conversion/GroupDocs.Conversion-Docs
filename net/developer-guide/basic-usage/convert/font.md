@@ -14,20 +14,12 @@ Font files contain information about font tables, glyphs, and script outlines th
 
 ## Supported font file conversions
 
-| From | To |
-| --- | --- |
-| CFF | Font: [TTF](https://docs.fileformat.com/font/ttf/), [WOFF](https://docs.fileformat.com/font/woff/), WOFF2<br/>  |
-| EOT | Font: [TTF](https://docs.fileformat.com/font/ttf/), [WOFF](https://docs.fileformat.com/font/woff/), WOFF2<br/>  |
-| OTF | Font: [TTF](https://docs.fileformat.com/font/ttf/), [WOFF](https://docs.fileformat.com/font/woff/), WOFF2<br/>  |
-| PFB | Font: [TTF](https://docs.fileformat.com/font/ttf/), [WOFF](https://docs.fileformat.com/font/woff/), WOFF2<br/>  |
-| TTF | Font: [TTF](https://docs.fileformat.com/font/ttf/), [WOFF](https://docs.fileformat.com/font/woff/), WOFF2<br/>  |
-| WOFF | Font: [TTF](https://docs.fileformat.com/font/ttf/), [WOFF](https://docs.fileformat.com/font/woff/), WOFF2<br/>  |
-| WOFF2 | Font: [TTF](https://docs.fileformat.com/font/ttf/), [WOFF](https://docs.fileformat.com/font/woff/), WOFF2<br/>  |
+{{< include file="/conversion/net/_includes/supported-conversions/font.md" type="page" >}}
 
 ## Convert to another font format
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your font file from one format into another.
-For example, CFF to TTF conversion code snippet will look like this:
+For example, CFF to TTF conversion code snippet looks like this:
 
 ```csharp
 using GroupDocs.Conversion;
@@ -47,4 +39,4 @@ using (Converter converter = new Converter("Lato-Regular.cff"))
 }
 ```
 
-Put it simply - you just load a CFF file into the `Converter` class, select the desired output format and all the rest will be done by **GroupDocs.Conversion**. 
+Put it simply - you just load a CFF file into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest. 

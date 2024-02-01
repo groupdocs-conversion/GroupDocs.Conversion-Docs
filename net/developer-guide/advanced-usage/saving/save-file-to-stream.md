@@ -8,14 +8,14 @@ keywords: Convert file to stream, Convert to stream
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-To save the conversion results to a stream:
+To save the conversion results to a stream, follow these steps:
 
-*   Specify the method to obtain the stream where the converted file will be sent.
-*   Pass the method's name as the `document` parameter to the [`Convert()`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/) method implementations. 
+1.   Specify the method to obtain the stream where the converted file will be sent.
+2.   Pass the method's name as the `document` parameter to the [Convert()](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/) method implementations. 
 
 The `document` parameter could be of `Func<Stream>`, `Func<FileType, Stream>`, `Func<int, Stream>`, or `Func<int, FileType, Stream>` type.
 
-The following code snippet demonstrates how to save a file to a stream:
+The following code snippet shows how to save a file to a stream:
 
 ```csharp
 public static void Run()
@@ -39,14 +39,14 @@ public static Stream GetFileStream(string outFile)
 }
 ```
 
-You can also use the [`Converter().ConvertTo(Func<Stream> convertedStreamProvider)`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.fluent/iconversionto/convertto/#convertto) fluent syntax method to save a file to a stream:
+You can also use the [ConvertTo(Func<Stream> convertedStreamProvider)](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.fluent/iconversionto/convertto/#convertto) [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}}) method to save a file to a stream:
 
 ```csharp
 public static void Run()
 {
     Func<Stream> getOutputStream = () => GetFileStream("c:\\files\\converted.pdf");
 
-    new GroupDocs.Conversion.Converter()
+    FluentConverter
     // Specify source file location
     .Load("c:\\files\\sample.docx")
     // Pass the output stream as parameter

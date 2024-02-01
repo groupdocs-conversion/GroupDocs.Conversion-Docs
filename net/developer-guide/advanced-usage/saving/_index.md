@@ -11,4 +11,4 @@ hideChildren: False
 ---
 With [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) you can save the result of conversion to various locations: to local disk, to stream, to FTP and so on.
 
-The following examples demonstrate how to save the converted files to different locations:
+The following examples show how to save the converted files to different locations:

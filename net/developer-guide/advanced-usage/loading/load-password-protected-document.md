@@ -8,16 +8,16 @@ keywords: Load and convert password-protected document, convert protected docume
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) supports conversion of documents that are protected with a password.
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) supports the conversion of documents that are protected with a password.
 
-Here are the steps to follow to load and convert a password protected document:
+To load and convert a password-protected document, follow these steps:
 
-*   Define Func<[LoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/loadoptions)\> delegate, which should return instance of document specific load options with set password
-*   Create new instance of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class and pass source document path and the load options delegate as a constructor parameters
-*   Instantiate the proper [ConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions) class e.g. (**[PdfConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions)**, **[WordProcessingConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions)**, **[SpreadsheetConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/spreadsheetconvertoptions)** etc.)
-*   Call [Convert](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/#convert_3) method of [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class instance and pass filename for the converted document and the instance of [ConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions) from the previous step
+1.   Define a Func<[LoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/loadoptions)\> delegate, which should return an instance of document-specific load options with the password specified.
+2.   Create an instance of the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class and pass the source document path and the load options delegate as the constructor parameters.
+3.   Instantiate the appropriate [ConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions) class e.g. (**[PdfConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions)**, **[WordProcessingConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions)**, **[SpreadsheetConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/spreadsheetconvertoptions)**, etc.)
+4.   Call the [Convert](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/#convert_3) method of the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class instance and pass the filename for the converted document and the instance of the [ConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions) from the previous step.
 
-The following code sample shows how to convert password protected document:
+The following code snippet shows how to convert password protected document:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
@@ -31,10 +31,10 @@ using (Converter converter = new Converter("sample_with_password.docx", getLoadO
 }
 ```
 
-or can use fluent syntax
+You can also use [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
 
 ```csharp
-new GroupDocs.Conversion.Converter()
+FluentConverter
     .Load("sample_with_password.docx").WithOptions(() => new WordProcessingLoadOptions
             {
                 Password = "12345"

@@ -8,7 +8,9 @@ keywords: Convert email attachments, Convert MSG attachments, Convert EML attach
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-GroupDocs.Conversion provides a flexible API to control the conversion of documents that contains other documents. The following code snippet shows how to convert each attachment to a different format based on the attachment type:
+GroupDocs.Conversion provides a flexible API to control the conversion of documents that contains other documents.
+
+The following code snippet shows how to convert each attachment to a different format based on the attachment type:
 
 ```csharp
 var index = 1;

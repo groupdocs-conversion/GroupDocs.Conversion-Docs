@@ -11,21 +11,21 @@ hideChildren: False
 ---
 In some cases, there is a need to monitor the conversion process and to receive updates upon a start, progress and completion of a conversion. For such situations, [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) exposes an extension point where the client application may hook up and receive updates. 
 
-To enable listening you have to:
+To enable listening, follow these steps:
 
-*   Create your own implementation of the [IConverterListener](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.reporting/IConverterListener) interface.
-*   Instantiate the [ConverterSettings](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/ConverterSettings) class and pass an instance of the class created in the first step.
-*   Pass the [ConverterSettings](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/ConverterSettings) object factory to the constructor of a [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) class.
-*   Call the [Convert](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)) method of the [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) class.
+1.   Create your own implementation of the [IConverterListener](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.reporting/IConverterListener) interface.
+2.   Instantiate the [ConverterSettings](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/ConverterSettings) class and pass an instance of the class created in the first step.
+3.   Pass the [ConverterSettings](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/ConverterSettings) object factory to the constructor of a [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) class.
+4.   Call the [Convert](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)) method of the [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter) class.
 
-Here is a code that demonstrates how to enable listening for GroupDocs.Conversion.
+The following code snippet shows how to enable listening for GroupDocs.Conversion:
 
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.ConverterSettings;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.reporting.IConverterListener;
-
+...
 public class ConverterListener implements IConverterListener
 	{
 	    public void started()

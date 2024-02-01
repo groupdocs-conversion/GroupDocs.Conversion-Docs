@@ -20,7 +20,7 @@ Here are the key reasons to use the new updated API provided by GroupDocs.Conver
 
 ## How To Migrate?
 
-Here is a brief comparison of how to convert document into PDF format using old and new API.  
+Here is a brief comparison of how to convert document into PDF format using old API and new one.  
 
 **Old coding style**
 
@@ -51,4 +51,4 @@ using (Converter converter = new Converter(documentPath))
 }
 ```
 
-For more code examples and specific use cases please refer to our [Developer Guide]({{< ref "conversion/net/developer-guide/_index.md" >}}) documentation or [GitHub](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET) samples and showcases.
+For more code examples and specific use cases please refer to our [Developer Guide]({{< ref "conversion/net/developer-guide/_index.md" >}}) or [GitHub](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET) samples and showcases.

@@ -12,7 +12,7 @@ toc: True
 
 <!--<img src="/conversion/java/images/home.png" alt="groupdocs-conversion-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/> -->
 
-GroupDocs.Conversion for Java is a powerful and intuitive library used for file conversion between a variety of supported document and image types including all Microsoft Office and OpenDocument file formats, PDF documents, HTML, CAD, raster images (TIFF, JPEG, GIF, PNG, BMP) and many more. Conversion results can be easily customized and tuned with multiple and flexible options.
+GroupDocs.Conversion for Java is a powerful and intuitive library for file conversion between a variety of supported document and image types, including all Microsoft Office and OpenDocument file formats, PDF documents, HTML, CAD, raster images (TIFF, JPEG, GIF, PNG, BMP) and many more. Conversion results can be easily customized and tuned with multiple and flexible options.
 <!--
 GroupDocs.Conversion allows to convert files between plenty of  popular  formats such as PDF, DOCX, XLSX, PPTX, EPUB, PNG, JPEG, TIFF and others.
 
@@ -34,15 +34,15 @@ Using GroupDocs.Conversion for Java in your project gives you the following bene
 -->
 - Thousands of different file conversion pairs for [multiple supported formats:]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}}) office documents, presentations, spreadsheets, images and much more.
 - Independence from other applications. You can convert files without other third-party applications like Microsoft Office or Adobe Acrobat. 
-- Ability to [convert whole document]({{< ref "conversion/java/developer-guide/basic-usage/convert-document" >}}) or [specific pages range]({{< ref "conversion/java/developer-guide/advanced-usage/converting/common-conversion-options/convert-specific-pages.md" >}}).
+- Ability to [convert whole document]({{< ref "conversion/java/developer-guide/basic-usage/convert" >}}) or [specific pages range]({{< ref "conversion/java/developer-guide/advanced-usage/converting/common-conversion-options/convert-specific-pages.md" >}}).
 - [Place watermarks]({{< ref "conversion/java/developer-guide/advanced-usage/converting/common-conversion-options/add-watermark.md" >}}) at document pages during conversion.
 - Huge amount of [additional options]({{< ref "conversion/java/developer-guide/advanced-usage/converting/conversion-options-by-document-family/" >}}) to customize the appearance of the converted document.
-- [Document information extraction]({{< ref "conversion/java/developer-guide/basic-usage/get-document-info" >}}) - file type, document page count etc.;
-- Increased conversion performance by [caching conversion results]({{< ref "conversion/java/developer-guide/advanced-usage/caching" >}}). Convert document once and use conversion results fast and efficiently;
+- [Document information extraction]({{< ref "conversion/java/developer-guide/basic-usage/get-document-info" >}}) - file type, document page count etc.
+- Increased conversion performance by [caching conversion results]({{< ref "conversion/java/developer-guide/advanced-usage/caching" >}}). Convert document once and use conversion results fast and efficiently.
 - [Customizable caching]({{< ref "conversion/java/developer-guide/advanced-usage/caching/how-to-use-custom-cache-implementation.md" >}}). Caching to local disk is implemented by default and any type of storage can be supported by implementing caching interfaces – Amazon S3, Dropbox, Google Drive, Windows Azure and others.
 - Performance. Designed to process thousands of files and utilize as minimum resources as possible. We do performance testing to make sure we do not have performance degradation from version to version.
 - Scalability. Shipped as a single Java package that can be deployed with any Java application by [installing via Maven]({{< ref "conversion/java/getting-started/installation.md" >}}). You do not need to worry about any other services or modules.
-- Simple and intuitive [public API](https://reference.groupdocs.com/conversion/net). All methods are doing what you would expect from them and nothing more.
+- Simple and intuitive [public API](https://reference.groupdocs.com/conversion/java). All methods are doing what you would expect from them and nothing more.
 
 You can use GroupDocs.Conversion across [multiple platforms and operation systems]({{< ref "conversion/java/getting-started/system-requirements" >}}):
 
@@ -61,7 +61,7 @@ If you are new to GroupDocs.Conversion, see the following topics first:
 
 ## Technical support
 
-If you encounter an issue while using GroupDocs.Conversion or have a technical question, feel free to create a post in our [Free Support Forum](https://forum.groupdocs.com/c/viewer/9). If free support is not sufficient, you can submit a ticket to our [Paid Support Helpdesk](https://helpdesk.groupdocs.com/).
+If you encounter an issue while using GroupDocs.Conversion or have a technical question, feel free to create a post in our [Free Support Forum](https://forum.groupdocs.com/c/conversion). If free support is not sufficient, you can submit a ticket to our [Paid Support Helpdesk](https://helpdesk.groupdocs.com/).
 
 <!--
 - Thousands of different file conversion pairs supported for office documents, presentations, spreadsheets and images.

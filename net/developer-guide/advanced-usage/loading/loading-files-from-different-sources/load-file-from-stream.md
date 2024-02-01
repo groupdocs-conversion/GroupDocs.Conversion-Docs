@@ -10,10 +10,10 @@ hideChildren: False
 ---
 There might be a case when your file is not physically located on the disk. Instead, you have the file in the form of a stream. In this case, to avoid the overhead of saving the stream as a file on disk, [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) enables you to convert the file streams directly.
 
-To load a file from a stream:
+To load a file from a stream, follow these steps:
 
-*   Specify the method to obtain the file stream.
-*   Pass the method's name to the [`Converter`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class constructor.
+1.  Specify the method to obtain the file stream.
+2.  Pass the method's name to the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class constructor.
 
 The following code snippet serves this purpose:
 
@@ -58,9 +58,9 @@ private static Stream GetMemoryStream()
 ```
 
 ## Get information about files from a stream
-When loading files from a stream, you may not know beforehand the exact types of files you are receiving. However, to find out this and other information about the source file, you can use the [`Converter.GetDocumentInfo()`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getdocumentinfo/) method, as described in the [Getting document info]({{< ref "conversion/net/developer-guide/basic-usage/get-document-info.md" >}}) article.
+When loading files from a stream, you may not know beforehand the exact types of files you are receiving. However, to find out this and other information about the source file, you can use the [Converter.GetDocumentInfo()](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getdocumentinfo/) method, as described in the [Getting document info]({{< ref "conversion/net/developer-guide/basic-usage/get-document-info.md" >}}) article.
 
-For example, the following code displays the format of the source file loaded from a stream:
+The following code displays the format of the source file loaded from a stream:
 ```csharp
 public static void Run()
 {

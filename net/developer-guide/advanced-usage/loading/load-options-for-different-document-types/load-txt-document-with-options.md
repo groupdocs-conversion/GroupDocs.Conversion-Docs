@@ -7,17 +7,20 @@ description: "Learn this article and check how to load and convert text files wi
 keywords: Load and convert text file, Load and convert TXT
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [TxtLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/txtloadoptions) to give you control over how source text document will be processed. The following options could be set: 
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [TxtLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/txtloadoptions) to give you control over how the source text document will be processed. The following options could be set:
+| Option | Description |
+|--------|-------------|
+|**[DetectNumberingWithWhitespaces](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/txtloadoptions/detectnumberingwithwhitespaces)** | Allows specifying how numbered list items are recognized when a plain-text document is converted. If this option is set to false, the list's recognition algorithm detects list paragraphs, when list numbers end with either dot, right bracket or bullet symbols (such as "•", "\*", "-" or "o"). If this option is set to true, the white spaces are also used as list number delimiters: the list recognition algorithm for Arabic style numbering (1., 1.1.2.) uses both white spaces and dot (".") symbols. |
+|**[Encoding](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/txtloadoptions/encoding)** | Specifies the encoding to be used to load the document. |
+|**[LeadingSpacesOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/txtloadoptions/leadingspacesoptions)** | Specifies how leading spaces will be processed. The available options are: *ConvertToIdent, Preserve, Trim* |
+|**[TrailingSpacesOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/txtloadoptions/trailingspacesoptions)** | Specifies how trailing spaces will be processed. The available options are: *Preserve, Trim* |
 
-*   **[DetectNumberingWithWhitespaces](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/txtloadoptions/detectnumberingwithwhitespaces)** - allows to specify how numbered list items are recognized when plain text document is converted. If this option is set to false, lists recognition algorithm detects list paragraphs, when list numbers ends with either dot, right bracket or bullet symbols (such as "•", "\*", "-" or "o"). If this option is set to true, white spaces are also used as list number delimiters: list recognition algorithm for Arabic style numbering (1., 1.1.2.) uses both white spaces and dot (".") symbols
-*   **[LeadingSpacesOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/txtloadoptions/leadingspacesoptions)** - specifies how leading spaces will be processed. The available options are: *ConvertToIdent, Preserve, Trim*
-*   **[TrailingSpacesOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/txtloadoptions/trailingspacesoptions)** - specifies how trailing spaces will be processed. The available options are: *Preserve, Trim*
-*   **[Encoding](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/txtloadoptions/encoding)** - specifies encoding to be used to load the document
 
 ### Control behavior of processing leading spaces
 
-The following code sample shows how to convert txt document and control the way the leading spaces are processed:
+The following code snippet shows how to convert a TXT document and control the way the leading spaces are processed:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new TxtLoadOptions
@@ -34,7 +37,7 @@ using (Converter converter = new Converter("sample.txt", getLoadOptions))
 
 ### Control behavior of processing trailing spaces
 
-The following code sample shows how to convert txt document and the way the trailing spaces are processed:
+The following code snippet shows how to convert a TXT document and the way the trailing spaces are processed:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new TxtLoadOptions
@@ -50,7 +53,7 @@ using (Converter converter = new Converter("sample.txt", getLoadOptions))
 
 ### Specify encoding
 
-The following code sample shows how to convert txt document and specify the encoding
+The following code snippet shows how to convert a TXT document and specify the encoding:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new TxtLoadOptions

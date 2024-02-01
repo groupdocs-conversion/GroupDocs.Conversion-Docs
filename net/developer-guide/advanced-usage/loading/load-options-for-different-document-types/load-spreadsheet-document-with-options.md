@@ -12,22 +12,30 @@ toc: True
 
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides the [SpreadsheetLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions) class which controls how the source spreadsheet will be processed. Below are some of the load options that you can use while [converting spreadsheets]({{< ref "conversion/net/developer-guide/basic-usage/convert/spreadsheet" >}}):
 
-*   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/format)** - The document type is auto-detected while loading. However, you can explicitly specify the type of the source spreadsheet document. Available options are: *Csv, Fods, Ods, Ots, Tsv, Xlam, Xls, Xlsb, Xlsm, Xlsx, Xlt, Xltm, Xltx*
-*   **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/defaultfont)** - Specify the default font to use if a spreadsheet font is missing.
-*   **[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/fontsubstitutes)** - Substitute specific fonts from the source spreadsheet.
-*   **[ShowGridLines](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/showgridlines)** - Specify if the grid lines should be visible.
-*   **[ShowHiddenSheets](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/showhiddensheets)** - Specify if the hidden sheets should be included in the converted document.
-*   **[OnePagePerSheet](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/onepagepersheet)** - If specified, each spreadsheet will be converted into a single page.
-*   **[Sheets](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/sheets/)** - Defines the names of the particular sheets to be converted.
-*   **[SheetIndexes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/sheetindexes/)** - Defines the indexes of the particular sheets to be converted.
-*   **[ConvertRange](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/convertrange)** - Defines a specific range of cells to be converted. For example: "D1:F8"
-*   **[SkipEmptyRowsAndColumns](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/skipemptyrowsandcolumns)** - Specify if empty rows and columns should be ignored.
-*   **[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/password)** -  Defines a password to unlock a protected document.
-*   **[HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/hidecomments)** - Specify if the comments from the source spreadsheet should be hidden during conversion.
+| Option | Description |
+|--------|-------------|
+|**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/format)** | The document type is auto-detected while loading. However, you can explicitly specify the type of the source spreadsheet document. Available options are: *Csv, Fods, Ods, Ots, Tsv, Xlam, Xls, Xlsb, Xlsm, Xlsx, Xlt, Xltm, Xltx* |
+|**[AllColumnsInOnePagePerSheet](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/allcolumnsinonepagepersheet)** | If *true*, all column content from a single sheet will be converted into a single page. The width of paper size of page setup will be ignored, while keeping the rest of page settings. |
+|**[AutoFitRows](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/autofitrows)** | If enabled, automatically adjusts the content of all rows while converting. |
+|**[CheckExcelRestriction](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/checkexcelrestriction)** | Whether to check restrictions of Excel file when modifying cell objects. |
+|**[ConvertRange](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/convertrange)** | Defines a specific range of cells to be converted. For example: "D1:F8" |
+|**[CultureInfo](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/cultureinfo)** | Specifies system culture info at the time file is loaded. |
+|**[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/defaultfont)** | Specify the default font to use if a spreadsheet font is missing. |
+|**[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/fontsubstitutes)** | Substitute specific fonts from the source spreadsheet. |
+|**[HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/hidecomments)** | Specify if the comments from the source spreadsheet should be hidden during conversion. |
+|**[OnePagePerSheet](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/onepagepersheet)** | If specified, each spreadsheet will be converted into a single page. |
+|**[OptimizePdfSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/optimizepdfsize)** | If enabled, optimizes the resulting PDF for smaller file size, rather than for better print quality. |
+|**[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/password)** | Defines a password to unlock a protected document. |
+|**[SheetIndexes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/sheetindexes/)** | Defines the indexes of the particular sheets to be converted. |
+|**[Sheets](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/sheets/)** | Defines the names of the particular sheets to be converted. |
+|**[ShowGridLines](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/showgridlines)** | Specify if the grid lines should be visible. |
+|**[ShowHiddenSheets](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/showhiddensheets)** | Specify if the hidden sheets should be included in the converted document. |
+|**[SkipEmptyRowsAndColumns](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/skipemptyrowsandcolumns)** | Specify if empty rows and columns should be ignored. |
+
 
 ### Hide comments
 
-The following code sample shows how to convert a spreadsheet and hide comments:
+The following code snippet shows how to convert a spreadsheet and hide comments:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -44,7 +52,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 ### Show grid lines
 
-The following code sample shows how to convert a spreadsheet and show grid lines:
+The following code snippet shows how to convert a spreadsheet and show grid lines:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -61,7 +69,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 ### Skip empty rows and columns
 
-The following code sample shows how to convert a spreadsheet and skip empty rows and columns:
+The following code snippet shows how to convert a spreadsheet and skip empty rows and columns:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -78,7 +86,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 ### Specify font substitution
 
-The following code sample shows how to convert a spreadsheet and specify font substitution for missing fonts:
+The following code snippet shows how to convert a spreadsheet and specify font substitution for missing fonts:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -101,7 +109,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 You can specify the sheets to be converted either by names or by indexes. 
 
-The following code sample shows how to convert a spreadsheet and specify the desired sheets by their names:
+The following code snippet shows how to convert a spreadsheet and specify the desired sheets by their names:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -116,7 +124,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 }
 ```
 
-The following code sample shows how to convert a spreadsheet and specify the desired sheets by their zero-based indexes:
+The following code snippet shows how to convert a spreadsheet and specify the desired sheets by their zero-based indexes:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -133,7 +141,7 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 ### Specify range
 
-The following code sample shows how to convert a spreadsheet and specify the exact range of rows and columns to be converted:
+The following code snippet shows how to convert a spreadsheet and specify the exact range of rows and columns to be converted:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
@@ -150,13 +158,28 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 ### Include hidden sheets
 
-The following code sample shows how to convert a spreadsheet including the hidden sheets:
+The following code snippet shows how to convert a spreadsheet including the hidden sheets:
 
 ```csharp
 Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
 {
     ShowHiddenSheets = true,
     OnePagePerSheet = true
+};
+using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
+{
+    PdfConvertOptions options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
+}
+```
+### Automatically fit rows
+
+To fit the row content of all rows while converting from a spreadsheet, set the [AutoFitRows](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/autofitrows/) property to `true`:
+
+```csharp
+Contracts.Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
+{
+    AutoFitRows = true
 };
 using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 {

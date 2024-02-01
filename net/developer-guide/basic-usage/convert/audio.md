@@ -30,29 +30,19 @@ structuredData:
 
 ## About audio file formats
 
-The audio file format is a category of digital file formats for representation of audio information along with its meta-data. Multiple audio file formats exist based on the nature of data contained within the audio file. Such files can be stored in compressed as well as uncompressed audio file formats. Popular audio file formats include MP3, WAV, PCM and WMA.
+The audio file format is a category of digital file formats for the representation of audio information along with its meta-data. Multiple audio file formats exist based on the nature of data contained within the audio file. Such files can be stored in compressed as well as uncompressed audio file formats. Popular audio file formats include MP3, WAV, PCM, and WMA.
 
 ## Supported audio file conversions
 
-| From | To |
-| --- | --- |
-| AAC | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
-| AC3 | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
-| AIFF | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
-| FLAC | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
-| M4A | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
-| MP3 | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
-| OGG | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
-| WAV | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
-| WMA | Audio: [AAC](https://docs.fileformat.com/audio/aac/), [AC3](https://docs.fileformat.com/audio/ac3/), [AIFF](https://docs.fileformat.com/audio/aiff/), [FLAC](https://docs.fileformat.com/audio/flac/), [M4A](https://docs.fileformat.com/audio/m4a/), [MP3](https://docs.fileformat.com/audio/mp3/), [OGG](https://docs.fileformat.com/audio/ogg/), [WAV](https://docs.fileformat.com/audio/wav/), [WMA](https://docs.fileformat.com/audio/wma/)<br/>  |
+{{< include file="/conversion/net/_includes/supported-conversions/audio.md" type="page" >}}
 
 ## Convert to another audio format
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily convert your audio file into another audio file format.
 
-To allow audio conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload actual audio conversion to an audio processing library, but at the same time gives you the simplicity of conversion setup. The extension point is the [IAudioConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.audio/iaudioconnector) interface. 
+To allow audio conversions, [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) provides an extension point to offload actual audio conversion to an audio processing library, but at the same time gives you the simplicity of conversion setup. The extension point is the [IAudioConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.audio/iaudioconnector) interface. 
 
-You first must decide which audio processing library will use. Different libraries have different setup processes.
+First, you must decide which audio processing library you will use. Different libraries have different setup processes.
 
 In our example, we will use the FFMPEG library. We recommend using [Chocolatey](https://chocolatey.org/) to install the [FFMPG](https://ffmpeg.org/) library and all needed dependencies. 
 To install FFMPEG with Chocolatey, run the following console command:
@@ -60,7 +50,7 @@ To install FFMPEG with Chocolatey, run the following console command:
 choco install ffmpeg
 ```
 
-Once the audio processing library is installed you must implement an [IAudioConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.audio/iaudioconnector) interface. For this implementation, the [FFMpegCore](https://www.nuget.org/packages/FFMpegCore) NuGet package must be installed in your project. The following snippet provides a sample implementation:
+Once the audio processing library is installed, you must implement an [IAudioConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.audio/iaudioconnector) interface. For this implementation, the [FFMpegCore](https://www.nuget.org/packages/FFMpegCore) NuGet package must be installed in your project. The following snippet provides a sample implementation:
 
 ```csharp
 public class AudioConnector : IAudioConnector
@@ -156,7 +146,7 @@ public class AudioConnector : IAudioConnector
 }
 ```
 
-Once the `IAudioConnector` interface is implemented, the MP3 to FLAC conversion code snippet will look like this:
+Once the `IAudioConnector` interface is implemented, the MP3 to FLAC conversion code snippet looks like this:
 
 ```csharp
 // Load the source MP3 file
@@ -173,7 +163,7 @@ using (Converter converter = new Converter("sample.mp3", () => loadOptions))
 }
 ```
 
-Put it simply - you install the audio processing library, implement the `IAudioConnector` interface which links `GroupDocs.Conversion` with the audio processing library, load an audio file into the `Converter` class providing the `IAudioConnector` instance, select the desired output format and all the rest will be done by **GroupDocs.Conversion**.  
+Put it simply - you install the audio processing library, implement the `IAudioConnector` interface which links `GroupDocs.Conversion` with the audio processing library, load an audio file into the `Converter` class providing the `IAudioConnector` instance, select the desired output format and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.

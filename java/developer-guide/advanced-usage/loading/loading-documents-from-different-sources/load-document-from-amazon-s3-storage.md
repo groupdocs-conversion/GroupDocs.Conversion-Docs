@@ -2,13 +2,13 @@
 id: load-document-from-amazon-s3-storage
 url: conversion/java/load-document-from-amazon-s3-storage
 title: Load document from Amazon S3 Storage
-weight: 1
+weight: 5
 description: "This article demonstrates how to convert document stored in Amazon S3 storage using GroupDocs.Conversion for Java API."
 keywords: Convert document from Amazon S3 storage, Convert file
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-Following code snippet shows how to convert a document from Amazon S3 Storage:
+The following code snippet shows how to convert a document from Amazon S3 Storage:
 
 ```java
  package com.groupdocs.conversion.examples.advanced_usage.loading.loading_documents_from_different_sources;

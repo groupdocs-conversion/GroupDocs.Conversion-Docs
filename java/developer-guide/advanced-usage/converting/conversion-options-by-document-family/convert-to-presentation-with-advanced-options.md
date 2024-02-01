@@ -8,15 +8,20 @@ keywords: Convert to Presentation, Convert Presentation
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) provides [PresentationConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PresentationConvertOptions) to give you control over conversion result when convert to presentation format. Along with [common convert options](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/ConvertOptions) from base class [PresentationConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PresentationConvertOptions) has the following additional options:
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) provides the [PresentationConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PresentationConvertOptions) class to give you better control over conversion results while converting to presentation formats. Along with [common convert options](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/ConvertOptions) from the base class, the [PresentationConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PresentationConvertOptions) has the following additional options:
 
-*   [setFormat](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/ConvertOptions#setFormat(com.groupdocs.conversion.filetypes.FileType)) -  desired result document type. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm*
-*   [setPassword](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PresentationConvertOptions#setPassword(java.lang.String)) -  if set, the converted document will be password protected with the specified password
-*   [setZoom](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PresentationConvertOptions#setZoom(int)) -  specifies the zoom level in percentage
+*   [setFormat](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/ConvertOptions#setFormat(com.groupdocs.conversion.filetypes.FileType)) specifies desired result document type. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm*.
+*   [setPassword](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PresentationConvertOptions#setPassword(java.lang.String)) whether the converted document will be password-protected with the specified password.
+*   [setZoom](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PresentationConvertOptions#setZoom(int)) specifies the zoom level in percentage.
 
-Following code snippet shows how to convert to Presentation with advanced options
+The following code snippet shows how to convert to presentations with advanced options:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.filetypes.PresentationFileType;
+import com.groupdocs.conversion.options.convert.PresentationConvertOptions;
+import com.groupdocs.conversion.options.load.WordProcessingLoadOptions;
+...
 Converter converter = new Converter("sample.docx");
 PresentationConvertOptions options = new PresentationConvertOptions();
 options.setPageNumber(2);

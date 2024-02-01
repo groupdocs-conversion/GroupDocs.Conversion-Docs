@@ -3,21 +3,23 @@ id: load-personal-storage-pst-or-ost-with-options
 url: conversion/net/load-personal-storage-pst-or-ost-with-options
 title: Load personal storage PST or OST with options
 weight: 7
-description: "Learn this article and check how to load and convert PDF documents with advanced options using GroupDocs.Conversion for .NET API."
+description: "Learn this article and check how to load and convert PST/OST documents with advanced options using GroupDocs.Conversion for .NET API."
 keywords: Load PST, Load OST, Convert PST content, Convert OST content
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
-GroupDocs.Conversion provides [PersonalStorageLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions) to give you control over how source personal storage (PST/OST) document will be processed. The following options could be set:
-
-*   **[ConvertOwned](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/convertowned)** - controls whether the owned documents in the documents container must be converted
-*   **[ConvertOwner](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/convertowner)** - controls whether the documents container itself must be converted If this property is true the documents container will be the first converted document  
-*   **[Depth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/depth)** - controls how many levels in depth to perform conversion
-*   **[Folder](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/folder)** -  folder which to be processed Default is Inbox
+GroupDocs.Conversion provides [PersonalStorageLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions) to give you control over how the source personal storage (PST/OST) document will be processed. The following options could be set:
+| Option | Description |
+|--------|-------------|
+|**[ConvertOwned](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/convertowned)** | Controls whether owned documents of the document container must be converted. |
+|**[ConvertOwner](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/convertowner)** | Controls whether the document container itself must be converted. If this property is true the document container will be the first converted document. |
+|**[Depth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/depth)** | Controls how many levels in depth to perform the conversion. |
+|**[Folder](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/personalstorageloadoptions/folder)** | A folder to be processed. Default is Inbox. |
 
 ### Get folders from personal storage
 
-The following code sample shows how to get folders within personal storage document:
+The following code snippet shows how to get folders within the personal storage document:
 
 ```csharp
 using (Converter converter = new Converter("sample.pst"))
@@ -36,7 +38,7 @@ using (Converter converter = new Converter("sample.pst"))
 
 ### Convert each personal storage content to different formats
 
-The following code sample shows how to convert each personal storage content to different format based on the content type.  
+The following code snippet shows how to convert each personal storage content to a different format based on the content type: 
 
 *   JPG attachments will be converted to PNG
 *   DOCX attachments will be converted to PDF

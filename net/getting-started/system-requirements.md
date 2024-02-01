@@ -40,34 +40,29 @@ GroupDocs.Conversion for .NET supports any 32-bit or 64-bit operating system wh
 
 GroupDocs.Conversion for .NET supports .NET and Mono frameworks as follows:
 
-### .NET Standard 2.0
+### .NET Standard 2.1
 
-Any type of .NET Standard 2.0 application is supported.
+Any type of .NET Standard 2.1 application is supported.
 
 ### .NET Frameworks
 
-*   .NET Framework 2.0
-*   .NET Framework 3.5
-*   .NET Framework 4.0
-*   .NET Framework 4.0\_ClientProfile
-*   .NET Framework 4.5.0
-*   .NET Framework 4.5.1
-*   .NET Framework 4.5.2
-*   .NET Framework 4.6.0
 *   .NET Framework 4.6.2
-*   .NET Framework 4.5.0
-*   .NET Framework 4.5.1
-*   .NET Framework 4.6.0
-*   .NET Framework 4.6.2
 *   .NET Framework 4.7
+*   .NET Framework 4.7.1
 *   .NET Framework 4.7.2
-*   .NET Standard 2.0 
-*   .NET Core 2.0
-*   .NET Core 2.1
+*   .NET Framework 4.8
+*   .NET Framework 4.8.1
+*   .NET Standard 2.1 
+*   .NET Core 3.0
+*   .NET Core 3.1
+*   .NET 5.0
+*   .NET 6.0
+*   .NET 7.0
+*   .NET 8.0
 
 ### Mono Framework
 
-*   Mono 2.6.7 or later
+*   Mono 6.4
 
 ## Development Environments
 

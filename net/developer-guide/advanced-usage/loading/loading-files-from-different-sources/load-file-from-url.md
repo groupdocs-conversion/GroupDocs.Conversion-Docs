@@ -8,7 +8,7 @@ keywords: Load file from URL, Load file by URL GroupDocs.Conversion
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-The following code snippet shows how to convert a file from the URL:
+The following code snippet shows how to convert a file from an URL:
 
 ```csharp
 public static void Run()

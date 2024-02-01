@@ -9,7 +9,7 @@ productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
 ---
-There are multiple target formats available when converting documents with **[GroupDocs.Conversion](https://products.groupdocs.com/conversion/java)** and you can always refer to [supported document formats]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}}) documentation for more details.  
+There are multiple target formats available when converting documents with **[GroupDocs.Conversion](https://products.groupdocs.com/conversion/java)** and you can always refer to [supported file formats]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}}) documentation for more details.  
 But what about getting possible conversions programmatically? For example, it could allow end-users to select the target format for a specific document or to display the complete list of supported formats. 
 Fortunately GroupDocs.Conversion API provides several ways to achieve this, so please check the available options below.
 
@@ -17,14 +17,19 @@ Fortunately GroupDocs.Conversion API provides several ways to achieve this, so p
 
 When you need to know possible conversions for a provided source document you can do this by following the below steps:
 
-*   Create a new instance of the [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class by passing the source document path as the constructor's parameter.
-*   Call the [getPossibleConversions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter#getPossibleConversions()) method of the converter object.
+1.   Create an instance of the [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class by passing the source document path as the constructor's parameter.
+2.   Call the [getPossibleConversions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter#getPossibleConversions()) method of the converter object.
 
 The method will return the [PossibleConversions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.contracts/possibleconversions/) collection with a complete list of possible conversions for the source document type.
 
-The following code sample demonstrates how to get possible conversions of the source document:
+The following code snippet shows how to get possible conversions of the source document:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.PossibleConversions;
+import com.groupdocs.conversion.contracts.Pair;
+import com.groupdocs.conversion.filetypes.FileType;
+...
 String sourceFile = "sample.docx";
 Converter converter = new Converter(sourceFile);
 
@@ -44,8 +49,12 @@ for (Pair<FileType, Boolean> conversion : conversions.getAll())
 
 If it is required to programmatically obtain a collection of all supported conversions it is as easy as calling the [getAllPossibleConversions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/converter/#getAllPossibleConversions--) method of the [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/converter/) class.
 
-The following code sample demonstrates how to get all possible conversions:
+The following code snippet shows how to get all possible conversions:
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.PossibleConversions;
+import com.groupdocs.conversion.contracts.TargetConversion;
+...
 Converter converter = new Converter();
 
 for(PossibleConversions conversions : converter.getAllPossibleConversions())
