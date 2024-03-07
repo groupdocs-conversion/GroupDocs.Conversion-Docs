@@ -61,3 +61,6 @@ With GroupDocs.Conversion you are not limited to [local files]({{< ref "conversi
 ## Caching results
 
 GroupDocs.Conversion supports [conversion result caching]({{< ref "conversion/java/developer-guide/advanced-usage/caching/" >}}) to local disk by default. However, any type of cache storage can be supported by implementing appropriate interfaces – Amazon S3, Dropbox, Google Drive, Windows Azure, Redis or any other.
+
+## Work with archives
+It is possible to convert archived files to all supported formats or just extract files. Also, you can archive the result of the conversion.
