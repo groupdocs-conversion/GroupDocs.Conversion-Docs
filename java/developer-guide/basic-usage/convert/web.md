@@ -71,12 +71,12 @@ The following code snippet shows how to convert a PDF document to HTML format in
 
 ```java
 import com.groupdocs.conversion.Converter;
-import com.groupdocs.conversion.options.convert.MarkupConvertOptions;
+import com.groupdocs.conversion.options.convert.WebConvertOptions;
 ...
 // Load the source PDF file
 Converter converter = new Converter("sample.pdf");
 // Set the convert options for HTML format
-MarkupConvertOptions options = new MarkupConvertOptions();
+WebConvertOptions options = new WebConvertOptions();
 // Convert to HTML format
 converter.convert("converted.html", options);
 ```
