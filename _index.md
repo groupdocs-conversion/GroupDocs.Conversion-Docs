@@ -11,6 +11,7 @@ geekdocNav: false
 geekdocAlign: center
 geekdocAnchor: false
 hideChildren: true
+showFeedbackForm: false
 ---
 
 <div class="gdoc-list-descr">
