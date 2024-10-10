@@ -21,7 +21,7 @@ The log contains the following types of messages:
 * Trace - for general information
 
 ## Logging to the console
-To log to a standard console, use the [ConsoleLogger](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.logging/consolelogger/) class implementation:
+To log to a standard console, use the [ConsoleLogger](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.logging/consolelogger/) class implementation:
 
 ```java
 

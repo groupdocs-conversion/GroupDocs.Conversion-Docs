@@ -11,7 +11,7 @@ hideChildren: False
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) allows to get default convert options for specific target format by following the below steps:
 
 1.   Create new instance of [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/converter/) class by passing source document path as constructor's parameter
-2.   Call [GetPossibleConversions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/converter/#getPossibleConversions--) method of converter object
+2.   Call [getPossibleConversions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/converter/#getPossibleConversions--) method of converter object
 3.   Use the file extension or `FileType` as key to indexer of object received as value in previous step  
 
 The following code snippet shows how to get possible conversions of the source document:
