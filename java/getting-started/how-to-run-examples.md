@@ -8,7 +8,10 @@ keywords: file conversion, Java
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
+aliases:
+    - /conversion/java/how-to-run/
 ---
+
 The complete [GroupDocs.Conversion Examples](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Java) project with code examples and sample files is hosted on GitHub.
 
 ## Run examples using Maven
@@ -34,27 +37,6 @@ To run the examples using Eclipse IDE import the project to get started with it:
 The following screenshot shows the Examples project opened in Eclipse IDE.
 
 ![GroupDocs.Conversion for Java Examples in Eclipse IDE](/conversion/java/images/how-to-run_1.png)
-
-<!--
-
-
-
-## Download from GitHub
-
-The complete examples package of **GroupDocs.Conversion** is hosted on [GitHub](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Java). You can either download the ZIP file or clone the repository of GitHub using your favorite Git client.
-
-In case you download the ZIP file, extract the folders on your local disk. The extracted files and folders will look like the following image:
-
-![](/conversion/java/images/how-to-run.png)
-
-Open the Eclipse IDE and import the project to get started with it. The archived project file can also be imported. Follow the given steps to run the application:
-
-* Go to project properties.
-* Click on Java Build Path.
-* Go to Libraries and external Jars (GroupDocs.Conversion.Jar).
-
-![](/conversion/java/images/how-to-run_1.png)
--->
 
 ## Contribute
 
