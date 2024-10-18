@@ -85,62 +85,62 @@ converter.convert(outputPath, options);
 
 public class CustomFileLogger : ILogger
 {
-	private String _fileName;
+    private String _fileName;
 
-	/**
-	 * Create logger to file.
-	 * @param fileName Full file name with path
-	 */
-	public CustomFileLogger(String fileName)
-	{
-		_fileName = fileName;
-	}
+    /**
+     * Create logger to file.
+     * @param fileName Full file name with path
+     */
+    public CustomFileLogger(String fileName)
+    {
+        _fileName = fileName;
+    }
 
-	/**
-	 * Writes trace message to file.
-	 * Trace log messages provide generally useful information about application flow.
-	 * @param message The trace message.
-	 */
-	public void trace(String message)
-	{
-		String contentToAppend = "[TRACE] " + message + System.lineSeparator();
-		writer(contentToAppend);
-	}
+    /**
+     * Writes trace message to file.
+     * Trace log messages provide generally useful information about application flow.
+     * @param message The trace message.
+     */
+    public void trace(String message)
+    {
+        String contentToAppend = "[TRACE] " + message + System.lineSeparator();
+        writer(contentToAppend);
+    }
 
-	/**
-	 * Writes warning message to file.
-	 * Warning log messages provide information about the unexpected and recoverable event in application flow.
-	 * @param message The warning message.
-	 */
-	public void warning(String message)
-	{
-		String contentToAppend = "[WARN] " + message + System.lineSeparator();
-		writer(contentToAppend);
-	}
+    /**
+     * Writes warning message to file.
+     * Warning log messages provide information about the unexpected and recoverable event in application flow.
+     * @param message The warning message.
+     */
+    public void warning(String message)
+    {
+        String contentToAppend = "[WARN] " + message + System.lineSeparator();
+        writer(contentToAppend);
+    }
 
-	/**
-	 * Writes an error message to file.
-	 * Error log messages provide information about unrecoverable events in application flow.
-	 * @param message The error message.
-	 * @param exception The exception.
-	 */
-	public void error(String message, com.groupdocs.conversion.internal.c.a.ms.System.Exception exception)
-	{
-		String contentToAppend = "[ERROR] " + message + ", exception: " + exception+System.lineSeparator();
-		writer(contentToAppend);
-	}
+    /**
+     * Writes an error message to file.
+     * Error log messages provide information about unrecoverable events in application flow.
+     * @param message The error message.
+     * @param exception The exception.
+     */
+    public void error(String message, com.groupdocs.conversion.internal.c.a.ms.System.Exception exception)
+    {
+        String contentToAppend = "[ERROR] " + message + ", exception: " + exception+System.lineSeparator();
+        writer(contentToAppend);
+    }
 
-	public void writer(String message)
-	{
-		FileWriter fw = null; //the true will append the new data
-		try {
-			fw = new FileWriter(_fileName,true);
-			fw.write(message);//appends the string to the file
-			fw.close();
-		} catch (IOException e) {
-			throw new RuntimeException(e);
-		}
-	}
+    public void writer(String message)
+    {
+        FileWriter fw = null; //the true will append the new data
+        try {
+            fw = new FileWriter(_fileName,true);
+            fw.write(message);//appends the string to the file
+            fw.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
 ```
 

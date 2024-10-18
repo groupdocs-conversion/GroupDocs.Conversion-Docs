@@ -10,7 +10,7 @@ hideChildren: False
 ---
 GroupDocs.Conversion provides the [EmailLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions) class to give you better control over how the source email document will be processed. The following options could be set:
 
-*   [**setFormat](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions#setFormat(com.groupdocs.conversion.filetypes.EmailFileType))** allows you to specify explicitly the type of the source email document. Available options are: Msg, Eml, Emlx, Pst, Ost, Vcf, Mht.
+*   [**setFormat**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions#setFormat(com.groupdocs.conversion.filetypes.EmailFileType))** allows you to specify explicitly the type of the source email document. Available options are: Msg, Eml, Emlx, Pst, Ost, Vcf, Mht.
 *   [**setDisplayHeader**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions#setDisplayHeader(boolean)) specifies option to display or hide the email header.      
 *   [**setDisplayFromEmailAddress**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions#setDisplayFromEmailAddress(boolean)) specifies option to display or hide "from" email address.
 *   [**setDisplayEmailAddress**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/EmailLoadOptions#setDisplayEmailAddress(boolean)) specifies option to display or hide email address.
