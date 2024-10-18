@@ -12,10 +12,10 @@ toc: True
 GroupDocs.Conversion provides [PersonalStorageLoadOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/personalstorageloadoptions/) to give you control over how the source personal storage (PST/OST) document will be processed. The following options could be set:
 | Option | Description |
 |--------|-------------|
-|**[isConvertOwned](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/personalstorageloadoptions/#isConvertOwned--) ** | Controls whether owned documents of the document container must be converted. |
-|**[isConvertOwner](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/personalstorageloadoptions/#isConvertOwner--) ** | Controls whether the document container itself must be converted. If this property is true the document container will be the first converted document. |
-|**[setDepth](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/personalstorageloadoptions/#getDepth--) ** | Controls how many levels in depth to perform the conversion. |
-|**[setFolder](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/personalstorageloadoptions/#getFolder--) ** | A folder to be processed. Default is Inbox. |
+|**[isConvertOwned](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/personalstorageloadoptions/#isConvertOwned--)** | Controls whether owned documents of the document container must be converted. |
+|**[isConvertOwner](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/personalstorageloadoptions/#isConvertOwner--)** | Controls whether the document container itself must be converted. If this property is true the document container will be the first converted document. |
+|**[setDepth](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/personalstorageloadoptions/#getDepth--)** | Controls how many levels in depth to perform the conversion. |
+|**[setFolder](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/personalstorageloadoptions/#getFolder--)** | A folder to be processed. Default is Inbox. |
 
 ### Get folders from personal storage
 
