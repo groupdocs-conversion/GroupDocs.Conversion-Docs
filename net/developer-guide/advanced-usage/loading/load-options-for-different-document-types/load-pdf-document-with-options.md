@@ -102,7 +102,7 @@ Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
 };
 using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 {
-    PdfConvertOptions options = new WordProcessingConvertOptions();
+    PdfConvertOptions options = new PdfConvertOptions();
     converter.Convert("converted.docx", options);
 }
 ```
