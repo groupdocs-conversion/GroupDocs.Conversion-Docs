@@ -181,7 +181,7 @@ Elevate your C#, ASP.NET, and other .NET applications with the premier file conv
                 <ul class="gdoc-platform__col-links">
                     <li> <a href='/conversion/python-net/system-requirements/'>System Requirements</a></li>
                     <li> <a href='/conversion/python-net/supported-file-formats/'>Supported File Formats</a></li>
-                    <li> <a href='/conversion/python-net/installation/'>Installation</a></li>
+                    <li> <a href='/conversion/python-net/getting-started/installation/'>Installation</a></li>
                     <li> <a href='/conversion/python-net/getting-started/quick-start-guide'>Quick Start Guide</a></li>
                 </ul>
             </div>
