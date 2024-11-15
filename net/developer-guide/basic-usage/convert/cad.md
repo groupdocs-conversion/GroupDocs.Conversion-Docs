@@ -69,7 +69,7 @@ using (Converter converter = new Converter("sample.dwg"))
 {
     // Set the convert options for STL format
     var options = new CadConvertOptions {
-        Format = CadFileType.Stl;
+        Format = CadFileType.Stl
     };
     // Convert to STL format
     converter.Convert("converted.stl", options);

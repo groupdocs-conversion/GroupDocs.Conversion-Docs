@@ -71,7 +71,7 @@ using (Converter converter = new Converter("sample.gpx"))
 {
     // Set the convert options for KML format
     var options = new GisConvertOptions {
-        Format = GisFileType.Kml;
+        Format = GisFileType.Kml
     };
     // Convert to KML format
     converter.Convert("converted.kml", options);
