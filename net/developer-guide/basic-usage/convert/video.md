@@ -133,6 +133,25 @@ public class VideoConnector : IVideoConnector
 
 Once the `IVideoConnector` interface is implemented, the AVI to MP4 conversion code snippet looks like this:
 
+After v24.10 and later:
+
+```csharp
+// Load the source AVI file
+VideoLoadOptions loadOptions = new VideoLoadOptions();
+loadOptions.SetVideoConnector(new VideoConnector());
+using (Converter converter = new Converter("sample.avi", (LoadContext loadContext) => loadOptions))
+{
+    // Set the convert options for MP4 format
+    VideoConvertOptions options = new VideoConvertOptions {
+        Format = VideoFileType.Mp4
+    };
+    // Convert to MP4 format
+    converter.Convert("converted.mp4", options);
+}
+```
+
+Before v24.10:
+
 ```csharp
 // Load the source AVI file
 VideoLoadOptions loadOptions = new VideoLoadOptions();
@@ -156,6 +175,28 @@ Refer to the [API reference](https://reference.groupdocs.com/conversion/net/grou
 
 ## Extract audio track
 Extracting an audio track from a video is similar to converting video, however, you need to set the [ExtractAudioOnly](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property to `true` and specify the desired output format in the [AudioFormat](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property:
+
+With v24.10 and later:
+
+```csharp
+// Load the source AVI file
+VideoLoadOptions loadOptions = new VideoLoadOptions();
+loadOptions.SetVideoConnector(new VideoConnector());
+using (Converter converter = new Converter("sample_with_audio.avi", (LoadContext loadContext) => loadOptions))
+{
+    // Set the convert options
+    VideoConvertOptions options = new VideoConvertOptions
+    {
+        ExtractAudioOnly = true,
+        AudioFormat = AudioFileType.Ogg
+    };
+    // Convert to audio file
+    converter.Convert("extracted_audio.ogg", options);
+}
+```
+
+
+Before v24.10:
 
 ```csharp
 // Load the source AVI file

@@ -58,17 +58,22 @@ public class OcrConnector : IOcrConnector
         try
         {
             var api = new AsposeOcr();
+            var ocrInput = new OcrInput(InputType.SingleImage);
 
             using (MemoryStream ms = new MemoryStream())
             {
                 imageStream.Position = 0;
                 imageStream.CopyTo(ms);
-                var rectangles = api.GetRectangles(ms, AreasType.LINES, false);
-                var result = api.RecognizeImage(ms, new RecognitionSettings
-                {
-                    DetectAreas = false,
-                    RecognitionAreas = rectangles
-                });
+                ms.Position = 0;
+                ocrInput.Add(ms);
+
+                var detectedRectangles = api.DetectRectangles(ocrInput, AreasType.LINES, false).First();
+                var result = api.Recognize(ocrInput, new RecognitionSettings
+                    {
+                        DetectAreasMode = DetectAreasMode.COMBINE,
+                        RecognitionAreas = detectedRectangles.Rectangles
+                    })
+                    .First();
                 return CreateRecognizedImageFromResult(result);
             }
         }
@@ -83,17 +88,21 @@ public class OcrConnector : IOcrConnector
     private RecognizedImage CreateRecognizedImageFromResult(RecognitionResult result)
     {
         var lines = new List<TextLine>();
+
+
         for (var i = 0; i < result.RecognitionAreasText.Count; i++)
         {
-            var fragments = SplitToFragments(result.RecognitionAreasText[i].Trim('\r', '\n'),
-                result.RecognitionAreasRectangles[i]);
+            var rectangle = result.RecognitionAreasRectangles[i];
+            var s = result.RecognitionAreasText[i].Trim('\r', '\n');
+            var fragments = SplitToFragments(s, rectangle.X, rectangle.Y, rectangle.Width, rectangle.Height);
             lines.Add(new TextLine(fragments));
         }
 
         return new RecognizedImage(lines);
     }
 
-    private static List<TextFragment> SplitToFragments(string lineText, Rectangle boundingRect)
+    private static List<TextFragment> SplitToFragments(string lineText, int rectangleX, int rectangleY,
+        int rectangleWidth, int rectangleHeight)
     {
         var fragments = new List<TextFragment>();
         if (!string.IsNullOrEmpty(lineText))
@@ -102,7 +111,7 @@ public class OcrConnector : IOcrConnector
             bool isWhitespace = false;
             List<char> frag = new List<char>();
             int previousWidth = 0;
-            float fixWidthChar = boundingRect.Width / GetEquivalentLength(lineText);
+            float fixWidthChar = rectangleWidth / GetEquivalentLength(lineText);
             while (index < lineText.Length)
             {
                 if (frag.Count == 0)
@@ -121,8 +130,9 @@ public class OcrConnector : IOcrConnector
                         previousWidth =
                             (int)Math.Round(GetEquivalentLength(lineText.Substring(0, actualLength - frag.Count)) *
                                             fixWidthChar);
-                        fragments.Add(new TextFragment(fragment, new Rectangle(boundingRect.X + previousWidth,
-                            boundingRect.Y, fragWidth, boundingRect.Height)));
+                        fragments.Add(new TextFragment(fragment, new System.Drawing.Rectangle(
+                            rectangleX + previousWidth,
+                            rectangleY, fragWidth, rectangleHeight)));
                         fragIndex += fragment.Length;
                         frag.Clear();
                         isWhitespace = altIsWhitespace;
@@ -166,6 +176,25 @@ public class OcrConnector : IOcrConnector
 ```
 
 Once the `IOcrConnector` interface is implemented, the JPG to DOCX conversion code snippet looks like this:
+
+With v24.10 and later:
+
+```csharp
+// Load the source JPG file
+RasterImageLoadOptions loadOptions = new RasterImageLoadOptions();
+loadOptions.SetOcrConnector(new OcrConnector());
+
+using (Converter converter = new Converter("sample.jpg", (LoadContext loadContext) => loadOptions))
+{
+    // Set the convert options for DOCX format
+    WordProcessingConvertOptions options = new WordProcessingConvertOptions();
+    // Convert to DOCX format
+    converter.Convert("converted.docx", options);
+}
+```
+
+
+Before v24.10:
 
 ```csharp
 // Load the source JPG file

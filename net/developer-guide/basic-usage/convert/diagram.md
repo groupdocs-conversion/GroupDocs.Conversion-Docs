@@ -71,7 +71,7 @@ using (Converter converter = new Converter("sample.vsdx"))
 {
     // Set the convert options for VDW format
     var options = new DiagramConvertOptions {
-        Format = DiagramFileType.Vdw;
+        Format = DiagramFileType.Vdw
     };
     // Convert to VDW format
     converter.Convert("converted.vdw", options);

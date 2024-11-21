@@ -168,11 +168,28 @@ The code snippet for such conversion is a bit different from other conversions a
 
 Please check a complete code example of PDF to PNG conversion below:
 
+With v24.10 and later:
+
 ```csharp
 // Load the source PDF file
 using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 {
-    GroupDocs.Conversion.Contracts.SavePageStream getPageStream = page => new FileStream(string.Format("converted-page-{0}.png", page), FileMode.Create);
+    Func<SavePageContext, Stream> getPageStream = saveContext => new FileStream(string.Format("converted-page-{0}.png", saveContext.Page), FileMode.Create);
+
+    // Set the convert options for PNG format
+    var options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png };
+    // Convert to PNG format
+    converter.Convert(getPageStream, options);
+}
+```
+
+Before v24.10:
+
+```csharp
+// Load the source PDF file
+using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
+{
+    Func<int, Stream> getPageStream = page => new FileStream(string.Format("converted-page-{0}.png", page), FileMode.Create);
 
     // Set the convert options for PNG format
     var options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png };
@@ -183,10 +200,23 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 
 or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
 
+With v24.10 and later:
+
 ```csharp
 FluentConverter
     .Load("sample.pdf")
-    .ConvertByPageTo(page => new FileStream(string.Format("converted-page-{0}.png", page), FileMode.Create))
+    .ConvertByPageTo(saveContext => new FileStream(string.Format("converted-page-{0}.png", saveContext.Page), FileMode.Create))
+    .WithOptions(new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png })
+    .Convert();
+```
+
+
+Before v24.10:
+
+```csharp
+FluentConverter
+    .Load("sample.pdf")
+    .ConvertByPageTo((int page) => new FileStream(string.Format("converted-page-{0}.png", page), FileMode.Create))
     .WithOptions(new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png })
     .Convert();
 ```
@@ -197,11 +227,28 @@ FluentConverter
 
 The PDF to JPG conversion is another popular use case and the code snippet for it is similar to what was described before. The only difference is the output image files extension and the `ImageConvertOptions.Format` property that should be set to `ImageFileType.Jpg`:
 
+With v24.10 and later:
+
 ```csharp
 // Load the source PDF file
 using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 {
-    GroupDocs.Conversion.Contracts.SavePageStream getPageStream = page => new FileStream(string.Format("converted-page-{0}.jpg", page), FileMode.Create);
+    Func<SavePageContext, Stream> getPageStream = saveContext => new FileStream(string.Format("converted-page-{0}.jpg", saveContext.Page), FileMode.Create);
+
+    // Set the convert options for JPG format
+    var options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Jpg };
+    // Convert to JPG format
+    converter.Convert(getPageStream, options);
+}
+```
+
+Before v24.10:
+
+```csharp
+// Load the source PDF file
+using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
+{
+    Func<int, Stream> getPageStream = page => new FileStream(string.Format("converted-page-{0}.jpg", page), FileMode.Create);
 
     // Set the convert options for JPG format
     var options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Jpg };
@@ -212,10 +259,22 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 
 or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
 
+With v24.10 and later:
+
 ```csharp
 FluentConverter
     .Load("sample.pdf")
-    .ConvertByPageTo(page => new FileStream(string.Format("converted-page-{0}.jpg", page), FileMode.Create))
+    .ConvertByPageTo((SavePageContext saveContext) => new FileStream(string.Format("converted-page-{0}.jpg", saveContext.Page), FileMode.Create))
+    .WithOptions(new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Jpg })
+    .Convert();
+```
+
+Before v24.10:
+
+```csharp
+FluentConverter
+    .Load("sample.pdf")
+    .ConvertByPageTo((int page) => new FileStream(string.Format("converted-page-{0}.jpg", page), FileMode.Create))
     .WithOptions(new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Jpg })
     .Convert();
 ```
@@ -226,11 +285,28 @@ Tagged Image File Format (TIFF) is a little bit special since it can contain mul
 
 To save each page separately, use the [SavePageStream](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/savepagestream) delegate and specify the output format by using the [ImageFileType](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/imagefiletype) class:
 
+With v24.10 and later:
+
 ```csharp
 // Load the source PDF file
 using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 {
-    GroupDocs.Conversion.Contracts.SavePageStream getPageStream = page => new FileStream(string.Format("converted-page-{0}.tiff", page), FileMode.Create);
+    Func<SavePageContext, Stream> getPageStream = saveContext => new FileStream(string.Format("converted-page-{0}.tiff", saveContext.Page), FileMode.Create);
+
+    // Set the convert options for TIFF format
+    var options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Tiff };
+    // Convert to TIFF format
+    converter.Convert(getPageStream, options);
+}
+```
+
+Before v24.10:
+
+```csharp
+// Load the source PDF file
+using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
+{
+    Func<int, Stream> getPageStream = page => new FileStream(string.Format("converted-page-{0}.tiff", page), FileMode.Create);
 
     // Set the convert options for TIFF format
     var options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Tiff };
@@ -241,10 +317,22 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
 
 or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
 
+With v24.10 and later:
+
 ```csharp
 FluentConverter
     .Load("sample.pdf")
-    .ConvertByPageTo(page => new FileStream(string.Format("converted-page-{0}.tiff", page), FileMode.Create))
+    .ConvertByPageTo((SavePageContext saveContext) => new FileStream(string.Format("converted-page-{0}.tiff", saveContext.Page), FileMode.Create))
+    .WithOptions(new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Tiff })
+    .Convert();
+```
+
+Before v24.10:
+
+```csharp
+FluentConverter
+    .Load("sample.pdf")
+    .ConvertByPageTo((int page) => new FileStream(string.Format("converted-page-{0}.tiff", page), FileMode.Create))
     .WithOptions(new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Tiff })
     .Convert();
 ```
