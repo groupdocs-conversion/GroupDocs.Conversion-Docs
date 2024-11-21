@@ -23,8 +23,10 @@ toc: True
 
 The following code snippet shows how to convert a CAD document and convert only certain layouts:
 
+With v24.10 and later:
+
 ```csharp
-Contracts.Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
+Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CadLoadOptions
 {
     LayoutNames = new []{ "Layout1", "Layout3" }
 };
@@ -34,16 +36,12 @@ using (Converter converter = new Converter("with_layers_and_layouts.dwg", getLoa
     converter.Convert("converted.pdf", options);
 }
 ```
-
-### Specify width and height
-
-The following code snippet shows how to convert a CAD document and specify the width and height:
+Before v24.10:
 
 ```csharp
-Contracts.Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
+Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
 {
-    Width = 1920,
-    Height = 1080
+    LayoutNames = new []{ "Layout1", "Layout3" }
 };
 using (Converter converter = new Converter("with_layers_and_layouts.dwg", getLoadOptions))
 {
@@ -56,8 +54,23 @@ using (Converter converter = new Converter("with_layers_and_layouts.dwg", getLoa
 
 The following code snippet shows how to convert a CAD document and specify its desired background color:
 
+With v24.10 and later:
+
 ```csharp
-Contracts.Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
+Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CadLoadOptions
+{
+    BackgroundColor = System.Drawing.Color.White
+};
+using (Converter converter = new Converter("sample.dwg", getLoadOptions))
+{
+    PdfConvertOptions options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
+}
+```
+Before v24.10:
+
+```csharp
+Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
 {
     BackgroundColor = System.Drawing.Color.White
 };

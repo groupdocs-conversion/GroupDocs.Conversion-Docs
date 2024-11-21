@@ -18,16 +18,32 @@ toc: True
 
 ### Set Default Font
 
-GroupDocs.Conversion for .NET allows you to set a default font name when a font is not available in the document. You can use **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions/defaultfont)** property of **[NoteLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions)** class to set the default font name. In case **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions/defaultfont)** is not set the Times New Roman font will be used. The following code snippet shows how to set a default font name when converting from PDF into to Word processing document:
+GroupDocs.Conversion for .NET allows you to set a default font name when a font is not available in the document. You can use **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions/defaultfont)** property of **[NoteLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions)** class to set the default font name. In case **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/noteloadoptions/defaultfont)** is not set the Times New Roman font will be used. The following code snippet shows how to set a default font name when converting from Note into to PDF document:
+
+With v24.10 and later:
 
 ```csharp
-Contracts.Func<LoadOptions> getLoadOptions = () => new NoteLoadOptions
+Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new NoteLoadOptions
 {
     DefaultFont = "Helvetica"
 };
 using (Converter converter = new Converter("sample.one", getLoadOptions))
 {
-    WordProcessingConvertOptions options = new PdfConvertOptions();
+    PdfConvertOptions options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
+}
+```
+
+Before v24.10:
+
+```csharp
+Func<LoadOptions> getLoadOptions = () => new NoteLoadOptions
+{
+    DefaultFont = "Helvetica"
+};
+using (Converter converter = new Converter("sample.one", getLoadOptions))
+{
+    PdfConvertOptions options = new PdfConvertOptions();
     converter.Convert("converted.pdf", options);
 }
 ```
@@ -36,8 +52,28 @@ using (Converter converter = new Converter("sample.one", getLoadOptions))
 
 The following code snippet shows how to convert Note document and specify font substitution for missing fonts:
 
+With v24.10 and later:
+
 ```csharp
-Contracts.Func<LoadOptions> getLoadOptions = () => new NoteLoadOptions
+Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new NoteLoadOptions
+{
+    FontSubstitutes = new List<FontSubstitute>
+    {
+        FontSubstitute.Create("Tahoma", "Arial"),
+        FontSubstitute.Create("Times New Roman", "Arial"),
+    }
+};
+using (Converter converter = new Converter("sample.one", getLoadOptions))
+{
+    PdfConvertOptions options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
+}
+```
+
+Before v24.10:
+
+```csharp
+Func<LoadOptions> getLoadOptions = () => new NoteLoadOptions
 {
     FontSubstitutes = new List<FontSubstitute>
     {

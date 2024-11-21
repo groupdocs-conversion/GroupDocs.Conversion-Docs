@@ -12,8 +12,8 @@ toc: True
 GroupDocs.Conversion provides the [PdfConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions) class to give you control over conversion results. Along with [common convert options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}}) you can specify the following additional options via the [PdfConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions) class:
 
 *   [Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/) sets the desired file type the input document should be converted to.
-*   [Width](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/width) sets the desired image width after conversion.
-*   [Height](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/height) sets the desired image height after conversion.
+*   [PageWidth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/pagewidth) sets the desired image width after conversion.
+*   [PageHeight](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/pageheight) sets the desired image height after conversion.
 *   [Dpi](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/dpi) sets the desired page DPI after conversion
 *   [Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/password) when specified, the resulting document will be protected with the specified password.
 *   [MarginTop](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/margintop) sets the desired page top margin after conversion.
@@ -34,8 +34,8 @@ using (Converter converter = new Converter("sample.docx"))
         PagesCount = 1,
         Rotate = Rotation.On180,
         Dpi = 300,
-        Width = 1024,
-        Height = 768
+        Width = 595,
+        Height = 841
     };
     converter.Convert("converted.pdf", options);
 }

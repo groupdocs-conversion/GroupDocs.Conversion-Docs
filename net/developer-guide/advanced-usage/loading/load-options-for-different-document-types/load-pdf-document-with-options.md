@@ -27,8 +27,24 @@ toc: True
 
 The following code snippet shows how to convert a PDF document and flatten all fields:
 
+With v24.10 and later:
+
 ```csharp
-Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
+Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PdfLoadOptions
+{
+    FlattenAllFields = true
+};
+using (Converter converter = new Converter("sample.pdf", getLoadOptions))
+{
+    WordProcessingConvertOptions options = new WordProcessingConvertOptions();
+    converter.Convert("converted.docx", options);
+}
+```
+
+Before v24.10:
+
+```csharp
+Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
 {
     FlattenAllFields = true
 };
@@ -43,8 +59,24 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 
 The following code snippet shows how to convert a PDF document and hide annotations:
 
+With v24.10 and later:
+
 ```csharp
-Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
+Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PdfLoadOptions
+{
+    HidePdfAnnotations = true
+};
+using (Converter converter = new Converter("sample.pdf", getLoadOptions))
+{
+    WordProcessingConvertOptions options = new WordProcessingConvertOptions();
+    converter.Convert("converted.docx", options);
+}
+```
+
+Before v24.10:
+
+```csharp
+Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
 {
     HidePdfAnnotations = true
 };
@@ -59,8 +91,24 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 
 The following code snippet shows how to convert a PDF document and remove embedded files:
 
+With v24.10 and later:
+
 ```csharp
-Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
+Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PdfLoadOptions
+{
+    RemoveEmbeddedFiles = true
+};
+using (Converter converter = new Converter("sample.pdf", getLoadOptions))
+{
+    WordProcessingConvertOptions options = new WordProcessingConvertOptions();
+    converter.Convert("converted.docx", options);
+}
+```
+
+Before v24.10:
+
+```csharp
+Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
 {
     RemoveEmbeddedFiles = true
 };
@@ -75,8 +123,24 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 
 GroupDocs.Conversion for .NET allows you to set a default font name when a font is not available in the document. You can use the **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/defaultfont)** property of the **[PdfLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions)** class to set the default font name. In case the **[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/defaultfont)** property is not set the Times New Roman font will be used. The following code snippet shows how to set a default font name when converting from PDF to word-processing document:
 
+With v24.10 and later:
+
 ```csharp
-Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
+Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PdfLoadOptions
+{
+    DefaultFont = "Helvetica"
+};
+using (Converter converter = new Converter("sample.pdf", getLoadOptions))
+{
+    WordProcessingConvertOptions options = new WordProcessingConvertOptions();
+    converter.Convert("converted.docx", options);
+}
+```
+
+Before v24.10:
+
+```csharp
+Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
 {
     DefaultFont = "Helvetica"
 };
@@ -91,8 +155,28 @@ using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 
 The following code snippet shows how to convert a PDF document and specify font substitution for missing fonts:
 
+With v24.10 and later:
+
 ```csharp
-Contracts.Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
+Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PdfLoadOptions
+{
+    FontSubstitutes = new List<FontSubstitute>
+    {
+        FontSubstitute.Create("Tahoma", "Arial"),
+        FontSubstitute.Create("Times New Roman", "Arial"),
+    }
+};
+using (Converter converter = new Converter("sample.pdf", getLoadOptions))
+{
+    PdfConvertOptions options = new PdfConvertOptions();
+    converter.Convert("converted.docx", options);
+}
+```
+
+After v24.10:
+
+```csharp
+Func<LoadOptions> getLoadOptions = () => new PdfLoadOptions
 {
     FontSubstitutes = new List<FontSubstitute>
     {

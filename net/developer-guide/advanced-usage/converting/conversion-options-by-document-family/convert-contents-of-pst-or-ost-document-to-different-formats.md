@@ -13,31 +13,32 @@ GroupDocs.Conversion provides a flexible API to control the conversion of docume
 The following code snippet shows how to convert each constituent
  file of the Outlook Offline Data File (OST) to a different format based on its content type:
 
-{{< alert style="info" >}}From v22.12 and greater{{< /alert >}}
+With v24.10 and later:
+
 ```csharp
 var index = 1;
-LoadOptions LoadOptionsProvider(FileType sourceType)
+LoadOptions LoadOptionsProvider(LoadContext loadContext)
 {
-    if (sourceType == EmailFileType.Ost)
+    if (loadContext.SourceFormat == EmailFileType.Ost)
     {
         return new PersonalStorageLoadOptions
         {
-            ConvertOwned = true,
-            ConvertOwner = false,
             Folder = @"Root - Mailbox", 
             Depth = 2
         };
     }
     return null;
 }
-Stream ConvertedStreamProvider(FileType targetType)
+
+Stream ConvertedStreamProvider(SaveContext saveContext)
 {
-    string outputFile = $"converted-{index++}.{targetType.Extension}"
+    string outputFile = $"converted-{index++}.{saveContext.TargetFormat.Extension}";
     return new FileStream(outputFile, FileMode.Create);
 }
-ConvertOptions ConvertOptionsProvider(string sourceDocumentName, FileType sourceType)
+
+ConvertOptions ConvertOptionsProvider(ConvertContext convertContext)
 {
-    if (sourceType == EmailFileType.Msg)
+    if (convertContext.SourceFormat == EmailFileType.Msg)
     {
         return new PdfConvertOptions();
     }
@@ -51,18 +52,16 @@ using (var converter = new Converter("sample.ost", LoadOptionsProvider))
 
 ```
 
+Before v24.10:
 
-{{< alert style="info" >}}Before v22.12{{< /alert >}}
 ```csharp
 var index = 1;
 LoadOptions LoadOptionsProvider(FileType sourceType)
 {
-    if (sourceType == PersonalStorageFileType.Ost)
+    if (sourceType == EmailFileType.Ost)
     {
         return new PersonalStorageLoadOptions
         {
-            ConvertOwned = true,
-            ConvertOwner = false,
             Folder = @"Root - Mailbox", 
             Depth = 2
         };
@@ -71,7 +70,7 @@ LoadOptions LoadOptionsProvider(FileType sourceType)
 }
 Stream ConvertedStreamProvider(FileType targetType)
 {
-    string outputFile = $"converted-{index++}.{targetType.Extension}"
+    string outputFile = $"converted-{index++}.{targetType.Extension}";
     return new FileStream(outputFile, FileMode.Create);
 }
 ConvertOptions ConvertOptionsProvider(string sourceDocumentName, FileType sourceType)

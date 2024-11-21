@@ -34,8 +34,6 @@ using (Converter converter = new Converter("sample.pst"))
 }
 ```
 
-{{< alert style="warning" >}}This functionality is introduced in v20.6{{< /alert >}}
-
 ### Convert each personal storage content to different formats
 
 The following code snippet shows how to convert each personal storage content to a different format based on the content type: 
@@ -44,7 +42,55 @@ The following code snippet shows how to convert each personal storage content to
 *   DOCX attachments will be converted to PDF
 *   Emails and all other types will be converted to HTML
 
-{{< alert style="info" >}}From v22.12 and greater{{< /alert >}}
+With v24.10 and later:
+
+```csharp
+using (Converter converter = new Converter("sample.pst", (LoadContext loadContext) =>
+       {
+           if (loadContext.SourceFormat == EmailFileType.Ost)
+           {
+               return new PersonalStorageLoadOptions
+               {
+                   Folder = "Inbox",
+               };
+           }
+           if (loadContext.SourceFormat == EmailFileType.Msg)
+           {
+               return new EmailLoadOptions
+               {
+                   ConvertOwner = true,
+                   ConvertOwned = true,
+                   Depth = 2
+               };
+           }
+           return null;
+       }))
+{
+    int index = 0;
+    converter.Convert((SaveContext saveContext) =>
+    {
+        string fileName = $"converted_{++index}.{saveContext.TargetFormat.Extension}";
+        return new FileStream(fileName, FileMode.Create);
+    }, (ConvertContext convertContext) =>
+    {
+        if (convertContext.SourceFormat == ImageFileType.Jpg)
+        {
+            return new ImageConvertOptions
+            {
+                Format = ImageFileType.Png
+            };
+        }
+        if (convertContext.SourceFormat == WordProcessingFileType.Docx)
+        {
+            return new PdfConvertOptions();
+        }
+        return new WebConvertOptions();
+    });
+}
+```
+
+Before v24.10:
+
 ```csharp
 using (Converter converter = new Converter("sample.pst", (FileType fileType) =>
 {
@@ -89,52 +135,3 @@ using (Converter converter = new Converter("sample.pst", (FileType fileType) =>
     });
 }
 ```
-
-
-{{< alert style="info" >}}Before v22.12{{< /alert >}}
-```csharp
-using (Converter converter = new Converter("sample.pst", (FileType fileType) =>
-{
-    if (fileType == PersonalStorageFileType.Ost)
-    {
-        return new PersonalStorageLoadOptions
-        {
-            Folder = "Inbox",
-        };
-    }
-    if (fileType == EmailFileType.Msg)
-    {
-        return new EmailLoadOptions
-        {
-            ConvertOwner = true,
-            ConvertOwned = true,
-            Depth = 2
-        };
-    }
-    return null;
-}))
-{
-    int index = 0;
-    converter.Convert((FileType fileType) =>
-    {
-        string fileName = $"converted_{++index}.{fileType.Extension}";
-        return new FileStream(fileName, FileMode.Create);
-    }, (string sourceFileName, FileType fileType) =>
-    {
-        if (fileType == ImageFileType.Jpg)
-        {
-            return new ImageConvertOptions
-            {
-                Format = ImageFileType.Png
-            };
-        }
-        if (fileType == WordProcessingFileType.Docx)
-        {
-            return new PdfConvertOptions();
-        }
-        return new MarkupConvertOptions();
-    });
-}
-```
-
-{{< alert style="warning" >}}This functionality is introduced in v20.6{{< /alert >}}

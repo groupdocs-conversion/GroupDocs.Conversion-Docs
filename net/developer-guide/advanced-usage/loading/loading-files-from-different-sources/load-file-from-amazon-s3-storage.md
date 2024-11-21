@@ -14,7 +14,7 @@ The following code snippet shows how to convert a file from Amazon S3 Storage:
 public static void Run()
 {
     string key = "sample.docx";
-    string outputFile = Path.Combine("c:\output" , "converted.pdf");
+    string outputFile = Path.Combine(@"c:\output" , "converted.pdf");
     using (Converter converter = new Converter(() => DownloadFile(key)))
     {
         PdfConvertOptions options = new PdfConvertOptions();
