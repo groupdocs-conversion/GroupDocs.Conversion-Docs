@@ -12,6 +12,53 @@ GroupDocs.Conversion provides a flexible API to control the conversion of docume
 
 The following code snippet shows how to convert each attachment to a different format based on the attachment type:
 
+With v24.10 and later:
+
+```csharp
+var index = 1;
+LoadOptions LoadOptionsProvider(LoadContext loadContext)
+{
+    if (loadContext.SourceFormat == EmailFileType.Eml)
+    {
+        return new EmailLoadOptions
+        {
+            ConvertOwned = true, 
+            ConvertOwner = true,
+            Depth = 2
+        };
+    }
+    return null;
+}
+
+Stream ConvertedStreamProvider(SaveContext saveContext)
+{
+    string outputFile = $"converted-{index++}.{saveContext.TargetFormat.Extension}";
+    return new FileStream(outputFile, FileMode.Create);
+}
+
+ConvertOptions ConvertOptionsProvider(ConvertContext convertContext)
+{
+    if (convertContext.SourceFormat == EmailFileType.Eml)
+    {
+        return new WordProcessingConvertOptions();
+    }
+    
+    if (convertContext.SourceFormat == WordProcessingFileType.Txt)
+    {
+        return new PdfConvertOptions();
+    }
+    return new ImageConvertOptions();
+}
+
+using (var converter = new Converter("sample_with_attachments.eml", LoadOptionsProvider))
+{
+    converter.Convert(ConvertedStreamProvider, ConvertOptionsProvider);
+}
+
+```
+
+Before v24.10:
+
 ```csharp
 var index = 1;
 LoadOptions LoadOptionsProvider(FileType sourceType)
@@ -27,11 +74,13 @@ LoadOptions LoadOptionsProvider(FileType sourceType)
     }
     return null;
 }
+
 Stream ConvertedStreamProvider(FileType targetType)
 {
     string outputFile = $"converted-{index++}.{targetType.Extension}";
     return new FileStream(outputFile, FileMode.Create);
 }
+
 ConvertOptions ConvertOptionsProvider(string sourceDocumentName, FileType sourceType)
 {
     if (sourceType == EmailFileType.Eml)
@@ -51,7 +100,4 @@ using (var converter = new Converter("sample_with_attachments.eml", LoadOptionsP
     converter.Convert(ConvertedStreamProvider, ConvertOptionsProvider);
 }
 
-
 ```
-
-{{< alert style="warning" >}}This functionality is introduced in v20.6{{< /alert >}}

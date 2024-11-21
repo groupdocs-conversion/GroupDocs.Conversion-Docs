@@ -18,5 +18,3 @@ using (Converter converter = new Converter("data.json"))
     converter.Convert("converted.xlsx", options);
 }
 ```
-
-{{< alert style="warning" >}}This functionality is introduced in v21.5{{< /alert >}}

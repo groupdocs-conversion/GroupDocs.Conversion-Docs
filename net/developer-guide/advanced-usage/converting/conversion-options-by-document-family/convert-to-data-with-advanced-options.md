@@ -22,17 +22,3 @@ using (Converter converter = new Converter("sample.csv"))
     converter.Convert("converted.json", options);
 }
 ```
-
-
-{{< alert style="info" >}}Before version 22.12, the XML and JSON formats were specified using the `DataConvertOptions` class:{{< /alert >}}
-```csharp
-using (Converter converter = new Converter("sample.csv"))
-{
-    DataConvertOptions options = new DataConvertOptions
-    {
-        Format = DataFileType.Json
-    };
-    converter.Convert("converted.json", options);
-}
-```
-

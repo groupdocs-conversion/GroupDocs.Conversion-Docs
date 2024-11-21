@@ -14,7 +14,7 @@ The following code snippet shows how to convert a file from an URL:
 public static void Run()
 {
     string url = "https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET/blob/master/Examples/Resources/SampleFiles/sample.docx?raw=true";
-    string outputFile = Path.Combine("c:\output", "converted.pdf");
+    string outputFile = Path.Combine(@"c:\output", "converted.pdf");
     using (Converter converter = new Converter(() => GetRemoteFile(url)))
     {
         PdfConvertOptions options = new PdfConvertOptions();

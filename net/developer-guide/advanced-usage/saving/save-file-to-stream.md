@@ -17,6 +17,32 @@ The `document` parameter could be of `Func<Stream>`, `Func<FileType, Stream>`, `
 
 The following code snippet shows how to save a file to a stream:
 
+With v24.10 and later:
+
+```csharp
+public static void Run()
+{
+    Func<SaveContext, Stream> getOutputStream = saveContext => GetFileStream($"c:\\files\\converted.{saveContext.TargetFormat.Extension}");
+
+    using (Converter converter = new Converter("c:\\files\\sample.docx"))
+    {
+        PdfConvertOptions options = new PdfConvertOptions();
+        // Pass the output stream as parameter
+        converter.Convert(getOutputStream, options);
+    }
+
+    Console.WriteLine($"\nSource file converted successfully.\nSent file to stream.");
+}
+
+// Obtain the stream for the conversion output
+public static Stream GetFileStream(string outFile)
+{
+    return new FileStream(outFile, FileMode.OpenOrCreate);
+}
+```
+
+Before v24.10:
+
 ```csharp
 public static void Run()
 {
@@ -41,17 +67,41 @@ public static Stream GetFileStream(string outFile)
 
 You can also use the [ConvertTo(Func<Stream> convertedStreamProvider)](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.fluent/iconversionto/convertto/#convertto) [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}}) method to save a file to a stream:
 
+With v24.10 and later:
+
+```csharp
+public static void Run()
+{
+    Func<SaveContext, Stream> getOutputStream = saveContext => GetFileStream($"c:\\files\\converted.{saveContext.TargetFormat.Extension}");
+
+    FluentConverter
+        // Specify source file location
+        .Load("c:\\files\\sample.docx")
+        // Pass the output stream as parameter
+        .ConvertTo(getOutputStream)
+        .Convert();
+}
+
+// Obtain the stream for the conversion output
+public static Stream GetFileStream(string outFile)
+{
+    return new FileStream(outFile, FileMode.OpenOrCreate);
+}
+```
+
+Before v24.10:
+
 ```csharp
 public static void Run()
 {
     Func<Stream> getOutputStream = () => GetFileStream("c:\\files\\converted.pdf");
 
     FluentConverter
-    // Specify source file location
-    .Load("c:\\files\\sample.docx")
-    // Pass the output stream as parameter
-    .ConvertTo(getOutputStream)
-    .Convert();
+        // Specify source file location
+        .Load("c:\\files\\sample.docx")
+        // Pass the output stream as parameter
+        .ConvertTo(getOutputStream)
+        .Convert();
 }
 
 // Obtain the stream for the conversion output

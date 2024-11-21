@@ -23,16 +23,22 @@ internal class OcrConnector : IOcrConnector
         try
         {
             var api = new AsposeOcr();
+            var ocrInput = new OcrInput(InputType.SingleImage);
+
             using (MemoryStream ms = new MemoryStream())
             {
                 imageStream.Position = 0;
                 imageStream.CopyTo(ms);
-                var rectangles = api.GetRectangles(ms, AreasType.LINES,false);
-                var result = api.RecognizeImage(ms, new RecognitionSettings
-                {
-                    DetectAreas = false,
-                    RecognitionAreas = rectangles
-                });
+                ms.Position = 0;
+                ocrInput.Add(ms);
+
+                var detectedRectangles = api.DetectRectangles(ocrInput, AreasType.LINES, false).First();
+                var result = api.Recognize(ocrInput, new RecognitionSettings
+                    {
+                        DetectAreasMode = DetectAreasMode.COMBINE,
+                        RecognitionAreas = detectedRectangles.Rectangles
+                    })
+                    .First();
                 return CreateRecognizedImageFromResult(result);
             }
         }
@@ -40,19 +46,28 @@ internal class OcrConnector : IOcrConnector
         {
             Console.WriteLine("Aspose.OCR Recognition failed: {0}", ex);
         }
+
         return RecognizedImage.Empty;
     }
-    private RecognizedImage CreateRecognizedImageFromResul(RecognitionResult result)
+
+    private RecognizedImage CreateRecognizedImageFromResult(RecognitionResult result)
     {
         var lines = new List<TextLine>();
+
+
         for (var i = 0; i < result.RecognitionAreasText.Count; i++)
         {
-            var fragments = SplitToFragments(result.RecognitionAreasText[i]Trim('\r', '\n'), result.RecognitionAreasRectangles[i]);
+            var rectangle = result.RecognitionAreasRectangles[i];
+            var s = result.RecognitionAreasText[i].Trim('\r', '\n');
+            var fragments = SplitToFragments(s, rectangle.X, rectangle.Y, rectangle.Width, rectangle.Height);
             lines.Add(new TextLine(fragments));
         }
+
         return new RecognizedImage(lines);
     }
-    private static List<TextFragment> SplitToFragments(string lineText,Rectangle boundingRect)
+
+    private static List<TextFragment> SplitToFragments(string lineText, int rectangleX, int rectangleY,
+        int rectangleWidth, int rectangleHeight)
     {
         var fragments = new List<TextFragment>();
         if (!string.IsNullOrEmpty(lineText))
@@ -61,7 +76,7 @@ internal class OcrConnector : IOcrConnector
             bool isWhitespace = false;
             List<char> frag = new List<char>();
             int previousWidth = 0;
-            float fixWidthChar = boundingRect.Width / GetEquivalentLengt(lineText);
+            float fixWidthChar = rectangleWidth / GetEquivalentLength(lineText);
             while (index < lineText.Length)
             {
                 if (frag.Count == 0)
@@ -71,29 +86,40 @@ internal class OcrConnector : IOcrConnector
                 else
                 {
                     bool altIsWhitespace = (lineText[index] == ' ');
-                    if (index == lineText.Length - 1) frag.Add(lineTex[index]);
-                    if (altIsWhitespace != isWhitespace || (index ==lineText.Length - 1))
+                    if (index == lineText.Length - 1) frag.Add(lineText[index]);
+                    if (altIsWhitespace != isWhitespace || (index == lineText.Length - 1))
                     {
                         string fragment = new string(frag.ToArray());
-                        int fragWidth = (int)Math.Round(GetEquivalentLengt(fragment) * fixWidthChar);
-                        int actualLength = (index == lineText.Length - 1) ?lineText.Length : index;
-                        previousWidth = (int)Math.Round(GetEquivalentLengt(lineText.Substring(0, actualLength - frag.Count))* fixWidthChar);
-                        fragments.Add(new TextFragment(fragment, newRectangle(boundingRect.X + previousWidth,
-                            boundingRect.Y, fragWidth, boundingRect.Height));
+                        int fragWidth = (int)Math.Round(GetEquivalentLength(fragment) * fixWidthChar);
+                        int actualLength = (index == lineText.Length - 1) ? lineText.Length : index;
+                        previousWidth =
+                            (int)Math.Round(GetEquivalentLength(lineText.Substring(0, actualLength - frag.Count)) *
+                                            fixWidthChar);
+                        fragments.Add(new TextFragment(fragment, new System.Drawing.Rectangle(
+                            rectangleX + previousWidth,
+                            rectangleY, fragWidth, rectangleHeight)));
                         fragIndex += fragment.Length;
                         frag.Clear();
                         isWhitespace = altIsWhitespace;
                     }
                 }
+
                 frag.Add(lineText[index]);
                 index++;
             }
         }
+
         return fragments;
     }
-    private static readonly List<char> NarrowChars = new List<char>(new cha[] { ',', '.', ':', ';', '!', '|', '(', ')', '{', '}',
-        'l', 'i', 'I', '-', '+', 'f', 't', 'r'});
-    private static readonly List<char> WideChars = new List<char>(new cha[] { '\t', 'm', 'w', 'M', 'W' });
+
+    private static readonly List<char> NarrowChars = new List<char>(new char[]
+    {
+        ',', '.', ':', ';', '!', '|', '(', ')', '{', '}',
+        'l', 'i', 'I', '-', '+', 'f', 't', 'r'
+    });
+
+    private static readonly List<char> WideChars = new List<char>(new char[] { '\t', 'm', 'w', 'M', 'W' });
+
     private static float GetEquivalentLength(string lineText)
     {
         var length = 0F;
@@ -108,10 +134,28 @@ internal class OcrConnector : IOcrConnector
             else
                 length += 1F;
         }
+
         return length;
     }
 }
 ```
+
+With v24.10 and later
+
+Then provide **OcrConnector** instance in **[RasterImageLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/rasterimageloadoptions)**:
+
+```csharp
+var imageLoadOptions = new RasterImageLoadOptions();
+imageLoadOptions.SetOcrConnector(new OcrConnector());
+
+using (Converter converter = new Converter("sample.jpeg", (LoadContext loadContext) => imageLoadOptions))
+{
+    PdfConvertOptions options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
+}
+```
+
+Before v24.10:
 
 Then provide **OcrConnector** instance in **[ImageLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/imageloadoptions)**:
 
@@ -128,4 +172,3 @@ using (Converter converter = new Converter("sample.jpeg", () => imageLoadOptions
 
 {{< alert style="info" >}}The example uses Aspose.OCR but any OCR processing library could be used{{< /alert >}}
 
-{{< alert style="warning" >}}This functionality is introduced in v22.4{{< /alert >}}

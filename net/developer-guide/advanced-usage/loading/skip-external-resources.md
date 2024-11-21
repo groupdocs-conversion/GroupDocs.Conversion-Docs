@@ -21,6 +21,27 @@ To restrict the loading of external resources during the conversion, use the `Sk
 
 The following code snippet shows how to skip loading of external resources while loading an HTML document:
 
+With v24.10 and later:
+
+```csharp
+using GroupDocs.Conversion;
+using GroupDocs.Conversion.Options.Convert;
+using GroupDocs.Conversion.Options.Load;
+
+var loadOptions = new WebLoadOptions
+{
+    SkipExternalResources = true
+};
+using (var converter = new Converter("sample.html", (LoadContext loadContext) => loadOptions))
+{
+    var options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
+}
+```
+
+
+Before v24.10:
+
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.Options.Convert;
@@ -42,6 +63,27 @@ Sometimes you may want to skip loading most of the external resources, but still
 To allow-list specific resources during the conversion, use the `WhitelistedResources` property of the respective [WebLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/webloadoptions), [PresentationLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions), or [WordProcessingLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions) class. The property is effective when the `SkipExternalResources` property is enabled. The `WhitelistedResources` property accepts the string list containing the portions of URLs to be loaded while restricting the loading of other external resources. 
 
 The following code snippet shows how to load the JPG and JPEG images and any resources from the `example.com` domain while restricting any other external resources:
+
+With v24.10 and later:
+
+```csharp
+using GroupDocs.Conversion;
+using GroupDocs.Conversion.Options.Convert;
+using GroupDocs.Conversion.Options.Load;
+
+var loadOptions = new WebLoadOptions
+{
+    SkipExternalResources = true,    
+    WhitelistedResources = new List<string>() { "jpg", "jpeg", "example.com" }
+};
+using (var converter = new Converter("sample.html", (LoadContext loadContext) => loadOptions))
+{
+    var options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
+}
+```
+
+Before v24.10:
 
 ```csharp
 using GroupDocs.Conversion;

@@ -21,7 +21,7 @@ Here is a code that demonstrates how to enable caching for GroupDocs.Conversion
 ```csharp
 string cachePath = "c:\output\cache";
 FileCache cache = new FileCache(cachePath);
-Contracts.Func<ConverterSettings> settingsFactory = () => new ConverterSettings
+Func<ConverterSettings> settingsFactory = () => new ConverterSettings
 {
     Cache = cache
 };

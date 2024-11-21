@@ -14,7 +14,7 @@ The following code snippet shows how to convert a file from Azure Blob Storage:
 public static void Run()
 {
     string blobName = "sample.docx";
-    string outputFile = Path.Combine("c:\output", "converted.pdf");
+    string outputFile = Path.Combine(@"c:\output", "converted.pdf");
     using (Converter converter = new Converter(() => DownloadFile(blobName)))
     {
         PdfConvertOptions options = new PdfConvertOptions();

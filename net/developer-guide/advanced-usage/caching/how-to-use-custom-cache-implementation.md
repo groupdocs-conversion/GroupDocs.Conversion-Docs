@@ -48,7 +48,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage.Caching
             string outputDirectory = Constants.GetOutputDirectoryPath();
             
             RedisCache cache = new RedisCache("sample_");
-            Contracts.Func<ConverterSettings> settingsFactory = () => new ConverterSettings
+            Func<ConverterSettings> settingsFactory = () => new ConverterSettings
             {
                 Cache = cache
             };

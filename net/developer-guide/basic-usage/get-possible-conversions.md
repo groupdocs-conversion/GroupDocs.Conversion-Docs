@@ -55,9 +55,6 @@ foreach (var conversion in conversions.All)
 
 ```
 
-{{< alert style="warning" >}}Fluent syntax is introduced in v22.1{{< /alert >}}
-
-
 ## Get all available conversions 
 
 If it is required to programmatically obtain a collection of all supported conversions it is as easy as calling a static [GetAllPossibleConversions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/getallpossibleconversions) method of the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter) class.

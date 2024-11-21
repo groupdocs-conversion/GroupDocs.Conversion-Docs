@@ -16,7 +16,6 @@ GroupDocs.Conversion provides [WebConvertOptions](https://reference.groupdocs.c
 
 The following code snippet shows how to convert to HTML with advanced options
 
-{{< alert style="info" >}}From v22.12 and greater{{< /alert >}}
 ```csharp
 using (Converter converter = new Converter("sample.docx"))
 {
@@ -29,21 +28,6 @@ using (Converter converter = new Converter("sample.docx"))
     converter.Convert("converted.html", options);
 }
 ```
-
-{{< alert style="info" >}}Before v22.12{{< /alert >}}
-```csharp
-using (Converter converter = new Converter("sample.docx"))
-{
-    MarkupConvertOptions options = new MarkupConvertOptions
-    {
-        PageNumber = 2,
-        PagesCount = 1,
-        FixedLayout = true
-    };
-    converter.Convert("converted.html", options);
-}
-```
-
 
 ### Control page borders visibility
 
@@ -60,5 +44,3 @@ using (var converter = new Converter(source))
     converter.Convert("converted.html" , options);
 }
 ```
-
-{{< alert style="warning" >}}This functionality is introduced in v20.3{{< /alert >}}

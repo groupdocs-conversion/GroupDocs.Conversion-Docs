@@ -14,11 +14,27 @@ GroupDocs.Conversion provides a flexible API to control the conversion of archiv
 The following code snippet shows how to convert each constituent
  file of a RAR archive into a PDF format and then compress them to a single ZIP archive:
 
-```csharp
-var converter = new Converter();
+With v24.10 and later:
 
-converter.Load("sample.rar")
-    .ConvertTo(p => new MemoryStream()).WithOptions(new PdfConvertOptions())
+```csharp
+FluentConverter.Load("sample.rar")
+    .ConvertTo((SaveContext saveContext) => new MemoryStream()).WithOptions(new PdfConvertOptions())
+    .Compress(new CompressionConvertOptions { Format = CompressionFileType.Zip }).OnCompressionCompleted(
+        compressedStream =>
+        {
+            using (var fs = new FileStream("converted.zip", FileMode.Create))
+            {
+                compressedStream.CopyTo(fs);
+            }
+        })
+    .Convert();
+```
+
+Before v24.10:
+
+```csharp
+FluentConverter.Load("sample.rar")
+    .ConvertTo(() => new MemoryStream()).WithOptions(new PdfConvertOptions())
     .Compress(new CompressionConvertOptions { Format = CompressionFileType.Zip }).OnCompressionCompleted(
         compressedStream =>
         {
@@ -34,11 +50,11 @@ converter.Load("sample.rar")
 The following code snippet shows how to convert each constituent
  file of a ZIP archive to a PDF format and then compress them as password-protected ZIP archive:
 
-```csharp
-var converter = new Converter();
+With v24.10 and later:
 
-converter.Load("sample.zip")
-    .ConvertTo(p => new MemoryStream()).WithOptions(new PdfConvertOptions())
+```csharp
+FluentConverter.Load("sample.zip")
+    .ConvertTo((SaveContext saveContext) => new MemoryStream()).WithOptions(new PdfConvertOptions())
     .Compress(new CompressionConvertOptions 
     { 
         Format = CompressionFileType.Zip,
@@ -54,6 +70,22 @@ converter.Load("sample.zip")
     .Convert();
 ```
 
+Before v24.10:
 
-
-
+```csharp
+FluentConverter.Load("sample.zip")
+    .ConvertTo(() => new MemoryStream()).WithOptions(new PdfConvertOptions())
+    .Compress(new CompressionConvertOptions 
+    { 
+        Format = CompressionFileType.Zip,
+        Password = "123"
+    }).OnCompressionCompleted(
+        compressedStream =>
+        {
+            using (var fs = new FileStream("converted.zip", FileMode.Create))
+            {
+                compressedStream.CopyTo(fs);
+            }
+        })
+    .Convert();
+```

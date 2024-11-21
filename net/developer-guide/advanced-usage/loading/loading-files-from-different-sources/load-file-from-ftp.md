@@ -13,7 +13,7 @@ The following code snippet shows how to convert a file from FTP:
 ```csharp
 public static void Run()
 {
-    string outputFile = Path.Combine("c:\output", "converted.pdf");
+    string outputFile = Path.Combine(@"c:\output", "converted.pdf");
     string filePath = "ftp://localhost/sample.doc";
     using (Converter converter = new Converter(() => GetFileFromFtp(filePath)))
     {

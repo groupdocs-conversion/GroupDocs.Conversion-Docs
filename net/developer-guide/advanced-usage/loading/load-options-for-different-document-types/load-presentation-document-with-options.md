@@ -25,8 +25,24 @@ toc: True
 
 Like many other Microsoft Office applications PowerPoint provides the "Comments" feature to simplify the presentation review. By default, the Comments pane will be present in a converted document. If you want to hide comments, set the [HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/hidecomments) property to *true* as shown in a code snippet below:
 
+With v24.10 and later:
+
 ```csharp
-Contracts.Func<LoadOptions> getLoadOptions = () => new PresentationLoadOptions
+Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PresentationLoadOptions
+{
+    HideComments = true
+};
+using (Converter converter = new Converter("sample.pptx", getLoadOptions))
+{
+    PdfConvertOptions options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
+}
+```
+
+Before v24.10:
+
+```csharp
+Func<LoadOptions> getLoadOptions = () => new PresentationLoadOptions
 {
     HideComments = true
 };
@@ -43,8 +59,29 @@ Original PowerPoint presentations may use some specific and non-standard fonts f
 
 The following code snippet shows how to convert a PPTX presentation and specify substitutions for missing fonts:
 
+With v24.10 and later:
+
 ```csharp
-Contracts.Func<LoadOptions> getLoadOptions = () => new PresentationLoadOptions
+Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PresentationLoadOptions
+{
+    DefaultFont = "Helvetica",
+    FontSubstitutes = new List<FontSubstitute>
+    {
+       FontSubstitute.Create("Tahoma", "Arial"),
+       FontSubstitute.Create("Times New Roman", "Arial"),
+    }
+};
+using (Converter converter = new Converter("sample.pptx", getLoadOptions))
+{
+    PdfConvertOptions options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
+}
+```
+
+Before v24.10:
+
+```csharp
+Func<LoadOptions> getLoadOptions = () => new PresentationLoadOptions
 {
     DefaultFont = "Helvetica",
     FontSubstitutes = new List<FontSubstitute>
@@ -66,8 +103,24 @@ Just like you can show or hide slides in a Microsoft PowerPoint presentation man
 
 The following code snippet shows how to convert a PPTX presentation including the hidden slides:
 
+With v24.10 and later:
+
 ```csharp
-Contracts.Func<LoadOptions> getLoadOptions = () => new PresentationLoadOptions
+Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PresentationLoadOptions
+{
+    ShowHiddenSlides = true
+};
+using (Converter converter = new Converter("sample.pptx", getLoadOptions))
+{
+    PdfConvertOptions options = new PdfConvertOptions();
+    converter.Convert("converted.pdf", options);
+}
+```
+
+Before v24.10:
+
+```csharp
+Func<LoadOptions> getLoadOptions = () => new PresentationLoadOptions
 {
     ShowHiddenSlides = true
 };

@@ -17,7 +17,7 @@ GroupDocs.Conversion provides the [SpreadsheetConvertOptions](https://reference
 The following code snippet shows how to convert to Spreadsheet with advanced options:
 
 ```csharp
-using (Converter converter = new Converter("sample.docx", getLoadOptions))
+using (Converter converter = new Converter("sample.docx"))
 {
     SpreadsheetConvertOptions options = new SpreadsheetConvertOptions
     {
