@@ -186,7 +186,7 @@ class OcrConnector implements IOcrConnector {
 {{< /tab >}}
 {{< tab "converted.pdf" >}}  
 {{< tab-text >}}
-`converted.pdf` is the expected output PDF file. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/image-ocr/professional-services.pdf) to download it.
+`converted.pdf` is the expected output PDF file. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/image-ocr/converted.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
