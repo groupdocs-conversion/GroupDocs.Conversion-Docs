@@ -39,11 +39,11 @@ This native Java API ensures precise conversion of both documents and image file
 <ul>
 	<li><a href='{{< ref "product-overview" >}}'>Product overview</a></li>
 	<li><a href='{{< ref "conversion/java/getting-started/features-overview" >}}'>Main features</a></li>
-	<li><a href='{{< ref "conversion/java/getting-started/supported-document-formats.md" >}}'>Supported file formats</a></li>
+	<li><a href='{{< ref "conversion/java/supported-document-formats.md" >}}'>Supported file formats</a></li>
 </ul>
 <p>GET STARTED</p>
 <ul>
-	<li><a href='{{< ref "conversion/java/getting-started/system-requirements.md" >}}'>System requirements</a></li>
+	<li><a href='{{< ref "conversion/java/system-requirements.md" >}}'>System requirements</a></li>
 	<li><a href='{{< ref "conversion/java/getting-started/installation.md" >}}'>Installation</a></li>
 	<li><a href='{{< ref "conversion/java/getting-started/licensing-and-subscription.md" >}}'>Licensing</a></li>
 </ul>

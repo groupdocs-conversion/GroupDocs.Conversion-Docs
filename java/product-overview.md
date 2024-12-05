@@ -32,7 +32,7 @@ Using GroupDocs.Conversion for Java in your project gives you the following bene
 
 ### Rich set of document conversion features
 -->
-- Thousands of different file conversion pairs for [multiple supported formats:]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}}) office documents, presentations, spreadsheets, images and much more.
+- Thousands of different file conversion pairs for [multiple supported formats:]({{< ref "conversion/java/supported-document-formats.md" >}}) office documents, presentations, spreadsheets, images and much more.
 - Independence from other applications. You can convert files without other third-party applications like Microsoft Office or Adobe Acrobat. 
 - Ability to [convert whole document]({{< ref "conversion/java/developer-guide/basic-usage/convert" >}}) or [specific pages range]({{< ref "conversion/java/developer-guide/advanced-usage/converting/common-conversion-options/convert-specific-pages.md" >}}).
 - [Place watermarks]({{< ref "conversion/java/developer-guide/advanced-usage/converting/common-conversion-options/add-watermark.md" >}}) at document pages during conversion.
@@ -44,7 +44,7 @@ Using GroupDocs.Conversion for Java in your project gives you the following bene
 - Scalability. Shipped as a single Java package that can be deployed with any Java application by [installing via Maven]({{< ref "conversion/java/getting-started/installation.md" >}}). You do not need to worry about any other services or modules.
 - Simple and intuitive [public API](https://reference.groupdocs.com/conversion/java). All methods are doing what you would expect from them and nothing more.
 
-You can use GroupDocs.Conversion across [multiple platforms and operation systems]({{< ref "conversion/java/getting-started/system-requirements" >}}):
+You can use GroupDocs.Conversion across [multiple platforms and operation systems]({{< ref "conversion/java/system-requirements" >}}):
 
 * Windows, Linux, and macOS
 * 32-bit or 64-bit operating system
@@ -54,7 +54,7 @@ You can use GroupDocs.Conversion across [multiple platforms and operation system
 
 If you are new to GroupDocs.Conversion, see the following topics first:
 
-* [System requirements]({{< ref "conversion/java/getting-started/system-requirements" >}})
+* [System requirements]({{< ref "conversion/java/system-requirements" >}})
 * [Installation]({{< ref "conversion/java/getting-started/installation" >}})
 * [Licensing]({{< ref "conversion/java/getting-started/licensing-and-subscription" >}})
 * [Basic usage]({{< ref "/conversion/java/developer-guide/basic-usage/" >}})
@@ -75,7 +75,7 @@ If you encounter an issue while using GroupDocs.Conversion or have a technical q
 
 ### Platform Independence
 
-GroupDocs.Conversion for Java covers most of the popular development environments and deployment platforms. Its API can be used to develop applications for a wide range of operating systems, such as Windows, Linux, and Mac OS, and various platforms. Read ["System Requirements"]({{< ref "conversion/java/getting-started/system-requirements" >}}) for more details.
+GroupDocs.Conversion for Java covers most of the popular development environments and deployment platforms. Its API can be used to develop applications for a wide range of operating systems, such as Windows, Linux, and Mac OS, and various platforms. Read ["System Requirements"]({{< ref "conversion/java/system-requirements" >}}) for more details.
 
 You can use GroupDocs.Conversion for Java to build any type of 32-bit or 64-bit Java application.
 

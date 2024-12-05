@@ -2,12 +2,12 @@
 id: system-requirements
 url: conversion/java/system-requirements
 title: System requirements
-weight: 3
+weight: 2
 description: "GroupDocs.Conversion for Java does not require any external software or third party tool to be installed."
 keywords: conversion
 productName: GroupDocs.Conversion for Java
-hideChildren: False
-toc: True
+hideChildren: false
+toc: true
 ---
 {{< alert style="info" >}}
 

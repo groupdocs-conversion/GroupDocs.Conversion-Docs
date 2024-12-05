@@ -2,7 +2,7 @@
 id: developer-guide
 url: conversion/java/developer-guide
 title: Developer guide
-weight: 3
+weight: 5
 description: "Explains GroupDocs.Conversion for Java converter features and shows how to convert PDF, Word, Excel, PowerPoint documents, PNG, JPG images and other formats inside your Java applications"
 keywords: GroupDocs.Conversion Developer Guide, GroupDocs.Conversion Java Developer Guide, Using GroupDocs.Conversion for Java, GroupDocs.Conversion for Java use cases
 productName: GroupDocs.Conversion for Java

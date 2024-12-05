@@ -2,7 +2,7 @@
 id: features-overview
 url: conversion/java/features-overview
 title: Features overview
-weight: 1
+weight: 2
 description: "Salient features of file conversion API using Java are described in this article"
 keywords: file conversion
 productName: GroupDocs.Conversion for Java
@@ -11,7 +11,7 @@ toc: True
 ---
 ## File conversion
 
-GroupDocs.Conversion main feature is the ability to convert any document from any of supported source document formats into any supported target format (check the list of  [supported formats]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}})). All these conversions are possible without any additional software installed (like MS Office, Apache Open Office, Adobe Acrobat Reader and others).
+GroupDocs.Conversion main feature is the ability to convert any document from any of supported source document formats into any supported target format (check the list of  [supported formats]({{< ref "conversion/java/supported-document-formats.md" >}})). All these conversions are possible without any additional software installed (like MS Office, Apache Open Office, Adobe Acrobat Reader and others).
 GroupDocs.Conversion provides a flexible set of settings to customize the conversion process to fulfill your needs:
 
 ### Convert specific document page(s)
