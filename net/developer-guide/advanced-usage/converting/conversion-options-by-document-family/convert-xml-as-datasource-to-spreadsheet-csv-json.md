@@ -1,7 +1,7 @@
 ---
 id: convert-xml-as-datasource-to-spreadsheet-csv-json
 url: conversion/net/convert-xml-as-datasource-to-spreadsheet-csv-json
-title: Convert XML as a data source to a spreadsheet, CSV or JSON
+title: Convert XML as a data source to a Spreadsheet, CSV or JSON
 weight: 13
 description: "Learn how to convert a XML document as a data source to a spreadsheet, CSV or JSON using GroupDocs.Conversion for .NET."
 keywords: XML to Excel, XML to a spreadsheet, XML as a data source to XLSX, Convert XML to Excel, XML to CSV, XML to JSON

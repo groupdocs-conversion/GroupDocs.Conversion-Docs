@@ -1,6 +1,6 @@
 ---
-id: convert-xml-to-pdf
-url: conversion/net/convert-xml-to-pdf
+id: convert-xml-to-pdf-with-xsl-fo
+url: conversion/net/convert-xml-to-pdf-with-xsl-fo
 title: Convert XML to PDF Using XSL-FO
 weight: 14
 description: "Learn how to convert a XML document to PDF using XSL-FO with GroupDocs.Conversion for .NET."
