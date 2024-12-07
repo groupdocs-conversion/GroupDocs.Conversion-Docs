@@ -39,7 +39,7 @@ using (var converter = new Converter("books.xml", (LoadContext loadContext) => n
     var options = new WebConvertOptions();
     converter.Convert("converted.html", options);
 }
-
+```
 
 ### 2. Convert XML to Wordprocessing
 
@@ -54,7 +54,7 @@ using (var converter = new Converter("books.xml", (LoadContext loadContext) => n
     var options = new WordProcessingConvertOptions();
     converter.Convert("converted.docx", options);
 }
-
+```
 
 ### 3. Convert XML to PDF
 
@@ -69,3 +69,4 @@ using (var converter = new Converter("books.xml", (LoadContext loadContext) => n
     var options = new PdfConvertOptions();
     converter.Convert("converted.pdf", options);
 }
+```
