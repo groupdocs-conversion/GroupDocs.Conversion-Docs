@@ -53,7 +53,7 @@ public static void main(String[] args){
 {{< /tab >}}
 {{< tab "skip_external_resources.pdf" >}}  
 {{< tab-text >}}
-`skip_external_resources.pdf` is converted PDF document. Click [here](/conversion/python-net/_sample_files/developer-guide/loading-documents/skip-loading-external-resources/skip_external_resources.pdf) to download it.
+`skip_external_resources.pdf` is converted PDF document. Click [here](/conversion/java/_sample_files/developer-guide/loading-documents/skip-loading-external-resources/skip_external_resources.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
@@ -97,7 +97,7 @@ public static void main(String[] args){
 {{< /tab >}}
 {{< tab "whitelisted_resources.pdf" >}}  
 {{< tab-text >}}
-`whitelisted_resources.pdf` is converted PDF document. Click [here](/conversion/python-net/_sample_files/developer-guide/loading-documents/skip-loading-external-resources/whitelisted_resources.pdf) to download it.
+`whitelisted_resources.pdf` is converted PDF document. Click [here](/conversion/java/_sample_files/developer-guide/loading-documents/skip-loading-external-resources/whitelisted_resources.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
