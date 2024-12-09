@@ -18,15 +18,48 @@ To load and convert a password-protected document, follow these steps:
 
 The following code snippet shows how to convert password-protected document:
 
+{{< tabs "code-example">}}
+{{< tab "loadPasswordProtectedFile.java" >}}  
 ```java
 import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.examples.Constants;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.options.load.WordProcessingLoadOptions;
-...
-WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-loadOptions.setPassword("12345");
 
-Converter converter = new Converter("sample_with_password.docx", loadOptions);
-PdfConvertOptions options = new PdfConvertOptions();
-converter.convert("converted.pdf", options);
+public static void loadPasswordProtectedFile() {
+    // Set file path
+    String filePath = "./password-protected.docx"
+    
+    // Instantiate load options and set password
+    WordProcessingLoadOptions loadOptions = WordProcessingLoadOptions()
+    loadOptions.setPassword("12345");
+
+    // Specify source file path and load options
+    Converter converter = new Converter(filePath, () -> loadOptions);
+
+    // Specify output file location and convert options
+    String outputPath = "./password-protected.pdf"
+    PdfConvertOptions convertOptions = PdfConvertOptions()
+    convertOptions.setPassword("67890");
+
+    // Convert and save to output path
+    converter.convert(outputPath, convertOptions)
+}
+
+public static void main(String[] args){
+    loadPasswordProtectedFile();
+}
+
 ```
+{{< /tab >}}
+{{< tab "password-protected.docx" >}}  
+{{< tab-text >}}
+`password-protected.docx` is sample file used in this example. Click [here](/conversion/python-net/_sample_files/developer-guide/loading-documents/load-password-protected-file/password-protected.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "password-protected.pdf" >}}  
+{{< tab-text >}}
+`password-protected.pdf` is converted PDF document. Click [here](/conversion/python-net/_sample_files/developer-guide/loading-documents/load-password-protected-file/password-protected.pdf) to download it. The file is password-protected. Password is `67890`.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}

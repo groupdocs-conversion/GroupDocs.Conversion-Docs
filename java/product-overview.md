@@ -56,7 +56,7 @@ If you are new to GroupDocs.Conversion, see the following topics first:
 
 * [System requirements]({{< ref "conversion/java/system-requirements" >}})
 * [Installation]({{< ref "conversion/java/getting-started/installation" >}})
-* [Licensing]({{< ref "conversion/java/getting-started/licensing-and-subscription" >}})
+* [Licensing]({{< ref "conversion/java/licensing-and-subscription" >}})
 * [Basic usage]({{< ref "/conversion/java/developer-guide/basic-usage/" >}})
 
 ## Technical support
@@ -95,7 +95,7 @@ GroupDocs.Conversion for Java public API was designed to be simple and intuitive
 
 ## Pricing and Policies
 
-Please visit the ["Licensing and Subscription"]({{< ref "conversion/java/getting-started/licensing-and-subscription.md" >}}) page for information on licenses and review the ["Pricing Information"](https://purchase.groupdocs.com/pricing/conversion/java) page for details on pricing.
+Please visit the ["Licensing and Subscription"]({{< ref "conversion/java/licensing-and-subscription.md" >}}) page for information on licenses and review the ["Pricing Information"](https://purchase.groupdocs.com/pricing/conversion/java) page for details on pricing.
 
 ## Technical Support
 

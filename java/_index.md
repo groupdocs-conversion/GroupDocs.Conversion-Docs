@@ -45,7 +45,7 @@ This native Java API ensures precise conversion of both documents and image file
 <ul>
 	<li><a href='{{< ref "conversion/java/system-requirements.md" >}}'>System requirements</a></li>
 	<li><a href='{{< ref "conversion/java/getting-started/installation.md" >}}'>Installation</a></li>
-	<li><a href='{{< ref "conversion/java/getting-started/licensing-and-subscription.md" >}}'>Licensing</a></li>
+	<li><a href='{{< ref "conversion/java/licensing-and-subscription.md" >}}'>Licensing</a></li>
 </ul>
 <--->
 <p><b>Developer Guide</b></p>
@@ -62,7 +62,7 @@ This native Java API ensures precise conversion of both documents and image file
 <p>HOW-TO GUIDES</p>
 <ul>
 	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/get-possible-conversions" >}}'>Get supported conversions</a></li>
-	<li><a href='{{< ref "conversion/java/developer-guide/advanced-usage/loading/loading-documents-from-different-sources" >}}'>Load files from different sources</a></li>
+	<li><a href='{{< ref "conversion/java/developer-guide/loading-documents/loading-documents-from-different-sources" >}}'>Load files from different sources</a></li>
 	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/get-document-info" >}}'>Retrieve document information</a></li>
 	<li><a href='{{< ref "conversion/java/developer-guide/advanced-usage/converting/common-conversion-options/add-watermark" >}}'>Add watermarks</a></li>
 	<li><a href='{{< ref "conversion/java/developer-guide/advanced-usage/caching" >}}'>Cache rendering results</a></li>

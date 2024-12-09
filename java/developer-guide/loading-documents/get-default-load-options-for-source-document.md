@@ -2,7 +2,7 @@
 id: get-default-load-options-for-source-format
 url: conversion/java/get-default-load-options-for-source-format
 title: Get default load options for a source format
-weight: 3
+weight: 1
 description: "In this article, you will learn how to get default load options for a source format with GroupDocs.Conversion for Java API."
 keywords: Get default load options, Load options
 productName: GroupDocs.Conversion for Java
@@ -21,13 +21,32 @@ To get default options, follow these steps:
 The following code snippet shows how to get default load options for a Word processing document:
 
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.PossibleConversions;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import com.groupdocs.conversion.options.load.WordProcessingLoadOptions;
+
+public static void getDefaultLoadOptions()
+{
+    // Step 1: Retrieve possible conversions for a DOCX extension
     PossibleConversions possibleConversions = Converter.getPossibleConversions("docx");
+
+    // Step 2: Use the default load options 
     WordProcessingLoadOptions loadOptions = (WordProcessingLoadOptions) possibleConversions.getLoadOptions();
     loadOptions.setPassword("12345");
 
+    // Step 3: Specify source file path and load options
     Converter converter = new Converter("password_protected.docx", () -> loadOptions);
-    {
-        PdfConvertOptions convertOptions = new PdfConvertOptions();
-        converter.convert("outputFile.pdf", convertOptions);
-    }
+
+    // Step 4: Specify output file location and convert options
+    PdfConvertOptions convertOptions = new PdfConvertOptions();
+
+    // Step 5: Convert and save to output path
+    converter.convert("outputFile.pdf", convertOptions);
+
+}
+
+public static void main(String[] args){
+    getDefaultLoadOptions();
+}
 ```
