@@ -29,7 +29,7 @@ import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.options.load.CadLoadOptions;
 
 public class ConvertCadAndSpecifyLayouts {
-    public static void convertCadAndSpecifyLayouts() {
+    public static void convert() {
         CadLoadOptions loadOptions =  new CadLoadOptions();
         loadOptions.setLayoutNames(new  String[]{ "Layout1", "Layout3" });
 
@@ -40,7 +40,7 @@ public class ConvertCadAndSpecifyLayouts {
     }
 
     public static void main(String[] args){
-        convertCadAndSpecifyLayouts();
+        convert();
     }
 }
 ```
