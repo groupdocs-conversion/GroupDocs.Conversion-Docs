@@ -11,12 +11,12 @@ hideChildren: False
 This documentation outlines how to load CSV documents with configurable options using [GroupDocs.Conversion for Java](https://products.groupdocs.com/conversion/java/). It enables developers to handle and convert CSV files into various target formats (e.g., PDF, XLSX, DOCX) while providing fine-grained control over the loading and rendering process. The [CsvLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions) class gives you the ability to set the following options:
 | Option | Description |
 |--------|-------------|
-| **[setSeparator()](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#setSeparator(char))** | Specifies the delimiter. |
-| **[setMultiEncoded()](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#setMultiEncoded(boolean))** | Whether *true*, this means that the document contains several encodings. |
-| **[setFormula()](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#hasFormula())** | Specifies that if text starts with "=" it should be parsed as a formula. |
-| **[setConvertNumericData()](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#setConvertNumericData(boolean))** | Specifies that strings with digits should be parsed as numbers. |
-| **[setConvertDateTimeData()](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#setConvertDateTimeData(boolean))** | Specifies that date/time strings should be detected and parsed to DateTime. |
-| **[setEncoding()](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#setEncoding(java.nio.charset.Charset))** | Specifies the encoding to be used during loading. |
+| [**setSeparator()**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#setSeparator(char)) | Specifies the delimiter. |
+| [**setMultiEncoded()**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#setMultiEncoded(boolean)) | Whether *true*, this means that the document contains several encodings. |
+| [**setFormula()**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#hasFormula()) | Specifies that if text starts with "=" it should be parsed as a formula. |
+| [**setConvertNumericData()**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#setConvertNumericData(boolean)) | Specifies that strings with digits should be parsed as numbers. |
+| [**setConvertDateTimeData()**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#setConvertDateTimeData(boolean)) | Specifies that date/time strings should be detected and parsed to DateTime. |
+| [**setEncoding()**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/CsvLoadOptions#setEncoding(java.nio.charset.Charset)) | Specifies the encoding to be used during loading. |
 
 ### Control behavior of converting date/time and numeric data
 

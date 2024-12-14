@@ -11,9 +11,9 @@ hideChildren: False
 This documentation explains how to load Note documents, such as OneNote files, using GroupDocs.Conversion for Java with [NoteLoadOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions) class. The API allows developers to specify parameters for processing Note documents, including page ranges and rendering settings, enabling precise control over conversion to formats like PDF, PNG, or DOCX. The following options could be set:
 | Option | Description |
 |--------|-------------|
-| **[setDefaultFont()](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions#setDefaultFont(java.lang.String))** | Specifies a default font for Note document. The specified font will be used if a font is missing. |
-| **[setFontSubstitutes()](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions#setFontSubstitutes(java.util.List))** | Specifies substitutes specific fonts from the Note document. |
-| **[setPassword()](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions#setPassword(java.lang.String))** | Specifies a password to unlock the protected document. |
+| [**setDefaultFont()**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions#setDefaultFont(java.lang.String)) | Specifies a default font for Note document. The specified font will be used if a font is missing. |
+| [**setFontSubstitutes()**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions#setFontSubstitutes(java.util.List)) | Specifies substitutes specific fonts from the Note document. |
+| [**setPassword()**](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.load/NoteLoadOptions#setPassword(java.lang.String)) | Specifies a password to unlock the protected document. |
 
 ### Specify font substitution
 
@@ -58,7 +58,7 @@ public class ConvertNoteBySpecifyingFontSubstitution {
 {{< /tab >}}
 {{< tab "converted_with_font_substitution.pdf" >}}  
 {{< tab-text >}}
-`converted_with_font_substitution.pdf` is converted DOCX document. Click [here](/conversion/java/_sample_files/developer-guide/loading-documents/load-note-document-with-options/converted_with_font_substitution.pdf) to download it.
+`converted_with_font_substitution.pdf` is converted PDF document. Click [here](/conversion/java/_sample_files/developer-guide/loading-documents/load-note-document-with-options/converted_with_font_substitution.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

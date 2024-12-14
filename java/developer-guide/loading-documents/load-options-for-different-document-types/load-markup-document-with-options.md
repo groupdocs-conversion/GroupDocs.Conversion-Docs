@@ -12,12 +12,12 @@ toc: True
 This documentation covers the process of loading markup documents with configurable settings using [WebLoadOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/webloadoptions/). By leveraging these options, developers can efficiently manage markup files like HTML and MHTML, enabling accurate conversion to formats such as PDF, DOCX, or PNG. The [GroupDocs.Conversion for Java](https://products.groupdocs.com/conversion/java/) library ensures proper handling of embedded resources and document styling. The following options could be set:
 | Option | Description |
 |--------|-------------|
-|**[setBasePath()](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/webloadoptions/#getBasePath--)** | Specifies the base path/url for the HTML. |  
-|**[setEncoding()](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/webloadoptions/#getEncoding--)** | Specifies the encoding to be used to load the document. If not specified, the encoding will be determined from the document's character set attribute. |
-|**[setPageNumbering()](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/webloadoptions/#isPageNumbering--)** | Whether to generate page numbers for the converted document. Default: false. |
-|**[setResourceLoadingTimeout()](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/webloadoptions/#getResourceLoadingTimeout--)** | Specifies the timeout of loading the external resources. |
-|**[setSkipExternalResources()](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/webloadoptions/#getSkipExternalResources--)** |  If enabled, the external resources (except for those listed in `WhitelistedResources`) will not be loaded during the conversion. |
-|**[setWhitelistedResources()](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/webloadoptions/#getWhitelistedResources--)** | Specifies which external resources will be loaded even when the loading of other external resources is restricted. |
+|[**setBasePath()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/webloadoptions/#getBasePath--) | Specifies the base path/url for the HTML. |  
+|[**setEncoding()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/webloadoptions/#getEncoding--) | Specifies the encoding to be used to load the document. If not specified, the encoding will be determined from the document's character set attribute. |
+|[**setPageNumbering()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/webloadoptions/#isPageNumbering--) | Whether to generate page numbers for the converted document. Default: false. |
+|[**setResourceLoadingTimeout()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/webloadoptions/#getResourceLoadingTimeout--) | Specifies the timeout of loading the external resources. |
+|[**setSkipExternalResources()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/webloadoptions/#getSkipExternalResources--) |  If enabled, the external resources (except for those listed in `WhitelistedResources`) will not be loaded during the conversion. |
+|[**setWhitelistedResources()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/webloadoptions/#getWhitelistedResources--) | Specifies which external resources will be loaded even when the loading of other external resources is restricted. |
 
 ## Enable page numbering when converting to Word-processing formats
 
