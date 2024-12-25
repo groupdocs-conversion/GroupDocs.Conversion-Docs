@@ -1,8 +1,8 @@
 ---
 id: installation
 url: conversion/java/installation
-title: Install GroupDocs.Conversion for Java
-weight: 4
+title: Installation
+weight: 1
 description: "GroupDocs.Conversion for Java installation"
 keywords: "groupdocs conversion java, installation, maven"
 productName: GroupDocs.Conversion for Java
@@ -10,41 +10,119 @@ hideChildren: False
 toc: True
 ---
 
-## Install using Maven
 
-All Java packages are hosted at [GroupDocs Artifact Repository](https://repository.groupdocs.com/). You can easily reference the GroupDocs.Conversion for Java API directly in your Maven project using the following steps.
+**GroupDocs.Conversion for Java** enables seamless conversion between multiple document formats with high fidelity. This guide provides steps to integrate the library into your Java project.
+
+### Prerequisites:
+
+1. **Java Development Environment:** Ensure you have Java Development Kit (JDK) installed. The library supports versions 8 and above.
+2. **Build Tool:** Compatible with Maven, Gradle, Kotlin and others for dependency management.
+3. **GroupDocs.Conversion for Java License (optional):** Use the API in evaluation mode or apply for a free temporary license.
+
+## Installation from GroupDocs Repository
+
+All Java packages are hosted at [GroupDocs Artifact Repository](https://repository.groupdocs.com/). You can easily reference the GroupDocs.Conversion for Java API directly in your project using the following steps.
 
 ### Add GroupDocs Artifact Repository
 
-First, you need to specify the repository configuration/location in your Maven`pom.xml` file as follows:
+First, you need to specify repository configuration/location in your project as follows:
 
+{{< tabs "example1">}}
+{{< tab "Maven" >}}
 ```xml
-
 <repositories>
-    <repository>
-        <id>GroupDocs Artifact Repository</id>
-        <name>GroupDocs Artifact Repository</name>
-        <url>https://releases.groupdocs.com/java/repo/</url>
-    </repository>
+	<repository>
+		<id>GroupDocs Artifact Repository</id>
+        	<name>GroupDocs Artifact Repository</name>
+        	<url>https://releases.groupdocs.com/java/repo/</url>
+	</repository>
 </repositories>
 ```
+{{< /tab >}}
+{{< tab "Gradle" >}}
+```xml
+repositories {
+    maven {
+        url "https://repository.groupdocs.com/repo/"
+    }
+}
+```
+{{< /tab >}}
+{{< tab "Kotlin" >}}
+```xml
+repositories {
+    maven(url = "https://repository.groupdocs.com/repo/")
+}
+```
+{{< /tab >}}
+{{< tab "Ivy" >}}
+```xml
+<ivysettings>
+    <settings defaultResolver="chain"/>
+    <resolvers>
+        <chain name="chain">
+            <ibiblio name="GroupDocs Repository" m2compatible="true" root="https://releases.groupdocs.com/java/repo/"/>
+        </chain>
+    </resolvers>
+</ivysettings>
+```
+{{< /tab >}}
+{{< tab "Sbt" >}}
+```xml
+resolvers += Resolver.url("GroupDocs Repository", url("https://releases.groupdocs.com/java/repo/"))
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Add GroupDocs.Conversion as a dependency
 
-Then define the GroupDocs.Conversion for Java API dependency in your`pom.xml` file as follows:
+Then define the GroupDocs.Conversion for Java API dependency in your project as follows:
 
+{{< tabs "example2">}}
+{{< tab "Maven" >}}
 ```xml
-
 <dependencies>
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-conversion</artifactId>
-        <version>23.12</version>
+        <version>24.11</version>
     </dependency>
 </dependencies>
 ```
+{{< /tab >}}
+{{< tab "Gradle" >}}
+```xml
+dependencies {
+    implementation 'com.groupdocs:groupdocs-conversion:24.11'
+}
+```
+{{< /tab >}}
+{{< tab "Kotlin" >}}
+```xml
+dependencies {
+    implementation("com.groupdocs:groupdocs-conversion:24.11")
+}
+```
+{{< /tab >}}
+{{< tab "Ivy" >}}
+```xml
+<dependency org="com.groupdocs" name="groupdocs-conversion" rev="24.11">
+   <artifact name="groupdocs-conversion" ext="jar"/>
+</dependency>
+```
+{{< /tab >}}
+{{< tab "Sbt" >}}
+```xml
+libraryDependencies += "com.groupdocs" % "groupdocs-conversion" % "24.11"
+```
+{{< /tab >}}
+{{< /tabs >}}
 
-### Example: creating a simple command line application
+## Manual JAR Download:
+
+You can also download the JAR files directly from the [GroupDocs Downloads page](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-conversion/) and include them in your project manually.
+
+## Example: creating a simple command line application
 
 Create following project structure:
 
@@ -88,7 +166,7 @@ Below is a content of the project files:
         <dependency>
             <groupId>com.groupdocs</groupId>
             <artifactId>groupdocs-conversion</artifactId>
-            <version>23.12</version>
+            <version>24.11</version>
         </dependency>
     </dependencies>
 
@@ -191,5 +269,8 @@ Conversion complete
 ```
 
 After that you can see and open sample.pdf file in the root project directory
-
+{{< alert style="info" >}}
 Note: you can create and run this project in your favourite IDE instead. Also you can build and run it without Maven usage, for example using the IDE dependency and build system or for example using Gradle.
+{{< /alert >}}
+
+For more examples, visit the [developer guide]({{< ref "conversion/java/developer-guide" >}})

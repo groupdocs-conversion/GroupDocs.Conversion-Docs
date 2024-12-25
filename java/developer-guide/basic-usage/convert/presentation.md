@@ -115,7 +115,7 @@ converter.convert("converted.pdf", options);
 ## Convert Presentation to image
 
 There is often a need to transform a PowerPoint presentation into a collection of images. Of course, it could be manually exported with the help of Microsoft PowerPoint, but in case you don't have it at hand or in case there is a big number of presentations to be converted,  it’s more convenient to convert the presentation to images programmatically.  
-No matter which image format you choose - GroupDocs.Conversion supports a wide range of them - **PNG**, **JPG/JPEG**, **TIF/TIFF**, **GIF** (and many [others]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}})).  
+No matter which image format you choose - GroupDocs.Conversion supports a wide range of them - **PNG**, **JPG/JPEG**, **TIF/TIFF**, **GIF** (and many [others]({{< ref "conversion/java/supported-document-formats.md" >}})).  
   
 Here is a code snippet that shows how to convert PPTX to PNG image in Java programming language:
 

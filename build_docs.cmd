@@ -9,3 +9,4 @@ xcopy python-net common\content\%PRODUCT%\python-net /s /e /Y /i
 xcopy _index.md common\content\%PRODUCT% 
 cd common
 call hugo server --config config-geekdoc.toml,ignore-total-config.toml,show-feedback-config.toml
+

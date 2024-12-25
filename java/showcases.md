@@ -2,13 +2,13 @@
 id: showcases
 url: conversion/java/showcases
 title: Showcases
-weight: 3
+weight: 6
 description: "Code examples and live demostrations of GroupDocs.Conversion for Java"
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
 ---
-{{< alert style="info" >}}Want to try GroupDocs.Conversion for Java by yourself? Please check C# code sources, how-to examples and free online demonstrations provided below to learn more about file conversion features.{{< /alert >}}
+{{< alert style="info" >}}Want to try GroupDocs.Conversion for Java by yourself? Please check Java code sources, how-to examples and free online demonstrations provided below to learn more about file conversion features.{{< /alert >}}
 
 ## GitHub Examples
 

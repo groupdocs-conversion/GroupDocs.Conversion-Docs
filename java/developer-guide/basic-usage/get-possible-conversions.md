@@ -9,7 +9,7 @@ productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
 ---
-There are multiple target formats available when converting documents with **[GroupDocs.Conversion](https://products.groupdocs.com/conversion/java)** and you can always refer to [supported file formats]({{< ref "conversion/java/getting-started/supported-document-formats.md" >}}) documentation for more details.  
+There are multiple target formats available when converting documents with **[GroupDocs.Conversion](https://products.groupdocs.com/conversion/java)** and you can always refer to [supported file formats]({{< ref "conversion/java/supported-document-formats.md" >}}) documentation for more details.  
 But what about getting possible conversions programmatically? For example, it could allow end-users to select the target format for a specific document or to display the complete list of supported formats. 
 Fortunately GroupDocs.Conversion API provides several ways to achieve this, so please check the available options below.
 
