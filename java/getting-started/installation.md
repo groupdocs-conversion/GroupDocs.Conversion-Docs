@@ -33,8 +33,8 @@ First, you need to specify repository configuration/location in your project as
 <repositories>
   <repository>
     <id>GroupDocs Artifact Repository</id>
-      <name>GroupDocs Artifact Repository</name>
-      <url>https://releases.groupdocs.com/java/repo/</url>
+    <name>GroupDocs Artifact Repository</name>
+    <url>https://releases.groupdocs.com/java/repo/</url>
   </repository>
 </repositories>
 ```
@@ -148,16 +148,13 @@ package com.mycompany.app;
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 
-/**
- * Hello world!
- */
 public class App {
-    public static void main(String[] args) {
-        try (Converter converter = new Converter("sample.txt")) {
-            converter.convert("sample.pdf", new PdfConvertOptions());
-        }
-        System.out.println("Conversion complete");
+  public static void main(String[] args) {
+    try (Converter converter = new Converter("sample.txt")) {
+      converter.convert("sample.pdf", new PdfConvertOptions());
     }
+    System.out.println("Conversion complete");
+  }
 }
 ```
 {{< /tab >}}
