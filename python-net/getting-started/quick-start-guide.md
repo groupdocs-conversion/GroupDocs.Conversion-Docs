@@ -19,8 +19,7 @@ This guide provides a quick overview of how to set up and start using GroupDocs.
 To proceed, make sure you have:
 
 1. **Configured** environment as described in the [System Requirements]({{< ref "conversion/python-net/system-requirements" >}}) topic.
-2. **Downloaded** `whl` file for your operation system from the official [GroupDocs Releases](https://releases.groupdocs.com/conversion/python-net/) website.
-3. **Optionally** you may [Get a Temporary License](https://purchase.groupdocs.com/temporary-license/) to test all the product features. 
+2. **Optionally** you may [Get a Temporary License](https://purchase.groupdocs.com/temporary-license/) to test all the product features. 
 
 ## Set Up Your Development Environment
 
@@ -58,29 +57,19 @@ source .venv/bin/activate
 {{< /tab >}}
 {{< /tabs >}}
 
-### Install GroupDocs.Conversion Package
+### Install `groupdocs-conversion-net` Package
 
-After activating the virtual environment, copy the downloaded OS-specific package into your project directory and install it.
+After activating the virtual environment, run the following command in your terminal to install the latest version of the package:
 
 {{< tabs "example3">}}
-{{< tab "Windows (64-bit)" >}}
+{{< tab "Windows" >}}
 ```ps
-py -m pip install groupdocs_conversion_net-24.11-py3-none-win_amd64.whl
+py -m pip install groupdocs-conversion-net
 ```
 {{< /tab >}}
-{{< tab "Windows (32-bit)" >}}
-```ps
-py -m pip install groupdocs_conversion_net-24.11-py3-none-win32.whl
-```
-{{< /tab >}}
-{{< tab "macOS (Apple Silicon)" >}}
+{{< tab "macOS" >}}
 ```bash
-python3 -m pip install groupdocs_conversion_net-24.11-py3-none-macosx_11_0_arm64.whl
-```
-{{< /tab >}}
-{{< tab "macOS (Intel Silicon)" >}}
-```bash
-python3 -m pip install groupdocs_conversion_net-24.11-py3-none-macosx_10_14_x86_64.whl
+python3 -m pip install groupdocs-conversion-net
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -88,7 +77,7 @@ python3 -m pip install groupdocs_conversion_net-24.11-py3-none-macosx_10_14_x86_
 Ensure the package is installed successfully. You should see the message 
 
 ```bash
-Successfully installed groupdocs-conversion-net-24.11
+Successfully installed groupdocs-conversion-net-*
 ```
 
 ## Example 1: Convert document
@@ -141,7 +130,6 @@ Your folder tree should look similar to the following directory structure:
 📂 demo-app
  ├──convert_docx_to_pdf.py
  ├──business-plan.docx
- ├──groupdocs_conversion_net-24.11-py3-none-*.whl
  └──GroupDocs.Conversion.lic (Optionally)
 ```
 
@@ -219,7 +207,6 @@ Your folder tree should look similar to the following directory structure:
 📂 demo-app
  ├──annual-review.pdf
  ├──convert_pdf_pages_to_png.py
- ├──groupdocs_conversion_net-24.11-py3-none-*.whl
  └──GroupDocs.Conversion.lic (Optionally)
 ```
 
@@ -296,7 +283,6 @@ Your folder tree should look similar to the following directory structure:
 📂 demo-app
  ├──compressed.zip
  ├──convert_files_in_archive.py
- ├──groupdocs_conversion_net-24.11-py3-none-*.whl
  └──GroupDocs.Conversion.lic (Optionally)
 ```
 

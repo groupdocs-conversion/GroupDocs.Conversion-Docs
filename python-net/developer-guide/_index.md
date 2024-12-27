@@ -74,29 +74,19 @@ source .venv/bin/activate
 {{< /tab >}}
 {{< /tabs >}}
 
-### Step 3: Install GroupDocs.Conversion Package
+### Step 3: Install `groupdocs-conversion-net` package
 
-Download the OS-specific package from the [GroupDocs.Conversion for Python via .NET releases page](https://releases.groupdocs.com/conversion/python-net/), copy it to the folder, and install:
+To install the package, open a terminal and run the following command:
 
-{{< tabs "example4">}}
-{{< tab "Windows (64-bit)" >}}
+{{< tabs "example3">}}
+{{< tab "Windows" >}}
 ```ps
-py -m pip install groupdocs_conversion_net-24.11-py3-none-win_amd64.whl
+py -m pip install groupdocs-conversion-net
 ```
 {{< /tab >}}
-{{< tab "Windows (32-bit)" >}}
-```ps
-py -m pip install groupdocs_conversion_net-24.11-py3-none-win32.whl
-```
-{{< /tab >}}
-{{< tab "macOS (Apple Silicon)" >}}
-```ps
-python3 -m pip install groupdocs_conversion_net-24.11-py3-none-macosx_11_0_arm64.whl
-```
-{{< /tab >}}
-{{< tab "macOS (Intel Silicon)" >}}
-```ps
-python3 -m pip install groupdocs_conversion_net-24.11-py3-none-macosx_10_14_x86_64.whl
+{{< tab "macOS" >}}
+```bash
+python3 -m pip install groupdocs-conversion-net
 ```
 {{< /tab >}}
 {{< /tabs >}}

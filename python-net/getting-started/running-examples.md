@@ -99,6 +99,7 @@ The example repository is structured similarly to this documentation, making it 
     ├── **set_license_from_stream.py**
     ├── **set_metered_license.py**
 ├── **run_all_examples.py**
+├── requirements.txt
 ```
 
 ## Setup Instructions
@@ -135,30 +136,22 @@ The example repository is structured similarly to this documentation, making it 
    {{< /tab >}}
    {{< /tabs >}}
 
-2. **Download & Install Package**: Download `whl` file for your operation system from the official [GroupDocs Releases](https://releases.groupdocs.com/conversion/python-net/) website. Copy it to `Examples` directory and install package:
+### Install the Dependencies
 
-   {{< tabs "example3">}}
-   {{< tab "Windows (64-bit)" >}}
-   ```ps
-   py -m pip install groupdocs_conversion_net-24.11-py3-none-win_amd64.whl
-   ```
-   {{< /tab >}}
-   {{< tab "Windows (32-bit)" >}}
-   ```ps
-   py -m pip install groupdocs_conversion_net-24.11-py3-none-win32.whl
-   ```
-   {{< /tab >}}
-   {{< tab "macOS (Apple Silicon)" >}}
-   ```bash
-   python3 -m pip install groupdocs_conversion_net-24.11-py3-none-macosx_11_0_arm64.whl
-   ```
-   {{< /tab >}}
-   {{< tab "macOS (Intel Silicon)" >}}
-   ```bash
-   python3 -m pip install groupdocs_conversion_net-24.11-py3-none-macosx_10_14_x86_64.whl
-   ```
-   {{< /tab >}}
-   {{< /tabs >}}
+After activating the virtual environment, run the following command in your terminal to install the dependencies:
+
+{{< tabs "example3">}}
+{{< tab "Windows" >}}
+```ps
+py -m pip install -r requirements.txt
+```
+{{< /tab >}}
+{{< tab "macOS" >}}
+```bash
+python3 -m pip install -r requirements.txt
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 3. **Configure License (Optional)**: If you have a license file, you can set the license path in the `run_all_examples.py` file. By default, GroupDocs.Conversion for Python via .NET looks for the `GROUPDOCS_LIC_PATH` environment variable or for files with the `.lic` extension in the project’s root directory.
 
@@ -172,7 +165,7 @@ To run the examples:
 
 1. **Run All Examples**: Execute `run_all_examples.py` to run all examples in the repository.
 
-   {{< tabs "example5">}}
+   {{< tabs "example4">}}
    {{< tab "Windows" >}}
    ```ps
    py run_all_examples.py
