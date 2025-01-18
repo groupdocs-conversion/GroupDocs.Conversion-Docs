@@ -8,27 +8,67 @@ keywords: Convert to HTML, Convert HTML
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-**[GroupDocs.Conversion](https://products.groupdocs.com/conversion/java)** provides the [MarkupConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/MarkupConvertOptions) class to give you control over conversion results. The following options could be set:
-*   [setFixedLayout](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/MarkupConvertOptions#setFixedLayout(boolean)) controls the HTML generation. If it's set to *true*, a fixed layout will be used e.g. absolutely positioned HTML element. 
-*   [setZoom](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/MarkupConvertOptions#setZoom(int)) specifies the zoom level in percentage. The default value is 100.      
-*   [setUsePdf](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/MarkupConvertOptions#setUsePdf(boolean)). Sometimes, for better rendering and element positioning the source document should be converted to PDF first. If this property is set to *true*, the input is first converted to PDF format and after that to the desired format.  
-    
+To convert documents to HTML with advanced options using **GroupDocs.Conversion for Java**, you can utilize the [WebConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/webconvertoptions/) class. This class provides various properties to customize the HTML output according to your requirements:
+| Option | Description |
+|--------|-------------|
+|[**setUsePdf()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/webconvertoptions/#setUsePdf-boolean-) | If `true`, the input firstly is converted to PDF and after that to desired format. |  
+|[**setFixedLayout()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/webconvertoptions/#setFixedLayout-boolean-) | If `true` fixed layout will be used e.g. absolutely positioned html elements <br>`Default: true`. |
+|[**setFixedLayoutShowBorders()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/webconvertoptions/#setFixedLayoutShowBorders-boolean-) | Show page borders when converting to fixed layout. `Default: true`. |
+|[**setZoom()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/webconvertoptions/#setZoom-int-) | Specifies the zoom level in percentage. `Default: 100`. |
+
 
 The following code snippet shows how to convert to HTML with advanced options:
 
+{{< tabs "code-example">}}
+{{< tab "ConvertToHtmlWithAdvancedOptions.java" >}}  
 ```java
 import com.groupdocs.conversion.Converter;
-import com.groupdocs.conversion.options.convert.MarkupConvertOptions;
+import com.groupdocs.conversion.examples.Constants;
+import com.groupdocs.conversion.options.convert.WebConvertOptions;
 import com.groupdocs.conversion.options.load.WordProcessingLoadOptions;
-...
-WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-loadOptions.setPassword("12345");
 
-Converter converter = new Converter("sample.docx", loadOptions);
-MarkupConvertOptions options = new MarkupConvertOptions();
-options.setPageNumber(2);
-options.setFixedLayout(true);
-options.setPagesCount(1);
 
-converter.convert("converted.html", options);
+/**
+ * This example demonstrates how to convert password-protected document to HTML and specifying pages to be converted
+ */
+public class ConvertToHtmlWithAdvancedOptions {
+    public static void convert() {
+        // Instantiate the WordProcessingLoadOptions
+        WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
+        loadOptions.setPassword("12345");
+
+        // Initialize the converter with the source document
+        try(Converter converter = new Converter("password_protected.docx", () -> loadOptions)) {
+            // Instantiate the WebConvertOptions
+            WebConvertOptions options = new WebConvertOptions();
+            options.setUsePdf(true); // Convert via PDF to maintain layout
+            options.setFixedLayout(true); // Use fixed layout
+            options.setFixedLayoutShowBorders(true); // Show borders in fixed layout
+            options.setZoom(100); // Set zoom level to 100%
+
+            // Convert to HTML with the specified options
+            converter.convert("converted_with_options.html", options);
+        }
+    }
+
+    public static void main(String[] args){
+        convert();
+    }
+}
 ```
+{{< /tab >}}
+{{< tab "password_protected.docx" >}}  
+{{< tab-text >}}
+`password_protected.docx` is sample file used in this example. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/convert-to-html-with-advanced-options/password_protected.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "converted_with_options.html" >}}  
+{{< tab-text >}}
+`converted_with_options.html` is converted HTML document. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/convert-to-html-with-advanced-options/converted_with_options.html) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
+In this example, the [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/converter/) class is initialized with the source document. The [WebConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/converter/) are then configured to convert the document via PDF, use a fixed layout with borders, and set the zoom level to 100%. Finally, the convert method is called to perform the conversion with the specified options.
+
+By utilizing these options, you can effectively control the HTML conversion process to meet your specific needs.
