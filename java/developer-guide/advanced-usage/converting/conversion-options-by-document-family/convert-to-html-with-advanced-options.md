@@ -8,7 +8,7 @@ keywords: Convert to HTML, Convert HTML
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-To convert documents to HTML with advanced options using **GroupDocs.Conversion for Java**, you can utilize the [WebConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/webconvertoptions/) class. This class provides various properties to customize the HTML output according to your requirements:
+To convert documents to HTML with advanced options using [GroupDocs.Conversion for Java](https://products.groupdocs.com/conversion/java/), you can utilize the [WebConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/webconvertoptions/) class. This class provides various properties to customize the HTML output according to your requirements:
 | Option | Description |
 |--------|-------------|
 |[**setUsePdf()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/webconvertoptions/#setUsePdf-boolean-) | If `true`, the input firstly is converted to PDF and after that to desired format. |  
@@ -26,7 +26,6 @@ import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.examples.Constants;
 import com.groupdocs.conversion.options.convert.WebConvertOptions;
 import com.groupdocs.conversion.options.load.WordProcessingLoadOptions;
-
 
 /**
  * This example demonstrates how to convert password-protected document to HTML and specifying pages to be converted
