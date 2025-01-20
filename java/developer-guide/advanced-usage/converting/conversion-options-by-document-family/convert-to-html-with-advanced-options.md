@@ -24,13 +24,9 @@ The following code snippet shows how to convert to HTML with advanced options:
 {{< tab "ConvertToHtmlWithAdvancedOptions.java" >}}  
 ```java
 import com.groupdocs.conversion.Converter;
-import com.groupdocs.conversion.examples.Constants;
 import com.groupdocs.conversion.options.convert.WebConvertOptions;
 import com.groupdocs.conversion.options.load.WordProcessingLoadOptions;
 
-/**
- * This example demonstrates how to convert password-protected document to HTML and specifying pages to be converted
- */
 public class ConvertToHtmlWithAdvancedOptions {
     public static void convert() {
         // Instantiate the WordProcessingLoadOptions

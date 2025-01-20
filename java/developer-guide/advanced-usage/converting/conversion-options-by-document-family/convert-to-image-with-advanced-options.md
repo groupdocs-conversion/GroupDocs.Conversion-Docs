@@ -12,14 +12,14 @@ hideChildren: False
 To convert documents to images with advanced options using [GroupDocs.Conversion for Java](https://products.groupdocs.com/conversion/java/), you can utilize the [ImageConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/imageconvertoptions/) class. This class provides various properties to customize the image output according to your requirements.
 | Option | Description |
 |--------|-------------|
-|[**setFormat()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/convertoptions/#setFormat-com.groupdocs.conversion.filetypes.FileType-) | Specifies the desired image format for the output, such as JPEG, PNG, BMP, or GIF. |
+|[**setFormat()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/convertoptions/#setFormat-com.groupdocs.conversion.filetypes.FileType-) | Specifies the desired image format for the output, such as `JPEG`, `PNG`, `BMP`, or `GIF`. |
 |[**setWidth()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/imageconvertoptions/#setWidth-int-) | Specifies desired image width after conversion. |
 |[**setHeight()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/imageconvertoptions/#setHeight-int-) | Specifies desired image height after conversion. |
 |[**setHorizontalResolution()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/imageconvertoptions/#setHorizontalResolution-int-) | Specifies desired image horizontal resolution after conversion. |
 |[**setVerticalResolution()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/imageconvertoptions/#setVerticalResolution-int-) | Specifies desired image vertical resolution after conversion. |
 |[**setGrayscale()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/imageconvertoptions/#setGrayscale-boolean-) | Specifies if `true` the converted image will be saved in grayscale |
 |[**setRotateAngle()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/imageconvertoptions/#setRotateAngle-int-) | Specifies the angle to rotate the image, if needed. |
-|[**setFlipMode()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/imageconvertoptions/#setFlipMode-com.groupdocs.conversion.options.convert.ImageFlipModes-) | Allows flipping the image horizontally or vertically. Available options are: `None, FlipX, FlipY, FlipXY` |
+|[**setFlipMode()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/imageconvertoptions/#setFlipMode-com.groupdocs.conversion.options.convert.ImageFlipModes-) | Allows flipping the image horizontally or vertically. Available options are: `None`, `FlipX`, `FlipY`, `FlipXY` |
 |[**setBrightness()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/imageconvertoptions/#setBrightness-int-) | Adjusts image brightness. |
 |[**setContrast()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/imageconvertoptions/#setContrast-int-) | Adjusts image contrast. |
 |[**setGamma()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/imageconvertoptions/#setGamma-float-) | Adjusts image gamma. |
@@ -35,18 +35,14 @@ The following code snippet shows how to convert to an image with advanced option
 {{< tab "ConvertToImageWithAdvancedOptions.java" >}}  
 ```java
 import com.groupdocs.conversion.Converter;
-import com.groupdocs.conversion.examples.Constants;
 import com.groupdocs.conversion.filetypes.ImageFileType;
 import com.groupdocs.conversion.options.convert.ImageConvertOptions;
 import com.groupdocs.conversion.options.convert.ImageFlipModes;
 
-/**
- * This example demonstrates how to convert a pdf document to image with advanced options
- */
 public class ConvertToImageWithAdvancedOptions {
     public static void convert() {
         // Initialize the converter with the source document
-        try(Converter converter = new Converter("professional-services.pdf)) {
+        try(Converter converter = new Converter("professional-services.pdf")) {
             // Instantiate the ImageConvertOptions
             ImageConvertOptions options = new ImageConvertOptions();
             options.setFormat(ImageFileType.Png);

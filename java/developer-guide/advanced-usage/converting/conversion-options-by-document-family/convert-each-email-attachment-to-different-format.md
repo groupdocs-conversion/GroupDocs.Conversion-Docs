@@ -3,7 +3,7 @@ id: convert-each-email-attachment-to-different-format
 url: conversion/java/convert-each-email-attachment-to-different-format
 title: Convert each email attachment to different format
 weight: 2
-description: "Follow this guide and learn how to convert email attachments to different format based on attachment type using GroupDocs.Conversion for .Java."
+description: "Follow this guide and learn how to convert email attachments to different format based on attachment type using GroupDocs.Conversion for .Java."
 keywords: Convert email attachments, Convert MSG attachments, Convert EML attachments
 productName: GroupDocs.Conversion for Java
 hideChildren: False
@@ -19,7 +19,6 @@ import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.ConvertOptionsProvider;
 import com.groupdocs.conversion.contracts.LoadOptionsProvider;
 import com.groupdocs.conversion.contracts.SaveDocumentStreamForFileType;
-import com.groupdocs.conversion.examples.Constants;
 import com.groupdocs.conversion.filetypes.EmailFileType;
 import com.groupdocs.conversion.filetypes.WordProcessingFileType;
 import com.groupdocs.conversion.options.convert.ImageConvertOptions;
