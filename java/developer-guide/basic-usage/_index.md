@@ -2,7 +2,7 @@
 id: basic-usage
 url: conversion/java/basic-usage
 title: Basic usage
-weight: 1
+weight: 2
 description: "Quick Start section about main features of GroupDocs.Conversion API, describes how to convert files with just couple lines of code."
 keywords: GroupDocs.Conversion Quick Start, GroupDocs.Conversion Java Basic Usage, GroupDocs.Conversion Quick Start Java, GroupDocs.Conversion Get Started
 productName: GroupDocs.Conversion for Java
