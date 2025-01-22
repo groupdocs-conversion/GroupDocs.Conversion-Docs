@@ -13,7 +13,7 @@ hideChildren: true
 This section describes some basic and advanced use cases of GroupDocs.Conversion for Java. Please refer to [GitHub repository](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Java) for more examples and samples.
 {{< /alert >}}
 -->
-* [Load files]({{< ref "conversion/java/developer-guide/loading-documents/" >}})
+* [Loading Documents]({{< ref "conversion/java/developer-guide/loading-documents/" >}})
 * [Get possible conversions]({{< ref "conversion/java/developer-guide/basic-usage/get-possible-conversions.md" >}})
 * [Get document info]({{< ref "conversion/java/developer-guide/basic-usage/get-document-info.md" >}})
 * [Convert files]({{< ref "conversion/java/developer-guide/basic-usage/convert/" >}})
