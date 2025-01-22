@@ -31,8 +31,8 @@ public class ConvertToPresentationWithAdvancedOptions {
         try(Converter converter = new Converter("annual-review.docx")) {
             // Configure presentation conversion options
             PresentationConvertOptions options = new PresentationConvertOptions();
-            options.setPageNumber(2);  // Start conversion from page 2
-            options.setPagesCount(1);  // Convert only 1 page
+            options.setPageNumber(2);                     // Start conversion from page 2
+            options.setPagesCount(1);                     // Convert only 1 page
             options.setFormat(PresentationFileType.Ppt);  // Set output format to PowerPoint (.ppt)
 
             // Perform the conversion

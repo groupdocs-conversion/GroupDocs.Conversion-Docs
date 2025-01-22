@@ -8,26 +8,57 @@ keywords: Convert Excel, Convert to Excel, Convert to spreadsheet, Convert to XL
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) provides the [SpreadsheetConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/SpreadsheetConvertOptions) class to give you better control over the conversion results when converting to spreadsheet formats. Along with [common convert options](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/ConvertOptions) from the base class, the [SpreadsheetConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/SpreadsheetConvertOptions) has the following additional options:
 
-*   [setFormat](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/ConvertOptions#setFormat(com.groupdocs.conversion.filetypes.FileType)) specifies desired result document type. Available options are: *Xls, Xlsx, Xlsm, Xlsb, Ods, Ots, Xltx, Xlt, Xltm, Tsc, Xlam, Csv*.
-*   [setPassword](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/SpreadsheetConvertOptions#setPassword(java.lang.String)) whether the converted document will be password-protected with the specified password.
-*   [setZoom](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/SpreadsheetConvertOptions#setZoom(int))  specifies the zoom level in percentage.
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) provides the [SpreadsheetConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/spreadsheetconvertoptions/) class, allowing fine-grained control over the conversion process when converting documents to spreadsheet formats. This class extends the common conversion options available in the base class and introduces additional configuration parameters for enhanced flexibility:
+| Option | Description |
+|--------|-------------|
+|[**setFormat()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/convertoptions/#setFormat-com.groupdocs.conversion.filetypes.FileType-) | Specifies the desired output format. Supported formats include `Xls`, `Xlsx`, `Xlsm`, `Xlsb`, `Ods`, `Ots`, `Xltx`, `Xlt`, `Xltm`, `Tsc`, `Xlam`, and `Csv`. |
+|[**setPassword()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/spreadsheetconvertoptions/#setPassword-java.lang.String-) | Enables password protection for the converted file, using the specified password for securing the document. |
+|[**setZoom()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/spreadsheetconvertoptions/#setZoom-int-) | Sets the zoom level of the resulting document, defined as a percentage. |
 
-The following code snippet shows how to convert to a spreadsheet with advanced options:
+The code snippet below demonstrates how to configure and execute a document conversion to a spreadsheet format using advanced options. In this example, only a specific page from the input document is converted, and additional parameters such as format and zoom level are defined:
 
+
+{{< tabs "code-example">}}
+{{< tab "ConvertToSpreadsheetWithAdvancedOptions.java" >}}  
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.filetypes.SpreadsheetFileType;
 import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
-import com.groupdocs.conversion.options.load.WordProcessingLoadOptions;
-...
-Converter converter = new Converter("sample.docx");
-SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
-options.setPageNumber(2);
-options.setPagesCount(1);
-options.setFormat(SpreadsheetFileType.Xls);
-options.setZoom(150);
 
-converter.convert("converted.xls", options);
+public class ConvertToSpreadsheetWithAdvancedOptions {
+    public static void convert() {
+        // Load the source document
+        try(Converter converter = new Converter("formatting.docx")) {
+            // Set conversion options for spreadsheets
+            SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
+            options.setPageNumber(2);            // Convert only the second page
+            options.setPagesCount(1);            // Limit to a single page
+            options.setFormat(SpreadsheetFileType.Xls);    // Output format
+            options.setZoom(50);                // Set zoom level to 50%
+
+            // Perform the conversion
+            converter.convert("converted_with_options.xls", options);
+        }
+    }
+
+    public static void main(String[] args){
+        convert();
+    }
+}
 ```
+{{< /tab >}}
+{{< tab "formatting.docx" >}}  
+{{< tab-text >}}
+`formatting.docx` is sample file used in this example. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/convert-to-spreadsheet-with-advanced-options/formatting.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "converted_with_options.xls" >}}  
+{{< tab-text >}}
+`converted_with_options.xls` is converted XLS document. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/convert-to-spreadsheet-with-advanced-options/converted_with_options.xls) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
+
+This flexibility enables tailored conversion workflows, ensuring the output meets specific requirements such as format compatibility, content accessibility, or security constraints.
