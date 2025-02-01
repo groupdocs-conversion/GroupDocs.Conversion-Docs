@@ -1,55 +1,93 @@
 ---
 id: add-watermark
 url: conversion/java/add-watermark
-title: Add watermark
+title: Adding a Watermark to Converted Documents
 weight: 1
 description: "In this article, you will learn how to apply watermark to document pages when converting document with GroupDocs.Conversion for Java API."
 keywords: Apply watermark to converted document, Watermark document, Add page watermark, Apply watermark, convert document
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) allows you to apply a watermark to the converted document.  You can set the following options for controlling how the watermark will be stamped in the converted document:
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) provides a flexible way to apply watermarks to documents during the conversion process. This feature can be useful for branding, security, or informational purposes. You can customize various aspects of the watermark, such as its text, size, color, position, and transparency.
 
+{{< alert style="tip" >}}
+Looking for advanced watermarking capabilities? While GroupDocs.Conversion offers basic watermarking, you can explore [GroupDocs.Watermark](https://products.groupdocs.com/watermark/) for a comprehensive solution with enhanced features.
+{{< /alert >}}
 ### WatermarkOptions
 
-*   **[Text](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WatermarkOptions#getText())** -  watermark text
-*   **[Font](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WatermarkOptions#getFont())** -  watermark font name
-*   **[Color](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WatermarkOptions#getColor())** - watermark color
-*   **[Width](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WatermarkOptions#getWidth())** - watermark width
-*   **[Height ](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WatermarkOptions#getHeight())** -  watermark height
-*   **[Top](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WatermarkOptions#getTop())** -  watermark top position
-*   **[Left ](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WatermarkOptions#getLeft())** - watermark left position
-*   **[RotationAngle](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WatermarkOptions#getRotationAngle())** -  watermark rotation angle
-*   **[Transparency](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WatermarkOptions#getTransparency())** -  watermark transparency
-*   **[Background](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WatermarkOptions#getBackground())** -  specifies that the watermark is stamped as background. If the value is true, the watermark is laid at the bottom. By default is false and the watermark is laid on top.
+You can control how the watermark appears in the converted document using the [WatermarkOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/watermarkoptions/) class. Here are the key properties you can set:
+| Option | Description |
+|--------|-------------|
+|[**setText()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/watermarktextoptions/#setText-java.lang.String-) | The content of the watermark text. |
+|[**setWatermarkFont()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/watermarktextoptions/#setWatermarkFont-com.groupdocs.conversion.options.convert.Font-) | The font family of the watermark text. |
+|[**setColor()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/watermarktextoptions/#setColor-java.awt.Color-) | The color of the watermark text. |
+|[**setWidth()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/watermarkoptions/#setWidth-int-) | The width of the watermark. |
+|[**setHeight()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/watermarkoptions/#setHeight-int-) | The height of the watermark. |
+|[**setTop()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/watermarkoptions/#setTop-int-) | The distance from the top edge of the document. |
+|[**setLeft()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/watermarkoptions/#setLeft-int-) | The distance from the left edge of the document. |
+|[**setRotationAngle()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/watermarkoptions/#setRotationAngle-int-) | The angle at which the watermark is rotated. |
+|[**setTransparency()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/watermarkoptions/#setTransparency-double-) | The transparency level of the watermark (0 is fully transparent, 1 is fully opaque). |
+|[**setBackground()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/watermarkoptions/#setBackground-boolean-) |  Determines whether the watermark is stamped as a background. If set to `true`, the watermark appears behind the document content. By default, it is set to `false`, meaning the watermark will appear on top of the content. |
+|[**setAutoAlign()**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/watermarkoptions/#setAutoAlign-boolean-) | Enables or disables automatic alignment of the watermark on the document. When set to `true`, the watermark will be automatically positioned to best fit the content layout, ensuring optimal visibility and aesthetics. When set to `false`, the watermark will retain its manually defined position. |
 
-  
-To add a watermark, follow these steps:
+### Steps to Add a Watermark
 
-1.   Create an instance of the [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class and pass the source document path as a constructor parameter.
-2.   Instantiate the appropriate [ConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/ConvertOptions) class e.g. (**[PdfConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions)**, **[WordProcessingConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WordProcessingConvertOptions)**, **[SpreadsheetConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/SpreadsheetConvertOptions)**, etc.)
-3.   Create an instance of the [WatermarkOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WatermarkOptions) class. Set needed properties to specify the watermark color, width, height, text, image, etc.
-4.   Call the [setWatermark](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/ConvertOptions#setWatermark(com.groupdocs.conversion.options.convert.WatermarkOptions)) method of the [ConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/ConvertOptions) instance with the instance of the [WatermarkOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WatermarkOptions) class created in the previous step. 
-5.   Call the [convert](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)) method of the [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class instance and pass the filename of the converted document and the instance of [ConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/ConvertOptions) from the previous step.
+- **Initialize the Converter**: Create an instance of the `Converter` class, providing the path to the source document.
+- **Set Conversion Options**: Instantiate the appropriate `ConvertOptions` class (e.g., `PdfConvertOptions`, `WordProcessingConvertOptions`, `SpreadsheetConvertOptions`, etc.).
+- **Configure Watermark Options**: Create an instance of the `WatermarkOptions` class and configure the properties to specify the watermark's appearance.
+- **Apply the Watermark**: Use the `setWatermark` method of the `ConvertOptions` instance to apply the watermark settings.
+- **Convert the Document**: Call the `convert` method on the `Converter` instance, passing the output file name and the configured `ConvertOptions` instance.
 
-The following code snippet shows how to apply a watermark to the output document:
+### Example: Add a Text Watermark to Converted Document
 
+The following Java code snippet demonstrates how to apply a text watermark to a document during conversion to PDF:
+
+{{< tabs "code-example">}}
+{{< tab "AddWatermarkToConvertedDocument.java" >}}  
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.options.convert.WatermarkTextOptions;
-import java.awt.Color;
-...
-Converter converter = new Converter("sample.docx");
-		
-PdfConvertOptions options = new PdfConvertOptions();
-WatermarkTextOptions watermark = new WatermarkTextOptions("Sample watermark");
-watermark.setColor(Color.red);
-watermark.setWidth(100);
-watermark.setHeight(100);
-watermark.setBackground(true);
 
-options.setWatermark(watermark);
-		
-converter.convert("converted.pdf", options);
+public class AddWatermarkToConvertedDocument {
+    public static void convert() {
+        // Initialize the converter with the source document
+        try(Converter converter = new Converter("annual-review.docx")){
+
+            // Set conversion options for PDF
+            PdfConvertOptions options = new PdfConvertOptions();
+
+            // Configure watermark options
+            WatermarkTextOptions watermark = new WatermarkTextOptions("Sample Watermark");
+            watermark.setColor(Color.RED);        // Set watermark color to red
+            watermark.setWidth(100);              // Set watermark width
+            watermark.setHeight(100);             // Set watermark height
+            watermark.setBackground(true);        // Set watermark as background
+            
+            // Apply the watermark to the conversion options
+            options.setWatermark(watermark);
+
+            // Convert the document and apply the watermark
+            converter.convert("addTextWatermark.pdf", options);
+        }
+    }
+
+    public static void main(String[] args){
+        convert();
+    }
+}
 ```
+{{< /tab >}}
+{{< tab "annual-review.docx" >}}  
+{{< tab-text >}}
+`annual-review.docx` is sample file used in this example. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/add-watermark/annual-review.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "addTextWatermark.pdf" >}}  
+{{< tab-text >}}
+`addTextWatermark.pdf` is converted PDF document. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/add-watermark/addTextWatermark.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
+By following these steps and adjusting the settings, you can easily add customized watermarks to your converted documents using GroupDocs.Conversion.

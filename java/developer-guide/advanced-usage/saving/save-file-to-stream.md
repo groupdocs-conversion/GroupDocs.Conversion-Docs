@@ -11,7 +11,7 @@ hideChildren: False
 To save the conversion results directly to an **OutputStream**, follow these steps:
 
 1.   **Define a Method to Obtain the Output Stream**:
-Create a method that returns an OutputStream. This stream will be the destination for the converted file.
+Create a method that returns an `OutputStream`. This stream will be the destination for the converted file.
 
 2.   **Pass the Output Stream to the** `convert()` **Method**:
 Use the output stream as a parameter in the [convert()](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/converter/#convert-com.groupdocs.conversion.contracts.SaveDocumentStream-com.groupdocs.conversion.options.convert.ConvertOptions-) method to direct the converted file to the stream instead of saving it directly to a file.
