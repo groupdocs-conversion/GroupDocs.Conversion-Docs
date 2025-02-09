@@ -140,7 +140,7 @@ import com.groupdocs.conversion.contracts.documentinfo.WordProcessingDocumentInf
 
 public class GetWordDocumentInfo {
     public static void convert() {
-        try (Converter converter = new Converter("C:\\Users\\Yevgen\\Desktop\\test-files\\business-plan.doc")) {
+        try (Converter converter = new Converter("business-plan.doc")) {
             WordProcessingDocumentInfo doc_info = (WordProcessingDocumentInfo) converter.getDocumentInfo();
             // Print DOC document info
             System.out.println("Author: "+ doc_info.getAuthor());
