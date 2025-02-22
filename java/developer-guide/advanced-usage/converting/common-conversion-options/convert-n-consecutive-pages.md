@@ -8,26 +8,60 @@ keywords: Convert consecutive document pages, Convert pages, Convert document pa
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/java) provides the feature to convert N consecutive pages. 
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) allows you to convert a specific range of consecutive pages from a document. This feature is useful when you only need a portion of the document instead of converting the entire file.
 
-To convert consecutive pages, follow these steps:
+To convert a set of consecutive pages, follow these steps:
+ 1. **Initialize the Converter**
+    - Create an instance of the `Converter` class and provide the source document path.
+ 2. **Configure Conversion Options**
+    - Instantiate the appropriate `ConvertOptions` class (e.g., `PdfConvertOptions`, `WordProcessingConvertOptions`, etc.).
+ 3. **Specify Page Range**
+    - Use the [setPageNumber(int pageNumber)](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/commonconvertoptions/#setPageNumber-int-) method to define the starting page.
+    - Use the [setPagesCount(int pagesCount)](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/commonconvertoptions/#setPagesCount-int-) method to specify how many pages to convert.
+ 4. **Perform the Conversion**
+    - Call the `convert()` method on the `Converter` instance, passing the output file name and the `ConvertOptions` instance.
 
-1.   Create an instance of the [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class and pass the source document path as a constructor parameter.
-2.   Instantiate the appropriate [ConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/ConvertOptions) class e.g. (**[PdfConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions)**, **[WordProcessingConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/WordProcessingConvertOptions)**, **[SpreadsheetConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/SpreadsheetConvertOptions)**, etc.)
-3.   Call the [setPageNumber](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/ConvertOptions#setPageNumber(int)) method of the [ConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/ConvertOptions) instance with the starting page number.
-4.   Call the [setPagesCount](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/ConvertOptions#setPagesCount(int)) method of the [ConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/ConvertOptions) instance with the number of pages to be converted.     
-5.   Call the [convert](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)) method of the [Converter](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion/Converter) class instance and pass the filename of the converted document and the instance of [ConvertOptions](https://reference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/ConvertOptions) from the previous steps.
+The following Java example demonstrates how to convert four consecutive pages, beginning from the second page of the document:
 
-The following code snippet shows how to convert 3 consecutive pages starting from the second page of the source document:
-
+{{< tabs "code-example">}}
+{{< tab "ConvertConsecutivePages.java" >}}  
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
-...
-Converter converter = new Converter("sample.docx");
-PdfConvertOptions options = new PdfConvertOptions();
-options.setPageNumber(2);
-options.setPagesCount(2);
 
-converter.convert("converted.pdf", options);
+public class ConvertConsecutivePages {
+    public static void convert() {
+        // Load the source document
+        Converter converter = new Converter("annual-review.docx");
+
+        // Define conversion options
+        PdfConvertOptions options = new PdfConvertOptions();
+        options.setPageNumber(2); // Start from page 2
+        options.setPagesCount(4); // Convert 4 pages
+
+        // Perform the conversion
+        converter.convert("converted.pdf", options);
+    }
+
+    public static void main(String[] args){
+        convert();
+    }
+}
 ```
+{{< /tab >}}
+{{< tab "annual-review.docx" >}}  
+{{< tab-text >}}
+`annual-review.docx` is sample file used in this example. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/convert-n-consecutive-pages/annual-review.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "converted.pdf" >}}  
+{{< tab-text >}}
+`converted.pdf` is converted attachment PDF document. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/convert-n-consecutive-pages/converted.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
+### Additional Notes
+- The page numbering starts at 1, not 0.
+- If the specified pagesCount exceeds the document’s total page count, conversion will continue until the last page.
+- This approach applies to different document formats by selecting the appropriate `ConvertOptions` subclass (e.g., `WordProcessingConvertOptions`, `SpreadsheetConvertOptions`).
