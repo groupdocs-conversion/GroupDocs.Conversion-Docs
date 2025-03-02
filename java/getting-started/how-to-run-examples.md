@@ -36,7 +36,7 @@ To run the examples using Eclipse IDE import the project to get started with it:
 
 The following screenshot shows the Examples project opened in Eclipse IDE.
 
-![GroupDocs.Conversion for Java Examples in Eclipse IDE](/conversion/java/images/how-to-run_1.png)
+![GroupDocs.Conversion for Java Examples in Eclipse IDE](/conversion/java/_images/how-to-run_1.png)
 
 ## Contribute
 

@@ -2,7 +2,7 @@
 id: logging
 url: conversion/java/logging
 title: Logging
-weight: 6
+weight: 5
 description: "Logging when converting documents with GroupDocs.Conversion for Java"
 keywords: Log conversion process, Logging
 productName: GroupDocs.Conversion for Java

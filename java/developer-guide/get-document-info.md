@@ -2,7 +2,7 @@
 id: get-document-info
 url: conversion/java/get-document-info
 title: Getting Document Information
-weight: 2
+weight: 1
 description: "This article explains how to detect the document file type and calculate the number of pages when converting a file with GroupDocs.Conversion for Java."
 keywords: 
 productName: GroupDocs.Conversion for Java

@@ -2,7 +2,7 @@
 id: supported-file-formats
 url: conversion/java/supported-file-formats
 title: Supported file formats
-weight: 3
+weight: 2
 description: "It supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML and many more"
 keywords: DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML
 productName: GroupDocs.Conversion for Java

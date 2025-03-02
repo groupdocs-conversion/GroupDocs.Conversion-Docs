@@ -181,7 +181,7 @@ class OcrConnector implements IOcrConnector {
 {{< /tab >}}
 {{< tab "sample.jpeg" >}}  
 {{< tab-text >}}
-`sample.jpeg` is the sample file used in this example. Click [here](/conversion/java/images/sample.jpeg) to download it.
+`sample.jpeg` is the sample file used in this example. Click [here](/conversion/java/_images/sample.jpeg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "converted.pdf" >}}  

@@ -14,9 +14,9 @@ This section describes some basic and advanced use cases of GroupDocs.Conversion
 {{< /alert >}}
 -->
 * [Loading Documents]({{< ref "conversion/java/developer-guide/loading-documents/" >}})
-* [Get possible conversions]({{< ref "conversion/java/developer-guide/basic-usage/get-possible-conversions.md" >}})
-* [Get document info]({{< ref "conversion/java/developer-guide/basic-usage/get-document-info.md" >}})
-* [Convert files]({{< ref "conversion/java/developer-guide/basic-usage/convert/" >}})
-* [Listening to conversion process events]({{< ref "conversion/java/developer-guide/advanced-usage/listening.md" >}})
-* [Cache results]({{< ref "conversion/java/developer-guide/advanced-usage/caching/" >}})
-* [Logging]({{< ref "conversion/java/developer-guide/advanced-usage/logging.md" >}})
+* [Get possible conversions]({{< ref "conversion/java/developer-guide/converting-documents/basic-usage/get-possible-conversions.md" >}})
+* [Get document info]({{< ref "conversion/java/developer-guide/get-document-info.md" >}})
+* [Convert files]({{< ref "conversion/java/developer-guide/converting-documents/basic-usage/convert/" >}})
+* [Listening to conversion process events]({{< ref "conversion/java/developer-guide/converting-documents/advanced-usage/listening.md" >}})
+* [Cache results]({{< ref "conversion/java/developer-guide/converting-documents/advanced-usage/caching/" >}})
+* [Logging]({{< ref "conversion/java/developer-guide/logging.md" >}})
