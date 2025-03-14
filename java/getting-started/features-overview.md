@@ -2,7 +2,7 @@
 id: features-overview
 url: conversion/java/features-overview
 title: Features overview
-weight: 2
+weight: 3
 description: "Salient features of file conversion API using Java are described in this article"
 keywords: file conversion
 productName: GroupDocs.Conversion for Java
