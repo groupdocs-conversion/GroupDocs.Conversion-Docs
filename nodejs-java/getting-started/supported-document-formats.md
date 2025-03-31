@@ -18,7 +18,7 @@ Need to convert files online? Try the [GroupDocs.Conversion App](https://product
 
 This topic lists file formats supported by GroupDocs.Conversion for Node.js via Java. You can use the input below to filter supported formats by extension.
 
-{{< table-filter placeholder="Start typing to find file format" >}}
+{{< table-filter placeholder="Start typing to find file format" forumUrl="https://forum.groupdocs.com/c/conversion/11">}}
 
 {{< include file="/conversion/nodejs-java/_includes/supported-conversions/formats-brief.md" type="page" >}}
 
