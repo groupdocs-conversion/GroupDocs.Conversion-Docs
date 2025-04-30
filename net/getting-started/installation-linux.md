@@ -18,73 +18,89 @@ This article explains how to install and run **GroupDocs.Conversion for .NET** o
 Ensure the following tools and packages are installed:
 
 - .NET 6.0 SDK or later: [Install .NET on Linux](https://learn.microsoft.com/en-us/dotnet/core/install/linux)
-- A Linux distribution such as Ubuntu, Debian, CentOS, or Alpine
-- `libgdiplus`, `fontconfig`, and basic font packages
+- A Linux distribution such as Ubuntu, Debian, CentOS/RHEL, or Alpine
+- `libgdiplus`, `fontconfig`, and TrueType fonts
 
-To install the required packages:
+## Installing Dependencies
 
-### Ubuntu / Debian:
+### Ubuntu / Debian
+
+Ensure the multiverse repository is enabled:
 
 ```bash
+sudo add-apt-repository multiverse
 sudo apt update
+```
+
+Install the required packages:
+
+```bash
 sudo apt install -y libgdiplus fontconfig ttf-mscorefonts-installer
 ```
 
-### CentOS / RHEL:
+> `ttf-mscorefonts-installer` is in the multiverse repository and downloads Microsoft fonts.
+
+### CentOS / RHEL
+
+Enable EPEL repository and install required packages:
 
 ```bash
 sudo yum install -y epel-release
-sudo yum install -y libgdiplus fontconfig msttcore-fonts-installer cabextract
+sudo yum install -y libgdiplus fontconfig cabextract
 ```
 
-### Alpine (Minimal Docker / Linux Distros):
+To install Microsoft TrueType fonts:
+
+```bash
+wget https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+sudo yum install -y msttcore-fonts-installer-2.6-1.noarch.rpm
+```
+
+> Note: This method uses a third-party RPM for Microsoft fonts. You may need `--nogpgcheck` depending on your system configuration.
+
+### Alpine Linux
+
+Install minimal dependencies using `apk`:
 
 ```bash
 apk add --no-cache libgdiplus fontconfig ttf-dejavu
 ```
 
-> If using Alpine with Docker, check the [Build in Docker - Alpine Linux](https://docs-qa.groupdocs.com/conversion/net/build-in-docker-alpine-linux/) article.
+> `ttf-dejavu` provides good font compatibility in Alpine.
 
 ## Install GroupDocs.Conversion using .NET CLI
 
-In your project directory, run:
+In your project directory:
 
 ```bash
 dotnet add package GroupDocs.Conversion
-```
-
-To restore packages:
-
-```bash
 dotnet restore
 ```
 
 ## Run Your Project
 
-After adding the package and restoring dependencies, build and run your application:
+Build and run your project:
 
 ```bash
 dotnet run
 ```
 
-## Headless Environments (Optional Fonts Setup)
+## Optional Fonts Configuration
 
-In Linux containers or headless setups, fonts may be missing. You can install or configure them as follows:
+In container or headless environments, if rendering issues occur, configure custom fonts in code:
 
-```bash
-sudo apt install -y fonts-dejavu ttf-mscorefonts-installer
+```csharp
+FontSettings.SetFontsFolder("/path/to/fonts", true);
 ```
-
-Or configure custom fonts in code using `FontSettings.SetFontsFolder`.
 
 ## Troubleshooting
 
-- If you encounter `System.TypeInitializationException` or `System.DllNotFoundException`, ensure `libgdiplus` is installed.
-- If font rendering is broken or content is missing, install system fonts or configure a custom font folder.
+- If you encounter `System.DllNotFoundException`, check if `libgdiplus` is installed.
+- If fonts are missing or rendered incorrectly, verify fonts are present and accessible.
 
 ---
 
-For Docker setups, see:
+For Docker-specific environments, see:
 
 - [Build in Docker](https://docs-qa.groupdocs.com/conversion/net/build-in-docker/)
 - [Build in Docker - Alpine Linux](https://docs-qa.groupdocs.com/conversion/net/build-in-docker-alpine-linux/)
