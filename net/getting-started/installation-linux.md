@@ -11,7 +11,7 @@ hideChildren: False
 toc: True
 ---
 
-This article explains how to install and run **GroupDocs.Conversion for .NET** on a Linux-based system using .NET Core or .NET 5/6+. It also includes instructions for installing native dependencies that might be required when running in a headless environment.
+This article explains how to install and run **GroupDocs.Conversion for .NET** on a Linux-based system using .NET 6+. It also includes instructions for installing native dependencies that might be required when running in a headless environment.
 
 ## Prerequisites
 
@@ -102,5 +102,5 @@ FontSettings.SetFontsFolder("/path/to/fonts", true);
 
 For Docker-specific environments, see:
 
-- [Build in Docker](https://docs-qa.groupdocs.com/conversion/net/build-in-docker/)
-- [Build in Docker - Alpine Linux](https://docs-qa.groupdocs.com/conversion/net/build-in-docker-alpine-linux/)
+- [Build in Docker](https://docs.groupdocs.com/conversion/net/build-in-docker/)
+- [Build in Docker - Alpine Linux](https://docs.groupdocs.com/conversion/net/build-in-docker-alpine-linux/)
