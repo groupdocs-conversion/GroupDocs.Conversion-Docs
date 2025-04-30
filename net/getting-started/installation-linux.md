@@ -85,14 +85,6 @@ Build and run your project:
 dotnet run
 ```
 
-## Optional Fonts Configuration
-
-In container or headless environments, if rendering issues occur, configure custom fonts in code:
-
-```csharp
-FontSettings.SetFontsFolder("/path/to/fonts", true);
-```
-
 ## Troubleshooting
 
 - If you encounter `System.DllNotFoundException`, check if `libgdiplus` is installed.
