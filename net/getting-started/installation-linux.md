@@ -19,7 +19,7 @@ Ensure the following tools and packages are installed:
 
 - .NET 6.0 SDK or later: [Install .NET on Linux](https://learn.microsoft.com/en-us/dotnet/core/install/linux)
 - A Linux distribution such as Ubuntu, Debian, CentOS, or Alpine
-- `libgdiplus` and other native dependencies
+- `libgdiplus`, `fontconfig`, and basic font packages
 
 To install the required packages:
 
@@ -27,13 +27,14 @@ To install the required packages:
 
 ```bash
 sudo apt update
-sudo apt install -y libgdiplus libc6-dev libx11-dev libxext-dev libxrender-dev
+sudo apt install -y libgdiplus fontconfig ttf-mscorefonts-installer
 ```
 
 ### CentOS / RHEL:
 
 ```bash
-sudo yum install -y libgdiplus libc6 libX11-devel libXext libXrender
+sudo yum install -y epel-release
+sudo yum install -y libgdiplus fontconfig msttcore-fonts-installer cabextract
 ```
 
 ### Alpine (Minimal Docker / Linux Distros):
@@ -42,7 +43,7 @@ sudo yum install -y libgdiplus libc6 libX11-devel libXext libXrender
 apk add --no-cache libgdiplus fontconfig ttf-dejavu
 ```
 
-> If using Alpine with Docker, check the [Build in Docker - Alpine Linux](https://docs.groupdocs.com/conversion/net/build-in-docker-alpine-linux/) article.
+> If using Alpine with Docker, check the [Build in Docker - Alpine Linux](https://docs-qa.groupdocs.com/conversion/net/build-in-docker-alpine-linux/) article.
 
 ## Install GroupDocs.Conversion using .NET CLI
 
@@ -68,13 +69,13 @@ dotnet run
 
 ## Headless Environments (Optional Fonts Setup)
 
-In Linux containers or headless setups, you may need additional fonts for proper document rendering:
+In Linux containers or headless setups, fonts may be missing. You can install or configure them as follows:
 
 ```bash
-sudo apt install -y fonts-dejavu fonts-liberation
+sudo apt install -y fonts-dejavu ttf-mscorefonts-installer
 ```
 
-You can also copy custom fonts to `/usr/share/fonts` or configure `FontSettings.SetFontsFolder` in code.
+Or configure custom fonts in code using `FontSettings.SetFontsFolder`.
 
 ## Troubleshooting
 
