@@ -86,6 +86,46 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< /tabs >}}
 
+### Example 2: Specify Output Format
+
+By default, each of the `ConvertOptions` classes has its own default target format. For example, the default output format for [WordProcessingConvertOptions](https://reference.groupdocs.com/conversion/python-net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/) is [DOCX](https://reference.groupdocs.com/conversion/python-net/groupdocs.conversion.filetypes/wordprocessingfiletype/docx/).
+
+To set a different output format, use the `format` property. The following example demonstrates how to specify the target format as `TXT` when converting a `DOCX` file:
+
+{{< tabs "example-2">}}
+{{< tab "specify_output_format.py" >}}  
+```python
+from groupdocs.conversion import Converter
+from groupdocs.conversion.options.convert import WordProcessingConvertOptions
+from groupdocs.conversion.filetypes import WordProcessingFileType
+
+def specify_output_format():
+    # Instantiate Converter with the input document 
+    with Converter("./business-plan.docx") as converter:
+        # Instantiate convert options to define the output format
+        word_convert_options = WordProcessingConvertOptions()
+        # Set the output fomormat to TXT
+        word_convert_options.format = WordProcessingFileType.TXT
+        
+        # Convert the input document to TXT
+        converter.convert("./business-plan.txt", word_convert_options)    
+
+if __name__ == "__main__":
+    specify_output_format()
+```
+{{< /tab >}}
+{{< tab "business-plan.docx" >}}  
+{{< tab-text >}}
+`business-plan.docx` is the sample file used in this example. Click [here](/conversion/python-net/_sample_files/developer-guide/converting-documents/convert-document-to-another-format/business-plan.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "business-plan.txt" >}}  
+{{< tab-text >}}
+`business-plan.txt` is the expected output TXT file. Click [here](/conversion/python-net/_sample_files/developer-guide/converting-documents/convert-document-to-another-format/business-plan.txt) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
 ## Specify Document Pages to Convert
 
 {{< alert style="tip" >}} Find out how to get the number of document pages in the [Getting Document Information]({{< ref "conversion/python-net/developer-guide/getting-document-info#example-1-get-basic-document-info" >}}) documentation topic. {{< /alert >}}
@@ -109,7 +149,7 @@ To convert specific document pages, you can use the following `ConvertOptions` c
 
 You can specify which document pages you would like to convert, as shown in the following example:
 
-{{< tabs "example-2">}}
+{{< tabs "example-3">}}
 {{< tab "convert_specific_document_pages.py" >}}  
 ```python
 from groupdocs.conversion import Converter
@@ -146,7 +186,7 @@ if __name__ == "__main__":
 
 As an alternative, you can specify a number of consecutive pages to convert, as shown in the following example:
 
-{{< tabs "example-3">}}
+{{< tabs "example-4">}}
 {{< tab "convert_consecutive_document_pages.py" >}}  
 ```python
 from groupdocs.conversion import Converter
@@ -179,3 +219,5 @@ pages-1-through-5.pdf` is the expected output PDF file. Click [here](/conversion
 {{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
+
+
