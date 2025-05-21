@@ -90,7 +90,7 @@ if __name__ == "__main__":
 
 By default, each of the `ConvertOptions` classes has its own default target format. For example, the default output format for [WordProcessingConvertOptions](https://reference.groupdocs.com/conversion/python-net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/) is [DOCX](https://reference.groupdocs.com/conversion/python-net/groupdocs.conversion.filetypes/wordprocessingfiletype/docx/).
 
-To set a different output format, use the `format` property. The following example demonstrates how to specify the target format as `TXT` when converting a `DOCX` file:
+To set a different output format within the format family, use the `format` property. The following example demonstrates how to specify the target format as `TXT` when converting a `DOCX` file:
 
 {{< tabs "example-2">}}
 {{< tab "specify_output_format.py" >}}  
@@ -102,9 +102,9 @@ from groupdocs.conversion.filetypes import WordProcessingFileType
 def specify_output_format():
     # Instantiate Converter with the input document 
     with Converter("./business-plan.docx") as converter:
-        # Instantiate convert options to define the output format
+        # Instantiate convert options to define the output format, by default it is DOCX
         word_convert_options = WordProcessingConvertOptions()
-        # Set the output fomormat to TXT
+        # Change the output format within the format family from DOCX to TXT
         word_convert_options.format = WordProcessingFileType.TXT
         
         # Convert the input document to TXT
