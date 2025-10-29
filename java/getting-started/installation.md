@@ -85,7 +85,7 @@ Then define the GroupDocs.Conversion for Java API dependency in your project as 
   <dependency>
     <groupId>com.groupdocs</groupId>
     <artifactId>groupdocs-conversion</artifactId>
-    <version>24.11</version>
+    <version>25.2</version>
   </dependency>
 </dependencies>
 ```
@@ -93,27 +93,27 @@ Then define the GroupDocs.Conversion for Java API dependency in your project as 
 {{< tab "Gradle" >}}
 ```xml
 dependencies {
-  implementation 'com.groupdocs:groupdocs-conversion:24.11'
+  implementation 'com.groupdocs:groupdocs-conversion:25.2'
 }
 ```
 {{< /tab >}}
 {{< tab "Kotlin" >}}
 ```xml
 dependencies {
-  implementation("com.groupdocs:groupdocs-conversion:24.11")
+  implementation("com.groupdocs:groupdocs-conversion:25.2")
 }
 ```
 {{< /tab >}}
 {{< tab "Ivy" >}}
 ```xml
-<dependency org="com.groupdocs" name="groupdocs-conversion" rev="24.11">
+<dependency org="com.groupdocs" name="groupdocs-conversion" rev="25.2">
   <artifact name="groupdocs-conversion" ext="jar"/>
 </dependency>
 ```
 {{< /tab >}}
 {{< tab "Sbt" >}}
 ```xml
-libraryDependencies += "com.groupdocs" % "groupdocs-conversion" % "24.11"
+libraryDependencies += "com.groupdocs" % "groupdocs-conversion" % "25.2"
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -183,7 +183,7 @@ public class App {
     <dependency>
       <groupId>com.groupdocs</groupId>
       <artifactId>groupdocs-conversion</artifactId>
-      <version>24.11</version>
+      <version>25.2</version>
     </dependency>
   </dependencies>
 

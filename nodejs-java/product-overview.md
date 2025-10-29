@@ -45,7 +45,7 @@ If you are new to GroupDocs.Conversion, see the following topics first:
 * [System requirements]({{< ref "conversion/nodejs-java/getting-started/system-requirements" >}})
 * [Installation]({{< ref "conversion/nodejs-java/getting-started/installation" >}})
 * [Licensing]({{< ref "conversion/nodejs-java/getting-started/licensing-and-subscription" >}})
-* [Basic usage]({{< ref "/conversion/java/developer-guide/basic-usage/" >}})
+* [Basic usage]({{< ref "/conversion/nodejs-java/developer-guide/basic-usage/" >}})
 
 ## Technical support
 

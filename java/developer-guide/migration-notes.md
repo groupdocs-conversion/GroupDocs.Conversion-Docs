@@ -2,7 +2,7 @@
 id: migration-notes
 url: conversion/java/migration-notes
 title: Migration notes
-weight: 3
+weight: 5
 description: "How to migrate from earlier versions of GroupDocs.Conversion for Java"
 keywords: 
 productName: GroupDocs.Conversion for Java

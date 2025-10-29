@@ -1,7 +1,7 @@
 ---
 id: load-xml-document-with-options
 url: conversion/java/load-xml-document-with-options
-title: Load XML document with options
+title: Loading XML Documents with Options
 weight: 12
 description: "Learn this article and check how to load and convert XML documents with advanced options using GroupDocs.Conversion for Java API."
 keywords: XML to Excel, XML to spreadsheet, XML as data source to XLSX
@@ -9,53 +9,76 @@ productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
 ---
-GroupDocs.Conversion provides [XmlLoadOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/xmlloadoptions/) to give you control over how the source XML document will be processed. The following options could be set:
+[GroupDocs.Conversion](https://products.groupdocs.com/conversion/java/) provides the [XmlLoadOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/xmlloadoptions/) class to offer fine-grained control over how XML documents are processed during conversion. This flexibility is particularly useful when working with XML data sources, applying XSL transformations, or handling external resources.
 | Option | Description |
 |--------|-------------|
-|**[setUseAsDataSource](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/xmlloadoptions/#isUseAsDataSource--)** | Use source XML document as a data source |
-|**[setXslFoFactory](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/xmlloadoptions/#getXslFoFactory--)** | XSL document stream to convert XML-FO using XSL. |
-|**[setXsltFactory](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/xmlloadoptions/#getXsltFactory--)** | XSLT document stream to convert XML performing XSL transformation to HTML. |
+|[**setUseAsDataSource**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/xmlloadoptions/#setUseAsDataSource-boolean-) | Specifies whether to treat the source XML document as a data source. |
+|[**setXslFoFactory**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/xmlloadoptions/#setXslFoFactory-java.util.function.Supplier-com.aspose.ms.System.IO.Stream--) | Provides an XSL document stream to convert XML-FO using XSL Formatting Objects. |
+|[**setXsltFactory**](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/xmlloadoptions/#setXsltFactory-java.util.function.Supplier-com.aspose.ms.System.IO.Stream--) | Provides an XSLT document stream to apply XSLT transformations, typically for converting to HTML. |
 
-### Convert XML as a data source to a spreadsheet
+These options enable you to customize the XML document loading process based on your specific requirements.
 
-The following code snippet shows how to use XML as a data source and convert it to a spreadsheet:
+### Convert XML as a Data Source to a Spreadsheet
 
+This example demonstrates how to use an XML document as a data source and convert it into a spreadsheet format:
+
+{{< tabs "code-example">}}
+{{< tab "XmlToSpreadsheet.java" >}}  
 ```java
+import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
+import com.groupdocs.conversion.options.load.XmlLoadOptions;
 
-    XmlLoadOptions loadOptions = new XmlLoadOptions();
-    loadOptions.setUseAsDataSource(true);
+public class XmlToSpreadsheet {
+    public static void convert() {
+         // Load XML as a data source
+        XmlLoadOptions loadOptions = new XmlLoadOptions();
+        loadOptions.setUseAsDataSource(true);
 
-    Converter converter = new Converter("data.xml", () -> loadOptions);
-    SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
+        // Initialize the converter with XML and load options
+        try(Converter converter = new Converter("data.xml", () -> loadOptions)) {
 
-    converter.convert("converted.xlsx", options);
+            // Conversion options for spreadsheet
+            SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
 
-```
-
-### Convert XML transformed through XSLT to a PDF:
-
-The following code shows how to convert a XML transformed through XSLT to a PDF:
-
-```java
-
-    XmlLoadOptions loadOptions = new XmlLoadOptions();
-    loadOptions.setXslFoFactory(() -> {
-        try {
-            return new FileInputStream("books.xsl");
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            // Convert XML to XLSX
+            converter.convert("converted.xlsx", options);
         }
-    });
+    }
 
-    Converter converter = new Converter("books.xml", () -> loadOptions);
-    
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.convert("converted.pdf", options);
-
+    public static void main(String[] args){
+        convert();
+    }
+}
 ```
+{{< /tab >}}
+{{< tab "data.xml" >}}  
+{{< tab-text >}}
+`data.xml` is sample file used in this example. Click [here](/conversion/java/_sample_files/developer-guide/loading-documents/load-xml-document-with-options/data.xml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "converted.xlsx" >}}  
+{{< tab-text >}}
+`converted.xlsx` is converted XLSX document. Click [here](/conversion/java/_sample_files/developer-guide/loading-documents/load-xml-document-with-options/converted.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
-## Skip loading of external resources
 
-External resources refer to data or content that is referenced or linked from within an XML document but is stored separately, typically in separate files or locations.  Common external resources include DTDs or XML schemas, entities, XSLT Stylesheets, data sources, images, multimedia, and so on. 
+## Skipping the Loading of External Resources
 
-In some cases, you may want to skip loading all or just some of the external resources during the conversion. For example, when these resources become unavailable. Read the [Skip loading of external resources]({{< ref "conversion/java/developer-guide/loading-documents/skip-external-resources.md" >}}) article to learn how to do this with [**GroupDocs.Conversion for Java**](https://products.groupdocs.com/conversion/java/).
+**External resources** refer to data or content that is linked from within an XML document but stored separately. This includes:
+- Document Type Definitions (DTDs) or XML Schemas (XSDs)
+- External entities
+- XSLT stylesheets
+- Linked images or multimedia content
+- Data sources referenced in the XML
+
+**Why Skip External Resources?**
+
+You may want to skip loading external resources in the following cases:
+- **Unavailable Resources:** When external resources are missing or inaccessible.
+- **Security Concerns:** To prevent XML External Entity (XXE) attacks.
+- **Performance Optimization:** To improve conversion speed by avoiding unnecessary external calls.
+
+To learn more about skipping external resources, refer to the *[Skip Loading of External Resources](https://docs.groupdocs.com/conversion/java/skip-loading-external-resources/)* article in the [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java/) documentation.

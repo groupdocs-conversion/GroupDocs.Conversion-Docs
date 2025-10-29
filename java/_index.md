@@ -8,10 +8,12 @@ keywords: GroupDocs.Conversion for Java, Conversion, document conversion, conver
 productName: GroupDocs.Conversion for Java
 hideChildren: True
 AddLibInfoScript: True
+aliases:
+    - /conversion/java/product-overview/
 structuredData:
     showOrganization: True
 ---
-<img src="/conversion/java/images/home.png" alt="groupdocs-conversion-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
+<img src="/conversion/java/_images/home.png" alt="groupdocs-conversion-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
 <dt class="flex flex-wrap align-center gdoc-props__meta">
     <a href='https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-conversion/23.12/' class="release-version-link">
@@ -24,68 +26,39 @@ structuredData:
 
 {{< button style="primary" link="https://releases.groupdocs.com/conversion/java/release-notes/" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg> Release notes {{< /button >}} 
 {{< button style="primary" link="https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-conversion/" >}} {{< icon "gdoc_download" >}} Package repository {{< /button >}}
+{{< button style="primary" link="https://products.groupdocs.app/conversion/total" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#app"></use></svg> Online app {{< /button >}} 
 
+[GroupDocs.Conversion for Java](https://products.groupdocs.com/conversion/java/) is a robust and highly efficient document conversion API designed for seamless transformation between multiple file formats. It supports conversion across a wide range of document and image types, including Microsoft Office formats (Word, Excel, PowerPoint), OpenDocument formats, PDFs, HTML, CAD drawings, and raster images (TIFF, JPEG, PNG, BMP, GIF), among many others. The library offers extensive customization capabilities, allowing developers to fine-tune the conversion output with flexible options.
 
-GroupDocs.Conversion for Java serves as a lightweight API for document conversion in various formats within Java applications. 
+## Key Features and Advantages
+### Extensive File Format Support
+- Convert between thousands of file format combinations, including office documents, presentations, spreadsheets, images, and more.
+- No dependency on external software like Microsoft Office, Adobe Acrobat, or third-party libraries.
+### Advanced Conversion Capabilities
+- Convert an entire document or specify a custom page range for conversion.
+- Apply watermarks to document pages during conversion.
+- Extract document metadata such as file type, page count, and other properties.
+- Fine-grained customization of output appearance through advanced conversion settings.
+#### Optimized Performance and Scalability
+- **Caching Mechanism** – Cache conversion results to improve performance. Once a document is converted, its output can be reused efficiently.
+- **Custom Storage Integration** – Support for various storage solutions including local disk, Amazon S3, Dropbox, Google Drive, and Windows Azure by implementing caching interfaces.
+- **High Performance** – Optimized to process thousands of files while utilizing minimal system resources. Each release is rigorously tested for performance stability and efficiency.
+- **Scalability** – Packaged as a standalone Java library that can be integrated into any Java-based application and managed through Maven.
+### Developer-Friendly API
+- **Intuitive and Simple API** – The public API is designed with clarity in mind, ensuring that methods behave predictably without unnecessary complexity.
+- **Cross-Platform Compatibility** – Supports multiple operating systems and platforms:
+ - Windows, Linux, and macOS
+ - 32-bit and 64-bit architectures
+ - Java 8 and higher
+## Getting Started with GroupDocs.Conversion for Java
+If you're new to GroupDocs.Conversion, refer to the following topics to begin integration:
 
-Acting as middleware, it empowers your application to seamlessly convert between more than 50 document and image file formats. 
+- [System Requirements]({{< ref "conversion/java/system-requirements" >}}) – Understand the necessary environment setup.
+- [Installation]({{< ref "conversion/java/getting-started/installation" >}}) – Learn how to install and configure the API in your project.
+- [Licensing]({{< ref "conversion/java/licensing-and-subscription" >}}) – Get details on available licensing models.
+- [Basic Usage]({{< ref "conversion/java/developer-guide/converting-documents/basic-usage" >}}) – Explore fundamental examples and use cases.
+## Technical Support
+For assistance while using GroupDocs.Conversion, you can:
 
-This native Java API ensures precise conversion of both documents and image files in any type of Java application. Moreover, it offers the functionality to add text or image watermarks during the conversion process.
-
-------
-{{< columns >}}
-<p><b>About GroupDocs.Conversion</b></p>
-<hr><p>OVERVIEW</p></hr>
-<ul>
-	<li><a href='{{< ref "product-overview" >}}'>Product overview</a></li>
-	<li><a href='{{< ref "conversion/java/getting-started/features-overview" >}}'>Main features</a></li>
-	<li><a href='{{< ref "conversion/java/supported-document-formats.md" >}}'>Supported file formats</a></li>
-</ul>
-<p>GET STARTED</p>
-<ul>
-	<li><a href='{{< ref "conversion/java/system-requirements.md" >}}'>System requirements</a></li>
-	<li><a href='{{< ref "conversion/java/getting-started/installation.md" >}}'>Installation</a></li>
-	<li><a href='{{< ref "conversion/java/licensing-and-subscription.md" >}}'>Licensing</a></li>
-</ul>
-<--->
-<p><b>Developer Guide</b></p>
-<hr><p>CONVERSION BASICS</p></hr>
-<ul>
-	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/pdf" >}}'>Convert PDF</a></li>
-	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/wordprocessing" >}}'>Convert Word</a></li>
-	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/spreadsheet" >}}'>Convert Excel</a></li>
-	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/presentation" >}}'>Convert PowerPoint</a></li>
-	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/image" >}}'>Convert images</a></li>
-	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/web" >}}'>Convert HTML</a></li>
-	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/convert/cad" >}}'>Convert CAD</a></li>
-</ul>
-<p>HOW-TO GUIDES</p>
-<ul>
-	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/get-possible-conversions" >}}'>Get supported conversions</a></li>
-	<li><a href='{{< ref "conversion/java/developer-guide/loading-documents/loading-documents-from-different-sources" >}}'>Load files from different sources</a></li>
-	<li><a href='{{< ref "conversion/java/developer-guide/basic-usage/get-document-info" >}}'>Retrieve document information</a></li>
-	<li><a href='{{< ref "conversion/java/developer-guide/advanced-usage/converting/common-conversion-options/add-watermark" >}}'>Add watermarks</a></li>
-	<li><a href='{{< ref "conversion/java/developer-guide/advanced-usage/caching" >}}'>Cache rendering results</a></li>
-</ul>
-<p>API REFERENCE</p>
-<ul>
-	<li><a href="https://reference.groupdocs.com/conversion/java">GroupDocs.Conversion for Java API Reference</a></li>
-</ul>
-<--->
-<p><b>Useful Resources</b></p>
-<hr><p>DEMOS AND EXAMPLES</p></hr>
-<ul>
-	<li><a href="https://products.groupdocs.app/conversion/total/">Convert files online</a></li>
-	<li><a href="https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Java">Download examples and demos from GitHub</a></li>
-	<li><a href='{{< ref "conversion/java/getting-started/how-to-run-examples.md" >}}'>How to run examples</a></li>	
-</ul>
-<p>VERSION HISTORY</p>
-<ul>
-	<li><a href="https://releases.groupdocs.com/conversion/java/release-notes/">GroupDocs.Conversion for Java Release Notes</a></li>
-</ul>
-<p>TECHNICAL SUPPORT</p>
-<ul>
-	<li><a href="https://forum.groupdocs.com">Free Support Forum for GroupDocs Products</a></li>
-	<li><a href="https://helpdesk.groupdocs.com">Paid Support Helpdesk for GroupDocs Products</a></li>
-</ul>
-{{< /columns >}}
+- Post queries in our [Free Support Forum](https://forum.groupdocs.com/c/conversion/11).
+- For premium support and dedicated assistance, submit a ticket via our [Paid Support Helpdesk](https://helpdesk.groupdocs.com/).

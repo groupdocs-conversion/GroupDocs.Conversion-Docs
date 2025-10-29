@@ -2,7 +2,7 @@
 id: features-overview
 url: conversion/java/features-overview
 title: Features overview
-weight: 2
+weight: 3
 description: "Salient features of file conversion API using Java are described in this article"
 keywords: file conversion
 productName: GroupDocs.Conversion for Java
@@ -35,7 +35,7 @@ There are lots of modifications that are possible during the file conversion pro
 
 ### Obtain all supported conversion formats list
 
-You can obtain the [complete list of possible conversions]({{< ref "conversion/java/developer-guide/basic-usage/get-possible-conversions.md" >}}) that are supported by GroupDocs.Conversion for Java library. Also, it is possible to get allowed conversions for the specific file format.
+You can obtain the [complete list of possible conversions]({{< ref "conversion/java/developer-guide/converting-documents/basic-usage/get-possible-conversions.md" >}}) that are supported by GroupDocs.Conversion for Java library. Also, it is possible to get allowed conversions for the specific file format.
 
 ### Fonts replacement
 
@@ -43,11 +43,11 @@ It is a common use case when a source document references some specific fonts th
 
 ### Watermarking converted document
 
-You can [add a text or an image watermark]({{< ref "conversion/java/developer-guide/advanced-usage/converting/common-conversion-options/add-watermark.md" >}}) to any page of the converted document and choose its desired dimensions, color and font size.
+You can [add a text or an image watermark]({{< ref "conversion/java/developer-guide/converting-documents/advanced-usage/converting/common-conversion-options/add-watermark.md" >}}) to any page of the converted document and choose its desired dimensions, color and font size.
 
 ## Document information extraction
 
-GroupDocs.Conversion allows to obtain basic [information about source document]({{< ref "conversion/java/developer-guide/basic-usage/get-document-info.md" >}}) - file type, pages count etc. Dependent on the source file type some format-specific information can be extracted, for example:
+GroupDocs.Conversion allows to obtain basic [information about source document]({{< ref "conversion/java/developer-guide/get-document-info.md" >}}) - file type, pages count etc. Dependent on the source file type some format-specific information can be extracted, for example:
 
 - CAD - list of layers and layouts in a CAD document;
 - Email – list of attachments;
@@ -60,7 +60,7 @@ With GroupDocs.Conversion you are not limited to [local files]({{< ref "conversi
 
 ## Caching results
 
-GroupDocs.Conversion supports [conversion result caching]({{< ref "conversion/java/developer-guide/advanced-usage/caching/" >}}) to local disk by default. However, any type of cache storage can be supported by implementing appropriate interfaces – Amazon S3, Dropbox, Google Drive, Windows Azure, Redis or any other.
+GroupDocs.Conversion supports [conversion result caching]({{< ref "conversion/java/developer-guide/converting-documents/advanced-usage/caching/" >}}) to local disk by default. However, any type of cache storage can be supported by implementing appropriate interfaces – Amazon S3, Dropbox, Google Drive, Windows Azure, Redis or any other.
 
 ## Work with archives
 It is possible to convert archived files to all supported formats or just extract files. Also, you can archive the result of the conversion.
