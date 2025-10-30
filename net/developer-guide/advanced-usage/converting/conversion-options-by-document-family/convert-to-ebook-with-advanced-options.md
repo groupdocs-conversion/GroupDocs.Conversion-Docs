@@ -226,8 +226,8 @@ using (var converter = new Converter("user-manual.pdf"))
     var options = new EBookConvertOptions
     {
         Format = EBookFileType.Mobi,
-        PageWidth = 600,
-        PageHeight = 800
+        PageWidth = 432,   // 6 inches × 72 points/inch
+        PageHeight = 648   // 9 inches × 72 points/inch
     };
     converter.Convert("user-manual.mobi", options);
 }
