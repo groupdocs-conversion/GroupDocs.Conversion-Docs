@@ -367,18 +367,18 @@ using (var converter = new Converter(
         if (loadContext.HierarchyLevel == 0)
         {
             Console.WriteLine("  -> This is the main document");
-            return new PdfLoadOptions { RemoveEmbeddedFiles = false };
         }
         else if (loadContext.HierarchyLevel == 1)
         {
             Console.WriteLine("  -> This is an embedded file in the main document");
-            return new PdfLoadOptions();
         }
         else
         {
             Console.WriteLine($"  -> This is nested {loadContext.HierarchyLevel} levels deep");
-            return new PdfLoadOptions();
         }
+
+        // Return appropriate load options for the document type
+        return new PdfLoadOptions();
     }))
 {
     int itemCount = 0;
@@ -388,7 +388,7 @@ using (var converter = new Converter(
         {
             itemCount++;
 
-            // SaveContext also shows hierarchy level during conversion
+            // SaveContext shows hierarchy level during conversion
             var outputName = $"contract-L{saveContext.HierarchyLevel}-I{saveContext.ItemIndex}.pdf";
             Console.WriteLine($"Saving: {outputName}");
 
