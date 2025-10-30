@@ -10,9 +10,9 @@ hideChildren: False
 toc: True
 ---
 
-This guide shows how to convert archives between formats (ZIP to 7z, ZIP to TAR, etc.) without modifying the files inside.
+This guide shows how to convert archives between formats (ZIP to 7z, ZIP to TAR, etc.) without modifying the files inside. The archive format changes, but the contents remain unchanged.
 
-**For extracting and converting archive contents**, see [Working with Archive Files (ZIP, RAR, 7z, TAR)]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-contents-of-rar-or-zip-document-to-different-formats-and-compress.md" >}}).
+**To extract and convert files inside archives**, see [Extract and Convert Archive Contents]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-contents-of-rar-or-zip-document-to-different-formats-and-compress.md" >}}).
 
 ## Basic Archive Format Conversion
 
