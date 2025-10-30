@@ -196,6 +196,6 @@ All examples on this page have been verified through automated testing to ensure
 
 ## See Also
 
-- [Context Objects - Complete Guide]({{< ref "../../basic-usage/context-objects-complete-guide" >}})
-- [Convert Images]({{< ref "../../basic-usage/convert" >}})
+- [Context Objects - Complete Guide]({{< ref "conversion/net/developer-guide/basic-usage/context-objects-complete-guide" >}})
 - [ImageFileType API Reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/imagefiletype/)
+- [ImageLoadOptions API Reference](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/imageloadoptions/)
