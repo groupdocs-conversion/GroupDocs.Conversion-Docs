@@ -88,7 +88,7 @@ using (var converter = new Converter(
 
 ## Working with Different EBook Formats
 
-GroupDocs.Conversion supports multiple ebook formats through EBookLoadOptions:
+GroupDocs.Conversion supports multiple ebook formats through EBookLoadOptions. Each format should be explicitly specified:
 
 ### MOBI (Mobipocket)
 
@@ -97,7 +97,10 @@ MOBI is a widely-used format, especially for Amazon Kindle devices:
 ```csharp
 using (var converter = new Converter(
     "mystery-novel.mobi",
-    (LoadContext loadContext) => new EBookLoadOptions()))
+    (LoadContext loadContext) => new EBookLoadOptions
+    {
+        Format = EBookFileType.Mobi
+    }))
 {
     converter.Convert("mystery-novel.pdf", new PdfConvertOptions());
 }
@@ -110,7 +113,10 @@ EPUB is an open standard format supported by most ebook readers:
 ```csharp
 using (var converter = new Converter(
     "user-manual.epub",
-    (LoadContext loadContext) => new EBookLoadOptions()))
+    (LoadContext loadContext) => new EBookLoadOptions
+    {
+        Format = EBookFileType.Epub
+    }))
 {
     converter.Convert("user-manual.docx", new WordProcessingConvertOptions());
 }
@@ -123,7 +129,10 @@ AZW3 is Amazon's modern ebook format with enhanced features:
 ```csharp
 using (var converter = new Converter(
     "reference-book.azw3",
-    (LoadContext loadContext) => new EBookLoadOptions()))
+    (LoadContext loadContext) => new EBookLoadOptions
+    {
+        Format = EBookFileType.Azw3
+    }))
 {
     converter.Convert("reference-book.html", new WebConvertOptions());
 }
