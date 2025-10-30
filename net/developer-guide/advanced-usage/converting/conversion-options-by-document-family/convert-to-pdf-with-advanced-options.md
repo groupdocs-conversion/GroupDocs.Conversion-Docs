@@ -12,8 +12,11 @@ toc: True
 GroupDocs.Conversion provides the [PdfConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions) class to give you control over conversion results. Along with [common convert options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}}) you can specify the following additional options via the [PdfConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions) class:
 
 *   [Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/) sets the desired file type the input document should be converted to.
-*   [PageWidth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/pagewidth) sets the desired page width in points after conversion (1 point = 1/72 inch).
-*   [PageHeight](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/pageheight) sets the desired page height in points after conversion (1 point = 1/72 inch).
+*   [PageWidth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/pagewidth) sets the desired page width in points after conversion (1 point = 1/72 inch). When set, PageSize is automatically changed to Custom.
+*   [PageHeight](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/pageheight) sets the desired page height in points after conversion (1 point = 1/72 inch). When set, PageSize is automatically changed to Custom.
+*   [PageSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/pagesize) sets the desired page size. Available options are: *Default, A3, A4, A5, Letter, Legal, Tabloid*.
+*   [PageOrientation](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/pageorientation) sets the page orientation. Available options are: *Default, Landscape, Portrait*.
+*   [FallbackPageSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/fallbackpagesize) sets the fallback page size to use when the input document's page size cannot be determined.
 *   [Dpi](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/dpi) sets the desired page DPI after conversion
 *   [Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/password) when specified, the resulting document will be protected with the specified password.
 *   [MarginTop](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/margintop) sets the desired page top margin after conversion.
@@ -38,6 +41,53 @@ using (Converter converter = new Converter("sample.docx"))
         PageHeight = 841   // A4 height in points (11.69 inches)
     };
     converter.Convert("converted.pdf", options);
+}
+```
+
+## Page Size and Orientation
+
+You can control page size and orientation using predefined sizes or custom dimensions.
+
+### Using Predefined Page Size
+
+```csharp
+using (Converter converter = new Converter("sample.docx"))
+{
+    PdfConvertOptions options = new PdfConvertOptions
+    {
+        PageSize = PageSize.A4,
+        PageOrientation = PageOrientation.Portrait
+    };
+    converter.Convert("a4-portrait.pdf", options);
+}
+```
+
+### Setting Landscape Orientation
+
+```csharp
+using (Converter converter = new Converter("sample.docx"))
+{
+    PdfConvertOptions options = new PdfConvertOptions
+    {
+        PageSize = PageSize.Letter,
+        PageOrientation = PageOrientation.Landscape
+    };
+    converter.Convert("letter-landscape.pdf", options);
+}
+```
+
+### Using Fallback Page Size
+
+The fallback page size is used when the input document's page size cannot be determined:
+
+```csharp
+using (Converter converter = new Converter("sample.docx"))
+{
+    PdfConvertOptions options = new PdfConvertOptions
+    {
+        FallbackPageSize = PageSize.A4
+    };
+    converter.Convert("with-fallback.pdf", options);
 }
 ```
 
@@ -126,11 +176,11 @@ using (Converter converter = new Converter("sample.docx"))
 {
 
     PdfConvertOptions options = new PdfConvertOptions
-    {        
+    {
         PdfOptions = new PdfOptions
         {
             FormattingOptions = new PdfFormattingOptions
-            { 
+            {
                 FitWindow = true,
                 HideWindowUI = true,
                 PageMode = PdfPageMode.UseThumbs
@@ -140,3 +190,9 @@ using (Converter converter = new Converter("sample.docx"))
     converter.Convert("converted.pdf", options);
 }
 ```
+
+## More Resources
+
+- [API Reference: PdfConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions)
+- [Supported File Formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}})
+- [Common Conversion Options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}})

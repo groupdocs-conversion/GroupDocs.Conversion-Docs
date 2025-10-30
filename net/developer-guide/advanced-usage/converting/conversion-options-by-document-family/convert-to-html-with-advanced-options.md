@@ -8,11 +8,13 @@ keywords: Convert to HTML, Convert HTML
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-GroupDocs.Conversion provides [WebConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions) to give you control over conversion result. The following options could be set:
+GroupDocs.Conversion provides [WebConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions) to give you control over conversion result. The following options could be set:
 
-*   [FixedLayout](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/fixedlayout) controls the HTML generation. If it's set to *true*, fixed layout will be used e.g. absolutely positioned HTML element.
-*   [Zoom](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/zoom) specifies the zoom level in percentage. The default value is 100.  
-*   [UsePdf](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/usepdf). Sometimes, for better rendering and elements positioning the source document should be converted to PDF first. If this property is set to *true*, the input firstly is converted to PDF and after that to desired format.
+*   [FixedLayout](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/fixedlayout) controls the HTML generation. If it's set to *true*, fixed layout will be used e.g. absolutely positioned HTML element.
+*   [FixedLayoutShowBorders](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/fixedlayoutshowborders) controls the display of page borders during fixed layout conversion. Default is true.
+*   [EmbedFontResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/embedfontresources) specifies whether to embed font resources within the main HTML. Default is false. Note: fonts automatically embed when FixedLayout is enabled.
+*   [Zoom](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/zoom) specifies the zoom level in percentage. The default value is 100.
+*   [UsePdf](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions/usepdf). Sometimes, for better rendering and elements positioning the source document should be converted to PDF first. If this property is set to *true*, the input firstly is converted to PDF and after that to desired format.
 
 The following code snippet shows how to convert to HTML with advanced options
 
@@ -29,6 +31,25 @@ using (Converter converter = new Converter("sample.docx"))
 }
 ```
 
+## Embedding Font Resources
+
+Control whether font resources are embedded within the HTML file:
+
+```csharp
+using (Converter converter = new Converter("sample.docx"))
+{
+    WebConvertOptions options = new WebConvertOptions
+    {
+        EmbedFontResources = true  // Embed fonts directly in HTML
+    };
+    converter.Convert("embedded-fonts.html", options);
+}
+```
+
+When `EmbedFontResources` is set to false (default), font files are stored separately and referenced by the HTML file. When set to true, all font data is embedded directly within the HTML file, making it self-contained but larger in size.
+
+Note: When `FixedLayout` is enabled, fonts are automatically embedded regardless of the `EmbedFontResources` setting.
+
 ### Control page borders visibility
 
 The following code snippet shows how to convert to HTML and control page borders visibility
@@ -44,3 +65,9 @@ using (var converter = new Converter(source))
     converter.Convert("converted.html" , options);
 }
 ```
+
+## More Resources
+
+- [API Reference: WebConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions)
+- [Supported File Formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}})
+- [Common Conversion Options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}})
