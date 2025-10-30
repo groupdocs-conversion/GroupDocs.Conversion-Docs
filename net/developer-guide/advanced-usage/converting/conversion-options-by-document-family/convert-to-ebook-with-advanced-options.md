@@ -2,7 +2,7 @@
 id: convert-to-ebook-with-advanced-options
 url: conversion/net/convert-to-ebook-with-advanced-options
 title: Convert to eBook with advanced options
-weight: 3
+weight: 16
 description: "Follow this guide and learn how to convert documents to eBook formats (EPUB, MOBI, AZW3) with page size, orientation, and other customizations using GroupDocs.Conversion for .NET."
 keywords: Convert to eBook, Convert to EPUB, Convert to MOBI, Convert to AZW3, eBook conversion
 productName: GroupDocs.Conversion for .NET
@@ -20,8 +20,8 @@ GroupDocs.Conversion provides [EBookConvertOptions](https://reference.groupdocs.
 |----------|------|-------------|
 | [Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/) | `EBookFileType` | Specifies the desired eBook format. Available options are: *Epub, Mobi, Azw3* |
 | [PageSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pageconvertoptions-1/pagesize) | `PageSize` | Sets the page size for the converted eBook |
-| [PageWidth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pageconvertoptions-1/pagewidth) | `double` | Sets custom page width in pixels |
-| [PageHeight](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pageconvertoptions-1/pageheight) | `double` | Sets custom page height in pixels |
+| [PageWidth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pageconvertoptions-1/pagewidth) | `double` | Sets custom page width in points |
+| [PageHeight](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pageconvertoptions-1/pageheight) | `double` | Sets custom page height in points |
 | [PageOrientation](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pageconvertoptions-1/pageorientation) | `PageOrientation` | Sets page orientation (*Portrait* or *Landscape*) |
 | [FallbackPageSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pageconvertoptions-1/fallbackpagesize) | `PageSize` | Sets fallback page size when source page dimensions cannot be determined |
 | [PageNumber](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/commonconvertoptions-1/pagenumber) | `int` | Specifies the starting page number for conversion |
@@ -100,15 +100,15 @@ using (var converter = new Converter("landscape-document.pdf"))
 
 ## Custom Page Dimensions
 
-Specify custom page width and height in pixels for precise control:
+Specify custom page width and height in points for precise control:
 
 ```csharp
 using (var converter = new Converter("document.pdf"))
 {
     var options = new EBookConvertOptions
     {
-        PageWidth = 600,   // Width in pixels
-        PageHeight = 800   // Height in pixels
+        PageWidth = 432,   // Width in points (6 inches × 72 points/inch)
+        PageHeight = 648   // Height in points (9 inches × 72 points/inch)
     };
     converter.Convert("custom-size.epub", options);
 }
@@ -286,9 +286,9 @@ Use EBookConvertOptions when you need to:
    - Use AZW3 for modern Kindle devices
 
 2. **Set appropriate page dimensions**:
-   - Standard eBook: 600×800 pixels
-   - Tablet readers: 800×1024 pixels
-   - Custom dimensions for specific devices
+   - Standard eBook (6"×9"): 432×648 points
+   - Tablet readers (8"×10.67"): 576×768 points
+   - Custom dimensions for specific devices (1 point = 1/72 inch)
 
 3. **Consider orientation**:
    - Portrait for text-heavy content
