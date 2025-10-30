@@ -52,10 +52,10 @@ GroupDocs.Conversion provides six context types, each serving a specific purpose
 | `SourceFileName` | `string` | Name of the source file (read-only) |
 | `SourceFormat` | `FileType` | Format of the source document (read-only) |
 | `SourceStream` | `Stream` | Source document stream (read-only) |
-| `HierarchyLevel` | `int` | Hierarchy level for container documents (read-only) * |
-| `ItemIndex` | `int` | Index of current item in container documents (read-only) * |
+| `HierarchyLevel` | `int` | Nesting depth of current document in container hierarchy (read-only) * |
+| `ItemIndex` | `int` | Absolute sequential counter across all items (read-only) * |
 
-\* `HierarchyLevel` and `ItemIndex` are only relevant when converting container documents (e.g., PST, OST, PDF with embedded files). For regular documents, these values are always 0 and 1.
+\* `HierarchyLevel` shows nesting depth (0 = root, 1 = embedded in root, etc.). `ItemIndex` is an absolute counter (1, 2, 3...) across all items regardless of hierarchy. For regular documents, these values are always 0 and 1.
 
 ### Example
 
@@ -135,10 +135,10 @@ using (var converter = new Converter("quarterly-report.pdf"))
 | `SourceFileName` | `string` | Name of the source file (read-only) |
 | `SourceFormat` | `FileType` | Format of the source document (read-only) |
 | `TargetFormat` | `string` | Target format for conversion (read-only) |
-| `HierarchyLevel` | `int` | Hierarchy level for container documents (read-only) * |
-| `ItemIndex` | `int` | Index of current item in container documents (read-only) * |
+| `HierarchyLevel` | `int` | Nesting depth of current document in container hierarchy (read-only) * |
+| `ItemIndex` | `int` | Absolute sequential counter across all items (read-only) * |
 
-\* Only relevant for container documents (e.g., PST, OST, PDF with embedded files).
+\* `HierarchyLevel` shows nesting depth (0 = root, 1 = embedded, etc.). `ItemIndex` is an absolute counter (1, 2, 3...) across all items. Only relevant for container documents (e.g., PST, OST, PDF with embedded files).
 
 ### Example
 
@@ -214,10 +214,10 @@ using (var converter = new Converter("contract-2024.pdf"))
 | `ConvertedStream` | `Stream` | Stream containing the converted document (read-only) |
 | `SourceFileName` | `string` | Name of the source file (read-only) |
 | `SourceFormat` | `FileType` | Format of the source document (read-only) |
-| `HierarchyLevel` | `int` | Hierarchy level for container documents (read-only) * |
-| `ItemIndex` | `int` | Index of current item in container documents (read-only) * |
+| `HierarchyLevel` | `int` | Nesting depth of current document in container hierarchy (read-only) * |
+| `ItemIndex` | `int` | Absolute sequential counter across all items (read-only) * |
 
-\* Only relevant for container documents (e.g., PST, OST, PDF with embedded files).
+\* `HierarchyLevel` shows nesting depth (0 = root, 1 = embedded, etc.). `ItemIndex` is an absolute counter (1, 2, 3...) across all items. Only relevant for container documents (e.g., PST, OST, PDF with embedded files).
 
 ### Example
 
@@ -291,6 +291,26 @@ using (var converter = new Converter("monthly-report.pdf"))
 
 The `HierarchyLevel` and `ItemIndex` properties become relevant when converting **container documents** that can hold multiple items in a hierarchical structure.
 
+### Understanding HierarchyLevel and ItemIndex
+
+- **HierarchyLevel**: Shows the **nesting depth** of the current document
+  - `0` = Root/main document
+  - `1` = Directly embedded in main document
+  - `2` = Embedded within an embedded document, etc.
+
+- **ItemIndex**: **Absolute sequential counter** across ALL items
+  - Starts at 1 and increments for each item
+  - NOT per-hierarchy-level (it's global)
+
+**Example hierarchy:**
+```
+Main PDF (Level 0, Index 1)
+├─ Attachment 1 (Level 1, Index 2)
+├─ Attachment 2 (Level 1, Index 3)
+└─ Attachment 3 (Level 1, Index 4)
+    └─ Sub-attachment (Level 2, Index 5)
+```
+
 ### Container Document Types
 
 - **Email containers**: PST, OST files (Outlook data files)
@@ -330,29 +350,64 @@ using (var converter = new Converter("mailbox-archive.pst"))
 ### Example: PDF with Embedded Files
 
 ```csharp
+// LoadContext is called for EACH document in the hierarchy
 using (var converter = new Converter(
     "contract-with-attachments.pdf",
     (LoadContext loadContext) =>
     {
-        // Track hierarchy as we load
-        if (loadContext.HierarchyLevel > 0)
-        {
-            Console.WriteLine($"Loading embedded file: {loadContext.SourceFileName}");
-            Console.WriteLine($"  At level: {loadContext.HierarchyLevel}");
-            Console.WriteLine($"  Item index: {loadContext.ItemIndex}");
-        }
+        // HierarchyLevel shows WHERE in the hierarchy this document is
+        // Level 0 = main document
+        // Level 1 = directly embedded in main document
+        // Level 2 = embedded within an embedded document, etc.
 
-        return new PdfLoadOptions { RemoveEmbeddedFiles = false };
+        Console.WriteLine($"Loading: {loadContext.SourceFileName}");
+        Console.WriteLine($"  Hierarchy Level: {loadContext.HierarchyLevel}");
+        Console.WriteLine($"  Item Index: {loadContext.ItemIndex}");
+
+        if (loadContext.HierarchyLevel == 0)
+        {
+            Console.WriteLine("  -> This is the main document");
+            return new PdfLoadOptions { RemoveEmbeddedFiles = false };
+        }
+        else if (loadContext.HierarchyLevel == 1)
+        {
+            Console.WriteLine("  -> This is an embedded file in the main document");
+            return new PdfLoadOptions();
+        }
+        else
+        {
+            Console.WriteLine($"  -> This is nested {loadContext.HierarchyLevel} levels deep");
+            return new PdfLoadOptions();
+        }
     }))
 {
-    converter.Convert("contract-complete.pdf", new PdfConvertOptions());
+    int itemCount = 0;
+
+    converter.Convert(
+        (SaveContext saveContext) =>
+        {
+            itemCount++;
+
+            // SaveContext also shows hierarchy level during conversion
+            var outputName = $"contract-L{saveContext.HierarchyLevel}-I{saveContext.ItemIndex}.pdf";
+            Console.WriteLine($"Saving: {outputName}");
+
+            return File.Create(outputName);
+        },
+        new PdfConvertOptions());
+
+    Console.WriteLine($"Total items converted: {itemCount}");
 }
 ```
 
 **Key Points:**
-- For regular documents (DOCX, XLSX, simple PDF), `HierarchyLevel` is always 0 and `ItemIndex` is always 1
-- For container documents, `HierarchyLevel` indicates nesting depth (0 = root, 1 = first level, etc.)
-- `ItemIndex` provides the sequential position within the current hierarchy level
+- **LoadContext is called once for each document** in the container hierarchy (main document + each embedded document)
+- **HierarchyLevel shows the nesting depth** of the document currently being loaded/converted:
+  - `HierarchyLevel = 0` → Main/root document
+  - `HierarchyLevel = 1` → Directly embedded in main document
+  - `HierarchyLevel = 2` → Embedded within an embedded document, etc.
+- **ItemIndex is an absolute sequential counter** - counts all items across the entire conversion (1, 2, 3, 4...), regardless of hierarchy level
+- For regular documents (DOCX, XLSX, simple PDF without embedded files), `HierarchyLevel` is always 0 and `ItemIndex` is always 1
 
 ---
 
