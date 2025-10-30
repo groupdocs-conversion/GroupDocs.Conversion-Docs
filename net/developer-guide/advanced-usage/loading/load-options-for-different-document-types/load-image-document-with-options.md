@@ -7,6 +7,7 @@ description: "Learn how to use ImageLoadOptions to configure image document load
 keywords: ImageLoadOptions, load image, PNG, JPG, GIF, BMP, TIFF, image conversion, GroupDocs.Conversion
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 
 ## Introduction

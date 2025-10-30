@@ -7,6 +7,7 @@ description: "Learn how to use EBookLoadOptions to configure ebook document load
 keywords: EBookLoadOptions, load ebook, MOBI, EPUB, AZW3, Kindle, ebook conversion, GroupDocs.Conversion
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
+toc: True
 ---
 
 ## Introduction
