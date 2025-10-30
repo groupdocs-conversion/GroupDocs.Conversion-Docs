@@ -87,11 +87,59 @@ FluentConverter.Load("documents.zip")
 
 This workflow changes the archive format while preserving the original file contents. No document conversion occurs.
 
-### Example: ZIP → 7z (No Content Conversion)
+GroupDocs.Conversion provides **three methods** to accomplish this. Use whichever fits your needs:
+
+### Method 1: Standard Converter API (Recommended - Simplest!)
+
+The most straightforward approach for basic format conversion:
+
+```csharp
+using GroupDocs.Conversion;
+using GroupDocs.Conversion.Options.Convert;
+using GroupDocs.Conversion.FileTypes;
+
+using (var converter = new Converter("archive.zip"))
+{
+    var options = new CompressionConvertOptions
+    {
+        Format = CompressionFileType.SevenZ
+    };
+    converter.Convert("archive.7z", options);
+}
+
+// Output: archive.7z containing the same files as the original ZIP
+```
+
+### Method 2: FluentConverter with WithOptions (Clean Alternative)
+
+If you prefer FluentConverter syntax:
 
 ```csharp
 using GroupDocs.Conversion.Fluent;
 using GroupDocs.Conversion.Options.Convert;
+using GroupDocs.Conversion.Contracts;
+using GroupDocs.Conversion.FileTypes;
+using System.IO;
+
+FluentConverter.Load("archive.zip")
+    .ConvertTo((SaveContext saveContext) => File.Create("archive.7z"))
+    .WithOptions(new CompressionConvertOptions
+    {
+        Format = CompressionFileType.SevenZ
+    })
+    .Convert();
+
+// Output: archive.7z containing the same files as the original ZIP
+```
+
+### Method 3: FluentConverter with Compress (Advanced Scenarios)
+
+For advanced stream-based workflows:
+
+```csharp
+using GroupDocs.Conversion.Fluent;
+using GroupDocs.Conversion.Options.Convert;
+using GroupDocs.Conversion.Contracts;
 using GroupDocs.Conversion.FileTypes;
 using System.IO;
 
@@ -112,6 +160,13 @@ FluentConverter.Load("archive.zip")
 
 // Output: archive.7z containing the same files as the original ZIP
 ```
+
+**Which method to choose?**
+- **Method 1** (Standard API): Simplest, recommended for most users
+- **Method 2** (WithOptions): Clean alternative if using FluentConverter
+- **Method 3** (Compress): Advanced scenarios with stream handling
+
+See [Convert Archive Formats]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-to-compression-with-advanced-options.md" >}}) for detailed comparison and more examples.
 
 ### Why Repackage Archives?
 
@@ -187,23 +242,28 @@ FluentConverter.Load("sensitive-files.zip")
     .Convert();
 ```
 
-For more advanced options including different compression formats, optimization settings, and best practices, see [Convert to Compression with advanced options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-to-compression-with-advanced-options.md" >}}).
+For more advanced options including different compression formats, optimization settings, and best practices, see [Convert Archive Formats (ZIP, 7z, TAR, RAR)]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-to-compression-with-advanced-options.md" >}}).
 
 ## Choosing the Right Workflow
 
 Use this decision guide to select the appropriate workflow:
 
-| Your Goal | Workflow | Key API Methods |
-|-----------|----------|-----------------|
-| Extract and convert each file separately | **Workflow 1** | `Load()` → `ConvertTo()` → `WithOptions()` → `Convert()` |
-| Change archive format only (no conversion) | **Workflow 2** | `Load()` → `ConvertTo()` → `Compress()` → `Convert()` |
-| Convert contents AND create new archive | **Workflow 3** | `Load()` → `ConvertTo()` → `WithOptions()` → `Compress()` → `Convert()` |
+| Your Goal | Workflow | Recommended Method |
+|-----------|----------|-------------------|
+| Extract and convert each file separately | **Workflow 1** | FluentConverter: `Load()` → `ConvertTo()` → `WithOptions()` → `Convert()` |
+| Change archive format only (no conversion) | **Workflow 2** | Standard API: `new Converter().Convert()` with `CompressionConvertOptions` |
+| Convert contents AND create new archive | **Workflow 3** | FluentConverter: `Load()` → `ConvertTo()` → `WithOptions()` → `Compress()` → `Convert()` |
+
+**Workflow 2 Options (all work):**
+- **Method 1:** Standard Converter API - `new Converter().Convert()` (simplest)
+- **Method 2:** FluentConverter with `.WithOptions()` - clean alternative
+- **Method 3:** FluentConverter with `.Compress()` - advanced scenarios
 
 **Quick Tips:**
 
-- **No `.Compress()`** = Individual files (Workflow 1)
-- **No `.WithOptions()`** = Archive format change only (Workflow 2)
-- **Both `.WithOptions()` and `.Compress()`** = Convert and re-compress (Workflow 3)
+- **Workflow 1:** FluentConverter required (multiple output files)
+- **Workflow 2:** Standard API recommended (simplest for format change)
+- **Workflow 3:** FluentConverter required (content conversion + compression)
 
 ## Supported Archive Formats
 
