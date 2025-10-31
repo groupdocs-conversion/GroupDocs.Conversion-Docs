@@ -192,5 +192,4 @@ PDL to PDL conversions are supported for most format combinations:
 
 - [API Reference: PageDescriptionLanguageConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pagedescriptionlanguageconvertoptions)
 - [API Reference: PageDescriptionLanguageFileType](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/pagedescriptionlanguagefiletype)
-- [Convert Page Description Language Formats]({{< ref "conversion/net/developer-guide/basic-usage/convert/page-description-language.md" >}})
 - [Supported File Formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}})
