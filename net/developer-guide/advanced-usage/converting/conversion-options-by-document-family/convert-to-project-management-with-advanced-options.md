@@ -3,14 +3,14 @@ id: convert-to-project-management-with-advanced-options
 url: conversion/net/convert-to-project-management-with-advanced-options
 title: Convert to Project Management formats with advanced options
 weight: 17
-description: "Learn how to convert documents to Microsoft Project and Primavera formats (MPP, MPT, MPX, XER) using GroupDocs.Conversion for .NET."
+description: "Learn about ProjectManagementConvertOptions class for Project Management file formats (MPP, MPT, MPX, XER) in GroupDocs.Conversion for .NET."
 keywords: Convert to Project, Convert to MPP, Convert to MPX, Microsoft Project conversion, Primavera conversion
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
 ---
 
-GroupDocs.Conversion provides the [ProjectManagementConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/projectmanagementconvertoptions) class to control conversion to project management file formats.
+GroupDocs.Conversion provides the [ProjectManagementConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/projectmanagementconvertoptions) class to specify Project Management file format conversion settings.
 
 ## Supported Project Management Formats
 
@@ -27,81 +27,66 @@ The following project management formats are supported:
 
 **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/)** - Specifies the desired project management file format. Available options are: *Mpp, Mpt, Mpx, Xer*.
 
-## Converting FROM Project Management Formats
+## Conversion Examples
 
-You can convert project management files to other formats like PDF. This is useful for sharing project schedules with stakeholders.
+ProjectManagementConvertOptions supports conversion between project management formats. The following examples demonstrate common conversions.
 
-### Convert MPX to PDF
+### MPP to MPX
 
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.Options.Convert;
-
-// Load the source MPX file
-using (Converter converter = new Converter("project-schedule.mpx"))
-{
-    // Set PDF convert options
-    PdfConvertOptions options = new PdfConvertOptions();
-
-    // Convert and save
-    converter.Convert("project-schedule.pdf", options);
-}
-```
-
-### Convert MPP to PDF
+Convert a Microsoft Project binary file (MPP) to MPX (Project Exchange Format):
 
 ```csharp
 using GroupDocs.Conversion;
-using GroupDocs.Conversion.Options.Convert;
-
-// Load the source MPP file
-using (Converter converter = new Converter("construction-plan.mpp"))
-{
-    // Set PDF convert options
-    PdfConvertOptions options = new PdfConvertOptions();
-
-    // Convert and save
-    converter.Convert("construction-plan.pdf", options);
-}
-```
-
-### Convert XER (Primavera) to PDF
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.Options.Convert;
-
-// Load the source Primavera XER file
-using (Converter converter = new Converter("engineering-project.xer"))
-{
-    // Set PDF convert options
-    PdfConvertOptions options = new PdfConvertOptions();
-
-    // Convert and save
-    converter.Convert("engineering-project.pdf", options);
-}
-```
-
-## ProjectManagementConvertOptions Usage
-
-The ProjectManagementConvertOptions class is used to specify the target project management format when converting TO project formats.
-
-```csharp
 using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.FileTypes;
 
-// Specify target format for project management conversion
-ProjectManagementConvertOptions options = new ProjectManagementConvertOptions
+string sourceFile = "construction-plan.mpp";
+string outputFile = "construction-plan.mpx";
+
+using (var converter = new Converter(sourceFile))
 {
-    Format = ProjectManagementFileType.Mpx
-};
+    var options = new ProjectManagementConvertOptions
+    {
+        Format = ProjectManagementFileType.Mpx
+    };
+    converter.Convert(outputFile, options);
+}
 ```
 
-**Note:** Conversion from standard document formats (PDF, Word, Excel) to project management formats is not supported. Project management formats require specific data structures for tasks, resources, dependencies, and timelines that are not present in general documents.
+### XER (Primavera) to MPX
+
+Convert a Primavera P6 file (XER) to Microsoft Project Exchange format (MPX):
+
+```csharp
+using GroupDocs.Conversion;
+using GroupDocs.Conversion.Options.Convert;
+using GroupDocs.Conversion.FileTypes;
+
+string sourceFile = "engineering-project.xer";
+string outputFile = "engineering-project.mpx";
+
+using (var converter = new Converter(sourceFile))
+{
+    var options = new ProjectManagementConvertOptions
+    {
+        Format = ProjectManagementFileType.Mpx
+    };
+    converter.Convert(outputFile, options);
+}
+```
+
+## Format Support Notes
+
+Project Management to Project Management conversions are supported for select format combinations:
+- MPP → MPX, XER
+- MPT → MPX, XER
+- MPX → MPP, XER (some restrictions apply)
+- XER → MPX, MPP
+
+**Note:** To convert FROM Project Management formats to PDF or images, use [PdfConvertOptions]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-to-pdf-with-advanced-options.md" >}}) or [ImageConvertOptions]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-to-image-with-advanced-options.md" >}}).
 
 ## More Resources
 
 - [API Reference: ProjectManagementConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/projectmanagementconvertoptions)
 - [API Reference: ProjectManagementFileType](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/projectmanagementfiletype)
 - [Supported File Formats]({{< ref "conversion/net/getting-started/supported-document-formats.md" >}})
-- [Common Conversion Options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}})
