@@ -1,32 +1,79 @@
 ---
 id: how-to-run-examples
 url: conversion/nodejs-java/how-to-run-examples
-title: How to run examples
+title: How to Run Examples
 weight: 6
-description: "This article describes how to run Node.js file conversion API code examples."
-keywords: file conversion, node.js
+description: "Learn how to clone, configure, and run GroupDocs.Conversion for Node.js via Java example projects."
+keywords: How to run a conversion, basic usage, How to run examples
 productName: GroupDocs.Conversion for Node.js via Java
 hideChildren: False
 toc: True
 ---
-The complete [GroupDocs.Conversion Examples](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Node.js-via-Java) project with code examples and sample files is hosted on GitHub.
 
+The complete project [GroupDocs.Conversion for Node.js via Java — Code Examples](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Node.js-via-Java) with runnable examples and sample files is hosted on GitHub. The structure and commands below are based on this repository and its README.
 
-## Run examples using NPM
+## Prerequisites
 
-To get started make sure that [Node.js](https://nodejs.org) is installed.
+Before running examples, make sure your environment meets the [System Requirements]({{< ref "conversion/nodejs-java/getting-started/system-requirements" >}}) and [Installation]({{< ref "conversion/nodejs-java/getting-started/installation" >}}) guides:
 
-1. Clone repository with examples `git clone https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Node.js-via-Java.git`
-2. Navigate to the project folder `cd ./GroupDocs.Conversion-for-Node.js-via-Java`
-3. Install the necessary packages with the `npm install` command.
-4. Navigate to the examples folder `cd ./Examples`
-4. Run the examples with the `node runExamples.js` command.
+- **Node.js**: 20 LTS or later
+- **Java**: JRE/JDK 8+ (17 LTS recommended)
+- **Java environment**: `JAVA_HOME` set and added to `PATH`
 
-To check what examples are available open `Examples/runExamples.js` file using your favorite text editor. Uncomment examples that you want to run and type `node runExamples.js` to start them.
+Windows PowerShell:
 
+```powershell
+$env:JAVA_HOME="C:\Program Files\Java\jdk-17"
+$env:Path="$env:JAVA_HOME\bin;$env:Path"
+```
 
-## Contribute
+Linux/macOS:
 
-If you like to add or improve an example, we encourage you to contribute to the project. All examples in this repository are open source and can be freely used in your own applications.
+```bash
+export JAVA_HOME=/usr/lib/jvm/java-17
+export PATH=$JAVA_HOME/bin:$PATH
+```
 
-To contribute, you can fork the repository, edit the source code and create a pull request. We will review the changes and include them in the repository if found helpful.
+For more details, see the examples repository README:  
+[GroupDocs.Conversion for Node.js via Java — Code Examples README](https://raw.githubusercontent.com/groupdocs-conversion/GroupDocs.Conversion-for-Node.js-via-Java/refs/heads/master/README.md).
+
+## Run examples using npm
+
+To get started, make sure that [Node.js](https://nodejs.org/) and Java are installed and configured as described above.
+
+1. **Clone the repository with examples**
+
+   ```bash
+   git clone https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Node.js-via-Java.git
+   cd GroupDocs.Conversion-for-Node.js-via-Java
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+   This installs the bundled `groupdocs-conversion-<version>.tgz` package and other dependencies defined in `package.json`.  
+   If installation fails with native build errors, review the build tools section in [System Requirements]({{< ref "conversion/nodejs-java/getting-started/system-requirements" >}}).
+
+3. **Run all examples**
+
+   ```bash
+   npm start
+   ```
+
+   Output documents are created under the `./Examples/Output/` directory
+
+## Explore available examples
+
+After running the project once, you may want to see what examples are available and how they are organized:
+
+- Open `examples.js` and `runExamples.js` to review the list of functions being called.
+- Enable or disable specific examples by editing `runExamples.js` and re-running:
+
+  ```bash
+  npm start
+  ```
+
+Refer to the examples [README](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-Node.js-via-Java) for an overview of QuickStart, BasicUsage, and AdvancedUsage folders and the scenarios they cover.
