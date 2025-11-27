@@ -83,20 +83,25 @@ process.exit(0);
 The following example shows how to load a license from a stream.
 
 ```js
+// Require dependencies
 const groupdocs = require('@groupdocs/groupdocs.conversion');
 const path = require('path');
 const fs = require('fs');
 
+// Set license path get stream
 const licensePath = path.resolve(__dirname, 'GroupDocs.Conversion.lic');
 const licenseStream = fs.createReadStream(licensePath);
 
+// Read license from stream
 groupdocs.readDataFromStream(licenseStream)
   .then(stream => {
+    // Set the license
     const license = new groupdocs.License();
     license.setLicense(stream);
     process.exit(0);
   })
   .catch(error => {
+    // Show error
     console.error('Error setting license:', error);
     process.exit(1);
   });
