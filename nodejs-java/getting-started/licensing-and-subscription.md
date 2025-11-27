@@ -60,9 +60,22 @@ The license can be set multiple times per app domain but we recommend doing it o
 The following code sets a license from a file.
 
 ```js
-const licensePath = "path to the .lic file";
-const license = new groupdocs.conversion.License()
-await license.setLicense(licensePath); 
+'use strict';
+
+// Require dependencies
+const groupdocs = require('@groupdocs/groupdocs.conversion');
+const path = require('path');
+
+// Set license path
+const licensePath = path.resolve(__dirname, 'GroupDocs.Conversion.lic');
+
+// Set the license
+const license = new groupdocs.License();
+license.setLicense(licensePath);
+console.log('License set successfully');
+
+// Exit the process
+process.exit(0);
 ```
 
 ### Set License from Stream
@@ -70,20 +83,21 @@ await license.setLicense(licensePath);
 The following example shows how to load a license from a stream.
 
 ```js
-const fs = require('fs')  
+const groupdocs = require('@groupdocs/groupdocs.conversion');
+const path = require('path');
+const fs = require('fs');
 
-const licensePath = "path to the .lic file"
-try {
-  const licenseStream = fs.createReadStream(licensePath)
-  const stream = await groupdocs.conversion.readDataFromStream(licenseStream)
+const licensePath = path.resolve(__dirname, 'GroupDocs.Conversion.lic');
+const licenseStream = fs.createReadStream(licensePath);
 
-  const license = new groupdocs.conversion.License()
-  await license.setLicense(stream);
-  console.log('License set successfully.');
-} catch {
-  console.log("\nWe do not ship any license with this example. " +
-    "\nVisit the GroupDocs site to obtain either a temporary or permanent license. " +
-    "\nLearn more about licensing at https://purchase.groupdocs.com/faqs/licensing. " +
-    "\nLearn how to request a temporary license at https://purchase.groupdocs.com/temporary-license.");
-}
+groupdocs.readDataFromStream(licenseStream)
+  .then(stream => {
+    const license = new groupdocs.License();
+    license.setLicense(stream);
+    process.exit(0);
+  })
+  .catch(error => {
+    console.error('Error setting license:', error);
+    process.exit(1);
+  });
 ```
