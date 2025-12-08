@@ -8,20 +8,23 @@ GeekdocHidden: true
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
 | [3DS](/conversion/net/convert/3d/) | 3D Studio |<!--Load--> ✅ |<!--Save--> ✅ |
-| [3MF](/conversion/net/convert/3d/) | Microsoft 3D Manufacturing Format |<!--Load--> ✅ |<!--Save-->  |
+| [3MF](/conversion/net/convert/3d/) | Microsoft 3D Manufacturing Format |<!--Load--> ✅ |<!--Save--> ✅ |
 | [AMF](/conversion/net/convert/3d/) | Additive manufacturing file format |<!--Load--> ✅ |<!--Save--> ✅ |
 | [ASE](/conversion/net/convert/3d/) | 3D Studio Max’s ASCII Scene Exporter format |<!--Load--> ✅ |<!--Save-->  |
 | [DAE](/conversion/net/convert/3d/) | Collada |<!--Load--> ✅ |<!--Save--> ✅ |
 | [DRC](/conversion/net/convert/3d/) | Google Draco |<!--Load--> ✅ |<!--Save--> ✅ |
 | [FBX](/conversion/net/convert/3d/) | FilmBox format |<!--Load--> ✅ |<!--Save--> ✅ |
+| [GLB](/conversion/net/convert/3d/) | GLB file |<!--Load--> ✅ |<!--Save--> ✅ |
 | [GLTF](/conversion/net/convert/3d/) | Khronos Group’s glTF |<!--Load--> ✅ |<!--Save--> ✅ |
 | [JT](/conversion/net/convert/3d/) | Siemens JT File |<!--Load--> ✅ |<!--Save-->  |
+| [MA](/conversion/net/convert/3d/) | Autodesk Maya ASCII |<!--Load--> ✅ |<!--Save-->  |
+| [MB](/conversion/net/convert/3d/) | Autodesk Maya Binary |<!--Load--> ✅ |<!--Save-->  |
 | [OBJ](/conversion/net/convert/3d/) | Wavefront Obj |<!--Load--> ✅ |<!--Save--> ✅ |
 | [PLY](/conversion/net/convert/3d/) | Polygon File Format or Stanford Triangle Format |<!--Load--> ✅ |<!--Save--> ✅ |
 | [RVM](/conversion/net/convert/3d/) | AVEVA Plant Design Management System Model |<!--Load--> ✅ |<!--Save--> ✅ |
 | [U3D](/conversion/net/convert/3d/) | Universal3D |<!--Load--> ✅ |<!--Save--> ✅ |
-| [USD](/conversion/net/convert/3d/) | Universal Scene Description |<!--Load--> ✅ |<!--Save-->  |
-| [USDZ](/conversion/net/convert/3d/) | Universal Scene Description Archive |<!--Load--> ✅ |<!--Save-->  |
+| [USD](/conversion/net/convert/3d/) | Universal Scene Description |<!--Load--> ✅ |<!--Save--> ✅ |
+| [USDZ](/conversion/net/convert/3d/) | Universal Scene Description Archive |<!--Load--> ✅ |<!--Save--> ✅ |
 | [VRML](/conversion/net/convert/3d/) | The Virtual Reality Modeling Language |<!--Load--> ✅ |<!--Save-->  |
 | [X](/conversion/net/convert/3d/) | DirectX’s X file |<!--Load--> ✅ |<!--Save-->  |
 
@@ -43,12 +46,12 @@ GeekdocHidden: true
 | --- | --- | :---: | :---: |
 | [CF2](/conversion/net/convert/cad/) | Common File Format File |<!--Load--> ✅ |<!--Save-->  |
 | [DGN](/conversion/net/convert/cad/) | MicroStation Design File |<!--Load--> ✅ |<!--Save-->  |
-| [DWF](/conversion/net/convert/cad/) | Design Web Format File |<!--Load--> ✅ |<!--Save-->  |
+| [DWF](/conversion/net/convert/cad/) | Design Web Format File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [DWFX](/conversion/net/convert/cad/) | Design Web Format File |<!--Load--> ✅ |<!--Save-->  |
 | [DWG](/conversion/net/convert/cad/) | AutoCAD Drawing Database File |<!--Load--> ✅ |<!--Save-->  |
 | [DWT](/conversion/net/convert/cad/) | AutoCAD Drawing Template |<!--Load--> ✅ |<!--Save-->  |
 | [DXF](/conversion/net/convert/cad/) | Drawing Exchange Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [IFC](/conversion/net/convert/cad/) | Industry Foundation Classes File |<!--Load--> ✅ |<!--Save-->  |
+| [IFC](/conversion/net/convert/cad/) | Industry Foundation Classes File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [IGS](/conversion/net/convert/cad/) | Initial Graphics Exchange Specification (IGES) |<!--Load--> ✅ |<!--Save-->  |
 | [PLT](/conversion/net/convert/cad/) | PLT (HPGL) |<!--Load--> ✅ |<!--Save-->  |
 | [STL](/conversion/net/convert/cad/) | Stereolithography File |<!--Load--> ✅ |<!--Save-->  |
@@ -57,18 +60,23 @@ GeekdocHidden: true
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
 | [7Z](/conversion/net/convert/compression/) | 7-Zip Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [BZ2](/conversion/net/convert/compression/) | Bzip2 Compressed File |<!--Load--> ✅ |<!--Save-->  |
+| [BZ2](/conversion/net/convert/compression/) | Bzip2 Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [CAB](/conversion/net/convert/compression/) | Windows Cabinet File |<!--Load--> ✅ |<!--Save-->  |
 | [CPIO](/conversion/net/convert/compression/) | CPIO Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [GZ](/conversion/net/convert/compression/) | Gnu Zipped Archive |<!--Load--> ✅ |<!--Save-->  |
-| [GZIP](/conversion/net/convert/compression/) | Gzip Compressed File |<!--Load--> ✅ |<!--Save-->  |
-| [LZ](/conversion/net/convert/compression/) | Lzip Compressed File |<!--Load--> ✅ |<!--Save-->  |
-| [LZMA](/conversion/net/convert/compression/) | LZMA Compressed File |<!--Load--> ✅ |<!--Save-->  |
+| [GZ](/conversion/net/convert/compression/) | Gnu Zipped Archive |<!--Load--> ✅ |<!--Save--> ✅ |
+| [GZIP](/conversion/net/convert/compression/) | Gzip Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [ISO](/conversion/net/convert/compression/) | ISO File Format |<!--Load--> ✅ |<!--Save--> ✅ |
+| [LHA](/conversion/net/convert/compression/) | LHA/LZH archive |<!--Load--> ✅ |<!--Save-->  |
+| [LZ](/conversion/net/convert/compression/) | Lzip Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [LZ4](/conversion/net/convert/compression/) | LZ4 archive |<!--Load--> ✅ |<!--Save--> ✅ |
+| [LZMA](/conversion/net/convert/compression/) | LZMA Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [RAR](/conversion/net/convert/compression/) | RAR Compressed Archive |<!--Load--> ✅ |<!--Save-->  |
 | [TAR](/conversion/net/convert/compression/) | Consolidated Unix File Archive |<!--Load--> ✅ |<!--Save--> ✅ |
-| [XZ](/conversion/net/convert/compression/) | Xz Compressed File |<!--Load--> ✅ |<!--Save-->  |
-| [Z](/conversion/net/convert/compression/) | Unix Compressed File |<!--Load--> ✅ |<!--Save-->  |
+| [UUE](/conversion/net/convert/compression/) | Uuencoded archive |<!--Load--> ✅ |<!--Save--> ✅ |
+| [XZ](/conversion/net/convert/compression/) | Xz Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [Z](/conversion/net/convert/compression/) | Unix Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [ZIP](/conversion/net/convert/compression/) | ZIP Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [ZST](/conversion/net/convert/compression/) | Zstandard (Zstd) Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## Database
 | From | Description | Load | Save |
@@ -80,8 +88,9 @@ GeekdocHidden: true
 ## Diagram
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
+| [VDW](/conversion/net/convert/diagram/) | Visio Web Drawing |<!--Load--> ✅ |<!--Save-->  |
 | [VDX](/conversion/net/convert/diagram/) | Visio Drawing XML File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [VSD](/conversion/net/convert/diagram/) | Visio Drawing File |<!--Load--> ✅ |<!--Save-->  |
+| [VSD](/conversion/net/convert/diagram/) | Visio Drawing File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [VSDM](/conversion/net/convert/diagram/) | Visio Macro-Enabled Drawing |<!--Load--> ✅ |<!--Save--> ✅ |
 | [VSDX](/conversion/net/convert/diagram/) | Visio Drawing File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [VSS](/conversion/net/convert/diagram/) | Visio Stencil File |<!--Load--> ✅ |<!--Save-->  |
@@ -143,6 +152,7 @@ GeekdocHidden: true
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
 | [AI](/conversion/net/convert/image/) | Adobe Illustrator Artwork |<!--Load--> ✅ |<!--Save-->  |
+| [AVIF](/conversion/net/convert/image/) | Avif File Format |<!--Load--> ✅ |<!--Save-->  |
 | [BMP](/conversion/net/convert/image/) | Bitmap Image File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [CDR](/conversion/net/convert/image/) | CorelDraw Vector Graphic Drawing |<!--Load--> ✅ |<!--Save-->  |
 | [CMX](/conversion/net/convert/image/) | Corel Metafile Exchange |<!--Load--> ✅ |<!--Save-->  |
@@ -155,9 +165,11 @@ GeekdocHidden: true
 | [EMZ](/conversion/net/convert/image/) | Windows Compressed Enhanced Metafile |<!--Load--> ✅ |<!--Save--> ✅ |
 | [FODG](/conversion/net/convert/image/) | Flat XML ODF Template |<!--Load--> ✅ |<!--Save-->  |
 | [GIF](/conversion/net/convert/image/) | Graphical Interchange Format File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [HEIC](/conversion/net/convert/image/) | HEIC File Format |<!--Load--> ✅ |<!--Save-->  |
 | [ICO](/conversion/net/convert/image/) | Icon File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [J2C](/conversion/net/convert/image/) | JPEG 2000 Code Stream |<!--Load--> ✅ |<!--Save-->  |
-| [J2K](/conversion/net/convert/image/) | JPEG 2000 Code Stream |<!--Load--> ✅ |<!--Save-->  |
+| [J2K](/conversion/net/convert/image/) | JPEG 2000 Code Stream |<!--Load--> ✅ |<!--Save--> ✅ |
+| [JFIF](/conversion/net/convert/image/) | JPEG File Interchange Format |<!--Load--> ✅ |<!--Save--> ✅ |
 | [JP2](/conversion/net/convert/image/) | JPEG 2000 Core Image File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [JPC](/conversion/net/convert/image/) | JPEG 2000 Code Stream |<!--Load--> ✅ |<!--Save-->  |
 | [JPEG](/conversion/net/convert/image/) | JPEG Image |<!--Load--> ✅ |<!--Save--> ✅ |
@@ -170,7 +182,6 @@ GeekdocHidden: true
 | [PNG](/conversion/net/convert/image/) | Portable Network Graphic |<!--Load--> ✅ |<!--Save--> ✅ |
 | [PSB](/conversion/net/convert/image/) | Adobe Photoshop Big |<!--Load--> ✅ |<!--Save--> ✅ |
 | [PSD](/conversion/net/convert/image/) | Adobe Photoshop Document |<!--Load--> ✅ |<!--Save--> ✅ |
-| [SVGZ](/conversion/net/convert/image/) | Compressed Scalable Vector Graphics File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [TGA](/conversion/net/convert/image/) | Truevision TGA (TARGA) |<!--Load--> ✅ |<!--Save--> ✅ |
 | [TIF](/conversion/net/convert/image/) | Tagged Image File Format |<!--Load--> ✅ |<!--Save--> ✅ |
 | [TIFF](/conversion/net/convert/image/) | Tagged Image File Format |<!--Load--> ✅ |<!--Save--> ✅ |
@@ -192,6 +203,7 @@ GeekdocHidden: true
 | [PCL](/conversion/net/convert/page-layout/) | Printer Command Language Document |<!--Load--> ✅ |<!--Save--> ✅ |
 | [PS](/conversion/net/convert/page-layout/) | PostScript File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [SVG](/conversion/net/convert/page-layout/) | Scalable Vector Graphics File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [SVGZ](/conversion/net/convert/page-layout/) | Compressed Scalable Vector Graphics File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [TEX](/conversion/net/convert/page-layout/) | LaTeX Source Document |<!--Load--> ✅ |<!--Save--> ✅ |
 | [XPS](/conversion/net/convert/page-layout/) | XML Paper Specification File |<!--Load--> ✅ |<!--Save--> ✅ |
 
@@ -233,6 +245,7 @@ GeekdocHidden: true
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
 | [CSV](/conversion/net/convert/spreadsheet/) | Csv document format |<!--Load--> ✅ |<!--Save--> ✅ |
+| [DIF](/conversion/net/convert/spreadsheet/) | Patch File |<!--Load-->  |<!--Save--> ✅ |
 | [FODS](/conversion/net/convert/spreadsheet/) | OpenDocument Flat XML Spreadsheet |<!--Load--> ✅ |<!--Save--> ✅ |
 | [NUMBERS](/conversion/net/convert/spreadsheet/) | Apple iWork Numbers |<!--Load--> ✅ |<!--Save-->  |
 | [ODS](/conversion/net/convert/spreadsheet/) | OpenDocument Spreadsheet |<!--Load--> ✅ |<!--Save--> ✅ |
@@ -268,7 +281,6 @@ GeekdocHidden: true
 | [JSON](/conversion/net/convert/web/) | Json File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [MHT](/conversion/net/convert/web/) | MHTML Web Archive |<!--Load--> ✅ |<!--Save--> ✅ |
 | [MHTML](/conversion/net/convert/web/) | MIME HTML File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [VDW](/conversion/net/convert/web/) | Visio Web Drawing |<!--Load--> ✅ |<!--Save-->  |
 | [XML](/conversion/net/convert/web/) | XML File |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## Word Processing
@@ -284,5 +296,4 @@ GeekdocHidden: true
 | [ODT](/conversion/net/convert/wordprocessing/) | OpenDocument Text Document |<!--Load--> ✅ |<!--Save--> ✅ |
 | [OTT](/conversion/net/convert/wordprocessing/) | OpenDocument Document Template |<!--Load--> ✅ |<!--Save--> ✅ |
 | [RTF](/conversion/net/convert/wordprocessing/) | Rich Text Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [TXT](/conversion/net/convert/wordprocessing/) | Plain Text File |<!--Load--> ✅ |<!--Save--> ✅ |
-
+| [TXT](/conversion/net/convert/wordprocessing/) | Plain Text File |<!--Load--> ✅ |<!--Save--> ✅
