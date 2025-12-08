@@ -4,8 +4,8 @@ url: conversion/net/convert/pdf
 title: Convert PDF files
 linkTitle: PDFs
 weight: 10
-description: "This article demonstrates how to convert PDF to Word, Excel, PowerPoint, image and other formats with GroupDocs.Conversion for .NET."
-keywords: Convert from PDF, Convert to PDF, Convert to PDF/A
+description: "This article demonstrates how to convert PDF to Word, Excel, PowerPoint, HTML, image and other formats with GroupDocs.Conversion for .NET."
+keywords: Convert from PDF, Convert to PDF, Convert to PDF/A, Convert PDF to HTML
 productName: GroupDocs.Conversion for .NET
 toc: True
 structuredData:
@@ -158,6 +158,41 @@ FluentConverter
 
 
 In case you need to convert PDF to another presentation format please use the [PresentationFileType](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/presentationfiletype) class to specify it.
+
+## Convert PDF to HTML
+
+Converting PDF to HTML format is useful when you need to publish PDF content on the web, embed it into web applications, or share documents with users who don't have PDF viewing software. The GroupDocs.Conversion library allows exporting PDF documents to HTML and MHTML formats while preserving the document structure and formatting.
+
+The code snippet for PDF to HTML conversion is pretty simple:
+
+```csharp
+// Load the source PDF file
+using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
+{
+    // Set the convert options for HTML format
+    var options = new WebConvertOptions();
+    // Convert to HTML format
+    converter.Convert("converted.html", options);
+}
+```
+
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
+
+```csharp
+FluentConverter
+    .Load("sample.pdf")
+    .ConvertTo("converted.html")
+    .Convert();
+```
+
+When converting to MHTML format, specify the `Format` property of the [WebConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/webconvertoptions) class:
+
+```csharp
+var options = new WebConvertOptions
+{
+    Format = GroupDocs.Conversion.FileTypes.WebFileType.Mhtml
+};
+```
 
 ## Convert PDF to Image
 
@@ -359,3 +394,46 @@ FluentConverter
     .WithOptions(new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Tiff })
     .Convert();
 ```
+
+### Convert a single page from PDF to image
+
+When working with multi-page PDF documents, you may need to convert only a specific page rather than the entire document. This is useful for creating thumbnails, extracting diagrams, or sharing individual pages as images.
+
+{{< alert style="info" >}}
+When converting to image formats other than TIFF (such as PNG, JPG, GIF, BMP), you can only save one page per output file. Saving multiple pages to a single file is only supported for TIFF format.
+{{< /alert >}}
+
+To convert a single page, use the [PageNumber](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/commonconvertoptions-1/pagenumber) property of the [ImageConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/imageconvertoptions) class. The page numbers are 1-based, meaning the first page is page 1.
+
+The following code snippet shows how to convert page 2 from a PDF document to PNG format:
+
+```csharp
+// Load the source PDF file
+using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
+{
+    // Set the convert options for PNG format
+    var options = new ImageConvertOptions
+    {
+        Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png,
+        PageNumber = 2
+    };
+    // Convert to PNG format
+    converter.Convert("converted-page-2.png", options);
+}
+```
+
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
+
+```csharp
+FluentConverter
+    .Load("sample.pdf")
+    .ConvertTo("converted-page-2.png")
+    .WithOptions(new ImageConvertOptions
+    {
+        Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png,
+        PageNumber = 2
+    })
+    .Convert();
+```
+
+For more information about page selection options, refer to the [Convert specific pages]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/convert-specific-pages.md" >}}) and [Convert N consecutive pages]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/convert-n-consecutive-pages.md" >}}) articles.
