@@ -31,6 +31,12 @@ toc: True
 |**[ShowGridLines](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/showgridlines)** | Specify if the grid lines should be visible. |
 |**[ShowHiddenSheets](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/showhiddensheets)** | Specify if the hidden sheets should be included in the converted document. |
 |**[SkipEmptyRowsAndColumns](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/skipemptyrowsandcolumns)** | Specify if empty rows and columns should be ignored. |
+|**[ColumnsPerPage](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/columnsperpage)** | Specifies the number of columns to include on each page when converting large spreadsheets. |
+|**[RowsPerPage](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/rowsperpage)** | Specifies the number of rows to include on each page when converting large spreadsheets. |
+|**[SkipHeaders](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/skipheaders)** | Specifies the number of header rows to skip during conversion. |
+|**[SkipFooters](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/skipfooters)** | Specifies the number of footer rows to skip during conversion. |
+|**[PrintComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/printcomments)** | Specifies how to render comments during conversion. |
+|**[IgnoreFormulaCalculationErrors](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/ignoreformulacalculationerrors)** | If *true*, ignores errors that occur during formula calculation. Useful for spreadsheets with broken or external references. |
 
 
 ### Hide comments
