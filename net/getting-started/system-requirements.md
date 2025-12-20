@@ -3,7 +3,7 @@ id: system-requirements
 url: conversion/net/system-requirements
 title: System requirements
 weight: 3
-description: GroupDocs.Conversion for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed
+description: GroupDocs.Conversion for .NET can be used on any operating system where the .NET framework is installed
 keywords: GroupDocs.Conversion for .NET, Conversion
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
@@ -17,61 +17,43 @@ GroupDocs.Conversion for .NET does not require any external software to be insta
 
 ## Supported Operating Systems
 
-GroupDocs.Conversion for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed including, but not limited to:
+
+GroupDocs.Conversion for .NET can be used on any operating system where the .NET framework is installed including, but not limited to:
 
 ### Windows
 
-*   Microsoft Windows Server 2003 and later
-*   Microsoft Windows XP (x64, x86)
-*   Microsoft Windows Vista (x64, x86)
-*   Microsoft Windows 7, 8, 8.1 (x64, x86)
-*   Microsoft Windows 10 (x64, x86)
-*   Microsoft Windows 11 (x64)
+*   Microsoft Windows Server 2012 R2 and later
+*   Microsoft Windows 7 SP1 and later (x64, x86)
+*   Microsoft Windows 10 (x64, x86, Arm64)
+*   Microsoft Windows 11 (x64, Arm64)
 
 ### Linux
 
-*   Linux (Ubuntu, OpenSUSE, CentOS and others)
+*   Ubuntu 18.04 and later
+*   Debian 10 and later
+*   CentOS 7 and later
+*   Fedora 33 and later
+*   Alpine 3.13 and later
 
-### Mac
+### macOS
 
-*   Mac OS X
+*   macOS 10.15 (Catalina) and later (x64, Arm64)
+
+
 
 ## Supported Frameworks
 
-GroupDocs.Conversion for .NET supports .NET and Mono frameworks as follows:
+GroupDocs.Conversion for .NET supports .NET frameworks as follows:
 
-### .NET Standard 2.1
+*   .NET Framework 4.6.2 and later
+*   .NET 6.0 and later
 
-Any type of .NET Standard 2.1 application is supported.
-
-### .NET Frameworks
-
-*   .NET Framework 4.6.2
-*   .NET Framework 4.7
-*   .NET Framework 4.7.1
-*   .NET Framework 4.7.2
-*   .NET Framework 4.8
-*   .NET Framework 4.8.1
-*   .NET Standard 2.1 
-*   .NET Core 3.0
-*   .NET Core 3.1
-*   .NET 5.0
-*   .NET 6.0
-*   .NET 7.0
-*   .NET 8.0
-
-### Mono Framework
-
-*   Mono 6.4
 
 ## Development Environments
 
-GroupDocs.Conversion for .NET can be used to develop applications in any development environment that targets the .NET platform, but the following environments are explicitly supported:
+GroupDocs.Conversion for .NET can be used to develop applications in any development environment that targets the .NET platform, but the following environments are explicitly supported:
 
-*   Microsoft Visual Studio 2010 and later
-*   Microsoft Visual Studio for Mac
-*   JetBrains Rider 
-*   Xamarin.Android
-*   Xamarin.IOS
-*   Xamarin.Mac
-*   MonoDevelop 2.4 and later
+*   Microsoft Visual Studio 2017 and later
+*   JetBrains Rider
+*   Visual Studio Code with C# extension
+

@@ -64,6 +64,15 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.jpg"))
 }
 ```
 
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
+
+```csharp
+FluentConverter
+    .Load("sample.jpg")
+    .ConvertTo("converted.pdf")
+    .Convert();
+```
+
 NOTE: The code example above is the same for other image formats into PDF conversion, the only difference - you have to provide the file name with the appropriate extension.
 
 ## Convert image to Excel
@@ -76,16 +85,26 @@ If you need to get data from your previous tax returns into Excel and you only h
 // Load the source JPG file
 using (var converter = new GroupDocs.Conversion.Converter("sample.jpg"))
 {
-    SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Xls };  
+    SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Xls };
     // Save converted XLS file
     converter.Convert("jpg-converted-to.xls", options);
 }
 ```
 
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
+
+```csharp
+FluentConverter
+    .Load("sample.jpg")
+    .ConvertTo("jpg-converted-to.xls")
+    .WithOptions(new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Xls })
+    .Convert();
+```
+
 ### Convert PNG to XLS
 
 ```csharp
-// Load the source PNG  file
+// Load the source PNG file
 using (var converter = new GroupDocs.Conversion.Converter("sample.png"))
 {
     SpreadsheetConvertOptions options = new SpreadsheetConvertOptions { Format = GroupDocs.Conversion.FileTypes.SpreadsheetFileType.Xls };
@@ -93,6 +112,8 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.png"))
     converter.Convert("png-converted-to.xls", options);
 }
 ```
+
+You can choose from a variety of spreadsheet formats using the [SpreadsheetFileType](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/spreadsheetfiletype) class, including XLS, XLSX, ODS, and others.
 
 ## Convert image to PowerPoint presentation
 
@@ -106,9 +127,19 @@ Let’s review several code examples in C# language below and see how to transfo
 using (var converter = new GroupDocs.Conversion.Converter("sample.jpg"))
 {
     PresentationConvertOptions options = new PresentationConvertOptions { Format = GroupDocs.Conversion.FileTypes.PresentationFileType.Ppt };
-    // Save converted PPT file  
+    // Save converted PPT file
     converter.Convert("jpg-converted-to.ppt", options);
 }
+```
+
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
+
+```csharp
+FluentConverter
+    .Load("sample.jpg")
+    .ConvertTo("jpg-converted-to.ppt")
+    .WithOptions(new PresentationConvertOptions { Format = GroupDocs.Conversion.FileTypes.PresentationFileType.Ppt })
+    .Convert();
 ```
 
 ### Convert PNG to PPT
@@ -123,6 +154,8 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.png"))
 }
 ```
 
+You can choose from a variety of presentation formats using the [PresentationFileType](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/presentationfiletype) class, including PPT, PPTX, ODP, and others.
+
 ## Convert image to Microsoft Word document
 
 To easily transform images into Microsoft Word documents programmatically, please check the following code snippet in C#:
@@ -136,3 +169,80 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.jpg"))
     converter.Convert("jpg-converted-to.docx", options);
 }
 ```
+
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
+
+```csharp
+FluentConverter
+    .Load("sample.jpg")
+    .ConvertTo("jpg-converted-to.docx")
+    .Convert();
+```
+
+## Convert between image formats
+
+Converting between different image formats is a common requirement. For example, you may need to convert PNG to JPG for smaller file sizes, or convert to TIFF for archival purposes.
+
+### Convert PNG to JPG
+
+```csharp
+// Load the source PNG file
+using (var converter = new GroupDocs.Conversion.Converter("sample.png"))
+{
+    var options = new ImageConvertOptions
+    {
+        Format = GroupDocs.Conversion.FileTypes.ImageFileType.Jpg
+    };
+    // Save converted JPG file
+    converter.Convert("png-converted-to.jpg", options);
+}
+```
+
+or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
+
+```csharp
+FluentConverter
+    .Load("sample.png")
+    .ConvertTo("png-converted-to.jpg")
+    .WithOptions(new ImageConvertOptions
+    {
+        Format = GroupDocs.Conversion.FileTypes.ImageFileType.Jpg
+    })
+    .Convert();
+```
+
+### Convert JPG to PNG
+
+```csharp
+// Load the source JPG file
+using (var converter = new GroupDocs.Conversion.Converter("sample.jpg"))
+{
+    var options = new ImageConvertOptions
+    {
+        Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png
+    };
+    // Save converted PNG file
+    converter.Convert("jpg-converted-to.png", options);
+}
+```
+
+### Convert image to TIFF
+
+TIFF (Tagged Image File Format) is widely used for storing high-quality images. You can convert any supported image format to TIFF:
+
+```csharp
+// Load the source image file
+using (var converter = new GroupDocs.Conversion.Converter("sample.jpg"))
+{
+    var options = new ImageConvertOptions
+    {
+        Format = GroupDocs.Conversion.FileTypes.ImageFileType.Tiff
+    };
+    // Save converted TIFF file
+    converter.Convert("converted.tiff", options);
+}
+```
+
+You can choose from a wide range of supported image formats using the [ImageFileType](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.filetypes/imagefiletype) class, including: BMP, GIF, ICO, JP2, JPEG, PNG, PSD, SVG, TIFF, WEBP, and many others.
+
+For advanced image conversion options like setting image quality, resolution, and other parameters, refer to the [Convert to image with advanced options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-to-image-with-advanced-options.md" >}}) article.

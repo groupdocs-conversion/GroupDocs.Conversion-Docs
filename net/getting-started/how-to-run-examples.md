@@ -24,7 +24,9 @@ You can build a project from scratch using Visual Studio or [.NET CLI](https://d
 
 ### Build a project using .NET CLI
 
-1. Make sure you have .NET Core or .NET SDK installed <https://dotnet.microsoft.com/download>.
+This method applies to .NET 6+ projects.
+
+1. Make sure you have .NET SDK installed <https://dotnet.microsoft.com/download>.
 2. Create a directory for your console app by executing the `mkdir my-console-app` command in your terminal.
 3. Navigate to the `my-console-app` directory by executing the `cd my-console-app` command.
 4. Create an empty console app by executing the `dotnet new console` command.
@@ -51,9 +53,15 @@ You can build a project from scratch using Visual Studio or [.NET CLI](https://d
 
 ### Build a project using Visual Studio
 
+This method applies to both .NET 6+ and .NET Framework 4.6.2+ projects.
+
 1. Open Visual Studio and go to **File** -> **New** -> **Project**.
 2. Select the appropriate project type - Console App, ASP.NET Web Application etc.
-3. Install **GroupDocs.Conversion for .NET** from Nuget or the official GroupDocs website following this [guide]({{< ref "conversion/net/getting-started/installation.md" >}}).
+3. Install the appropriate **GroupDocs.Conversion** NuGet package for your target framework:
+   * [GroupDocs.Conversion](https://www.nuget.org/packages/GroupDocs.Conversion) - for .NET 6+
+   * [GroupDocs.Conversion.NETFramework](https://www.nuget.org/packages/GroupDocs.Conversion.NETFramework) - for .NET Framework 4.6.2+
+
+   For detailed installation instructions, see the [Installation guide]({{< ref "conversion/net/getting-started/installation.md" >}}).
 4. Add the following code to the `Main` method:
 
   ```csharp
