@@ -23,23 +23,8 @@ toc: True
 
 The following code snippet shows how to convert a CAD document and convert only certain layouts:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CadLoadOptions
-{
-    LayoutNames = new []{ "Layout1", "Layout3" }
-};
-using (Converter converter = new Converter("with_layers_and_layouts.dwg", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
 {
     LayoutNames = new []{ "Layout1", "Layout3" }
 };
@@ -54,23 +39,8 @@ using (Converter converter = new Converter("with_layers_and_layouts.dwg", getLoa
 
 The following code snippet shows how to convert a CAD document and specify its desired background color:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CadLoadOptions
-{
-    BackgroundColor = System.Drawing.Color.White
-};
-using (Converter converter = new Converter("sample.dwg", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new CadLoadOptions
 {
     BackgroundColor = System.Drawing.Color.White
 };

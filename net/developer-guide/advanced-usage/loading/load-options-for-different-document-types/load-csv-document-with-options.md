@@ -35,32 +35,12 @@ toc: True
 |**[ShowHiddenSheets](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/showhiddensheets)** | Specify if the hidden sheets should be included in the converted document. |
 |**[SkipEmptyRowsAndColumns](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/skipemptyrowsandcolumns)** | Specify if empty rows and columns should be ignored. |
 
-
-
-
 ### Control behavior of converting date/time and numeric data
 
 The following code snippet shows how to convert a CSV document and control the way the date/time and numeric data have been processed:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CsvLoadOptions
-{
-    ConvertDateTimeData = true,
-    ConvertNumericData = true
-};
-using (Converter converter = new Converter("sample.csv", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new CsvLoadOptions
 {
     ConvertDateTimeData = true,
     ConvertNumericData = true
@@ -76,24 +56,8 @@ using (Converter converter = new Converter("sample.csv", getLoadOptions))
 
 The following code snippet shows how to convert a CSV document and specify the delimiter:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CsvLoadOptions
-{
-    Separator = ','
-};
-using (Converter converter = new Converter("sample.csv", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new CsvLoadOptions
 {
     Separator = ','
 };
@@ -108,24 +72,8 @@ using (Converter converter = new Converter("sample.csv", getLoadOptions))
 
 The following code snippet shows how to convert a CSV document and specify the encoding:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CsvLoadOptions
-{
-    Encoding = Encoding.GetEncoding("shift_jis")
-};
-using (Converter converter = new Converter("sample.csv", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new CsvLoadOptions
 {
     Encoding = Encoding.GetEncoding("shift_jis")
 };
@@ -140,24 +88,8 @@ using (Converter converter = new Converter("sample.csv", getLoadOptions))
 
 To fit the row content of all rows while converting, set the [AutoFitRows](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/autofitrows/) property to `true`:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CsvLoadOptions
-{
-    AutoFitRows = true
-};
-using (Converter converter = new Converter("sample.csv", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new CsvLoadOptions
 {
     AutoFitRows = true
 };

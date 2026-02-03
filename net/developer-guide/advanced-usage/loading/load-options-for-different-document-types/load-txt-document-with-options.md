@@ -17,30 +17,12 @@ toc: True
 |**[LeadingSpacesOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/txtloadoptions/leadingspacesoptions)** | Specifies how leading spaces will be processed. The available options are: *ConvertToIdent, Preserve, Trim* |
 |**[TrailingSpacesOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/txtloadoptions/trailingspacesoptions)** | Specifies how trailing spaces will be processed. The available options are: *Preserve, Trim* |
 
-
 ### Control behavior of processing leading spaces
 
 The following code snippet shows how to convert a TXT document and control the way the leading spaces are processed:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new TxtLoadOptions
-{
-    LeadingSpacesOptions = TxtLeadingSpacesOptions.ConvertToIndent,
-    DetectNumberingWithWhitespaces = true
-};
-using (Converter converter = new Converter("sample.txt", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new TxtLoadOptions
 {
     LeadingSpacesOptions = TxtLeadingSpacesOptions.ConvertToIndent,
     DetectNumberingWithWhitespaces = true
@@ -56,24 +38,8 @@ using (Converter converter = new Converter("sample.txt", getLoadOptions))
 
 The following code snippet shows how to convert a TXT document and the way the trailing spaces are processed:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new TxtLoadOptions
-{
-    TrailingSpacesOptions = TxtTrailingSpacesOptions.Trim
-};
-using (Converter converter = new Converter("sample.txt", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new TxtLoadOptions
 {
     TrailingSpacesOptions = TxtTrailingSpacesOptions.Trim
 };
@@ -88,24 +54,8 @@ using (Converter converter = new Converter("sample.txt", getLoadOptions))
 
 The following code snippet shows how to convert a TXT document and specify the encoding:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new TxtLoadOptions
-{
-    Encoding = Encoding.GetEncoding("shift_jis")
-};
-using (Converter converter = new Converter("sample.txt", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new TxtLoadOptions
 {
     Encoding = Encoding.GetEncoding("shift_jis")
 };

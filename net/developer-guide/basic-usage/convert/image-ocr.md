@@ -89,7 +89,6 @@ public class OcrConnector : IOcrConnector
     {
         var lines = new List<TextLine>();
 
-
         for (var i = 0; i < result.RecognitionAreasText.Count; i++)
         {
             var rectangle = result.RecognitionAreasRectangles[i];
@@ -177,30 +176,12 @@ public class OcrConnector : IOcrConnector
 
 Once the `IOcrConnector` interface is implemented, the JPG to DOCX conversion code snippet looks like this:
 
-With v24.10 and later:
-
 ```csharp
 // Load the source JPG file
 RasterImageLoadOptions loadOptions = new RasterImageLoadOptions();
 loadOptions.SetOcrConnector(new OcrConnector());
 
 using (Converter converter = new Converter("sample.jpg", (LoadContext loadContext) => loadOptions))
-{
-    // Set the convert options for DOCX format
-    WordProcessingConvertOptions options = new WordProcessingConvertOptions();
-    // Convert to DOCX format
-    converter.Convert("converted.docx", options);
-}
-```
-
-
-Before v24.10:
-
-```csharp
-// Load the source JPG file
-ImageLoadOptions loadOptions = new ImageLoadOptions();
-loadOptions.SetOcrConnector(new OcrConnector());
-using (Converter converter = new Converter("sample.jpg", () => loadOptions))
 {
     // Set the convert options for DOCX format
     WordProcessingConvertOptions options = new WordProcessingConvertOptions();

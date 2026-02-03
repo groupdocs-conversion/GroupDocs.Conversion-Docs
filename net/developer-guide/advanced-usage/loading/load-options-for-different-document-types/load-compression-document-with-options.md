@@ -25,8 +25,6 @@ The following options are available:
 
 The following code snippet shows how to load a ZIP archive with explicit format specification:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -34,26 +32,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CompressionLoadOptions
-{
-    Format = CompressionFileType.Zip
-};
-
-using (Converter converter = new Converter("documents-archive.zip", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("documents-archive.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new CompressionLoadOptions
 {
     Format = CompressionFileType.Zip
 };
@@ -69,8 +47,6 @@ using (Converter converter = new Converter("documents-archive.zip", getLoadOptio
 
 The following code snippet shows how to load a RAR archive:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -78,26 +54,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CompressionLoadOptions
-{
-    Format = CompressionFileType.Rar
-};
-
-using (Converter converter = new Converter("backup-files.rar", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("backup-files.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new CompressionLoadOptions
 {
     Format = CompressionFileType.Rar
 };
@@ -113,8 +69,6 @@ using (Converter converter = new Converter("backup-files.rar", getLoadOptions))
 
 The following code snippet shows how to load a 7Z archive:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -122,26 +76,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CompressionLoadOptions
-{
-    Format = CompressionFileType.SevenZ
-};
-
-using (Converter converter = new Converter("project-files.7z", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("project-files.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new CompressionLoadOptions
 {
     Format = CompressionFileType.SevenZ
 };
@@ -157,8 +91,6 @@ using (Converter converter = new Converter("project-files.7z", getLoadOptions))
 
 The following code snippet shows how to convert from ZIP to 7Z format:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -166,29 +98,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CompressionLoadOptions
-{
-    Format = CompressionFileType.Zip
-};
-
-using (Converter converter = new Converter("source-archive.zip", getLoadOptions))
-{
-    CompressionConvertOptions options = new CompressionConvertOptions
-    {
-        Format = CompressionFileType.SevenZ
-    };
-    converter.Convert("source-archive.7z", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new CompressionLoadOptions
 {
     Format = CompressionFileType.Zip
 };
@@ -207,8 +116,6 @@ using (Converter converter = new Converter("source-archive.zip", getLoadOptions)
 
 The following code snippet shows how to load a password-protected ZIP archive:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -216,27 +123,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new CompressionLoadOptions
-{
-    Format = CompressionFileType.Zip,
-    Password = "archive-password"
-};
-
-using (Converter converter = new Converter("protected-archive.zip", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("protected-archive.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new CompressionLoadOptions
 {
     Format = CompressionFileType.Zip,
     Password = "archive-password"

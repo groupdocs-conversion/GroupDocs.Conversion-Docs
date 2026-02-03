@@ -33,14 +33,8 @@ FluentConverter.WithSettings(() => new ConverterSettings())
     .ConvertTo("converted.docx").WithOptions(new WordProcessingConvertOptions())
     .Convert();
 
-//with v24.10 and later
 FluentConverter.Load("sample.pdf").WithOptions(new PdfLoadOptions())
     .ConvertByPageTo((SavePageContext saveContext) => new FileStream($"converted-{saveContext.Page}.docx", FileMode.Create)).WithOptions(new WordProcessingConvertOptions())
-    .Convert();
-
-// before v24.10
-FluentConverter.Load("sample.pdf").WithOptions(new PdfLoadOptions())
-    .ConvertByPageTo((int page) => new FileStream($"converted-{page}.docx", FileMode.Create)).WithOptions(new WordProcessingConvertOptions())
     .Convert();
 
 FluentConverter.Load("sample.pdf").GetPossibleConversions();

@@ -19,8 +19,6 @@ To load and convert a password-protected document, follow these steps:
 
 The following code snippet shows how to convert password protected document:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new WordProcessingLoadOptions
 {
@@ -32,23 +30,8 @@ using (Converter converter = new Converter("sample_with_password.docx", getLoadO
     converter.Convert("converted.pdf", options);
 }
 ```
-Before v24.10:
 
-```csharp
-Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
-{
-    Password = "12345"
-};
-using (Converter converter = new Converter("sample_with_password.docx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-You can also use [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}})
-
-With v24.10 and later:
+You can also use [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/fluent-syntax.md" >}}):
 
 ```csharp
 FluentConverter
@@ -56,18 +39,6 @@ FluentConverter
     {
         Password = "12345"
     })
-    .ConvertTo("converted.pdf")
-    .Convert();
-```
-
-Before v24.10:
-
-```csharp
-FluentConverter
-    .Load("sample_with_password.docx").WithOptions(() => new WordProcessingLoadOptions
-            {
-                Password = "12345"
-            })
     .ConvertTo("converted.pdf")
     .Convert();
 ```

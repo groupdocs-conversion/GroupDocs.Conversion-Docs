@@ -35,24 +35,8 @@ toc: True
 
 Microsoft Word provides the "Comment" feature that allows multiple authors or reviewers to discuss a document when they are not working with it simultaneously. All added comments are displayed in an area to the right of the document text. After the DOCX document with comments is converted to another format, the Comments pane is also present in a resultant document. If it's required to hide comments in a converted document programmatically, you can use the following code sample to do this with a couple of lines of C# code:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new WordProcessingLoadOptions
-{
-    HideComments = true
-};
-using (Converter converter = new Converter("sample.docx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
 {
     HideComments = true
 };
@@ -69,24 +53,8 @@ Track Changes is another feature of Microsoft Word that provides a handy way to 
 
 The following code snippet shows how to convert a DOCX document to PDF and hide tracked changes pane:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new WordProcessingLoadOptions
-{
-    HideWordTrackedChanges = true
-};
-using (Converter converter = new Converter("sample.docx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
 {
     HideWordTrackedChanges = true
 };
@@ -105,30 +73,8 @@ Of course GroupDocs.Conversion for .NET will try to select the most appropriate 
 
 The following code snippet shows how to convert a DOCX document with font substitution for missing fonts:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new WordProcessingLoadOptions
-{
-    AutoFontSubstitution = false,
-	DefaultFont = "Helvetica",
-    FontSubstitutes = new List<FontSubstitute>
-    {
-        FontSubstitute.Create("Tahoma", "Arial"),
-        FontSubstitute.Create("Times New Roman", "Arial"),
-    }
-};
-using (Converter converter = new Converter("sample.docx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new WordProcessingLoadOptions
 {
     AutoFontSubstitution = false,
 	DefaultFont = "Helvetica",

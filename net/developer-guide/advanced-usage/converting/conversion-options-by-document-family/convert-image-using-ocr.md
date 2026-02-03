@@ -54,7 +54,6 @@ internal class OcrConnector : IOcrConnector
     {
         var lines = new List<TextLine>();
 
-
         for (var i = 0; i < result.RecognitionAreasText.Count; i++)
         {
             var rectangle = result.RecognitionAreasRectangles[i];
@@ -140,8 +139,6 @@ internal class OcrConnector : IOcrConnector
 }
 ```
 
-With v24.10 and later
-
 Then provide **OcrConnector** instance in **[RasterImageLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/rasterimageloadoptions)**:
 
 ```csharp
@@ -149,21 +146,6 @@ var imageLoadOptions = new RasterImageLoadOptions();
 imageLoadOptions.SetOcrConnector(new OcrConnector());
 
 using (Converter converter = new Converter("sample.jpeg", (LoadContext loadContext) => imageLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-Then provide **OcrConnector** instance in **[ImageLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/imageloadoptions)**:
-
-```csharp
-var imageLoadOptions = new ImageLoadOptions();
-imageLoadOptions.SetOcrConnector(new OcrConnector());
-
-using (Converter converter = new Converter("sample.jpeg", () => imageLoadOptions))
 {
     PdfConvertOptions options = new PdfConvertOptions();
     converter.Convert("converted.pdf", options);

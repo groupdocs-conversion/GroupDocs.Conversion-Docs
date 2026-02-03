@@ -247,6 +247,7 @@ GeekdocHidden: true
 | [CSV](/conversion/net/convert/spreadsheet/) | Csv document format |<!--Load--> ✅ |<!--Save--> ✅ |
 | [DIF](/conversion/net/convert/spreadsheet/) | Patch File |<!--Load-->  |<!--Save--> ✅ |
 | [FODS](/conversion/net/convert/spreadsheet/) | OpenDocument Flat XML Spreadsheet |<!--Load--> ✅ |<!--Save--> ✅ |
+| [FOPCS](/conversion/net/convert/spreadsheet/) | Flat OPC Excel Spreadsheet |<!--Load--> ✅ |<!--Save--> ✅ |
 | [NUMBERS](/conversion/net/convert/spreadsheet/) | Apple iWork Numbers |<!--Load--> ✅ |<!--Save-->  |
 | [ODS](/conversion/net/convert/spreadsheet/) | OpenDocument Spreadsheet |<!--Load--> ✅ |<!--Save--> ✅ |
 | [OTS](/conversion/net/convert/spreadsheet/) | OpenDocument Spreadsheet Template |<!--Load--> ✅ |<!--Save-->  |
@@ -292,8 +293,9 @@ GeekdocHidden: true
 | [DOT](/conversion/net/convert/wordprocessing/) | Word Document Template |<!--Load--> ✅ |<!--Save--> ✅ |
 | [DOTM](/conversion/net/convert/wordprocessing/) | Word Open XML Macro-Enabled Document Template |<!--Load--> ✅ |<!--Save--> ✅ |
 | [DOTX](/conversion/net/convert/wordprocessing/) | Word Open XML Document Template |<!--Load--> ✅ |<!--Save--> ✅ |
+| [FOPCT](/conversion/net/convert/wordprocessing/) | Flat OPC Word Document |<!--Load--> ✅ |<!--Save--> ✅ |
 | [MD](/conversion/net/convert/wordprocessing/) | Markdown Documentation File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [ODT](/conversion/net/convert/wordprocessing/) | OpenDocument Text Document |<!--Load--> ✅ |<!--Save--> ✅ |
 | [OTT](/conversion/net/convert/wordprocessing/) | OpenDocument Document Template |<!--Load--> ✅ |<!--Save--> ✅ |
 | [RTF](/conversion/net/convert/wordprocessing/) | Rich Text Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [TXT](/conversion/net/convert/wordprocessing/) | Plain Text File |<!--Load--> ✅ |<!--Save--> ✅
+| [TXT](/conversion/net/convert/wordprocessing/) | Plain Text File |<!--Load--> ✅ |<!--Save--> ✅ |

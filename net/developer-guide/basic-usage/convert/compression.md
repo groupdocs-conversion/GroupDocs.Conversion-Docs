@@ -40,8 +40,6 @@ File compression is the process of reducing the size of one or more files. It sh
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you can easily extract content from your archives. For example, a code snippet of extraction from a ZIP archive will look like this:
 
-With v24.10 and later:
-
 ```csharp
 // Load the source ZIP file
 using (Converter converter = new Converter("sample.zip"))
@@ -59,26 +57,6 @@ using (Converter converter = new Converter("sample.zip"))
 }
 ```
 
-
-Before v24.10:
-
-```csharp
-// Load the source ZIP file
-using (Converter converter = new Converter("sample.zip"))
-{
-    converter.Convert(() => new MemoryStream(), (string sourceFileName, FileType targetFormat, Stream convertedStream) =>
-    {
-        // store extracted content
-        string fileName = Path.Combine(outputFolder, sourceFileName);
-        Directory.CreateDirectory(Path.GetDirectoryName(fileName)!);
-        using (var fs = new FileStream(fileName, FileMode.Create))
-        {
-            convertedStream.CopyTo(fs);
-        }
-    }, (_, _) => null);
-}
-```
-
 Put it simply - you just load a ZIP file into the `Converter` class, provide null convert options and a handler in which to store the result and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
@@ -90,8 +68,6 @@ Refer to the [API reference](https://apireference.groupdocs.com/conversion/net/g
 You also can convert the archive content during extraction to a desired format. Extraction and conversion to PDF format are also quite simple and natural.
 The following code snippet shows how to convert the content of a RAR archive to PDF in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
 
-With v24.10 and later:
-
 ```csharp
 // Load the source RAR file
 using (Converter converter = new Converter("sample.rar"))
@@ -101,20 +77,5 @@ using (Converter converter = new Converter("sample.rar"))
     int i = 0;
     // Extract and convert to PDF
     converter.Convert((SaveContext saveContext) => new FileStream(Path.Combine(outputFolder, $"converted-{++i}.{saveContext.TargetFormat.Extension}"), FileMode.Create), options);
-}
-```
-
-
-Before v24.10:
-
-```csharp
-// Load the source RAR file
-using (Converter converter = new Converter("sample.rar"))
-{
-    // Set the convert option for PDF format. This will convert each file in the archive to PDF
-    PdfConvertOptions options = new PdfConvertOptions();
-    int i = 0;
-    // Extract and convert to PDF
-    converter.Convert(() => new FileStream(Path.Combine(outputFolder, $"converted-{++i}.pdf"), FileMode.Create), options);
 }
 ```

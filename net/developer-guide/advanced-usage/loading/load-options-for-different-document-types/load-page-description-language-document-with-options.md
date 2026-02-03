@@ -21,8 +21,6 @@ The following options are available:
 
 The following code snippet shows how to load an XPS document with explicit format specification:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -30,26 +28,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PageDescriptionLanguageLoadOptions
-{
-    Format = PageDescriptionLanguageFileType.Xps
-};
-
-using (Converter converter = new Converter("document.xps", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("document.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new PageDescriptionLanguageLoadOptions
 {
     Format = PageDescriptionLanguageFileType.Xps
 };
@@ -65,8 +43,6 @@ using (Converter converter = new Converter("document.xps", getLoadOptions))
 
 The following code snippet shows how to load an EPS (Encapsulated PostScript) document:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -74,26 +50,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PageDescriptionLanguageLoadOptions
-{
-    Format = PageDescriptionLanguageFileType.Eps
-};
-
-using (Converter converter = new Converter("vector-graphic.eps", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("vector-graphic.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new PageDescriptionLanguageLoadOptions
 {
     Format = PageDescriptionLanguageFileType.Eps
 };
@@ -109,8 +65,6 @@ using (Converter converter = new Converter("vector-graphic.eps", getLoadOptions)
 
 The following code snippet shows how to load a PostScript (PS) document:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -118,26 +72,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PageDescriptionLanguageLoadOptions
-{
-    Format = PageDescriptionLanguageFileType.Ps
-};
-
-using (Converter converter = new Converter("print-file.ps", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("print-file.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new PageDescriptionLanguageLoadOptions
 {
     Format = PageDescriptionLanguageFileType.Ps
 };
@@ -153,8 +87,6 @@ using (Converter converter = new Converter("print-file.ps", getLoadOptions))
 
 The following code snippet shows how to load an XPS document and convert it to SVG:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -162,29 +94,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PageDescriptionLanguageLoadOptions
-{
-    Format = PageDescriptionLanguageFileType.Xps
-};
-
-using (Converter converter = new Converter("layout.xps", getLoadOptions))
-{
-    PageDescriptionLanguageConvertOptions options = new PageDescriptionLanguageConvertOptions
-    {
-        Format = PageDescriptionLanguageFileType.Svg
-    };
-    converter.Convert("layout.svg", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new PageDescriptionLanguageLoadOptions
 {
     Format = PageDescriptionLanguageFileType.Xps
 };
@@ -203,8 +112,6 @@ using (Converter converter = new Converter("layout.xps", getLoadOptions))
 
 The following code snippet shows how to convert from EPS to SVG format:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -212,29 +119,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PageDescriptionLanguageLoadOptions
-{
-    Format = PageDescriptionLanguageFileType.Eps
-};
-
-using (Converter converter = new Converter("illustration.eps", getLoadOptions))
-{
-    PageDescriptionLanguageConvertOptions options = new PageDescriptionLanguageConvertOptions
-    {
-        Format = PageDescriptionLanguageFileType.Svg
-    };
-    converter.Convert("illustration.svg", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new PageDescriptionLanguageLoadOptions
 {
     Format = PageDescriptionLanguageFileType.Eps
 };

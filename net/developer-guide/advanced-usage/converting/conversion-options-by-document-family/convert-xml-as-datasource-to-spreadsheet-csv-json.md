@@ -28,7 +28,6 @@ using (var converter = new Converter("data.xml", (LoadContext loadContext) => ne
 
 The following code snippet demonstrates how to convert an XML file to a CSV format. By using the XML as a data source, the data is extracted and structured into a comma-separated values (CSV) file for easy use in applications like spreadsheets or data processing tools:
 
-
 ```csharp
 using (var converter = new Converter("sample.xml", (LoadContext loadContext) => new XmlLoadOptions
        {

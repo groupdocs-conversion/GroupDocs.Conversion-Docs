@@ -27,23 +27,8 @@ GroupDocs.Conversion provides [XmlLoadOptions](https://reference.groupdocs.com/
 
 The following code snippet shows how to use XML as a data source and convert it to a spreadsheet:
 
-With v24.10 and later:
-
 ```csharp
 using (Converter converter = new Converter("data.xml", (LoadContext loadContext) => new XmlLoadOptions
-{
-    UseAsDataSource = true
-}))
-{
-    SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
-    converter.Convert("converted.xlsx", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using (Converter converter = new Converter("data.xml", () => new XmlLoadOptions
 {
     UseAsDataSource = true
 }))
@@ -57,23 +42,8 @@ using (Converter converter = new Converter("data.xml", () => new XmlLoadOptions
 
 The following code shows how to convert a XML transformed through XSLT to a PDF:
 
-With v24.10 and later:
-
 ```csharp
 using (var converter = new Converter("books.xml", (LoadContext loadContext) => new XmlLoadOptions
-   {
-       XsltFactory = () => File.OpenRead("books.xsl")
-   }))
-{
-    var options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using (var converter = new Converter("books.xml", () => new XmlLoadOptions
    {
        XsltFactory = () => File.OpenRead("books.xsl")
    }))

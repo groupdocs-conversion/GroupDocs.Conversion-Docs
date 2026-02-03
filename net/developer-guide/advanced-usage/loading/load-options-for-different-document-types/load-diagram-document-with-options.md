@@ -22,8 +22,6 @@ The following options are available:
 
 The following code snippet shows how to load a VSD (Visio Drawing) file with explicit format specification:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -31,26 +29,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new DiagramLoadOptions
-{
-    Format = DiagramFileType.Vsd
-};
-
-using (Converter converter = new Converter("design-diagram.vsd", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("design-diagram.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new DiagramLoadOptions
 {
     Format = DiagramFileType.Vsd
 };
@@ -66,8 +44,6 @@ using (Converter converter = new Converter("design-diagram.vsd", getLoadOptions)
 
 The following code snippet shows how to load a VSDX (Visio Drawing XML) file:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -75,26 +51,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new DiagramLoadOptions
-{
-    Format = DiagramFileType.Vsdx
-};
-
-using (Converter converter = new Converter("flowchart.vsdx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("flowchart.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new DiagramLoadOptions
 {
     Format = DiagramFileType.Vsdx
 };
@@ -110,8 +66,6 @@ using (Converter converter = new Converter("flowchart.vsdx", getLoadOptions))
 
 The following code snippet shows how to load a VSD file with a default font for missing fonts:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -119,27 +73,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new DiagramLoadOptions
-{
-    Format = DiagramFileType.Vsd,
-    DefaultFont = "Arial"
-};
-
-using (Converter converter = new Converter("network-diagram.vsd", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("network-diagram.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new DiagramLoadOptions
 {
     Format = DiagramFileType.Vsd,
     DefaultFont = "Arial"
@@ -156,8 +89,6 @@ using (Converter converter = new Converter("network-diagram.vsd", getLoadOptions
 
 The following code snippet shows how to load a VSDX file and convert it to a Word document:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -165,26 +96,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new DiagramLoadOptions
-{
-    Format = DiagramFileType.Vsdx
-};
-
-using (Converter converter = new Converter("process-flow.vsdx", getLoadOptions))
-{
-    WordProcessingConvertOptions options = new WordProcessingConvertOptions();
-    converter.Convert("process-flow.docx", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new DiagramLoadOptions
 {
     Format = DiagramFileType.Vsdx
 };
@@ -200,8 +111,6 @@ using (Converter converter = new Converter("process-flow.vsdx", getLoadOptions))
 
 The following code snippet shows how to convert from VSD to VSDX format:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -209,29 +118,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new DiagramLoadOptions
-{
-    Format = DiagramFileType.Vsd
-};
-
-using (Converter converter = new Converter("legacy-diagram.vsd", getLoadOptions))
-{
-    DiagramConvertOptions options = new DiagramConvertOptions
-    {
-        Format = DiagramFileType.Vsdx
-    };
-    converter.Convert("legacy-diagram.vsdx", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new DiagramLoadOptions
 {
     Format = DiagramFileType.Vsd
 };
@@ -250,8 +136,6 @@ using (Converter converter = new Converter("legacy-diagram.vsd", getLoadOptions)
 
 The following code snippet shows how to load a VSDX file and convert it to a PowerPoint presentation:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -259,26 +143,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new DiagramLoadOptions
-{
-    Format = DiagramFileType.Vsdx
-};
-
-using (Converter converter = new Converter("org-chart.vsdx", getLoadOptions))
-{
-    PresentationConvertOptions options = new PresentationConvertOptions();
-    converter.Convert("org-chart.pptx", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new DiagramLoadOptions
 {
     Format = DiagramFileType.Vsdx
 };

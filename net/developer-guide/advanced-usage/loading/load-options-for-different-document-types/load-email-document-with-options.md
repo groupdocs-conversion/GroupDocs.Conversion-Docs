@@ -31,28 +31,8 @@ toc: True
 
 The following code snippet shows how to convert an Email document and control the visibility of the fields:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new EmailLoadOptions
-{
-    DisplayHeader = false,
-    DisplayFromEmailAddress = false,
-    DisplayToEmailAddress = false,
-    DisplayCcEmailAddress = false,
-    DisplayBccEmailAddress = false
-};
-using (Converter converter = new Converter("sample.msg", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new EmailLoadOptions
 {
     DisplayHeader = false,
     DisplayFromEmailAddress = false,
@@ -71,8 +51,6 @@ using (Converter converter = new Converter("sample.msg", getLoadOptions))
 
 The following code snippet shows how to convert an Email document and all attachments:
 
-With v24.10 and later:
-
 ```csharp
 var source = "sample-with-attachment.eml";
 var loadOptions = new EmailLoadOptions {
@@ -90,30 +68,9 @@ using (var converter = new Converter(source, (LoadContext loadContext) => loadOp
 }
 ```
 
-Before v24.10:
-
-```csharp
-var source = "sample-with-attachment.eml";
-var loadOptions = new EmailLoadOptions {
-                         ConvertOwner = true,
-                         ConvertOwned = true,
-                         // convert email itself and the attachments
-                         Depth = 2
-                      };
-using (var converter = new Converter(source, () => loadOptions))
-{
-    var index = 1;
-    var options = new PdfConvertOptions();
-    // Note: index = 1 is the email itself, all following indexes are attachments
-    converter.Convert(() => new FileStream($"converted-{index++}.pdf", FileMode.Create) , options);
-}
-```
-
 ### Localize email fields captions
 
 The following code snippet shows how to convert an Email document and localize the Email fields:
-
-With v24.10 and later:
 
 ```csharp
 var source = "sample.eml";
@@ -127,26 +84,6 @@ var loadOptions = new EmailLoadOptions
     }
 };
 using (var converter = new Converter(source, (LoadContext loadContext) => loadOptions))
-{
-    var options = new PdfConvertOptions();
-    converter.Convert("converted.pdf" , options);
-}
-```
-
-Before v24.10:
-
-```csharp
-var source = "sample.eml";
-var loadOptions = new EmailLoadOptions
-{
-    FieldTextMap = new Dictionary<EmailField, string>
-    {
-        { EmailField.Subject, "Gegenstand" },
-        { EmailField.From, "Von" },
-        { EmailField.Attachments, "Anhänge" }
-    }
-};
-using (var converter = new Converter(source, () => loadOptions))
 {
     var options = new PdfConvertOptions();
     converter.Convert("converted.pdf" , options);

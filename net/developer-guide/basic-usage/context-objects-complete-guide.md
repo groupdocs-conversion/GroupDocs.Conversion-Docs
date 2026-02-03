@@ -475,39 +475,6 @@ using (var converter = new Converter("product-catalog.pdf"))
 
 ---
 
-## Migration from Pre-v24.10 API
-
-### Before v24.10
-
-```csharp
-// Old API used primitive parameters
-using (var converter = new Converter("financial-statement.docx"))
-{
-    converter.Convert(
-        (int page) => File.Create($"statement-page-{page}.pdf"),
-        new PdfConvertOptions());
-}
-```
-
-### v24.10 and Later
-
-```csharp
-// New API uses SavePageContext with rich context information
-using (var converter = new Converter("financial-statement.docx"))
-{
-    converter.Convert(
-        (SavePageContext savePageContext) =>
-        {
-            // Access rich context information
-            Console.WriteLine($"Converting page {savePageContext.Page} of {savePageContext.SourceFileName}");
-            return File.Create($"statement-page-{savePageContext.Page}.pdf");
-        },
-        new PdfConvertOptions());
-}
-```
-
----
-
 ## Summary
 
 Context objects are foundational to GroupDocs.Conversion's delegate-based patterns. Understanding them enables you to:
