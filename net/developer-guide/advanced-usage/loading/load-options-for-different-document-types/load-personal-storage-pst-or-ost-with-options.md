@@ -36,13 +36,11 @@ using (Converter converter = new Converter("sample.pst"))
 
 ### Convert each personal storage content to different formats
 
-The following code snippet shows how to convert each personal storage content to a different format based on the content type: 
+The following code snippet shows how to convert each personal storage content to a different format based on the content type:
 
 *   JPG attachments will be converted to PNG
 *   DOCX attachments will be converted to PDF
 *   Emails and all other types will be converted to HTML
-
-With v24.10 and later:
 
 ```csharp
 using (Converter converter = new Converter("sample.pst", (LoadContext loadContext) =>
@@ -81,53 +79,6 @@ using (Converter converter = new Converter("sample.pst", (LoadContext loadContex
             };
         }
         if (convertContext.SourceFormat == WordProcessingFileType.Docx)
-        {
-            return new PdfConvertOptions();
-        }
-        return new WebConvertOptions();
-    });
-}
-```
-
-Before v24.10:
-
-```csharp
-using (Converter converter = new Converter("sample.pst", (FileType fileType) =>
-{
-    if (fileType == EmailFileType.Ost)
-    {
-        return new PersonalStorageLoadOptions
-        {
-            Folder = "Inbox",
-        };
-    }
-    if (fileType == EmailFileType.Msg)
-    {
-        return new EmailLoadOptions
-        {
-            ConvertOwner = true,
-            ConvertOwned = true,
-            Depth = 2
-        };
-    }
-    return null;
-}))
-{
-    int index = 0;
-    converter.Convert((FileType fileType) =>
-    {
-        string fileName = $"converted_{++index}.{fileType.Extension}";
-        return new FileStream(fileName, FileMode.Create);
-    }, (string sourceFileName, FileType fileType) =>
-    {
-        if (fileType == ImageFileType.Jpg)
-        {
-            return new ImageConvertOptions
-            {
-                Format = ImageFileType.Png
-            };
-        }
-        if (fileType == WordProcessingFileType.Docx)
         {
             return new PdfConvertOptions();
         }

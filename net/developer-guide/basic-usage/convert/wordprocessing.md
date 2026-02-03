@@ -107,8 +107,6 @@ Similarly to other code examples that were explained already, all you need to co
 
 Please check the complete code example of how to convert DOCX to PNG below:
 
-With v24.10 and later:
-
 ```csharp
 string outputFileNameFormat = "converted-page-{0}.png";
 Func<SavePageContext, Stream> getPageStream = saveContext => new FileStream(string.Format(outputFileNameFormat, saveContext.Page), FileMode.Create);
@@ -117,23 +115,7 @@ Func<SavePageContext, Stream> getPageStream = saveContext => new FileStream(stri
 using (Converter converter = new GroupDocs.Conversion.Converter("sample.docx"))
 {
     // Set the convert options for PNG format
-    ImageConvertOptions options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png };  
-    // Convert to PNG format
-    converter.Convert(getPageStream, options);
-}
-```
-
-Before v24.10:
-
-```csharp
-string outputFileNameFormat = "converted-page-{0}.png";
-Func<int, Stream> getPageStream = page => new FileStream(string.Format(outputFileNameFormat, page), FileMode.Create);
-
-// Load the source DOCX file
-using (Converter converter = new GroupDocs.Conversion.Converter("sample.docx"))
-{
-    // Set the convert options for PNG format
-    ImageConvertOptions options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png };  
+    ImageConvertOptions options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png };
     // Convert to PNG format
     converter.Convert(getPageStream, options);
 }

@@ -23,8 +23,6 @@ The following options are available:
 
 The following code snippet shows how to load a GeoJSON document with explicit format specification:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -32,26 +30,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new GisLoadOptions
-{
-    Format = GisFileType.GeoJson
-};
-
-using (Converter converter = new Converter("map-data.geojson", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("map-data.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new GisLoadOptions
 {
     Format = GisFileType.GeoJson
 };
@@ -67,8 +45,6 @@ using (Converter converter = new Converter("map-data.geojson", getLoadOptions))
 
 The following code snippet shows how to load a GPX (GPS Exchange Format) document:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -76,26 +52,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new GisLoadOptions
-{
-    Format = GisFileType.Gpx
-};
-
-using (Converter converter = new Converter("route-tracking.gpx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("route-tracking.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new GisLoadOptions
 {
     Format = GisFileType.Gpx
 };
@@ -111,8 +67,6 @@ using (Converter converter = new Converter("route-tracking.gpx", getLoadOptions)
 
 The following code snippet shows how to load a GeoJSON document and set custom rendering dimensions:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -120,28 +74,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new GisLoadOptions
-{
-    Format = GisFileType.GeoJson,
-    Width = 1500,
-    Height = 1200
-};
-
-using (Converter converter = new Converter("city-boundaries.geojson", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("city-boundaries.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new GisLoadOptions
 {
     Format = GisFileType.GeoJson,
     Width = 1500,
@@ -159,8 +91,6 @@ using (Converter converter = new Converter("city-boundaries.geojson", getLoadOpt
 
 The following code snippet shows how to load a GeoJSON document and convert it to an image with custom dimensions:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -168,31 +98,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new GisLoadOptions
-{
-    Format = GisFileType.GeoJson,
-    Width = 800,
-    Height = 600
-};
-
-using (Converter converter = new Converter("region-map.geojson", getLoadOptions))
-{
-    ImageConvertOptions options = new ImageConvertOptions
-    {
-        Format = ImageFileType.Png
-    };
-    converter.Convert("region-map.png", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new GisLoadOptions
 {
     Format = GisFileType.GeoJson,
     Width = 800,
@@ -213,8 +118,6 @@ using (Converter converter = new Converter("region-map.geojson", getLoadOptions)
 
 The following code snippet shows how to convert from GPX to KML format:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -222,29 +125,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new GisLoadOptions
-{
-    Format = GisFileType.Gpx
-};
-
-using (Converter converter = new Converter("hiking-trail.gpx", getLoadOptions))
-{
-    GisConvertOptions options = new GisConvertOptions
-    {
-        Format = GisFileType.Kml
-    };
-    converter.Convert("hiking-trail.kml", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new GisLoadOptions
 {
     Format = GisFileType.Gpx
 };

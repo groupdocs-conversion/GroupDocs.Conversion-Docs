@@ -13,8 +13,6 @@ GroupDocs.Conversion provides a flexible API to control the conversion of docume
 The following code snippet shows how to convert each constituent
  file of the Outlook Offline Data File (OST) to a different format based on its content type:
 
-With v24.10 and later:
-
 ```csharp
 var index = 1;
 LoadOptions LoadOptionsProvider(LoadContext loadContext)
@@ -23,7 +21,7 @@ LoadOptions LoadOptionsProvider(LoadContext loadContext)
     {
         return new PersonalStorageLoadOptions
         {
-            Folder = @"Root - Mailbox", 
+            Folder = @"Root - Mailbox",
             Depth = 2
         };
     }
@@ -39,43 +37,6 @@ Stream ConvertedStreamProvider(SaveContext saveContext)
 ConvertOptions ConvertOptionsProvider(ConvertContext convertContext)
 {
     if (convertContext.SourceFormat == EmailFileType.Msg)
-    {
-        return new PdfConvertOptions();
-    }
-    return new WordProcessingConvertOptions();
-}
-
-using (var converter = new Converter("sample.ost", LoadOptionsProvider))
-{
-    converter.Convert(ConvertedStreamProvider, ConvertOptionsProvider);
-}
-
-```
-
-Before v24.10:
-
-```csharp
-var index = 1;
-LoadOptions LoadOptionsProvider(FileType sourceType)
-{
-    if (sourceType == EmailFileType.Ost)
-    {
-        return new PersonalStorageLoadOptions
-        {
-            Folder = @"Root - Mailbox", 
-            Depth = 2
-        };
-    }
-    return null;
-}
-Stream ConvertedStreamProvider(FileType targetType)
-{
-    string outputFile = $"converted-{index++}.{targetType.Extension}";
-    return new FileStream(outputFile, FileMode.Create);
-}
-ConvertOptions ConvertOptionsProvider(string sourceDocumentName, FileType sourceType)
-{
-    if (sourceType == EmailFileType.Msg)
     {
         return new PdfConvertOptions();
     }

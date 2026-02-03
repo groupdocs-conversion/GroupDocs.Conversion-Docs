@@ -21,8 +21,6 @@ The following options are available:
 
 The following code snippet shows how to load an XBRL document with explicit format specification:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -30,26 +28,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new FinanceLoadOptions
-{
-    Format = FinanceFileType.Xbrl
-};
-
-using (Converter converter = new Converter("financial-report.xbrl", getLoadOptions))
-{
-    SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
-    converter.Convert("financial-report.xlsx", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new FinanceLoadOptions
 {
     Format = FinanceFileType.Xbrl
 };
@@ -65,8 +43,6 @@ using (Converter converter = new Converter("financial-report.xbrl", getLoadOptio
 
 The following code snippet shows how to load an iXBRL (inline XBRL) document:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -74,26 +50,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new FinanceLoadOptions
-{
-    Format = FinanceFileType.IXbrl
-};
-
-using (Converter converter = new Converter("financial-statement.ixbrl", getLoadOptions))
-{
-    SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
-    converter.Convert("financial-statement.xlsx", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new FinanceLoadOptions
 {
     Format = FinanceFileType.IXbrl
 };
@@ -109,8 +65,6 @@ using (Converter converter = new Converter("financial-statement.ixbrl", getLoadO
 
 The following code snippet shows how to load an XBRL document and convert it to CSV format:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -118,29 +72,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new FinanceLoadOptions
-{
-    Format = FinanceFileType.Xbrl
-};
-
-using (Converter converter = new Converter("quarterly-report.xbrl", getLoadOptions))
-{
-    SpreadsheetConvertOptions options = new SpreadsheetConvertOptions
-    {
-        Format = SpreadsheetFileType.Csv
-    };
-    converter.Convert("quarterly-report.csv", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new FinanceLoadOptions
 {
     Format = FinanceFileType.Xbrl
 };
@@ -159,8 +90,6 @@ using (Converter converter = new Converter("quarterly-report.xbrl", getLoadOptio
 
 The following code snippet shows how to convert from iXBRL to XBRL:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -168,29 +97,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new FinanceLoadOptions
-{
-    Format = FinanceFileType.IXbrl
-};
-
-using (Converter converter = new Converter("annual-report.ixbrl", getLoadOptions))
-{
-    FinanceConvertOptions options = new FinanceConvertOptions
-    {
-        Format = FinanceFileType.Xbrl
-    };
-    converter.Convert("annual-report.xbrl", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new FinanceLoadOptions
 {
     Format = FinanceFileType.IXbrl
 };

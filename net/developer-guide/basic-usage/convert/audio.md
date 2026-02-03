@@ -74,7 +74,6 @@ public class AudioConnector : IAudioConnector
     { 
         var resultStream = new MemoryStream();
 
-
         var arguments = FFMpegArguments
             .FromPipeInput(new StreamPipeSource(sourceStream))
             .OutputToPipe(new StreamPipeSink(resultStream), options =>
@@ -148,30 +147,11 @@ public class AudioConnector : IAudioConnector
 
 Once the `IAudioConnector` interface is implemented, the MP3 to FLAC conversion code snippet looks like this:
 
-With v24.10 and later:
-
 ```csharp
 // Load the source MP3 file
 AudioLoadOptions loadOptions = new AudioLoadOptions();
 loadOptions.SetAudioConnector(new AudioConnector());
 using (Converter converter = new Converter("sample.mp3", (LoadContext loadContext) => loadOptions))
-{
-    // Set the convert options for FLAC format
-    AudioConvertOptions options = new AudioConvertOptions {
-        Format = AudioFileType.Flac
-    };
-    // Convert to FLAC format
-    converter.Convert("converted.flac", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-// Load the source MP3 file
-AudioLoadOptions loadOptions = new AudioLoadOptions();
-loadOptions.SetAudioConnector(new AudioConnector());
-using (Converter converter = new Converter("sample.mp3", () => loadOptions))
 {
     // Set the convert options for FLAC format
     AudioConvertOptions options = new AudioConvertOptions {

@@ -24,8 +24,6 @@ The following options are available:
 
 The following code snippet shows how to load an SVG file with explicit format specification:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -33,26 +31,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SvgLoadOptions
-{
-    Format = PageDescriptionLanguageFileType.Svg
-};
-
-using (Converter converter = new Converter("vector-graphic.svg", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("vector-graphic.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new SvgLoadOptions
 {
     Format = PageDescriptionLanguageFileType.Svg
 };
@@ -68,8 +46,6 @@ using (Converter converter = new Converter("vector-graphic.svg", getLoadOptions)
 
 The following code snippet shows how to load an SVG file with custom minimum dimensions for raster format conversion:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -77,31 +53,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SvgLoadOptions
-{
-    Format = PageDescriptionLanguageFileType.Svg,
-    MinimumWidth = 1200,
-    MinimumHeight = 900
-};
-
-using (Converter converter = new Converter("logo.svg", getLoadOptions))
-{
-    ImageConvertOptions options = new ImageConvertOptions
-    {
-        Format = ImageFileType.Png
-    };
-    converter.Convert("logo.png", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new SvgLoadOptions
 {
     Format = PageDescriptionLanguageFileType.Svg,
     MinimumWidth = 1200,
@@ -122,8 +73,6 @@ using (Converter converter = new Converter("logo.svg", getLoadOptions))
 
 The following code snippet shows how to load an SVG file with cropping to content bounds:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -131,27 +80,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SvgLoadOptions
-{
-    Format = PageDescriptionLanguageFileType.Svg,
-    CropToContentBounds = true
-};
-
-using (Converter converter = new Converter("icon.svg", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("icon.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new SvgLoadOptions
 {
     Format = PageDescriptionLanguageFileType.Svg,
     CropToContentBounds = true
@@ -168,8 +96,6 @@ using (Converter converter = new Converter("icon.svg", getLoadOptions))
 
 The following code snippet shows how to load an SVG file and convert it to XPS format:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -177,29 +103,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SvgLoadOptions
-{
-    Format = PageDescriptionLanguageFileType.Svg
-};
-
-using (Converter converter = new Converter("diagram.svg", getLoadOptions))
-{
-    PageDescriptionLanguageConvertOptions options = new PageDescriptionLanguageConvertOptions
-    {
-        Format = PageDescriptionLanguageFileType.Xps
-    };
-    converter.Convert("diagram.xps", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new SvgLoadOptions
 {
     Format = PageDescriptionLanguageFileType.Svg
 };
@@ -218,8 +121,6 @@ using (Converter converter = new Converter("diagram.svg", getLoadOptions))
 
 The following code snippet shows how to load an SVG file and convert it to a Word document:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -227,26 +128,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SvgLoadOptions
-{
-    Format = PageDescriptionLanguageFileType.Svg
-};
-
-using (Converter converter = new Converter("infographic.svg", getLoadOptions))
-{
-    WordProcessingConvertOptions options = new WordProcessingConvertOptions();
-    converter.Convert("infographic.docx", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new SvgLoadOptions
 {
     Format = PageDescriptionLanguageFileType.Svg
 };
@@ -262,8 +143,6 @@ using (Converter converter = new Converter("infographic.svg", getLoadOptions))
 
 The following code snippet shows how to load an SVG file and convert it to HTML:
 
-With v24.10 and later:
-
 ```csharp
 using GroupDocs.Conversion;
 using GroupDocs.Conversion.FileTypes;
@@ -271,26 +150,6 @@ using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.Options.Load;
 
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SvgLoadOptions
-{
-    Format = PageDescriptionLanguageFileType.Svg
-};
-
-using (Converter converter = new Converter("chart.svg", getLoadOptions))
-{
-    WebConvertOptions options = new WebConvertOptions();
-    converter.Convert("chart.html", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-using GroupDocs.Conversion;
-using GroupDocs.Conversion.FileTypes;
-using GroupDocs.Conversion.Options.Convert;
-using GroupDocs.Conversion.Options.Load;
-
-Func<LoadOptions> getLoadOptions = () => new SvgLoadOptions
 {
     Format = PageDescriptionLanguageFileType.Svg
 };

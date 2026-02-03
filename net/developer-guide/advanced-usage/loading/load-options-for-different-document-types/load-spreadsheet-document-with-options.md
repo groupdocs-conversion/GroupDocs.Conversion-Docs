@@ -38,30 +38,12 @@ toc: True
 |**[PrintComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/printcomments)** | Specifies how to render comments during conversion. |
 |**[IgnoreFormulaCalculationErrors](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/ignoreformulacalculationerrors)** | If *true*, ignores errors that occur during formula calculation. Useful for spreadsheets with broken or external references. |
 
-
 ### Hide comments
 
 The following code snippet shows how to convert a spreadsheet and hide comments:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SpreadsheetLoadOptions
-{
-    HideComments = true,
-    OnePagePerSheet = true
-};
-using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
 {
     HideComments = true,
     OnePagePerSheet = true
@@ -77,25 +59,8 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 The following code snippet shows how to convert a spreadsheet and show grid lines:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SpreadsheetLoadOptions
-{
-    ShowGridLines = true,
-    OnePagePerSheet = true
-};
-using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
 {
     ShowGridLines = true,
     OnePagePerSheet = true
@@ -111,25 +76,8 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 The following code snippet shows how to convert a spreadsheet and skip empty rows and columns:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SpreadsheetLoadOptions
-{
-    SkipEmptyRowsAndColumns = true,
-    OnePagePerSheet = true
-};
-using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
 {
     SkipEmptyRowsAndColumns = true,
     OnePagePerSheet = true
@@ -145,30 +93,8 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 The following code snippet shows how to convert a spreadsheet and specify font substitution for missing fonts:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SpreadsheetLoadOptions
-{
-    DefaultFont = "Helvetica",
-    FontSubstitutes = new List<FontSubstitute>
-    {
-        FontSubstitute.Create("Tahoma", "Arial"),
-        FontSubstitute.Create("Times New Roman", "Arial"),
-    },
-    OnePagePerSheet = true
-};
-using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
 {
     DefaultFont = "Helvetica",
     FontSubstitutes = new List<FontSubstitute>
@@ -191,25 +117,8 @@ You can specify the sheets to be converted either by names or by indexes.
 
 The following code snippet shows how to convert a spreadsheet and specify the desired sheets by their names:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SpreadsheetLoadOptions
-{
-    Sheets = new[] {"Expenses", "Taxes" },
-    OnePagePerSheet = true
-};
-using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
 {
     Sheets = new[] {"Expenses", "Taxes" },
     OnePagePerSheet = true
@@ -223,25 +132,8 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 The following code snippet shows how to convert a spreadsheet and specify the desired sheets by their zero-based indexes:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SpreadsheetLoadOptions
-{
-    SheetIndexes = new[] { 0, 2 },
-    OnePagePerSheet = true
-};
-using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
 {
     SheetIndexes = new[] { 0, 2 },
     OnePagePerSheet = true
@@ -257,25 +149,8 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 The following code snippet shows how to convert a spreadsheet and specify the exact range of rows and columns to be converted:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SpreadsheetLoadOptions
-{
-    ConvertRange = "10:30",
-    OnePagePerSheet = true
-};
-using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
 {
     ConvertRange = "10:30",
     OnePagePerSheet = true
@@ -291,25 +166,8 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 The following code snippet shows how to convert a spreadsheet including the hidden sheets:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SpreadsheetLoadOptions
-{
-    ShowHiddenSheets = true,
-    OnePagePerSheet = true
-};
-using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
 {
     ShowHiddenSheets = true,
     OnePagePerSheet = true
@@ -325,24 +183,8 @@ using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
 
 To fit the row content of all rows while converting from a spreadsheet, set the [AutoFitRows](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/autofitrows/) property to `true`:
 
-With v24.10 and later:
-
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SpreadsheetLoadOptions
-{
-    AutoFitRows = true
-};
-using (Converter converter = new Converter("sample.xlsx", getLoadOptions))
-{
-    PdfConvertOptions options = new PdfConvertOptions();
-    converter.Convert("converted.pdf", options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<LoadOptions> getLoadOptions = () => new SpreadsheetLoadOptions
 {
     AutoFitRows = true
 };

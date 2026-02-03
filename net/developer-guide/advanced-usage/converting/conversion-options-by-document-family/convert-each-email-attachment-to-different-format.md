@@ -12,8 +12,6 @@ GroupDocs.Conversion provides a flexible API to control the conversion of docume
 
 The following code snippet shows how to convert each attachment to a different format based on the attachment type:
 
-With v24.10 and later:
-
 ```csharp
 var index = 1;
 LoadOptions LoadOptionsProvider(LoadContext loadContext)
@@ -22,7 +20,7 @@ LoadOptions LoadOptionsProvider(LoadContext loadContext)
     {
         return new EmailLoadOptions
         {
-            ConvertOwned = true, 
+            ConvertOwned = true,
             ConvertOwner = true,
             Depth = 2
         };
@@ -42,53 +40,8 @@ ConvertOptions ConvertOptionsProvider(ConvertContext convertContext)
     {
         return new WordProcessingConvertOptions();
     }
-    
+
     if (convertContext.SourceFormat == WordProcessingFileType.Txt)
-    {
-        return new PdfConvertOptions();
-    }
-    return new ImageConvertOptions();
-}
-
-using (var converter = new Converter("sample_with_attachments.eml", LoadOptionsProvider))
-{
-    converter.Convert(ConvertedStreamProvider, ConvertOptionsProvider);
-}
-
-```
-
-Before v24.10:
-
-```csharp
-var index = 1;
-LoadOptions LoadOptionsProvider(FileType sourceType)
-{
-    if (sourceType == EmailFileType.Eml)
-    {
-        return new EmailLoadOptions
-        {
-            ConvertOwned = true, 
-            ConvertOwner = true,
-            Depth = 2
-        };
-    }
-    return null;
-}
-
-Stream ConvertedStreamProvider(FileType targetType)
-{
-    string outputFile = $"converted-{index++}.{targetType.Extension}";
-    return new FileStream(outputFile, FileMode.Create);
-}
-
-ConvertOptions ConvertOptionsProvider(string sourceDocumentName, FileType sourceType)
-{
-    if (sourceType == EmailFileType.Eml)
-    {
-        return new WordProcessingConvertOptions();
-    }
-    
-    if (sourceType == WordProcessingFileType.Txt)
     {
         return new PdfConvertOptions();
     }

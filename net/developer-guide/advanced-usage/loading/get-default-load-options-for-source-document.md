@@ -20,28 +20,12 @@ To get default options, follow these steps:
 
 The following code snippet shows how to get default load options for a Word processing document:
 
-With v24.10 and later:
-
 ```csharp
 var possibleConversions = Converter.GetPossibleConversions("docx");
 var loadOptions = (WordProcessingLoadOptions) possibleConversions.LoadOptions;
 loadOptions.Password = "12345";
 
 using (Converter converter = new Converter("password_protected.docx", (LoadContext loadContext) => loadOptions))
-{
-    var convertOptions = new PdfConvertOptions();
-    converter.Convert(outputFile, convertOptions);
-}
-```
-
-Before v24.10:
-
-```csharp
-var possibleConversions = Converter.GetPossibleConversions("docx");
-var loadOptions = (WordProcessingLoadOptions) possibleConversions.LoadOptions;
-loadOptions.Password = "12345";
-
-using (Converter converter = new Converter("password_protected.docx", () => loadOptions))
 {
     var convertOptions = new PdfConvertOptions();
     converter.Convert(outputFile, convertOptions);

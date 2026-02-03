@@ -113,29 +113,13 @@ No matter which image format you choose - GroupDocs.Conversion supports a wide r
   
 Here is a code snippet that shows how to convert PPTX to PNG image in C# programming language:
 
-With v24.10 and later:
-
 ```csharp
 Func<SavePageContext, Stream> getPageStream = saveContext => new FileStream(string.Format("converted-slide-{0}.png", saveContext.Page), FileMode.Create);
-// Load the source PPTX file    
+// Load the source PPTX file
 using (Converter converter = new GroupDocs.Conversion.Converter("sample.pptx"))
 {
     // Set the convert options for PNG format
-    ImageConvertOptions options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png };  
-    // Convert to PNG format
-    converter.Convert(getPageStream, options);
-}
-```
-
-Before v24.10:
-
-```csharp
-Func<int, Stream> getPageStream = page => new FileStream(string.Format("converted-slide-{0}.png", page), FileMode.Create);
-// Load the source PPTX file    
-using (Converter converter = new GroupDocs.Conversion.Converter("sample.pptx"))
-{
-    // Set the convert options for PNG format
-    ImageConvertOptions options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png };  
+    ImageConvertOptions options = new ImageConvertOptions { Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png };
     // Convert to PNG format
     converter.Convert(getPageStream, options);
 }

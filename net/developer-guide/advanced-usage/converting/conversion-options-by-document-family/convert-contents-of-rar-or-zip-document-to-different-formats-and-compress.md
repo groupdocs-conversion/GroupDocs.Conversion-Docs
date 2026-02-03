@@ -126,20 +126,6 @@ FluentConverter.Load("sensitive-files.zip")
 
 **Output (write):** ZIP, 7z, TAR, TAR.GZ, TAR.BZ2, TAR.XZ (RAR output not supported due to licensing)
 
-## Version Compatibility
-
-All examples use **v24.10+ syntax** with `SaveContext`:
-
-```csharp
-.ConvertTo((SaveContext saveContext) => ...)
-```
-
-For versions **before v24.10**, use:
-
-```csharp
-.ConvertTo(() => ...)
-```
-
 ## See Also
 
 - [Convert Archive Formats (ZIP, 7z, TAR, RAR)]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-to-compression-with-advanced-options.md" >}}) - Change archive format without extracting contents

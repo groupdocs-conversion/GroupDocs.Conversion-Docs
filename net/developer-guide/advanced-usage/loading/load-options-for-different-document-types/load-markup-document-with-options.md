@@ -23,8 +23,6 @@ GroupDocs.Conversion provides [WebLoadOptions](https://reference.groupdocs.com/
 
 The following code snippet shows how to convert a markup document and insert page numbering:
 
-With v24.10 and later:
-
 ```csharp
 var source = "sample.html";
 var loadOptions = new WebLoadOptions
@@ -32,21 +30,6 @@ var loadOptions = new WebLoadOptions
     PageNumbering = true
 };
 using (var converter = new Converter(source, (LoadContext loadContext) => loadOptions))
-{
-    var options = new WordProcessingConvertOptions();
-    converter.Convert("converted.docx" , options);
-}
-```
-
-Before v24.10:
-
-```csharp
-var source = "sample.html";
-var loadOptions = new WebLoadOptions
-{
-    PageNumbering = true
-};
-using (var converter = new Converter(source, () => loadOptions))
 {
     var options = new WordProcessingConvertOptions();
     converter.Convert("converted.docx" , options);

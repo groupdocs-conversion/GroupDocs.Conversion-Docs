@@ -31,34 +31,9 @@ GroupDocs.Conversion provides [ImageConvertOptions](https://reference.groupdocs.
 
 The following code snippet shows how to convert to image with advanced options:
 
-With v24.10 and later:
-
 ```csharp
 string outputFileTemplate = Path.Combine(@"c:\output", "converted-page-{0}.png");
 Func<SavePageContext, Stream> getPageStream = saveContext => new FileStream(string.Format(outputFileTemplate, saveContext.Page), FileMode.Create);
-using (Converter converter = new Converter("sample.pdf"))
-{
-    ImageConvertOptions options = new ImageConvertOptions
-    {
-        Format = ImageFileType.Png,
-        FlipMode = ImageFlipModes.FlipY,
-        Brightness = 50,
-        Contrast = 50,
-        Gamma = 0.5F,
-        Grayscale = true,
-        HorizontalResolution = 300,
-        VerticalResolution = 100
-    };
-
-    converter.Convert(getPageStream, options);
-}
-```
-
-Before v24.10:
-
-```csharp
-string outputFileTemplate = Path.Combine(@"c:\output", "converted-page-{0}.png");
-Func<int, Stream> getPageStream = page => new FileStream(string.Format(outputFileTemplate, page), FileMode.Create);
 using (Converter converter = new Converter("sample.pdf"))
 {
     ImageConvertOptions options = new ImageConvertOptions
