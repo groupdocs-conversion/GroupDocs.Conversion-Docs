@@ -114,6 +114,7 @@ GeekdocHidden: true
 | --- | --- | :---: | :---: |
 | [EML](/conversion/net/convert/email/) | E-Mail Message |<!--Load--> ✅ |<!--Save--> ✅ |
 | [EMLX](/conversion/net/convert/email/) | Apple Mail Message |<!--Load--> ✅ |<!--Save--> ✅ |
+| [ICS](/conversion/net/convert/email/) | iCalendar File |<!--Load--> ✅ |<!--Save-->  |
 | [MBOX](/conversion/net/convert/email/) | Mbox document format |<!--Load--> ✅ |<!--Save-->  |
 | [MSG](/conversion/net/convert/email/) | Outlook Mail Message |<!--Load--> ✅ |<!--Save--> ✅ |
 | [OLM](/conversion/net/convert/email/) | Microsoft Outlook file for Mac Operating System. |<!--Load--> ✅ |<!--Save-->  |
