@@ -16,8 +16,8 @@ structuredData:
 <dt class="flex flex-wrap align-center gdoc-props__meta">
     <a href='https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-conversion/23.12/' class="release-version-link">
         <span class="gdoc-props__tag tip">Latest version
-            <i class="release-version-number">23.12</i>
-            <i class="release-version-month">(December 2023)</i>
+            <i class="release-version-number">25.11</i>
+            <i class="release-version-month">(November 2025)</i>
         </span> 
     </a>
 </dt>

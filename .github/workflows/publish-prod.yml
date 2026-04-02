@@ -37,7 +37,13 @@ jobs:
           cp -r nodejs-java common/content/${{ env.PRODUCT }}
           cp -r python-net common/content/${{ env.PRODUCT }}
           cp _index.md common/content/${{ env.PRODUCT }}
-          hugo --source common --minify --config config-geekdoc.toml,ignore-total-config.toml,show-feedback-config.toml
+          hugo --source common --minify
+
+
+      - name: Move MD files to ugly URLs
+        run: |
+          chmod +x common/move_md_to_ugly_urls.sh
+          ./common/move_md_to_ugly_urls.sh common/public
 
       - name: Deploy sitemap
         uses: nogsantos/scp-deploy@master
@@ -51,7 +57,7 @@ jobs:
       - name: Deploy documentation
         uses: burnett01/rsync-deployments@7.0.1
         with:
-          switches: -vzr --delete
+          switches: -vzr --delete --chmod=D755,F644
           path: common/public/${{ env.PRODUCT }}
           remote_path: ${{ secrets.DOCS_SSH_DIR }}
           remote_host: ${{ secrets.DOCS_SSH_HOST }}

@@ -12,42 +12,55 @@ toc: true
 
 ## General Requirements
 
-- [Python 3.9](https://www.python.org/downloads/) or above.
-- [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) runtime or above.
+- [Python](https://www.python.org/downloads/) versions **3.9–3.11** are supported
 
 ## Supported Operating Systems
 
 ### Windows
 
-- Microsoft Windows 11 (x64)
-- Microsoft Windows 10 (x64, x86)
-- Microsoft Windows 7, 8, 8.1 (x64, x86)
-- Microsoft Windows Vista (x64, x86)
-- Microsoft Windows XP (x64, x86)
-- Microsoft Windows Server 2003 and later
+* Microsoft Windows 11 (x64)
+* Microsoft Windows 10 (x64, x86)
+* Microsoft Windows 7, 8, 8.1, Vista, XP (x64, x86)
+* Microsoft Windows Server 2003 and later
 
-### macOS
+### Linux and macOS (partial support)
 
-GroupDocs.Conversion for Python via .NET supports macOS running on both Intel and Apple Silicon processors.
-
-Supported versions:
-
-- macOS Sequoia (version 15)
-- macOS Sonoma (version 14)
-- macOS Ventura (version 13)
-- macOS Monterey (version 12)
-- macOS Big Sur (version 11)
-- macOS Catalina (version 10.15)
-- macOS Mojave (version 10.14)
+GroupDocs.Conversion include macOS support for Intel and/or Apple Silicon (M-series) processors. Linux packages will be added in future releases.
 
 ## Additional System Libraries
 
-### macOS System Requirements
+### Linux and macOS System Requirements
 
-GroupDocs.Conversion for Python via .NET partially relies on `libgdiplus` for converting images or documents that contain images. The library is required for such conversions and can be installed using the [Homebrew](https://brew.sh/) package manager:
+GroupDocs.Conversion for Python via .NET relies on `libgdiplus` for processing images or documents that contain images. 
+
+#### Linux installation
+
+When using GroupDocs.Conversion in a Linux environment, the following packages should be installed for proper library operation:
+
+1. **libgdiplus** - Mono library providing a GDI+-compatible API on non-Windows operating systems.  
+2. **libx11-dev** - Required for drawing functions (image/font rendering).  
+3. **fontconfig** - Enables font lookup for text rendering with System.Drawing.  
+4. **ttf-mscorefonts-installer** - Provides Microsoft-compatible fonts required by GroupDocs.Total.
+
+To install packages on Debian-based Linux distributions, use [apt-get](https://wiki.debian.org/apt-get):
+
+```bash
+sudo apt-get update
+sudo apt-get install -y libgdiplus libx11-dev fontconfig ttf-mscorefonts-installer
+```
+
+If some packages are not available, you can add the contrib repository:
+
+```bash
+RUN sed -i'.bak' 's/$/ contrib/' /etc/apt/sources.list
+```
+
+#### macOS installation
+
+The library is required and can be installed using the [Homebrew](https://brew.sh/) package manager:
 
 ```ps
 brew install mono-libgdiplus
 ```
 
-Ensure `libgdiplus` is installed if you encounter issues with image-based conversions.
+Ensure `libgdiplus` is installed if you encounter issues with processing images or documents that contain images.
