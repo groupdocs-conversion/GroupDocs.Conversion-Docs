@@ -2,9 +2,10 @@
 id: convert-files-within-document-containers
 url: conversion/python-net/developer-guide/converting-documents/convert-files-within-document-containers
 title: Convert Files Within Document Containers
+linkTitle: Convert Archives and Containers
 weight: 4
-description: "Learn how to convert files within document containers, such as compressed files, into various formats using GroupDocs.Conversion for Python via .NET."
-keywords: Convert document containers, Convert embedded files, Convert multiple files within document, GroupDocs.Conversion
+description: "Open ZIP, RAR, 7Z, OST, PST, and other container formats, convert their contents, and write a consolidated output document in a single Converter.convert() call with GroupDocs.Conversion for Python via .NET."
+keywords: convert archive, convert ZIP, convert RAR, convert 7Z, compressed file, document container, OST, PST, email container, consolidated output, Converter.convert, GroupDocs.Conversion, python
 productName: GroupDocs.Conversion for Python via .NET
 hideChildren: false
 toc: true
@@ -28,7 +29,7 @@ flowchart LR
     C --> F
 {{< /mermaid >}}
 
-The Extraction and Conversion processes are performed within a single call to the `convert_multiple(folder_path, convert_options)` method of the `Converter` class.
+The Extraction and Conversion processes are performed within a single call to the `convert(file_path, convert_options)` method of the `Converter` class. GroupDocs.Conversion opens the container, converts the files it holds, and writes a consolidated output document.
 
 ## Document Container File Types
 
@@ -71,9 +72,7 @@ The following file types are considered document containers:
 
 ## Example: Convert Files Within Document Container
 
-The following example demonstrates how to convert each compressed file in ZIP archive to PDF:
- 
-The file name template for the output files is `{file name}_{source file extension}.{output file extension}`. In this example, compressed file `business-plan.docx` is being saved converted and saved with file name `business-plan_docx.pdf`.
+The following example demonstrates how to convert the contents of a ZIP archive to a single consolidated PDF:
 
 {{< tabs "example-1">}}
 {{< tab "convert_files_within_document_container.py" >}}  
@@ -82,13 +81,13 @@ from groupdocs.conversion import Converter
 from groupdocs.conversion.options.convert import PdfConvertOptions
 
 def convert_files_within_document_container():
-    # Instantiate Converter with the input document 
+    # Instantiate Converter with the input document container
     with Converter("./compressed.zip") as converter:
-        # Instantiate convert options 
+        # Instantiate convert options
         pdf_convert_options = PdfConvertOptions()
 
-        # Extract, convert and save output files in PDF format
-        converter.convert_multiple("./converted-files", pdf_convert_options)    
+        # Extract the archive, convert the contained files, and save a consolidated PDF
+        converter.convert("./converted.pdf", pdf_convert_options)
 
 if __name__ == "__main__":
     convert_files_within_document_container()
@@ -99,9 +98,10 @@ if __name__ == "__main__":
 `compressed.zip` is the sample file used in this example. Click [here](/conversion/python-net/_sample_files/developer-guide/converting-documents/convert-files-within-document-containers/compressed.zip) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "converted-files" >}}  
-{{< tab-text >}}
-`converted-files` is the output folder path for the converted files. Click [here](/conversion/python-net/_sample_files/developer-guide/converting-documents/convert-files-within-document-containers/converted-files.zip) to download it.
-{{< /tab-text >}}
+{{< tab "converted.pdf" >}}  
+```text
+Binary file (PDF, 283 KB)
+```
+[Download full output](/conversion/python-net/_output_files/developer-guide/converting-documents/convert-files-within-document-containers/convert_files_within_document_container/converted.pdf)
 {{< /tab >}}
 {{< /tabs >}}

@@ -2,11 +2,13 @@
 id: loading-documents
 url: conversion/python-net/developer-guide/loading-documents
 title: Loading Documents
+linkTitle: Loading Documents
 weight: 1
-description: "Following this guide, you will learn how to load PDF, Word, Excel, and PowerPoint documents by local file path and stream with GroupDocs.Conversion for Python via .NET API."
-keywords: Get default load options, Load document from local path, Load document from stream, Load password-protected documents
+description: "Load source documents from a local file path or a Python stream — including password-protected files — and inspect the available LoadOptions classes and ConverterSettings in GroupDocs.Conversion for Python via .NET."
+keywords: load document, load from local disk, load from stream, password-protected document, load options, LoadOptions, ConverterSettings, Converter constructor, python, GroupDocs.Conversion
 productName: GroupDocs.Conversion for Python via .NET
 hideChildren: true
+toc: True
 ---
 
 *GroupDocs.Conversion for Python via .NET* provides two primary ways to load a document: by file path or from a stream. This flexibility allows you to load documents from various storage sources. The `Converter` class provides specific constructors to handle each of these loading methods.
@@ -67,6 +69,6 @@ The `LoadOptions` classes specify the type of document to be loaded and include 
 The `ConverterSettings` class provides several settings to control document loading behavior:
 
 - `cache`: Specifies caching options with `MemoryCache` or `FileCache`.
-- `logger`: Specifies logging options with `ConsoleLogger` or `FileLogger`.
+- `logger`: Attaches a logger that receives trace, warning, and error messages. Use the built-in `ConsoleLogger` (see [Logging and Diagnostics]({{< ref "conversion/python-net/developer-guide/logging-and-diagnostics" >}})).
 - `font_directories`: An array of directory paths with custom fonts.
 - `temp_folder`: Specifies a folder for temporary files during conversion. Defaults to a user-specific temporary folder.

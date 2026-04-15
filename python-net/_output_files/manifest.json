@@ -1,0 +1,239 @@
+{
+  "developer-guide/converting-documents/add-watermark-to-converted-document#example-1": {
+    "type": "file",
+    "file": "professional-services.pdf",
+    "path": "developer-guide/converting-documents/add-watermark-to-converted-document/add_watermark_to_converted_document/professional-services.pdf",
+    "preview": "Binary file (PDF, 363 KB)",
+    "function": "add_watermark_to_converted_document"
+  },
+  "developer-guide/converting-documents/convert-document-to-another-format#example-1": {
+    "type": "file",
+    "file": "business-plan.pdf",
+    "path": "developer-guide/converting-documents/convert-document-to-another-format/convert_document_to_another_format/business-plan.pdf",
+    "preview": "Binary file (PDF, 283 KB)",
+    "function": "convert_document_to_another_format"
+  },
+  "developer-guide/converting-documents/convert-document-to-another-format#example-2": {
+    "type": "file",
+    "file": "business-plan.txt",
+    "path": "developer-guide/converting-documents/convert-document-to-another-format/specify_output_format/business-plan.txt",
+    "preview": "﻿HOME BASED\n\n\n\nPROFESSIONAL SERVICES\n\nBusiness Plan\n\n\n\n[TRUNCATED]",
+    "function": "specify_output_format"
+  },
+  "developer-guide/converting-documents/convert-document-to-another-format#example-3": {
+    "type": "file",
+    "file": "pages-1-3-5.pdf",
+    "path": "developer-guide/converting-documents/convert-document-to-another-format/convert_specific_document_pages/pages-1-3-5.pdf",
+    "preview": "Binary file (PDF, 156 KB)",
+    "function": "convert_specific_document_pages"
+  },
+  "developer-guide/converting-documents/convert-document-to-another-format#example-4": {
+    "type": "file",
+    "file": "pages-1-through-5.pdf",
+    "path": "developer-guide/converting-documents/convert-document-to-another-format/convert_consecutive_document_pages/pages-1-through-5.pdf",
+    "preview": "Binary file (PDF, 216 KB)",
+    "function": "convert_consecutive_document_pages"
+  },
+  "developer-guide/converting-documents/convert-document-to-multiple-page-files#example-1": {
+    "type": "zip",
+    "file": "convert-all-document-pages-outputs.zip",
+    "path": "developer-guide/converting-documents/convert-document-to-multiple-page-files/convert_all_document_pages/convert-all-document-pages-outputs.zip",
+    "contents": [
+      "converted-pages\\converted-page-1.png",
+      "converted-pages\\converted-page-10.png",
+      "converted-pages\\converted-page-11.png",
+      "converted-pages\\converted-page-12.png",
+      "converted-pages\\converted-page-13.png",
+      "converted-pages\\converted-page-2.png",
+      "converted-pages\\converted-page-3.png",
+      "converted-pages\\converted-page-4.png",
+      "converted-pages\\converted-page-5.png",
+      "converted-pages\\converted-page-6.png",
+      "converted-pages\\converted-page-7.png",
+      "converted-pages\\converted-page-8.png",
+      "converted-pages\\converted-page-9.png"
+    ],
+    "preview": "converted-pages/converted-page-1.png (26 KB)\nconverted-pages/converted-page-10.png (81 KB)\nconverted-pages/converted-page-11.png (67 KB)\nconverted-pages/converted-page-12.png (70 KB)\nconverted-pages/converted-page-13.png (36 KB)\nconverted-pages/converted-page-2.png (34 KB)\nconverted-pages/converted-page-3.png (797 KB)\nconverted-pages/converted-page-4.png (1262 KB)\nconverted-pages/converted-page-5.png (75 KB)\nconverted-pages/converted-page-6.png (33 KB)\n[TRUNCATED] (13 files total)",
+    "function": "convert_all_document_pages"
+  },
+  "developer-guide/converting-documents/convert-document-to-multiple-page-files#example-2": {
+    "type": "file",
+    "file": "slide-3.png",
+    "path": "developer-guide/converting-documents/convert-document-to-multiple-page-files/convert_specific_document_page_to_file/slide-3.png",
+    "preview": "Binary file (PNG, 797 KB)",
+    "function": "convert_specific_document_page_to_file"
+  },
+  "developer-guide/converting-documents/convert-document-to-multiple-page-files#example-3": {
+    "type": "file",
+    "file": "slide-5.png",
+    "path": "developer-guide/converting-documents/convert-document-to-multiple-page-files/convert_specific_document_page_to_stream/slide-5.png",
+    "preview": "Binary file (PNG, 75 KB)",
+    "function": "convert_specific_document_page_to_stream"
+  },
+  "developer-guide/converting-documents/convert-files-within-document-containers#example-1": {
+    "type": "file",
+    "file": "converted.pdf",
+    "path": "developer-guide/converting-documents/convert-files-within-document-containers/convert_files_within_document_container/converted.pdf",
+    "preview": "Binary file (PDF, 283 KB)",
+    "function": "convert_files_within_document_container"
+  },
+  "developer-guide/converting-documents/get-possible-conversions#example-1": {
+    "type": "text",
+    "file": "get-all-possible-conversions.txt",
+    "path": "developer-guide/converting-documents/get-possible-conversions/get_all_possible_conversions/get-all-possible-conversions.txt",
+    "preview": "**Source format** : MP3 Audio File (mp3)\n  - **Primary conversions**: [<NetObject handle=243>, <NetObject handle=244>, <NetObject handle=245>, <NetObject handle=246>, <NetObject handle=247>, <NetObject handle=248>, <NetObject handle=249>, <NetObject handle=250>, <NetObject handle=251>]\n  - **Secondary conversions**: []\n\n **Source format** : Advanced Audio Coding File (aac)\n  - **Primary conversions**: [<NetObject handle=273>, <NetObject handle=274>, <NetObject handle=275>, <NetObject handle=276>\n[TRUNCATED]",
+    "function": "get_all_possible_conversions"
+  },
+  "developer-guide/converting-documents/get-possible-conversions#example-2": {
+    "type": "text",
+    "file": "get-all-possible-conversions-by-file-extension.txt",
+    "path": "developer-guide/converting-documents/get-possible-conversions/get_all_possible_conversions_by_file_extension/get-all-possible-conversions-by-file-extension.txt",
+    "preview": "**Source format**: Microsoft Word Open XML Document (docx)\n  - **Primary conversions**: [<NetObject handle=40540>, <NetObject handle=40541>, <NetObject handle=40542>, <NetObject handle=40543>, <NetObject handle=40544>, <NetObject handle=40545>, <NetObject handle=40546>, <NetObject handle=40547>, <NetObject handle=40548>, <NetObject handle=40549>, <NetObject handle=40550>, <NetObject handle=40551>, <NetObject handle=40552>, <NetObject handle=40553>, <NetObject handle=40554>, <NetObject handle=405\n[TRUNCATED]",
+    "function": "get_all_possible_conversions_by_file_extension"
+  },
+  "developer-guide/converting-documents/get-possible-conversions#example-3": {
+    "type": "text",
+    "file": "get-all-possible-conversions-current-file.txt",
+    "path": "developer-guide/converting-documents/get-possible-conversions/get_all_possible_conversions_for_current_file/get-all-possible-conversions-current-file.txt",
+    "preview": "**Source format**: Microsoft Excel Open XML Spreadsheet (xlsx)\n  - **Primary conversions**: [<NetObject handle=40772>, <NetObject handle=40773>, <NetObject handle=40774>, <NetObject handle=40775>, <NetObject handle=40776>, <NetObject handle=40777>, <NetObject handle=40778>, <NetObject handle=40779>, <NetObject handle=40780>, <NetObject handle=40781>, <NetObject handle=40782>, <NetObject handle=40783>, <NetObject handle=40784>, <NetObject handle=40785>, <NetObject handle=40786>, <NetObject handle\n[TRUNCATED]",
+    "function": "get_all_possible_conversions_for_current_file"
+  },
+  "developer-guide/getting-document-info#code-example-1": {
+    "type": "text",
+    "file": "get-document-info.txt",
+    "path": "developer-guide/getting-document-info/get_document_info/get-document-info.txt",
+    "preview": "Format: txt\nPages count: 3\nCreation date: 0001-01-01T00:00:00.0000000\nSize, bytes: 7794",
+    "function": "get_document_info"
+  },
+  "developer-guide/getting-document-info#code-example-2": {
+    "type": "text",
+    "file": "get-pdf-document-info.txt",
+    "path": "developer-guide/getting-document-info/get_pdf_document_info/get-pdf-document-info.txt",
+    "preview": "Author: None\nCreation Date: 2020-08-12T16:41:29.0000000\nTitle: None\nVersion: 1.7\nPages Count: 5\nWidth: 612\nHeight: 792\nIs Landscaped: False\nIs Password-Protected: False\nTable of contents:\n[TRUNCATED]",
+    "function": "get_pdf_document_info"
+  },
+  "developer-guide/getting-document-info#code-example-3": {
+    "type": "text",
+    "file": "get-wp-document-info.txt",
+    "path": "developer-guide/getting-document-info/get_wp_document_info/get-wp-document-info.txt",
+    "preview": "Author: GroupDocs\nCreation Date: 2024-11-03T10:05:00.0000000Z\nFormat: doc\nIs Password Protected: False\nLines: 180\nPages Count: 19\nSize, bytes: 414208\nTitle: \nWords: 3789\nTable of contents:\n[TRUNCATED]",
+    "function": "get_wp_document_info"
+  },
+  "developer-guide/getting-document-info#code-example-4": {
+    "type": "text",
+    "file": "get-pm-document-info.txt",
+    "path": "developer-guide/getting-document-info/get_pm_document_info/get-pm-document-info.txt",
+    "preview": "Creation Date: 2026-04-15T18:46:57.5280267Z\nStart Date: 2017-10-06T09:00:00.0000000Z\nEnd Date: 2017-10-14T18:00:00.0000000Z\nFormat: mpp\nSize, bytes: 236544\nTasks Count: 5",
+    "function": "get_pm_document_info"
+  },
+  "developer-guide/getting-document-info#code-example-5": {
+    "type": "text",
+    "file": "get-image-info.txt",
+    "path": "developer-guide/getting-document-info/get_image_info/get-image-info.txt",
+    "preview": "Bits per Pixel: 32\nCreation Date: 2026-04-15T18:46:57.9018225Z\nFormat: tiff\nHeight: 2000\nWidth: 1500\nSize, bytes: 1734560",
+    "function": "get_image_info"
+  },
+  "developer-guide/getting-document-info#code-example-6": {
+    "type": "text",
+    "file": "get-pres-document-info.txt",
+    "path": "developer-guide/getting-document-info/get_pres_document_info/get-pres-document-info.txt",
+    "preview": "Author: GroupDocs\nCreation Date: 2023-03-04T14:58:10.0000000Z\nFormat: pptx\nIs Password Protected: False\nPages Count: 3\nSize, bytes: 35210\nTitle: TEST",
+    "function": "get_pres_document_info"
+  },
+  "developer-guide/getting-document-info#code-example-7": {
+    "type": "text",
+    "file": "get-sp-document-info.txt",
+    "path": "developer-guide/getting-document-info/get_sp_document_info/get-sp-document-info.txt",
+    "preview": "Author: GroupDocs\nCreation Date: 2023-02-23T18:52:46.0000000+02:00\nFormat: xlsx\nIs Password Protected: False\nPages Count: 0\nSize, bytes: 78940\nTitle: Cost Analysis\nWorksheets Count: 1",
+    "function": "get_sp_document_info"
+  },
+  "developer-guide/getting-document-info#code-example-8": {
+    "type": "text",
+    "file": "get-cad-document-info.txt",
+    "path": "developer-guide/getting-document-info/get_cad_document_info/get-cad-document-info.txt",
+    "preview": "Creation Date: 2026-04-15T18:46:59.2650286Z\nFormat: dwg\nHeight: 16\nWidth: 26\nSize, bytes: 258848\nLayouts:\n Layout: Model\n Layout: ISO A1\nLayers:\n Layer: Text\n[TRUNCATED]",
+    "function": "get_cad_document_info"
+  },
+  "developer-guide/getting-document-info#code-example-9": {
+    "type": "text",
+    "file": "get-email-document-info.txt",
+    "path": "developer-guide/getting-document-info/get_email_document_info/get-email-document-info.txt",
+    "preview": "Creation Date: 2017-04-25T11:28:29.0000000Z\nFormat: eml\nIs Encrypted: False\nIs Body in HTML: True\nIs Signed: False\nSize: 91948\nAttachments Count: 1\nAttachment Name: bg_pattern.gif",
+    "function": "get_email_document_info"
+  },
+  "developer-guide/loading-documents/load-file-from-local-disk#code-example": {
+    "type": "file",
+    "file": "business-plan.pdf",
+    "path": "developer-guide/loading-documents/load-file-from-local-disk/convert_docx_to_pdf/business-plan.pdf",
+    "preview": "Binary file (PDF, 283 KB)",
+    "function": "convert_docx_to_pdf"
+  },
+  "developer-guide/loading-documents/load-file-from-stream#code-example-1": {
+    "type": "file",
+    "file": "annual-review.pdf",
+    "path": "developer-guide/loading-documents/load-file-from-stream/load_file_from_stream/annual-review.pdf",
+    "preview": "Binary file (PDF, 2.9 MB)",
+    "function": "load_file_from_stream"
+  },
+  "developer-guide/loading-documents/load-file-from-stream#code-example-2": {
+    "type": "file",
+    "file": "annual-review.pdf",
+    "path": "developer-guide/loading-documents/load-file-from-stream/detect_file_type_automatically/annual-review.pdf",
+    "preview": "Binary file (PDF, 2.9 MB)",
+    "function": "detect_file_type_automatically"
+  },
+  "developer-guide/loading-documents/load-password-protected-file#code-example": {
+    "type": "file",
+    "file": "password-protected.pdf",
+    "path": "developer-guide/loading-documents/load-password-protected-file/load_password_protected_file/password-protected.pdf",
+    "preview": "Binary file (PDF, 234 KB)",
+    "function": "load_password_protected_file"
+  },
+  "developer-guide/logging-and-diagnostics#code-example-1": {
+    "type": "file",
+    "file": "business-plan.pdf",
+    "path": "developer-guide/logging-and-diagnostics/write_logs_to_console/business-plan.pdf",
+    "preview": "Binary file (PDF, 283 KB)",
+    "function": "write_logs_to_console"
+  },
+  "developer-guide/logging-and-diagnostics#code-example-2": {
+    "type": "file",
+    "file": "business-plan.pdf",
+    "path": "developer-guide/logging-and-diagnostics/write_logs_to_file/business-plan.pdf",
+    "preview": "Binary file (PDF, 283 KB)",
+    "function": "write_logs_to_file"
+  },
+  "getting-started/quick-start-guide#demo_app_convert_docx_to_pdf": {
+    "type": "file",
+    "file": "business-plan.pdf",
+    "path": "getting-started/quick-start-guide/convert_docx_to_pdf/business-plan.pdf",
+    "preview": "Binary file (PDF, 283 KB)",
+    "function": "convert_docx_to_pdf"
+  },
+  "getting-started/quick-start-guide#demo_app_convert_pdf_pages_to_png": {
+    "type": "zip",
+    "file": "convert-pdf-pages-to-png-outputs.zip",
+    "path": "getting-started/quick-start-guide/convert_pdf_pages_to_png/convert-pdf-pages-to-png-outputs.zip",
+    "contents": [
+      "converted-pages\\converted-page-1.png",
+      "converted-pages\\converted-page-2.png",
+      "converted-pages\\converted-page-3.png"
+    ],
+    "preview": "converted-pages/converted-page-1.png (1148 KB)\nconverted-pages/converted-page-2.png (89 KB)\nconverted-pages/converted-page-3.png (83 KB)",
+    "function": "convert_pdf_pages_to_png"
+  },
+  "getting-started/quick-start-guide#demo_app_convert_files_in_archive": {
+    "type": "file",
+    "file": "converted.pdf",
+    "path": "getting-started/quick-start-guide/convert_files_in_archive/converted.pdf",
+    "preview": "Binary file (PDF, 283 KB)",
+    "function": "convert_files_in_archive"
+  },
+  "product-overview#quick-example": {
+    "type": "file",
+    "file": "business-plan.pdf",
+    "path": "product-overview/quick_example/business-plan.pdf",
+    "preview": "Binary file (PDF, 283 KB)",
+    "function": "quick_example"
+  }
+}

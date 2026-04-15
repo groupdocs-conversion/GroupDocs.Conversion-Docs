@@ -1,10 +1,11 @@
 ---
-id: licensing
-url: conversion/python-net/licensing
-title: Licensing 
-weight: 5
-description: GroupDocs.Conversion for Python via .NET free conversion API version is available to evaluate the API which will be similar to licensed version but with few limitations.
-keywords: free conversion, license, conversion, API
+id: licensing-and-subscription
+url: conversion/python-net/licensing-and-subscription
+title: Licensing
+linkTitle: Licensing
+weight: 6
+description: "Evaluate, apply, and manage licenses for GroupDocs.Conversion for Python via .NET — free trial with limitations, 30-day temporary license, file and stream license loading, and metered licensing."
+keywords: license, licensing, free trial, temporary license, metered license, GROUPDOCS_LIC_PATH, set license from file, set license from stream, evaluation limitations, GroupDocs.Conversion
 productName: GroupDocs.Conversion for Python via .NET
 hideChildren: False
 toc: True
@@ -66,6 +67,11 @@ set GROUPDOCS_LIC_PATH "C:\path\to\your\license\file.lic"
 $env:GROUPDOCS_LIC_PATH="C:\path\to\your\license\file.lic"
 ```
 {{< /tab >}}
+{{< tab "Linux" >}}
+```bash
+export GROUPDOCS_LIC_PATH="/path/to/your/license/file.lic"
+```
+{{< /tab >}}
 {{< tab "macOS" >}}
 ```bash
 export GROUPDOCS_LIC_PATH="/path/to/your/license/file.lic"
@@ -81,7 +87,7 @@ GroupDocs.Conversion can also read a license from the project’s root directory
 📂 my-app
  ├──app.py
  ├──source.docx
- ├──groupdocs_conversion_net-24.12-py3-none-*.whl
+ ├──groupdocs_conversion_net-26.3-py3-none-*.whl
  └──GroupDocs.Conversion.PythonViaNET.lic
 ```
 

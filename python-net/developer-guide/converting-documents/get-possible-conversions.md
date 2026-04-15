@@ -2,9 +2,10 @@
 id: get-possible-conversions
 url: conversion/python-net/developer-guide/converting-documents/get-possible-conversions
 title: Get Possible Conversions
+linkTitle: Get Possible Conversions
 weight: 1
-description: "This article demonstrates how to get possible conversions for a file type using GroupDocs.Conversion for Python via .NET API."
-keywords: Get possible conversions, Conversions list
+description: "Query GroupDocs.Conversion for Python via .NET for the set of target formats a given source supports — library-wide, by extension, or for the document currently loaded — via get_all_possible_conversions, get_possible_conversions_by_extension, and get_possible_conversions."
+keywords: possible conversions, get_all_possible_conversions, get_possible_conversions_by_extension, get_possible_conversions, primary conversion, secondary conversion, target format, conversion discovery, GroupDocs.Conversion, python
 productName: GroupDocs.Conversion for Python via .NET
 hideChildren: False
 toc: True
@@ -799,6 +800,18 @@ if __name__ == "__main__":
 
 </details>
 {{< /tab >}}
+{{< tab "get-all-possible-conversions.txt" >}}  
+```text
+**Source format** : MP3 Audio File (mp3)
+  - **Primary conversions**: [<NetObject handle=243>, <NetObject handle=244>, <NetObject handle=245>, <NetObject handle=246>, <NetObject handle=247>, <NetObject handle=248>, <NetObject handle=249>, <NetObject handle=250>, <NetObject handle=251>]
+  - **Secondary conversions**: []
+
+ **Source format** : Advanced Audio Coding File (aac)
+  - **Primary conversions**: [<NetObject handle=273>, <NetObject handle=274>, <NetObject handle=275>, <NetObject handle=276>
+[TRUNCATED]
+```
+[Download full output](/conversion/python-net/_output_files/developer-guide/converting-documents/get-possible-conversions/get_all_possible_conversions/get-all-possible-conversions.txt)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Example 2: Get Possible Conversions by File Extension
@@ -833,6 +846,14 @@ if __name__ == "__main__":
  **Source format**: Microsoft Word Open XML Document (docx)
  - **Primary conversions**: [epub, mobi, azw3, tiff, tif, jpg, jpeg, png, gif, bmp, ico, psd, wmf, emf, dcm, dicom, webp, jp2, j2k, emz, wmz, svgz, tga, psb, jfif, eps, xps, tex, ps, pcl, svg, pdf, ppt, pps, pptx, ppsx, odp, otp, potx, pot, potm, pptm, ppsm, fodp, htm, html, mhtml, mht, doc, docm, docx, dot, dotm, dotx, rtf, odt, ott, txt, md]
  - **Secondary conversions**: [xls, xlsx, xlsm, xlsb, ods, xltx, xlt, xltm, tsv, xlam, csv, fods, dif, sxc]
+{{< /tab >}}
+{{< tab "get-all-possible-conversions-by-file-extension.txt" >}}  
+```text
+**Source format**: Microsoft Word Open XML Document (docx)
+  - **Primary conversions**: [<NetObject handle=40540>, <NetObject handle=40541>, <NetObject handle=40542>, <NetObject handle=40543>, <NetObject handle=40544>, <NetObject handle=40545>, <NetObject handle=40546>, <NetObject handle=40547>, <NetObject handle=40548>, <NetObject handle=40549>, <NetObject handle=40550>, <NetObject handle=40551>, <NetObject handle=40552>, <NetObject handle=40553>, <NetObject handle=40554>, <NetObject handle=405
+[TRUNCATED]
+```
+[Download full output](/conversion/python-net/_output_files/developer-guide/converting-documents/get-possible-conversions/get_all_possible_conversions_by_file_extension/get-all-possible-conversions-by-file-extension.txt)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -870,8 +891,12 @@ if __name__ == "__main__":
  - **Primary conversions**: [epub, mobi, azw3, eps, xps, tex, ps, pcl, pdf, xls, xlsx, xlsm, xlsb, ods, xltx, xlt, xltm, tsv, xlam, csv, fods, dif, sxc, htm, html, mhtml, mht, json, xml]
   - **Secondary conversions**: [tiff, tif, jpg, jpeg, png, gif, bmp, ico, psd, wmf, emf, dcm, dicom, webp, jp2, j2k, emz, wmz, svgz, tga, psb, jfif, svg, ppt, pps, pptx, ppsx, odp, otp, potx, pot, potm, pptm, ppsm, fodp, doc, docm, docx, dot, dotm, dotx, rtf, odt, ott, txt, md]
 {{< /tab >}}
-{{< tab "cost-analysis.xlsx" >}}  
-{{< tab-text >}}
-`cost-analysis.xlsx` is the sample file used in this example. Click [here](/conversion/python-net/_sample_files/developer-guide/converting-documents/get-possible-conversions/cost-analysis.xlsx) to download it.
-{{< /tab-text >}}
+{{< tab "get-all-possible-conversions-current-file.txt" >}}  
+```text
+**Source format**: Microsoft Excel Open XML Spreadsheet (xlsx)
+  - **Primary conversions**: [<NetObject handle=40772>, <NetObject handle=40773>, <NetObject handle=40774>, <NetObject handle=40775>, <NetObject handle=40776>, <NetObject handle=40777>, <NetObject handle=40778>, <NetObject handle=40779>, <NetObject handle=40780>, <NetObject handle=40781>, <NetObject handle=40782>, <NetObject handle=40783>, <NetObject handle=40784>, <NetObject handle=40785>, <NetObject handle=40786>, <NetObject handle
+[TRUNCATED]
+```
+[Download full output](/conversion/python-net/_output_files/developer-guide/converting-documents/get-possible-conversions/get_all_possible_conversions_for_current_file/get-all-possible-conversions-current-file.txt)
+{{< /tab >}}
 {{< /tabs >}}

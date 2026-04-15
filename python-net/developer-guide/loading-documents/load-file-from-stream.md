@@ -2,11 +2,13 @@
 id: load-file-from-stream
 url: conversion/python-net/developer-guide/loading-documents/load-file-from-stream
 title: Load File From Stream
+linkTitle: Load From Stream
 weight: 3
-description: "This article demonstrates how to convert a file from a stream using GroupDocs.Conversion for Python via .NET API."
-keywords: convert file from stream, convert file
+description: "Pass any Python file-like object — open() handle, io.BytesIO, boto3/azure-blob/requests response body — to the Converter constructor to convert documents directly from memory or cloud storage without touching the local filesystem."
+keywords: load from stream, file stream, BytesIO, cloud storage, S3, Azure Blob, boto3, requests, detect file type, automatic format detection, Converter constructor, GroupDocs.Conversion, python
 productName: GroupDocs.Conversion for Python via .NET
 hideChildren: False
+toc: True
 ---
 
 To load a source file from a stream, you can use the `Converter` class constructor in GroupDocs.Conversion. The API provides several overloads to accommodate different settings and options:
@@ -72,9 +74,10 @@ if __name__ == "__main__":
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "annual-review.pdf" >}}  
-{{< tab-text >}}
-`annual-review.pdf` is converted PDF document. Click [here](/conversion/python-net/_sample_files/developer-guide/loading-documents/load-file-from-stream/annual-review.pdf) to download it.
-{{< /tab-text >}}
+```text
+Binary file (PDF, 2.9 MB)
+```
+[Download full output](/conversion/python-net/_output_files/developer-guide/loading-documents/load-file-from-stream/load_file_from_stream/annual-review.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -131,9 +134,10 @@ if __name__ == "__main__":
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "annual-review.pdf" >}}  
-{{< tab-text >}}
-`annual-review.pdf` is converted PDF document. Click [here](/conversion/python-net/_sample_files/developer-guide/loading-documents/load-file-from-stream/annual-review.pdf) to download it.
-{{< /tab-text >}}
+```text
+Binary file (PDF, 2.9 MB)
+```
+[Download full output](/conversion/python-net/_output_files/developer-guide/loading-documents/load-file-from-stream/detect_file_type_automatically/annual-review.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

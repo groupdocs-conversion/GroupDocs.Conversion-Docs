@@ -2,9 +2,10 @@
 id: load-password-protected-file
 url: conversion/python-net/developer-guide/loading-documents/load-password-protected-file
 title: Load Password-Protected File
+linkTitle: Load Password-Protected File
 weight: 4
-description: "Learn how to load and convert password-protected documents using the GroupDocs.Conversion for Python via .NET API, enabling seamless handling of secured files."
-keywords: password-protected document, load and convert protected documents, convert document with password, secure document conversion
+description: "Unlock and convert password-protected Word, Excel, PowerPoint, and PDF documents by passing a LoadOptions instance with the password attribute to the Converter constructor in GroupDocs.Conversion for Python via .NET."
+keywords: password-protected document, password, WordProcessingLoadOptions, PdfLoadOptions, SpreadsheetLoadOptions, PresentationLoadOptions, encrypted document, secure conversion, IncorrectPasswordException, GroupDocs.Conversion, python
 productName: GroupDocs.Conversion for Python via .NET
 hideChildren: False
 ---
@@ -50,9 +51,10 @@ if __name__ == "__main__":
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "password-protected.pdf" >}}  
-{{< tab-text >}}
-`password-protected.pdf` is converted PDF document. Click [here](/conversion/python-net/_sample_files/developer-guide/loading-documents/load-password-protected-file/password-protected.pdf) to download it. The file is password-protected. Password is `67890`.
-{{< /tab-text >}}
+```text
+Binary file (PDF, 234 KB)
+```
+[Download full output](/conversion/python-net/_output_files/developer-guide/loading-documents/load-password-protected-file/load_password_protected_file/password-protected.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

@@ -2,9 +2,10 @@
 id: convert-document-to-another-format
 url: conversion/python-net/developer-guide/converting-documents/convert-document-to-another-format
 title: Convert a Document to Another Format
+linkTitle: Convert to Another Format
 weight: 2
-description: "Learn how to convert a single document to another format using GroupDocs.Conversion for Python via .NET."
-keywords: Convert document, Convert single document
+description: "Convert a single document from one format to another, optionally selecting specific pages or a page range using the pages / page_number / pages_count attributes on ConvertOptions with GroupDocs.Conversion for Python via .NET."
+keywords: convert document, convert format, DOCX to PDF, DOCX to TXT, convert specific pages, page range, pages, page_number, pages_count, PdfConvertOptions, WordProcessingConvertOptions, GroupDocs.Conversion, python
 productName: GroupDocs.Conversion for Python via .NET
 hideChildren: false
 toc: true
@@ -32,23 +33,23 @@ To convert and save a document, use the following `Converter` class methods:
 
 The following list of `ConvertOptions` classes can be used to convert a document to a specific single output format:
 
-- **PdfConvertOptions** – Options for converting to [PDF]({{< ref "conversion/python-net/supported-file-formats#pdf" >}}) format.
-- **WordProcessingConvertOptions** – Options for converting to [Word Processing]({{< ref "conversion/python-net/supported-file-formats#word-processing" >}}) formats.
-- **SpreadsheetConvertOptions** – Options for converting to [Spreadsheet]({{< ref "conversion/python-net/supported-file-formats#spreadsheet" >}}) formats.
-- **PresentationConvertOptions** – Options for converting to [Presentation]({{< ref "conversion/python-net/supported-file-formats#presentation" >}}) formats.
-- **ImageConvertOptions** – Options for converting to [Image]({{< ref "conversion/python-net/supported-file-formats#image" >}}) formats (e.g., PNG, JPEG).
-- **WebConvertOptions** – Options for converting to [Web]({{< ref "conversion/python-net/supported-file-formats#web" >}}) formats (e.g., HTML).
-- **PageDescriptionLanguageConvertOptions** – Options for converting to [Page Description Language]({{< ref "conversion/python-net/supported-file-formats#page-description-language" >}}) formats (e.g., PostScript).
-- **EBookConvertOptions** – Options for converting to [EBook]({{< ref "conversion/python-net/supported-file-formats#ebook" >}}) formats (e.g., EPUB, MOBI).
-- **EmailConvertOptions** – Options for converting to [Email]({{< ref "conversion/python-net/supported-file-formats#email-and-outlook" >}}) formats (e.g., EML, MSG).
-- **DiagramConvertOptions** – Options for converting to [Diagram]({{< ref "conversion/python-net/supported-file-formats#diagram" >}}) formats (e.g., VSDX).
-- **CadConvertOptions** – Options for converting to [CAD]({{< ref "conversion/python-net/supported-file-formats#cad" >}}) formats (e.g., DWG).
-- **ThreeDConvertOptions** – Options for converting to [3D]({{< ref "conversion/python-net/supported-file-formats#3d" >}}) formats.
-- **ProjectManagementConvertOptions** – Options for converting to [Project Management]({{< ref "conversion/python-net/supported-file-formats#project-management" >}}) formats (e.g., MPP).
-- **GisConvertOptions** – Options for converting to [GIS]({{< ref "conversion/python-net/supported-file-formats#gis" >}}) formats.
-- **FontConvertOptions** – Options for converting to [Font]({{< ref "conversion/python-net/supported-file-formats#font" >}}) formats (e.g., TTF, OTF).
-- **FinanceConvertOptions** – Options for converting to [Finance]({{< ref "conversion/python-net/supported-file-formats#finance" >}}) formats (e.g., XBRL).
-- **CompressionConvertOptions** – Options for converting to [Compression]({{< ref "conversion/python-net/supported-file-formats#compression" >}}) formats (e.g., ZIP).
+- **PdfConvertOptions** – Options for converting to [PDF]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#pdf" >}}) format.
+- **WordProcessingConvertOptions** – Options for converting to [Word Processing]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#word-processing" >}}) formats.
+- **SpreadsheetConvertOptions** – Options for converting to [Spreadsheet]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#spreadsheet" >}}) formats.
+- **PresentationConvertOptions** – Options for converting to [Presentation]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#presentation" >}}) formats.
+- **ImageConvertOptions** – Options for converting to [Image]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#image" >}}) formats (e.g., PNG, JPEG).
+- **WebConvertOptions** – Options for converting to [Web]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#web" >}}) formats (e.g., HTML).
+- **PageDescriptionLanguageConvertOptions** – Options for converting to [Page Description Language]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#page-description-language" >}}) formats (e.g., PostScript).
+- **EBookConvertOptions** – Options for converting to [EBook]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#ebook" >}}) formats (e.g., EPUB, MOBI).
+- **EmailConvertOptions** – Options for converting to [Email]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#email-and-outlook" >}}) formats (e.g., EML, MSG).
+- **DiagramConvertOptions** – Options for converting to [Diagram]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#diagram" >}}) formats (e.g., VSDX).
+- **CadConvertOptions** – Options for converting to [CAD]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#cad" >}}) formats (e.g., DWG).
+- **ThreeDConvertOptions** – Options for converting to [3D]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#3d" >}}) formats.
+- **ProjectManagementConvertOptions** – Options for converting to [Project Management]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#project-management" >}}) formats (e.g., MPP).
+- **GisConvertOptions** – Options for converting to [GIS]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#gis" >}}) formats.
+- **FontConvertOptions** – Options for converting to [Font]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#font" >}}) formats (e.g., TTF, OTF).
+- **FinanceConvertOptions** – Options for converting to [Finance]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#finance" >}}) formats (e.g., XBRL).
+- **CompressionConvertOptions** – Options for converting to [Compression]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#compression" >}}) formats (e.g., ZIP).
 - **NoConvertOptions** – A special option class that instructs the converter to copy the source document without any modifications.
 
 ### Example 1: Convert a Document to Another Format
@@ -80,9 +81,10 @@ if __name__ == "__main__":
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "business-plan.pdf" >}}  
-{{< tab-text >}}
-`business-plan.pdf` is the expected output PDF file. Click [here](/conversion/python-net/_sample_files/developer-guide/converting-documents/convert-document-to-another-format/business-plan.pdf) to download it.
-{{< /tab-text >}}
+```text
+Binary file (PDF, 283 KB)
+```
+[Download full output](/conversion/python-net/_output_files/developer-guide/converting-documents/convert-document-to-another-format/convert_document_to_another_format/business-plan.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -120,9 +122,20 @@ if __name__ == "__main__":
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "business-plan.txt" >}}  
-{{< tab-text >}}
-`business-plan.txt` is the expected output TXT file. Click [here](/conversion/python-net/_sample_files/developer-guide/converting-documents/convert-document-to-another-format/business-plan.txt) to download it.
-{{< /tab-text >}}
+```text
+﻿HOME BASED
+
+
+
+PROFESSIONAL SERVICES
+
+Business Plan
+
+
+
+[TRUNCATED]
+```
+[Download full output](/conversion/python-net/_output_files/developer-guide/converting-documents/convert-document-to-another-format/specify_output_format/business-plan.txt)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -132,18 +145,18 @@ if __name__ == "__main__":
 
 To convert specific document pages, you can use the following `ConvertOptions` classes, which provide `pages`, `page_number`, and `pages_count` attributes. These options allow you to specify individual pages or a range of pages to convert.
 
-- **PdfConvertOptions** – Options for converting to [PDF]({{< ref "conversion/python-net/supported-file-formats#pdf" >}}) format.
-- **ImageConvertOptions** – Options for converting to [Image]({{< ref "conversion/python-net/supported-file-formats#image" >}}) formats (e.g., PNG, JPEG).
-- **WordProcessingConvertOptions** – Options for converting to [Word Processing]({{< ref "conversion/python-net/supported-file-formats#word-processing" >}}) formats.
-- **SpreadsheetConvertOptions** – Options for converting to [Spreadsheet]({{< ref "conversion/python-net/supported-file-formats#spreadsheet" >}}) formats.
-- **PresentationConvertOptions** – Options for converting to [Presentation]({{< ref "conversion/python-net/supported-file-formats#presentation" >}}) formats.
-- **WebConvertOptions** – Options for converting to [Web]({{< ref "conversion/python-net/supported-file-formats#web" >}}) formats (e.g., HTML).
-- **EBookConvertOptions** – Options for converting to [EBook]({{< ref "conversion/python-net/supported-file-formats#ebook" >}}) formats (e.g., EPUB, MOBI).
-- **DiagramConvertOptions** – Options for converting to [Diagram]({{< ref "conversion/python-net/supported-file-formats#diagram" >}}) formats (e.g., VSDX).
-- **PageDescriptionLanguageConvertOptions** – Options for converting to [Page Description Language]({{< ref "conversion/python-net/supported-file-formats#page-description-language" >}}) formats (e.g., PostScript).
-- **CadConvertOptions** – Options for converting to [CAD]({{< ref "conversion/python-net/supported-file-formats#cad" >}}) formats (e.g., DWG).
-- **ThreeDConvertOptions** – Options for converting to [3D]({{< ref "conversion/python-net/supported-file-formats#3d" >}}) formats.
-- **FinanceConvertOptions** – Options for converting to [Finance]({{< ref "conversion/python-net/supported-file-formats#finance" >}}) formats (e.g., XBRL).
+- **PdfConvertOptions** – Options for converting to [PDF]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#pdf" >}}) format.
+- **ImageConvertOptions** – Options for converting to [Image]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#image" >}}) formats (e.g., PNG, JPEG).
+- **WordProcessingConvertOptions** – Options for converting to [Word Processing]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#word-processing" >}}) formats.
+- **SpreadsheetConvertOptions** – Options for converting to [Spreadsheet]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#spreadsheet" >}}) formats.
+- **PresentationConvertOptions** – Options for converting to [Presentation]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#presentation" >}}) formats.
+- **WebConvertOptions** – Options for converting to [Web]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#web" >}}) formats (e.g., HTML).
+- **EBookConvertOptions** – Options for converting to [EBook]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#ebook" >}}) formats (e.g., EPUB, MOBI).
+- **DiagramConvertOptions** – Options for converting to [Diagram]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#diagram" >}}) formats (e.g., VSDX).
+- **PageDescriptionLanguageConvertOptions** – Options for converting to [Page Description Language]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#page-description-language" >}}) formats (e.g., PostScript).
+- **CadConvertOptions** – Options for converting to [CAD]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#cad" >}}) formats (e.g., DWG).
+- **ThreeDConvertOptions** – Options for converting to [3D]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#3d" >}}) formats.
+- **FinanceConvertOptions** – Options for converting to [Finance]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#finance" >}}) formats (e.g., XBRL).
 
 ### Example 1: Convert Specific Document Pages to Another Format
 
@@ -176,9 +189,10 @@ if __name__ == "__main__":
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "pages-1-3-5.pdf" >}}  
-{{< tab-text >}}
-`pages-1-3-5.pdf` is the expected output PDF file. Click [here](/conversion/python-net/_sample_files/developer-guide/converting-documents/convert-document-to-another-format/pages-1-3-5.pdf) to download it.
-{{< /tab-text >}}
+```text
+Binary file (PDF, 156 KB)
+```
+[Download full output](/conversion/python-net/_output_files/developer-guide/converting-documents/convert-document-to-another-format/convert_specific_document_pages/pages-1-3-5.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -214,9 +228,10 @@ if __name__ == "__main__":
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "pages-1-through-5.pdf" >}}  
-{{< tab-text >}}
-pages-1-through-5.pdf` is the expected output PDF file. Click [here](/conversion/python-net/_sample_files/developer-guide/converting-documents/convert-document-to-another-format/pages-1-through-5.pdf) to download it.
-{{< /tab-text >}}
+```text
+Binary file (PDF, 216 KB)
+```
+[Download full output](/conversion/python-net/_output_files/developer-guide/converting-documents/convert-document-to-another-format/convert_consecutive_document_pages/pages-1-through-5.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

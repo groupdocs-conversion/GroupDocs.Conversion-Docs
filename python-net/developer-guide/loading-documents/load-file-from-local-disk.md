@@ -2,9 +2,10 @@
 id: load-file-from-local-disk
 url: conversion/python-net/developer-guide/loading-documents/load-file-from-local-disk
 title: Load File From Local Disk
+linkTitle: Load From Local Disk
 weight: 2
-description: "This article demonstrates how to convert a file stored on a local disk using GroupDocs.Conversion for Python via .NET API."
-keywords: Convert file from local disk, Convert file
+description: "Instantiate the Converter class with an absolute or relative file path to convert a document stored on the local filesystem with GroupDocs.Conversion for Python via .NET."
+keywords: load from local disk, file path, Converter constructor, load file, local filesystem, GroupDocs.Conversion, python
 productName: GroupDocs.Conversion for Python via .NET
 hideChildren: False
 ---
@@ -51,9 +52,10 @@ if __name__ == "__main__":
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "business-plan.pdf" >}}  
-{{< tab-text >}}
-`business-plan.pdf` is converted PDF document. Click [here](/conversion/python-net/_sample_files/developer-guide/loading-documents/load-file-from-local-disk/business-plan.pdf) to download it.
-{{< /tab-text >}}
+```text
+Binary file (PDF, 283 KB)
+```
+[Download full output](/conversion/python-net/_output_files/developer-guide/loading-documents/load-file-from-local-disk/convert_docx_to_pdf/business-plan.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

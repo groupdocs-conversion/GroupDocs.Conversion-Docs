@@ -4,8 +4,8 @@ url: conversion/python-net/developer-guide/loading-documents/get-default-load-op
 linkTitle: Get Default Load Options
 title: Get Default Load Options
 weight: 1
-description: "Learn how to retrieve default load options for a source format using GroupDocs.Conversion for Python via .NET."
-keywords: Default load options, Load options, GroupDocs.Conversion for Python
+description: "Retrieve the default LoadOptions instance for a specific file extension with Converter.get_possible_conversions_by_extension() — a starting point for customising format-specific load settings at runtime in GroupDocs.Conversion for Python via .NET."
+keywords: default load options, LoadOptions, get_possible_conversions_by_extension, WordProcessingLoadOptions, format-specific settings, runtime configuration, GroupDocs.Conversion, python
 productName: GroupDocs.Conversion for Python via .NET
 hideChildren: False
 ---

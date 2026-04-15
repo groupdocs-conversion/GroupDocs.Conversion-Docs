@@ -2,9 +2,10 @@
 id: developer-guide
 url: conversion/python-net/developer-guide
 title: Developer Guide
+linkTitle: Developer Guide
 weight: 4
-description: "This section describes how to get started with GroupDocs.Conversion for Python via .NET library in order to convert files"
-keywords: convert files, conversion
+description: "Step-by-step code examples for loading documents, converting between formats, inspecting metadata, watermarking, page selection, and logging with GroupDocs.Conversion for Python via .NET. Every example is runnable in the companion GitHub repository."
+keywords: developer guide, code examples, load document, convert document, get document info, watermark, page range, logging, python, GroupDocs.Conversion
 productName: GroupDocs.Conversion for Python via .NET
 hideChildren: True
 toc: True
@@ -16,7 +17,7 @@ Welcome to the Developer Guide for GroupDocs.Conversion for Python via .NET. Thi
 
 Before proceeding, please review the following topics:
 
-* [System Requirements]({{< ref "conversion/python-net/system-requirements" >}}): Covers the specifications for your system.
+* [System Requirements]({{< ref "conversion/python-net/getting-started/system-requirements.md" >}}): Covers the specifications for your system.
 * [Installation]({{< ref "conversion/python-net/getting-started/installation" >}}): Provides installation options and instructions.
 
 We recommend to [get a Temporary License](https://purchase.groupdocs.com/temporary-license/) to test all the product features.
@@ -52,8 +53,13 @@ Create a virtual environment:
 py -m venv .venv
 ```
 {{< /tab >}}
+{{< tab "Linux" >}}
+```bash
+python3 -m venv .venv
+```
+{{< /tab >}}
 {{< tab "macOS" >}}
-```ps
+```bash
 python3 -m venv .venv
 ```
 {{< /tab >}}
@@ -67,8 +73,13 @@ Activate the virtual environment:
 .venv\Scripts\activate
 ```
 {{< /tab >}}
+{{< tab "Linux" >}}
+```bash
+source .venv/bin/activate
+```
+{{< /tab >}}
 {{< tab "macOS" >}}
-```ps
+```bash
 source .venv/bin/activate
 ```
 {{< /tab >}}
@@ -82,6 +93,11 @@ To install the package, open a terminal and run the following command:
 {{< tab "Windows" >}}
 ```ps
 py -m pip install groupdocs-conversion-net
+```
+{{< /tab >}}
+{{< tab "Linux" >}}
+```bash
+python3 -m pip install groupdocs-conversion-net
 ```
 {{< /tab >}}
 {{< tab "macOS" >}}
@@ -104,6 +120,11 @@ set GROUPDOCS_LIC_PATH "C:\path\to\your\license\file.lic"
 {{< tab "Windows (Powershell)" >}}
 ```ps
 $env:GROUPDOCS_LIC_PATH="C:\path\to\your\license\file.lic"
+```
+{{< /tab >}}
+{{< tab "Linux" >}}
+```bash
+export GROUPDOCS_LIC_PATH="/path/to/your/license/file.lic"
 ```
 {{< /tab >}}
 {{< tab "macOS" >}}
@@ -150,8 +171,13 @@ In your terminal, run the following command:
 py convert_to_pdf.py
 ```
 {{< /tab >}}
+{{< tab "Linux" >}}
+```bash
+python3 convert_to_pdf.py
+```
+{{< /tab >}}
 {{< tab "macOS" >}}
-```ps
+```bash
 python3 convert_to_pdf.py
 ```
 {{< /tab >}}

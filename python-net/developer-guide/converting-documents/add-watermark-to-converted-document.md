@@ -2,9 +2,10 @@
 id: add-watermark-to-converted-document
 url: conversion/python-net/developer-guide/converting-documents/add-watermark-to-converted-document
 title: Add a Watermark to Converted Document
+linkTitle: Add a Watermark
 weight: 5
-description: "Learn how to add a watermark to a document after converting it to another format using GroupDocs.Conversion for Python via .NET."
-keywords: Add watermark, Watermark converted document, Document watermarking, GroupDocs.Conversion
+description: "Stamp a text watermark on every page of a converted document with GroupDocs.Conversion for Python via .NET — control colour, size, position, rotation, transparency, and foreground or background placement via WatermarkTextOptions."
+keywords: watermark, text watermark, WatermarkTextOptions, add watermark, protect document, colour, rotation, transparency, background watermark, PdfConvertOptions, GroupDocs.Conversion, python
 productName: GroupDocs.Conversion for Python via .NET
 hideChildren: false
 toc: true
@@ -22,15 +23,15 @@ Looking for advanced watermarking capabilities? While GroupDocs.Conversion offer
 
 The following `ConvertOptions` classes that provide `watermark` attribute.
 
-- **PdfConvertOptions** – Options for converting to [PDF]({{< ref "conversion/python-net/supported-file-formats#pdf" >}}) format.
-- **WordProcessingConvertOptions** – Options for converting to [Word Processing]({{< ref "conversion/python-net/supported-file-formats#word-processing" >}}) formats.
-- **SpreadsheetConvertOptions** – Options for converting to [Spreadsheet]({{< ref "conversion/python-net/supported-file-formats#spreadsheet" >}}) formats.
-- **PresentationConvertOptions** – Options for converting to [Presentation]({{< ref "conversion/python-net/supported-file-formats#presentation" >}}) formats.
-- **ImageConvertOptions** – Options for converting to [Image]({{< ref "conversion/python-net/supported-file-formats#image" >}}) formats (e.g., PNG, JPEG).
-- **WebConvertOptions** – Options for converting to [Web]({{< ref "conversion/python-net/supported-file-formats#web" >}}) formats (e.g., HTML).
-- **PageDescriptionLanguageConvertOptions** – Options for converting to [Page Description Language]({{< ref "conversion/python-net/supported-file-formats#page-description-language" >}}) formats (e.g., PostScript).
-- **EBookConvertOptions** – Options for converting to [EBook]({{< ref "conversion/python-net/supported-file-formats#ebook" >}}) formats (e.g., EPUB, MOBI).
-- **DiagramConvertOptions** – Options for converting to [Diagram]({{< ref "conversion/python-net/supported-file-formats#diagram" >}}) formats (e.g., VSDX).
+- **PdfConvertOptions** – Options for converting to [PDF]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#pdf" >}}) format.
+- **WordProcessingConvertOptions** – Options for converting to [Word Processing]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#word-processing" >}}) formats.
+- **SpreadsheetConvertOptions** – Options for converting to [Spreadsheet]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#spreadsheet" >}}) formats.
+- **PresentationConvertOptions** – Options for converting to [Presentation]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#presentation" >}}) formats.
+- **ImageConvertOptions** – Options for converting to [Image]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#image" >}}) formats (e.g., PNG, JPEG).
+- **WebConvertOptions** – Options for converting to [Web]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#web" >}}) formats (e.g., HTML).
+- **PageDescriptionLanguageConvertOptions** – Options for converting to [Page Description Language]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#page-description-language" >}}) formats (e.g., PostScript).
+- **EBookConvertOptions** – Options for converting to [EBook]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#ebook" >}}) formats (e.g., EPUB, MOBI).
+- **DiagramConvertOptions** – Options for converting to [Diagram]({{< ref "conversion/python-net/getting-started/supported-document-formats.md#diagram" >}}) formats (e.g., VSDX).
 
 ## WatermarkTextOptions Class Attributes
 
@@ -87,7 +88,9 @@ if __name__ == "__main__":
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "professional-services.pdf" >}}  
-{{< tab-text >}}
-`professional-services.pdf` is the expected output PDF file. Click [here](/conversion/python-net/_sample_files/developer-guide/converting-documents/add-watermark-to-converted-document/professional-services.pdf) to download it.
-{{< /tab-text >}}
+```text
+Binary file (PDF, 363 KB)
+```
+[Download full output](/conversion/python-net/_output_files/developer-guide/converting-documents/add-watermark-to-converted-document/add_watermark_to_converted_document/professional-services.pdf)
+{{< /tab >}}
 {{< /tabs >}}

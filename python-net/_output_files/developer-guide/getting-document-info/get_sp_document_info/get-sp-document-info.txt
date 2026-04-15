@@ -1,0 +1,8 @@
+Author: GroupDocs
+Creation Date: 2023-02-23T18:52:46.0000000+02:00
+Format: xlsx
+Is Password Protected: False
+Pages Count: 0
+Size, bytes: 78940
+Title: Cost Analysis
+Worksheets Count: 1

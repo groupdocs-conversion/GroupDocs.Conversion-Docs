@@ -1,0 +1,26 @@
+Creation Date: 2026-04-15T18:46:59.2650286Z
+Format: dwg
+Height: 16
+Width: 26
+Size, bytes: 258848
+Layouts:
+ Layout: Model
+ Layout: ISO A1
+Layers:
+ Layer: Text
+ Layer: Viewports
+ Layer: Walls
+ Layer: Stairs
+ Layer: Deck
+ Layer: Cabinetry
+ Layer: Schedules
+ Layer: Appliances
+ Layer: Doors
+ Layer: Power
+ Layer: Lighting
+ Layer: BDRTXT
+ Layer: BRDTITLE
+ Layer: 0
+ Layer: DB - Windows
+ Layer: Defpoints
+ Layer: Dimensions
