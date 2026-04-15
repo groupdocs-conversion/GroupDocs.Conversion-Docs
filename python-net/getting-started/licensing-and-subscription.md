@@ -95,19 +95,25 @@ When you run the application from the `my-app` folder, GroupDocs.Conversion will
 
 ### Set License from a File
 
-The following code demonstrates setting a license from a file:
+The following code demonstrates setting a license from a file. The example guards the call with an `os.path.exists` check so the script fails loudly when the license file is missing instead of raising an opaque runtime error from the .NET layer.
 
 ```python
 import os
 from groupdocs.conversion import License
 
 def set_license_from_file():
-    # Get absolution path to license file
+    # Absolute path to the license file
     license_path = os.path.abspath("./GroupDocs.Conversion.PythonViaNET.lic")
 
-    # Instantiate License and set the license
+    if not os.path.exists(license_path):
+        print(f"License file not found: {license_path}")
+        print("Place a valid .lic file at that path or set GROUPDOCS_LIC_PATH.")
+        return
+
+    # Instantiate License and apply the file
     license = License()
     license.set_license(license_path)
+    print(f"License applied from: {license_path}")
 
 if __name__ == "__main__":
     set_license_from_file()
@@ -115,22 +121,26 @@ if __name__ == "__main__":
 
 ### Set License from a Stream
 
-This example shows how to set a license from a stream:
+This example shows how to set a license from a stream. Same existence guard — if the `.lic` file isn't there, the script exits cleanly with a human-readable message:
 
 ```python
 import os
 from groupdocs.conversion import License
 
 def set_license_from_stream():
-    # Get absolution path to license file
+    # Absolute path to the license file
     license_path = os.path.abspath("./GroupDocs.Conversion.PythonViaNET.lic")
 
-    # Create a readable steam
+    if not os.path.exists(license_path):
+        print(f"License file not found: {license_path}")
+        print("Place a valid .lic file at that path or set GROUPDOCS_LIC_PATH.")
+        return
+
+    # Open the license file as a binary stream and apply it
     with open(license_path, "rb") as license_stream:
-        # Instantiate License and set the license
-        # Instantiate License and set the license
         license = License()
         license.set_license(license_stream)
+        print(f"License applied from stream: {license_path}")
 
 if __name__ == "__main__":
     set_license_from_stream()
@@ -140,27 +150,35 @@ if __name__ == "__main__":
 
 A [Metered License](https://reference.groupdocs.com/conversion/python-net/groupdocs.conversion/metered) is also available as an alternative to a traditional license file. It is a usage-based licensing model that may be more suitable for customers who prefer to be billed based on actual API feature usage. For more information, refer to the [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered).
 
-The following sample demonstrates how to use metered licensing:
+The following sample demonstrates how to use metered licensing. Replace the placeholder `public_key` and `private_key` values with the credentials issued to you — the example guards against the placeholder values and exits with a message if they haven't been edited:
 
 ```python
 from groupdocs.conversion import Metered
 
-def set_metered_license():
-    # Set your public and private keys
-    public_key = "******" 
-    private_key = "******" 
+PLACEHOLDER = "******"
 
-    # Instantiate Metered and set keys
+def set_metered_license():
+    # Set your public and private metered keys
+    public_key = PLACEHOLDER
+    private_key = PLACEHOLDER
+
+    if public_key == PLACEHOLDER or private_key == PLACEHOLDER:
+        print("Metered keys must be set before running this example.")
+        print("Edit public_key and private_key with the credentials from")
+        print("https://purchase.groupdocs.com/ to enable metered licensing.")
+        return
+
+    # Instantiate Metered and apply the keys
     metered = Metered()
     metered.set_metered_key(public_key, private_key)
 
-    # Get a number of MBs processed 
+    # Get number of MBs processed
     mb_processed = metered.get_consumption_quantity()
-    print("MB processed: ", mb_processed)
+    print("MB processed:", mb_processed)
 
-    # Get a number of credits used
+    # Get number of credits used
     credits_used = metered.get_consumption_credit()
-    print("Credits used: ", credits_used)
+    print("Credits used:", credits_used)
 
 if __name__ == "__main__":
     set_metered_license()

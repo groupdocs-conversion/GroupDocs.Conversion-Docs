@@ -81,7 +81,7 @@
     "type": "text",
     "file": "get-all-possible-conversions.txt",
     "path": "developer-guide/converting-documents/get-possible-conversions/get_all_possible_conversions/get-all-possible-conversions.txt",
-    "preview": "**Source format** : MP3 Audio File (mp3)\n  - **Primary conversions**: ['mp3', 'aac', 'aiff', 'flac', 'm4a', 'wma', 'ac3', 'ogg', 'wav']\n  - **Secondary conversions**: []\n\n **Source format** : Advanced Audio Coding File (aac)\n  - **Primary conversions**: ['mp3', 'aac', 'aiff', 'flac', 'm4a', 'wma', 'ac3', 'ogg', 'wav']\n  - **Secondary conversions**: []\n\n **Source format** : Audio Interchange File Format (aiff)\n  - **Primary conversions**: ['mp3', 'aac', 'aiff', 'flac', 'm4a', 'wma', 'ac3', 'ogg',\n[TRUNCATED]",
+    "preview": "Total supported source formats: 208\nShowing the first 3 as a sample.\n\nSource format: MP3 Audio File (mp3)\n  Primary target formats  (9): ['mp3', 'aac', 'aiff', 'flac', 'm4a', 'wma', 'ac3', 'ogg', 'wav']\n  Secondary target formats (0): []\n\nSource format: Advanced Audio Coding File (aac)\n  Primary target formats  (9): ['mp3', 'aac', 'aiff', 'flac', 'm4a', 'wma', 'ac3', 'ogg', 'wav']\n  Secondary target formats (0): []\n[TRUNCATED]",
     "function": "get_all_possible_conversions"
   },
   "developer-guide/converting-documents/get-possible-conversions#example-2": {
@@ -123,14 +123,14 @@
     "type": "text",
     "file": "get-pm-document-info.txt",
     "path": "developer-guide/getting-document-info/get_pm_document_info/get-pm-document-info.txt",
-    "preview": "Creation Date: 2026-04-15T19:59:32.2607191Z\nStart Date: 2017-10-06T09:00:00.0000000Z\nEnd Date: 2017-10-14T18:00:00.0000000Z\nFormat: mpp\nSize, bytes: 236544\nTasks Count: 5",
+    "preview": "Creation Date: 2026-04-15T20:19:14.5231130Z\nStart Date: 2017-10-06T09:00:00.0000000Z\nEnd Date: 2017-10-14T18:00:00.0000000Z\nFormat: mpp\nSize, bytes: 236544\nTasks Count: 5",
     "function": "get_pm_document_info"
   },
   "developer-guide/getting-document-info#code-example-5": {
     "type": "text",
     "file": "get-image-info.txt",
     "path": "developer-guide/getting-document-info/get_image_info/get-image-info.txt",
-    "preview": "Bits per Pixel: 32\nCreation Date: 2026-04-15T19:59:32.6118862Z\nFormat: tiff\nHeight: 2000\nWidth: 1500\nSize, bytes: 1734560",
+    "preview": "Bits per Pixel: 32\nCreation Date: 2026-04-15T20:19:15.4324761Z\nFormat: tiff\nHeight: 2000\nWidth: 1500\nSize, bytes: 1734560",
     "function": "get_image_info"
   },
   "developer-guide/getting-document-info#code-example-6": {
@@ -151,7 +151,7 @@
     "type": "text",
     "file": "get-cad-document-info.txt",
     "path": "developer-guide/getting-document-info/get_cad_document_info/get-cad-document-info.txt",
-    "preview": "Creation Date: 2026-04-15T19:59:34.2065994Z\nFormat: dwg\nHeight: 16\nWidth: 26\nSize, bytes: 258848\nLayouts:\n Layout: Model\n Layout: ISO A1\nLayers:\n Layer: Text\n[TRUNCATED]",
+    "preview": "Creation Date: 2026-04-15T20:19:18.9521534Z\nFormat: dwg\nHeight: 16\nWidth: 26\nSize, bytes: 258848\nLayouts:\n Layout: Model\n Layout: ISO A1\nLayers:\n Layer: Text\n[TRUNCATED]",
     "function": "get_cad_document_info"
   },
   "developer-guide/getting-document-info#code-example-9": {

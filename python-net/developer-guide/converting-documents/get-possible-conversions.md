@@ -30,20 +30,28 @@ The following example demonstrates how to retrieve and display all primary and s
 ```python
 from groupdocs.conversion import Converter
 
+# GroupDocs.Conversion supports 150+ source formats; print the first N
+# to keep the console output readable. Raise or remove the limit to see
+# every source format.
+SAMPLE_LIMIT = 3
+
 def get_all_possible_conversions():
-    # Get all possible conversions
-    all_possible_conversions = Converter.get_all_possible_conversions()
+    # Get all possible conversions for every supported source format
+    all_possible_conversions = list(Converter.get_all_possible_conversions())
 
-    for possible_conversion in all_possible_conversions:
-        # Filter primary conversions (use .extension for a clean string)
-        primary_conversions = [conversion.format.extension for conversion in possible_conversion.all if conversion.is_primary]
-        # Filter secondary conversions
-        secondary_conversions = [conversion.format.extension for conversion in possible_conversion.all if not conversion.is_primary]
+    print(f"Total supported source formats: {len(all_possible_conversions)}")
+    print(f"Showing the first {SAMPLE_LIMIT} as a sample.")
+    print()
 
-        # Print out the source format and its conversions
-        print(f" **Source format** : {possible_conversion.source.description}")
-        print(f"  - **Primary conversions**: {primary_conversions}")
-        print(f"  - **Secondary conversions**: {secondary_conversions}")
+    for possible_conversion in all_possible_conversions[:SAMPLE_LIMIT]:
+        # Collect primary / secondary target extensions for this source
+        primary_conversions = [c.format.extension for c in possible_conversion.all if c.is_primary]
+        secondary_conversions = [c.format.extension for c in possible_conversion.all if not c.is_primary]
+
+        # Print the source format and its target extensions
+        print(f"Source format: {possible_conversion.source.description}")
+        print(f"  Primary target formats  ({len(primary_conversions)}): {primary_conversions}")
+        print(f"  Secondary target formats ({len(secondary_conversions)}): {secondary_conversions}")
         print()
 
 if __name__ == "__main__":
@@ -52,16 +60,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "get-all-possible-conversions.txt" >}}  
 ```text
-**Source format** : MP3 Audio File (mp3)
-  - **Primary conversions**: ['mp3', 'aac', 'aiff', 'flac', 'm4a', 'wma', 'ac3', 'ogg', 'wav']
-  - **Secondary conversions**: []
+Total supported source formats: 208
+Showing the first 3 as a sample.
 
- **Source format** : Advanced Audio Coding File (aac)
-  - **Primary conversions**: ['mp3', 'aac', 'aiff', 'flac', 'm4a', 'wma', 'ac3', 'ogg', 'wav']
-  - **Secondary conversions**: []
+Source format: MP3 Audio File (mp3)
+  Primary target formats  (9): ['mp3', 'aac', 'aiff', 'flac', 'm4a', 'wma', 'ac3', 'ogg', 'wav']
+  Secondary target formats (0): []
 
- **Source format** : Audio Interchange File Format (aiff)
-  - **Primary conversions**: ['mp3', 'aac', 'aiff', 'flac', 'm4a', 'wma', 'ac3', 'ogg',
+Source format: Advanced Audio Coding File (aac)
+  Primary target formats  (9): ['mp3', 'aac', 'aiff', 'flac', 'm4a', 'wma', 'ac3', 'ogg', 'wav']
+  Secondary target formats (0): []
 [TRUNCATED]
 ```
 [Download full output](/conversion/python-net/_output_files/developer-guide/converting-documents/get-possible-conversions/get_all_possible_conversions/get-all-possible-conversions.txt)
