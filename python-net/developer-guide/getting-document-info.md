@@ -38,14 +38,6 @@ if __name__ == "__main__":
 ```
 {{< /tab >}}
 
-{{< tab "Expected output" >}}  
-```yaml
-Format: txt
-Pages count: 3
-Creation date: 0001-01-01 00:00:00
-Size, bytes: 7794
-```
-{{< /tab >}}
 {{< tab "lorem-ipsum.txt" >}}  
 {{< tab-text >}}
 `lorem-ipsum.txt` is sample file used in this example. Click [here](/conversion/python-net/_sample_files/developer-guide/get-document-info/lorem-ipsum.txt) to download it.
@@ -90,24 +82,6 @@ def get_pdf_document_info():
 
 if __name__ == "__main__":
     get_pdf_document_info()
-```
-{{< /tab >}}
-{{< tab "Expected output" >}}  
-```yaml
-Author: None
-Creation Date: 2020-08-12 16:41:29
-Title: None
-Version: 1.7
-Pages Count: 5
-Width: 612.0
-Height: 792.0
-Is Landscaped: False
-Is Password-Protected: False
-Table of contents:
- Page 1: Title: Page 1 heading!
- Page 2: Title: Page 2 heading!
- Page 3: Title: Page 3 heading!
- Page 4: Title: Page 4 heading!
 ```
 {{< /tab >}}
 {{< tab "sample-with-toc.pdf" >}}  
@@ -166,31 +140,6 @@ if __name__ == "__main__":
     get_wp_document_info()
 ```
 {{< /tab >}}
-{{< tab "Expected output" >}}  
-```yaml
-Author: GroupDocs
-Creation Date: 2024-11-03 10:05:00+00:00
-Format: doc
-Is Password Protected: False
-Lines: 180
-Pages Count: 19
-Size, bytes: 414208
-Title:
-Words: 3789
-Table of contents:
- Page 3: Title: INTRODUCTION
- Page 5: Title: 1. EXECUTIVE SUMMARY
- Page 6: Title: 2. COMPANY OVERVIEW
- Page 7: Title: 3. BUSINESS DESCRIPTION
- Page 8: Title: 4. MARKET ANALYSIS
- Page 10: Title: 5. OPERATING PLAN
- Page 11: Title: 6. MARKETING AND SALES PLAN
- Page 12: Title: 7. FINANCIAL PLAN
- Page 16: Title: APPENDIX
- Page 17: Title: Instructions for Getting Started with Estimated Start-Up Costs
- Page 19: Title: Instructions for Getting Started on Profit & Loss Projections
-```
-{{< /tab >}}
 {{< tab "business-plan.doc" >}}  
 {{< tab-text >}}
 `business-plan.doc` is sample file used in this example. Click [here](/conversion/python-net/_sample_files/developer-guide/get-document-info/business-plan.doc) to download it.
@@ -240,16 +189,6 @@ if __name__ == "__main__":
     get_pm_document_info()
 ```
 {{< /tab >}}
-{{< tab "Expected output" >}}  
-```yaml
-Creation Date: 2024-11-03 10:21:07.846676+00:00
-Start Date: 2017-10-06 09:00:00+00:00
-End Date: 2017-10-14 18:00:00+00:00
-Format: mpp
-Size, bytes: 236544
-Tasks Count: 5
-```
-{{< /tab >}}
 {{< tab "weekly-plan.mpp" >}}  
 {{< tab-text >}}
 `weekly-plan.mpp` is sample file used in this example. Click [here](/conversion/python-net/_sample_files/developer-guide/get-document-info/weekly-plan.mpp) to download it.
@@ -257,7 +196,7 @@ Tasks Count: 5
 {{< /tab >}}
 {{< tab "get-pm-document-info.txt" >}}  
 ```text
-Creation Date: 2026-04-15T18:46:57.5280267Z
+Creation Date: 2026-04-15T19:59:32.2607191Z
 Start Date: 2017-10-06T09:00:00.0000000Z
 End Date: 2017-10-14T18:00:00.0000000Z
 Format: mpp
@@ -294,16 +233,6 @@ if __name__ == "__main__":
     get_image_info()
 ```
 {{< /tab >}}
-{{< tab "Expected output" >}}  
-```yaml
-Bits per Pixel: 32
-Creation Date: 2024-11-03 11:00:45.101493+00:00
-Format: tiff
-Height: 2000
-Width: 1500
-Size, bytes: 1734560
-```
-{{< /tab >}}
 {{< tab "infographic-elements.tiff" >}}  
 {{< tab-text >}}
 `infographic-elements.tiff` is sample file used in this example. Click [here](/conversion/python-net/_sample_files/developer-guide/get-document-info/infographic-elements.tiff) to download it.
@@ -312,7 +241,7 @@ Size, bytes: 1734560
 {{< tab "get-image-info.txt" >}}  
 ```text
 Bits per Pixel: 32
-Creation Date: 2026-04-15T18:46:57.9018225Z
+Creation Date: 2026-04-15T19:59:32.6118862Z
 Format: tiff
 Height: 2000
 Width: 1500
@@ -347,17 +276,6 @@ def get_pres_document_info():
 
 if __name__ == "__main__":
     get_pres_document_info()
-```
-{{< /tab >}}
-{{< tab "Expected output" >}}  
-```yaml
-Author: GroupDocs
-Creation Date: 2023-03-04 14:58:10+00:00
-Format: pptx
-Is Password Protected: False
-Pages Count: 3
-Size, bytes: 35210
-Title: TEST
 ```
 {{< /tab >}}
 {{< tab "presentation-template.pptx" >}}  
@@ -405,18 +323,6 @@ def get_sp_document_info():
 
 if __name__ == "__main__":
     get_sp_document_info()
-```
-{{< /tab >}}
-{{< tab "Expected output" >}}  
-```yaml
-Author: GroupDocs
-Creation Date: 2023-02-23 18:52:46+02:00
-Format: xlsx
-Is Password Protected: False
-Pages Count: 0
-Size, bytes: 78940
-Title: Cost Analysis
-Worksheets Count: 1
 ```
 {{< /tab >}}
 {{< tab "cost-analysis.xlsx" >}}  
@@ -472,36 +378,6 @@ if __name__ == "__main__":
     get_cad_document_info()
 ```
 {{< /tab >}}
-{{< tab "Expected output" >}}  
-```yaml
-Creation Date: 2024-11-03 11:22:09.976267+00:00
-Format: dwg
-Height: 16
-Width: 26
-Size, bytes: 258848
-Layouts:
- Layout: Model
- Layout: ISO A1
-Layers:
- Layer: Text
- Layer: Viewports
- Layer: Walls
- Layer: Stairs
- Layer: Deck
- Layer: Cabinetry
- Layer: Schedules
- Layer: Appliances
- Layer: Doors
- Layer: Power
- Layer: Lighting
- Layer: BDRTXT
- Layer: BRDTITLE
- Layer: 0
- Layer: DB - Windows
- Layer: Defpoints
- Layer: Dimensions
-```
-{{< /tab >}}
 {{< tab "blocks-and-tables.dwg" >}}  
 {{< tab-text >}}
 `blocks-and-tables.dwg` is sample file used in this example. Click [here](/conversion/python-net/_sample_files/developer-guide/get-document-info/blocks-and-tables.dwg) to download it.
@@ -509,7 +385,7 @@ Layers:
 {{< /tab >}}
 {{< tab "get-cad-document-info.txt" >}}  
 ```text
-Creation Date: 2026-04-15T18:46:59.2650286Z
+Creation Date: 2026-04-15T19:59:34.2065994Z
 Format: dwg
 Height: 16
 Width: 26
@@ -553,17 +429,6 @@ def get_email_document_info():
 
 if __name__ == "__main__":
     get_email_document_info()
-```
-{{< /tab >}}
-{{< tab "Expected output" >}}  
-```yaml
-Creation Date: 2017-04-25 11:28:29+00:00
-Format: eml
-Is Encrypted: False
-Is Body in HTML: True
-Is Signed: False
-Size: 91948
-Attachments Count: 0
 ```
 {{< /tab >}}
 {{< tab "invitation.eml" >}}  

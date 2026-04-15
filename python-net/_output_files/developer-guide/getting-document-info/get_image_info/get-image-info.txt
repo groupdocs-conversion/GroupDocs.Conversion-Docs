@@ -1,5 +1,5 @@
 Bits per Pixel: 32
-Creation Date: 2026-04-15T18:46:57.9018225Z
+Creation Date: 2026-04-15T19:59:32.6118862Z
 Format: tiff
 Height: 2000
 Width: 1500

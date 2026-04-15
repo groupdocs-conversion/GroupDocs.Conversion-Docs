@@ -44,20 +44,6 @@ if __name__ == "__main__":
     write_logs_to_console()
 ```
 {{< /tab >}}
-{{< tab "Expected Output" >}}  
-```yaml
-[TRACE] Attempting to read the 'GROUPDOCS_LIC_PATH' environment variable for license file location.
-[TRACE] GroupDocs license has been set successfully.
-[TRACE] Determine loader for source document business-plan.docx ...
-[TRACE] ... loader selected.
-[TRACE] Loading source document business-plan.docx ...
-[TRACE] ... document loaded.
-[TRACE] Main document will be converted.
-[TRACE] Starting conversion of business-plan.docx...
-[TRACE]  ... converter selected ... 
-[TRACE]  ... conversion completed.
-```
-{{< /tab >}}
 {{< tab "business-plan.docx" >}}  
 {{< tab-text >}}
 `business-plan.docx` is the sample file used in this example. Click [here](/conversion/python-net/_sample_files/developer-guide/logging-and-diagnostics/business-plan.docx) to download it.
