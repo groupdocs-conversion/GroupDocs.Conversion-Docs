@@ -191,7 +191,7 @@ Convert between 10,000+ document format pairs -- DOCX, PDF, XLSX, PPTX, images, 
 pip install groupdocs-conversion-net
 ```
 
-**Python**: 3.9 - 3.14 | **Platforms**: Windows, Linux, macOS
+**Python**: 3.5 - 3.14 | **Platforms**: Windows, Linux, macOS
 
 ## Resources
 

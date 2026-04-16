@@ -5,7 +5,7 @@ title: System Requirements
 linkTitle: System Requirements
 weight: 3
 description: "System requirements for GroupDocs.Conversion for Python via .NET — supported operating systems, Python versions, and optional platform dependencies."
-keywords: GroupDocs.Conversion for Python via .NET, system requirements, Windows, Linux, macOS, Python 3.9
+keywords: GroupDocs.Conversion for Python via .NET, system requirements, Windows, Linux, macOS, Python 3.5
 productName: GroupDocs.Conversion for Python via .NET
 hideChildren: false
 toc: true
@@ -35,10 +35,14 @@ GroupDocs.Conversion for Python via .NET runs on Windows, Linux, and macOS. Choo
 
 ## Python Version
 
-GroupDocs.Conversion for Python via .NET supports **Python 3.9 through 3.14**. The wheel uses the `py3-none-{platform}` tag, so the same package works with any supported Python 3.x version without per-version rebuilds.
+GroupDocs.Conversion for Python via .NET supports **Python 3.5 through 3.14**. The wheel uses the `py3-none-{platform}` tag, meaning it works with any Python 3.x version in that range without per-version rebuilds.
 
 | Python Version | Supported |
 | --- | :---: |
+| 3.5  | Yes |
+| 3.6  | Yes |
+| 3.7  | Yes |
+| 3.8  | Yes |
 | 3.9  | Yes |
 | 3.10 | Yes |
 | 3.11 | Yes |
