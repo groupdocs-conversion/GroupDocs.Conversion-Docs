@@ -73,6 +73,7 @@ def add_watermark_to_converted_document():
 
         # Set up the conversion options
         options = PdfConvertOptions()
+        options.pages_count = 1
         options.watermark = watermark
         
         # Perform the conversion
