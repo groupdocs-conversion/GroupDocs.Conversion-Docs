@@ -21,13 +21,13 @@ GroupDocs.Conversion for Python via .NET runs on Windows, Linux, and macOS. Choo
 
 ### Windows
 
-* Microsoft Windows 10 (x64, x86)
+* Microsoft Windows 10 (x64)
 * Microsoft Windows 11 (x64)
 * Microsoft Windows Server 2016 and later
 
 ### Linux
 
-* Ubuntu 20.04+, Debian 11+, CentOS 8+, Fedora 36+, Alpine 3.16+
+* Ubuntu 20.04+, Debian 11+, CentOS 8+, Fedora 36+ (glibc-based distributions)
 
 ### macOS
 
@@ -58,14 +58,12 @@ GroupDocs.Conversion for Python via .NET is distributed via [PyPI](https://pypi.
 pip install groupdocs-conversion-net
 ```
 
-The PyPI index hosts one wheel per platform pair:
+The PyPI index hosts one wheel per platform:
 
 | Platform | Wheel suffix |
 | --- | --- |
 | Windows 64-bit | `py3-none-win_amd64.whl` |
-| Windows 32-bit | `py3-none-win32.whl` |
-| Linux x64 (glibc) | `py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl` |
-| Linux musl (Alpine) | `py3-none-musllinux_1_2_x86_64.whl` |
+| Linux x64 (glibc) | `py3-none-manylinux1_x86_64.whl` |
 | macOS Apple Silicon | `py3-none-macosx_11_0_arm64.whl` |
 | macOS Intel | `py3-none-macosx_10_14_x86_64.whl` |
 

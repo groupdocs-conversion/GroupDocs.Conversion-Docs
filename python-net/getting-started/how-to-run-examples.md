@@ -3,7 +3,7 @@ id: how-to-run-examples
 url: conversion/python-net/how-to-run-examples
 title: How to Run Examples
 linkTitle: How to Run Examples
-weight: 7
+weight: 8
 description: "Clone the GitHub examples repository, install dependencies into a virtual environment, optionally apply a license, and run every documented example end to end — locally, inside Docker, or on GitHub Actions."
 keywords: run examples, examples repository, github, docker, dockerfile, CI, GitHub Actions, venv, virtual environment, run_all_examples, GROUPDOCS_LIC_PATH, GroupDocs.Conversion, python
 productName: GroupDocs.Conversion for Python via .NET

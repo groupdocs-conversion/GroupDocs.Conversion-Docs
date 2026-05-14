@@ -3,7 +3,7 @@ id: licensing-and-subscription
 url: conversion/python-net/licensing-and-subscription
 title: Licensing
 linkTitle: Licensing
-weight: 6
+weight: 7
 description: "Evaluate, apply, and manage licenses for GroupDocs.Conversion for Python via .NET — free trial with limitations, 30-day temporary license, file and stream license loading, and metered licensing."
 keywords: license, licensing, free trial, temporary license, metered license, GROUPDOCS_LIC_PATH, set license from file, set license from stream, evaluation limitations, GroupDocs.Conversion
 productName: GroupDocs.Conversion for Python via .NET
@@ -11,9 +11,7 @@ hideChildren: False
 toc: True
 ---
 
-To help you quickly explore library and its features, GroupDocs.Conversion provides a Free Trial and a 30-day Temporary License for evaluation, as well as various purchase plans.
-
-Sometimes, to get familiar with the system quickly, you may want to dive into the code right away. To make this easier, GroupDocs.Conversion offers a Free Trial and a 30-day Temporary License for evaluation, along with various purchase plans.
+To help you quickly explore the library and its features, GroupDocs.Conversion provides a Free Trial and a 30-day Temporary License for evaluation, as well as various purchase plans.
 
 {{< alert style="info" >}}
 Please note that general policies and practices guide you on evaluating, licensing, and purchasing our products. See the [Purchase Policies and FAQ](https://purchase.groupdocs.com/policies/) section for details.

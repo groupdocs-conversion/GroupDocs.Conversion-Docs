@@ -97,7 +97,7 @@ Successfully installed groupdocs-conversion-net-*
 
 ## Example 1: Convert document
 
-To quickly test the library, let’s convert a DOCX file to PDF. You can also download the app that we're going to buid [here](/conversion/python-net/_sample_files/getting-started/quick-start-guide/convert_docx_to_pdf.zip).
+To quickly test the library, let’s convert a DOCX file to PDF. You can also download the app that we're going to build [here](/conversion/python-net/_sample_files/getting-started/quick-start-guide/convert_docx_to_pdf.zip).
 
 {{< tabs "demo_app_convert_docx_to_pdf">}}
 {{< tab "convert_docx_to_pdf.py" >}}  
@@ -178,7 +178,7 @@ After running the app you can deactivate virtual environment by executing `deact
 
 ## Example 2: Convert document pages
 
-In this example we'll convert PDF document pages to PNG. You can download the app that we're going to buid [here](/conversion/python-net/_sample_files/getting-started/quick-start-guide/convert_pdf_pages_to_png.zip).
+In this example we'll convert PDF document pages to PNG. You can download the app that we're going to build [here](/conversion/python-net/_sample_files/getting-started/quick-start-guide/convert_pdf_pages_to_png.zip).
 
 {{< tabs "demo_app_convert_pdf_pages_to_png">}}
 {{< tab "convert_pdf_pages_to_png.py" >}}  
@@ -274,7 +274,7 @@ After running the app you can deactivate virtual environment by executing `deact
 
 ## Example 3: Convert files in archive
 
-In this example we'll convert the contents of a ZIP archive to PDF. GroupDocs.Conversion opens the archive, converts the files inside, and produces a single consolidated PDF that contains every converted document. You can download the app that we're going to buid [here](/conversion/python-net/_sample_files/getting-started/quick-start-guide/convert_files_in_archive.zip).
+In this example we'll convert the contents of a ZIP archive to PDF. GroupDocs.Conversion opens the archive, converts the files inside, and produces a single consolidated PDF that contains every converted document. You can download the app that we're going to build [here](/conversion/python-net/_sample_files/getting-started/quick-start-guide/convert_files_in_archive.zip).
 
 {{< tabs "demo_app_convert_files_in_archive">}}
 {{< tab "convert_files_in_archive.py" >}}  
@@ -357,5 +357,5 @@ After running the app you can deactivate virtual environment by executing `deact
 
 After completing the basics, explore additional resources to enhance your usage:
 - [Supported File Formats]({{< ref "conversion/python-net/getting-started/supported-document-formats.md" >}}): Review the full list of supported file types.
-- [Licensing]({{< ref "conversion/python-net/getting-started/licensing-and-subscription.md" >}}): Check details on licening and evaluation.
+- [Licensing]({{< ref "conversion/python-net/getting-started/licensing-and-subscription.md" >}}): Check details on licensing and evaluation.
 - [Technical Support]({{< ref "conversion/python-net/technical-support" >}}): Contact support for assistance if you encounter issues.
