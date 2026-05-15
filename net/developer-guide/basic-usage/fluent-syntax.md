@@ -42,3 +42,22 @@ FluentConverter.Load("sample.pdf").GetDocumentInfo();
 FluentConverter.Load("sample.pdf").WithOptions(new PdfLoadOptions()).GetPossibleConversions();
 FluentConverter.Load("sample.pdf").WithOptions(new PdfLoadOptions()).GetDocumentInfo();
 ```
+
+## Subscribing to conversion events
+
+Since version 26.6, conversion lifecycle handlers are registered through the [ConversionEvents]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}}) aggregator via the `WithEvents(...)` entry-stage method:
+
+```csharp
+FluentConverter
+    .WithEvents(e =>
+    {
+        e.OnConversionCompleted    = ctx       => Console.WriteLine($"Done: {ctx.SourceFileName}");
+        e.OnConversionFailed       = (ctx, ex) => Console.WriteLine($"Failed: {ex.Message}");
+        e.OnConversionByPageFailed = (ctx, ex) => Console.WriteLine($"Page failed: {ex.Message}");
+    })
+    .Load("sample.docx")
+    .ConvertTo("converted.pdf").WithOptions(new PdfConvertOptions())
+    .Convert();
+```
+
+`WithEvents(...)` must be called before `Load(...)`. It can be combined with `WithSettings(...)` in either order. The previous chain methods (`.OnConversionCompleted(...).OnConversionFailed(...)` placed after `WithOptions(...)`) continue to work but are obsolete and planned for removal in v26.9 — see the [ConversionEvents]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}}) guide for the full migration story.

@@ -14,6 +14,7 @@ hideChildren: true
 * [Get document info]({{< ref "conversion/net/developer-guide/basic-usage/get-document-info.md" >}})
 * [Convert files]({{< ref "conversion/net/developer-guide/basic-usage/convert/" >}})
 * [Listening to conversion process events]({{< ref "conversion/net/developer-guide/advanced-usage/listening.md" >}})
+* [Subscribe to conversion events]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}})
 * [Cache results]({{< ref "conversion/net/developer-guide/advanced-usage/caching/" >}})
 * [Logging]({{< ref "conversion/net/developer-guide/advanced-usage/logging.md" >}})
 * [Troubleshooting]({{< ref "conversion/net/developer-guide/troubleshooting/" >}})
