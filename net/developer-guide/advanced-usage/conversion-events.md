@@ -4,27 +4,56 @@ url: conversion/net/conversion-events
 title: Conversion events
 linkTitle: Conversion events
 weight: 4
-description: "Subscribe to conversion lifecycle events (completed, failed, by-page-failed) through the typed ConversionEvents aggregator in GroupDocs.Conversion for .NET."
-keywords: ConversionEvents, OnConversionCompleted, OnConversionFailed, OnConversionByPageFailed, WithEvents, conversion lifecycle, event handlers
+description: "Subscribe to pipeline lifecycle and per-result conversion events through the typed ConversionEvents aggregator in GroupDocs.Conversion for .NET."
+keywords: ConversionEvents, OnConversionStarted, OnConversionProgress, OnConversionCompleted, OnDocumentConverted, OnDocumentFailed, OnPageConverted, OnPageFailed, OnCompressionCompleted, WithEvents, conversion lifecycle, event handlers
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
 ---
 
-Starting with **GroupDocs.Conversion for .NET v26.6**, conversion lifecycle event handlers are aggregated into a single typed object — [ConversionEvents](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/conversionevents/). This replaces the previous practice of setting individual handlers on [ConverterSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings/) or chaining `.OnConversionCompleted(...).OnConversionFailed(...)` after `WithOptions(...)` in the fluent API.
+Starting with **GroupDocs.Conversion for .NET v26.6**, conversion event handlers are aggregated into a single typed object — [ConversionEvents](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/conversionevents/). This replaces three previously separate registration paths:
 
-The aggregator exposes the following handlers:
+* The [IConverterListener](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.reporting/iconverterlistener/) interface assigned to [ConverterSettings.Listener](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings/listener/) — for pipeline lifecycle callbacks.
+* Per-result handler properties on `ConverterSettings` (`OnConversionFailed`, `OnConversionByPageFailed`, `OnCompressionCompleted`).
+* The fluent chain methods placed after `WithOptions(...)` or `Compress(...)` (`.OnConversionCompleted(...)`, `.OnConversionFailed(...)`, `.OnCompressionCompleted(...)`).
+
+The aggregator is registered with the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/) constructor via a new `events:` factory parameter, or with the fluent API via the entry-stage `FluentConverter.WithEvents(...)` method.
+
+## Event groups
+
+`ConversionEvents` exposes two distinct groups of handlers.
+
+### Pipeline lifecycle
+
+Fire **once per conversion run**, regardless of how many documents or pages the run produces. These replace the `Started` / `Progress` / `Completed` callbacks of `IConverterListener`.
 
 | Handler | Signature | When it fires |
 |---------|-----------|---------------|
-| `OnConversionCompleted` | `Action<ConvertedContext>` | After the entire conversion completes successfully |
-| `OnConversionFailed` | `Action<ConvertContext, Exception>` | When a conversion run throws |
-| `OnConversionByPageFailed` | `Action<ConvertContext, Exception>` | When a single page fails during page-by-page conversion |
+| `OnConversionStarted` | `Action` | Once, when the conversion pipeline starts |
+| `OnConversionProgress` | `Action<byte>` | While the pipeline is running, with the current progress percentage (0–100) |
+| `OnConversionCompleted` | `Action` | Once at the end of the pipeline, regardless of success or failure |
+
+{{< hint style="warning" title="Name reuse — read before upgrading" >}}
+The `OnConversionCompleted` name is **reused with new semantics** in v26.6. The pre-v26.6 fluent chain method `.OnConversionCompleted(Action<ConvertedContext>)` (per-document) is now `OnDocumentConverted` on the aggregator. The new `ConversionEvents.OnConversionCompleted` is a lifecycle handler — its signature is `Action` (no parameters) and it fires once at pipeline end. If you copy a v26.5-and-earlier example expecting per-document context, switch to `OnDocumentConverted`.
+{{< /hint >}}
+
+### Per-result
+
+Fire **once per produced item** — each converted document, each converted page, each compressed archive — including failures.
+
+| Handler | Signature | When it fires |
+|---------|-----------|---------------|
+| `OnDocumentConverted` | `Action<ConvertedContext>` | After each document conversion completes successfully |
+| `OnDocumentFailed` | `Action<ConvertContext, Exception>` | When a document conversion throws |
+| `OnPageConverted` | `Action<ConvertedPageContext>` | After each page is converted in page-by-page conversions |
+| `OnPageFailed` | `Action<ConvertContext, Exception>` | When a single page fails during page-by-page conversion |
 | `OnCompressionCompleted` | `Action<Stream>` | After contents have been converted and packaged into a compressed archive (see [Extract and Convert Archive Contents]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-contents-of-rar-or-zip-document-to-different-formats-and-compress.md" >}})) |
+
+See [Context Objects — Complete Guide]({{< ref "conversion/net/developer-guide/basic-usage/context-objects-complete-guide.md" >}}) for the properties exposed by `ConvertedContext`, `ConvertContext`, and `ConvertedPageContext`.
 
 ## Registering events with the classic API
 
-Pass a `ConversionEvents` factory as the third argument to the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/) constructor:
+Pass a `ConversionEvents` factory as the third argument to the `Converter` constructor:
 
 ```csharp
 using GroupDocs.Conversion;
@@ -33,9 +62,15 @@ using GroupDocs.Conversion.Options.Convert;
 
 var events = new ConversionEvents
 {
-    OnConversionCompleted    = ctx       => Console.WriteLine($"Done: {ctx.SourceFileName} -> {ctx.ConvertedFormat}"),
-    OnConversionFailed       = (ctx, ex) => Console.WriteLine($"Failed: {ctx.SourceFileName} ({ex.Message})"),
-    OnConversionByPageFailed = (ctx, ex) => Console.WriteLine($"Page failed: {ex.Message}"),
+    // Pipeline lifecycle
+    OnConversionStarted   = ()      => Console.WriteLine("Conversion started"),
+    OnConversionProgress  = percent => Console.WriteLine($"... {percent}% ..."),
+    OnConversionCompleted = ()      => Console.WriteLine("Conversion finished"),
+
+    // Per-result
+    OnDocumentConverted = ctx       => Console.WriteLine($"Done: {ctx.SourceFileName} -> {ctx.ConvertedFormat}"),
+    OnDocumentFailed    = (ctx, ex) => Console.WriteLine($"Failed: {ctx.SourceFileName} ({ex.Message})"),
+    OnPageFailed        = (ctx, ex) => Console.WriteLine($"Page failed: {ex.Message}"),
 };
 
 using (var converter = new Converter(
@@ -58,9 +93,13 @@ using GroupDocs.Conversion.Options.Convert;
 FluentConverter
     .WithEvents(e =>
     {
-        e.OnConversionCompleted    = ctx       => Console.WriteLine($"Done: {ctx.SourceFileName}");
-        e.OnConversionFailed       = (ctx, ex) => Console.WriteLine($"Failed: {ex.Message}");
-        e.OnConversionByPageFailed = (ctx, ex) => Console.WriteLine($"Page failed: {ex.Message}");
+        e.OnConversionStarted   = ()         => Console.WriteLine("Conversion started");
+        e.OnConversionProgress  = percent    => Console.WriteLine($"... {percent}% ...");
+        e.OnConversionCompleted = ()         => Console.WriteLine("Conversion finished");
+
+        e.OnDocumentConverted   = ctx        => Console.WriteLine($"Done: {ctx.SourceFileName}");
+        e.OnDocumentFailed      = (ctx, ex)  => Console.WriteLine($"Failed: {ex.Message}");
+        e.OnPageFailed          = (ctx, ex)  => Console.WriteLine($"Page failed: {ex.Message}");
     })
     .Load("sample.docx")
     .ConvertTo("converted.pdf").WithOptions(new PdfConvertOptions())
@@ -76,17 +115,17 @@ Handlers registered on `ConversionEvents` are **global** — they live for the l
 ```csharp
 using (var converter = new Converter("source.docx", () => new ConverterSettings(), () => events))
 {
-    converter.Convert("page1.pdf",  new PdfConvertOptions());   // events.OnConversionCompleted fires
+    converter.Convert("page1.pdf",  new PdfConvertOptions());   // events.OnDocumentConverted fires
     converter.Convert("page2.tiff", new TiffConvertOptions());  // same global handler fires again
 }
 ```
 
-`Convert(...)` overloads that accept an `Action<ConvertedContext>` register a **per-call** result handler that wins over the global `OnConversionCompleted` for that single call:
+`Convert(...)` overloads that accept an `Action<ConvertedContext>` register a **per-call** result handler that wins over the global `OnDocumentConverted` for that single call:
 
 ```csharp
 using (var converter = new Converter("source.docx", () => new ConverterSettings(), () => events))
 {
-    // Per-call handler — overrides events.OnConversionCompleted for THIS call only
+    // Per-call handler — overrides events.OnDocumentConverted for THIS call only
     converter.Convert(
         new PdfConvertOptions(),
         (ConvertedContext ctx) =>
@@ -97,12 +136,12 @@ using (var converter = new Converter("source.docx", () => new ConverterSettings(
             }
         });
 
-    // No per-call handler — events.OnConversionCompleted fires
+    // No per-call handler — events.OnDocumentConverted fires
     converter.Convert("page2.pdf", new PdfConvertOptions());
 }
 ```
 
-The precedence rule is `(perCall ?? global)?.Invoke(...)`: if a per-call handler is supplied, the global `OnConversionCompleted` does not fire for that call. `OnConversionFailed` and `OnConversionByPageFailed` are always global — there is no per-call override.
+The precedence rule is `(perCall ?? global)?.Invoke(...)`: if a per-call handler is supplied, the global `OnDocumentConverted` does not fire for that call. The other per-result handlers (`OnDocumentFailed`, `OnPageConverted`, `OnPageFailed`, `OnCompressionCompleted`) and all lifecycle handlers are always global — there is no per-call override.
 
 Between consecutive `Convert(...)` calls on the same `Converter`, only the per-call slot is reset. The global `ConversionEvents` bag is preserved across runs.
 
@@ -137,13 +176,14 @@ The previous registration mechanisms continue to work, but are obsolete and plan
 
 | Obsolete (still works in v26.6) | Replacement |
 |---------------------------------|-------------|
-| `ConverterSettings.OnConversionFailed` | `ConversionEvents.OnConversionFailed` |
-| `ConverterSettings.OnConversionByPageFailed` | `ConversionEvents.OnConversionByPageFailed` |
+| `ConverterSettings.Listener` (`IConverterListener.Started` / `Progress` / `Completed`) | `ConversionEvents.OnConversionStarted` / `OnConversionProgress` / `OnConversionCompleted` |
+| `ConverterSettings.OnConversionFailed` | `ConversionEvents.OnDocumentFailed` |
+| `ConverterSettings.OnConversionByPageFailed` | `ConversionEvents.OnPageFailed` |
 | `ConverterSettings.OnCompressionCompleted` | `ConversionEvents.OnCompressionCompleted` |
-| Fluent chain `.OnConversionCompleted(...)` after `WithOptions(...)` | `FluentConverter.WithEvents(e => e.OnConversionCompleted = ...)` |
-| Fluent chain `.OnConversionFailed(...)` after `WithOptions(...)` | `FluentConverter.WithEvents(e => e.OnConversionFailed = ...)` |
+| Fluent chain `.OnConversionCompleted(...)` after `WithOptions(...)` | `FluentConverter.WithEvents(e => e.OnDocumentConverted = ...)` |
+| Fluent chain `.OnConversionFailed(...)` after `WithOptions(...)` | `FluentConverter.WithEvents(e => e.OnDocumentFailed = ...)` |
 | Fluent chain `.OnCompressionCompleted(...)` after `.Compress(...)` (`IConversionCompressResultCompleted`) | `FluentConverter.WithEvents(e => e.OnCompressionCompleted = ...)` |
 
-When values are set on both the obsolete locations and on `ConversionEvents`, the aggregator wins. Handlers set on `ConverterSettings` are merged into the internal events bag at converter construction.
+When values are set on both the obsolete locations and on `ConversionEvents`, the aggregator wins. Handlers set on `ConverterSettings` (including a `Listener` instance) are forwarded into the internal events bag at converter construction.
 
 See the [migration notes]({{< ref "conversion/net/developer-guide/migration-notes.md" >}}) for a step-by-step upgrade guide.

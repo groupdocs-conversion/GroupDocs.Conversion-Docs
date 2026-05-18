@@ -9,53 +9,22 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
 ---
-## Why To Migrate?
-  
-Here are the key reasons to use the new updated API provided by GroupDocs.Conversion for .NET since version 19.9:
-
-* **Converter** class introduced as a **single entry point** to manage the document conversion process to any supported file format (instead of **ConversionHander** class from previous versions). 
-* The overall **conversion speed improved** dramatically by saving each page as soon as it was converted, not when all pages list were converted.
-* Product architecture was redesigned from scratch in order to **decreased memory usage** (from 10% to 400% approx. depending on document type).
-* Document **convert options simplified** for easy control over document conversion and saving processes.  
-
-## How To Migrate?
-
-Here is a brief comparison of how to convert document into PDF format using old API and new one.  
-
-**Old coding style**
-
-```csharp
-string documentPath = "sample.docx";
-string outputPath = @"C:\output\converted.pdf";
-
-//Instantiating the conversion handler
-ConversionHandler conversionHandler = Common.getConversionHandler();
-
-var saveOptions = new GroupDocs.Conversion.Converter.Option.PdfSaveOptions();
-saveOptions.ConvertFileType = PdfSaveOptions.PdfFileType.Pdf;
- 
-var convertedDocumentPath = conversionHandler.Convert(documentPath , saveOptions);
-convertedDocumentPath.Save(@"C:\output\converted.pdf");
-```
-
-**New coding style**
-
-```csharp
-string documentPath = @"C:\sample.docx"; 
-string outputPath = @"C:\output\converted.pdf";
- 
-using (Converter converter = new Converter(documentPath))
-{
-    PdfConvertOptions convertOptions = new PdfConvertOptions();
-    converter.Convert(outputPath, convertOptions);
-}
-```
-
-For more code examples and specific use cases please refer to our [Developer Guide]({{< ref "conversion/net/developer-guide/_index.md" >}}) or [GitHub](https://github.com/groupdocs-conversion/GroupDocs.Conversion-for-.NET) samples and showcases.
 
 ## Migrating to ConversionEvents (v26.6)
 
-Version 26.6 introduces the [ConversionEvents]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}}) aggregator — a single typed object that replaces the per-handler properties on `ConverterSettings` and the fluent chain methods placed after `WithOptions(...)`. The old surface continues to work but is obsolete and planned for removal in **v26.9**.
+Version 26.6 introduces the [ConversionEvents]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}}) aggregator — a single typed object that replaces three previously separate registration paths: the per-handler properties on `ConverterSettings`, the `IConverterListener` assigned to `ConverterSettings.Listener`, and the fluent chain methods placed after `WithOptions(...)` or `Compress(...)`. The old surfaces continue to work but are obsolete and planned for removal in **v26.9**.
+
+Per-result events were renamed at the same time — the noun moved from "Conversion" to "Document" or "Page" so the pipeline-lifecycle group could reuse "Conversion":
+
+| Old name | New name |
+|---|---|
+| `OnConversionCompleted` (per-document) | `OnDocumentConverted` |
+| `OnConversionFailed` (per-document) | `OnDocumentFailed` |
+| `OnConversionByPageCompleted` | `OnPageConverted` |
+| `OnConversionByPageFailed` | `OnPageFailed` |
+| `OnCompressionCompleted` | (unchanged) |
+
+The `OnConversionCompleted` name is **reused** for the new lifecycle event (`Action`, no parameters, fires once at pipeline end). The old per-document variant is now `OnDocumentConverted`.
 
 ### Classic API
 
@@ -77,9 +46,9 @@ using (var converter = new Converter("sample.docx", () => settings))
 ```csharp
 var events = new ConversionEvents
 {
-    OnConversionCompleted    = ctx       => Console.WriteLine($"Done: {ctx.SourceFileName}"),
-    OnConversionFailed       = (ctx, ex) => Log(ex),
-    OnConversionByPageFailed = (ctx, ex) => Log(ex),
+    OnDocumentConverted = ctx       => Console.WriteLine($"Done: {ctx.SourceFileName}"),
+    OnDocumentFailed    = (ctx, ex) => Log(ex),
+    OnPageFailed        = (ctx, ex) => Log(ex),
 };
 
 using (var converter = new Converter(
@@ -112,8 +81,8 @@ FluentConverter
 FluentConverter
     .WithEvents(e =>
     {
-        e.OnConversionCompleted = ctx       => Console.WriteLine($"Done: {ctx.SourceFileName}");
-        e.OnConversionFailed    = (ctx, ex) => Log(ex);
+        e.OnDocumentConverted = ctx       => Console.WriteLine($"Done: {ctx.SourceFileName}");
+        e.OnDocumentFailed    = (ctx, ex) => Log(ex);
     })
     .Load("sample.docx")
     .ConvertTo("converted.pdf").WithOptions(new PdfConvertOptions())
@@ -146,8 +115,48 @@ FluentConverter
 
 The chain method continues to work in v26.6 — the `IConversionCompressResultCompleted` interface that declares it is marked obsolete and is planned for removal in v26.9.
 
+### Pipeline lifecycle — replacing IConverterListener
+
+**Before** — implement [IConverterListener](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.reporting/iconverterlistener/) and assign the instance to `ConverterSettings.Listener`:
+
+```csharp
+public class MyListener : IConverterListener
+{
+    public void Started()              => Console.WriteLine("Conversion started");
+    public void Progress(byte percent) => Console.WriteLine($"Progress: {percent}%");
+    public void Completed()            => Console.WriteLine("Conversion finished");
+}
+
+var settings = new ConverterSettings { Listener = new MyListener() };
+using (var converter = new Converter("sample.docx", () => settings))
+{
+    converter.Convert("converted.pdf", new PdfConvertOptions());
+}
+```
+
+**After** — register lifecycle handlers directly on `ConversionEvents`:
+
+```csharp
+var events = new ConversionEvents
+{
+    OnConversionStarted   = ()      => Console.WriteLine("Conversion started"),
+    OnConversionProgress  = percent => Console.WriteLine($"Progress: {percent}%"),
+    OnConversionCompleted = ()      => Console.WriteLine("Conversion finished"),
+};
+
+using (var converter = new Converter(
+    "sample.docx",
+    () => new ConverterSettings(),
+    () => events))
+{
+    converter.Convert("converted.pdf", new PdfConvertOptions());
+}
+```
+
+`ConverterSettings.Listener` continues to forward `Started` / `Progress` / `Completed` callbacks into the internal events bag in v26.6 — both `ConverterSettings.Listener` and the `IConverterListener` interface are marked obsolete and are planned for removal in v26.9.
+
 ### Per-call vs global precedence
 
-Handlers registered through `ConversionEvents` are **global** and fire on every `Convert(...)` call. The `Convert(...)` overloads that accept an `Action<ConvertedContext>` register a **per-call** handler that wins over the global `OnConversionCompleted` for that single call only — the precedence rule is `(perCall ?? global)?.Invoke(...)`. Between consecutive runs on the same converter, only the per-call slot is reset; the global events bag is preserved.
+Handlers registered through `ConversionEvents` are **global** and fire on every `Convert(...)` call. The `Convert(...)` overloads that accept an `Action<ConvertedContext>` register a **per-call** handler that wins over the global `OnDocumentConverted` for that single call only — the precedence rule is `(perCall ?? global)?.Invoke(...)`. Between consecutive runs on the same converter, only the per-call slot is reset; the global events bag is preserved.
 
 See [Conversion events]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}}) for the full reference.
