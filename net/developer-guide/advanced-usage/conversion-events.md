@@ -5,7 +5,7 @@ title: Conversion events
 linkTitle: Conversion events
 weight: 4
 description: "Subscribe to pipeline lifecycle and per-result conversion events through the typed ConversionEvents aggregator in GroupDocs.Conversion for .NET."
-keywords: ConversionEvents, OnConversionStarted, OnConversionProgress, OnConversionCompleted, OnDocumentConverted, OnDocumentFailed, OnPageConverted, OnPageFailed, OnCompressionCompleted, WithEvents, conversion lifecycle, event handlers
+keywords: ConversionEvents, OnConversionStarted, OnConversionProgress, OnConversionCompleted, OnDocumentConverted, OnDocumentFailed, OnPageConverted, OnPageFailed, OnCompressionCompleted, OnFontSubstituted, FontSubstitutionContext, WithEvents, conversion lifecycle, event handlers
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
@@ -21,7 +21,7 @@ The aggregator is registered with the [Converter](https://reference.groupdocs.co
 
 ## Event groups
 
-`ConversionEvents` exposes two distinct groups of handlers.
+`ConversionEvents` exposes three distinct groups of handlers.
 
 ### Pipeline lifecycle
 
@@ -50,6 +50,16 @@ Fire **once per produced item** — each converted document, each converted page
 | `OnCompressionCompleted` | `Action<Stream>` | After contents have been converted and packaged into a compressed archive (see [Extract and Convert Archive Contents]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-contents-of-rar-or-zip-document-to-different-formats-and-compress.md" >}})) |
 
 See [Context Objects — Complete Guide]({{< ref "conversion/net/developer-guide/basic-usage/context-objects-complete-guide.md" >}}) for the properties exposed by `ConvertedContext`, `ConvertContext`, and `ConvertedPageContext`.
+
+### Diagnostics
+
+Report a condition detected while processing the source document, rather than the outcome of a produced item.
+
+| Handler | Signature | When it fires |
+|---------|-----------|---------------|
+| `OnFontSubstituted` | `Action<FontSubstitutionContext>` | Once per distinct missing font in a source document, when that font is substituted during conversion |
+
+See [Font substitution notifications](#font-substitution-notifications) below for the full handler reference.
 
 ## Registering events with the classic API
 
@@ -169,6 +179,99 @@ FluentConverter
 ```
 
 The previous late-stage `.OnCompressionCompleted(stream => ...)` placed after `.Compress(...)` continues to work but is obsolete — the `IConversionCompressResultCompleted` interface that declares it is planned for removal in v26.9.
+
+## Font substitution notifications
+
+`OnFontSubstituted` notifies you whenever a font referenced by the source document is unavailable and gets substituted during conversion — either because the font is missing from the machine, or because you configured a [FontSubstitute](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/fontsubstitute/) rule (see [Specify font substitution]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-wordprocessing-document-with-options.md#specify-font-substitution" >}})). The handler receives a `FontSubstitutionContext` describing the substitution.
+
+### Subscribe (classic API)
+
+```csharp
+using GroupDocs.Conversion;
+using GroupDocs.Conversion.Contracts;
+using GroupDocs.Conversion.Options.Convert;
+
+var events = new ConversionEvents
+{
+    OnFontSubstituted = context =>
+    {
+        // Prefer the typed names when present; otherwise use the verbatim Reason.
+        var detail = context.OriginalFontName != null
+            ? $"{context.OriginalFontName} -> {context.SubstituteFontName}"
+            : context.Reason;
+        Console.WriteLine($"Font substituted in '{context.SourceFileName}': {detail}");
+    }
+};
+
+using (var converter = new Converter("source.docx", () => new ConverterSettings(), () => events))
+{
+    converter.Convert("output.pdf", new PdfConvertOptions());
+}
+```
+
+### Subscribe (fluent API)
+
+```csharp
+using GroupDocs.Conversion;
+using GroupDocs.Conversion.Options.Convert;
+
+FluentConverter
+    .WithEvents(e => e.OnFontSubstituted = ctx =>
+        Console.WriteLine($"Font substituted: {ctx.Reason ?? ctx.OriginalFontName}"))
+    .Load("source.docx")
+    .ConvertTo("output.pdf").WithOptions(new PdfConvertOptions())
+    .Convert();
+```
+
+### Notify on a customer-supplied substitution rule
+
+When you provide your own substitution rules through the load options (supported for Word-processing, Spreadsheet, and PDF documents), `OnFontSubstituted` reports each rule that is applied:
+
+```csharp
+using GroupDocs.Conversion;
+using GroupDocs.Conversion.Contracts;
+using GroupDocs.Conversion.Options.Convert;
+using GroupDocs.Conversion.Options.Load;
+
+using (var converter = new Converter(
+    "source.docx",
+    _ => new WordProcessingLoadOptions
+    {
+        FontSubstitutes = new List<FontSubstitute> { FontSubstitute.Create("MissingFont", "Arial") }
+    },
+    () => new ConverterSettings(),
+    () => events))
+{
+    converter.Convert("output.pdf", new PdfConvertOptions());
+}
+```
+
+### `FontSubstitutionContext` members
+
+| Member | Description |
+|--------|-------------|
+| `SourceFileName` | The source document's file name (a generated id when the source is a non-file stream). |
+| `OriginalFontName` | The font referenced by the document but unavailable. May be `null` for formats that report only descriptive text. |
+| `SubstituteFontName` | The font used instead. May be `null` — read `Reason`. |
+| `Reason` | The substitution message exactly as reported, verbatim. Names both fonts when the typed members are `null`. |
+
+See [Context Objects — Complete Guide]({{< ref "conversion/net/developer-guide/basic-usage/context-objects-complete-guide.md#fontsubstitutioncontext" >}}) for more detail.
+
+### Supported documents
+
+| Document family | Missing-font substitution | Rule-driven substitution |
+|-----------------|:-------------------------:|:------------------------:|
+| Word-processing, Spreadsheet, PDF | ✔ | ✔ |
+| Presentation, Diagram, PCL, TeX | ✔ | — |
+
+Image conversions are out of scope — see the behavior notes below.
+
+### Behavior notes
+
+- Fired once per distinct missing font per source document within a single `Convert(...)` call (deduplicated).
+- Raised synchronously on the conversion thread.
+- Not raised for image *source* conversions (raster images carry no fonts). Converting *to* an image still reports substitutions from the source document.
+- For presentation documents, substitution is detected on Windows only.
 
 ## Compatibility with the previous API
 
