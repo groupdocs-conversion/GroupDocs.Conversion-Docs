@@ -1,0 +1,14 @@
+Total supported source formats: 208
+Showing the first 3 as a sample.
+
+Source format: MP3 Audio File (mp3)
+  Primary target formats  (9): ['mp3', 'aac', 'aiff', 'flac', 'm4a', 'wma', 'ac3', 'ogg', 'wav']
+  Secondary target formats (0): []
+
+Source format: Advanced Audio Coding File (aac)
+  Primary target formats  (9): ['mp3', 'aac', 'aiff', 'flac', 'm4a', 'wma', 'ac3', 'ogg', 'wav']
+  Secondary target formats (0): []
+
+Source format: Audio Interchange File Format (aiff)
+  Primary target formats  (9): ['mp3', 'aac', 'aiff', 'flac', 'm4a', 'wma', 'ac3', 'ogg', 'wav']
+  Secondary target formats (0): []

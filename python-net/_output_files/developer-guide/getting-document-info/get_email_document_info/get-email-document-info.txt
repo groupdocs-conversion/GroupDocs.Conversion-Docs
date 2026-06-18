@@ -1,0 +1,8 @@
+Creation Date: 2017-04-25T11:28:29.0000000Z
+Format: eml
+Is Encrypted: False
+Is Body in HTML: True
+Is Signed: False
+Size: 91948
+Attachments Count: 1
+Attachment Name: bg_pattern.gif

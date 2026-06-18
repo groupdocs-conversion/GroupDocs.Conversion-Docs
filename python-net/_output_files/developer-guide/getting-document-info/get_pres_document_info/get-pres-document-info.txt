@@ -1,0 +1,7 @@
+Author: GroupDocs
+Creation Date: 2023-03-04T14:58:10.0000000Z
+Format: pptx
+Is Password Protected: False
+Pages Count: 3
+Size, bytes: 35210
+Title: TEST

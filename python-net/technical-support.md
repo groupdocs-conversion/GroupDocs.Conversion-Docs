@@ -1,9 +1,11 @@
 ---
 id: technical-support
-url: /conversion/python-net/technical-support
+url: conversion/python-net/technical-support
 title: Technical Support
-description: "GroupDocs.Conversion for Python via .NET provides free technical support available to all users. Please report your question, issue, or feature request using GroupDocs Free Support Forum."
-weight: 6
+linkTitle: Technical Support
+description: "Report issues, ask questions, and request features for GroupDocs.Conversion for Python via .NET through the free support forum, paid helpdesk, or the GitHub examples repository."
+keywords: technical support, free support, paid support, helpdesk, forum, GitHub issues, GroupDocs.Conversion, python
+weight: 10
 productName: GroupDocs.Conversion for Python via .NET
 toc: true
 ---
