@@ -9,6 +9,12 @@ keywords: Track conversion process, Subscribe to conversion process events, trac
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
+{{< hint style="important" title="Obsolete since v26.6 — use ConversionEvents instead" >}}
+The `IConverterListener` interface and the `ConverterSettings.Listener` property are marked obsolete in v26.6 and are planned for removal in v26.9. New code should subscribe to `OnConversionStarted` / `OnConversionProgress` / `OnConversionCompleted` on the [ConversionEvents]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}}) aggregator instead.
+
+Existing code that assigns a listener continues to work in v26.6 — the `Started` / `Progress` / `Completed` callbacks are forwarded to the corresponding `ConversionEvents` handlers at converter construction.
+{{< /hint >}}
+
 In some cases, there is a need to monitor the conversion process and to receive updates upon a start, progress and completion of a conversion. For such situations, [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) exposes an extension point where the client application may hook up and receive updates. 
 
 To enable listening, follow these steps:

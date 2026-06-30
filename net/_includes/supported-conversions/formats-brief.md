@@ -299,4 +299,4 @@ GeekdocHidden: true
 | [ODT](/conversion/net/convert/wordprocessing/) | OpenDocument Text Document |<!--Load--> ✅ |<!--Save--> ✅ |
 | [OTT](/conversion/net/convert/wordprocessing/) | OpenDocument Document Template |<!--Load--> ✅ |<!--Save--> ✅ |
 | [RTF](/conversion/net/convert/wordprocessing/) | Rich Text Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [TXT](/conversion/net/convert/wordprocessing/) | Plain Text File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [TXT](/conversion/net/convert/wordprocessing/) | Plain Text File |<!--Load--> ✅ |<!--Save--> ✅

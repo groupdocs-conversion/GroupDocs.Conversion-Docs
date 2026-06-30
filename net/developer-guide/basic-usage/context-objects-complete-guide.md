@@ -4,7 +4,7 @@ url: conversion/net/context-objects-complete-guide
 title: Context Objects - Complete Guide
 weight: 6
 description: "Learn how to use Context Objects in GroupDocs.Conversion for .NET v24.10+. Context objects are foundational to all delegate-based patterns."
-keywords: Context Objects, LoadContext, ConvertContext, SaveContext, SavePageContext, ConvertedContext, ConvertedPageContext, GroupDocs.Conversion delegates
+keywords: Context Objects, LoadContext, ConvertContext, SaveContext, SavePageContext, ConvertedContext, ConvertedPageContext, FontSubstitutionContext, GroupDocs.Conversion delegates
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
@@ -24,9 +24,9 @@ Context objects provide:
 - **Dynamic configuration**: Configure options based on actual document properties
 - **Lifecycle callbacks**: Monitor conversion progress page-by-page or document-level
 
-## The Six Context Types
+## The Context Types
 
-GroupDocs.Conversion provides six context types, each serving a specific purpose:
+GroupDocs.Conversion provides six **configuration/result** context types that drive delegate-based patterns, plus one **diagnostic** context (`FontSubstitutionContext`, available since v26.6) delivered to a conversion event:
 
 | Context Type | Used In | Purpose |
 |--------------|---------|---------|
@@ -36,6 +36,7 @@ GroupDocs.Conversion provides six context types, each serving a specific purpose
 | [SavePageContext](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/savepagecontext/) | `Func<SavePageContext, Stream>` | Provides page-specific information for stream output |
 | [ConvertedContext](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertedcontext/) | `Action<ConvertedContext>` | Callback after entire document conversion completes |
 | [ConvertedPageContext](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertedpagecontext/) | `Action<ConvertedPageContext>` | Callback after each page conversion completes |
+| [FontSubstitutionContext](#fontsubstitutioncontext) | `Action<FontSubstitutionContext>` | Diagnostic — reports a font substituted while processing the source document |
 
 ---
 
@@ -284,6 +285,49 @@ using (var converter = new Converter("monthly-report.pdf"))
         });
 }
 ```
+
+---
+
+## FontSubstitutionContext
+
+**Used in**: the `OnFontSubstituted` handler of [ConversionEvents](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/conversionevents/) (`Action<FontSubstitutionContext>`)
+
+**Purpose**: Unlike the six context types above — which configure delegates or report a produced result — `FontSubstitutionContext` is a **diagnostic** context. Starting with **GroupDocs.Conversion for .NET v26.6**, it is delivered to the `OnFontSubstituted` event whenever a font referenced by the source document is unavailable and gets substituted during conversion (a missing system font, or a [FontSubstitute](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.contracts/fontsubstitute/) rule you configured).
+
+### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `SourceFileName` | `string` | Name of the source file (a generated id when the source is a non-file stream) (read-only) |
+| `OriginalFontName` | `string` | The font referenced by the document but unavailable. May be `null` for formats that report only descriptive text (read-only) |
+| `SubstituteFontName` | `string` | The font used instead. May be `null` — read `Reason` (read-only) |
+| `Reason` | `string` | The substitution message exactly as reported, verbatim. Names both fonts when the typed members are `null` (read-only) |
+
+### Example
+
+```csharp
+using GroupDocs.Conversion;
+using GroupDocs.Conversion.Contracts;
+using GroupDocs.Conversion.Options.Convert;
+
+var events = new ConversionEvents
+{
+    OnFontSubstituted = (FontSubstitutionContext context) =>
+    {
+        var detail = context.OriginalFontName != null
+            ? $"{context.OriginalFontName} -> {context.SubstituteFontName}"
+            : context.Reason;
+        Console.WriteLine($"Font substituted in '{context.SourceFileName}': {detail}");
+    }
+};
+
+using (var converter = new Converter("source.docx", () => new ConverterSettings(), () => events))
+{
+    converter.Convert("output.pdf", new PdfConvertOptions());
+}
+```
+
+See [Conversion events — Font substitution notifications]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md#font-substitution-notifications" >}}) for the supported-document matrix and behavior notes.
 
 ---
 

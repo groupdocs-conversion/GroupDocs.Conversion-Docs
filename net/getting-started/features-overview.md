@@ -41,7 +41,7 @@ You can obtain the [complete list of possible conversions]({{< ref "conversion/n
 
 ### Fonts replacement
 
-It is a common use case when a source document references some specific fonts that are not present in the environment where you launch your application. GroupDocs.Conversion for .NET provides a solution - you can [substitute missing fonts]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-wordprocessing-document-with-options#specify-font-substitution" >}}) with fonts of your choice that will preserve your document appearance.
+It is a common use case when a source document references some specific fonts that are not present in the environment where you launch your application. GroupDocs.Conversion for .NET provides a solution - you can [substitute missing fonts]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-wordprocessing-document-with-options#specify-font-substitution" >}}) with fonts of your choice that will preserve your document appearance. You can also [subscribe to the `OnFontSubstituted` event]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md#font-substitution-notifications" >}}) to be notified whenever a font is substituted during conversion.
 
 ### Watermarking converted document
 

@@ -72,42 +72,46 @@ using GroupDocs.Conversion.Contracts;
 using GroupDocs.Conversion.FileTypes;
 using System.IO;
 
-FluentConverter.Load("documents.rar")
-    .ConvertTo((SaveContext saveContext) => new MemoryStream())
-    .WithOptions(new PdfConvertOptions())
-    .Compress(new CompressionConvertOptions
-    {
-        Format = CompressionFileType.Zip
-    })
-    .OnCompressionCompleted(compressedStream =>
+FluentConverter
+    .WithEvents(e => e.OnCompressionCompleted = compressedStream =>
     {
         using (var fileStream = File.Create("converted-documents.zip"))
         {
             compressedStream.CopyTo(fileStream);
         }
     })
+    .Load("documents.rar")
+    .ConvertTo((SaveContext saveContext) => new MemoryStream())
+    .WithOptions(new PdfConvertOptions())
+    .Compress(new CompressionConvertOptions
+    {
+        Format = CompressionFileType.Zip
+    })
     .Convert();
 
 // Output: converted-documents.zip containing PDFs
 ```
 
+Starting with v26.6, the compressed archive stream is delivered through the [ConversionEvents]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}}) aggregator via the `WithEvents(...)` entry-stage call. The previous `.OnCompressionCompleted(...)` chain method placed after `.Compress(...)` continues to work but is obsolete and planned for removal in v26.9.
+
 **With password protection:**
 
 ```csharp
-FluentConverter.Load("sensitive-files.zip")
+FluentConverter
+    .WithEvents(e => e.OnCompressionCompleted = compressedStream =>
+    {
+        using (var fileStream = File.Create("protected-archive.zip"))
+        {
+            compressedStream.CopyTo(fileStream);
+        }
+    })
+    .Load("sensitive-files.zip")
     .ConvertTo((SaveContext saveContext) => new MemoryStream())
     .WithOptions(new PdfConvertOptions())
     .Compress(new CompressionConvertOptions
     {
         Format = CompressionFileType.Zip,
         Password = "SecurePassword123"
-    })
-    .OnCompressionCompleted(compressedStream =>
-    {
-        using (var fileStream = File.Create("protected-archive.zip"))
-        {
-            compressedStream.CopyTo(fileStream);
-        }
     })
     .Convert();
 ```

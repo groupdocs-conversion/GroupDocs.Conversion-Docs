@@ -151,6 +151,8 @@ using (Converter converter = new Converter("sample.pdf"))
 }
 ```
 
+Markdown output has dedicated options for controlling how images are handled — inlined as base64 (default) or routed through a custom callback. See [Convert to Markdown with advanced options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-to-markdown-with-advanced-options.md" >}}).
+
 ## More Resources
 
 - [API Reference: WordProcessingConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions)
