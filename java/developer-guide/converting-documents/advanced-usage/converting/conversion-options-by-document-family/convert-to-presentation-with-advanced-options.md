@@ -51,11 +51,6 @@ public class ConvertToPresentationWithAdvancedOptions {
 `annual-review.docx` is sample file used in this example. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/convert-to-presentation-with-advanced-options/annual-review.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "converted_with_options.ppt" >}}  
-{{< tab-text >}}
-`converted_with_options.ppt` is converted PPT document. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/convert-to-presentation-with-advanced-options/converted_with_options.ppt) to download it.
-{{< /tab-text >}}
-{{< /tab >}}
 {{< /tabs >}}
 
 By using advanced conversion options, developers can fine-tune the output presentation to ensure compatibility, security, and optimal formatting, making it a powerful tool for both professional and personal use.

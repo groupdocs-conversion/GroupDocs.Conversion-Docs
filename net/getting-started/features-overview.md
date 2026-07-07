@@ -23,7 +23,7 @@ Along with the whole document conversion to the desired target format, it could 
 ### Auto-detect source document format
 
 In some cases, the source file could be presented in a form of a byte stream, so the file extension is unknown.
-Luckily GroupDocs.Conversion for .NET is smart enough to [detect source document format](({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-files-from-different-sources/load-file-from-stream.md#get-information-about-files-from-a-stream" >}})) on the fly.
+Luckily GroupDocs.Conversion for .NET is smart enough to [detect source document format]({{< ref "conversion/net/developer-guide/advanced-usage/loading/loading-files-from-different-sources/load-file-from-stream.md#get-information-about-files-from-a-stream" >}}) on the fly.
 
 ### Load source document with extended options
 
