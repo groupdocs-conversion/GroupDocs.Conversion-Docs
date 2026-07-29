@@ -6,6 +6,7 @@ weight: 4
 description: "Convert an entire folder of documents with a single prompt — the agent orchestrates, the GroupDocs engine batch-converts locally; nothing is uploaded, originals are kept."
 keywords: batch convert files with Claude, convert entire folder AI agent, bulk document conversion MCP, batch processing MCP server
 productName: GroupDocs.Conversion MCP Server
+toc: True
 ---
 
 Convert an **entire folder of documents with a single prompt** — the agent orchestrates, the GroupDocs engine batch-converts locally; nothing is uploaded and your originals are kept. Point the server at the folder and ask:

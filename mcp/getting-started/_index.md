@@ -7,6 +7,7 @@ description: "Install and register the GroupDocs.Conversion MCP server in Claude
 keywords: how to install MCP server, set up document MCP server, add MCP server to Claude Desktop, MCP server quick start
 productName: GroupDocs.Conversion MCP Server
 hideChildren: True
+toc: True
 ---
 
 Install and register the GroupDocs.Conversion MCP server in Claude Desktop, VS Code, Cursor, or any MCP client in three commands with the guided [installer](https://github.com/groupdocs/GroupDocs.Mcp.Installer) — then verify the setup automatically:

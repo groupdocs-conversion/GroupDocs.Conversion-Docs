@@ -6,6 +6,7 @@ weight: 5
 description: "Solutions to the most common GroupDocs.Conversion MCP server issues — server not appearing in the client, startup failures, missing native dependencies, and first-launch timeouts."
 keywords: MCP server not showing up in Claude Desktop, Claude can't see MCP tools, MCP server failed to start, dnx command not found, libgdiplus not found error, remove watermark evaluation
 productName: GroupDocs.Conversion MCP Server
+toc: True
 ---
 
 Solutions to the most common GroupDocs.Conversion MCP server issues — server not appearing in the client, startup failures, missing native dependencies, and first-launch timeouts.

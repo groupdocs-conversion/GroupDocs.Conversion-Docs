@@ -8,6 +8,7 @@ keywords: convert MCP tool, MCP convert document tool parameters, ai agent conve
 productName: GroupDocs.Conversion MCP Server
 generated: true
 serverVersion: 26.7.2
+toc: True
 ---
 
 `convert` converts a document to a different format and saves the result to your storage folder. Example prompt: *"Convert report.docx to PDF"* — the agent calls `convert` with `format: "pdf"`.

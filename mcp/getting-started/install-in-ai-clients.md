@@ -6,6 +6,7 @@ weight: 5
 description: "Register the GroupDocs.Conversion MCP server in any AI client — Claude Desktop, Claude Code, VS Code, Visual Studio 2022, Cursor, Windsurf, Cline, or Codex — with the exact config file location and JSON block for each."
 keywords: add MCP server to Claude Desktop config, Claude Code add MCP server command, VS Code mcp.json example, Cursor MCP config file location, Windsurf MCP setup, Cline MCP settings, Visual Studio 2022 MCP .mcp.json, Codex CLI MCP add
 productName: GroupDocs.Conversion MCP Server
+toc: True
 ---
 
 Register the GroupDocs.Conversion MCP server in any AI client — Claude Desktop, Claude Code, VS Code, Visual Studio 2022, Cursor, Windsurf, Cline, or Codex — with the exact config file location and JSON block for each. The [installer]({{< ref "conversion/mcp/getting-started/_index.md" >}}) does all of this automatically (set the `clients` list in its config); this page is the manual reference. **Restart the client** after any registration change.

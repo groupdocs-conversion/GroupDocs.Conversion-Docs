@@ -7,6 +7,7 @@ description: "Step-by-step scenarios for converting documents with AI agents ove
 keywords: MCP document conversion use cases, convert documents with AI examples, Claude document conversion scenarios
 productName: GroupDocs.Conversion MCP Server
 hideChildren: True
+toc: True
 ---
 
 Step-by-step scenarios for converting documents with AI agents over MCP — each page answers one real question completely, with the config, the exact prompt, and the expected result:

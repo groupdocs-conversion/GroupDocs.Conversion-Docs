@@ -6,6 +6,7 @@ weight: 2
 description: "Convert PDF files to clean, LLM-ready Markdown for your RAG pipeline or knowledge base — locally via MCP, with headings, tables, and lists preserved, and no document ever uploaded to a cloud service."
 keywords: convert PDF to Markdown MCP, PDF to LLM-ready Markdown, parse PDF for RAG locally, PDF to clean Markdown tables
 productName: GroupDocs.Conversion MCP Server
+toc: True
 ---
 
 Convert PDF files to clean, **LLM-ready Markdown** for your RAG pipeline or knowledge base — locally via MCP, with headings, tables, and lists preserved, and no document ever uploaded to a cloud service. Install the server and ask your agent:

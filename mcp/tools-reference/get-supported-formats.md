@@ -8,6 +8,7 @@ keywords: get_supported_formats MCP, MCP list supported conversions, what format
 productName: GroupDocs.Conversion MCP Server
 generated: true
 serverVersion: 26.7.2
+toc: True
 ---
 
 `get_supported_formats` lists every target format the source document can be converted to, with primary/secondary indicators. Example prompt: *"What formats can I convert sample.pptx to?"*

@@ -6,6 +6,7 @@ weight: 6
 description: "Configure the GroupDocs.Conversion MCP server through one config file: set the documents folder, output folder, license path, delivery channel (Docker or NuGet), and target clients in a single place."
 keywords: MCP server environment variables, MCP server config file, MCP server storage path, pin MCP server version
 productName: GroupDocs.Conversion MCP Server
+toc: True
 ---
 
 Configure the GroupDocs.Conversion MCP server through **one config file**: the documents folder, output folder, license path, delivery channel (Docker or NuGet), and target clients — set once, applied everywhere. This is the installer's `groupdocs-mcp.config.json`:

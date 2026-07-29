@@ -6,6 +6,7 @@ weight: 8
 description: "The GroupDocs.Conversion MCP server runs anywhere Docker runs, or on any OS with the .NET 10 SDK — this page lists exact requirements per channel and operating system."
 keywords: MCP server requirements, does MCP server need Docker, .NET 10 MCP server
 productName: GroupDocs.Conversion MCP Server
+toc: True
 ---
 
 The GroupDocs.Conversion MCP server runs **anywhere Docker runs**, or on any OS with the **.NET 10 SDK** — pick one channel; you do not need both.

@@ -6,6 +6,7 @@ weight: 1
 description: "Use any MCP-compatible AI agent to convert documents between PDF, Word, Excel, PowerPoint, Markdown, and 100+ other formats — this guide shows the pattern once and links every specific scenario."
 keywords: how to convert documents with AI, MCP for documents, AI agent convert docx to pdf, convert files with Claude
 productName: GroupDocs.Conversion MCP Server
+toc: True
 ---
 
 Use any MCP-compatible AI agent — Claude, Cursor, GitHub Copilot, Windsurf, Codex — to convert documents between PDF, Word, Excel, PowerPoint, Markdown, and 100+ other formats, **locally**. Install the GroupDocs.Conversion MCP server with one command, then ask in plain language:

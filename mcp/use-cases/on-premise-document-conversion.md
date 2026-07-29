@@ -6,6 +6,7 @@ weight: 5
 description: "Run document conversion for AI agents fully on-premise: the GroupDocs.Conversion MCP server uses local stdio transport with no external endpoints — suitable for regulated environments where documents cannot leave the network."
 keywords: on-premise MCP server, self-hosted document conversion AI, local MCP server no cloud, air-gapped AI document processing
 productName: GroupDocs.Conversion MCP Server
+toc: True
 ---
 
 Run document conversion for AI agents **fully on-premise**: the GroupDocs.Conversion MCP server uses local stdio transport with **no external endpoints, no inbound ports, and no telemetry** — suitable for regulated environments where documents cannot leave the network. This page is the one to send your security reviewer.

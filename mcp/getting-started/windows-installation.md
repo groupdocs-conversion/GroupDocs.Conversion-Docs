@@ -6,6 +6,7 @@ weight: 2
 description: "To install the GroupDocs.Conversion MCP server on Windows, run the prerequisite bootstrapper and the guided installer in PowerShell — it registers the server in Claude Desktop, VS Code, and other clients automatically."
 keywords: install MCP server Windows, MCP server Windows setup, Claude Desktop MCP Windows config location, dnx not recognized Windows
 productName: GroupDocs.Conversion MCP Server
+toc: True
 ---
 
 To install the GroupDocs.Conversion MCP server on **Windows**, run the prerequisite bootstrapper and the guided installer in PowerShell — it registers the server in Claude Desktop, VS Code, and other clients automatically:

@@ -6,6 +6,7 @@ weight: 7
 description: "The GroupDocs.Conversion MCP server runs in evaluation mode out of the box; your existing GroupDocs.Conversion license unlocks full functionality — point the installer's licensePath (or GROUPDOCS_LICENSE_PATH) at your .lic file."
 keywords: GroupDocs MCP license, MCP server evaluation mode, does my GroupDocs license cover MCP, remove evaluation watermark
 productName: GroupDocs.Conversion MCP Server
+toc: True
 ---
 
 The GroupDocs.Conversion MCP server runs in **evaluation mode out of the box** — no sign-up, no key. Your existing GroupDocs.Conversion (or GroupDocs.Total) license unlocks full functionality: point the installer's `licensePath` — or the `GROUPDOCS_LICENSE_PATH` environment variable in a manual install — at your `.lic` file.

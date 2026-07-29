@@ -6,6 +6,7 @@ weight: 3
 description: "Install the GroupDocs.Conversion MCP server on Linux with the setup bootstrapper (installs PowerShell, Docker or the .NET 10 SDK with libgdiplus and libfontconfig1) and the guided installer."
 keywords: install MCP server Linux, MCP server Ubuntu, libgdiplus MCP error, self-hosted document conversion Linux
 productName: GroupDocs.Conversion MCP Server
+toc: True
 ---
 
 Install the GroupDocs.Conversion MCP server on **Linux** with the setup bootstrapper — it installs PowerShell (`pwsh`) plus Docker, or the .NET 10 SDK with `libgdiplus` and `libfontconfig1` — and then the guided installer:

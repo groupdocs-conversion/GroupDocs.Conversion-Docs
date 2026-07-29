@@ -8,6 +8,7 @@ keywords: get_document_info MCP, MCP document info tool, ai agent check page cou
 productName: GroupDocs.Conversion MCP Server
 generated: true
 serverVersion: 26.7.2
+toc: True
 ---
 
 `get_document_info` returns the file type, page count, and basic properties (author, title, dates, password-protected flag) of a document — without converting it. Example prompt: *"How many pages does contract.pdf have?"*

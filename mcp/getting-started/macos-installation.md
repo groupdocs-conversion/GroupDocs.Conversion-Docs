@@ -6,6 +6,7 @@ weight: 4
 description: "Install the GroupDocs.Conversion MCP server on macOS (Intel and Apple Silicon) via Homebrew-based bootstrap and the guided installer — registered into Claude Desktop and other clients automatically."
 keywords: install MCP server macOS, MCP server Mac Apple Silicon, Claude Desktop MCP config Mac location, brew install MCP prerequisites
 productName: GroupDocs.Conversion MCP Server
+toc: True
 ---
 
 Install the GroupDocs.Conversion MCP server on **macOS** — Intel and Apple Silicon — via the Homebrew-based bootstrap and the guided installer, registered into Claude Desktop and other clients automatically:

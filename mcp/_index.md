@@ -7,6 +7,7 @@ description: "GroupDocs.Conversion MCP server lets AI agents like Claude, Cursor
 keywords: document conversion MCP server, MCP server for documents, document processing MCP, convert documents with AI agent, Claude convert files locally
 productName: GroupDocs.Conversion MCP Server
 hideChildren: True
+toc: True
 ---
 
 **GroupDocs.Conversion MCP server** lets AI agents like Claude, Cursor, and Copilot convert documents between 100+ formats — PDF, Word, Excel, PowerPoint, images, Markdown — **locally on your machine**. Files are never uploaded to any cloud service. Install with one command:

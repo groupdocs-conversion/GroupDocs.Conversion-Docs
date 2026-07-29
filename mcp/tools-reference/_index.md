@@ -8,6 +8,7 @@ keywords: MCP tools list document conversion, convert MCP tool parameters, MCP t
 productName: GroupDocs.Conversion MCP Server
 generated: true
 serverVersion: 26.7.2
+toc: True
 ---
 
 Complete reference of every tool the GroupDocs.Conversion MCP server exposes to AI agents, with parameters, example prompts, and results. Captured from a live `tools/list` call against server version **26.7.2** (raw capture: `tools-list.generated.json` in this section's source).

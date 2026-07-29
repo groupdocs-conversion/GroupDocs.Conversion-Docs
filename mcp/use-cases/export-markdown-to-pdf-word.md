@@ -6,6 +6,7 @@ weight: 3
 description: "Ask your AI agent to export any Markdown file or generated content to a polished PDF or Word document — with tables, code blocks, and structure preserved — using the GroupDocs.Conversion MCP server, locally."
 keywords: convert markdown to PDF MCP, markdown to Word docx MCP server, export Claude output to PDF, AI generate professional PDF report
 productName: GroupDocs.Conversion MCP Server
+toc: True
 ---
 
 Ask your AI agent to export any Markdown file — or the content it just generated — to a **polished PDF or Word document**, with tables, code blocks, and document structure preserved, using the GroupDocs.Conversion MCP server, locally:
