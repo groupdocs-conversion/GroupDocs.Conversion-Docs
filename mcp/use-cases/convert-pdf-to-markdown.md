@@ -55,7 +55,7 @@ The same one-prompt pattern converts DOCX, XLSX, PPTX, HTML, and the rest of the
 
 ## Troubleshooting
 
-* **Output missing structure?** Scanned (image-only) PDFs have no text layer to convert — OCR is not currently part of this server; see the honest note in the [FAQ]({{< ref "conversion/mcp/troubleshooting-faq.md" >}}).
+* **Output missing structure?** Scanned (image-only) PDFs have no text layer to convert — OCR is not currently part of this server; see the OCR question in [Troubleshooting & FAQ]({{< ref "conversion/mcp/troubleshooting-faq.md" >}}).
 * **Server not visible in the client?** Restart the client after registration; see [Troubleshooting]({{< ref "conversion/mcp/troubleshooting-faq.md" >}}).
 
 ## FAQ
