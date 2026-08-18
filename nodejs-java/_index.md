@@ -11,7 +11,7 @@ AddLibInfoScript: True
 structuredData:
     showOrganization: True
 ---
-<img src="/conversion/nodejs-java/images/home.png" alt="groupdocs-conversion-nodejs-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
+<img src="/logo/128x128/groupdocs-conversion-nodejs.png" alt="groupdocs-conversion-nodejs-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
 <dt class="flex flex-wrap align-center gdoc-props__meta">
     <a href='https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-conversion/23.12/' class="release-version-link">

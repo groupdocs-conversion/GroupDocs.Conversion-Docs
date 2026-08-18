@@ -10,7 +10,7 @@ hideChildren: True
 structuredData:
     showOrganization: True
 ---
-<img src="/conversion/net/images/home.png" alt="groupdocs-conversion-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
+<img src="/logo/128x128/groupdocs-conversion-net.png" alt="groupdocs-conversion-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
 GroupDocs.Conversion for .NET is an advanced document conversion API developed to convert files of different formats from within any .NET application.  
 
