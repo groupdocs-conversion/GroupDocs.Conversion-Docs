@@ -201,15 +201,15 @@ GeekdocHidden: true
 ## Page Description Language
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
-| [CGM](/conversion/net/convert/page-description-language/) | Computer Graphics Metafile |<!--Load--> ✅ |<!--Save-->  |
-| [EPS](/conversion/net/convert/page-description-language/) | Encapsulated PostScript File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [OXPS](/conversion/net/convert/page-description-language/) | XML Paper Specification File |<!--Load--> ✅ |<!--Save-->  |
-| [PCL](/conversion/net/convert/page-description-language/) | Printer Command Language Document |<!--Load--> ✅ |<!--Save--> ✅ |
-| [PS](/conversion/net/convert/page-description-language/) | PostScript File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [SVG](/conversion/net/convert/page-description-language/) | Scalable Vector Graphics File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [SVGZ](/conversion/net/convert/page-description-language/) | Compressed Scalable Vector Graphics File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [TEX](/conversion/net/convert/page-description-language/) | LaTeX Source Document |<!--Load--> ✅ |<!--Save--> ✅ |
-| [XPS](/conversion/net/convert/page-description-language/) | XML Paper Specification File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [CGM](/conversion/net/convert/page-layout/) | Computer Graphics Metafile |<!--Load--> ✅ |<!--Save-->  |
+| [EPS](/conversion/net/convert/page-layout/) | Encapsulated PostScript File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [OXPS](/conversion/net/convert/page-layout/) | XML Paper Specification File |<!--Load--> ✅ |<!--Save-->  |
+| [PCL](/conversion/net/convert/page-layout/) | Printer Command Language Document |<!--Load--> ✅ |<!--Save--> ✅ |
+| [PS](/conversion/net/convert/page-layout/) | PostScript File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [SVG](/conversion/net/convert/page-layout/) | Scalable Vector Graphics File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [SVGZ](/conversion/net/convert/page-layout/) | Compressed Scalable Vector Graphics File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [TEX](/conversion/net/convert/page-layout/) | LaTeX Source Document |<!--Load--> ✅ |<!--Save--> ✅ |
+| [XPS](/conversion/net/convert/page-layout/) | XML Paper Specification File |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## PDF
 | From | Description | Load | Save |
