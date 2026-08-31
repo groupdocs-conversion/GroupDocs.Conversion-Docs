@@ -61,7 +61,7 @@ GeekdocHidden: true
 | --- | --- | :---: | :---: |
 | [7Z](/conversion/net/convert/compression/) | 7-Zip Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [BZ2](/conversion/net/convert/compression/) | Bzip2 Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [CAB](/conversion/net/convert/compression/) | Windows Cabinet File |<!--Load--> ✅ |<!--Save-->  |
+| [CAB](/conversion/net/convert/compression/) | Windows Cabinet File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [CPIO](/conversion/net/convert/compression/) | CPIO Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [GZ](/conversion/net/convert/compression/) | Gnu Zipped Archive |<!--Load--> ✅ |<!--Save--> ✅ |
 | [GZIP](/conversion/net/convert/compression/) | Gzip Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
@@ -73,6 +73,7 @@ GeekdocHidden: true
 | [RAR](/conversion/net/convert/compression/) | RAR Compressed Archive |<!--Load--> ✅ |<!--Save-->  |
 | [TAR](/conversion/net/convert/compression/) | Consolidated Unix File Archive |<!--Load--> ✅ |<!--Save--> ✅ |
 | [UUE](/conversion/net/convert/compression/) | Uuencoded archive |<!--Load--> ✅ |<!--Save--> ✅ |
+| [XAR](/conversion/net/convert/compression/) | eXtensible ARchive |<!--Load--> ✅ |<!--Save--> ✅ |
 | [XZ](/conversion/net/convert/compression/) | Xz Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [Z](/conversion/net/convert/compression/) | Unix Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [ZIP](/conversion/net/convert/compression/) | ZIP Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
@@ -88,6 +89,8 @@ GeekdocHidden: true
 ## Diagram
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
+| [DRAWIO](/conversion/net/convert/diagram/) | diagrams.net Diagram |<!--Load-->  |<!--Save--> ✅ |
+| [MMD](/conversion/net/convert/diagram/) | Mermaid Diagram |<!--Load--> ✅ |<!--Save-->  |
 | [VDW](/conversion/net/convert/diagram/) | Visio Web Drawing |<!--Load--> ✅ |<!--Save-->  |
 | [VDX](/conversion/net/convert/diagram/) | Visio Drawing XML File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [VSD](/conversion/net/convert/diagram/) | Visio Drawing File |<!--Load--> ✅ |<!--Save--> ✅ |
@@ -299,4 +302,4 @@ GeekdocHidden: true
 | [ODT](/conversion/net/convert/wordprocessing/) | OpenDocument Text Document |<!--Load--> ✅ |<!--Save--> ✅ |
 | [OTT](/conversion/net/convert/wordprocessing/) | OpenDocument Document Template |<!--Load--> ✅ |<!--Save--> ✅ |
 | [RTF](/conversion/net/convert/wordprocessing/) | Rich Text Format File |<!--Load--> ✅ |<!--Save--> ✅ |
-| [TXT](/conversion/net/convert/wordprocessing/) | Plain Text File |<!--Load--> ✅ |<!--Save--> ✅
+| [TXT](/conversion/net/convert/wordprocessing/) | Plain Text File |<!--Load--> ✅ |<!--Save--> ✅ |
