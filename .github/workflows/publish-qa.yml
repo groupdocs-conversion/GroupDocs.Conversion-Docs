@@ -39,14 +39,15 @@ jobs:
           cp -r net common/content/${{ env.PRODUCT }}
           cp -r nodejs-java common/content/${{ env.PRODUCT }}
           cp -r python-net common/content/${{ env.PRODUCT }}
+          cp -r mcp common/content/${{ env.PRODUCT }}
           cp _index.md common/content/${{ env.PRODUCT }}
           hugo --source common --minify --baseURL 'https://docs-qa.groupdocs.com/'
 
 
       - name: Move MD files to ugly URLs
         run: |
-          chmod +x common/move_md_to_ugly_urls.sh
-          ./common/move_md_to_ugly_urls.sh common/public
+          chmod +x common/scripts/move_md_to_ugly_urls.sh
+          ./common/scripts/move_md_to_ugly_urls.sh common/public
 
       - name: Deploy sitemap
         uses: nogsantos/scp-deploy@master

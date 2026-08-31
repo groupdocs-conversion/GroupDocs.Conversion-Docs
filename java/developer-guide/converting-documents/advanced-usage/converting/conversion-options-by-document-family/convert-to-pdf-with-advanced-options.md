@@ -62,11 +62,6 @@ public class ConvertToPdfWithAdvancedOptions {
 `annual-review.docx` is sample file used in this example. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/convert-to-pdf-with-advanced-options/annual-review.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "converted_with_options.pdf" >}}  
-{{< tab-text >}}
-`converted_with_options.png` is converted PDF document. Click [here](/conversion/java/_sample_files/developer-guide/converting-documents/convert-to-pdf-with-advanced-options/converted_with_options.pdf) to download it.
-{{< /tab-text >}}
-{{< /tab >}}
 {{< /tabs >}}
 
 ### PDF-Specific Options:

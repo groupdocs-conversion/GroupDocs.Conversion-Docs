@@ -1,6 +1,8 @@
 ---
 id: supported-document-formats
 url: conversion/python-net/supported-document-formats
+aliases:
+    - /conversion/python-net/supported-file-formats/
 title: Supported Document Formats
 linkTitle: Supported Document Formats
 weight: 2

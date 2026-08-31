@@ -3,8 +3,8 @@ id: conversion
 url: conversion
 title: GroupDocs.Conversion Product Family
 description: "Use GroupDocs.Conversion libraries to convert PDF and Word documents, Excel spreadsheets, PowerPoint presentations, images of various formats like PNG, JPEG, BMP.
-Just couple lines of C# or Java, JavaScript or Python code to convert your documents quickly and accurately."
-keywords: "Convert file in C#, Java, JavaScript or Python" 
+Just couple lines of C# or Java, JavaScript or Python code to convert your documents quickly and accurately. Or let AI agents like Claude, Cursor, and Copilot convert documents locally through the GroupDocs.Conversion MCP server."
+keywords: "Convert file in C#, Java, JavaScript or Python, document conversion MCP server, convert documents with AI agents" 
 geekdocSkip: true
 geekdocNav: false
 geekdocAlign: center
@@ -25,6 +25,7 @@ Elevate your C#, ASP.NET, and other .NET applications with the premier file conv
         <li><a href="#conversion_java">Java</a></li>
         <li><a href="#conversion_nodejs-java">Node.js</a></li>
         <li><a href="#conversion_python-net">Python</a></li>
+        <li><a href="#conversion_mcp">MCP</a></li>
     </ul>
 </div>
 
@@ -180,7 +181,7 @@ Elevate your C#, ASP.NET, and other .NET applications with the premier file conv
                 <div class="gdoc-platform__col-descr">Start quickly with our getting started documentation</div>
                 <ul class="gdoc-platform__col-links">
                     <li> <a href='/conversion/python-net/system-requirements/'>System Requirements</a></li>
-                    <li> <a href='/conversion/python-net/supported-file-formats/'>Supported File Formats</a></li>
+                    <li> <a href='/conversion/python-net/supported-document-formats/'>Supported File Formats</a></li>
                     <li> <a href='/conversion/python-net/getting-started/installation/'>Installation</a></li>
                     <li> <a href='/conversion/python-net/getting-started/quick-start-guide'>Quick Start Guide</a></li>
                 </ul>
@@ -209,6 +210,53 @@ Elevate your C#, ASP.NET, and other .NET applications with the premier file conv
         </div>
         <div class="gdoc-platform__footer">
             <a class="gdoc-platform__footer-btn"  href='/conversion/python-net/'>More</a>
+        </div>
+    </div>
+    <div class="gdoc-platform">
+        <a id="conversion_mcp"></a>
+        <div class="gdoc-platform__header">
+            <svg class="gdoc-platform__header-icon"><use xlink:href="/img/groupdocs-stack.svg#net"></use></svg>
+            <a class="gdoc-platform__header-title"  href='/conversion/mcp/'>GroupDocs.Conversion MCP Server (AI Agents)</a>
+            <a class="gdoc-platform__header-btn"  href='/conversion/mcp/'>More</a>
+        </div>
+        <div class="gdoc-platform__cols">
+            <div class="gdoc-platform__col">
+                <div class="gdoc-platform__col-title">
+                <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
+                <div>Getting started</div></div>
+                <div class="gdoc-platform__col-descr">Convert documents with Claude, Cursor, and Copilot — locally</div>
+                <ul class="gdoc-platform__col-links">
+                    <li> <a href='/conversion/mcp/getting-started/'>Quick start</a></li>
+                    <li> <a href='/conversion/mcp/getting-started/install-in-ai-clients/'>Register in AI clients</a></li>
+                    <li> <a href='/conversion/mcp/getting-started/licensing/'>Licensing</a></li>
+                    <li> <a href='/conversion/mcp/getting-started/system-requirements/'>System requirements</a></li>
+                </ul>
+            </div>
+            <div class="gdoc-platform__col">
+                    <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
+                    <div>Use cases</div></div>
+                    <div class="gdoc-platform__col-descr">One prompt per scenario — files never leave your machine</div>
+                    <ul class="gdoc-platform__col-links">
+                        <li> <a href='/conversion/mcp/use-cases/convert-documents-with-ai-agents/'>Convert documents with AI agents</a></li>
+                        <li> <a href='/conversion/mcp/use-cases/convert-pdf-to-markdown/'>PDF to Markdown for RAG</a></li>
+                        <li> <a href='/conversion/mcp/use-cases/batch-convert-folder/'>Batch-convert a folder</a></li>
+                        <li> <a href='/conversion/mcp/use-cases/on-premise-document-conversion/'>On-premise deployment</a></li>
+                    </ul>
+                    </div>
+            <div class="gdoc-platform__col">
+                    <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#git-big"></use></svg>
+                    <div>Open source</div></div>
+                    <div class="gdoc-platform__col-descr">Server source, installer, and integration tests on GitHub</div>
+                    <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
+                    <li> <a href='https://github.com/groupdocs-conversion/GroupDocs.Conversion.Mcp'>GroupDocs.Conversion.Mcp server</a></li>
+                    <li> <a href='https://github.com/groupdocs/GroupDocs.Mcp.Installer'>GroupDocs MCP Installer</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="gdoc-platform__footer">
+            <a class="gdoc-platform__footer-btn"  href='/conversion/mcp/'>More</a>
         </div>
     </div>
     <h2 class="gdoc-product-title">Live demos</h2>

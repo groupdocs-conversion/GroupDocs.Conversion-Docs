@@ -1,0 +1,140 @@
+{
+    "tools":  [
+                  {
+                      "name":  "get_supported_formats",
+                      "description":  "Lists every target format the source document can be converted to, with primary/secondary indicators. Call this tool immediately whenever the user asks what formats they can convert a file to, what conversions are supported, or which output types are available for a given document. Do NOT pre-check whether files exist — just pass the filename the user provided. The tool resolves files from storage and returns an error with available files if a name is not found.",
+                      "inputSchema":  {
+                                          "type":  "object",
+                                          "properties":  {
+                                                             "file":  {
+                                                                          "type":  "object",
+                                                                          "properties":  {
+                                                                                             "filePath":  {
+                                                                                                              "description":  "File path or name in the configured storage",
+                                                                                                              "type":  [
+                                                                                                                           "string",
+                                                                                                                           "null"
+                                                                                                                       ]
+                                                                                                          },
+                                                                                             "fileContent":  {
+                                                                                                                 "description":  "Base64-encoded file content",
+                                                                                                                 "type":  [
+                                                                                                                              "string",
+                                                                                                                              "null"
+                                                                                                                          ]
+                                                                                                             },
+                                                                                             "fileName":  {
+                                                                                                              "description":  "Original filename with extension (required with fileContent)",
+                                                                                                              "type":  [
+                                                                                                                           "string",
+                                                                                                                           "null"
+                                                                                                                       ]
+                                                                                                          }
+                                                                                         }
+                                                                      }
+                                                         },
+                                          "required":  [
+                                                           "file"
+                                                       ]
+                                      },
+                      "execution":  {
+                                        "taskSupport":  "optional"
+                                    }
+                  },
+                  {
+                      "name":  "get_document_info",
+                      "description":  "Returns file type, page count, and basic properties (author, title, dates, password-protected) for a source document. Call this tool immediately whenever the user asks to inspect a document, get document info, check file type, page count, or properties. Do NOT pre-check whether files exist — just pass the filename the user provided. The tool resolves files from storage and returns an error with available files if a name is not found.",
+                      "inputSchema":  {
+                                          "type":  "object",
+                                          "properties":  {
+                                                             "file":  {
+                                                                          "type":  "object",
+                                                                          "properties":  {
+                                                                                             "filePath":  {
+                                                                                                              "description":  "File path or name in the configured storage",
+                                                                                                              "type":  [
+                                                                                                                           "string",
+                                                                                                                           "null"
+                                                                                                                       ]
+                                                                                                          },
+                                                                                             "fileContent":  {
+                                                                                                                 "description":  "Base64-encoded file content",
+                                                                                                                 "type":  [
+                                                                                                                              "string",
+                                                                                                                              "null"
+                                                                                                                          ]
+                                                                                                             },
+                                                                                             "fileName":  {
+                                                                                                              "description":  "Original filename with extension (required with fileContent)",
+                                                                                                              "type":  [
+                                                                                                                           "string",
+                                                                                                                           "null"
+                                                                                                                       ]
+                                                                                                          }
+                                                                                         }
+                                                                      }
+                                                         },
+                                          "required":  [
+                                                           "file"
+                                                       ]
+                                      },
+                      "execution":  {
+                                        "taskSupport":  "optional"
+                                    }
+                  },
+                  {
+                      "name":  "convert",
+                      "description":  "Converts a document to a different format and saves the result to storage. Supports PDF, DOCX, XLSX, PPTX, HTML, PNG, JPG, and 70+ more formats. Call this tool immediately whenever the user asks to convert, change format, export, or save as a different file type. Do NOT pre-check whether files exist — just pass the filenames the user provided. The tool resolves files from storage and returns an error with available files if a name is not found.",
+                      "inputSchema":  {
+                                          "type":  "object",
+                                          "properties":  {
+                                                             "file":  {
+                                                                          "type":  "object",
+                                                                          "properties":  {
+                                                                                             "filePath":  {
+                                                                                                              "description":  "File path or name in the configured storage",
+                                                                                                              "type":  [
+                                                                                                                           "string",
+                                                                                                                           "null"
+                                                                                                                       ]
+                                                                                                          },
+                                                                                             "fileContent":  {
+                                                                                                                 "description":  "Base64-encoded file content",
+                                                                                                                 "type":  [
+                                                                                                                              "string",
+                                                                                                                              "null"
+                                                                                                                          ]
+                                                                                                             },
+                                                                                             "fileName":  {
+                                                                                                              "description":  "Original filename with extension (required with fileContent)",
+                                                                                                              "type":  [
+                                                                                                                           "string",
+                                                                                                                           "null"
+                                                                                                                       ]
+                                                                                                          }
+                                                                                         }
+                                                                      },
+                                                             "format":  {
+                                                                            "description":  "Target format: pdf, docx, xlsx, pptx, html, png, jpg, csv, txt, rtf",
+                                                                            "type":  "string"
+                                                                        },
+                                                             "password":  {
+                                                                              "description":  "Password for protected documents",
+                                                                              "type":  [
+                                                                                           "string",
+                                                                                           "null"
+                                                                                       ],
+                                                                              "default":  null
+                                                                          }
+                                                         },
+                                          "required":  [
+                                                           "file",
+                                                           "format"
+                                                       ]
+                                      },
+                      "execution":  {
+                                        "taskSupport":  "optional"
+                                    }
+                  }
+              ]
+}

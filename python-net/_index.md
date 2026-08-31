@@ -12,7 +12,7 @@ structuredData:
     showOrganization: true
 ---
 
-<img src="/conversion/python-net/_images/home.svg" alt="groupdocs-conversion-python-via-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
+<img src="/logo/128x128/groupdocs-conversion-python.png" alt="groupdocs-conversion-python-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
 <img src="https://img.shields.io/pypi/v/groupdocs-conversion-net?label=GroupDocs.Conversion%20PyPI" alt="PyPI package">
 <img src="https://img.shields.io/pypi/dm/groupdocs-conversion-net?label=pypi%20downloads" alt="PyPI downloads">
