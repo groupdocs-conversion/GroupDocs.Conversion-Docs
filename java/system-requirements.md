@@ -15,6 +15,11 @@ GroupDocs.Conversion for Java does not require any external software or third-pa
 
 {{< /alert >}}
 
+## Hardware requirements
+* CPU: 2GHZ (1+ cores)
+* Available memory (RAM): 2GB
+* Free disk space: at least 1 GB
+
 ## Supported Operating Systems
 
 GroupDocs.Conversion for Java supports any 32-bit or 64-bit operating system where the Java framework is installed including, but not limited to:

@@ -9,23 +9,23 @@ keywords: Convert from Notes, Convert from OneNote, Convert OneNote
 productName: GroupDocs.Conversion for Java
 toc: True
 structuredData:
-    showOrganization: True
-    application:    
-        name: Convert OneNote in Java    
-        description: Convert OneNote to PDF natively with high performance using Java language and GroupDocs.Conversion for Java APIs
-        productCode: conversion
-        productPlatform: java 
-    showVideo: True
-    howTo:
-        name: How to convert OneNote to PDF in Java 
-        description: Learn how to convert OneNote to PDF in Java step by step
-        steps:
-        - name: Load source OneNote file 
-          text: Create an instance of Converter class and pass source OneNote file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements. 
-        - name: Specify convert options 
-          text: Create an instance of PdfConvertOptions class.
-        - name: Convert to PDF and save result 
-          text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
+  showOrganization: True
+  application:
+    name: Convert OneNote in Java
+    description: Convert OneNote to PDF natively with high performance using Java language and GroupDocs.Conversion for Java APIs
+    productCode: conversion
+    productPlatform: java
+  showVideo: True
+  howTo:
+    name: How to convert OneNote to PDF in Java
+    description: Learn how to convert OneNote to PDF in Java step by step
+    steps:
+      - name: Load source OneNote file
+        text: Create an instance of Converter class and pass source OneNote file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements.
+      - name: Specify convert options
+        text: Create an instance of PdfConvertOptions class.
+      - name: Convert to PDF and save result
+        text: Call Converter class Convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
 ## About note-taking file formats
@@ -42,6 +42,8 @@ Common OneNote file extensions and their associated file formats is .ONE.
 
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert your OneNote document into another file format. For example, OneNote to PDF conversion code snippet looks like this:
 
+{{< tabs "convert-onenote-to-pdf">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -53,8 +55,10 @@ PdfConvertOptions options = new PdfConvertOptions();
 // Convert to PDF format
 converter.convert("converted.pdf", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-Put it simply - you just load a OneNote file into the `Converter` class instance, select the desired output format and **GroupDocs.Conversion** does all the rest.  
+Put it simply - you just load a OneNote file into the `Converter` class instance, select the desired output format and **GroupDocs.Conversion** does all the rest.
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert) for more conversion options and customizations.

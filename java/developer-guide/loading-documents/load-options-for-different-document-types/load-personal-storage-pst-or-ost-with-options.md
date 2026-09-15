@@ -21,7 +21,7 @@ toc: True
 
 The following code snippet shows how to get folders within the personal storage document:
 
-{{< tabs "code-example">}}
+{{< tabs "personal-storage-get-folders">}}
 {{< tab "ConvertPdfAndFlattenAllFields.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
@@ -58,14 +58,14 @@ public class GetFoldersFromPersonalStorage {
 
 ### Convert each personal storage content to different formats
 
-The following code snippet shows how to convert each personal storage content to a different format based on the content type: 
+The following code snippet shows how to convert each personal storage content to a different format based on the content type:
 
 *   JPG attachments will be converted to PNG
 *   DOCX attachments will be converted to PDF
 *   Emails and all other types will be converted to HTML
 
-{{< tabs "code-example1">}}
-{{< tab "ConvertPersonalStorageContentToDifferentFormats.java" >}} 
+{{< tabs "personal-storage-convert-content-different-formats">}}
+{{< tab "ConvertPersonalStorageContentToDifferentFormats.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.ConvertOptionsProvider;

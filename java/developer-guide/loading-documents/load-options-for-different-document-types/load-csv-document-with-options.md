@@ -22,8 +22,8 @@ This documentation outlines how to load CSV documents with configurable options 
 
 The following code snippet shows how to convert a CSV document and control the way the date/time and numeric data have been processed:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertCsvByConvertingDateTimeAndNumericData.java" >}}  
+{{< tabs "load-csv-convert-date-time-numeric-data">}}
+{{< tab "ConvertCsvByConvertingDateTimeAndNumericData.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
@@ -63,8 +63,8 @@ public class ConvertCsvByConvertingDateTimeAndNumericData {
 
 The following code snippet shows how to convert a CSV document and specify the delimiter:
 
-{{< tabs "code-example1">}}
-{{< tab "ConvertCsvBySpecifyingDelimiter.java" >}}  
+{{< tabs "load-csv-specify-delimiter">}}
+{{< tab "ConvertCsvBySpecifyingDelimiter.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -103,8 +103,8 @@ public class ConvertCsvBySpecifyingDelimiter {
 
 The following code snippet shows how to convert a CSV document and specify the encoding:
 
-{{< tabs "code-example2">}}
-{{< tab "ConvertCsvBySpecifyingEncoding.java" >}}  
+{{< tabs "load-csv-specify-encoding">}}
+{{< tab "ConvertCsvBySpecifyingEncoding.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;

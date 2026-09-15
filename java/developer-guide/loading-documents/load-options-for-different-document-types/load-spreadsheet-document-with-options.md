@@ -28,8 +28,8 @@ These options enable precise handling of spreadsheet formats like XLS, XLSX, CSV
 
 The following code snippet shows how to convert a spreadsheet and hide comments:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertSpreadsheetAndHideComments.java" >}} 
+{{< tabs "load-spreadsheet-hide-comments">}}
+{{< tab "ConvertSpreadsheetAndHideComments.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -69,8 +69,8 @@ public class ConvertSpreadsheetAndHideComments {
 
 The following code snippet shows how to convert a spreadsheet and show grid lines:
 
-{{< tabs "code-example1">}}
-{{< tab "ConvertSpreadsheetByShowingGridLines.java" >}} 
+{{< tabs "load-spreadsheet-show-grid-lines">}}
+{{< tab "ConvertSpreadsheetByShowingGridLines.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -110,8 +110,8 @@ public class ConvertSpreadsheetByShowingGridLines {
 
 The following code snippet shows how to convert a spreadsheet and skip empty rows and columns:
 
-{{< tabs "code-example2">}}
-{{< tab "ConvertSpreadsheetBySkippingEmptyRowsAndColumns.java" >}} 
+{{< tabs "load-spreadsheet-skip-empty-rows-columns">}}
+{{< tab "ConvertSpreadsheetBySkippingEmptyRowsAndColumns.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -151,8 +151,8 @@ public class ConvertSpreadsheetBySkippingEmptyRowsAndColumns {
 
 The following code snippet shows how to convert a spreadsheet and specify font substitution for missing fonts:
 
-{{< tabs "code-example3">}}
-{{< tab "ConvertSpreadsheetBySpecifyingFontSubstitution.java" >}} 
+{{< tabs "load-spreadsheet-font-substitution">}}
+{{< tab "ConvertSpreadsheetBySpecifyingFontSubstitution.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.FontSubstitute;
@@ -199,8 +199,8 @@ public class ConvertSpreadsheetBySpecifyingFontSubstitution {
 
 The following code snippet shows how to convert a spreadsheet and specify the exact range of rows and columns to be converted:
 
-{{< tabs "code-example4">}}
-{{< tab "ConvertSpreadsheetBySpecifyingRange.java" >}} 
+{{< tabs "load-spreadsheet-specify-range">}}
+{{< tab "ConvertSpreadsheetBySpecifyingRange.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -240,8 +240,8 @@ public class ConvertSpreadsheetBySpecifyingRange {
 
 The following code snippet shows how to convert a spreadsheet including the hidden sheets:
 
-{{< tabs "code-example5">}}
-{{< tab "ConvertSpreadsheetWithHiddenSheetsIncluded.java" >}} 
+{{< tabs "load-spreadsheet-include-hidden-sheets">}}
+{{< tab "ConvertSpreadsheetWithHiddenSheetsIncluded.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;

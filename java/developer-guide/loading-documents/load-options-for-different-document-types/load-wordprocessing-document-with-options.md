@@ -23,6 +23,8 @@ GroupDocs.Conversion provides the [WordProcessingLoadOptions](https://reference
 
 The following code snippet shows how to convert a WordProcessing document and hide comments:
 
+{{< tabs "load-wordprocessing-hide-comments">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -35,11 +37,15 @@ Converter converter = new Converter("sample.docx", loadOptions);
 PdfConvertOptions options = new PdfConvertOptions();
 converter.convert("converted.pdf", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Hide tracked changes
 
 The following code snippet shows how to convert a WordProcessing document and hide tracked changes:
 
+{{< tabs "load-wordprocessing-hide-tracked-changes">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -52,11 +58,15 @@ Converter converter = new Converter("sample.docx", loadOptions);
 PdfConvertOptions options = new PdfConvertOptions();
 converter.convert("converted.pdf", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Specify font substitution
 
 The following code snippet shows how to convert a WordProcessing document and specify font substitution for missing fonts:
 
+{{< tabs "load-wordprocessing-font-substitution">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.FontSubstitute;
@@ -78,3 +88,5 @@ Converter converter = new Converter("sample.docx", loadOptions);
 PdfConvertOptions options = new PdfConvertOptions();
 converter.convert("converted.pdf", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}

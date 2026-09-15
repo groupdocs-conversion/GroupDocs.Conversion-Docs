@@ -19,6 +19,8 @@ GroupDocs.Conversion provides the [TxtLoadOptions](https://reference.groupdocs.
 
 The following code snippet shows how to convert a TXT document and control the way the leading spaces are processed:
 
+{{< tabs "load-txt-leading-spaces">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -33,11 +35,15 @@ Converter converter = new Converter("sample.txt", loadOptions);
 PdfConvertOptions options = new PdfConvertOptions();
 converter.convert("converted.pdf", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Control behavior of processing trailing spaces
 
 The following code snippet shows how to convert a TXT document and the way the trailing spaces are processed:
 
+{{< tabs "load-txt-trailing-spaces">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -51,11 +57,15 @@ Converter converter = new Converter("sample.txt", loadOptions);
 PdfConvertOptions options = new PdfConvertOptions();
 converter.convert("converted.pdf", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Specify encoding
 
 The following code snippet shows how to convert a TXT document and specify the encoding:
 
+{{< tabs "load-txt-specify-encoding">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -69,3 +79,5 @@ Converter converter = new Converter("sample.txt", loadOptions);
 PdfConvertOptions options = new PdfConvertOptions();
 converter.convert("converted.pdf", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}

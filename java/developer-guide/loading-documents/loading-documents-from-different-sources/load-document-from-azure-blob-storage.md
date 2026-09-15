@@ -10,6 +10,8 @@ hideChildren: False
 ---
 The following code snippet shows how to convert a document from Azure Blob Storage:
 
+{{< tabs "load-document-from-azure-blob-storage" >}}
+{{< tab "Java" >}}
 ```java
   package com.groupdocs.conversion.examples.advanced_usage.loading.loading_documents_from_different_sources;
 
@@ -79,3 +81,5 @@ public class LoadDocumentFromAzureBlobStorage {
 }
 
 ```
+{{< /tab >}}
+{{< /tabs >}}

@@ -9,33 +9,33 @@ keywords: Convert from PDF, Convert to PDF, Convert to PDF/A
 productName: GroupDocs.Conversion for Java
 toc: True
 structuredData:
-    showOrganization: True
-    application:    
-        name: Convert PDF in Java    
-        description: Convert PDF to Word natively with high performance using Java language and GroupDocs.Conversion for Java APIs
-        productCode: conversion
-        productPlatform: java 
-    showVideo: True
-    howTo:
-        name: How to convert PDF to DOCX in Java 
-        description: Learn how to convert PDF to DOCX in Java step by step
-        steps:
-        - name: Load source PDF file 
-          text: Create an instance of Converter class and pass source PDF file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements. 
-        - name: Specify convert options 
-          text: Create an instance of WordProcessingConvertOptions class.
-        - name: Convert to DOCX and save result 
-          text: Call Converter class convert method and pass the filename for the converted DOCX file and the WordProcessingConvertOptions object from the previous step as parameters.
+  showOrganization: True
+  application:
+    name: Convert PDF in Java
+    description: Convert PDF to Word natively with high performance using Java language and GroupDocs.Conversion for Java APIs
+    productCode: conversion
+    productPlatform: java
+  showVideo: True
+  howTo:
+    name: How to convert PDF to DOCX in Java
+    description: Learn how to convert PDF to DOCX in Java step by step
+    steps:
+      - name: Load source PDF file
+        text: Create an instance of Converter class and pass source PDF file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements.
+      - name: Specify convert options
+        text: Create an instance of WordProcessingConvertOptions class.
+      - name: Convert to DOCX and save result
+        text: Call Converter class convert method and pass the filename for the converted DOCX file and the WordProcessingConvertOptions object from the previous step as parameters.
 ---
 
 Portable Document Format (PDF) was developed to introduce a standard for document representation and other reference material in a format that is independent of application software, hardware as well as from operating systems. Content of PDF files is not limited to text only, it could be hyperlinks, images, interactive buttons and forms, electronic signatures, watermarks, and many more. Therefore, it is often needed to convert PDF files to some other formats to edit or modify their content. Using **GroupDocs.Conversion for Java** library you can convert PDF files to a wide range of popular file formats, and all you need for this is just several lines of lines code in Java programming language.
 
-GroupDocs.Conversion for Java supports different kinds of conversions from PDF documents to other file formats, and also conversion from different formats to PDF. You can examine conversion quality and accuracy online by using [GroupDocs.Conversion App](https://products.groupdocs.app/conversion/family) live demo. It works on any device and is  free.  
-  
+GroupDocs.Conversion for Java supports different kinds of conversions from PDF documents to other file formats, and also conversion from different formats to PDF. You can examine conversion quality and accuracy online by using [GroupDocs.Conversion App](https://products.groupdocs.app/conversion/family) live demo. It works on any device and is  free.
+
 ## Supported PDF file Conversions
 
 {{< include file="/conversion/java/_includes/supported-conversions/pdf.md" type="page" >}}
-  
+
 ## Convert PDF to Word
 
 Microsoft Word is one of the most convenient ways to edit and manage document content, that's why PDF to Word conversion is so popular. Transforming a PDF file to a Word document in a manual way could be a tricky and lengthy process. Much easier is to convert PDF to Word programmatically in Java.
@@ -43,8 +43,8 @@ This way any file created as PDF could be converted to a Word document for later
 
 GroupDocs.Conversion for Java supports PDF conversion to all popular formats of Microsoft Word like - DOC, DOCX, RTF, etc. The document transformation process is quite simple and straightforward from the user's point of view - all you need is two-three lines of code. The default format for PDF to Word conversion is DOCX - it's a well-known format for Microsoft Word 2007 and later versions which is a combination of XML and binary files.  
 Here is a code snippet for PDF to DOCX conversion:
-{{< tabs "code-example">}}
-{{< tab "PdfToDocxDocument.java" >}}  
+{{< tabs "convert-pdf-to-docx">}}
+{{< tab "PdfToDocxDocument.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.WordProcessingConvertOptions;
@@ -79,8 +79,8 @@ public class PdfToDocxDocument {
 {{< /tabs >}}
 
 GroupDocs.Conversion for Java also provides the [WordProcessingFileType](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.filetypes/wordprocessingfiletype/) class if you need to specify another Word file format as a target for your conversion. For example, DOC format represents documents generated by Microsoft Word 97-2003 and still is quite popular and the code snippet for PDF to DOC conversion is the following:
-{{< tabs "code-example1">}}
-{{< tab "PdfToDocDocument.java" >}}  
+{{< tabs "convert-pdf-to-doc">}}
+{{< tab "PdfToDocDocument.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.filetypes.WordProcessingFileType;
@@ -118,8 +118,8 @@ public class PdfToDocDocument {
 
 ## Convert PDF to Excel
 
-Spreadsheet formats are designed to represent data in the form of rows and columns, and this way tables are much easier to use. Therefore, when it's required to transform data from a PDF file into Excel format GroupDocs.Conversion library comes to the rescue.  
-  
+Spreadsheet formats are designed to represent data in the form of rows and columns, and this way tables are much easier to use. Therefore, when it's required to transform data from a PDF file into Excel format GroupDocs.Conversion library comes to the rescue.
+
 You can choose from a wide range of supported spreadsheet formats:
 
 * Microsoft Excel - XLS, XLSX, XLSM, XLSB, XLTX, XLT;
@@ -128,8 +128,8 @@ You can choose from a wide range of supported spreadsheet formats:
 
 Required spreadsheet format can be specified with the help of the [SpreadsheetFileType](https://reference.groupdocs.com/conversion/java/groupdocs.conversion.filetypes/spreadsheetfiletype) class, however, the default format for PDF to Spreadsheet conversion is XLSX.
 Please check below how to convert PDF to Excel in Java in a few lines of code.
-{{< tabs "code-example2">}}
-{{< tab "PdfToXlsxDocument.java" >}}  
+{{< tabs "convert-pdf-to-xlsx">}}
+{{< tab "PdfToXlsxDocument.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
@@ -168,8 +168,8 @@ public class PdfToXlsxDocument {
 Presentation file formats store collections of records to accommodate data such as slides, shapes, text, animations, video, audio, and embedded objects. The most popular app for creating and editing presentations is Microsoft PowerPoint with its PPT and PPTX file formats, though there are plenty of applications that work with OpenDocument formats like ODP and OTP.
 
 GroupDocs.Conversion is a wise choice when you have to convert a PDF file into PowerPoint format, and here is what the code snippet looks like for PDF to PPTX conversion in Java language:
-{{< tabs "code-example3">}}
-{{< tab "PdfToPptxDocument.java" >}}  
+{{< tabs "convert-pdf-to-pptx">}}
+{{< tab "PdfToPptxDocument.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
@@ -211,8 +211,8 @@ A popular use case is when you need to save the whole PDF document or some speci
 The code snippet for such conversion is a bit different from other conversions as you have to declare a [SavePageStream](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.contracts/savedocumentstream/) delegate that specifies the name format for the saved images. You can choose the desired image format by using the [ImageFileType](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.filetypes/ImageFileType) class.
 
 Please check a complete code example of PDF to PNG conversion below:
-{{< tabs "code-example4">}}
-{{< tab "PdfToPngDocument.java" >}}  
+{{< tabs "convert-pdf-to-png">}}
+{{< tab "PdfToPngDocument.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
@@ -234,7 +234,7 @@ public class PdfToPngDocument {
 
             // Create an object for conversion settings
             ImageConvertOptions options = new ImageConvertOptions();
-            
+
             // Set the output file format to PNG
             options.setFormat(ImageFileType.Png);
 

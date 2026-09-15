@@ -10,6 +10,8 @@ hideChildren: False
 ---
 The following code snippet shows how to convert a document from an URL:
 
+{{< tabs "load-document-from-url" >}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.exceptions.GroupDocsConversionException;
@@ -31,3 +33,5 @@ try {
     throw new GroupDocsConversionException(e.getMessage());
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

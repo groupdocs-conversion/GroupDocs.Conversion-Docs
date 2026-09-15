@@ -17,6 +17,8 @@ To load a file from a stream, follow these steps:
 
 The following code snippet serves this purpose:
 
+{{< tabs "load-document-from-stream" >}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.exceptions.GroupDocsConversionException;
@@ -39,5 +41,7 @@ try{
     throw new GroupDocsConversionException(e.getMessage());
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The snippet above uses the [FileInputStream](https://docs.oracle.com/javase/8/docs/api/java/io/FileInputStream.html) class instance. Similarly, you can use any other type of stream. Just make sure that the source stream contains any of the [supported file formats]({{< ref "conversion/java/supported-document-formats.md" >}}).

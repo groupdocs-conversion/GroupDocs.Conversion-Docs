@@ -19,8 +19,8 @@ This documentation explains how to load Note documents, such as OneNote files, u
 
 The following code snippet shows how to convert a Note document and specify font substitution for missing fonts:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertNoteBySpecifyingFontSubstitution.java" >}}  
+{{< tabs "load-note-font-substitution">}}
+{{< tab "ConvertNoteBySpecifyingFontSubstitution.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.FontSubstitute;

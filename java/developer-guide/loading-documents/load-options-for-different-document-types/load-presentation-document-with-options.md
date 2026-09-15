@@ -26,8 +26,8 @@ This approach is ideal for workflows involving large-scale presentation processi
 
 The following code snippet shows how to convert a presentation and hide comments:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertPresentationByHidingComments.java" >}} 
+{{< tabs "load-presentation-hide-comments">}}
+{{< tab "ConvertPresentationByHidingComments.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -66,8 +66,8 @@ public class ConvertPresentationByHidingComments {
 
 The following code snippet shows how to convert a presentation and specify font substitutions for missing fonts:
 
-{{< tabs "code-example1">}}
-{{< tab "ConvertPresentationBySpecifyingFontSubstitution.java" >}} 
+{{< tabs "load-presentation-font-substitution">}}
+{{< tab "ConvertPresentationBySpecifyingFontSubstitution.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.FontSubstitute;
@@ -114,8 +114,8 @@ public class ConvertPresentationBySpecifyingFontSubstitution {
 
 The following code snippet shows how to convert a presentation including the hidden slides:
 
-{{< tabs "code-example2">}}
-{{< tab "ConvertPresentationWithHiddenSlidesIncluded.java" >}} 
+{{< tabs "load-presentation-include-hidden-slides">}}
+{{< tab "ConvertPresentationWithHiddenSlidesIncluded.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;

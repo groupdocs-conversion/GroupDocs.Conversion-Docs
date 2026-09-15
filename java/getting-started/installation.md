@@ -27,7 +27,7 @@ All Java packages are hosted at [GroupDocs Artifact Repository](https://reposit
 
 First, you need to specify repository configuration/location in your project as follows:
 
-{{< tabs "example1">}}
+{{< tabs "installation-artifact-repository">}}
 {{< tab "Maven" >}}
 ```xml
 <repositories>
@@ -78,36 +78,36 @@ resolvers += Resolver.url("GroupDocs Repository", url("https://releases.groupdoc
 
 Then define the GroupDocs.Conversion for Java API dependency in your project as follows:
 
-{{< tabs "example2">}}
+{{< tabs "installation-conversion-dependency">}}
 {{< tab "Maven" >}}
 ```xml
 <dependencies>
-  <dependency>
-    <groupId>com.groupdocs</groupId>
-    <artifactId>groupdocs-conversion</artifactId>
-    <version>25.2</version>
-  </dependency>
+    <dependency>
+        <groupId>com.groupdocs</groupId>
+        <artifactId>groupdocs-conversion</artifactId>
+        <version>25.2</version>
+    </dependency>
 </dependencies>
 ```
 {{< /tab >}}
 {{< tab "Gradle" >}}
 ```xml
 dependencies {
-  implementation 'com.groupdocs:groupdocs-conversion:25.2'
-}
+        implementation 'com.groupdocs:groupdocs-conversion:25.2'
+        }
 ```
 {{< /tab >}}
 {{< tab "Kotlin" >}}
 ```xml
 dependencies {
-  implementation("com.groupdocs:groupdocs-conversion:25.2")
-}
+        implementation("com.groupdocs:groupdocs-conversion:25.2")
+        }
 ```
 {{< /tab >}}
 {{< tab "Ivy" >}}
 ```xml
 <dependency org="com.groupdocs" name="groupdocs-conversion" rev="25.2">
-  <artifact name="groupdocs-conversion" ext="jar"/>
+    <artifact name="groupdocs-conversion" ext="jar"/>
 </dependency>
 ```
 {{< /tab >}}
@@ -149,12 +149,12 @@ import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 
 public class App {
-  public static void main(String[] args) {
-    try (Converter converter = new Converter("sample.txt")) {
-      converter.convert("sample.pdf", new PdfConvertOptions());
+    public static void main(String[] args) {
+        try (Converter converter = new Converter("sample.txt")) {
+            converter.convert("sample.pdf", new PdfConvertOptions());
+        }
+        System.out.println("Conversion complete");
     }
-    System.out.println("Conversion complete");
-  }
 }
 ```
 {{< /tab >}}
@@ -163,69 +163,69 @@ public class App {
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.mycompany.app</groupId>
-  <artifactId>conversion-helloworld</artifactId>
-  <version>1.0-SNAPSHOT</version>
+    <groupId>com.mycompany.app</groupId>
+    <artifactId>conversion-helloworld</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-  <name>conversion-helloworld</name>
+    <name>conversion-helloworld</name>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>com.groupdocs</groupId>
-      <artifactId>groupdocs-conversion</artifactId>
-      <version>25.2</version>
-    </dependency>
-  </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>com.groupdocs</groupId>
+            <artifactId>groupdocs-conversion</artifactId>
+            <version>25.2</version>
+        </dependency>
+    </dependencies>
 
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <archive>
-            <manifest>
-              <mainClass>com.mycompany.app.App</mainClass>
-              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-            </manifest>
-            <manifestEntries>
-              <Specification-Vendor>My Company</Specification-Vendor>
-              <Implementation-Vendor>My Company</Implementation-Vendor>
-            </manifestEntries>
-          </archive>
-          <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.mycompany.app.App</mainClass>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                        </manifest>
+                        <manifestEntries>
+                            <Specification-Vendor>My Company</Specification-Vendor>
+                            <Implementation-Vendor>My Company</Implementation-Vendor>
+                        </manifestEntries>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-  <repositories>
-    <repository>
-      <id>GroupDocs Artifact Repository</id>
-      <name>GroupDocs Artifact Repository</name>
-      <url>https://releases.groupdocs.com/java/repo/</url>
-    </repository>
-  </repositories>
+    <repositories>
+        <repository>
+            <id>GroupDocs Artifact Repository</id>
+            <name>GroupDocs Artifact Repository</name>
+            <url>https://releases.groupdocs.com/java/repo/</url>
+        </repository>
+    </repositories>
 </project>
 ```
 {{< /tab >}}
