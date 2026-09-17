@@ -227,9 +227,9 @@ Elevate your C#, ASP.NET, and other .NET applications with the premier file conv
                 <div class="gdoc-platform__col-descr">Convert documents with Claude, Cursor, and Copilot — locally</div>
                 <ul class="gdoc-platform__col-links">
                     <li> <a href='/conversion/mcp/getting-started/'>Quick start</a></li>
-                    <li> <a href='/conversion/mcp/getting-started/install-in-ai-clients/'>Register in AI clients</a></li>
+                    <li> <a href='/conversion/net/mcp/install-in-ai-clients/'>Register in AI clients</a></li>
                     <li> <a href='/conversion/mcp/getting-started/licensing/'>Licensing</a></li>
-                    <li> <a href='/conversion/mcp/getting-started/system-requirements/'>System requirements</a></li>
+                    <li> <a href='/conversion/net/mcp/system-requirements/'>System requirements</a></li>
                 </ul>
             </div>
             <div class="gdoc-platform__col">

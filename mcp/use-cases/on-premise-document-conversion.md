@@ -13,12 +13,12 @@ Run document conversion for AI agents **fully on-premise**: the GroupDocs.Conver
 
 ## The architecture in one picture
 
-```
-┌─────────────┐   stdio (stdin/stdout)   ┌──────────────────────┐        ┌──────────────────┐
-│  AI client   │ ───────────────────────► │  MCP server process   │ ─────► │ local filesystem  │
-│ (Claude, VS  │ ◄─────────────────────── │ (GroupDocs engine)    │ ◄───── │ storage / output  │
-│ Code, agent) │      tool results        │  child process        │        │ folders           │
-└─────────────┘                           └──────────────────────┘        └──────────────────┘
+```text
++--------------+          +--------------------+         +------------------+
+|  AI client   |  stdio   | MCP server process | reads / | local filesystem |
+| (Claude, VS  | <----->  | (GroupDocs engine) | <-----> | storage / output |
+| Code, agent) | JSON-RPC |   child process    |  writes |     folders      |
++--------------+          +--------------------+         +------------------+
 ```
 
 * **Transport:** the AI client *starts the server as a child process* and communicates over standard input/output. The server never listens on a network socket — there is nothing to firewall, nothing to expose.
@@ -36,13 +36,17 @@ The container is self-contained (all native dependencies bundled, `linux/amd64` 
 docker run --rm -i \
   -v /srv/documents:/data \
   -v /srv/licenses:/license:ro \
-  -e GROUPDOCS_LICENSE_PATH=/license/GroupDocs.Total.lic \
-  ghcr.io/groupdocs-conversion/conversion-net-mcp:26.7.2
+  -e GROUPDOCS_LICENSE_PATH=/license/GroupDocs.Conversion.lic \
+  ghcr.io/groupdocs-conversion/conversion-net-mcp:26.9.0
 ```
 
-* Pin the immutable version tag (`:26.7.2`) — never `:latest` — for change control.
+{{< alert style="info" >}}
+The commands and config snippets on this page are for the **.NET** build of the server — the only platform available today. Installation and client setup: [MCP server for .NET]({{< ref "conversion/net/mcp/_index.md" >}}). Other platforms will expose the same tools with their own launch command; everything else on this page applies unchanged.
+{{< /alert >}}
+
+* Pin the immutable version tag (`:26.9.0`) — never `:latest` — for change control.
 * Mount the license read-only; like the documents, the license file never leaves the host.
-* For fleets, the [installer]({{< ref "conversion/mcp/getting-started/configuration.md" >}}) emits a `docker-compose.yml` (`-EmitCompose`) with the same volume and license mapping.
+* For fleets, the [installer]({{< ref "conversion/net/mcp/configuration.md" >}}) emits a `docker-compose.yml` (`-EmitCompose`) with the same volume and license mapping.
 
 ## License management
 

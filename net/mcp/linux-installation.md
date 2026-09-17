@@ -1,11 +1,13 @@
 ---
 id: mcp-linux-installation
-url: conversion/mcp/getting-started/linux-installation
+url: conversion/net/mcp/linux-installation
+aliases:
+    - /conversion/mcp/getting-started/linux-installation/
 title: Install on Linux
 weight: 3
 description: "Install the GroupDocs.Conversion MCP server on Linux with the setup bootstrapper (installs PowerShell, Docker or the .NET 10 SDK with libgdiplus and libfontconfig1) and the guided installer."
 keywords: install MCP server Linux, MCP server Ubuntu, libgdiplus MCP error, self-hosted document conversion Linux
-productName: GroupDocs.Conversion MCP Server
+productName: GroupDocs.Conversion MCP Server for .NET
 toc: True
 ---
 
@@ -48,7 +50,7 @@ docker run --rm -i -v $(pwd)/documents:/data ghcr.io/groupdocs-conversion/conver
 dnx GroupDocs.Conversion.Mcp --yes
 ```
 
-Client config locations on Linux: Claude Desktop `~/.config/Claude/claude_desktop_config.json`, VS Code user-level `~/.config/Code/User/mcp.json` — full list in [Register in AI clients]({{< ref "conversion/mcp/getting-started/install-in-ai-clients.md" >}}).
+Client config locations on Linux: Claude Desktop `~/.config/Claude/claude_desktop_config.json`, VS Code user-level `~/.config/Code/User/mcp.json` — full list in [Register in AI clients]({{< ref "conversion/net/mcp/install-in-ai-clients.md" >}}).
 
 ## Verify
 
@@ -64,4 +66,4 @@ A passing run completes the MCP handshake (three tools listed) and — when a do
 * **`docker: permission denied`** — your user is not in the `docker` group yet; `newgrp docker` or re-login.
 * **Fonts look wrong in converted output** — install `ttf-mscorefonts-installer` (the setup script pre-accepts its EULA via debconf).
 
-Installing on a different OS? [Windows]({{< ref "conversion/mcp/getting-started/windows-installation.md" >}}) · [macOS]({{< ref "conversion/mcp/getting-started/macos-installation.md" >}})
+Installing on a different OS? [Windows]({{< ref "conversion/net/mcp/windows-installation.md" >}}) · [macOS]({{< ref "conversion/net/mcp/macos-installation.md" >}})

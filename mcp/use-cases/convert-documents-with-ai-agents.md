@@ -15,6 +15,10 @@ Use any MCP-compatible AI agent — Claude, Cursor, GitHub Copilot, Windsurf, Co
 dnx GroupDocs.Conversion.Mcp --yes
 ```
 
+{{< alert style="info" >}}
+The commands and config snippets on this page are for the **.NET** build of the server — the only platform available today. Installation and client setup: [MCP server for .NET]({{< ref "conversion/net/mcp/_index.md" >}}). Other platforms will expose the same tools with their own launch command; everything else on this page applies unchanged.
+{{< /alert >}}
+
 > Convert contract.docx to PDF
 
 This page shows the pattern once; every specific scenario links from here.
@@ -30,7 +34,7 @@ The server exposes three tools — [`convert`]({{< ref "conversion/mcp/tools-ref
 
 ## Setup (once)
 
-Register the server in your client — [full per-client reference]({{< ref "conversion/mcp/getting-started/install-in-ai-clients.md" >}}); Claude Desktop example:
+Register the server in your client — [full per-client reference]({{< ref "conversion/net/mcp/install-in-ai-clients.md" >}}); Claude Desktop example:
 
 ```json
 {
@@ -76,4 +80,4 @@ Conversion — full-fidelity format transformation. For field-level data extract
 No. The server runs locally over stdio; the data path is agent → local server → local filesystem. See [on-premise architecture]({{< ref "conversion/mcp/use-cases/on-premise-document-conversion.md" >}}).
 
 **Which AI clients work?**
-Claude Desktop, Claude Code, VS Code / GitHub Copilot, Visual Studio 2022, Cursor, Windsurf, Cline, Codex CLI, JetBrains Rider — [setup for each]({{< ref "conversion/mcp/getting-started/install-in-ai-clients.md" >}}).
+Claude Desktop, Claude Code, VS Code / GitHub Copilot, Visual Studio 2022, Cursor, Windsurf, Cline, Codex CLI, JetBrains Rider — [setup for each]({{< ref "conversion/net/mcp/install-in-ai-clients.md" >}}).

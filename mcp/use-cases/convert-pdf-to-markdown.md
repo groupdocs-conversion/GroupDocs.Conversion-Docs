@@ -15,6 +15,10 @@ Convert PDF files to clean, **LLM-ready Markdown** for your RAG pipeline or know
 dnx GroupDocs.Conversion.Mcp --yes
 ```
 
+{{< alert style="info" >}}
+The commands and config snippets on this page are for the **.NET** build of the server — the only platform available today. Installation and client setup: [MCP server for .NET]({{< ref "conversion/net/mcp/_index.md" >}}). Other platforms will expose the same tools with their own launch command; everything else on this page applies unchanged.
+{{< /alert >}}
+
 > Convert report.pdf to Markdown
 
 The agent calls the [`convert`]({{< ref "conversion/mcp/tools-reference/convert.md" >}}) tool with `format: "md"`; `report.md` appears in your output folder.
@@ -25,7 +29,7 @@ Every RAG pipeline starts with document → Markdown. Doing that through a cloud
 
 ## Setup
 
-Any MCP client works — [per-client reference]({{< ref "conversion/mcp/getting-started/install-in-ai-clients.md" >}}). Claude Desktop:
+Any MCP client works — [per-client reference]({{< ref "conversion/net/mcp/install-in-ai-clients.md" >}}). Claude Desktop:
 
 ```json
 {

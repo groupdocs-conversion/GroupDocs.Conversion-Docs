@@ -15,13 +15,17 @@ Ask your AI agent to export any Markdown file — or the content it just generat
 dnx GroupDocs.Conversion.Mcp --yes
 ```
 
+{{< alert style="info" >}}
+The commands and config snippets on this page are for the **.NET** build of the server — the only platform available today. Installation and client setup: [MCP server for .NET]({{< ref "conversion/net/mcp/_index.md" >}}). Other platforms will expose the same tools with their own launch command; everything else on this page applies unchanged.
+{{< /alert >}}
+
 > Save your analysis as analysis.md, then convert it to PDF
 
 Agents write Markdown natively; your stakeholders read PDF and Word. This page closes that gap without a headless browser, LaTeX toolchain, or cloud renderer — the conversion runs through a real layout engine on your machine.
 
 ## Setup
 
-Same one-time registration as every scenario — [per-client reference]({{< ref "conversion/mcp/getting-started/install-in-ai-clients.md" >}}). The agent needs a storage folder it can write Markdown into and convert from:
+Same one-time registration as every scenario — [per-client reference]({{< ref "conversion/net/mcp/install-in-ai-clients.md" >}}). The agent needs a storage folder it can write Markdown into and convert from:
 
 ```json
 "env": { "GROUPDOCS_MCP_STORAGE_PATH": "/path/to/documents" }

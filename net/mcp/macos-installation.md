@@ -1,11 +1,13 @@
 ---
 id: mcp-macos-installation
-url: conversion/mcp/getting-started/macos-installation
+url: conversion/net/mcp/macos-installation
+aliases:
+    - /conversion/mcp/getting-started/macos-installation/
 title: Install on macOS
 weight: 4
 description: "Install the GroupDocs.Conversion MCP server on macOS (Intel and Apple Silicon) via Homebrew-based bootstrap and the guided installer — registered into Claude Desktop and other clients automatically."
 keywords: install MCP server macOS, MCP server Mac Apple Silicon, Claude Desktop MCP config Mac location, brew install MCP prerequisites
-productName: GroupDocs.Conversion MCP Server
+productName: GroupDocs.Conversion MCP Server for .NET
 toc: True
 ---
 
@@ -46,7 +48,7 @@ docker run --rm -i -v $(pwd)/documents:/data ghcr.io/groupdocs-conversion/conver
 dnx GroupDocs.Conversion.Mcp --yes
 ```
 
-Client config locations on macOS: Claude Desktop `~/Library/Application Support/Claude/claude_desktop_config.json`, VS Code user-level `~/Library/Application Support/Code/User/mcp.json`, Cursor `~/.cursor/mcp.json` — full list in [Register in AI clients]({{< ref "conversion/mcp/getting-started/install-in-ai-clients.md" >}}).
+Client config locations on macOS: Claude Desktop `~/Library/Application Support/Claude/claude_desktop_config.json`, VS Code user-level `~/Library/Application Support/Code/User/mcp.json`, Cursor `~/.cursor/mcp.json` — full list in [Register in AI clients]({{< ref "conversion/net/mcp/install-in-ai-clients.md" >}}).
 
 ## Verify
 
@@ -62,4 +64,4 @@ The handshake lists the server's three tools; with a document in your storage fo
 * **Native (`dnx`) runs fail on graphics operations** — install `mono-libgdiplus` via Homebrew, or prefer the docker channel where everything is bundled.
 * **`pwsh` not found after install** — open a new terminal so the shell picks up the Homebrew path.
 
-Installing on a different OS? [Windows]({{< ref "conversion/mcp/getting-started/windows-installation.md" >}}) · [Linux]({{< ref "conversion/mcp/getting-started/linux-installation.md" >}})
+Installing on a different OS? [Windows]({{< ref "conversion/net/mcp/windows-installation.md" >}}) · [Linux]({{< ref "conversion/net/mcp/linux-installation.md" >}})

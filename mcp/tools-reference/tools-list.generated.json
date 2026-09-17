@@ -2,7 +2,7 @@
     "tools":  [
                   {
                       "name":  "get_supported_formats",
-                      "description":  "Lists every target format the source document can be converted to, with primary/secondary indicators. Call this tool immediately whenever the user asks what formats they can convert a file to, what conversions are supported, or which output types are available for a given document. Do NOT pre-check whether files exist — just pass the filename the user provided. The tool resolves files from storage and returns an error with available files if a name is not found.",
+                      "description":  "Lists every target format the source document can be converted to, with primary/secondary indicators. Call this tool immediately whenever the user asks what formats they can convert a file to, what conversions are supported, or which output types are available for a given document. Do NOT pre-check whether files exist â€” just pass the filename the user provided. The tool resolves files from storage and returns an error with available files if a name is not found.",
                       "inputSchema":  {
                                           "type":  "object",
                                           "properties":  {
@@ -10,21 +10,21 @@
                                                                           "type":  "object",
                                                                           "properties":  {
                                                                                              "filePath":  {
-                                                                                                              "description":  "File path or name in the configured storage",
+                                                                                                              "description":  "Name or path of a file in the configured storage, e.g. \u0027report.pdf\u0027 or \u0027output/report.pdf\u0027. Use this for files the server can already see.",
                                                                                                               "type":  [
                                                                                                                            "string",
                                                                                                                            "null"
                                                                                                                        ]
                                                                                                           },
                                                                                              "fileContent":  {
-                                                                                                                 "description":  "Base64-encoded file content",
+                                                                                                                 "description":  "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
                                                                                                                  "type":  [
                                                                                                                               "string",
                                                                                                                               "null"
                                                                                                                           ]
                                                                                                              },
                                                                                              "fileName":  {
-                                                                                                              "description":  "Original filename with extension (required with fileContent)",
+                                                                                                              "description":  "Filename with extension, e.g. \u0027report.pdf\u0027. Required alongside fileContent. May also be used on its own as an alias for filePath.",
                                                                                                               "type":  [
                                                                                                                            "string",
                                                                                                                            "null"
@@ -42,8 +42,18 @@
                                     }
                   },
                   {
+                      "name":  "get_license_status",
+                      "description":  "Returns how this MCP server is licensed, and â€” under metered licensing â€” how much has been consumed. Call this when the user asks about licensing, evaluation limitations, metered usage, remaining credit, or which product engine version is running. Returns a JSON object with `mode` (\"evaluation\", \"licensed\" or \"metered\"), `licensed` (true for both licensed and metered), `consumption` (null unless metered; otherwise `quantity` and `credit`, or `error` if the reading failed), and `server` / `engine` name and version. Takes no arguments and never modifies anything.",
+                      "inputSchema":  {
+                                          "type":  "object",
+                                          "properties":  {
+
+                                                         }
+                                      }
+                  },
+                  {
                       "name":  "get_document_info",
-                      "description":  "Returns file type, page count, and basic properties (author, title, dates, password-protected) for a source document. Call this tool immediately whenever the user asks to inspect a document, get document info, check file type, page count, or properties. Do NOT pre-check whether files exist — just pass the filename the user provided. The tool resolves files from storage and returns an error with available files if a name is not found.",
+                      "description":  "Returns file type, page count, and basic properties (author, title, dates, password-protected) for a source document. Call this tool immediately whenever the user asks to inspect a document, get document info, check file type, page count, or properties. Do NOT pre-check whether files exist â€” just pass the filename the user provided. The tool resolves files from storage and returns an error with available files if a name is not found.",
                       "inputSchema":  {
                                           "type":  "object",
                                           "properties":  {
@@ -51,21 +61,21 @@
                                                                           "type":  "object",
                                                                           "properties":  {
                                                                                              "filePath":  {
-                                                                                                              "description":  "File path or name in the configured storage",
+                                                                                                              "description":  "Name or path of a file in the configured storage, e.g. \u0027report.pdf\u0027 or \u0027output/report.pdf\u0027. Use this for files the server can already see.",
                                                                                                               "type":  [
                                                                                                                            "string",
                                                                                                                            "null"
                                                                                                                        ]
                                                                                                           },
                                                                                              "fileContent":  {
-                                                                                                                 "description":  "Base64-encoded file content",
+                                                                                                                 "description":  "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
                                                                                                                  "type":  [
                                                                                                                               "string",
                                                                                                                               "null"
                                                                                                                           ]
                                                                                                              },
                                                                                              "fileName":  {
-                                                                                                              "description":  "Original filename with extension (required with fileContent)",
+                                                                                                              "description":  "Filename with extension, e.g. \u0027report.pdf\u0027. Required alongside fileContent. May also be used on its own as an alias for filePath.",
                                                                                                               "type":  [
                                                                                                                            "string",
                                                                                                                            "null"
@@ -84,7 +94,7 @@
                   },
                   {
                       "name":  "convert",
-                      "description":  "Converts a document to a different format and saves the result to storage. Supports PDF, DOCX, XLSX, PPTX, HTML, PNG, JPG, and 70+ more formats. Call this tool immediately whenever the user asks to convert, change format, export, or save as a different file type. Do NOT pre-check whether files exist — just pass the filenames the user provided. The tool resolves files from storage and returns an error with available files if a name is not found.",
+                      "description":  "Converts a document to a different format and saves the result to storage. Supports PDF, DOCX, XLSX, PPTX, HTML, PNG, JPG, and 70+ more formats. Call this tool immediately whenever the user asks to convert, change format, export, or save as a different file type. Do NOT pre-check whether files exist â€” just pass the filenames the user provided. The tool resolves files from storage and returns an error with available files if a name is not found.",
                       "inputSchema":  {
                                           "type":  "object",
                                           "properties":  {
@@ -92,21 +102,21 @@
                                                                           "type":  "object",
                                                                           "properties":  {
                                                                                              "filePath":  {
-                                                                                                              "description":  "File path or name in the configured storage",
+                                                                                                              "description":  "Name or path of a file in the configured storage, e.g. \u0027report.pdf\u0027 or \u0027output/report.pdf\u0027. Use this for files the server can already see.",
                                                                                                               "type":  [
                                                                                                                            "string",
                                                                                                                            "null"
                                                                                                                        ]
                                                                                                           },
                                                                                              "fileContent":  {
-                                                                                                                 "description":  "Base64-encoded file content",
+                                                                                                                 "description":  "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
                                                                                                                  "type":  [
                                                                                                                               "string",
                                                                                                                               "null"
                                                                                                                           ]
                                                                                                              },
                                                                                              "fileName":  {
-                                                                                                              "description":  "Original filename with extension (required with fileContent)",
+                                                                                                              "description":  "Filename with extension, e.g. \u0027report.pdf\u0027. Required alongside fileContent. May also be used on its own as an alias for filePath.",
                                                                                                               "type":  [
                                                                                                                            "string",
                                                                                                                            "null"

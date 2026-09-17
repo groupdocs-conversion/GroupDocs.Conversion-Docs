@@ -35,7 +35,11 @@ Batch scenarios live or die on the folder mapping. Set it once and the whole fol
 }
 ```
 
-With a separate `GROUPDOCS_MCP_OUTPUT_PATH`, originals stay untouched in storage and every converted file lands in the output folder — the cleanest batch layout. (Installer users: this is `storagePath` / `outputPath` in [one config]({{< ref "conversion/mcp/getting-started/configuration.md" >}}).)
+{{< alert style="info" >}}
+The commands and config snippets on this page are for the **.NET** build of the server — the only platform available today. Installation and client setup: [MCP server for .NET]({{< ref "conversion/net/mcp/_index.md" >}}). Other platforms will expose the same tools with their own launch command; everything else on this page applies unchanged.
+{{< /alert >}}
+
+With a separate `GROUPDOCS_MCP_OUTPUT_PATH`, originals stay untouched in storage and every converted file lands in the output folder — the cleanest batch layout. (Installer users: this is `storagePath` / `outputPath` in [one config]({{< ref "conversion/net/mcp/configuration.md" >}}).)
 
 ## Prompts that scale
 
