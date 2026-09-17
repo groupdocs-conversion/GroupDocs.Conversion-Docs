@@ -14,8 +14,8 @@ hideChildren: False
 ## Convert JSON to Spreadsheet
 Here’s how you can achieve this in Java:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertJsonAsDataSourceToSpreadsheet.java" >}}  
+{{< tabs "convert-json-data-source-to-spreadsheet">}}
+{{< tab "ConvertJsonAsDataSourceToSpreadsheet.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;

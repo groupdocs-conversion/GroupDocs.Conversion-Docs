@@ -20,8 +20,8 @@ To enable event listening during the conversion process, follow these steps:
 
 Below is a code example demonstrating how to implement and enable event listening using
 
-{{< tabs "code-example">}}
-{{< tab "ConverterListener.java" >}}  
+{{< tabs "listen-to-conversion-process-events">}}
+{{< tab "ConverterListener.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.ConverterSettings;

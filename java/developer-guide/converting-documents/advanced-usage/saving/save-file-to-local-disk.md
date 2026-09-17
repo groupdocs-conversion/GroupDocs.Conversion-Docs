@@ -16,12 +16,12 @@ To save the conversion results to a local disk, you can use the [convert(String 
 {{< alert style="note" >}}
 - If the specified output file does not exist, it will be automatically created.
 - If the file already exists, it may be overwritten unless specified otherwise in the options.
-{{< /alert >}}
+  {{< /alert >}}
 
 The following code snippet demonstrates how to convert a Word document (`.docx`) to a PDF file and save it to a specified directory on your local disk:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertDocxToPdf.java" >}}  
+{{< tabs "save-file-to-local-disk">}}
+{{< tab "ConvertDocxToPdf.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -30,10 +30,10 @@ public class ConvertDocxToPdf {
     public static void convert() {
         // Specify the source file location
         Converter converter = new Converter("c:\\files\\business-plan.docx");
-        
+
         // Define conversion options (in this case, converting to PDF)
         PdfConvertOptions options = new PdfConvertOptions();
-    
+
         // Specify the output file location and perform the conversion
         converter.convert("c:\\files\\business-plan.pdf", options);
     }
@@ -58,8 +58,8 @@ public class ConvertDocxToPdf {
 
 ### Explanation:
 - **Source File Specification**:
-The `Converter` object is initialized with the path to the source document (`business-plan.docx`).
+  The `Converter` object is initialized with the path to the source document (`business-plan.docx`).
 - **Conversion Options**:
-The `PdfConvertOptions` object is created to configure settings specific to PDF conversion. Depending on the library you are using, you may have options to customize aspects such as page size, orientation, or compression.
+  The `PdfConvertOptions` object is created to configure settings specific to PDF conversion. Depending on the library you are using, you may have options to customize aspects such as page size, orientation, or compression.
 - **Saving the Converted File**:
-The `convert()` method is called with the desired output file path (`c:\\files\\business-plan.pdf`) and the conversion options (`options`). The file will be saved in the specified directory.
+  The `convert()` method is called with the desired output file path (`c:\\files\\business-plan.pdf`) and the conversion options (`options`). The file will be saved in the specified directory.

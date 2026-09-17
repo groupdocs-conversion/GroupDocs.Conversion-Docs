@@ -18,8 +18,8 @@ hideChildren: False
 
 The following example demonstrates how to convert a document to a presentation format (e.g., .ppt) using advanced options:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertToPresentationWithAdvancedOptions.java" >}}  
+{{< tabs "convert-to-presentation-advanced-options">}}
+{{< tab "ConvertToPresentationWithAdvancedOptions.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.filetypes.PresentationFileType;

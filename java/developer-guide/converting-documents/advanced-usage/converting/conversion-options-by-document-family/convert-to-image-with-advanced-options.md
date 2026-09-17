@@ -31,8 +31,8 @@ To convert documents to images with advanced options using [GroupDocs.Conversion
 
 The following code snippet shows how to convert to an image with advanced options:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertToImageWithAdvancedOptions.java" >}}  
+{{< tabs "convert-to-image-advanced-options">}}
+{{< tab "ConvertToImageWithAdvancedOptions.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.filetypes.ImageFileType;

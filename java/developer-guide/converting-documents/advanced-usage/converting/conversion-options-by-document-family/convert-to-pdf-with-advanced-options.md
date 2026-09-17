@@ -25,8 +25,8 @@ hideChildren: False
 
 The following code demonstrates how to convert a document to PDF with advanced options:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertToPdfWithAdvancedOptions.java" >}}  
+{{< tabs "convert-to-pdf-advanced-options">}}
+{{< tab "ConvertToPdfWithAdvancedOptions.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.examples.Constants;

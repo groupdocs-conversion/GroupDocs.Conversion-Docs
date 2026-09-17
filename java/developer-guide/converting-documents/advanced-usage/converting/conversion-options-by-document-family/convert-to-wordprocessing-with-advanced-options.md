@@ -22,8 +22,8 @@ hideChildren: False
 
 The following example demonstrates how to convert a PDF document to an ODT file using advanced conversion options:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertToWordProcessingWithAdvancedOptions.java" >}}  
+{{< tabs "convert-to-wordprocessing-advanced-options">}}
+{{< tab "ConvertToWordProcessingWithAdvancedOptions.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.filetypes.WordProcessingFileType;

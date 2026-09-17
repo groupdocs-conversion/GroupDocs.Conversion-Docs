@@ -19,8 +19,8 @@ hideChildren: False
 The code snippet below demonstrates how to configure and execute a document conversion to a spreadsheet format using advanced options. In this example, only a specific page from the input document is converted, and additional parameters such as format and zoom level are defined:
 
 
-{{< tabs "code-example">}}
-{{< tab "ConvertToSpreadsheetWithAdvancedOptions.java" >}}  
+{{< tabs "convert-to-spreadsheet-advanced-options">}}
+{{< tab "ConvertToSpreadsheetWithAdvancedOptions.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.filetypes.SpreadsheetFileType;

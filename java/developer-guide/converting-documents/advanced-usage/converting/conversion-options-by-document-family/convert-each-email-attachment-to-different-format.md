@@ -12,8 +12,8 @@ To convert each attachment within an email to a different format using [GroupDoc
 
 The following code snippet shows how to convert each attachment to a different format based on attachment type:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertEachEmailAttachmentToDifferentFormat.java" >}}  
+{{< tabs "convert-email-attachments-to-different-formats">}}
+{{< tab "ConvertEachEmailAttachmentToDifferentFormat.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.ConvertOptionsProvider;
@@ -34,11 +34,11 @@ public class ConvertEachEmailAttachmentToDifferentFormat {
         final int[] index = {0};
 
         LoadOptionsProvider loadOptionsProvider = ()->{
-              EmailLoadOptions emailOpt =  new EmailLoadOptions();
-              emailOpt.setConvertOwner(true);
-              emailOpt.setConvertOwned(true);
-              emailOpt.setDepth(2);
-              return emailOpt;
+            EmailLoadOptions emailOpt =  new EmailLoadOptions();
+            emailOpt.setConvertOwner(true);
+            emailOpt.setConvertOwned(true);
+            emailOpt.setDepth(2);
+            return emailOpt;
         };
 
         SaveDocumentStreamForFileType convertedStreamProvider = (fileType)->{

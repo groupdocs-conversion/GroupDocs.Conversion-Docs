@@ -42,8 +42,8 @@ You can control how the watermark appears in the converted document using the [W
 
 The following Java code snippet demonstrates how to apply a text watermark to a document during conversion to PDF:
 
-{{< tabs "code-example">}}
-{{< tab "AddWatermarkToConvertedDocument.java" >}}  
+{{< tabs "add-text-watermark-to-converted-document">}}
+{{< tab "AddWatermarkToConvertedDocument.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -63,7 +63,7 @@ public class AddWatermarkToConvertedDocument {
             watermark.setWidth(100);              // Set watermark width
             watermark.setHeight(100);             // Set watermark height
             watermark.setBackground(true);        // Set watermark as background
-            
+
             // Apply the watermark to the conversion options
             options.setWatermark(watermark);
 

@@ -20,8 +20,8 @@ To convert documents to HTML with advanced options using [GroupDocs.Conversion f
 
 The following code snippet shows how to convert to HTML with advanced options:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertToHtmlWithAdvancedOptions.java" >}}  
+{{< tabs "convert-to-html-advanced-options">}}
+{{< tab "ConvertToHtmlWithAdvancedOptions.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.WebConvertOptions;
