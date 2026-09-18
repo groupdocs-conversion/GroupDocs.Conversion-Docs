@@ -2,14 +2,31 @@
 id: mcp-on-premise-document-conversion
 url: conversion/mcp/use-cases/on-premise-document-conversion
 title: "Running GroupDocs MCP servers on-premise: architecture and security model"
+linkTitle: On-premise deployment
 weight: 5
 description: "Run document conversion for AI agents fully on-premise: the GroupDocs.Conversion MCP server uses local stdio transport with no external endpoints — suitable for regulated environments where documents cannot leave the network."
 keywords: on-premise MCP server, self-hosted document conversion AI, local MCP server no cloud, air-gapped AI document processing
 productName: GroupDocs.Conversion MCP Server
 toc: True
+structuredData:
+    showOrganization: True
+    howTo:
+        name: "Running GroupDocs MCP servers on-premise: architecture and security model"
+        description: "Run document conversion for AI agents fully on-premise: the GroupDocs.Conversion MCP server uses local stdio transport with no external endpoints — suitable for regulated environments where documents cannot leave the network."
+        steps:
+        - name: "Run the pinned image inside the perimeter"
+          text: "Start the GroupDocs.Conversion MCP server from its versioned Docker image as a child process of the AI client."
+        - name: "Mount only the folders the agent may reach"
+          text: "Map the document folder read-write and the license folder read-only."
+        - name: "Choose the license mode"
+          text: "Use a license file for fully offline operation; metered licensing needs outbound egress for usage reports."
 ---
 
 Run document conversion for AI agents **fully on-premise**: the GroupDocs.Conversion MCP server uses local stdio transport with **no external endpoints, no inbound ports, and no telemetry** — suitable for regulated environments where documents cannot leave the network. This page is the one to send your security reviewer.
+
+{{< alert style="info" >}}
+The commands and config snippets on this page are for the **.NET** build of the server — the only platform available today. Installation and client setup: [MCP server for .NET]({{< ref "conversion/net/mcp/_index.md" >}}). Other platforms will expose the same tools with their own launch command; everything else on this page applies unchanged.
+{{< /alert >}}
 
 ## The architecture in one picture
 
@@ -23,10 +40,10 @@ Run document conversion for AI agents **fully on-premise**: the GroupDocs.Conver
 
 * **Transport:** the AI client *starts the server as a child process* and communicates over standard input/output. The server never listens on a network socket — there is nothing to firewall, nothing to expose.
 * **Data path:** agent → local server → local filesystem. Documents are read from and written to the folders you configure; no document content is transmitted anywhere.
-* **Network use:** only at install time (pulling the package from nuget.org or the image from ghcr.io/docker.io). At runtime the server makes no outbound calls. In an air-gapped segment, pre-pull the image or pre-cache the package and pin the version.
+* **Network use:** only at install time (pulling the package from nuget.org or the image from ghcr.io/docker.io). At runtime the server makes no outbound calls with a license file; metered licensing reports usage and needs egress — see [License management](#license-management). In an air-gapped segment, pre-pull the image or pre-cache the package and pin the version.
 * **Telemetry:** none. The server does not phone home, and the engine processes documents in-process.
 
-Note the distinction that matters for review: the **documents** stay local unconditionally. The **prompts** go wherever your AI client's model runs — with a cloud-hosted assistant, your instruction text ("convert invoice.pdf") reaches the model, but the invoice itself never does. Pair the server with a locally-hosted model (as in our [n8n self-hosted walkthrough](https://blog.groupdocs.com/conversion/agentic-document-conversion-with-n8n-and-mcp/)) and the entire loop stays inside the perimeter.
+Note the distinction that matters for review: the **documents** stay local unconditionally. The **prompts** go wherever your AI client's model runs — with a cloud-hosted assistant, your instruction text ("convert invoice.pdf") reaches the model, but the invoice itself never does. Pair the server with a locally-hosted model and the entire loop stays inside the perimeter.
 
 ## Docker deployment inside the perimeter
 
@@ -40,17 +57,18 @@ docker run --rm -i \
   ghcr.io/groupdocs-conversion/conversion-net-mcp:26.9.0
 ```
 
-{{< alert style="info" >}}
-The commands and config snippets on this page are for the **.NET** build of the server — the only platform available today. Installation and client setup: [MCP server for .NET]({{< ref "conversion/net/mcp/_index.md" >}}). Other platforms will expose the same tools with their own launch command; everything else on this page applies unchanged.
-{{< /alert >}}
-
 * Pin the immutable version tag (`:26.9.0`) — never `:latest` — for change control.
 * Mount the license read-only; like the documents, the license file never leaves the host.
 * For fleets, the [installer]({{< ref "conversion/net/mcp/configuration.md" >}}) emits a `docker-compose.yml` (`-EmitCompose`) with the same volume and license mapping.
 
 ## License management
 
-Works in evaluation mode with no license present (watermarked output, 15-document per-process cap). Your existing GroupDocs.Conversion license applies — one file, mounted or referenced locally; [details]({{< ref "conversion/mcp/getting-started/licensing.md" >}}).
+Works in evaluation mode with no license present (watermarked output, 15-document per-process cap). Two ways to license it, and the choice has a network consequence:
+
+* **License file** — read from local disk by the local process. Fully offline; the right answer for air-gapped deployments. Your existing GroupDocs.Conversion license applies.
+* **Metered (pay-per-use)** — reports *usage* to GroupDocs servers, so it needs outbound egress. Document content is never part of that report, but the connection must be allowed.
+
+Both are covered in [Licensing]({{< ref "conversion/mcp/getting-started/licensing.md" >}}).
 
 ## What this fits — honestly
 

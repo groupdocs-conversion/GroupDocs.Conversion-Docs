@@ -31,7 +31,8 @@ On Linux and macOS in the NuGet channel, the engine needs native graphics librar
 
 ```bash
 # Linux (Debian/Ubuntu)
-sudo apt-get install -y --no-install-recommends libgdiplus libfontconfig1 ttf-mscorefonts-installer
+sudo apt-get install -y --no-install-recommends \
+  libgdiplus libfontconfig1 ttf-mscorefonts-installer
 # macOS
 brew install mono-libgdiplus
 ```

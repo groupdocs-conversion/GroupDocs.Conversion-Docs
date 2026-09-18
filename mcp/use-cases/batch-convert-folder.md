@@ -2,11 +2,24 @@
 id: mcp-batch-convert-folder
 url: conversion/mcp/use-cases/batch-convert-folder
 title: How to batch-convert a folder of documents with an AI agent
+linkTitle: Batch-convert a folder
 weight: 4
 description: "Convert an entire folder of documents with a single prompt — the agent orchestrates, the GroupDocs engine batch-converts locally; nothing is uploaded, originals are kept."
 keywords: batch convert files with Claude, convert entire folder AI agent, bulk document conversion MCP, batch processing MCP server
 productName: GroupDocs.Conversion MCP Server
 toc: True
+structuredData:
+    showOrganization: True
+    howTo:
+        name: "How to batch-convert a folder of documents with an AI agent"
+        description: "Convert an entire folder of documents with a single prompt — the agent orchestrates, the GroupDocs engine batch-converts locally; nothing is uploaded, originals are kept."
+        steps:
+        - name: "Install the server"
+          text: "Run the GroupDocs.Conversion MCP server with Docker or dnx and register it in your AI client."
+        - name: "Put the documents in the storage folder"
+          text: "Point GROUPDOCS_MCP_STORAGE_PATH at the folder that holds the files the agent should use."
+        - name: "Ask the agent"
+          text: "Convert every DOCX in my documents folder to PDF, keep the originals"
 ---
 
 Convert an **entire folder of documents with a single prompt** — the agent orchestrates, the GroupDocs engine batch-converts locally; nothing is uploaded and your originals are kept. Point the server at the folder and ask:
@@ -14,6 +27,10 @@ Convert an **entire folder of documents with a single prompt** — the agent orc
 > Convert every DOCX in my documents folder to PDF, keep the originals
 
 The agent enumerates the files, calls [`convert`]({{< ref "conversion/mcp/tools-reference/convert.md" >}}) per document, and reports what it produced. No uploads, no per-file clicking, no script to maintain.
+
+{{< alert style="info" >}}
+The commands and config snippets on this page are for the **.NET** build of the server — the only platform available today. Installation and client setup: [MCP server for .NET]({{< ref "conversion/net/mcp/_index.md" >}}). Other platforms will expose the same tools with their own launch command; everything else on this page applies unchanged.
+{{< /alert >}}
 
 ## The key setting: the storage folder
 
@@ -34,10 +51,6 @@ Batch scenarios live or die on the folder mapping. Set it once and the whole fol
   }
 }
 ```
-
-{{< alert style="info" >}}
-The commands and config snippets on this page are for the **.NET** build of the server — the only platform available today. Installation and client setup: [MCP server for .NET]({{< ref "conversion/net/mcp/_index.md" >}}). Other platforms will expose the same tools with their own launch command; everything else on this page applies unchanged.
-{{< /alert >}}
 
 With a separate `GROUPDOCS_MCP_OUTPUT_PATH`, originals stay untouched in storage and every converted file lands in the output folder — the cleanest batch layout. (Installer users: this is `storagePath` / `outputPath` in [one config]({{< ref "conversion/net/mcp/configuration.md" >}}).)
 

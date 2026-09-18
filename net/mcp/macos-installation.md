@@ -35,14 +35,16 @@ pwsh ./install-groupdocs-mcp.ps1 -Interactive
 **Recommended — the installer:**
 
 ```bash
-pwsh ./install-groupdocs-mcp.ps1 -Channel docker -Products conversion -Clients claude-desktop,cursor -Verify
+pwsh ./install-groupdocs-mcp.ps1 -Channel docker \
+  -Products conversion -Clients claude-desktop,cursor -Verify
 ```
 
 **Manual alternatives:**
 
 ```bash
 # Docker channel:
-docker run --rm -i -v $(pwd)/documents:/data ghcr.io/groupdocs-conversion/conversion-net-mcp:latest
+docker run --rm -i -v $(pwd)/documents:/data \
+  ghcr.io/groupdocs-conversion/conversion-net-mcp:latest
 
 # NuGet channel (requires .NET 10 SDK + mono-libgdiplus):
 dnx GroupDocs.Conversion.Mcp --yes
@@ -56,7 +58,7 @@ Client config locations on macOS: Claude Desktop `~/Library/Application Support/
 pwsh ./verify-groupdocs-mcp.ps1
 ```
 
-The handshake lists the server's three tools; with a document in your storage folder it also runs a real `get_document_info` call through the engine.
+The handshake lists the server's tools; with a document in your storage folder it also runs a real `get_document_info` call through the engine.
 
 ## macOS-specific troubleshooting
 

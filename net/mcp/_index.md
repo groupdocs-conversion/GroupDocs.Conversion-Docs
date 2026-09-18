@@ -20,6 +20,7 @@ Everything needed to **install and run** the GroupDocs.Conversion MCP server on 
 | Container images | `ghcr.io/groupdocs-conversion/conversion-net-mcp` · `groupdocs/conversion-net-mcp` |
 | Prerequisites | [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) for the NuGet channel, or Docker |
 | Source | [GroupDocs.Conversion.Mcp on GitHub](https://github.com/groupdocs-conversion/GroupDocs.Conversion.Mcp) |
+| Release notes | [changelog](https://github.com/groupdocs-conversion/GroupDocs.Conversion.Mcp/tree/main/changelog) · [GitHub releases](https://github.com/groupdocs-conversion/GroupDocs.Conversion.Mcp/releases) |
 
 ## Start here
 

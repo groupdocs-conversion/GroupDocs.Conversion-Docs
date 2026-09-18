@@ -20,9 +20,12 @@ Install and register the GroupDocs.Conversion MCP server in Claude Desktop, VS C
 git clone https://github.com/groupdocs/GroupDocs.Mcp.Installer.git
 cd GroupDocs.Mcp.Installer
 
-./install-groupdocs-mcp.ps1 -Interactive     # wizard: products, channel, clients, folders, license
-./install-groupdocs-mcp.ps1 -DryRun          # preview - prints everything, changes nothing
-./install-groupdocs-mcp.ps1 -Verify          # apply + warm caches + verify the setup in one go
+# wizard: products, channel, clients, folders, license
+./install-groupdocs-mcp.ps1 -Interactive
+# preview - prints everything, changes nothing
+./install-groupdocs-mcp.ps1 -DryRun
+# apply + warm caches + verify the setup in one go
+./install-groupdocs-mcp.ps1 -Verify
 ```
 
 Then **restart your AI client** (Claude Desktop, VS Code, Cursor, …) so it picks up the new server.

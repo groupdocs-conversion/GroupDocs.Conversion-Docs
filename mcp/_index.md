@@ -10,19 +10,28 @@ hideChildren: True
 toc: True
 ---
 
-**GroupDocs.Conversion MCP server** lets AI agents like Claude, Cursor, and Copilot convert documents between 100+ formats — PDF, Word, Excel, PowerPoint, images, Markdown — **locally on your machine**. Files are never uploaded to any cloud service. Install with one command:
+**GroupDocs.Conversion MCP server** lets AI agents like Claude, Cursor, and Copilot convert documents between 100+ formats — PDF, Word, Excel, PowerPoint, images, Markdown — **locally on your machine**. Files are never uploaded to any cloud service.
+
+Run it with one command. The Docker image is self-contained — the runtime and every native dependency the engine needs are inside it:
+
+```bash
+docker run --rm -i -v $(pwd)/documents:/data \
+  ghcr.io/groupdocs-conversion/conversion-net-mcp:latest
+```
+
+With the .NET 10 SDK installed, the same server also runs without Docker:
 
 ```bash
 dnx GroupDocs.Conversion.Mcp --yes
 ```
 
-That command is the **.NET** build (`dnx` ships with the .NET 10 SDK); it runs on Windows, Linux, and macOS alike. Other platforms will each get their own one-command launcher — see [Install for your platform](#install-for-your-platform).
+Both are the **.NET** build of the server and run on Windows, Linux, and macOS. Other platforms will each get their own launcher — see [Install for your platform](#install-for-your-platform).
 
 Or use the [guided installer]({{< ref "conversion/mcp/getting-started/_index.md" >}}) to register the server in your AI client, verify the setup, and configure shared folders in one pass.
 
 ## What you can do
 
-The server exposes four tools to any MCP-compatible agent (full details in the [tools reference]({{< ref "conversion/mcp/tools-reference/_index.md" >}})):
+The server exposes these tools to any MCP-compatible agent (full details in the [tools reference]({{< ref "conversion/mcp/tools-reference/_index.md" >}})):
 
 * **`convert`** — convert a document to another format (PDF, DOCX, XLSX, PPTX, HTML, PNG, JPG, Markdown, and many more) and save it to your storage folder.
 * **`get_supported_formats`** — list every target format a given document can be converted to.
@@ -38,9 +47,9 @@ Installation, prerequisites, and client configuration are platform-specific; the
 | Platform | Status | Install and setup |
 |---|---|---|
 | .NET | **Available** | [MCP server for .NET]({{< ref "conversion/net/mcp/_index.md" >}}) |
-| Java | Planned | — |
-| Python | Planned | — |
-| Node.js | Planned | — |
+| Java | Planned | [Tell us you need it](https://forum.groupdocs.com/c/conversion/11) |
+| Python | Planned | [Tell us you need it](https://forum.groupdocs.com/c/conversion/11) |
+| Node.js | Planned | [Tell us you need it](https://forum.groupdocs.com/c/conversion/11) |
 
 ## Conversion vs extraction
 

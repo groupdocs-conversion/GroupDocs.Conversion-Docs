@@ -2,11 +2,24 @@
 id: mcp-export-markdown-to-pdf-word
 url: conversion/mcp/use-cases/export-markdown-to-pdf-word
 title: How to export Markdown to PDF or Word with an MCP server
+linkTitle: Markdown to PDF/Word
 weight: 3
 description: "Ask your AI agent to export any Markdown file or generated content to a polished PDF or Word document — with tables, code blocks, and structure preserved — using the GroupDocs.Conversion MCP server, locally."
 keywords: convert markdown to PDF MCP, markdown to Word docx MCP server, export Claude output to PDF, AI generate professional PDF report
 productName: GroupDocs.Conversion MCP Server
 toc: True
+structuredData:
+    showOrganization: True
+    howTo:
+        name: "How to export Markdown to PDF or Word with an MCP server"
+        description: "Ask your AI agent to export any Markdown file or generated content to a polished PDF or Word document — with tables, code blocks, and structure preserved — using the GroupDocs.Conversion MCP server, locally."
+        steps:
+        - name: "Install the server"
+          text: "Run the GroupDocs.Conversion MCP server with Docker or dnx and register it in your AI client."
+        - name: "Put the documents in the storage folder"
+          text: "Point GROUPDOCS_MCP_STORAGE_PATH at the folder that holds the files the agent should use."
+        - name: "Ask the agent"
+          text: "Save your analysis as analysis.md, then convert it to PDF"
 ---
 
 Ask your AI agent to export any Markdown file — or the content it just generated — to a **polished PDF or Word document**, with tables, code blocks, and document structure preserved, using the GroupDocs.Conversion MCP server, locally:
@@ -15,13 +28,13 @@ Ask your AI agent to export any Markdown file — or the content it just generat
 dnx GroupDocs.Conversion.Mcp --yes
 ```
 
-{{< alert style="info" >}}
-The commands and config snippets on this page are for the **.NET** build of the server — the only platform available today. Installation and client setup: [MCP server for .NET]({{< ref "conversion/net/mcp/_index.md" >}}). Other platforms will expose the same tools with their own launch command; everything else on this page applies unchanged.
-{{< /alert >}}
-
 > Save your analysis as analysis.md, then convert it to PDF
 
 Agents write Markdown natively; your stakeholders read PDF and Word. This page closes that gap without a headless browser, LaTeX toolchain, or cloud renderer — the conversion runs through a real layout engine on your machine.
+
+{{< alert style="info" >}}
+The commands and config snippets on this page are for the **.NET** build of the server — the only platform available today. Installation and client setup: [MCP server for .NET]({{< ref "conversion/net/mcp/_index.md" >}}). Other platforms will expose the same tools with their own launch command; everything else on this page applies unchanged.
+{{< /alert >}}
 
 ## Setup
 

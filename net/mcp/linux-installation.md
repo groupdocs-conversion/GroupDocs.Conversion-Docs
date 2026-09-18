@@ -29,7 +29,8 @@ pwsh ./install-groupdocs-mcp.ps1 -Interactive
 * **NuGet channel:** .NET 10 SDK (`sudo apt-get install -y dotnet-sdk-10.0`) plus native graphics dependencies:
 
 ```bash
-sudo apt-get install -y --no-install-recommends libgdiplus libfontconfig1 ttf-mscorefonts-installer
+sudo apt-get install -y --no-install-recommends \
+  libgdiplus libfontconfig1 ttf-mscorefonts-installer
 ```
 
 ## Install
@@ -37,14 +38,16 @@ sudo apt-get install -y --no-install-recommends libgdiplus libfontconfig1 ttf-ms
 **Recommended — the installer:**
 
 ```bash
-pwsh ./install-groupdocs-mcp.ps1 -Channel docker -Products conversion -Clients claude-desktop -Verify
+pwsh ./install-groupdocs-mcp.ps1 -Channel docker \
+  -Products conversion -Clients claude-desktop -Verify
 ```
 
 **Manual alternatives:**
 
 ```bash
 # Docker channel - native deps bundled in the image (amd64 + arm64):
-docker run --rm -i -v $(pwd)/documents:/data ghcr.io/groupdocs-conversion/conversion-net-mcp:latest
+docker run --rm -i -v $(pwd)/documents:/data \
+  ghcr.io/groupdocs-conversion/conversion-net-mcp:latest
 
 # NuGet channel (requires .NET 10 SDK + the native deps above):
 dnx GroupDocs.Conversion.Mcp --yes
@@ -58,7 +61,7 @@ Client config locations on Linux: Claude Desktop `~/.config/Claude/claude_deskto
 pwsh ./verify-groupdocs-mcp.ps1
 ```
 
-A passing run completes the MCP handshake (three tools listed) and — when a document sits in your storage folder — a real `get_document_info` call. Headless servers: the docker channel plus `-EmitCompose` gives you a `docker-compose.yml` for supervised operation.
+A passing run completes the MCP handshake (the server's tools listed) and — when a document sits in your storage folder — a real `get_document_info` call. Headless servers: the docker channel plus `-EmitCompose` gives you a `docker-compose.yml` for supervised operation.
 
 ## Linux-specific troubleshooting
 
