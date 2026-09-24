@@ -47,6 +47,10 @@ It is a common use case when a source document references some specific fonts th
 
 You can [add a text or an image watermark]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/add-watermark.md" >}}) to any page of the converted document and choose its desired dimensions, color and font size.
 
+### Convert presentations to HTML slideshows
+
+PowerPoint and OpenDocument presentations can be [converted to a single HTML file]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-to-html-with-advanced-options.md#convert-a-presentation-to-an-html-slideshow" >}}) that plays as a slideshow, with slide transitions and shape animations. Fonts, images, audio and video are inlined, so there are no side files to deploy.
+
 ## Document information extraction
 
 GroupDocs.Conversion allows to obtain basic [information about source document]({{< ref "conversion/net/developer-guide/basic-usage/get-document-info.md" >}}) - file type, pages count etc. Dependent on the source file type some format-specific information can be extracted, for example:

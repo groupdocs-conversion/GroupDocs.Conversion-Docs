@@ -5,7 +5,7 @@ title: Convert presentations
 linkTitle: Presentations
 weight: 40
 description: "This article demonstrates how to convert PowerPoint presentations of PPT, PPTX, ODP to other formats with couple lines of C# code."
-keywords: Convert presentation, Convert PPT, Convert PPTX
+keywords: Convert presentation, Convert PPT, Convert PPTX, Convert PPTX to HTML, Convert presentation to HTML slideshow
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
@@ -124,3 +124,24 @@ using (Converter converter = new GroupDocs.Conversion.Converter("sample.pptx"))
     converter.Convert(getPageStream, options);
 }
 ```
+
+## Convert presentation to HTML slideshow
+
+A presentation can also be converted to a single self-contained HTML file that plays as a slideshow, keeping slide transitions and shape animations. Fonts, images, audio, video, styles and scripts are all inlined into that one file.
+
+Here is a code snippet that shows how to convert PPTX to an HTML slideshow in C#:
+
+```csharp
+// Load the source PPTX file
+using (Converter converter = new Converter("sample.pptx"))
+{
+    // Enable slideshow output for HTML format
+    WebConvertOptions options = new WebConvertOptions { SlideShow = true };
+    // Convert to a self-contained HTML slideshow
+    converter.Convert("slideshow.html", options);
+}
+```
+
+Navigation and animation scripts load from a CDN, so the slideshow needs an internet connection to play.
+
+Refer to [Convert a presentation to an HTML slideshow]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-to-html-with-advanced-options.md#convert-a-presentation-to-an-html-slideshow" >}}) for the supported formats and the options that cannot be combined with a slideshow.
