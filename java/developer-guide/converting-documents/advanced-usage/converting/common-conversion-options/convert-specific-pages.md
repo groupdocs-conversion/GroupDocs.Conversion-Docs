@@ -18,8 +18,8 @@ To convert specific pages from a document, follow these steps:
 4.   *Perform Conversion* – Call the `convert` method of the [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/converter/) class, passing the output filename and the [ConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/convertoptions/) instance.
 
 The following Java code snippet demonstrates how to convert only the first and third pages of a Word document (`.docx`) into a PDF:
-{{< tabs "code-example">}}
-{{< tab "ConvertSpecificPages.java" >}}  
+{{< tabs "convert-specific-pages">}}
+{{< tab "ConvertSpecificPages.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -71,9 +71,13 @@ The ability to convert specific pages is available for various formats, includin
 
 ### Specifying Page Ranges
 Instead of listing individual pages, you can specify a range of pages using:
+{{< tabs "convert-specific-pages-range">}}
+{{< tab "Java" >}}
 ```java
 options.setPages(Arrays.asList(1, 2, 3, 4)); // Converts pages 1-4
 ```
+{{< /tab >}}
+{{< /tabs >}}
 ### Benefits of Converting Specific Pages
 - **Faster Processing** – Converts only the required pages, reducing processing time.
 - **Smaller File Size** – Generates a smaller output file by excluding unnecessary pages.

@@ -24,8 +24,8 @@ The API provides robust error handling, ensuring smooth operation when processin
 
 The following code snippet shows how to convert a PDF document and flatten all fields:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertPdfAndFlattenAllFields.java" >}} 
+{{< tabs "load-pdf-flatten-fields">}}
+{{< tab "ConvertPdfAndFlattenAllFields.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.WordProcessingConvertOptions;
@@ -64,8 +64,8 @@ public class ConvertPdfAndFlattenAllFields {
 
 The following code snippet shows how to convert a PDF document and hide annotations:
 
-{{< tabs "code-example1">}}
-{{< tab "ConvertPdfAndHideAnnotations.java" >}} 
+{{< tabs "load-pdf-hide-annotations">}}
+{{< tab "ConvertPdfAndHideAnnotations.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.WordProcessingConvertOptions;
@@ -104,7 +104,7 @@ public class ConvertPdfAndHideAnnotations {
 
 The following code snippet shows how to convert a PDF document and remove embedded files:
 
-{{< tabs "code-example2">}}
+{{< tabs "load-pdf-remove-embedded-files">}}
 {{< tab "ConvertPdfAndRemoveEmbeddedFiles.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;

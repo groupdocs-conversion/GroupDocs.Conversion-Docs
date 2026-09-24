@@ -1,11 +1,13 @@
 ---
 id: mcp-system-requirements
-url: conversion/mcp/getting-started/system-requirements
+url: conversion/net/mcp/system-requirements
+aliases:
+    - /conversion/mcp/getting-started/system-requirements/
 title: System requirements
 weight: 8
 description: "The GroupDocs.Conversion MCP server runs anywhere Docker runs, or on any OS with the .NET 10 SDK — this page lists exact requirements per channel and operating system."
 keywords: MCP server requirements, does MCP server need Docker, .NET 10 MCP server
-productName: GroupDocs.Conversion MCP Server
+productName: GroupDocs.Conversion MCP Server for .NET
 toc: True
 ---
 
@@ -22,8 +24,8 @@ The GroupDocs.Conversion MCP server runs **anywhere Docker runs**, or on any OS 
 
 Per-OS setup, including the one-shot prerequisite bootstrappers (`setup/windows.ps1`, `setup/linux.sh`, `setup/macos.sh`):
 
-* [Install on Windows]({{< ref "conversion/mcp/getting-started/windows-installation.md" >}})
-* [Install on Linux]({{< ref "conversion/mcp/getting-started/linux-installation.md" >}})
-* [Install on macOS]({{< ref "conversion/mcp/getting-started/macos-installation.md" >}})
+* [Install on Windows]({{< ref "conversion/net/mcp/windows-installation.md" >}})
+* [Install on Linux]({{< ref "conversion/net/mcp/linux-installation.md" >}})
+* [Install on macOS]({{< ref "conversion/net/mcp/macos-installation.md" >}})
 
-AI client requirements: any MCP-compatible client (Claude Desktop, Claude Code, VS Code / GitHub Copilot, Visual Studio 2022 17.14+, Cursor, Windsurf, Cline, Codex CLI) — see [Register in AI clients]({{< ref "conversion/mcp/getting-started/install-in-ai-clients.md" >}}).
+AI client requirements: any MCP-compatible client (Claude Desktop, Claude Code, VS Code / GitHub Copilot, Visual Studio 2022 17.14+, Cursor, Windsurf, Cline, Codex CLI) — see [Register in AI clients]({{< ref "conversion/net/mcp/install-in-ai-clients.md" >}}).

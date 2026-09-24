@@ -22,8 +22,8 @@ These options enable you to customize the XML document loading process based on 
 
 This example demonstrates how to use an XML document as a data source and convert it into a spreadsheet format:
 
-{{< tabs "code-example">}}
-{{< tab "XmlToSpreadsheet.java" >}}  
+{{< tabs "load-xml-as-data-source">}}
+{{< tab "XmlToSpreadsheet.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
@@ -31,7 +31,7 @@ import com.groupdocs.conversion.options.load.XmlLoadOptions;
 
 public class XmlToSpreadsheet {
     public static void convert() {
-         // Load XML as a data source
+        // Load XML as a data source
         XmlLoadOptions loadOptions = new XmlLoadOptions();
         loadOptions.setUseAsDataSource(true);
 

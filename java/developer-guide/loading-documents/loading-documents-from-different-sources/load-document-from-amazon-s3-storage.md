@@ -10,6 +10,8 @@ hideChildren: False
 ---
 The following code snippet shows how to convert a document from Amazon S3 Storage:
 
+{{< tabs "load-document-from-amazon-s3-storage" >}}
+{{< tab "Java" >}}
 ```java
  package com.groupdocs.conversion.examples.advanced_usage.loading.loading_documents_from_different_sources;
 
@@ -62,3 +64,5 @@ public class LoadDocumentFromAmazonS3 {
     }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

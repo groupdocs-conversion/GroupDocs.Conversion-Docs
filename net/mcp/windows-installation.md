@@ -1,11 +1,13 @@
 ---
 id: mcp-windows-installation
-url: conversion/mcp/getting-started/windows-installation
+url: conversion/net/mcp/windows-installation
+aliases:
+    - /conversion/mcp/getting-started/windows-installation/
 title: Install on Windows
 weight: 2
 description: "To install the GroupDocs.Conversion MCP server on Windows, run the prerequisite bootstrapper and the guided installer in PowerShell — it registers the server in Claude Desktop, VS Code, and other clients automatically."
 keywords: install MCP server Windows, MCP server Windows setup, Claude Desktop MCP Windows config location, dnx not recognized Windows
-productName: GroupDocs.Conversion MCP Server
+productName: GroupDocs.Conversion MCP Server for .NET
 toc: True
 ---
 
@@ -32,7 +34,8 @@ The `setup\windows.ps1` bootstrapper installs only what your delivery channel ne
 **Recommended — the installer** (wizard, or fully from the command line):
 
 ```powershell
-./install-groupdocs-mcp.ps1 -Channel nuget -Products conversion -Clients claude-desktop,vscode -Verify
+./install-groupdocs-mcp.ps1 -Channel nuget -Products conversion `
+  -Clients claude-desktop,vscode -Verify
 ```
 
 **Manual alternatives:**
@@ -42,10 +45,11 @@ The `setup\windows.ps1` bootstrapper installs only what your delivery channel ne
 dnx GroupDocs.Conversion.Mcp --yes
 
 # Docker channel:
-docker run --rm -i -v C:/Docs:/data ghcr.io/groupdocs-conversion/conversion-net-mcp:latest
+docker run --rm -i -v C:/Docs:/data `
+  ghcr.io/groupdocs-conversion/conversion-net-mcp:latest
 ```
 
-Client config locations on Windows: Claude Desktop `%APPDATA%\Claude\claude_desktop_config.json`, VS Code user-level `%APPDATA%\Code\User\mcp.json` — full list with JSON blocks in [Register in AI clients]({{< ref "conversion/mcp/getting-started/install-in-ai-clients.md" >}}).
+Client config locations on Windows: Claude Desktop `%APPDATA%\Claude\claude_desktop_config.json`, VS Code user-level `%APPDATA%\Code\User\mcp.json` — full list with JSON blocks in [Register in AI clients]({{< ref "conversion/net/mcp/install-in-ai-clients.md" >}}).
 
 ## Verify
 
@@ -53,7 +57,7 @@ Client config locations on Windows: Claude Desktop `%APPDATA%\Claude\claude_desk
 ./verify-groupdocs-mcp.ps1
 ```
 
-A passing run performs the MCP handshake and prints the server's three tools; if a document exists in your storage folder, it also runs a real `get_document_info` call against it. Exit code `0` means everything works.
+A passing run performs the MCP handshake and prints the server's tools; if a document exists in your storage folder, it also runs a real `get_document_info` call against it. Exit code `0` means everything works.
 
 ## Windows-specific troubleshooting
 
@@ -61,4 +65,4 @@ A passing run performs the MCP handshake and prints the server's three tools; if
 * **`dnx` is not recognized** — the .NET 10 SDK was just installed: open a **new** terminal so PATH refreshes. `dnx` ships inside the SDK (`C:\Program Files\dotnet\dnx.cmd`).
 * **"docker daemon not reachable"** — start Docker Desktop; the installer's preflight detects this before writing anything and prints the exact fix.
 
-Installing on a different OS? [Linux]({{< ref "conversion/mcp/getting-started/linux-installation.md" >}}) · [macOS]({{< ref "conversion/mcp/getting-started/macos-installation.md" >}})
+Installing on a different OS? [Linux]({{< ref "conversion/net/mcp/linux-installation.md" >}}) · [macOS]({{< ref "conversion/net/mcp/macos-installation.md" >}})

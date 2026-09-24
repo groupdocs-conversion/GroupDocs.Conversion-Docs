@@ -9,23 +9,23 @@ keywords: Convert to TEX, Convert to LaTex, Convert to Page Description Language
 productName: GroupDocs.Conversion for Java
 toc: True
 structuredData:
-    showOrganization: True
-    application:    
-        name: Convert TEX in Java    
-        description: Convert TEX to PDF natively with high performance using Java language and GroupDocs.Conversion for Java APIs
-        productCode: conversion
-        productPlatform: java 
-    showVideo: True
-    howTo:
-        name: How to convert TEX to PDF in Java 
-        description: Learn how to convert TEX to PDF in Java step by step
-        steps:
-        - name: Load source TEX file 
-          text: Create an instance of Converter class and pass source TEX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
-        - name: Specify convert options 
-          text: Create an instance of PdfConvertOptions class.
-        - name: Convert to PDF and save result 
-          text: Call Converter class convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
+  showOrganization: True
+  application:
+    name: Convert TEX in Java
+    description: Convert TEX to PDF natively with high performance using Java language and GroupDocs.Conversion for Java APIs
+    productCode: conversion
+    productPlatform: java
+  showVideo: True
+  howTo:
+    name: How to convert TEX to PDF in Java
+    description: Learn how to convert TEX to PDF in Java step by step
+    steps:
+      - name: Load source TEX file
+        text: Create an instance of Converter class and pass source TEX file path as a constructor parameter. You may specify absolute or relative file path as per your requirements.
+      - name: Specify convert options
+        text: Create an instance of PdfConvertOptions class.
+      - name: Convert to PDF and save result
+        text: Call Converter class convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
 ## About page layout formats
@@ -41,6 +41,8 @@ Page layout languages are used in desktop and electronic publishing. The main fo
 With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert a page layout file format into another file format.
 For example, TEX to PDF conversion code snippet looks like this:
 
+{{< tabs "convert-tex-to-pdf">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -52,8 +54,10 @@ PdfConvertOptions options = new PdfConvertOptions();
 // Convert to PDF format
 converter.convert("converted.pdf", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-Put it simply - you just load a TEX file into `Converter`, select the desired output format and **GroupDocs.Conversion** does all the rest.  
+Put it simply - you just load a TEX file into `Converter`, select the desired output format and **GroupDocs.Conversion** does all the rest.
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/package-frame) for more conversion options and customizations.
@@ -64,6 +68,8 @@ Refer to the [API reference](https://reference.groupdocs.com/conversion/java/com
 On the other hand, converting your files to page layout format is also quite simple and natural.
 The following code snippet shows how to convert a DOCX document to TEX format in Java using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java).
 
+{{< tabs "convert-docx-to-tex">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -77,3 +83,5 @@ options.setFormat(PdfFileType.Tex);
 // Convert to TEX format
 converter.convert("converted.tex", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}

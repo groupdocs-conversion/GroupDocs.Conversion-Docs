@@ -21,8 +21,8 @@ This documentation explains how to load CAD documents with configurable options 
 
 The following code snippet shows how to convert a CAD document and convert only certain layouts:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertCadAndSpecifyLayouts.java" >}}  
+{{< tabs "load-cad-specify-layouts">}}
+{{< tab "ConvertCadAndSpecifyLayouts.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;

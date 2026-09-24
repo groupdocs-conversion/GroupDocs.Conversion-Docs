@@ -7,7 +7,7 @@ description: "The convert MCP tool converts a document to a different format —
 keywords: convert MCP tool, MCP convert document tool parameters, ai agent convert file tool
 productName: GroupDocs.Conversion MCP Server
 generated: true
-serverVersion: 26.7.2
+serverVersion: 26.9.0
 toc: True
 ---
 

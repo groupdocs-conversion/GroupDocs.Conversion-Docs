@@ -31,10 +31,12 @@ Default [ConvertOptions](https://reference.groupdocs.com/conversion/java/com.gro
 
 1.   Create new instance of [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/converter/) class by passing source document path as constructor's parameter
 2.   Call [getPossibleConversions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/converter/#getPossibleConversions--) method of converter object
-3.   Use the file extension or `FileType` as key to indexer of object received as value in previous step  
+3.   Use the file extension or `FileType` as key to indexer of object received as value in previous step
 
 ### Example 1: Retrieving Default ConvertOptions for PDF Conversion
 
+{{< tabs "get-default-convertoptions-for-pdf">}}
+{{< tab "Java" >}}
 ```java
 // Load the source document
 Converter converter = new Converter("source.docx");
@@ -51,9 +53,13 @@ if (convertOptions != null)
 }
 
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Example 2: Batch Conversion of Files with Default ConvertOptions
 
+{{< tabs "batch-conversion-with-default-convertoptions">}}
+{{< tab "Java" >}}
 ```java
 
 // List of files to convert
@@ -76,6 +82,8 @@ for (String filePath : files) {
 }
 System.out.println("Batch conversion completed.");
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Conclusion
 Retrieving default [ConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/convertoptions/) in [GroupDocs.Conversion for Java](https://products.groupdocs.com/conversion/java) ensures consistency, efficiency, and flexibility in handling file conversions across various formats. These options minimize errors, allow for quick configurations, and provide a strong foundation for further customizations based on specific needs. Whether in batch processing, dynamic web applications, or automated pipelines, leveraging these default settings streamlines the conversion process while maintaining high-quality results.

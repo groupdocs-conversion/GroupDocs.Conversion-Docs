@@ -18,8 +18,8 @@ To load and convert a password-protected document, follow these steps:
 
 The following code snippet shows how to convert password-protected document:
 
-{{< tabs "code-example">}}
-{{< tab "LoadPasswordProtectedFile.java" >}}  
+{{< tabs "load-password-protected-document">}}
+{{< tab "LoadPasswordProtectedFile.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -29,7 +29,7 @@ public class LoadPasswordProtectedFile {
     public static void loadPasswordProtectedFile() {
         // Set file path
         String filePath = "./password-protected.docx"
-    
+
         // Instantiate load options and set password
         WordProcessingLoadOptions loadOptions = WordProcessingLoadOptions()
         loadOptions.setPassword("12345");

@@ -24,6 +24,8 @@ GroupDocs.Conversion opens the file for reading only when any other methods of 
 
 The following code snippet shows how to load a file from a local disk:
 
+{{< tabs "load-document-from-local-disk" >}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -33,3 +35,5 @@ PdfConvertOptions options = new PdfConvertOptions();
 
 converter.convert("converted.pdf", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}

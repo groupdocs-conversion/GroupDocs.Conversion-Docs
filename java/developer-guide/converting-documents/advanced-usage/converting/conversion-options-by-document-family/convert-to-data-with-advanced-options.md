@@ -16,8 +16,8 @@ The conversion supports multiple web data formats. To convert documents into JSO
 ## Convert CSV to JSON
 Below is a code example demonstrating how to convert a CSV file to JSON format using
 
-{{< tabs "code-example">}}
-{{< tab "ConvertCsvToJson.java" >}}  
+{{< tabs "convert-csv-to-json-advanced">}}
+{{< tab "ConvertCsvToJson.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.WebConvertOptions;

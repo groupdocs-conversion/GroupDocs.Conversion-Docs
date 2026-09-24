@@ -22,7 +22,7 @@ The CLI ships inside the package, so no extra installation is needed. Make sure 
 groupdocs-conversion --version
 ```
 
-You should see the package version printed, for example `groupdocs-conversion 26.5.0`.
+You should see the package version printed, for example `groupdocs-conversion 26.9.0`.
 
 {{< alert style="info" >}}
 If the `groupdocs-conversion` command is not found, the package's script directory may not be on your `PATH`. You can always invoke the CLI through the Python module form instead: `python -m groupdocs.conversion`. The two are equivalent.

@@ -11,20 +11,20 @@ hideChildren: False
 [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) allows you to convert a specific range of consecutive pages from a document. This feature is useful when you only need a portion of the document instead of converting the entire file.
 
 To convert a set of consecutive pages, follow these steps:
- 1. **Initialize the Converter**
+1. **Initialize the Converter**
     - Create an instance of the `Converter` class and provide the source document path.
- 2. **Configure Conversion Options**
+2. **Configure Conversion Options**
     - Instantiate the appropriate `ConvertOptions` class (e.g., `PdfConvertOptions`, `WordProcessingConvertOptions`, etc.).
- 3. **Specify Page Range**
+3. **Specify Page Range**
     - Use the [setPageNumber(int pageNumber)](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/commonconvertoptions/#setPageNumber-int-) method to define the starting page.
     - Use the [setPagesCount(int pagesCount)](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/commonconvertoptions/#setPagesCount-int-) method to specify how many pages to convert.
- 4. **Perform the Conversion**
+4. **Perform the Conversion**
     - Call the `convert()` method on the `Converter` instance, passing the output file name and the `ConvertOptions` instance.
 
 The following Java example demonstrates how to convert four consecutive pages, beginning from the second page of the document:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertConsecutivePages.java" >}}  
+{{< tabs "convert-n-consecutive-pages">}}
+{{< tab "ConvertConsecutivePages.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;

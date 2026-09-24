@@ -25,8 +25,8 @@ The [EmailLoadOptions](https://reference.groupdocs.com/java/conversion/com.group
 
 The following code snippet shows how to convert an Email document and control the visibility of the fields:
 
-{{< tabs "code-example">}}
-{{< tab "ConvertEmailWithAlteringFieldsVisibility.java" >}}  
+{{< tabs "load-email-control-fields-visibility">}}
+{{< tab "ConvertEmailWithAlteringFieldsVisibility.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -70,8 +70,8 @@ public class ConvertEmailWithAlteringFieldsVisibility {
 
 The following code snippet shows how to convert an Email document and all attachments:
 
-{{< tabs "code-example1">}}
-{{< tab "ConvertEmailWithAttachments.java" >}}  
+{{< tabs "load-email-convert-attachments">}}
+{{< tab "ConvertEmailWithAttachments.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.SaveDocumentStreamForFileType;

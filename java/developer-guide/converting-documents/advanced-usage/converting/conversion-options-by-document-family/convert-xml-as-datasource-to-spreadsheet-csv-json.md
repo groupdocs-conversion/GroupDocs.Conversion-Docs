@@ -13,8 +13,8 @@ hideChildren: False
 
 ## Convert XML to Spreadsheet (XLSX)
 
-{{< tabs "code-example">}}
-{{< tab "ConvertXmlToSpreadsheet.java" >}}  
+{{< tabs "convert-xml-data-source-to-spreadsheet">}}
+{{< tab "ConvertXmlToSpreadsheet.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
@@ -56,8 +56,8 @@ public class ConvertXmlToSpreadsheet {
 
 ## Convert XML to CSV
 
-{{< tabs "code-example1">}}
-{{< tab "ConvertXmlToCsv.java" >}}  
+{{< tabs "convert-xml-data-source-to-csv">}}
+{{< tab "ConvertXmlToCsv.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.filetypes.SpreadsheetFileType;
@@ -101,8 +101,8 @@ public class ConvertXmlToCsv {
 
 ## Convert XML to JSON
 
-{{< tabs "code-example2">}}
-{{< tab "ConvertXmlToJson.java" >}}  
+{{< tabs "convert-xml-data-source-to-json">}}
+{{< tab "ConvertXmlToJson.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.WebConvertOptions;

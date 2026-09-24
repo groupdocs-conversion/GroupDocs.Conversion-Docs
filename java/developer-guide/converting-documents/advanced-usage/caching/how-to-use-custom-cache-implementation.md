@@ -24,8 +24,8 @@ This guide demonstrates how to implement a custom caching mechanism using **Redi
 
 The following code demonstrates how to implement a custom **Redis-based** caching mechanism for GroupDocs.Conversion:
 
-{{< tabs "code-example">}}
-{{< tab "CustomCacheImplementation.java" >}}  
+{{< tabs "custom-redis-cache-implementation">}}
+{{< tab "CustomCacheImplementation.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.ConverterSettings;

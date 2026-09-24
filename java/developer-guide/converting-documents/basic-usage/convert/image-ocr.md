@@ -5,27 +5,27 @@ title: Convert images with optical character recognition
 linkTitle: Images OCR
 weight: 55
 description: "In this article, you will learn how to convert an image file to text or PDF using OCR with GroupDocs.Conversion for Java."
-keywords: Convert JPG to DOCX, Convert PNG to PDF, OCR image, Image ocr, 
+keywords: Convert JPG to DOCX, Convert PNG to PDF, OCR image, Image ocr,
 productName: GroupDocs.Conversion for Java
 toc: True
 structuredData:
-    showOrganization: True
-    application:    
-        name: Convert Image with OCR in Java    
-        description: Convert JPG to DOCX natively with high performance using C# language and GroupDocs.Conversion for .NET APIs
-        productCode: conversion
-        productPlatform: Java 
-    showVideo: True
-    howTo:
-        name: How to convert JPG to DOCX in C# 
-        description: Learn how to convert JPG to DOCX in C# step by step
-        steps:
-        - name: Load source JPG file 
-          text: Create an instance of Converter class and pass source JPG file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements. 
-        - name: Specify convert options 
-          text: Create an instance of WordProcessingConvertOptions class.
-        - name: Convert to DOCX and save result 
-          text: Call Converter class Convert method and pass the filename for the converted DOCX file and the WordConvertOptions object from the previous step as parameters.
+  showOrganization: True
+  application:
+    name: Convert Image with OCR in Java
+    description: Convert JPG to DOCX natively with high performance using C# language and GroupDocs.Conversion for .NET APIs
+    productCode: conversion
+    productPlatform: Java
+  showVideo: True
+  howTo:
+    name: How to convert JPG to DOCX in C#
+    description: Learn how to convert JPG to DOCX in C# step by step
+    steps:
+      - name: Load source JPG file
+        text: Create an instance of Converter class and pass source JPG file path as a constructor parameter. You may specify absolute or relative file paths as per your requirements.
+      - name: Specify convert options
+        text: Create an instance of WordProcessingConvertOptions class.
+      - name: Convert to DOCX and save result
+        text: Call Converter class Convert method and pass the filename for the converted DOCX file and the WordConvertOptions object from the previous step as parameters.
 ---
 
 ## About image file formats
@@ -42,17 +42,17 @@ An image file format is a standard method for organizing and storing images on d
 
 ## Convert from an image using OCR
 
-With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert your image files using OCR.  
+With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you can easily convert your image files using OCR.
 
-To allow OCR conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) provides an extension point to offload the actual OCR process to the OCR processing library, but at the same time gives you the simplicity of conversion setup. The extension point is the [IOcrConnector](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.integration.ocr/iocrconnector/) interface. 
+To allow OCR conversions [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) provides an extension point to offload the actual OCR process to the OCR processing library, but at the same time gives you the simplicity of conversion setup. The extension point is the [IOcrConnector](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.integration.ocr/iocrconnector/) interface.
 
 First, you must decide which OCR processing library will use. Different libraries have different setup processes.
 
 In our example, we will use Aspose.OCR. Install the [Aspose.OCR](https://releases.aspose.com/java/repo/com/aspose/aspose-ocr/) nuget package in your project. Then implement [IOcrConnector](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.integration.ocr/iocrconnector/). The following code snippet provides a sample implementation:
 
 
-{{< tabs "example-1">}}
-{{< tab "ConvertImageUsingOcr.java" >}}  
+{{< tabs "convert-image-using-ocr">}}
+{{< tab "ConvertImageUsingOcr.java" >}}
 ```java
 import com.aspose.ocr.*;
 import com.groupdocs.conversion.Converter;
@@ -191,7 +191,7 @@ class OcrConnector implements IOcrConnector {
 {{< /tab >}}
 {{< /tabs >}}
 
-Put it simply - you install an OCR processing library, implement the `IOcrConnector` interface, load an image file into the `Converter` class providing the `IOcrConnector` instance, select the desired output format and **GroupDocs.Conversion** does all the rest.  
+Put it simply - you install an OCR processing library, implement the `IOcrConnector` interface, load an image file into the `Converter` class providing the `IOcrConnector` instance, select the desired output format and **GroupDocs.Conversion** does all the rest.
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/) for more conversion options and customizations.

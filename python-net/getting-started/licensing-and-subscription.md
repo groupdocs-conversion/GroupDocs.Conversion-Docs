@@ -85,7 +85,7 @@ GroupDocs.Conversion can also read a license from the project’s root directory
 📂 my-app
  ├──app.py
  ├──source.docx
- ├──groupdocs_conversion_net-26.3-py3-none-*.whl
+ ├──groupdocs_conversion_net-26.9.0-py3-none-*.whl
  └──GroupDocs.Conversion.PythonViaNET.lic
 ```
 

@@ -10,23 +10,23 @@ productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
 structuredData:
-    showOrganization: True
-    application:    
-        name: Convert Image in Java    
-        description: Convert Image to PDF natively with high performance using Java language and GroupDocs.Conversion for Java APIs
-        productCode: conversion
-        productPlatform: java 
-    showVideo: True
-    howTo:
-        name: How to convert Image to PDF in Java 
-        description: Learn how to convert Image to PDF in Java step by step
-        steps:
-        - name: Load source Image file 
-          text: Create an instance of Converter class and pass source Image file path as a constructor parameter. You may specify absolute or relative file path as per your requirements. 
-        - name: Specify convert options 
-          text: Create an instance of PdfConvertOptions class.
-        - name: Convert to PDF and save result 
-          text: Call Converter class convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
+  showOrganization: True
+  application:
+    name: Convert Image in Java
+    description: Convert Image to PDF natively with high performance using Java language and GroupDocs.Conversion for Java APIs
+    productCode: conversion
+    productPlatform: java
+  showVideo: True
+  howTo:
+    name: How to convert Image to PDF in Java
+    description: Learn how to convert Image to PDF in Java step by step
+    steps:
+      - name: Load source Image file
+        text: Create an instance of Converter class and pass source Image file path as a constructor parameter. You may specify absolute or relative file path as per your requirements.
+      - name: Specify convert options
+        text: Create an instance of PdfConvertOptions class.
+      - name: Convert to PDF and save result
+        text: Call Converter class convert method and pass the filename for the converted PDF file and the PdfConvertOptions object from the previous step as parameters.
 ---
 
 ## About image file formats
@@ -53,6 +53,8 @@ Converting an image into a PDF file is a common use case for example when you ne
 2. Create an instance of the `PdfConvertOptions` class.
 3. Call the `convert` method and pass the filename for the converted PDF file and the `PdfConvertOptions` object from the previous step as parameters.
 
+{{< tabs "convert-image-jpg-to-pdf">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -64,6 +66,8 @@ PdfConvertOptions options = new PdfConvertOptions();
 // Convert to PDF format
 converter.convert("converted.pdf", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 NOTE: The code example above is the same for other image formats into PDF conversion, the only difference - you have to provide the file name with the appropriate extension.
 
@@ -73,6 +77,8 @@ If you need to get data from your previous tax returns into Excel and you only h
 
 ### Convert JPG to XLSX
 
+{{< tabs "convert-image-jpg-to-xlsx">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
@@ -83,9 +89,13 @@ SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
 // Save converted XLS file
 converter.convert("jpg-converted-to.xlsx", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Convert PNG to XLSX
 
+{{< tabs "convert-image-png-to-xlsx">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
@@ -96,6 +106,8 @@ SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
 // Save converted XLS file
 converter.convert("png-converted-to.xlsx", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Convert image to PowerPoint presentation
 
@@ -104,6 +116,8 @@ Let’s review several code examples in Java language below and see how to trans
 
 ### Convert JPG to PPTX
 
+{{< tabs "convert-image-jpg-to-pptx">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PresentationConvertOptions;
@@ -114,9 +128,13 @@ PresentationConvertOptions options = new PresentationConvertOptions();
 // Save converted PPT file  
 converter.convert("jpg-converted-to.pptx", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Convert PNG to PPTX
 
+{{< tabs "convert-image-png-to-pptx">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PresentationConvertOptions;
@@ -127,11 +145,15 @@ PresentationConvertOptions options = new PresentationConvertOptions();
 // Save converted PPT file
 converter.convert("png-converted-to.pptx", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Convert image to Microsoft Word document
 
 To easily transform images into Microsoft Word documents programmatically, please check the following code snippet in Java:
 
+{{< tabs "convert-image-jpg-to-docx">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.WordProcessingConvertOptions;
@@ -142,3 +164,5 @@ WordProcessingConvertOptions options = new WordProcessingConvertOptions();
 // Save converted DOCX file
 converter.convert("jpg-converted-to.docx", options);
 ```
+{{< /tab >}}
+{{< /tabs >}}

@@ -10,6 +10,8 @@ hideChildren: False
 ---
 The following code snippet shows how to convert a document from FTP:
 
+{{< tabs "load-document-from-ftp" >}}
+{{< tab "Java" >}}
 ```java
 package com.groupdocs.conversion.examples.advanced_usage.loading.loading_documents_from_different_sources;
 
@@ -53,3 +55,5 @@ public class LoadDocumentFromFtp {
     }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

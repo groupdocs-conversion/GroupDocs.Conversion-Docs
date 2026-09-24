@@ -1,8 +1,8 @@
 ---
 id: quick-start-guide
 url: conversion/java/getting-started/quick-start-guide
-title: Quick Start Guide  
-linkTitle: Quick Start Guide    
+title: Quick Start Guide
+linkTitle: Quick Start Guide
 second_title: A simple example of how to use GroupDocs.Conversion for Java
 weight: 2
 keywords: "hello world, example, get started"
@@ -27,7 +27,7 @@ To proceed, make sure you have:
 
 1. Download the latest **GroupDocs.Conversion for Java** from the official website or include it in your project via **Maven**:
 
-{{< tabs "example1">}}
+{{< tabs "quick-start-maven-dependency">}}
 {{< tab "Maven" >}}
 ```java
 <dependency>
@@ -41,7 +41,7 @@ To proceed, make sure you have:
 
 2. If using a **Gradle** project, add this dependency to `build.gradle`:
 
-{{< tabs "example2">}}
+{{< tabs "quick-start-gradle-dependency">}}
 {{< tab "Gradle" >}}
 ```ps
 dependencies {
@@ -66,7 +66,7 @@ If you are using a Java web application, configure the dependency in the respect
 To quickly test the library, let’s convert a **DOCX** file to **PDF**.
 
 {{< tabs "demo_app_convert_docx_to_pdf">}}
-{{< tab "convert_docx_to_pdf.java" >}}  
+{{< tab "convert_docx_to_pdf.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -76,7 +76,7 @@ public class ConvertDocxToPdf {
     public static void main(String[] args) {
         String inputFilePath = "./business-plan.docx";
         String outputFilePath = "./business-plan.pdf";
-        
+
         try (Converter converter = new Converter(inputFilePath)) {
             PdfConvertOptions options = new PdfConvertOptions();
             converter.convert(outputFilePath, options);
@@ -109,7 +109,7 @@ public class ConvertDocxToPdf {
 
 ### Java Implementation
 {{< tabs "demo_app_convert_pdf_pages_to_png">}}
-{{< tab "convert_pdf_pages_to_png.java" >}}  
+{{< tab "convert_pdf_pages_to_png.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.SavePageStream;
@@ -135,7 +135,7 @@ public class ConvertPdfPagesToPng {
         try (Converter converter = new Converter(inputFilePath)) {
             ImageConvertOptions options = new ImageConvertOptions();
             options.setFormat(ImageFileType.PNG);
-            
+
             converter.convert(getPageStream, options);
             System.out.println("PDF pages converted to PNG successfully.");
         } catch (Exception e) {

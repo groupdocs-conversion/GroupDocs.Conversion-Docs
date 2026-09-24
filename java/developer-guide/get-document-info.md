@@ -4,7 +4,7 @@ url: conversion/java/get-document-info
 title: Getting Document Information
 weight: 1
 description: "This article explains how to detect the document file type and calculate the number of pages when converting a file with GroupDocs.Conversion for Java."
-keywords: 
+keywords:
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 ---
@@ -20,8 +20,8 @@ To retrieve document information, use the `Converter.getDocumentInfo()` method. 
 
 Below is an example demonstrating how to get basic information about a document:
 
-{{< tabs "code-example-1">}}
-{{< tab "GetDocumentInfo.java" >}}  
+{{< tabs "get-basic-document-info">}}
+{{< tab "GetDocumentInfo.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.documentinfo.IDocumentInfo;
@@ -46,7 +46,7 @@ public class GetSourceDocumentInfo {
 ```
 {{< /tab >}}
 
-{{< tab "Expected output" >}}  
+{{< tab "Expected output" >}}
 ```yaml
 Format: txt
 Pages count: 3
@@ -68,8 +68,8 @@ Depending on the document type, additional metadata can be extracted. Below are 
 ## PDF Documents
 
 For PDFs, additional information such as title, author, version, and table of contents can be retrieved:
-{{< tabs "code-example-2">}}
-{{< tab "GetPdfDocumentInfo.java" >}}  
+{{< tabs "get-pdf-document-info">}}
+{{< tab "GetPdfDocumentInfo.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.documentinfo.PdfDocumentInfo;
@@ -103,7 +103,7 @@ public class GetPdfDocumentInfo {
 }
 ```
 {{< /tab >}}
-{{< tab "Expected output" >}}  
+{{< tab "Expected output" >}}
 ```yaml
 Author: null
 Creation Date: Wed Aug 12 16:41:29 EEST 2020
@@ -131,8 +131,8 @@ Table of contents:
 ## Word Documents (DOC, DOCX, etc.)
 
 For word documents, you can retrieve the title, author, word count, line count, password protection status:
-{{< tabs "code-example-3">}}
-{{< tab "GetWordDocumentInfo.java" >}}  
+{{< tabs "get-word-document-info">}}
+{{< tab "GetWordDocumentInfo.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.documentinfo.TableOfContentsItem;
@@ -166,7 +166,7 @@ public class GetWordDocumentInfo {
 }
 ```
 {{< /tab >}}
-{{< tab "Expected output" >}}  
+{{< tab "Expected output" >}}
 ```yaml
 Author: GroupDocs
 Creation Date: Sun Nov 03 12:05:00 EET 2024
@@ -201,8 +201,8 @@ Table of contents:
 ## Spreadsheets (Excel, CSV, etc.)
 
 For spreadsheet documents, you can retrieve the author, number of worksheets, and password protection status:
-{{< tabs "code-example-7">}}
-{{< tab "GetSpDocumentInfo.java" >}}  
+{{< tabs "get-spreadsheet-document-info">}}
+{{< tab "GetSpDocumentInfo.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.documentinfo.SpreadsheetDocumentInfo;
@@ -229,7 +229,7 @@ public class GetSpDocumentInfo {
 }
 ```
 {{< /tab >}}
-{{< tab "Expected output" >}}  
+{{< tab "Expected output" >}}
 ```yaml
 Author: GroupDocs
 Creation Date: Thu Feb 23 18:52:46 EET 2023
@@ -251,8 +251,8 @@ Worksheets Count: 1
 ## Presentation Documents (PPT, PPTX)
 
 For presentation files, you can extract title, author, and encryption status:
-{{< tabs "code-example-6">}}
-{{< tab "GetPresentationDocumentInfo.java" >}}  
+{{< tabs "get-presentation-document-info">}}
+{{< tab "GetPresentationDocumentInfo.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.documentinfo.PresentationDocumentInfo;
@@ -278,7 +278,7 @@ public class GetPresentationDocumentInfo {
 }
 ```
 {{< /tab >}}
-{{< tab "Expected output" >}}  
+{{< tab "Expected output" >}}
 ```yaml
 Author: GroupDocs
 Creation Date: Sat Mar 04 14:58:10 EET 2023
@@ -299,8 +299,8 @@ Title: TEST
 ## Image Files (JPG, PNG, TIFF, etc.)
 
 For images, details such as dimensions and bits per pixel can be extracted:
-{{< tabs "code-example-5">}}
-{{< tab "GetImageDocumentInfo.java" >}}  
+{{< tabs "get-image-document-info">}}
+{{< tab "GetImageDocumentInfo.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.documentinfo.ImageDocumentInfo;
@@ -324,7 +324,7 @@ public class GetImageDocumentInfo {
 }
 ```
 {{< /tab >}}
-{{< tab "Expected output" >}}  
+{{< tab "Expected output" >}}
 ```yaml
 Bits per Pixel: 32
 Creation Date: Sun Feb 09 13:43:01 EET 2025
@@ -344,8 +344,8 @@ Size, bytes: 1734560
 ## CAD Drawings (DWG, DXF, etc.)
 
 For CAD drawings, you can extract layout and layer details:
-{{< tabs "code-example-8">}}
-{{< tab "GetCadDocumentInfo.java" >}}  
+{{< tabs "get-cad-document-info">}}
+{{< tab "GetCadDocumentInfo.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.documentinfo.CadDocumentInfo;
@@ -379,7 +379,7 @@ public class GetCadDocumentInfo {
 }
 ```
 {{< /tab >}}
-{{< tab "Expected output" >}}  
+{{< tab "Expected output" >}}
 ```yaml
 Creation Date: Sun Feb 09 13:52:09 EET 2025
 Format: dwg
@@ -419,8 +419,8 @@ Layers:
 ## Email Messages (MSG, EML)
 
 For emails, metadata such as encryption status, signature status, and attachments can be retrieved:
-{{< tabs "code-example-9">}}
-{{< tab "GetEmailDocumentInfo.java" >}}  
+{{< tabs "get-email-document-info">}}
+{{< tab "GetEmailDocumentInfo.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.documentinfo.EmailDocumentInfo;
@@ -450,7 +450,7 @@ public class GetEmailDocumentInfo {
 }
 ```
 {{< /tab >}}
-{{< tab "Expected output" >}}  
+{{< tab "Expected output" >}}
 ```yaml
 Creation Date: Tue Apr 25 14:28:29 EEST 2017
 Format: eml

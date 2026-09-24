@@ -69,7 +69,11 @@ The PyPI index hosts one wheel per platform:
 
 ## Optional Platform Dependencies
 
-GroupDocs.Conversion uses `libgdiplus` for drawing routines when the source document contains images. On Windows no extra setup is required. On Linux and macOS install `libgdiplus` (and a minimal font set) so that image-bearing documents render correctly.
+The wheel bundles its own .NET runtime and native rendering libraries, so there is nothing to install on Windows. On Linux you need fonts and ICU; on macOS, nothing.
+
+{{< alert style="info" >}}
+**`libgdiplus` is no longer required.** Releases up to 26.5 rendered through `System.Drawing.Common`, which needs a GDI+ implementation. From **26.9** (conversion engine 26.8 on .NET 10) the cross-platform build uses SkiaSharp and Aspose.Drawing instead, and the Linux and macOS wheels no longer contain `System.Drawing.Common` at all. You can remove `libgdiplus` / `mono-libgdiplus` from your images and provisioning scripts.
+{{< /alert >}}
 
 ### Linux
 
@@ -77,27 +81,24 @@ Install the following packages on Debian / Ubuntu derivatives:
 
 ```bash
 sudo apt-get update
-sudo apt-get install -y libgdiplus libfontconfig1 libx11-dev ttf-mscorefonts-installer
+sudo apt-get install -y libicu-dev fontconfig ttf-mscorefonts-installer
 ```
 
-- **libgdiplus** — Mono library providing a GDI+-compatible API on non-Windows operating systems.
-- **libfontconfig1** / **libx11-dev** — needed for drawing functions (image and font rendering).
-- **ttf-mscorefonts-installer** — Microsoft-compatible fonts used by many Office-format documents. If `ttf-mscorefonts-installer` is not available, add the `contrib` component to your apt sources:
+- **ttf-mscorefonts-installer** — Microsoft core fonts (Arial, Times New Roman, …), which the engine looks up by name. **These are required**, not cosmetic: without them, converting an image to PDF fails with `Cannot find any fonts installed on the system`, and metric-compatible substitutes such as `fonts-liberation` alone are not enough. The package lives in Debian's `contrib` component, which is not enabled on slim base images — add it first:
 
   ```bash
   sudo sed -i'.bak' 's/$/ contrib/' /etc/apt/sources.list
   sudo apt-get update
   ```
 
+  Run `sudo fc-cache -f` afterwards so fontconfig picks the fonts up.
+
+- **fontconfig** — font discovery and caching.
 - **ICU** — required by the .NET runtime. On minimal distributions install it explicitly: `sudo apt-get install -y libicu-dev`. Do **not** set `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT`, as it disables culture-sensitive conversions.
 
 ### macOS
 
-Install `libgdiplus` using [Homebrew](https://brew.sh/):
-
-```bash
-brew install mono-libgdiplus
-```
+No extra packages are needed. macOS ships the fonts and rendering libraries the wheel relies on.
 
 If you see a `DllNotFoundException: libSkiaSharp` error after upgrading, an older system copy of SkiaSharp is shadowing the one bundled with the wheel. Rename it so the bundled copy wins:
 

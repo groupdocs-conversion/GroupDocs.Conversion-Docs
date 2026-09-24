@@ -23,8 +23,8 @@ This documentation covers the process of loading markup documents with configura
 
 The following code example demonstrates how to convert a markup document while adding page numbering during the conversion process.
 
-{{< tabs "code-example">}}
-{{< tab "ConvertMarkupWithAddingPageNumbering.java" >}}  
+{{< tabs "load-markup-enable-page-numbering">}}
+{{< tab "ConvertMarkupWithAddingPageNumbering.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.WordProcessingConvertOptions;
@@ -62,6 +62,6 @@ public class ConvertMarkupWithAddingPageNumbering {
 
 ## Skip loading of external resources
 
-External resources in the context of web documents refer to any files or data that a web page or website fetches from sources outside of its own domain or server. These external resources are essential for creating dynamic and feature-rich web experiences. Common external resources include images, audio, video, fonts, CSS, scripts, frameworks, and so on. 
+External resources in the context of web documents refer to any files or data that a web page or website fetches from sources outside of its own domain or server. These external resources are essential for creating dynamic and feature-rich web experiences. Common external resources include images, audio, video, fonts, CSS, scripts, frameworks, and so on.
 
 In some cases, you may want to skip loading all or just some of the external resources during the conversion. For example, when these resources become unavailable. Read the [Skip loading of external resources]({{< ref "conversion/java/developer-guide/loading-documents/skip-external-resources.md" >}}) article to learn how to do this with [**GroupDocs.Conversion for Java**](https://products.groupdocs.com/conversion/java/).

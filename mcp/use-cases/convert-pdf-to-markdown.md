@@ -2,11 +2,24 @@
 id: mcp-convert-pdf-to-markdown
 url: conversion/mcp/use-cases/convert-pdf-to-markdown
 title: How to convert PDF to Markdown with an MCP server
+linkTitle: PDF to Markdown
 weight: 2
 description: "Convert PDF files to clean, LLM-ready Markdown for your RAG pipeline or knowledge base — locally via MCP, with headings, tables, and lists preserved, and no document ever uploaded to a cloud service."
 keywords: convert PDF to Markdown MCP, PDF to LLM-ready Markdown, parse PDF for RAG locally, PDF to clean Markdown tables
 productName: GroupDocs.Conversion MCP Server
 toc: True
+structuredData:
+    showOrganization: True
+    howTo:
+        name: "How to convert PDF to Markdown with an MCP server"
+        description: "Convert PDF files to clean, LLM-ready Markdown for your RAG pipeline or knowledge base — locally via MCP, with headings, tables, and lists preserved, and no document ever uploaded to a cloud service."
+        steps:
+        - name: "Install the server"
+          text: "Run the GroupDocs.Conversion MCP server with Docker or dnx and register it in your AI client."
+        - name: "Put the documents in the storage folder"
+          text: "Point GROUPDOCS_MCP_STORAGE_PATH at the folder that holds the files the agent should use."
+        - name: "Ask the agent"
+          text: "Convert report.pdf to Markdown"
 ---
 
 Convert PDF files to clean, **LLM-ready Markdown** for your RAG pipeline or knowledge base — locally via MCP, with headings, tables, and lists preserved, and no document ever uploaded to a cloud service. Install the server and ask your agent:
@@ -19,13 +32,17 @@ dnx GroupDocs.Conversion.Mcp --yes
 
 The agent calls the [`convert`]({{< ref "conversion/mcp/tools-reference/convert.md" >}}) tool with `format: "md"`; `report.md` appears in your output folder.
 
+{{< alert style="info" >}}
+The commands and config snippets on this page are for the **.NET** build of the server — the only platform available today. Installation and client setup: [MCP server for .NET]({{< ref "conversion/net/mcp/_index.md" >}}). Other platforms will expose the same tools with their own launch command; everything else on this page applies unchanged.
+{{< /alert >}}
+
 ## Why local matters here
 
 Every RAG pipeline starts with document → Markdown. Doing that through a cloud parser means every contract, patient record, and internal report transits someone else's infrastructure — precisely the documents you are building a *private* knowledge base for. The MCP server runs the conversion on your machine through the GroupDocs engine: **local-first by architecture**, not by policy.
 
 ## Setup
 
-Any MCP client works — [per-client reference]({{< ref "conversion/mcp/getting-started/install-in-ai-clients.md" >}}). Claude Desktop:
+Any MCP client works — [per-client reference]({{< ref "conversion/net/mcp/install-in-ai-clients.md" >}}). Claude Desktop:
 
 ```json
 {

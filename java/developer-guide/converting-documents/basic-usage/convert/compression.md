@@ -9,14 +9,14 @@ keywords: Convert from ZIP, Convert from RAR, Convert from TGZ, Convert from 7Z
 productName: GroupDocs.Conversion for Java
 toc: True
 structuredData:
-    showOrganization: True
-    application:    
-        name: Convert compressed file in Java    
-        description: Convert content from a ZIP file to PDF natively with high performance using Java language and GroupDocs.Conversion for Java APIs
-        productCode: conversion
-        productPlatform: java 
-    showVideo: True
-    
+  showOrganization: True
+  application:
+    name: Convert compressed file in Java
+    description: Convert content from a ZIP file to PDF natively with high performance using Java language and GroupDocs.Conversion for Java APIs
+    productCode: conversion
+    productPlatform: java
+  showVideo: True
+
 ---
 
 ## About compression file formats
@@ -56,12 +56,14 @@ Refer to the [API reference](https://apireference.groupdocs.com/conversion/java/
 {{< /alert >}}
 -->
 
-## Extract and convert from an archive 
+## Extract and convert from an archive
 
-Using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java), you can convert the archive content to your desired format. 
+Using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java), you can convert the archive content to your desired format.
 
 To illustrate, here is a code sample showcasing how to convert the content of a ZIP archive to PDF format:
 
+{{< tabs "convert-archive-content-to-pdf">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
@@ -93,6 +95,8 @@ try (Converter converter = new Converter("sample.zip")) {
             }, (s, fileType) -> new PdfConvertOptions());
         }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 With this code snippet, you can effortlessly convert the content of a ZIP archive to PDF format using GroupDocs.Conversion in Java. Enjoy the simplicity and flexibility of converting your archive content to meet your specific needs.
 
 {{< alert style="info" >}}
