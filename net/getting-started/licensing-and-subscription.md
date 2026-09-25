@@ -3,8 +3,8 @@ id: licensing-and-subscription
 url: conversion/net/licensing-and-subscription
 title: Licensing
 weight: 6
-description: free conversion API version is available to evaluate the API which will be similar to licensed version but with few limitations.
-keywords: free conversion, license, conversion, API
+description: free conversion API version is available to evaluate the API which will be similar to licensed version but with few limitations, including a limit of 10 conversions per process.
+keywords: free conversion, license, conversion, API, evaluation limit, conversions per process, EvaluationLimitReachedException
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
@@ -29,7 +29,61 @@ The evaluation version comes with the limitations:
 * Only the first 3 pages are processed.
 * Documents with more than 3 pages are not supported.
 * Trial badges are placed in the document on the top of each page.
-  
+* At most 10 conversions are allowed per process — see [Conversion limit per process](#conversion-limit-per-process).
+
+### Conversion limit per process
+
+Without a license, GroupDocs.Conversion allows **10 conversions** and then refuses further ones until a license is applied. This limit is in addition to the evaluation limitations listed above; it does not replace them.
+
+The allowance belongs to the loaded library instance, so restarting the application starts a fresh allowance. The 11th conversion throws `GroupDocs.Conversion.Exceptions.EvaluationLimitReachedException` (derived from `GroupDocsConversionException`) with the following message:
+
+<blockquote class="gdoc-hint caution">
+  <div class="gdoc-hint__text">You are using GroupDocs.Conversion in evaluation mode: the limit of 10 documents converted per process has been reached. Get a free 30-day temporary license to remove all evaluation limits: <a href="https://purchase.groupdocs.com/temporary-license/">https://purchase.groupdocs.com/temporary-license/</a></div>
+</blockquote>
+
+#### What counts as one conversion
+
+Every `Converter.Convert(...)` call counts as exactly one, whichever overload is used — file or stream target, fixed options or an options provider, document-level or page-level callbacks, and the fluent API. The LowCode converters count the same way, since they run the same pipeline.
+
+A source that produces many output documents — an archive, a document saved page by page, an email with attachments — still counts as **one**. The limit applies to conversion calls, not to produced files.
+
+#### What does not count
+
+* `Converter.GetDocumentInfo()`
+* `Converter.IsDocumentPasswordProtected()`
+
+Inspecting a document is not converting it, so these methods can be called freely in evaluation mode.
+
+#### Handling the limit
+
+```csharp
+using GroupDocs.Conversion;
+using GroupDocs.Conversion.Exceptions;
+using GroupDocs.Conversion.Options.Convert;
+
+try
+{
+    using (Converter converter = new Converter("sample.docx"))
+    {
+        converter.Convert("converted.pdf", new PdfConvertOptions());
+    }
+}
+catch (EvaluationLimitReachedException ex)
+{
+    // The evaluation allowance for this process is used up.
+    // Apply a license to continue converting.
+    Console.WriteLine(ex.Message);
+}
+```
+
+#### Removing the limit
+
+Apply a license before converting — a [license file](#set-license-from-file), a [license stream](#set-license-from-stream), or a [metered license](#set-metered-license). Any of these switches the limit off for the rest of the process. Once a valid license is applied, conversions are neither counted nor capped, and conversions already performed in evaluation mode do not count against the licensed run.
+
+{{< alert style="warning" >}}
+A license that is missing, expired, corrupt, or issued for a different product does **not** lift the limit — the evaluation allowance keeps counting.
+{{< /alert >}}
+
 ### Temporary License
 
 If you wish to test GroupDocs.Conversion without the limitations of the trial version, you can also request a 30-day Temporary License. For more details, see the ["Get a Temporary License"](https://purchase.groupdocs.com/temporary-license) page.
