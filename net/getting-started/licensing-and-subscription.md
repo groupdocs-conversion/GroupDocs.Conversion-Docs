@@ -43,7 +43,7 @@ The allowance belongs to the loaded library instance, so restarting the applicat
 
 #### What counts as one conversion
 
-Every `Converter.Convert(...)` call counts as exactly one, whichever overload is used — file or stream target, fixed options or an options provider, document-level or page-level callbacks, and the fluent API. The LowCode converters count the same way, since they run the same pipeline.
+Every `Converter.Convert(...)` call counts as exactly one, whichever overload is used — file or stream target, fixed options or an options provider, document-level or page-level callbacks, and the fluent API. The LowCode converters count the same way, since they run the same pipeline. A call counts when it starts, so a conversion that fails — for example because of invalid convert options — still uses one of the 10.
 
 A source that produces many output documents — an archive, a document saved page by page, an email with attachments — still counts as **one**. The limit applies to conversion calls, not to produced files.
 
