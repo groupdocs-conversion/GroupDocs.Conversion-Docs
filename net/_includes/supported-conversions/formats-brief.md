@@ -60,6 +60,8 @@ GeekdocHidden: true
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
 | [7Z](/conversion/net/convert/compression/) | 7-Zip Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
+| [AAR](/conversion/net/convert/compression/) | Apple Archive |<!--Load--> ✅ |<!--Save--> ✅ |
+| [ALZ](/conversion/net/convert/compression/) | ALZip archive |<!--Load--> ✅ |<!--Save-->  |
 | [BZ2](/conversion/net/convert/compression/) | Bzip2 Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [CAB](/conversion/net/convert/compression/) | Windows Cabinet File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [CPIO](/conversion/net/convert/compression/) | CPIO Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
@@ -73,6 +75,7 @@ GeekdocHidden: true
 | [RAR](/conversion/net/convert/compression/) | RAR Compressed Archive |<!--Load--> ✅ |<!--Save-->  |
 | [TAR](/conversion/net/convert/compression/) | Consolidated Unix File Archive |<!--Load--> ✅ |<!--Save--> ✅ |
 | [UUE](/conversion/net/convert/compression/) | Uuencoded archive |<!--Load--> ✅ |<!--Save--> ✅ |
+| [WIM](/conversion/net/convert/compression/) | Windows Imaging Format archive |<!--Load--> ✅ |<!--Save-->  |
 | [XAR](/conversion/net/convert/compression/) | eXtensible ARchive |<!--Load--> ✅ |<!--Save--> ✅ |
 | [XZ](/conversion/net/convert/compression/) | Xz Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
 | [Z](/conversion/net/convert/compression/) | Unix Compressed File |<!--Load--> ✅ |<!--Save--> ✅ |
@@ -146,10 +149,12 @@ GeekdocHidden: true
 | From | Description | Load | Save |
 | --- | --- | :---: | :---: |
 | [GEOJSON](/conversion/net/convert/gis/) | JSON based Geographic File Format |<!--Load--> ✅ |<!--Save--> ✅ |
-| [GML](/conversion/net/convert/gis/) | Geography Markup Language File Format |<!--Load--> ✅ |<!--Save-->  |
+| [GEOJSONS](/conversion/net/convert/gis/) | JSON based Geographic Text Sequence Format |<!--Load--> ✅ |<!--Save-->  |
+| [GML](/conversion/net/convert/gis/) | Geography Markup Language File Format |<!--Load--> ✅ |<!--Save--> ✅ |
 | [GPX](/conversion/net/convert/gis/) | GPS Exchange File Format |<!--Load--> ✅ |<!--Save--> ✅ |
 | [KML](/conversion/net/convert/gis/) | Keyhole Markup Language |<!--Load--> ✅ |<!--Save--> ✅ |
-| [OSM](/conversion/net/convert/gis/) | OpenStreetMap File Format |<!--Load--> ✅ |<!--Save-->  |
+| [KMZ](/conversion/net/convert/gis/) | Compressed Keyhole Markup Language |<!--Load--> ✅ |<!--Save-->  |
+| [OSM](/conversion/net/convert/gis/) | OpenStreetMap File Format |<!--Load--> ✅ |<!--Save--> ✅ |
 | [TOPOJSON](/conversion/net/convert/gis/) | JSON based Topology File Format |<!--Load--> ✅ |<!--Save--> ✅ |
 
 ## Image
