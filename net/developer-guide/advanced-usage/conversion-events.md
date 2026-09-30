@@ -1,6 +1,8 @@
 ---
 id: conversion-events
 url: conversion/net/conversion-events
+aliases:
+    - /conversion/net/listening/
 title: Conversion events
 linkTitle: Conversion events
 weight: 4
@@ -11,11 +13,11 @@ hideChildren: False
 toc: True
 ---
 
-Starting with **GroupDocs.Conversion for .NET v26.6**, conversion event handlers are aggregated into a single typed object — [ConversionEvents](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/conversionevents/). This replaces three previously separate registration paths:
+Conversion event handlers are aggregated into a single typed object — [ConversionEvents](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/conversionevents/), available since **GroupDocs.Conversion for .NET v26.6**.
 
-* The [IConverterListener](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.reporting/iconverterlistener/) interface assigned to [ConverterSettings.Listener](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/convertersettings/listener/) — for pipeline lifecycle callbacks.
-* Per-result handler properties on `ConverterSettings` (`OnConversionFailed`, `OnConversionByPageFailed`, `OnCompressionCompleted`).
-* The fluent chain methods placed after `WithOptions(...)` or `Compress(...)` (`.OnConversionCompleted(...)`, `.OnConversionFailed(...)`, `.OnCompressionCompleted(...)`).
+{{< alert style="info" >}}
+Starting with version 26.9, the earlier registration paths are removed: the `IConverterListener` interface and the `ConverterSettings.Listener` property, the `ConverterSettings.OnConversionFailed`, `OnConversionByPageFailed` and `OnCompressionCompleted` properties, and the fluent `.OnCompressionCompleted(...)` method placed after `.Compress(...)`. See [Compatibility with the previous API](#compatibility-with-the-previous-api) for the replacements.
+{{< /alert >}}
 
 The aggregator is registered with the [Converter](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/) constructor via a new `events:` factory parameter, or with the fluent API via the entry-stage `FluentConverter.WithEvents(...)` method.
 
@@ -126,7 +128,7 @@ Handlers registered on `ConversionEvents` are **global** — they live for the l
 using (var converter = new Converter("source.docx", () => new ConverterSettings(), () => events))
 {
     converter.Convert("page1.pdf",  new PdfConvertOptions());   // events.OnDocumentConverted fires
-    converter.Convert("page2.tiff", new TiffConvertOptions());  // same global handler fires again
+    converter.Convert("page2.tiff", new ImageConvertOptions { Format = ImageFileType.Tiff });  // same global handler fires again
 }
 ```
 
@@ -178,7 +180,7 @@ FluentConverter
     .Convert();
 ```
 
-The previous late-stage `.OnCompressionCompleted(stream => ...)` placed after `.Compress(...)` continues to work but is obsolete — the `IConversionCompressResultCompleted` interface that declares it is planned for removal in v26.9.
+The previous late-stage `.OnCompressionCompleted(stream => ...)` placed after `.Compress(...)` was removed in version 26.9 together with the `IConversionCompressResultCompleted` interface that declared it; register the handler with `WithEvents(...)` as shown above.
 
 ## Font substitution notifications
 
@@ -275,18 +277,16 @@ Image conversions are out of scope — see the behavior notes below.
 
 ## Compatibility with the previous API
 
-The previous registration mechanisms continue to work, but are obsolete and planned for removal in **v26.9**:
+The previous registration mechanisms were obsolete since version 26.6 and are removed in version 26.9:
 
-| Obsolete (still works in v26.6) | Replacement |
-|---------------------------------|-------------|
+| Removed in 26.9 | Replacement |
+|-----------------|-------------|
 | `ConverterSettings.Listener` (`IConverterListener.Started` / `Progress` / `Completed`) | `ConversionEvents.OnConversionStarted` / `OnConversionProgress` / `OnConversionCompleted` |
 | `ConverterSettings.OnConversionFailed` | `ConversionEvents.OnDocumentFailed` |
 | `ConverterSettings.OnConversionByPageFailed` | `ConversionEvents.OnPageFailed` |
 | `ConverterSettings.OnCompressionCompleted` | `ConversionEvents.OnCompressionCompleted` |
-| Fluent chain `.OnConversionCompleted(...)` after `WithOptions(...)` | `FluentConverter.WithEvents(e => e.OnDocumentConverted = ...)` |
-| Fluent chain `.OnConversionFailed(...)` after `WithOptions(...)` | `FluentConverter.WithEvents(e => e.OnDocumentFailed = ...)` |
 | Fluent chain `.OnCompressionCompleted(...)` after `.Compress(...)` (`IConversionCompressResultCompleted`) | `FluentConverter.WithEvents(e => e.OnCompressionCompleted = ...)` |
 
-When values are set on both the obsolete locations and on `ConversionEvents`, the aggregator wins. Handlers set on `ConverterSettings` (including a `Listener` instance) are forwarded into the internal events bag at converter construction.
+The fluent `.OnConversionCompleted(...)` and `.OnConversionFailed(...)` handlers placed after `WithOptions(...)` remain supported.
 
 See the [migration notes]({{< ref "conversion/net/developer-guide/migration-notes.md" >}}) for a step-by-step upgrade guide.

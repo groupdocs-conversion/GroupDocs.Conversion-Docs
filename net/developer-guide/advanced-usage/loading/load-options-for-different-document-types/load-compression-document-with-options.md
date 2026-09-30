@@ -15,7 +15,7 @@ The following options are available:
 
 | Option | Description |
 |--------|-------------|
-|**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/compressionloadoptions/format)** | The document type is auto-detected during loading, but you can explicitly specify the source format. Available options include: *SevenZ, Bz2, Cab, Cpio, Gz, Gzip, Lz, Lzma, Rar, Tar, Xz, Z, Zip* |
+|**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/compressionloadoptions/format)** | The document type is auto-detected during loading, but you can explicitly specify the source format. Available options include: *SevenZ, Aar, Alz, Bz2, Cab, Cpio, Gz, Gzip, Iso, Lha, Lz, Lz4, Lzma, Rar, Tar, Uue, Wim, Xar, Xz, Z, Zip, Zst* |
 |**[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/compressionloadoptions/password)** | Set password to load protected archive |
 |**[ConvertOwned](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/compressionloadoptions/convertowned)** | The owned documents will be converted (read-only, set to true by default) |
 |**[ConvertOwner](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/compressionloadoptions/convertowner)** | The owner will not be converted (read-only, set to false by default) |

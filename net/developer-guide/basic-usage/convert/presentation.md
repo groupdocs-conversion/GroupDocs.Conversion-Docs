@@ -5,7 +5,7 @@ title: Convert presentations
 linkTitle: Presentations
 weight: 40
 description: "This article demonstrates how to convert PowerPoint presentations of PPT, PPTX, ODP to other formats with couple lines of C# code."
-keywords: Convert presentation, Convert PPT, Convert PPTX, Convert PPTX to HTML, Convert presentation to HTML slideshow
+keywords: Convert presentation, Convert PPT, Convert PPTX, Convert PPTX to HTML, Convert presentation to HTML slideshow, Convert presentation to video, Convert PPTX to MP4
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
@@ -145,3 +145,79 @@ using (Converter converter = new Converter("sample.pptx"))
 Navigation and animation scripts load from a CDN, so the slideshow needs an internet connection to play.
 
 Refer to [Convert a presentation to an HTML slideshow]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-to-html-with-advanced-options.md#convert-a-presentation-to-an-html-slideshow" >}}) for the supported formats and the options that cannot be combined with a slideshow.
+
+## Convert presentation to video
+
+A presentation can be converted to a video file — **AVI**, **FLV**, **MKV**, **MOV**, **MP4**, **WEBM** or **WMV** — that plays the slides with their transitions and animations. GroupDocs.Conversion renders the slides to PNG frames at the frame rate set in [VideoConvertOptions.FramesPerSecond](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/framespersecond/) (30 by default) and hands the frames to a video processing library of your choice, which encodes them into the video.
+
+The video processing library is plugged in through the [IPresentationVideoConnector](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.integration.video/ipresentationvideoconnector/) interface. The following sample implements it with the [FFMpegCore](https://www.nuget.org/packages/FFMpegCore) NuGet package. FFMpegCore runs the `ffmpeg` executable, so FFmpeg must be installed and available on `PATH`, or its folder set with `GlobalFFOptions.Configure`.
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.IO;
+using FFMpegCore;
+using FFMpegCore.Pipes;
+using GroupDocs.Conversion.Integration.Video;
+using GroupDocs.Conversion.Options.Convert;
+
+public class PresentationVideoConnector : IPresentationVideoConnector
+{
+    public Stream CreateVideoFromPngFrames(List<Stream> pngFrames, VideoConvertOptions convertOptions)
+    {
+        // Join the rendered PNG frames into one input stream
+        var frames = new MemoryStream();
+        foreach (var frame in pngFrames)
+        {
+            frame.Position = 0;
+            frame.CopyTo(frames);
+        }
+        frames.Position = 0;
+
+        // FFmpeg picks the container from the file extension
+        string outputFile = Path.Combine(Path.GetTempPath(), Guid.NewGuid() + "." + convertOptions.Format.Extension);
+        try
+        {
+            FFMpegArguments
+                .FromPipeInput(new StreamPipeSource(frames), options => options
+                    .ForceFormat("image2pipe")
+                    .WithFramerate(convertOptions.FramesPerSecond)
+                    .WithCustomArgument("-vcodec png"))
+                .OutputToFile(outputFile, true, options => options
+                    .WithCustomArgument("-pix_fmt yuv420p"))
+                .ProcessSynchronously();
+
+            return new MemoryStream(File.ReadAllBytes(outputFile));
+        }
+        finally
+        {
+            File.Delete(outputFile);
+        }
+    }
+}
+```
+
+Set the connector on [PresentationLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/setvideoconnector/) and convert the presentation with `VideoConvertOptions`:
+
+```csharp
+// Plug in the video processing library
+PresentationLoadOptions loadOptions = new PresentationLoadOptions();
+loadOptions.SetVideoConnector(new PresentationVideoConnector());
+
+// Load the source PPTX file
+using (Converter converter = new Converter("sample.pptx", (LoadContext loadContext) => loadOptions))
+{
+    // Set the convert options for MP4 format
+    VideoConvertOptions options = new VideoConvertOptions
+    {
+        Format = VideoFileType.Mp4,
+        FramesPerSecond = 30
+    };
+    // Convert to MP4 format
+    converter.Convert("converted.mp4", options);
+}
+```
+
+{{< alert style="info" >}}
+The whole presentation is converted to a single video file; converting to video page by page is not supported.
+{{< /alert >}}

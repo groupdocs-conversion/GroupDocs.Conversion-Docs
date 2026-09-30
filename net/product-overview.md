@@ -63,9 +63,8 @@ GroupDocs.Conversion for .NET public API was designed to be simple and intuitive
 You can use GroupDocs.Conversion across [multiple platforms and operation systems]({{< ref "conversion/net/getting-started/system-requirements" >}}):
 
 * Windows, Linux, and macOS
-* .NET Framework 2.0 and higher
-* .NET Core 2.1
-* .NET 5 and higher
+* .NET Framework 4.6.2 and higher
+* .NET 6.0 and higher
 
 ## Get started with GroupDocs.Conversion for .NET
 

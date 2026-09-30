@@ -10,7 +10,7 @@ hideChildren: False
 toc: True
 ---
 
-GroupDocs.Conversion provides the [CadConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/cadconvertoptions) class to specify CAD file format conversion settings. This class implements [IPagedConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/ipagedconvertoptions) for page selection and [IPageSizeConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/ipagesizeconvertoptions) for page sizing.
+GroupDocs.Conversion provides the [CadConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/cadconvertoptions) class to specify CAD file format conversion settings. This class implements [IPagedConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/ipagedconvertoptions) for page selection and [IPageSizeOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options/ipagesizeoptions/) for page sizing.
 
 ## Supported CAD Formats
 
@@ -34,11 +34,15 @@ The following CAD (Computer-Aided Design) formats are recognized:
 
 **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/)** - Specifies the desired CAD file format. Available options are: *Dwg, Dxf, Dwf, Dwfx, Dwt, Dgn, Ifc, Stl, Plt, Igs, Cf2*.
 
-**[PageSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/ipagesizeconvertoptions/pagesize)** - Sets the page size (A3, A4, Letter, etc.) for the output document.
+**[SizeSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/cadconvertoptions/sizesettings/)** - A [PageSizeOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options/pagesizeoptions/) object that sets the output page size:
 
-**[PageWidth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/ipagesizeconvertoptions/pagewidth)** - Sets custom page width in points. When set, PageSize automatically changes to Custom.
+* **[PageSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options/pagesizeoptions/pagesize/)** - the page size (A3, A4, Letter, etc.).
+* **[PageWidth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options/pagesizeoptions/pagewidth/)** - custom page width in points. When set, PageSize automatically changes to Custom.
+* **[PageHeight](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options/pagesizeoptions/pageheight/)** - custom page height in points. When set, PageSize automatically changes to Custom.
 
-**[PageHeight](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/ipagesizeconvertoptions/pageheight)** - Sets custom page height in points. When set, PageSize automatically changes to Custom.
+{{< alert style="info" >}}
+Starting with version 26.9, the page size is set only through `SizeSettings`; the `PageSize`, `PageWidth` and `PageHeight` properties directly on `CadConvertOptions` were removed.
+{{< /alert >}}
 
 **[PageNumber](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/ipagedconvertoptions/pagenumber)** - Specifies the starting page number for conversion.
 
@@ -49,6 +53,7 @@ The following CAD (Computer-Aided Design) formats are recognized:
 The following example shows the API structure for CadConvertOptions:
 
 ```csharp
+using GroupDocs.Conversion.Options;
 using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.FileTypes;
 
@@ -56,7 +61,7 @@ using GroupDocs.Conversion.FileTypes;
 CadConvertOptions options = new CadConvertOptions
 {
     Format = CadFileType.Dwg,
-    PageSize = GroupDocs.Conversion.Options.Convert.PageSize.A4,
+    SizeSettings = new PageSizeOptions { PageSize = PageSize.A4 },
     PageNumber = 1,      // Starting page
     PagesCount = 10      // Number of pages to process
 };
@@ -112,7 +117,7 @@ using (var converter = new Converter(sourceFile))
 
 ## Page Size Options
 
-Control output page dimensions using PageSize or custom dimensions:
+Control output page dimensions through `SizeSettings`, using a standard page size or custom dimensions:
 
 ### Using Standard Page Size
 
@@ -120,6 +125,7 @@ Set a standard page size (A4, A3, Letter, etc.):
 
 ```csharp
 using GroupDocs.Conversion;
+using GroupDocs.Conversion.Options;
 using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.FileTypes;
 
@@ -131,7 +137,7 @@ using (var converter = new Converter(sourceFile))
     var options = new CadConvertOptions
     {
         Format = CadFileType.Dxf,
-        PageSize = PageSize.A4
+        SizeSettings = new PageSizeOptions { PageSize = PageSize.A4 }
     };
     converter.Convert(outputFile, options);
 }
@@ -143,6 +149,7 @@ Define custom page width and height in points:
 
 ```csharp
 using GroupDocs.Conversion;
+using GroupDocs.Conversion.Options;
 using GroupDocs.Conversion.Options.Convert;
 using GroupDocs.Conversion.FileTypes;
 
@@ -154,8 +161,11 @@ using (var converter = new Converter(sourceFile))
     var options = new CadConvertOptions
     {
         Format = CadFileType.Dxf,
-        PageWidth = 800,   // Width in points
-        PageHeight = 600   // Height in points
+        SizeSettings = new PageSizeOptions
+        {
+            PageWidth = 800,   // Width in points
+            PageHeight = 600   // Height in points
+        }
     };
     converter.Convert(outputFile, options);
 }

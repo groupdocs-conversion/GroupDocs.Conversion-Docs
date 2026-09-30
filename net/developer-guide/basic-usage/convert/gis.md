@@ -32,7 +32,7 @@ structuredData:
 
 A GIS (Geographic Information System) map file consists of spatial or geographic information about a certain location or area. A GIS mapping software is a program or set of programs that present spatial or geographical data to viewers for visualization, analysis and management. A GIS file can be created manually, extracted from a GPS device or recorded through remote sensing devices and applications. GIS finds its usage in almost all fields of life; from agriculture to town planning, resources analysis, urban planning and for creation of strategies to solve problems.
 
-Common GIS file extensions and their file formats include GPX (GPS Exchange File Format), KML (Keyhole Markup Language File) and SHP (ESRI Shapefile).
+Common GIS file extensions and their file formats include GPX (GPS Exchange File Format), KML (Keyhole Markup Language File), KMZ (zipped KML) and GeoJSON (JSON based Geographic File Format).
 
 ## Supported GIS file conversions
 

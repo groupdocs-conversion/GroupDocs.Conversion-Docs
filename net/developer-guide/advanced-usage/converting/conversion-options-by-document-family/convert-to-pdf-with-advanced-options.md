@@ -12,17 +12,12 @@ toc: True
 GroupDocs.Conversion provides the [PdfConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions) class to give you control over conversion results. Along with [common convert options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}}) you can specify the following additional options via the [PdfConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions) class:
 
 *   [Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/) sets the desired file type the input document should be converted to.
-*   [PageWidth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/pagewidth) sets the desired page width in points after conversion (1 point = 1/72 inch). When set, PageSize is automatically changed to Custom.
-*   [PageHeight](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/pageheight) sets the desired page height in points after conversion (1 point = 1/72 inch). When set, PageSize is automatically changed to Custom.
-*   [PageSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/pagesize) sets the desired page size. Available options are: *Default, A3, A4, A5, Letter, Legal, Tabloid*.
-*   [PageOrientation](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/pageorientation) sets the page orientation. Available options are: *Default, Landscape, Portrait*.
+*   [SizeSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/sizesettings/) sets the output page size through a [PageSizeOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options/pagesizeoptions/) object: `PageSize` (*Default, A3, A4, A5, Letter, Legal, Tabloid*, …), or `PageWidth` and `PageHeight` in points (1 point = 1/72 inch). When a width or height is set, `PageSize` is automatically changed to Custom.
+*   [OrientationSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/orientationsettings/) sets the page orientation. Available options are: *Default, Landscape, Portrait*.
 *   [FallbackPageSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/fallbackpagesize) sets the fallback page size to use when the input document's page size cannot be determined.
 *   [Dpi](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/dpi) sets the desired page DPI after conversion
 *   [Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/password) when specified, the resulting document will be protected with the specified password.
-*   [MarginTop](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/margintop) sets the desired page top margin after conversion.
-*   [MarginBottom](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/marginbottom) sets the desired page bottom margin after conversion.
-*   [MarginLeft](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/marginleft) sets the desired page left margin after conversion.
-*   [MarginRight](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/marginright) sets the desired page right margin after conversion.
+*   [MarginSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/marginsettings/) sets the desired page margins after conversion through a [PageMarginOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options/pagemarginoptions/) object (`Top`, `Bottom`, `Left`, `Right`).
 *   [PdfOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfoptions) defines the PDF-specific convert options. See [below](#pdfoptions).
 *   [Rotate](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pdfconvertoptions/rotate) sets the page rotation angle. Available options are: *None, On90, On180, On270*.
 
@@ -37,8 +32,11 @@ using (Converter converter = new Converter("sample.docx"))
         PagesCount = 1,
         Rotate = Rotation.On180,
         Dpi = 300,
-        PageWidth = 595,   // A4 width in points (8.27 inches)
-        PageHeight = 841   // A4 height in points (11.69 inches)
+        SizeSettings = new PageSizeOptions
+        {
+            PageWidth = 595,   // A4 width in points (8.27 inches)
+            PageHeight = 841   // A4 height in points (11.69 inches)
+        }
     };
     converter.Convert("converted.pdf", options);
 }
@@ -55,8 +53,8 @@ using (Converter converter = new Converter("sample.docx"))
 {
     PdfConvertOptions options = new PdfConvertOptions
     {
-        PageSize = PageSize.A4,
-        PageOrientation = PageOrientation.Portrait
+        SizeSettings = new PageSizeOptions { PageSize = PageSize.A4 },
+        OrientationSettings = PageOrientation.Portrait
     };
     converter.Convert("a4-portrait.pdf", options);
 }
@@ -69,8 +67,8 @@ using (Converter converter = new Converter("sample.docx"))
 {
     PdfConvertOptions options = new PdfConvertOptions
     {
-        PageSize = PageSize.Letter,
-        PageOrientation = PageOrientation.Landscape
+        SizeSettings = new PageSizeOptions { PageSize = PageSize.Letter },
+        OrientationSettings = PageOrientation.Landscape
     };
     converter.Convert("letter-landscape.pdf", options);
 }

@@ -92,7 +92,7 @@ FluentConverter
 // Output: converted-documents.zip containing PDFs
 ```
 
-Starting with v26.6, the compressed archive stream is delivered through the [ConversionEvents]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}}) aggregator via the `WithEvents(...)` entry-stage call. The previous `.OnCompressionCompleted(...)` chain method placed after `.Compress(...)` continues to work but is obsolete and planned for removal in v26.9.
+Starting with v26.6, the compressed archive stream is delivered through the [ConversionEvents]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}}) aggregator via the `WithEvents(...)` entry-stage call. The previous `.OnCompressionCompleted(...)` chain method placed after `.Compress(...)` was removed in version 26.9.
 
 **With password protection:**
 
@@ -126,9 +126,9 @@ FluentConverter
 
 ## Supported Archive Formats
 
-**Input (read):** ZIP, RAR, 7z, TAR, TAR.GZ, TAR.BZ2, TAR.XZ, CAB, LZ, CPIO, ISO
+**Input (read):** 7z, AAR (Apple Archive), ALZ, BZ2, CAB, CPIO, GZ, GZIP, ISO, LHA, LZ, LZ4, LZMA, RAR, TAR, UUE, WIM, XAR, XZ, Z, ZIP, ZST
 
-**Output (write):** ZIP, 7z, TAR, TAR.GZ, TAR.BZ2, TAR.XZ (RAR output not supported due to licensing)
+**Output (write, `Compress`):** 7z, AAR (Apple Archive), BZ2, CAB, CPIO, GZ, GZIP, ISO, LZ, LZ4, LZMA, TAR, UUE, XAR, XZ, Z, ZIP, ZST (ALZ, LHA, RAR and WIM can be read but not created)
 
 ## See Also
 
