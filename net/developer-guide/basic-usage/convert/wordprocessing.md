@@ -94,8 +94,8 @@ using(var converter = new GroupDocs.Conversion.Converter("sample.docx"))
     {  
         Format = GroupDocs.Conversion.FileTypes.WebFileType.Mhtml
     };
-    // Save converted HTML file
-    converter.Convert("converted.html", options);
+    // Save converted MHTML file
+    converter.Convert("converted.mhtml", options);
 }
 ```
 

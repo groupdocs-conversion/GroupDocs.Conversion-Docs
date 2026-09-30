@@ -13,7 +13,7 @@ To save the conversion results to a stream, follow these steps:
 1.   Specify the method to obtain the stream where the converted file will be sent.
 2.   Pass the method's name as the `document` parameter to the [Convert()](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/converter/convert/) method implementations. 
 
-The `document` parameter could be of `Func<Stream>`, `Func<FileType, Stream>`, `Func<int, Stream>`, or `Func<int, FileType, Stream>` type.
+The stream provider is a `Func<SaveContext, Stream>` that receives the whole converted document, or a `Func<SavePageContext, Stream>` that receives each converted page separately.
 
 The following code snippet shows how to save a file to a stream:
 
@@ -35,7 +35,7 @@ public static void Run()
 // Obtain the stream for the conversion output
 public static Stream GetFileStream(string outFile)
 {
-    return new FileStream(outFile, FileMode.OpenOrCreate);
+    return new FileStream(outFile, FileMode.Create);
 }
 ```
 
@@ -51,12 +51,13 @@ public static void Run()
         .Load("c:\\files\\sample.docx")
         // Pass the output stream as parameter
         .ConvertTo(getOutputStream)
+        .WithOptions(new PdfConvertOptions())
         .Convert();
 }
 
 // Obtain the stream for the conversion output
 public static Stream GetFileStream(string outFile)
 {
-    return new FileStream(outFile, FileMode.OpenOrCreate);
+    return new FileStream(outFile, FileMode.Create);
 }
 ```

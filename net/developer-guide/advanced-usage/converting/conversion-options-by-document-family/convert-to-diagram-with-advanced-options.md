@@ -279,7 +279,7 @@ using (var converter = new Converter("org-chart.vsdx"))
     {
         Format = ImageFileType.Png
     };
-    converter.Convert("org-chart-page.png", options);
+    converter.Convert((SavePageContext context) => File.Create($"org-chart-page-{context.Page}.png"), options);
 }
 
 // Convert diagram to Word document

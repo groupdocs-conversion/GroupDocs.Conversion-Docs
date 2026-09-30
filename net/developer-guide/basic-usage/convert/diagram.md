@@ -63,17 +63,17 @@ Refer to the [API reference](https://reference.groupdocs.com/conversion/net/grou
 ## Convert to another diagram format
 
 On the other hand, converting your diagram files to another diagram format is also quite simple and natural.
-The following code snippet shows how to convert a VSDX format to a VDW format in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
+The following code snippet shows how to convert a VSDX format to a VSD format in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
 
 ```csharp
 // Load the source VSDX file
 using (Converter converter = new Converter("sample.vsdx"))
 {
-    // Set the convert options for VDW format
+    // Set the convert options for VSD format
     var options = new DiagramConvertOptions {
-        Format = DiagramFileType.Vdw
+        Format = DiagramFileType.Vsd
     };
-    // Convert to VDW format
-    converter.Convert("converted.vdw", options);
+    // Convert to VSD format
+    converter.Convert("converted.vsd", options);
 }
 ```

@@ -44,7 +44,11 @@ With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net) you c
 // Load the source ZIP file
 using (Converter converter = new Converter("sample.zip"))
 {
-    converter.Convert(_ => null, (ConvertedContext convertedContext) =>
+    // Keep the archive itself as a container and pass each item through unconverted
+    Func<ConvertContext, ConvertOptions> extractItems = convertContext =>
+        convertContext.SourceFormat is CompressionFileType ? null : new NoConvertOptions();
+
+    converter.Convert(extractItems, (ConvertedContext convertedContext) =>
     {
         // store extracted content
         string fileName = Path.Combine(outputFolder, convertedContext.SourceFileName);
@@ -57,7 +61,7 @@ using (Converter converter = new Converter("sample.zip"))
 }
 ```
 
-Put it simply - you just load a ZIP file into the `Converter` class, provide null convert options and a handler in which to store the result and **GroupDocs.Conversion** does all the rest.  
+Put it simply - you just load a ZIP file into the `Converter` class, return [NoConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/noconvertoptions) for the archive items (and *null* for the archive itself), provide a handler in which to store each item and **GroupDocs.Conversion** does all the rest.  
 
 {{< alert style="info" >}}
 Refer to the [API reference](https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert) for more conversion options and customizations.

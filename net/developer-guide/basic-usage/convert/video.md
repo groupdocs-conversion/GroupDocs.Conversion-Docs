@@ -56,6 +56,15 @@ Once the video processing library is installed, you must implement the [IVideoCo
 public class VideoConnector : IVideoConnector
 {
     private readonly Dictionary<VideoFileType, Action<FFMpegArgumentOptions>> _optionsMap = new();
+    private readonly Dictionary<AudioFileType, string> _audioFormatMap = new()
+    {
+        { AudioFileType.Mp3, "mp3" },
+        { AudioFileType.Ogg, "ogg" },
+        { AudioFileType.Wav, "wav" },
+        { AudioFileType.Flac, "flac" },
+        { AudioFileType.Aac, "adts" }
+    };
+
     public VideoConnector()
     {
         _optionsMap.Add(VideoFileType.Avi, SetAviConvertOptions);
@@ -75,7 +84,11 @@ public class VideoConnector : IVideoConnector
             .FromPipeInput(new StreamPipeSource(sourceStream))
             .OutputToPipe(new StreamPipeSink(resultStream), options =>
             {
-                if (_optionsMap.ContainsKey(convertOptions.Format))
+                if (convertOptions.ExtractAudioOnly)
+                {
+                    SetAudioOnlyConvertOptions(options, convertOptions.AudioFormat);
+                }
+                else if (_optionsMap.ContainsKey(convertOptions.Format))
                 {
                     _optionsMap[convertOptions.Format].Invoke(options);
                 }
@@ -88,6 +101,17 @@ public class VideoConnector : IVideoConnector
         arguments.ProcessSynchronously();
             
         return resultStream;
+    }
+
+    private void SetAudioOnlyConvertOptions(FFMpegArgumentOptions options, AudioFileType audioFormat)
+    {
+        if (!_audioFormatMap.TryGetValue(audioFormat, out var format))
+        {
+            throw new InvalidOperationException(
+                $"Extracting audio to {audioFormat.Extension} is not supported at the moment");
+        }
+        options.DisableChannel(Channel.Video);
+        options.ForceFormat(format);
     }
 
     private void SetAviConvertOptions(FFMpegArgumentOptions options)
@@ -154,7 +178,7 @@ Refer to the [API reference](https://reference.groupdocs.com/conversion/net/grou
 {{< /alert >}}
 
 ## Extract audio track
-Extracting an audio track from a video is similar to converting video, however, you need to set the [ExtractAudioOnly](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property to `true` and specify the desired output format in the [AudioFormat](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property:
+Extracting an audio track from a video is similar to converting video. The connector receives the request and must handle it; the sample `VideoConnector` above does this in `SetAudioOnlyConvertOptions`, which drops the video stream and writes the requested audio format. Set the [ExtractAudioOnly](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/extractaudioonly/) property to `true` and specify the desired output format in the [AudioFormat](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/videoconvertoptions/audioformat/) property:
 
 ```csharp
 // Load the source AVI file

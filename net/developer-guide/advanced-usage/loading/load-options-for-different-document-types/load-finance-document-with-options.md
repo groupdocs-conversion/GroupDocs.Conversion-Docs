@@ -11,6 +11,10 @@ toc: True
 ---
 [**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [FinanceLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/financeloadoptions) to control how source finance documents are processed. Finance documents include XBRL (eXtensible Business Reporting Language) and iXBRL (inline XBRL) files used for financial reporting.
 
+{{< alert style="info" >}}
+On .NET 6 and later, converting XBRL and iXBRL documents to spreadsheet formats requires the [System.Drawing.Common](https://www.nuget.org/packages/System.Drawing.Common/4.7.3) 4.7.3 package in your project; on Linux, libgdiplus must also be installed. Without it, the conversion throws a `MissingDependencyException` that names the missing package.
+{{< /alert >}}
+
 The following options are available:
 
 | Option | Description |

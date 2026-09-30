@@ -22,7 +22,7 @@ GroupDocs.Conversion provides [ImageConvertOptions](https://reference.groupdocs.
 *   [Contrast](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/imageconvertoptions/contrast) adjusts image contrast.
 *   [Gamma](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/imageconvertoptions/gamma) adjusts image gamma.
 *   [BackgroundColor](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/imageconvertoptions/backgroundcolor) sets the background color where supported by the source format.
-*   [CropArea](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/imageconvertoptions/croparea) crops a rectangular area from the raster image after conversion. Specify as Rectangle(x, y, width, height).
+*   [CropArea](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/imageconvertoptions/croparea) crops a rectangular area from the raster image after conversion. Specify as Rectangle(left, top, right, bottom), in pixels.
 *   [JpegOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/imageconvertoptions/jpegoptions) contains JPEG specific convert options.
 *   [TiffOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/imageconvertoptions/tiffoptions) contains TIFF specific convert options.
 *   [PsdOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/imageconvertoptions/psdoptions) contains PSD specific convert options.
@@ -54,6 +54,8 @@ using (Converter converter = new Converter("sample.pdf"))
 
 ## Setting Background Color
 
+Image formats other than TIFF hold one page per file, so the examples below save each page of the multi-page source to its own image through a [SavePageContext](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/savepagecontext/) callback.
+
 Set a background color for the converted image where supported by the source format:
 
 ```csharp
@@ -65,7 +67,7 @@ using (Converter converter = new Converter("sample.pdf"))
         Format = ImageFileType.Png,
         BackgroundColor = Color.White  // Use System.Drawing.Color
     };
-    converter.Convert("white-background.png", options);
+    converter.Convert((SavePageContext context) => File.Create($"white-background-{context.Page}.png"), options);
 }
 ```
 
@@ -80,13 +82,13 @@ using (Converter converter = new Converter("sample.pdf"))
         Format = ImageFileType.Png,
         BackgroundColor = Color.FromArgb(173, 216, 230)  // Light blue (RGB)
     };
-    converter.Convert("custom-background.png", options);
+    converter.Convert((SavePageContext context) => File.Create($"custom-background-{context.Page}.png"), options);
 }
 ```
 
 ## Cropping Image Area
 
-Crop a specific rectangular area from the converted image. The CropArea property takes a Rectangle with X, Y coordinates for the top-left corner, and Width, Height for the dimensions:
+Crop a specific rectangular area from the converted image. The CropArea property takes a Rectangle defined by its edges, in pixels: the left and top edges of the area, followed by its right and bottom edges. The example below keeps a 300 × 200 pixel area whose top-left corner is at (100, 100):
 
 ```csharp
 using GroupDocs.Conversion.Contracts;
@@ -95,26 +97,25 @@ using (Converter converter = new Converter("sample.pdf"))
     ImageConvertOptions options = new ImageConvertOptions
     {
         Format = ImageFileType.Png,
-        CropArea = new Rectangle(100, 100, 400, 300)  // X, Y, Width, Height
+        CropArea = new Rectangle(100, 100, 400, 300)  // Left, Top, Right, Bottom
     };
-    converter.Convert("cropped-image.png", options);
+    converter.Convert((SavePageContext context) => File.Create($"cropped-image-{context.Page}.png"), options);
 }
 ```
 
 You can combine BackgroundColor and CropArea:
 
 ```csharp
-using System.Drawing;
 using GroupDocs.Conversion.Contracts;
 using (Converter converter = new Converter("sample.pdf"))
 {
     ImageConvertOptions options = new ImageConvertOptions
     {
         Format = ImageFileType.Png,
-        BackgroundColor = Color.LightGray,
-        CropArea = new Rectangle(50, 50, 512, 512)
+        BackgroundColor = System.Drawing.Color.LightGray,
+        CropArea = new Rectangle(50, 50, 562, 562)  // A 512 x 512 pixel area
     };
-    converter.Convert("background-and-crop.png", options);
+    converter.Convert((SavePageContext context) => File.Create($"background-and-crop-{context.Page}.png"), options);
 }
 ```
 

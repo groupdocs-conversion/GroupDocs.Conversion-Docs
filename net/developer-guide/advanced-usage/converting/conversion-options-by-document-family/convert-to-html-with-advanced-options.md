@@ -34,22 +34,23 @@ using (Converter converter = new Converter("sample.docx"))
 
 ## Embedding Font Resources
 
-Control whether font resources are embedded within the HTML file:
+Control whether font resources are embedded within the HTML file when converting a document to flow-layout HTML:
 
 ```csharp
 using (Converter converter = new Converter("sample.docx"))
 {
     WebConvertOptions options = new WebConvertOptions
     {
+        FixedLayout = false,
         EmbedFontResources = true  // Embed fonts directly in HTML
     };
     converter.Convert("embedded-fonts.html", options);
 }
 ```
 
-When `EmbedFontResources` is set to false (default), font files are stored separately and referenced by the HTML file. When set to true, all font data is embedded directly within the HTML file, making it self-contained but larger in size.
+When `EmbedFontResources` is set to true, the font data is embedded directly within the HTML file as base64, making it self-contained but larger in size. When it is set to false (default), no font data is exported and the browser renders the text with fonts installed on the viewer's system.
 
-Note: When `FixedLayout` is enabled, fonts are automatically embedded regardless of the `EmbedFontResources` setting.
+Note: When `FixedLayout` is enabled (the default), fonts are automatically embedded regardless of the `EmbedFontResources` setting.
 
 ### Control page borders visibility
 

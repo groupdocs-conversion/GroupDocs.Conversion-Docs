@@ -76,7 +76,7 @@ When converting to MHTML you may use the same code example as above, just specif
 ```csharp
 var options = new WebConvertOptions
 {  
-    Format = GroupDocs.Conversion.FileTypes.MarkupFileType.Mhtml
+    Format = GroupDocs.Conversion.FileTypes.WebFileType.Mhtml
 };
 ```
 

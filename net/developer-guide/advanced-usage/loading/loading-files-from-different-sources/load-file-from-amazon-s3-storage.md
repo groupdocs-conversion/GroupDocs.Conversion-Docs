@@ -8,7 +8,7 @@ keywords: Convert file from Amazon S3 storage, Convert file
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-The following code snippet shows how to convert a file from Amazon S3 Storage:
+The following code snippet shows how to convert a file from Amazon S3 Storage. It uses the [AWSSDK.S3](https://www.nuget.org/packages/AWSSDK.S3) NuGet package:
 
 ```csharp
 public static void Run()
@@ -31,7 +31,7 @@ public static Stream DownloadFile(string key)
         Key = key,
         BucketName = bucketName
     };
-    using (GetObjectResponse response = client.GetObject(request))
+    using (GetObjectResponse response = client.GetObjectAsync(request).GetAwaiter().GetResult())
     {
         MemoryStream stream = new MemoryStream();
         response.ResponseStream.CopyTo(stream);

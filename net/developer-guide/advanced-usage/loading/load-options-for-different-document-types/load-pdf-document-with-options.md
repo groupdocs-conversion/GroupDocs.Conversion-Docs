@@ -99,7 +99,7 @@ Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PdfLoadOption
 };
 using (Converter converter = new Converter("sample.pdf", getLoadOptions))
 {
-    PdfConvertOptions options = new PdfConvertOptions();
+    WordProcessingConvertOptions options = new WordProcessingConvertOptions();
     converter.Convert("converted.docx", options);
 }
 ```

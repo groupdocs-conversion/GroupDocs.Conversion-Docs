@@ -8,7 +8,7 @@ keywords: Convert file from Azure Blob storage, Convert file
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 ---
-The following code snippet shows how to convert a file from Azure Blob Storage:
+The following code snippet shows how to convert a file from Azure Blob Storage. It uses the [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs) NuGet package:
 
 ```csharp
 public static void Run()
@@ -24,26 +24,21 @@ public static void Run()
         
 public static Stream DownloadFile(string blobName)
 {
-    CloudBlobContainer container = GetContainer();
-    CloudBlob blob = container.GetBlobReference(blobName);
+    BlobContainerClient container = GetContainer();
+    BlobClient blob = container.GetBlobClient(blobName);
     MemoryStream memoryStream = new MemoryStream();
-    blob.DownloadToStream(memoryStream);
+    blob.DownloadTo(memoryStream);
     memoryStream.Position = 0;
     return memoryStream;
 }
 
-private static CloudBlobContainer GetContainer()
+private static BlobContainerClient GetContainer()
 {
     string accountName = "***";
     string accountKey = "***";
-    string endpoint = $"https://{accountName}.blob.core.windows.net/";
     string containerName = "***";
-    StorageCredentials storageCredentials = new StorageCredentials(accountName, accountKey);
-    CloudStorageAccount cloudStorageAccount = new CloudStorageAccount(
-        storageCredentials, new Uri(endpoint), null, null, null);
-    CloudBlobClient cloudBlobClient = cloudStorageAccount.CreateCloudBlobClient();
-    CloudBlobContainer container = cloudBlobClient.GetContainerReference(containerName);
-    container.CreateIfNotExists();
-    return container;
+    Uri containerUri = new Uri($"https://{accountName}.blob.core.windows.net/{containerName}");
+    StorageSharedKeyCredential credential = new StorageSharedKeyCredential(accountName, accountKey);
+    return new BlobContainerClient(containerUri, credential);
 }
 ```

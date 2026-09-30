@@ -32,11 +32,10 @@ internal class OcrConnector : IOcrConnector
                 ms.Position = 0;
                 ocrInput.Add(ms);
 
-                var detectedRectangles = api.DetectRectangles(ocrInput, AreasType.LINES, false).First();
                 var result = api.Recognize(ocrInput, new RecognitionSettings
                     {
-                        DetectAreasMode = DetectAreasMode.COMBINE,
-                        RecognitionAreas = detectedRectangles.Rectangles
+                        Language = Language.Eng,
+                        DetectAreasMode = DetectAreasMode.UNIVERSAL
                     })
                     .First();
                 return CreateRecognizedImageFromResult(result);
@@ -54,10 +53,10 @@ internal class OcrConnector : IOcrConnector
     {
         var lines = new List<TextLine>();
 
-        for (var i = 0; i < result.RecognitionAreasText.Count; i++)
+        foreach (var line in result.RecognitionLinesResult)
         {
-            var rectangle = result.RecognitionAreasRectangles[i];
-            var s = result.RecognitionAreasText[i].Trim('\r', '\n');
+            var rectangle = line.Line;
+            var s = line.TextInLine.Trim('\r', '\n');
             var fragments = SplitToFragments(s, rectangle.X, rectangle.Y, rectangle.Width, rectangle.Height);
             lines.Add(new TextLine(fragments));
         }
