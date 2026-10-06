@@ -12,16 +12,11 @@ toc: True
 GroupDocs.Conversion provides the [WordProcessingConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions) class to give you control over conversion result when convert to WordProcessing formats. Along with [common convert options]({{< ref "conversion/net/developer-guide/advanced-usage/converting/common-conversion-options/_index.md" >}}) from base class [WordProcessingConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions) has the following additional options:
 
 *   **[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/)** specifies desired result document type. Available options are: *Doc, Docm, Docx, Dot, Dotx, Rtf, Odt, Ott, Mobi, Txt, Md*.
-*   **[PageWidth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/pagewidth)** specifies desired page width in points after conversion (1 point = 1/72 inch). When set, PageSize is automatically changed to Custom.
-*   **[PageHeight](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/pageheight)** specifies desired page height in points after conversion (1 point = 1/72 inch). When set, PageSize is automatically changed to Custom.
-*   **[PageSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/pagesize)** specifies page size. Available options are: *Default, A3, A4, A5, Letter, Legal, Tabloid*.
-*   **[PageOrientation](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/pageorientation)** specifies page orientation. Available options are: *Default, Landscape, Portrait*.
+*   **[SizeSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/sizesettings/)** specifies the page size through a [PageSizeOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options/pagesizeoptions/) object: `PageSize` (*Default, A3, A4, A5, Letter, Legal, Tabloid*, …), or `PageWidth` and `PageHeight` in points (1 point = 1/72 inch). When a width or height is set, `PageSize` is automatically changed to Custom.
+*   **[OrientationSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/orientationsettings/)** specifies page orientation. Available options are: *Default, Landscape, Portrait*.
 *   **[FallbackPageSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/fallbackpagesize)** specifies the fallback page size to use when the input document's page size cannot be determined.
 *   **[Dpi](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/dpi)** specifies desired page dpi after conversion. The default resolution is 96 dpi.
-*   **[MarginTop](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/margintop)** specifies the desired page top margin in points after conversion.
-*   **[MarginBottom](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/marginbottom)** specifies the desired page bottom margin in points after conversion.
-*   **[MarginLeft](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/marginleft)** specifies the desired page left margin in points after conversion.
-*   **[MarginRight](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/marginright)** specifies the desired page right margin in points after conversion.
+*   **[MarginSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/marginsettings/)** specifies the desired page margins in points after conversion through a [PageMarginOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options/pagemarginoptions/) object (`Top`, `Bottom`, `Left`, `Right`).
 *   **[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/password)** whether the converted document will be password protected with the specified password.
 *   **[PdfRecognitionMode](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/pdfrecognitionmode)** specifies the recognition mode when converting from PDF. Available options are: *Textbox, Flow*. Flow mode is recommended for maximum content editability.
 *   **[RtfOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/wordprocessingconvertoptions/rtfoptions)** specifies RTF specific options. See [below](#rtfoptions).
@@ -38,7 +33,7 @@ using (Converter converter = new Converter("sample.pdf"))
         PageNumber = 2,
         PagesCount = 1,
         Format = WordProcessingFileType.Docx,
-        PageOrientation = PageOrientation.Portrait
+        OrientationSettings = PageOrientation.Portrait
     };
     converter.Convert("converted.docx", options);
 }
@@ -55,8 +50,8 @@ using (Converter converter = new Converter("sample.pdf"))
 {
     WordProcessingConvertOptions options = new WordProcessingConvertOptions
     {
-        PageSize = PageSize.A4,
-        PageOrientation = PageOrientation.Portrait
+        SizeSettings = new PageSizeOptions { PageSize = PageSize.A4 },
+        OrientationSettings = PageOrientation.Portrait
     };
     converter.Convert("a4-document.docx", options);
 }
@@ -69,8 +64,11 @@ using (Converter converter = new Converter("sample.pdf"))
 {
     WordProcessingConvertOptions options = new WordProcessingConvertOptions
     {
-        PageWidth = 612,   // 8.5 inches × 72 points/inch
-        PageHeight = 792   // 11 inches × 72 points/inch
+        SizeSettings = new PageSizeOptions
+        {
+            PageWidth = 612,   // 8.5 inches × 72 points/inch
+            PageHeight = 792   // 11 inches × 72 points/inch
+        }
     };
     converter.Convert("custom-size.docx", options);
 }
@@ -85,10 +83,13 @@ using (Converter converter = new Converter("sample.pdf"))
 {
     WordProcessingConvertOptions options = new WordProcessingConvertOptions
     {
-        MarginTop = 72,     // 1 inch
-        MarginBottom = 72,  // 1 inch
-        MarginLeft = 90,    // 1.25 inches
-        MarginRight = 90    // 1.25 inches
+        MarginSettings = new PageMarginOptions
+        {
+            Top = 72,     // 1 inch
+            Bottom = 72,  // 1 inch
+            Left = 90,    // 1.25 inches
+            Right = 90    // 1.25 inches
+        }
     };
     converter.Convert("margins-document.docx", options);
 }

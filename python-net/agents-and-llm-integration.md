@@ -355,8 +355,6 @@ Or auto-apply: `export GROUPDOCS_LIC_PATH="path/to/license.lic"`
 
 **`ConversionNotSupportedException`** -- the source / target pair is not supported by the .NET engine. Call `Converter.get_possible_conversions_by_extension(ext)` or `converter.get_possible_conversions()` to discover valid targets before converting.
 
-**`DllNotFoundException: libgdiplus`** -- install `libgdiplus`: `sudo apt install libgdiplus` (Linux) / `brew install mono-libgdiplus` (macOS).
-
 **`DllNotFoundException: libSkiaSharp`** -- a stale system copy conflicts with the bundled version. Rename it: `sudo mv /usr/local/lib/libSkiaSharp.dylib /usr/local/lib/libSkiaSharp.dylib.bak`.
 
 **`DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` errors** -- do NOT set this. Install ICU: `sudo apt install libicu-dev`.

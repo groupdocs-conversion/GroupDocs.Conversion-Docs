@@ -45,14 +45,12 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage.Caching
         /// </summary>
         public static void Run()
         {
-            string outputDirectory = Constants.GetOutputDirectoryPath();
-            
             RedisCache cache = new RedisCache("sample_");
             Func<ConverterSettings> settingsFactory = () => new ConverterSettings
             {
                 Cache = cache
             };
-            using (Converter converter = new Converter(Constants.SAMPLE_DOCX, settingsFactory))
+            using (Converter converter = new Converter("sample.docx", settingsFactory))
             {
                 PdfConvertOptions options = new PdfConvertOptions();
                 Stopwatch stopWatch = Stopwatch.StartNew();
@@ -64,7 +62,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage.Caching
                 stopWatch.Stop();
                 Console.WriteLine("Time taken on second call to Convert method {0} (ms).", stopWatch.ElapsedMilliseconds);
             }
-            Console.WriteLine($"\nSource document rendered successfully.\nCheck output in {outputDirectory}.");
+            Console.WriteLine("\nSource document rendered successfully.");
         }
     }
     public class RedisCache : ICache, IDisposable
@@ -72,7 +70,7 @@ namespace GroupDocs.Conversion.Examples.CSharp.AdvancedUsage.Caching
         private readonly string _cacheKeyPrefix;
         private readonly ConnectionMultiplexer _redis;
         private readonly IDatabase _db;
-        private readonly string _host = "192.168.0.1:6379";
+        private readonly string _host = "localhost:6379";
         public RedisCache(string cacheKeyPrefix)
         {
             _cacheKeyPrefix = cacheKeyPrefix;

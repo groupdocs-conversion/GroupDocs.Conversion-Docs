@@ -195,7 +195,7 @@ using (var converter = new Converter("contract-2024.pdf"))
             // Return stream for this specific page
             return File.Create($"contract-2024-page-{savePageContext.Page}.png");
         },
-        new ImageConvertOptions());
+        new ImageConvertOptions { Format = ImageFileType.Png });
 }
 ```
 
@@ -465,10 +465,10 @@ using (var converter = new Converter(
     (LoadContext loadContext) =>
     {
         // Choose load options based on actual file format
-        if (loadContext.SourceFormat == FileType.Pdf)
+        if (loadContext.SourceFormat == PdfFileType.Pdf)
             return new PdfLoadOptions { RemoveEmbeddedFiles = true };
 
-        if (loadContext.SourceFormat == FileType.Docx)
+        if (loadContext.SourceFormat == WordProcessingFileType.Docx)
             return new WordProcessingLoadOptions { DefaultFont = "Arial" };
 
         return null; // Auto-detect

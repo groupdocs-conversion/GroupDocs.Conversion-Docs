@@ -61,17 +61,17 @@ Refer to the [API reference](https://reference.groupdocs.com/conversion/net/grou
 ## Convert to another CAD format
 
 On the other hand, converting your CAD files to another CAD format is also quite simple and natural.
-The following code snippet shows how to convert a DWG document to STL in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
+The following code snippet shows how to convert a DWG document to DXF in C# using [GroupDocs.Conversion](https://products.groupdocs.com/conversion/net).
 
 ```csharp
 // Load the source DWG file
 using (Converter converter = new Converter("sample.dwg"))
 {
-    // Set the convert options for STL format
+    // Set the convert options for DXF format
     var options = new CadConvertOptions {
-        Format = CadFileType.Stl
+        Format = CadFileType.Dxf
     };
-    // Convert to STL format
-    converter.Convert("converted.stl", options);
+    // Convert to DXF format
+    converter.Convert("converted.dxf", options);
 }
 ```

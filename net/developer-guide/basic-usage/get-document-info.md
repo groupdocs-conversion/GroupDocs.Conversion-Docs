@@ -47,7 +47,7 @@ The samples below show how to obtain document info for various formats.
 using (Converter converter = new Converter("sample-toc.pdf"))
 {
     IDocumentInfo info = converter.GetDocumentInfo();
-    PdfDocumentInfo docInfo = (PdfDocumentInfo) info;
+    var docInfo = (GroupDocs.Conversion.Contracts.PdfDocumentInfo) info;
 
     Console.WriteLine("Author: {0}", docInfo.Author);
     Console.WriteLine("Creation date: {0}", docInfo.CreationDate);
@@ -57,7 +57,7 @@ using (Converter converter = new Converter("sample-toc.pdf"))
     Console.WriteLine("Width: {0}", docInfo.Width);
     Console.WriteLine("Height: {0}", docInfo.Height);
     Console.WriteLine("Is landscaped: {0}", docInfo.IsLandscape);
-    Console.WriteLine("Is Encrypted: {0}", docInfo.IsEncrypted);
+    Console.WriteLine("Is password protected: {0}", docInfo.IsPasswordProtected);
     foreach (var tocItem in docInfo.TableOfContents)
     {
         Console.WriteLine($"{tocItem.Title}: {tocItem.Page}");

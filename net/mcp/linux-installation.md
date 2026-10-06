@@ -1,11 +1,13 @@
 ---
 id: mcp-linux-installation
-url: conversion/mcp/getting-started/linux-installation
+url: conversion/net/mcp/linux-installation
+aliases:
+    - /conversion/mcp/getting-started/linux-installation/
 title: Install on Linux
 weight: 3
 description: "Install the GroupDocs.Conversion MCP server on Linux with the setup bootstrapper (installs PowerShell, Docker or the .NET 10 SDK with libgdiplus and libfontconfig1) and the guided installer."
 keywords: install MCP server Linux, MCP server Ubuntu, libgdiplus MCP error, self-hosted document conversion Linux
-productName: GroupDocs.Conversion MCP Server
+productName: GroupDocs.Conversion MCP Server for .NET
 toc: True
 ---
 
@@ -27,7 +29,8 @@ pwsh ./install-groupdocs-mcp.ps1 -Interactive
 * **NuGet channel:** .NET 10 SDK (`sudo apt-get install -y dotnet-sdk-10.0`) plus native graphics dependencies:
 
 ```bash
-sudo apt-get install -y --no-install-recommends libgdiplus libfontconfig1 ttf-mscorefonts-installer
+sudo apt-get install -y --no-install-recommends \
+  libgdiplus libfontconfig1 ttf-mscorefonts-installer
 ```
 
 ## Install
@@ -35,20 +38,22 @@ sudo apt-get install -y --no-install-recommends libgdiplus libfontconfig1 ttf-ms
 **Recommended — the installer:**
 
 ```bash
-pwsh ./install-groupdocs-mcp.ps1 -Channel docker -Products conversion -Clients claude-desktop -Verify
+pwsh ./install-groupdocs-mcp.ps1 -Channel docker \
+  -Products conversion -Clients claude-desktop -Verify
 ```
 
 **Manual alternatives:**
 
 ```bash
 # Docker channel - native deps bundled in the image (amd64 + arm64):
-docker run --rm -i -v $(pwd)/documents:/data ghcr.io/groupdocs-conversion/conversion-net-mcp:latest
+docker run --rm -i -v $(pwd)/documents:/data \
+  ghcr.io/groupdocs-conversion/conversion-net-mcp:latest
 
 # NuGet channel (requires .NET 10 SDK + the native deps above):
 dnx GroupDocs.Conversion.Mcp --yes
 ```
 
-Client config locations on Linux: Claude Desktop `~/.config/Claude/claude_desktop_config.json`, VS Code user-level `~/.config/Code/User/mcp.json` — full list in [Register in AI clients]({{< ref "conversion/mcp/getting-started/install-in-ai-clients.md" >}}).
+Client config locations on Linux: Claude Desktop `~/.config/Claude/claude_desktop_config.json`, VS Code user-level `~/.config/Code/User/mcp.json` — full list in [Register in AI clients]({{< ref "conversion/net/mcp/install-in-ai-clients.md" >}}).
 
 ## Verify
 
@@ -56,7 +61,7 @@ Client config locations on Linux: Claude Desktop `~/.config/Claude/claude_deskto
 pwsh ./verify-groupdocs-mcp.ps1
 ```
 
-A passing run completes the MCP handshake (three tools listed) and — when a document sits in your storage folder — a real `get_document_info` call. Headless servers: the docker channel plus `-EmitCompose` gives you a `docker-compose.yml` for supervised operation.
+A passing run completes the MCP handshake (the server's tools listed) and — when a document sits in your storage folder — a real `get_document_info` call. Headless servers: the docker channel plus `-EmitCompose` gives you a `docker-compose.yml` for supervised operation.
 
 ## Linux-specific troubleshooting
 
@@ -64,4 +69,4 @@ A passing run completes the MCP handshake (three tools listed) and — when a do
 * **`docker: permission denied`** — your user is not in the `docker` group yet; `newgrp docker` or re-login.
 * **Fonts look wrong in converted output** — install `ttf-mscorefonts-installer` (the setup script pre-accepts its EULA via debconf).
 
-Installing on a different OS? [Windows]({{< ref "conversion/mcp/getting-started/windows-installation.md" >}}) · [macOS]({{< ref "conversion/mcp/getting-started/macos-installation.md" >}})
+Installing on a different OS? [Windows]({{< ref "conversion/net/mcp/windows-installation.md" >}}) · [macOS]({{< ref "conversion/net/mcp/macos-installation.md" >}})

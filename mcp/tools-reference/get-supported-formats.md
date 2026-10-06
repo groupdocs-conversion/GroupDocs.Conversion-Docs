@@ -7,7 +7,7 @@ description: "The get_supported_formats MCP tool lists every target format a sou
 keywords: get_supported_formats MCP, MCP list supported conversions, what formats can ai convert
 productName: GroupDocs.Conversion MCP Server
 generated: true
-serverVersion: 26.7.2
+serverVersion: 26.9.0
 toc: True
 ---
 

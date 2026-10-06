@@ -223,7 +223,6 @@ Every push to `main` triggers `.github/workflows/run-examples.yml`, which runs t
 
 ## Troubleshooting
 
-- **`DllNotFoundException: libgdiplus`** on Linux / macOS — install the platform dependencies listed in [System Requirements]({{< ref "conversion/python-net/getting-started/system-requirements.md#optional-platform-dependencies" >}}).
 - **Garbled text or missing glyphs** — install Microsoft TrueType fonts (`ttf-mscorefonts-installer` on Debian / Ubuntu; macOS already ships them). Run `fc-cache -f` after installing so fontconfig picks them up.
 - **Evaluation watermark on the output** — set `GROUPDOCS_LIC_PATH` to a valid license file and re-run. See [Licensing]({{< ref "conversion/python-net/getting-started/licensing-and-subscription.md" >}}).
 - **Anything else** — post on the [free support forum](https://forum.groupdocs.com/c/conversion) or visit the [Technical Support]({{< ref "conversion/python-net/technical-support" >}}) page.

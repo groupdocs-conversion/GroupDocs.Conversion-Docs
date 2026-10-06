@@ -90,7 +90,7 @@ Two terminal methods replace `Convert()` when you need information about the sou
 
 ```csharp
 // Available target formats for this source
-IReadOnlyList<PossibleConversions> possible = FluentConverter
+PossibleConversions possible = FluentConverter
     .Load("sample.pdf")
     .GetPossibleConversions();
 
@@ -141,7 +141,7 @@ FluentConverter
     .Convert();
 ```
 
-The previous late-stage chain methods (`.OnConversionCompleted(...).OnConversionFailed(...)` placed after `WithOptions(...)`, and `.OnCompressionCompleted(...)` placed after `.Compress(...)`) continue to work but are obsolete and planned for removal in v26.9. See the [Conversion events]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}}) guide for the full migration story, including the rename of per-result handlers from `OnConversion*` to `OnDocument*` / `OnPage*`.
+The `.OnConversionCompleted(...)` and `.OnConversionFailed(...)` handlers placed after `WithOptions(...)` remain supported. The late-stage `.OnCompressionCompleted(...)` placed after `.Compress(...)` was removed in version 26.9 — register it with `WithEvents(e => e.OnCompressionCompleted = ...)` instead. See the [Conversion events]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}}) guide for the full migration story, including the rename of per-result handlers from `OnConversion*` to `OnDocument*` / `OnPage*`.
 
 ## See also
 

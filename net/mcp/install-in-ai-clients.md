@@ -1,15 +1,29 @@
 ---
 id: mcp-install-in-ai-clients
-url: conversion/mcp/getting-started/install-in-ai-clients
+url: conversion/net/mcp/install-in-ai-clients
+aliases:
+    - /conversion/mcp/getting-started/install-in-ai-clients/
 title: Register in AI clients
 weight: 5
 description: "Register the GroupDocs.Conversion MCP server in any AI client — Claude Desktop, Claude Code, VS Code, Visual Studio 2022, Cursor, Windsurf, Cline, or Codex — with the exact config file location and JSON block for each."
 keywords: add MCP server to Claude Desktop config, Claude Code add MCP server command, VS Code mcp.json example, Cursor MCP config file location, Windsurf MCP setup, Cline MCP settings, Visual Studio 2022 MCP .mcp.json, Codex CLI MCP add
-productName: GroupDocs.Conversion MCP Server
+productName: GroupDocs.Conversion MCP Server for .NET
 toc: True
 ---
 
 Register the GroupDocs.Conversion MCP server in any AI client — Claude Desktop, Claude Code, VS Code, Visual Studio 2022, Cursor, Windsurf, Cline, or Codex — with the exact config file location and JSON block for each. The [installer]({{< ref "conversion/mcp/getting-started/_index.md" >}}) does all of this automatically (set the `clients` list in its config); this page is the manual reference. **Restart the client** after any registration change.
+
+## One-click install
+
+The fastest path for VS Code and Cursor — the link pre-fills the whole server entry, so there is no JSON to copy:
+
+[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF)](https://vscode.dev/redirect/mcp/install?name=groupdocs-conversion&config=%7B%22command%22%3A%22dnx%22%2C%22args%22%3A%5B%22GroupDocs.Conversion.Mcp%22%2C%22--yes%22%5D%2C%22env%22%3A%7B%22GROUPDOCS_MCP_STORAGE_PATH%22%3A%22%2Fpath%2Fto%2Fdocuments%22%2C%22GROUPDOCS_MCP_OUTPUT_PATH%22%3A%22%2Fpath%2Fto%2Fdocuments%22%2C%22GROUPDOCS_LICENSE_PATH%22%3A%22%22%7D%7D) [![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5)](https://insiders.vscode.dev/redirect/mcp/install?name=groupdocs-conversion&config=%7B%22command%22%3A%22dnx%22%2C%22args%22%3A%5B%22GroupDocs.Conversion.Mcp%22%2C%22--yes%22%5D%2C%22env%22%3A%7B%22GROUPDOCS_MCP_STORAGE_PATH%22%3A%22%2Fpath%2Fto%2Fdocuments%22%2C%22GROUPDOCS_MCP_OUTPUT_PATH%22%3A%22%2Fpath%2Fto%2Fdocuments%22%2C%22GROUPDOCS_LICENSE_PATH%22%3A%22%22%7D%7D&quality=insiders) [![Add to Cursor](https://img.shields.io/badge/Cursor-Add_MCP-111111)](https://cursor.com/en/install-mcp?name=groupdocs-conversion&config=eyJjb21tYW5kIjoiZG54IiwiYXJncyI6WyJHcm91cERvY3MuQ29udmVyc2lvbi5NY3AiLCItLXllcyJdLCJlbnYiOnsiR1JPVVBET0NTX01DUF9TVE9SQUdFX1BBVEgiOiIvcGF0aC90by9kb2N1bWVudHMiLCJHUk9VUERPQ1NfTUNQX09VVFBVVF9QQVRIIjoiL3BhdGgvdG8vZG9jdW1lbnRzIiwiR1JPVVBET0NTX0xJQ0VOU0VfUEFUSCI6IiJ9fQ%3D%3D) [![Codex CLI setup](https://img.shields.io/badge/Codex_CLI-Setup-e5541b)](https://github.com/groupdocs-conversion/GroupDocs.Conversion.Mcp/blob/main/install/generated/codex.md) [![Windsurf setup](https://img.shields.io/badge/Windsurf-Setup-0e8a7d)](https://github.com/groupdocs-conversion/GroupDocs.Conversion.Mcp/blob/main/install/generated/windsurf.md)
+
+{{< alert style="info" >}}
+One-click installs pre-fill every supported setting. After installing, **edit the placeholder documents folder** (`/path/to/documents`); the output folder defaults to the same place, and an empty `GROUPDOCS_LICENSE_PATH` runs in [evaluation mode]({{< ref "conversion/mcp/getting-started/licensing.md" >}}).
+{{< /alert >}}
+
+Prefer to paste a config yourself, or using a client without a one-click link? Every client is covered below, and ready-made config files for each live in [`install/generated/`](https://github.com/groupdocs-conversion/GroupDocs.Conversion.Mcp/tree/main/install/generated) in the server repository.
 
 The standard server entry (NuGet channel — for Docker, see the [Docker entry](#docker-based-entry) below):
 
@@ -101,8 +115,12 @@ Any client above can run the server via Docker instead of `dnx` — storage is p
 ```json
 {
   "command": "docker",
-  "args": ["run", "--rm", "-i", "-v", "/path/to/documents:/data", "ghcr.io/groupdocs-conversion/conversion-net-mcp:latest"]
+  "args": [
+    "run", "--rm", "-i",
+    "-v", "/path/to/documents:/data",
+    "ghcr.io/groupdocs-conversion/conversion-net-mcp:latest"
+  ]
 }
 ```
 
-Version pinning: replace `GroupDocs.Conversion.Mcp` with `GroupDocs.Conversion.Mcp@26.7.2`, or `:latest` with `:26.7.2` — recommended for shared configs.
+Version pinning: replace `GroupDocs.Conversion.Mcp` with `GroupDocs.Conversion.Mcp@26.9.0`, or `:latest` with `:26.9.0` — recommended for shared configs.

@@ -307,7 +307,7 @@ When working with multi-page PDF documents, you may need to convert only a speci
 When converting to image formats other than TIFF (such as PNG, JPG, GIF, BMP), you can only save one page per output file. Saving multiple pages to a single file is only supported for TIFF format.
 {{< /alert >}}
 
-To convert a single page, use the [PageNumber](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/commonconvertoptions-1/pagenumber) property of the [ImageConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/imageconvertoptions) class. The page numbers are 1-based, meaning the first page is page 1.
+To convert a single page, set the [PageNumber](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/commonconvertoptions-1/pagenumber) property of the [ImageConvertOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/imageconvertoptions) class to the page you need and [PagesCount](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/commonconvertoptions-1/pagescount) to 1, and receive the page through a [SavePageContext](https://reference.groupdocs.com/conversion/net/groupdocs.conversion/savepagecontext/) callback. The page numbers are 1-based, meaning the first page is page 1.
 
 The following code snippet shows how to convert page 2 from a PDF document to PNG format:
 
@@ -319,10 +319,11 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.pdf"))
     var options = new ImageConvertOptions
     {
         Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png,
-        PageNumber = 2
+        PageNumber = 2,
+        PagesCount = 1
     };
-    // Convert to PNG format
-    converter.Convert("converted-page-2.png", options);
+    // Convert page 2 to PNG format
+    converter.Convert((SavePageContext context) => File.Create($"converted-page-{context.Page}.png"), options);
 }
 ```
 
@@ -331,11 +332,12 @@ or using [fluent syntax]({{< ref "conversion/net/developer-guide/basic-usage/flu
 ```csharp
 FluentConverter
     .Load("sample.pdf")
-    .ConvertTo("converted-page-2.png")
+    .ConvertByPageTo((SavePageContext context) => File.Create($"converted-page-{context.Page}.png"))
     .WithOptions(new ImageConvertOptions
     {
         Format = GroupDocs.Conversion.FileTypes.ImageFileType.Png,
-        PageNumber = 2
+        PageNumber = 2,
+        PagesCount = 1
     })
     .Convert();
 ```

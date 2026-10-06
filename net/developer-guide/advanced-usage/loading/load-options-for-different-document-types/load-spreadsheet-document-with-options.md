@@ -22,7 +22,7 @@ toc: True
 |**[CultureInfo](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/cultureinfo)** | Specifies system culture info at the time file is loaded. |
 |**[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/defaultfont)** | Specify the default font to use if a spreadsheet font is missing. |
 |**[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/fontsubstitutes)** | Substitute specific fonts from the source spreadsheet. |
-|**[HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/hidecomments)** | Specify if the comments from the source spreadsheet should be hidden during conversion. |
+|**[PrintComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/printcomments)** | Specifies how comments are printed with each sheet: *PrintNoComments* (default, comments are not printed), *PrintInPlace*, *PrintSheetEnd*, or *PrintWithThreadedComments*. |
 |**[OnePagePerSheet](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/onepagepersheet)** | If specified, each spreadsheet will be converted into a single page. |
 |**[OptimizePdfSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/optimizepdfsize)** | If enabled, optimizes the resulting PDF for smaller file size, rather than for better print quality. |
 |**[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/password)** | Defines a password to unlock a protected document. |
@@ -35,17 +35,16 @@ toc: True
 |**[RowsPerPage](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/rowsperpage)** | Specifies the number of rows to include on each page when converting large spreadsheets. |
 |**[SkipHeaders](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/skipheaders)** | Specifies the number of header rows to skip during conversion. |
 |**[SkipFooters](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/skipfooters)** | Specifies the number of footer rows to skip during conversion. |
-|**[PrintComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/printcomments)** | Specifies how to render comments during conversion. |
 |**[IgnoreFormulaCalculationErrors](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/ignoreformulacalculationerrors)** | If *true*, ignores errors that occur during formula calculation. Useful for spreadsheets with broken or external references. |
 
-### Hide comments
+### Show or hide comments
 
-The following code snippet shows how to convert a spreadsheet and hide comments:
+By default, comments are not printed (*SpreadsheetPrintComments.PrintNoComments*). The following code snippet shows how to convert a spreadsheet and print its comments at the end of each sheet:
 
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new SpreadsheetLoadOptions
 {
-    HideComments = true,
+    PrintComments = SpreadsheetPrintComments.PrintSheetEnd,
     OnePagePerSheet = true
 };
 using (Converter converter = new Converter("sample.xlsx", getLoadOptions))

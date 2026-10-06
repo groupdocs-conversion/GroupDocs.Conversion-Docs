@@ -10,15 +10,22 @@ hideChildren: True
 toc: True
 ---
 
+{{< alert style="info" >}}
+These steps install the **.NET** build of the server — the only platform available today. Java, Python, and Node.js builds are planned; each will get its own install section under its platform. Platform-independent material (tools, use cases, licensing) lives here and applies to all of them.
+{{< /alert >}}
+
 Install and register the GroupDocs.Conversion MCP server in Claude Desktop, VS Code, Cursor, or any MCP client in three commands with the guided [installer](https://github.com/groupdocs/GroupDocs.Mcp.Installer) — then verify the setup automatically:
 
 ```powershell
 git clone https://github.com/groupdocs/GroupDocs.Mcp.Installer.git
 cd GroupDocs.Mcp.Installer
 
-./install-groupdocs-mcp.ps1 -Interactive     # wizard: products, channel, clients, folders, license
-./install-groupdocs-mcp.ps1 -DryRun          # preview - prints everything, changes nothing
-./install-groupdocs-mcp.ps1 -Verify          # apply + warm caches + verify the setup in one go
+# wizard: products, channel, clients, folders, license
+./install-groupdocs-mcp.ps1 -Interactive
+# preview - prints everything, changes nothing
+./install-groupdocs-mcp.ps1 -DryRun
+# apply + warm caches + verify the setup in one go
+./install-groupdocs-mcp.ps1 -Verify
 ```
 
 Then **restart your AI client** (Claude Desktop, VS Code, Cursor, …) so it picks up the new server.
@@ -34,7 +41,7 @@ The agent calls the server's `convert` tool; the converted file appears in your 
 ## Where to go next
 
 * **Fresh machine?** Follow your OS page — it includes the prerequisite bootstrap:
-  [Windows]({{< ref "conversion/mcp/getting-started/windows-installation.md" >}}) · [Linux]({{< ref "conversion/mcp/getting-started/linux-installation.md" >}}) · [macOS]({{< ref "conversion/mcp/getting-started/macos-installation.md" >}})
-* **Manual or single-client install** (exact JSON per client): [Register in AI clients]({{< ref "conversion/mcp/getting-started/install-in-ai-clients.md" >}})
-* **Docker-only shop:** run `./install-groupdocs-mcp.ps1 -EmitCompose -Clients @()` to generate a `docker-compose.yml` instead of client registration — see [Configuration]({{< ref "conversion/mcp/getting-started/configuration.md" >}}).
+  [Windows]({{< ref "conversion/net/mcp/windows-installation.md" >}}) · [Linux]({{< ref "conversion/net/mcp/linux-installation.md" >}}) · [macOS]({{< ref "conversion/net/mcp/macos-installation.md" >}})
+* **Manual or single-client install** (exact JSON per client): [Register in AI clients]({{< ref "conversion/net/mcp/install-in-ai-clients.md" >}})
+* **Docker-only shop:** run `./install-groupdocs-mcp.ps1 -EmitCompose -Clients @()` to generate a `docker-compose.yml` instead of client registration — see [Configuration]({{< ref "conversion/net/mcp/configuration.md" >}}).
 * **Licensing:** the server works in evaluation mode out of the box; your existing GroupDocs.Conversion license applies — [Licensing]({{< ref "conversion/mcp/getting-started/licensing.md" >}}).

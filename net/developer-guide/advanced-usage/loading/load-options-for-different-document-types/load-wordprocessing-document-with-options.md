@@ -13,12 +13,14 @@ toc: True
 | Option | Description |
 |--------|-------------|
 |**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/format)** | The document type is auto-detected during loading, however, you can specify explicitly the type of the source WordProcessing document. Available options are: *Doc, Docm, Docx, Dot, Dotm, Dotx, Rtf, Odt, Ott, Mobi, Txt* |
-|**[AutoFontSubstitution](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/autofontsubstitution)** | If false, GroupDocs.Conversion uses the DefaultFont for the substitution of missing fonts. If true, GroupDocs.Conversion evaluates all the related fields in FontInfo (Panose, Sig etc) for the missing font and finds the closest match among the available font sources.|
+|**[CommentDisplayMode](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/commentdisplaymode)** | Specifies how comments are rendered in the converted document: *Balloon* (default), *Hidden*, or *Annotation* (PDF output only). |
 |**[BookmarkOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/bookmarkoptions)** | Specifies options for handling bookmarks. |
 |**[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/defaultfont)** | Specifies the font to use if a document font is missing. |
 |**[EmbedTrueTypeFonts](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/embedtruetypefonts)** | Specifies whether to embed true type fonts in the output document. Default is false. |
 |**[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/fontsubstitutes)** | Substitute specific fonts from the source document. |
-|**[HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/hidecomments)** | Specifies that comments from the source document should be hidden in the converted document. |
+|**[FontConfigSubstitutionEnabled](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/fontconfigsubstitutionenabled)** | Automatically substitutes missing fonts based on FontConfig in the system. Default is false. |
+|**[FontInfoSubstitutionEnabled](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/fontinfosubstitutionenabled)** | Automatically substitutes missing fonts based on the FontInfo stored in the document. Default is false. |
+|**[FontNameSubstitutionEnabled](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/fontnamesubstitutionenabled)** | Automatically substitutes missing fonts based on the font name. Default is false. |
 |**[HideWordTrackedChanges](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/hidewordtrackedchanges)** | Specifies that tracked changes should not be included in the converted document. |
 |**[KeepDateFieldOriginalValue](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/keepdatefieldoriginalvalue)** | Specifies whether to keep the original values of date fields. Default is false. |
 |**[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/password)** | A password to unlock the protected document. |
@@ -29,16 +31,16 @@ toc: True
 |**[UseTextShaper](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/usetextshaper)** | Specifies whether to use a text shaper for better kerning display. Default is false. |
 |**[WhitelistedResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/whitelistedresources)** | Specifies which external resources will be loaded even when the loading of other external resources is restricted. |
 
-    Note: that the font substitution mechanism will override the DefaultFont in cases when FontInfo for the missing font is available in the document.
+    Note: missing fonts are substituted in this order: by font name (if FontNameSubstitutionEnabled), by FontConfig (if FontConfigSubstitutionEnabled), by FontSubstitutes (if set), by FontInfo (if FontInfoSubstitutionEnabled), and finally by DefaultFont (if set).
 
 ## Hide comments
 
-Microsoft Word provides the "Comment" feature that allows multiple authors or reviewers to discuss a document when they are not working with it simultaneously. All added comments are displayed in an area to the right of the document text. After the DOCX document with comments is converted to another format, the Comments pane is also present in a resultant document. If it's required to hide comments in a converted document programmatically, you can use the following code sample to do this with a couple of lines of C# code:
+Microsoft Word provides the "Comment" feature that allows multiple authors or reviewers to discuss a document when they are not working with it simultaneously. All added comments are displayed in an area to the right of the document text. After the DOCX document with comments is converted to another format, the Comments pane is also present in a resultant document. If it's required to hide comments in a converted document programmatically, set the [CommentDisplayMode](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/wordprocessingloadoptions/commentdisplaymode) property to *WordProcessingCommentDisplay.Hidden* as shown in the following code sample:
 
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new WordProcessingLoadOptions
 {
-    HideComments = true
+    CommentDisplayMode = WordProcessingCommentDisplay.Hidden
 };
 using (Converter converter = new Converter("sample.docx", getLoadOptions))
 {
@@ -76,8 +78,7 @@ The following code snippet shows how to convert a DOCX document with font substi
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new WordProcessingLoadOptions
 {
-    AutoFontSubstitution = false,
-	DefaultFont = "Helvetica",
+    DefaultFont = "Helvetica",
     FontSubstitutes = new List<FontSubstitute>
     {
         FontSubstitute.Create("Tahoma", "Arial"),

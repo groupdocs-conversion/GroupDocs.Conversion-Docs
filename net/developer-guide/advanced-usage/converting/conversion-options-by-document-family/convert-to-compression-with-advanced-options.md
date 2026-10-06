@@ -71,12 +71,16 @@ using (var converter = new Converter("data.zip"))
 
 ## Supported Archive Formats
 
-**Input (read):** ZIP, RAR, 7z, TAR, TAR.GZ, TAR.BZ2, TAR.XZ, CAB, LZ, CPIO, ISO
+Archive formats that hold multiple files convert into each other:
 
-**Output (write):** ZIP, 7z, TAR, TAR.GZ, TAR.BZ2, TAR.XZ
+**Input (read):** 7z, AAR (Apple Archive), ALZ, CAB, CPIO, ISO, LHA, RAR, TAR, WIM, XAR, ZIP
+
+**Output (write):** 7z, AAR (Apple Archive), CAB, CPIO, ISO, TAR, XAR, ZIP
+
+Single-file compression formats convert into each other: BZ2, GZ, GZIP, LZ, LZ4, LZMA, UUE, XZ, Z, ZST.
 
 {{< alert style="warning" >}}
-**RAR Output Limitation:** RAR archives can be read as input but **cannot be created as output** due to licensing restrictions. Use ZIP, 7z, or TAR as alternatives.
+**Read-only formats:** ALZ, LHA, RAR and WIM archives can be read as input but **cannot be created as output**. Use ZIP, 7z, or TAR as alternatives.
 {{< /alert >}}
 
 ## Format Comparison
@@ -84,6 +88,7 @@ using (var converter = new Converter("data.zip"))
 **ZIP** - Most compatible, good compression, universal support
 **7z (SevenZ)** - Best compression ratio, open source, requires 7-Zip
 **TAR** - Unix/Linux standard, preserves permissions, often used with compression (TAR.GZ)
+**AAR (Apple Archive)** - Native archive format of macOS and iOS
 **RAR** - Input only, cannot be created as output
 
 ## Batch Processing
@@ -114,16 +119,29 @@ foreach (var zipFile in zipFiles)
 
 ## Common Scenarios
 
-**Cross-platform distribution** (ZIP to TAR.GZ):
+**Cross-platform distribution** (ZIP to TAR):
 
 ```csharp
 using (var converter = new Converter("windows-software.zip"))
 {
     var options = new CompressionConvertOptions
     {
-        Format = CompressionFileType.Gz  // TAR.GZ
+        Format = CompressionFileType.Tar
     };
-    converter.Convert("unix-software.tar.gz", options);
+    converter.Convert("unix-software.tar", options);
+}
+```
+
+**Apple platforms** (ZIP to Apple Archive):
+
+```csharp
+using (var converter = new Converter("assets.zip"))
+{
+    var options = new CompressionConvertOptions
+    {
+        Format = CompressionFileType.Aar
+    };
+    converter.Convert("assets.aar", options);
 }
 ```
 

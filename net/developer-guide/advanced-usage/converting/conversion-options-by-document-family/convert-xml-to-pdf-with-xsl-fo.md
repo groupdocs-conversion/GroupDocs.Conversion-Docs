@@ -21,6 +21,7 @@ Ensure you have the following ready before proceeding:
 1. GroupDocs.Conversion for .NET installed in your project.
 2. An XML file containing the data to convert.
 3. An XSL-FO stylesheet that defines the PDF layout and design.
+4. On .NET 6 and later, the [System.Drawing.Common](https://www.nuget.org/packages/System.Drawing.Common/4.7.3) 4.7.3 package in your project; on Linux, libgdiplus must also be installed. Without it, the conversion throws a `MissingDependencyException` that names the missing package.
 
 ## Code Example: XML to PDF Conversion
 

@@ -7,7 +7,7 @@ description: "The get_document_info MCP tool returns file type, page count, and 
 keywords: get_document_info MCP, MCP document info tool, ai agent check page count file type
 productName: GroupDocs.Conversion MCP Server
 generated: true
-serverVersion: 26.7.2
+serverVersion: 26.9.0
 toc: True
 ---
 

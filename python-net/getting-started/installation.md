@@ -41,11 +41,11 @@ After running the command you should see output similar to:
 
 ```bash
 Collecting groupdocs-conversion-net
-  Downloading groupdocs_conversion_net-26.3-py3-none-win_amd64.whl.metadata (7.0 kB)
-  Downloading groupdocs_conversion_net-26.3-py3-none-win_amd64.whl (220.3 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 220.3/220.3 MB 2.8 MB/s eta 0:00:00
+  Downloading groupdocs_conversion_net-26.9.0-py3-none-win_amd64.whl.metadata (7.0 kB)
+  Downloading groupdocs_conversion_net-26.9.0-py3-none-win_amd64.whl (199.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.5/199.5 MB 2.8 MB/s eta 0:00:00
 Installing collected packages: groupdocs-conversion-net
-Successfully installed groupdocs-conversion-net-26.3
+Successfully installed groupdocs-conversion-net-26.9.0
 ```
 
 The wheel file name will include a platform suffix that matches your operating system — for example `manylinux1_x86_64` on Ubuntu/Debian, `macosx_11_0_arm64` on Apple Silicon, or `win_amd64` on 64-bit Windows.
@@ -55,7 +55,7 @@ The wheel file name will include a platform suffix that matches your operating s
 For reproducible environments, pin the package version in your `requirements.txt`:
 
 ```txt
-groupdocs-conversion-net==26.3
+groupdocs-conversion-net==26.9.0
 ```
 
 Then install all dependencies in one step:
@@ -78,22 +78,22 @@ Place the downloaded wheel into your project folder, then install it:
 {{< tabs "install-wheel">}}
 {{< tab "Windows (64-bit)" >}}
 ```ps
-py -m pip install groupdocs_conversion_net-26.3-py3-none-win_amd64.whl
+py -m pip install groupdocs_conversion_net-26.9.0-py3-none-win_amd64.whl
 ```
 {{< /tab >}}
 {{< tab "Linux (glibc)" >}}
 ```bash
-python3 -m pip install groupdocs_conversion_net-26.3-py3-none-manylinux1_x86_64.whl
+python3 -m pip install groupdocs_conversion_net-26.9.0-py3-none-manylinux1_x86_64.whl
 ```
 {{< /tab >}}
 {{< tab "macOS (Apple Silicon)" >}}
 ```bash
-python3 -m pip install groupdocs_conversion_net-26.3-py3-none-macosx_11_0_arm64.whl
+python3 -m pip install groupdocs_conversion_net-26.9.0-py3-none-macosx_11_0_arm64.whl
 ```
 {{< /tab >}}
 {{< tab "macOS (Intel)" >}}
 ```bash
-python3 -m pip install groupdocs_conversion_net-26.3-py3-none-macosx_10_14_x86_64.whl
+python3 -m pip install groupdocs_conversion_net-26.9.0-py3-none-macosx_10_14_x86_64.whl
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -101,9 +101,9 @@ python3 -m pip install groupdocs_conversion_net-26.3-py3-none-macosx_10_14_x86_6
 Expected output:
 
 ```bash
-Processing groupdocs_conversion_net-26.3-py3-none-*.whl
+Processing groupdocs_conversion_net-26.9.0-py3-none-*.whl
 Installing collected packages: groupdocs-conversion-net
-Successfully installed groupdocs-conversion-net-26.3
+Successfully installed groupdocs-conversion-net-26.9.0
 ```
 
 ## Next Steps

@@ -88,4 +88,4 @@ GroupDocs.Conversion is designed to be a first-class building block for AI docum
 
 ## On-Premise Deployment
 
-No cloud calls, no outbound network traffic, no third-party software dependencies beyond what the OS already provides. The wheel is self-contained on Windows and ships its own native runtime libraries on Linux and macOS. See [System Requirements]({{< ref "conversion/python-net/getting-started/system-requirements.md" >}}) for the short list of optional native packages (`libgdiplus`, ICU, fontconfig).
+No cloud calls, no outbound network traffic, no third-party software dependencies beyond what the OS already provides. The wheel is self-contained on Windows and ships its own native runtime libraries on Linux and macOS. See [System Requirements]({{< ref "conversion/python-net/getting-started/system-requirements.md" >}}) for the short list of optional native packages (ICU, fontconfig, Microsoft core fonts).

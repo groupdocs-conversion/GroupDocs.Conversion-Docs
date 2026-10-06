@@ -10,9 +10,46 @@ hideChildren: False
 toc: True
 ---
 
+## Migrating to v26.9 (removed obsolete members)
+
+Version 26.9 removes the members that were marked obsolete in earlier versions. Code that still uses them no longer compiles; replace them as follows:
+
+| Removed in 26.9 | Replacement |
+|---|---|
+| `IConverterListener` and `ConverterSettings.Listener` | `ConversionEvents.OnConversionStarted` / `OnConversionProgress` / `OnConversionCompleted` |
+| `ConverterSettings.OnConversionFailed` | `ConversionEvents.OnDocumentFailed` |
+| `ConverterSettings.OnConversionByPageFailed` | `ConversionEvents.OnPageFailed` |
+| `ConverterSettings.OnCompressionCompleted` | `ConversionEvents.OnCompressionCompleted` |
+| Fluent `.OnCompressionCompleted(...)` after `.Compress(...)` (`IConversionCompressResultCompleted`) | `FluentConverter.WithEvents(e => e.OnCompressionCompleted = ...)` |
+| Fluent interfaces `IConversionHandlerSetup`, `IConversionHandlerFailed`, `IConversionHandlerCompleted` | `IConversionHandlersStage` |
+| Fluent interfaces `IConversionByPageHandlerSetup`, `IConversionByPageHandlerFailed`, `IConversionByPageHandlerCompleted` | `IConversionByPageHandlersStage` |
+| `CadConvertOptions.PageSize` / `PageWidth` / `PageHeight` | `CadConvertOptions.SizeSettings` (`PageSizeOptions`) |
+| `EBookConvertOptions.PageSize` / `PageWidth` / `PageHeight` | `EBookConvertOptions.SizeSettings` (`PageSizeOptions`) |
+
+`WithOptions(...)` in the fluent API now returns `IConversionHandlersStage` (or `IConversionByPageHandlersStage` for page-by-page conversion). Chained calls such as `.WithOptions(...).OnConversionCompleted(...).OnConversionFailed(...).Convert()` compile unchanged; only code that stores an intermediate result in a variable of one of the removed interface types needs the new type.
+
+Page size is now set only through `SizeSettings`.
+
+**Before** (26.8 and earlier):
+
+```csharp
+var options = new CadConvertOptions { PageWidth = 800, PageHeight = 600 };
+```
+
+**After**:
+
+```csharp
+var options = new CadConvertOptions
+{
+    SizeSettings = new PageSizeOptions { PageWidth = 800, PageHeight = 600 }
+};
+```
+
+On .NET 6 and later, the exception classes in `GroupDocs.Conversion.Exceptions` no longer declare the legacy serialization constructor `(SerializationInfo, StreamingContext)` or override `GetObjectData`; on .NET Framework they are unchanged. This only affects code that derives from these exception types and calls the serialization constructor.
+
 ## Migrating to ConversionEvents (v26.6)
 
-Version 26.6 introduces the [ConversionEvents]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}}) aggregator — a single typed object that replaces three previously separate registration paths: the per-handler properties on `ConverterSettings`, the `IConverterListener` assigned to `ConverterSettings.Listener`, and the fluent chain methods placed after `WithOptions(...)` or `Compress(...)`. The old surfaces continue to work but are obsolete and planned for removal in **v26.9**.
+Version 26.6 introduces the [ConversionEvents]({{< ref "conversion/net/developer-guide/advanced-usage/conversion-events.md" >}}) aggregator — a single typed object that replaces three previously separate registration paths: the per-handler properties on `ConverterSettings`, the `IConverterListener` assigned to `ConverterSettings.Listener`, and the fluent chain methods placed after `WithOptions(...)` or `Compress(...)`. The obsolete surfaces are removed in version 26.9 — see [Migrating to v26.9](#migrating-to-v269-removed-obsolete-members).
 
 Per-result events were renamed at the same time — the noun moved from "Conversion" to "Document" or "Page" so the pipeline-lifecycle group could reuse "Conversion":
 
@@ -113,11 +150,11 @@ FluentConverter
     .Convert();
 ```
 
-The chain method continues to work in v26.6 — the `IConversionCompressResultCompleted` interface that declares it is marked obsolete and is planned for removal in v26.9.
+The chain method was obsolete from v26.6 and is removed in v26.9, together with the `IConversionCompressResultCompleted` interface that declared it.
 
 ### Pipeline lifecycle — replacing IConverterListener
 
-**Before** — implement [IConverterListener](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.reporting/iconverterlistener/) and assign the instance to `ConverterSettings.Listener`:
+**Before** (26.8 and earlier) — implement `IConverterListener` and assign the instance to `ConverterSettings.Listener`:
 
 ```csharp
 public class MyListener : IConverterListener
@@ -153,7 +190,7 @@ using (var converter = new Converter(
 }
 ```
 
-`ConverterSettings.Listener` continues to forward `Started` / `Progress` / `Completed` callbacks into the internal events bag in v26.6 — both `ConverterSettings.Listener` and the `IConverterListener` interface are marked obsolete and are planned for removal in v26.9.
+`ConverterSettings.Listener` and the `IConverterListener` interface were obsolete from v26.6 and are removed in v26.9.
 
 ### Per-call vs global precedence
 

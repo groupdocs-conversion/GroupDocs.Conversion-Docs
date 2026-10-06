@@ -15,20 +15,20 @@ toc: True
 |**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/format)** | The document type is auto-detected during loading, however, you can specify explicitly the type of the source presentation document. Available options are: *Ppt, Pps, Pptx, Ppsx, Odp, Otp, Potx, Pot, Potm, Pptm, Ppsm* |
 |**[DefaultFont](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/defaultfont)** | A default font for rendering the presentation. The following font will be used if a presentation font is missing. |
 |**[FontSubstitutes](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/fontsubstitutes)** | Substitute specific fonts from the source presentation document. |
-|**[HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/hidecomments)** | Specifies that comments from source presentation must be hidden during conversion |
+|**[CommentsPosition](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/commentsposition)** | Specifies where comments are printed with each slide: *None* (default, comments are not printed), *Bottom*, or *Right*. |
 |**[Password](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/password)** | A password to unlock the protected document |
 |**[ShowHiddenSlides](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/showhiddenslides)** | Specifies that hidden slides should be included in the converted document |
 |**[SkipExternalResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/skipexternalresources)** |  If enabled, the external resources (except for those listed in `WhitelistedResources`) will not be loaded during the conversion. |
 |**[WhitelistedResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/whitelistedresources)** | Specifies which external resources will be loaded even when the loading of other external resources is restricted. |
 
-## Hide comments
+## Show or hide comments
 
-Like many other Microsoft Office applications PowerPoint provides the "Comments" feature to simplify the presentation review. By default, the Comments pane will be present in a converted document. If you want to hide comments, set the [HideComments](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/hidecomments) property to *true* as shown in a code snippet below:
+Like many other Microsoft Office applications PowerPoint provides the "Comments" feature to simplify the presentation review. By default, comments are not included in a converted document. The [CommentsPosition](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/presentationloadoptions/commentsposition) property controls this: *PresentationCommentsPosition.None* (the default) hides comments, while *Bottom* or *Right* prints them below or to the right of each slide. To print comments to the right of each slide, use the code snippet below:
 
 ```csharp
 Func<LoadContext, LoadOptions> getLoadOptions = loadContext => new PresentationLoadOptions
 {
-    HideComments = true
+    CommentsPosition = PresentationCommentsPosition.Right
 };
 using (Converter converter = new Converter("sample.pptx", getLoadOptions))
 {

@@ -19,14 +19,16 @@ GroupDocs.Conversion provides [EBookConvertOptions](https://reference.groupdocs.
 | Property | Type | Description |
 |----------|------|-------------|
 | [Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/) | `EBookFileType` | Specifies the desired eBook format. Available options are: *Epub, Mobi, Azw3* |
-| [PageSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pageconvertoptions-1/pagesize) | `PageSize` | Sets the page size for the converted eBook |
-| [PageWidth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pageconvertoptions-1/pagewidth) | `double` | Sets custom page width in points |
-| [PageHeight](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pageconvertoptions-1/pageheight) | `double` | Sets custom page height in points |
-| [PageOrientation](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pageconvertoptions-1/pageorientation) | `PageOrientation` | Sets page orientation (*Portrait* or *Landscape*) |
-| [FallbackPageSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/pageconvertoptions-1/fallbackpagesize) | `PageSize` | Sets fallback page size when source page dimensions cannot be determined |
+| [SizeSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/ebookconvertoptions/sizesettings/) | [`PageSizeOptions`](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options/pagesizeoptions/) | Sets the page size (`PageSize`) or custom page width and height in points (`PageWidth`, `PageHeight`) for the converted eBook |
+| [OrientationSettings](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/ebookconvertoptions/orientationsettings/) | `PageOrientation` | Sets page orientation (*Portrait* or *Landscape*) |
+| [FallbackPageSize](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/ebookconvertoptions/fallbackpagesize/) | `PageSize` | Sets fallback page size when source page dimensions cannot be determined |
 | [PageNumber](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/commonconvertoptions-1/pagenumber) | `int` | Specifies the starting page number for conversion |
 | [PagesCount](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/commonconvertoptions-1/pagescount) | `int` | Specifies the number of pages to convert |
 | [Pages](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/commonconvertoptions-1/pages) | `List<int>` | Specifies specific page numbers to convert |
+
+{{< alert style="info" >}}
+Starting with version 26.9, the page size is set only through `SizeSettings`; the `PageSize`, `PageWidth` and `PageHeight` properties directly on `EBookConvertOptions` were removed.
+{{< /alert >}}
 
 ## Basic Usage
 
@@ -92,7 +94,7 @@ using (var converter = new Converter("landscape-document.pdf"))
 {
     var options = new EBookConvertOptions
     {
-        PageOrientation = PageOrientation.Landscape
+        OrientationSettings = PageOrientation.Landscape
     };
     converter.Convert("landscape-ebook.epub", options);
 }
@@ -107,8 +109,11 @@ using (var converter = new Converter("document.pdf"))
 {
     var options = new EBookConvertOptions
     {
-        PageWidth = 432,   // Width in points (6 inches × 72 points/inch)
-        PageHeight = 648   // Height in points (9 inches × 72 points/inch)
+        SizeSettings = new PageSizeOptions
+        {
+            PageWidth = 432,   // Width in points (6 inches × 72 points/inch)
+            PageHeight = 648   // Height in points (9 inches × 72 points/inch)
+        }
     };
     converter.Convert("custom-size.epub", options);
 }
@@ -210,7 +215,7 @@ using (var converter = new Converter("manuscript.docx"))
     var options = new EBookConvertOptions
     {
         Format = EBookFileType.Epub,
-        PageOrientation = PageOrientation.Portrait
+        OrientationSettings = PageOrientation.Portrait
     };
     converter.Convert("published-book.epub", options);
 }
@@ -226,8 +231,11 @@ using (var converter = new Converter("user-manual.pdf"))
     var options = new EBookConvertOptions
     {
         Format = EBookFileType.Mobi,
-        PageWidth = 432,   // 6 inches × 72 points/inch
-        PageHeight = 648   // 9 inches × 72 points/inch
+        SizeSettings = new PageSizeOptions
+        {
+            PageWidth = 432,   // 6 inches × 72 points/inch
+            PageHeight = 648   // 9 inches × 72 points/inch
+        }
     };
     converter.Convert("user-manual.mobi", options);
 }
@@ -243,7 +251,7 @@ using (var converter = new Converter("quarterly-report.xlsx"))
     var options = new EBookConvertOptions
     {
         Format = EBookFileType.Epub,
-        PageOrientation = PageOrientation.Landscape
+        OrientationSettings = PageOrientation.Landscape
     };
     converter.Convert("quarterly-report.epub", options);
 }

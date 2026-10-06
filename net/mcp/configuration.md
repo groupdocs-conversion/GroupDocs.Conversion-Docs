@@ -1,11 +1,13 @@
 ---
 id: mcp-configuration
-url: conversion/mcp/getting-started/configuration
+url: conversion/net/mcp/configuration
+aliases:
+    - /conversion/mcp/getting-started/configuration/
 title: Configuration
 weight: 6
 description: "Configure the GroupDocs.Conversion MCP server through one config file: set the documents folder, output folder, license path, delivery channel (Docker or NuGet), and target clients in a single place."
 keywords: MCP server environment variables, MCP server config file, MCP server storage path, pin MCP server version
-productName: GroupDocs.Conversion MCP Server
+productName: GroupDocs.Conversion MCP Server for .NET
 toc: True
 ---
 
@@ -19,7 +21,7 @@ Configure the GroupDocs.Conversion MCP server through **one config file**: the d
   "version":     "latest",
   "storagePath": "D:/Storage/Documents",
   "outputPath":  "D:/Storage/Output",
-  "licensePath": "D:/Storage/Licenses/GroupDocs.Total.lic",
+  "licensePath": "D:/Storage/Licenses/GroupDocs.Conversion.lic",
   "products":    ["conversion"]
 }
 ```
@@ -28,7 +30,8 @@ Configure the GroupDocs.Conversion MCP server through **one config file**: the d
 * `storagePath` — where the server reads input documents (created if missing).
 * `outputPath` — optional separate folder for converted files; empty = same as storage.
 * `licensePath` — empty string = evaluation mode (safe, no error); see [Licensing]({{< ref "conversion/mcp/getting-started/licensing.md" >}}).
-* `version` — `"latest"` or a pin such as `"26.7.2"`. Pinning is recommended for shared/committed configs.
+* Metered (pay-per-use) licensing is configured with environment variables rather than this file, so the private key is never written to disk — see [Licensing]({{< ref "conversion/mcp/getting-started/licensing.md" >}}#metered-pay-per-use-licensing).
+* `version` — `"latest"` or a pin such as `"26.9.0"`. Pinning is recommended for shared/committed configs.
 * Any CLI switch overrides the file: `-Channel`, `-Products`, `-Clients`, `-Version`.
 
 ## Environment variables (manual installs)
@@ -40,6 +43,8 @@ When you register the server manually, the same settings travel as environment v
 | `GROUPDOCS_MCP_STORAGE_PATH` | Base folder for input and output files | current directory |
 | `GROUPDOCS_MCP_OUTPUT_PATH` | Optional separate folder for output files | same as storage |
 | `GROUPDOCS_LICENSE_PATH` | Path to a GroupDocs license file | empty = evaluation mode |
+| `GROUPDOCS_METERED_PUBLIC_KEY` | Metered public key. Requires the private key too; takes precedence over the license file | unset |
+| `GROUPDOCS_METERED_PRIVATE_KEY` | Metered private key. **Treat as a secret** — see [Licensing]({{< ref "conversion/mcp/getting-started/licensing.md" >}}) | unset |
 
 ## Docker volume mapping
 
@@ -53,7 +58,7 @@ On the docker channel, host folders map into the container:
 docker run --rm -i \
   -v /path/to/documents:/data \
   -v /path/to/license-folder:/license:ro \
-  -e GROUPDOCS_LICENSE_PATH=/license/GroupDocs.Total.lic \
+  -e GROUPDOCS_LICENSE_PATH=/license/GroupDocs.Conversion.lic \
   ghcr.io/groupdocs-conversion/conversion-net-mcp:latest
 ```
 

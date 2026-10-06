@@ -3,8 +3,8 @@ id: convert-to-gis-with-advanced-options
 url: conversion/net/convert-to-gis-with-advanced-options
 title: Convert to GIS formats with advanced options
 weight: 22
-description: "Learn about GisConvertOptions class for GIS file formats (GeoJSON, KML, GPX, TopoJSON) in GroupDocs.Conversion for .NET."
-keywords: Convert to GeoJSON, Convert to KML, Convert to GPX, GIS conversion, Geographic data conversion
+description: "Learn about GisConvertOptions class for GIS file formats (GeoJSON, KML, GPX, TopoJSON, GML, OSM) in GroupDocs.Conversion for .NET."
+keywords: Convert to GeoJSON, Convert to KML, Convert to GPX, Convert to GML, Convert to OSM, Convert KMZ, GIS conversion, Geographic data conversion
 productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
@@ -14,7 +14,7 @@ GroupDocs.Conversion provides the [GisConvertOptions](https://reference.groupdoc
 
 ## Supported GIS Formats
 
-The following GIS (Geographic Information System) formats are supported:
+The following GIS (Geographic Information System) formats can be both loaded and saved:
 
 | Format | Extension | Description |
 |--------|-----------|-------------|
@@ -24,12 +24,17 @@ The following GIS (Geographic Information System) formats are supported:
 | **TopoJSON** | .topojson | GeoJSON extension with topology encoding |
 | **GML** | .gml | Geography Markup Language (XML-based) |
 | **OSM** | .osm | OpenStreetMap XML format |
-| **SHP** | .shp | ESRI Shapefile |
-| **GDB** | .gdb | ESRI Geodatabase |
+
+The following GIS formats can be loaded and converted to any of the formats above:
+
+| Format | Extension | Description |
+|--------|-----------|-------------|
+| **GeoJSON Text Sequence** | .geojsons | Newline-delimited sequence of GeoJSON features |
+| **KMZ** | .kmz | Zipped KML (Google Earth) |
 
 ## Properties
 
-**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/)** - Specifies the desired GIS file format. Available options are: *GeoJson, Kml, Gpx, TopoJson, Gml, Osm, Shp, Gdb*.
+**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/convertoptions-1/format/)** - Specifies the desired GIS file format. Available options are: *GeoJson, Kml, Gpx, TopoJson, Gml, Osm*.
 
 ## Conversion Examples
 
@@ -101,15 +106,55 @@ using (var converter = new Converter(sourceFile))
 }
 ```
 
+### KMZ to GeoJSON
+
+Convert a KMZ (zipped KML) file exported from Google Earth to GeoJSON:
+
+```csharp
+using GroupDocs.Conversion;
+using GroupDocs.Conversion.Options.Convert;
+using GroupDocs.Conversion.FileTypes;
+
+string sourceFile = "placemarks.kmz";
+string outputFile = "placemarks.geojson";
+
+using (var converter = new Converter(sourceFile))
+{
+    var options = new GisConvertOptions
+    {
+        Format = GisFileType.GeoJson
+    };
+    converter.Convert(outputFile, options);
+}
+```
+
+### GeoJSON to GML
+
+Convert a GeoJSON file to GML (Geography Markup Language):
+
+```csharp
+using GroupDocs.Conversion;
+using GroupDocs.Conversion.Options.Convert;
+using GroupDocs.Conversion.FileTypes;
+
+string sourceFile = "parcels.geojson";
+string outputFile = "parcels.gml";
+
+using (var converter = new Converter(sourceFile))
+{
+    var options = new GisConvertOptions
+    {
+        Format = GisFileType.Gml
+    };
+    converter.Convert(outputFile, options);
+}
+```
+
 ## Format Support Notes
 
-GIS to GIS conversions are supported for most format combinations:
-- GeoJSON → KML, GPX, TopoJSON, GML
-- KML → GeoJSON, GPX, TopoJSON
-- GPX → GeoJSON, KML, TopoJSON
-- GML → GeoJSON, KML, GPX, TopoJSON
-- OSM → GeoJSON, KML, GPX, TopoJSON
-- TopoJSON → GeoJSON, KML, GPX
+Every supported GIS source format — GeoJSON, GeoJSON Text Sequence, GML, GPX, KML, KMZ, OSM and TopoJSON — converts to every GIS target format: GeoJSON, GML, GPX, KML, OSM and TopoJSON.
+
+GML and OSM are available as conversion targets starting with version 26.9. GIS conversion is available on .NET Framework 4.6.2 as well as on .NET 6 and later starting with version 26.9.
 
 **Note:** To convert FROM GIS formats to PDF, images, or other document formats, use [PdfConvertOptions]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-to-pdf-with-advanced-options.md" >}}), [ImageConvertOptions]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-to-image-with-advanced-options.md" >}}), or other appropriate ConvertOptions classes.
 

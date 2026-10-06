@@ -9,13 +9,13 @@ productName: GroupDocs.Conversion for .NET
 hideChildren: False
 toc: True
 ---
-[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [GisLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/gisloadoptions) to control how source GIS (Geographic Information System) documents are processed. GIS documents include formats like GeoJSON, KML, GPX, and other geospatial data files.
+[**GroupDocs.Conversion**](https://products.groupdocs.com/conversion/net) provides [GisLoadOptions](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/gisloadoptions) to control how source GIS (Geographic Information System) documents are processed. GIS documents include formats like GeoJSON, GeoJSON Text Sequence, KML, KMZ, GPX, and other geospatial data files.
 
 The following options are available:
 
 | Option | Description |
 |--------|-------------|
-|**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/gisloadoptions/format)** | The document type is auto-detected during loading, but you can explicitly specify the source format. Available options include: *GeoJson, Gpx, Kml, Osm, TopoJson, Gml* |
+|**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/gisloadoptions/format)** | The document type is auto-detected during loading, but you can explicitly specify the source format. Available options include: *GeoJson, GeoJsonSeq, Gpx, Kml, Kmz, Osm, TopoJson, Gml* |
 |**[Width](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/gisloadoptions/width)** | Sets the desired page width (in pixels) for rendering the GIS document. Default value is 1000. |
 |**[Height](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/gisloadoptions/height)** | Sets the desired page height (in pixels) for rendering the GIS document. Default value is 1000. |
 

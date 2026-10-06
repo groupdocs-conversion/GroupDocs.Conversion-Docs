@@ -11,16 +11,17 @@ hideChildren: False
 toc: True
 ---
 
-This topic describes how to add the **GroupDocs.Conversion** library to your .NET project. You can use a NuGet package to install this library or you can download necessary DLLs from the GroupDocs website: [https://downloads.groupdocs.com/conversion/net](https://downloads.groupdocs.com/conversion/net).  
+This topic describes how to add the **GroupDocs.Conversion** library to your .NET project. You can use a NuGet package to install this library or you can download necessary DLLs from the GroupDocs website: [https://releases.groupdocs.com/conversion/net/](https://releases.groupdocs.com/conversion/net/).  
 
 ## Install GroupDocs.Conversion using NuGet packages
 
-There are two NuGet packages available depending on your target framework:
+Install the [GroupDocs.Conversion](https://www.nuget.org/packages/GroupDocs.Conversion) package for every supported target framework — .NET Framework 4.6.2 and later, .NET 6, .NET 8 and .NET 10. NuGet selects the matching runtime package for your project's target framework automatically.
 
-* [GroupDocs.Conversion](https://www.nuget.org/packages/GroupDocs.Conversion) - for .NET 6 and later
-* [GroupDocs.Conversion.NETFramework](https://www.nuget.org/packages/GroupDocs.Conversion.NETFramework) - for .NET Framework 4.6.2 and later
+{{< alert style="info" >}}
+The separate `GroupDocs.Conversion.NETFramework` package is no longer updated. .NET Framework projects should reference `GroupDocs.Conversion` instead.
+{{< /alert >}}
 
-You can use the following tools to install the appropriate NuGet package:
+You can use the following tools to install the NuGet package:
 
  * [NuGet Package Manager](#use-the-nuget-package-manager)
  * [Package Manager Console](#use-the-package-manager-console)
@@ -34,23 +35,18 @@ Open your project or solution in Visual Studio and follow the steps below to ins
 
     ![Manage NuGet packages in Visual Studio](/conversion/net/images/getting-started/installation/manage-nuget-packages.png)
 
-2. Select the **Browse** tab and type **GroupDocs.Conversion** in the search box. Select the appropriate package for your target framework (**GroupDocs.Conversion** for .NET 6+ or **GroupDocs.Conversion.NETFramework** for .NET Framework) and click **Install**.
+2. Select the **Browse** tab and type **GroupDocs.Conversion** in the search box. Select the **GroupDocs.Conversion** package and click **Install**.
 
     ![Install NuGet packages in Visual Studio](/conversion/net/images/getting-started/installation/install-nuget-package.png)
 
 ### Use the Package Manager Console
 
-The [Package Manager Console](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-powershell) uses PowerShell commands to install, update, and remove NuGet packages. Open your project in Visual Studio and click **Tools** -> **NuGet Package Manager** -> **Package Manager Console** to open the console window. Run one of the following commands to install the latest version of the **GroupDocs.Conversion** library:
+The [Package Manager Console](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-powershell) uses PowerShell commands to install, update, and remove NuGet packages. Open your project in Visual Studio and click **Tools** -> **NuGet Package Manager** -> **Package Manager Console** to open the console window. Run the following command to install the latest version of the **GroupDocs.Conversion** library:
 
 {{< tabs "example1">}}
-{{< tab ".NET 6+" >}}
+{{< tab "Package Manager" >}}
 ```shell
 PM> Install-Package GroupDocs.Conversion
-```
-{{< /tab >}}
-{{< tab ".NET Framework" >}}
-```shell
-PM> Install-Package GroupDocs.Conversion.NETFramework
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -83,5 +79,5 @@ Visit [https://releases.groupdocs.com/conversion/net/](https://releases.groupdoc
 5. Click **OK** to add a reference to the **GroupDocs.Conversion** library to your project.
 
 {{< alert style="warning" >}}
-If your application targets .NET 6+, ensure that your project has all the required dependencies installed. Refer to the following page for details: [GroupDocs.Conversion dependencies](https://www.nuget.org/packages/groupdocs.conversion#dependencies-body-tab).
+The downloaded assemblies reference NuGet packages that are not included in the ZIP archive or the MSI installer. Ensure that your project has all the required dependencies installed — they are listed on the runtime package for your target framework: [GroupDocs.Conversion.Net462](https://www.nuget.org/packages/GroupDocs.Conversion.Net462#dependencies-body-tab), [GroupDocs.Conversion.Net60](https://www.nuget.org/packages/GroupDocs.Conversion.Net60#dependencies-body-tab), [GroupDocs.Conversion.Net80](https://www.nuget.org/packages/GroupDocs.Conversion.Net80#dependencies-body-tab), [GroupDocs.Conversion.Net100](https://www.nuget.org/packages/GroupDocs.Conversion.Net100#dependencies-body-tab). Installing the **GroupDocs.Conversion** NuGet package brings them in automatically.
 {{< /alert >}}

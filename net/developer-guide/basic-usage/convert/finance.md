@@ -50,6 +50,10 @@ using (var converter = new GroupDocs.Conversion.Converter("sample.xbrl"))
 }
 ```
 
+{{< alert style="info" >}}
+On .NET 6 and later, converting XBRL and iXBRL documents to spreadsheet formats requires the [System.Drawing.Common](https://www.nuget.org/packages/System.Drawing.Common/4.7.3) 4.7.3 package in your project; on Linux, libgdiplus must also be installed. Without it, the conversion throws a `MissingDependencyException` that names the missing package.
+{{< /alert >}}
+
 Put it simply - you just load your finance document into the `Converter` class, select the desired output format and **GroupDocs.Conversion** does all the rest. 
 
 ## Convert to another finance format
