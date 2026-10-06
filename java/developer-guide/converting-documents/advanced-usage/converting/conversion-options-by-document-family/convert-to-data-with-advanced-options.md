@@ -26,7 +26,7 @@ import com.groupdocs.conversion.filetypes.WebFileType;
 public class ConvertCsvToJson {
     public static void convert() {
         // Initialize the Converter for the input file
-        try(Converter converter = new Converter("sample.csv") {
+        try(Converter converter = new Converter("sample.csv")) {
             // Set up WebConvertOptions with JSON format
             WebConvertOptions options = new WebConvertOptions();
             options.setFormat(WebFileType.Json);

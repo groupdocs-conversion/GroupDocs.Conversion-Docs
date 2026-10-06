@@ -25,7 +25,7 @@ import com.groupdocs.conversion.exceptions.GroupDocsConversionException;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-...
+
 try{
     Converter converter = new Converter(() -> {
                 try {

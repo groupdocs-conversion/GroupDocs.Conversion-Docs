@@ -26,7 +26,8 @@ For example, CFF to TTF conversion code snippet looks like this:
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.FontConvertOptions;
-...
+import com.groupdocs.conversion.filetypes.FontFileType;
+
 // Load the source font file
 Converter converter = new Converter("Lato-Regular.cff");
 // Set the convert options

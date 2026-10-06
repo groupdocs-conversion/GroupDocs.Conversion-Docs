@@ -13,17 +13,11 @@ The following code snippet shows how to convert a document from FTP:
 {{< tabs "load-document-from-ftp" >}}
 {{< tab "Java" >}}
 ```java
-package com.groupdocs.conversion.examples.advanced_usage.loading.loading_documents_from_different_sources;
-
 import com.groupdocs.conversion.Converter;
-import com.groupdocs.conversion.examples.Constants;
 import com.groupdocs.conversion.exceptions.GroupDocsConversionException;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
-import org.apache.commons.net.ftp.FTPClient;
-import java.io.File;
 import java.io.InputStream;
-
-
+import java.net.URL;
 
 /**
 * This example demonstrates how to convert document downloaded from FTP.
@@ -31,27 +25,21 @@ import java.io.InputStream;
 public class LoadDocumentFromFtp {
     public static void run()
     {
-        String server = "ftp.example.com";
-        String convertedFile = "C:\\output\\converted.pdf";   
-        String filePath = "ftp://localhost/sample.doc";
+        // Use ftp://user:password@host/path for servers that require authentication.
+        // The ";type=i" suffix requests binary (image) transfer mode.
+        String ftpUrl = "ftp://ftp.example.com/sample.doc;type=i";
+        String convertedFile = "C:\\output\\converted.pdf";
 
-        try {
-            Converter converter = new Converter(getFileFromFtp(server, filePath));
+        try (InputStream stream = new URL(ftpUrl).openStream();
+             Converter converter = new Converter(() -> stream)) {
             PdfConvertOptions options = new PdfConvertOptions();
             converter.convert(convertedFile, options);
-        } 
+        }
         catch (Exception e){
             throw new GroupDocsConversionException(e.getMessage());
         }
 
         System.out.println("\nSource document converted successfully.\nCheck output in " + convertedFile);
-    }
-
-    private static InputStream getFileFromFtp(String server, String filePath) throws Exception
-    {
-        FTPClient client = new FTPClient();
-        client.connect(server);
-        return client.retrieveFileStream(filePath);
     }
 }
 ```

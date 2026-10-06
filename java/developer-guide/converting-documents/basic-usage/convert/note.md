@@ -47,7 +47,7 @@ With [GroupDocs.Conversion](https://products.groupdocs.com/conversion/java) you 
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
-...
+
 // Load the source OneNote file
 Converter converter = new Converter("sample.one");
 // Set the convert options for PDF format

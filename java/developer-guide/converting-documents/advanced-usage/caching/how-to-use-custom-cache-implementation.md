@@ -22,6 +22,18 @@ This guide demonstrates how to implement a custom caching mechanism using **Redi
 5.   Instantiate the desired [ConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/convertoptions/) class (e.g., [PdfConvertOptions](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/pdfconvertoptions/) for PDF conversion).
 6.   Call the [convert](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/converter/#convert-java.lang.String-com.groupdocs.conversion.options.convert.ConvertOptions-) method of the [Converter](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion/converter/) class to process the document.
 
+{{< alert style="info" >}}
+This example uses the [Jedis](https://github.com/redis/jedis) Redis client library. Add it to your project, for example with Maven:
+
+```xml
+<dependency>
+    <groupId>redis.clients</groupId>
+    <artifactId>jedis</artifactId>
+    <version>5.2.0</version>
+</dependency>
+```
+{{< /alert >}}
+
 The following code demonstrates how to implement a custom **Redis-based** caching mechanism for GroupDocs.Conversion:
 
 {{< tabs "custom-redis-cache-implementation">}}

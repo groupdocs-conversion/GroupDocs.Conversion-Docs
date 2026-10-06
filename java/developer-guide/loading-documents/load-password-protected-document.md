@@ -28,22 +28,22 @@ import com.groupdocs.conversion.options.load.WordProcessingLoadOptions;
 public class LoadPasswordProtectedFile {
     public static void loadPasswordProtectedFile() {
         // Set file path
-        String filePath = "./password-protected.docx"
+        String filePath = "./password-protected.docx";
 
         // Instantiate load options and set password
-        WordProcessingLoadOptions loadOptions = WordProcessingLoadOptions()
+        WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
         loadOptions.setPassword("12345");
 
         // Specify source file path and load options
         Converter converter = new Converter(filePath, () -> loadOptions);
 
         // Specify output file location and convert options
-        String outputPath = "./password-protected.pdf"
-        PdfConvertOptions convertOptions = PdfConvertOptions()
+        String outputPath = "./password-protected.pdf";
+        PdfConvertOptions convertOptions = new PdfConvertOptions();
         convertOptions.setPassword("67890");
 
         // Convert and save to output path
-        converter.convert(outputPath, convertOptions)
+        converter.convert(outputPath, convertOptions);
     }
 
     public static void main(String[] args){

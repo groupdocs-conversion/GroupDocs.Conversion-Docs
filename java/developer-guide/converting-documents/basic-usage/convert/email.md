@@ -43,7 +43,7 @@ For example, MSG to PDF conversion code snippet looks like this:
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
-...
+
 // Load the source MSG file
 Converter converter = new Converter("sample.msg");
 // Set the convert options for PDF format

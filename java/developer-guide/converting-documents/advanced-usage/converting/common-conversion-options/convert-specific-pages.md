@@ -23,6 +23,7 @@ The following Java code snippet demonstrates how to convert only the first and t
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import java.util.Arrays;
 
 public class ConvertSpecificPages {
     public static void convert() {

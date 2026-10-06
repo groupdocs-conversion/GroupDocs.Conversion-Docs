@@ -23,7 +23,7 @@ import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
 public class ConvertJsonAsDataSourceToSpreadsheet {
     public static void convert() {
         // Initialize the Converter for the input file
-        try(Converter converter = new Converter("sample.json") {
+        try(Converter converter = new Converter("sample.json")) {
             // Set up SpreadsheetConvertOptions
             SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
 

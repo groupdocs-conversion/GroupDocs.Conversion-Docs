@@ -24,7 +24,7 @@ The following code snippet shows how to convert a Note document and specify font
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.FontSubstitute;
-import com.groupdocs.conversion.options.convert.WordProcessingConvertOptions;
+import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.options.load.NoteLoadOptions;
 import java.util.ArrayList;
 import java.util.List;

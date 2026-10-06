@@ -31,6 +31,7 @@ import java.io.FileOutputStream;
 
 public class ConvertEachEmailAttachmentToDifferentFormat {
     public static void convert() {
+        String outputFolder = "converted";
         final int[] index = {0};
 
         LoadOptionsProvider loadOptionsProvider = ()->{
@@ -66,7 +67,7 @@ public class ConvertEachEmailAttachmentToDifferentFormat {
         };
 
         // Initialize the converter with the source email document
-        try(Converter converter = new Converter(Constants.SAMPLE_EML_WITH_ATTACHMENT, loadOptionsProvider))
+        try(Converter converter = new Converter("with-attachment.eml", loadOptionsProvider))
         {
             converter.convert(convertedStreamProvider, convertOptionsProvider);
         }

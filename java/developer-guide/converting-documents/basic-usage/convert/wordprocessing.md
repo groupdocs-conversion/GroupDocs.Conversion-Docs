@@ -19,7 +19,7 @@ The following code example demonstrates how to convert a document from DOCX into
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
-...
+
 // Load the source DOCX file
 Converter converter = new Converter("sample.docx");
 // Set the convert options for PDF format
@@ -45,7 +45,7 @@ Converting Microsoft Word documents to HTML or MHTML formats is a popular and de
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.MarkupConvertOptions;
-...
+
 // Load the source DOCX file
 Converter converter = new Converter("sample.docx");
 // Set the convert options for HTML format
@@ -64,7 +64,7 @@ When converting a DOC or DOCX file to MHTML format the only difference from the 
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.MarkupConvertOptions;
 import com.groupdocs.conversion.filetypes.MarkupFileType;
-...
+
 // Load the source DOCX file
 Converter converter = new Converter("sample.docx");
 MarkupConvertOptions options = new MarkupConvertOptions();
@@ -92,9 +92,15 @@ import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.SavePageStream;
 import com.groupdocs.conversion.options.convert.ImageConvertOptions;
 import com.groupdocs.conversion.filetypes.ImageFileType;
-...
+
 String outputFileNameFormat = "converted-page-%s.png";
-SavePageStream getPageStream = page => new FileOutputStream(String.format(outputFileNameFormat, page));
+SavePageStream getPageStream = page -> {
+    try {
+        return new FileOutputStream(String.format(outputFileNameFormat, page));
+    } catch (FileNotFoundException e) {
+        throw new RuntimeException(e);
+    }
+};
 
 // Load the source DOCX file
 Converter converter = new Converter("sample.docx");
@@ -118,7 +124,7 @@ GroupDocs.Conversion allows you to convert Microsoft Word documents to markdown 
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.WordProcessingConvertOptions;
 import com.groupdocs.conversion.filetypes.WordProcessingFileType;
-...
+
 // Load the source DOCX file
 Converter converter = new Converter("sample.docx");
 WordProcessingConvertOptions options = new WordProcessingConvertOptions();

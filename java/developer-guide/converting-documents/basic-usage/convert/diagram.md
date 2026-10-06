@@ -48,7 +48,7 @@ For example, VSDX to PDF conversion code snippet looks like this:
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
-...
+
 // Load the source VSDX file
 Converter converter = new Converter("sample.vsdx");
 // Set the convert options for PDF format
@@ -75,7 +75,8 @@ The following code snippet shows how to convert a VSDX format to a VDW format in
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.DiagramConvertOptions;
-...
+import com.groupdocs.conversion.filetypes.DiagramFileType;
+
 // Load the source VSDX file
 Converter converter = new Converter("sample.vsdx");
 // Set the convert options for VDW format

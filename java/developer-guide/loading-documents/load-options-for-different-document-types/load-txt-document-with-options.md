@@ -26,7 +26,7 @@ import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.options.load.TxtLeadingSpacesOptions;
 import com.groupdocs.conversion.options.load.TxtLoadOptions;
-...
+
 TxtLoadOptions loadOptions =  new TxtLoadOptions();
 loadOptions.setLeadingSpacesOptions(TxtLeadingSpacesOptions.ConvertToIndent);
 loadOptions.setDetectNumberingWithWhitespaces(true);
@@ -49,7 +49,7 @@ import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.options.load.TxtLoadOptions;
 import com.groupdocs.conversion.options.load.TxtTrailingSpacesOptions;
-...
+
 TxtLoadOptions loadOptions =  new TxtLoadOptions();
 loadOptions.setTrailingSpacesOptions(TxtTrailingSpacesOptions.Trim);
 
@@ -71,7 +71,7 @@ import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.options.load.TxtLoadOptions;
 import java.nio.charset.Charset;
-...
+
 TxtLoadOptions loadOptions =  new TxtLoadOptions();
 loadOptions.setEncoding(Charset.forName("shift_jis"));
 

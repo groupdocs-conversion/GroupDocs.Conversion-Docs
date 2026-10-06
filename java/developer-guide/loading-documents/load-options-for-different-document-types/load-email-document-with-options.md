@@ -78,6 +78,7 @@ import com.groupdocs.conversion.contracts.SaveDocumentStreamForFileType;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.options.load.EmailLoadOptions;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -111,7 +112,7 @@ public class ConvertEmailWithAttachments {
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         convert();
     }
 }

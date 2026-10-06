@@ -70,7 +70,7 @@ The code snippet for XLSX to HTML or MHTML conversion using Java programming lan
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.MarkupConvertOptions;
-...
+
 // Load the source XLSX file
 Converter converter = new Converter("sample.xlsx");
 MarkupConvertOptions options = new MarkupConvertOptions();
@@ -88,7 +88,7 @@ When converting to MHTML you may use the same code example as above, just call t
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.MarkupConvertOptions;
 import com.groupdocs.conversion.filetypes.MarkupFileType;
-...
+
 // Load the source XLSX file
 Converter converter = new Converter("sample.xlsx");
 MarkupConvertOptions options = new MarkupConvertOptions();
@@ -110,7 +110,7 @@ Here is a complete code example for XLSX to DOCX conversion using Java language 
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.WordProcessingConvertOptions;
-...
+
 // Load the source XLSX file
 Converter converter = new Converter("sample.xlsx");
 WordProcessingConvertOptions options = new WordProcessingConvertOptions();
@@ -133,7 +133,7 @@ Please examine the code snippet that demonstrates how to convert XLSX to PPTX us
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PresentationConvertOptions;
-...
+
 // Load the source XLS file
 Converter converter = new Converter("sample.xlsx");
 PresentationConvertOptions options = new PresentationConvertOptions();

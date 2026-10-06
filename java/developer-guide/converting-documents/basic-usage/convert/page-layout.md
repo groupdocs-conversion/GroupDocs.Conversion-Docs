@@ -46,7 +46,7 @@ For example, TEX to PDF conversion code snippet looks like this:
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
-...
+
 // Load the source TEX file
 Converter converter = new Converter("sample.tex");
 // Set the convert options for PDF format
@@ -72,14 +72,14 @@ The following code snippet shows how to convert a DOCX document to TEX format in
 {{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
-import com.groupdocs.conversion.options.convert.PdfConvertOptions;
-import com.groupdocs.conversion.filetypes.PdfFileType;
-...
+import com.groupdocs.conversion.options.convert.PageDescriptionLanguageConvertOptions;
+import com.groupdocs.conversion.filetypes.PageDescriptionLanguageFileType;
+
 // Load the source DOCX file
-Converter converter = Converter("sample.docx");
+Converter converter = new Converter("sample.docx");
 // Set the convert options for TEX format
-PdfConvertOptions options = new PdfConvertOptions();
-options.setFormat(PdfFileType.Tex);
+PageDescriptionLanguageConvertOptions options = new PageDescriptionLanguageConvertOptions();
+options.setFormat(PageDescriptionLanguageFileType.Tex);
 // Convert to TEX format
 converter.convert("converted.tex", options);
 ```

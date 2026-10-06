@@ -28,7 +28,6 @@ import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.documentinfo.IDocumentInfo;
 import com.groupdocs.conversion.contracts.documentinfo.PersonalStorageDocumentInfo;
 import com.groupdocs.conversion.contracts.documentinfo.PersonalStorageFolderInfo;
-import com.groupdocs.conversion.examples.Constants;
 
 public class GetFoldersFromPersonalStorage {
     public static void convert() {

@@ -27,7 +27,7 @@ public class ConvertXmlToSpreadsheet {
         loadOptions.setUseAsDataSource(true);
 
         // Initialize the Converter for the input file
-        try(Converter converter = new Converter("data.xml", ()-> loadOptions) {
+        try(Converter converter = new Converter("data.xml", ()-> loadOptions)) {
             // Configure spreadsheet conversion options
             SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
 
@@ -71,7 +71,7 @@ public class ConvertXmlToCsv {
         loadOptions.setUseAsDataSource(true);
 
         // Initialize the Converter for the input file
-        try(Converter converter = new Converter("sample.xml", ()-> loadOptions) {
+        try(Converter converter = new Converter("data.xml", ()-> loadOptions)) {
             // Configure spreadsheet conversion options for CSV format
             SpreadsheetConvertOptions options = new SpreadsheetConvertOptions();
             options.setFormat(SpreadsheetFileType.Csv);
@@ -116,7 +116,7 @@ public class ConvertXmlToJson {
         loadOptions.setUseAsDataSource(true);
 
         // Initialize the Converter for the input file
-        try(Converter converter = new Converter("data.xml", ()-> loadOptions) {
+        try(Converter converter = new Converter("data.xml", ()-> loadOptions)) {
             // Configure web conversion options for JSON format
             WebConvertOptions options = new WebConvertOptions();
             options.setFormat(WebFileType.Json);

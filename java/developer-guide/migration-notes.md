@@ -47,7 +47,7 @@ String outputPath = "C:\\output\\converted.pdf";
 try(Converter converter = new Converter(documentPath))
 {
     PdfConvertOptions convertOptions = new PdfConvertOptions();
-    converter.Convert(outputPath, convertOptions);
+    converter.convert(outputPath, convertOptions);
 }
 ```
 

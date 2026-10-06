@@ -26,27 +26,29 @@ import com.groupdocs.conversion.contracts.PossibleConversions;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.options.load.WordProcessingLoadOptions;
 
-public static void getDefaultLoadOptions()
-{
-    // Step 1: Retrieve possible conversions for a DOCX extension
-    PossibleConversions possibleConversions = Converter.getPossibleConversions("docx");
+public class GetDefaultLoadOptions {
+    public static void getDefaultLoadOptions()
+    {
+        // Step 1: Retrieve possible conversions for a DOCX extension
+        PossibleConversions possibleConversions = Converter.getPossibleConversions("docx");
 
-    // Step 2: Use the default load options 
-    WordProcessingLoadOptions loadOptions = (WordProcessingLoadOptions) possibleConversions.getLoadOptions();
-    loadOptions.setPassword("12345");
+        // Step 2: Use the default load options 
+        WordProcessingLoadOptions loadOptions = (WordProcessingLoadOptions) possibleConversions.getLoadOptions();
+        loadOptions.setPassword("12345");
 
-    // Step 3: Specify source file path and load options
-    Converter converter = new Converter("password_protected.docx", () -> loadOptions);
+        // Step 3: Specify source file path and load options
+        Converter converter = new Converter("password_protected.docx", () -> loadOptions);
 
-    // Step 4: Specify output file location and convert options
-    PdfConvertOptions convertOptions = new PdfConvertOptions();
+        // Step 4: Specify output file location and convert options
+        PdfConvertOptions convertOptions = new PdfConvertOptions();
 
-    // Step 5: Convert and save to output path
-    converter.convert("outputFile.pdf", convertOptions);
+        // Step 5: Convert and save to output path
+        converter.convert("outputFile.pdf", convertOptions);
 
-}
+    }
 
-public static void main(String[] args){
-    getDefaultLoadOptions();
+    public static void main(String[] args){
+        getDefaultLoadOptions();
+    }
 }
 ```

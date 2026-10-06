@@ -10,14 +10,14 @@ hideChildren: False
 ---
 The following code snippet shows how to convert a document from Azure Blob Storage:
 
+{{< alert style="info" >}}
+This example uses the legacy Azure Storage SDK for Java. Add the `com.microsoft.azure:azure-storage` Maven dependency (for example, version `8.6.6`) to your project.
+{{< /alert >}}
+
 {{< tabs "load-document-from-azure-blob-storage" >}}
 {{< tab "Java" >}}
 ```java
-  package com.groupdocs.conversion.examples.advanced_usage.loading.loading_documents_from_different_sources;
-
 import com.groupdocs.conversion.Converter;
-import com.groupdocs.conversion.examples.Constants;
-
 import com.groupdocs.conversion.exceptions.GroupDocsConversionException;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.microsoft.azure.storage.CloudStorageAccount;
@@ -27,7 +27,6 @@ import com.microsoft.azure.storage.blob.CloudBlobContainer;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 
 
 /**
@@ -40,7 +39,8 @@ public class LoadDocumentFromAzureBlobStorage {
         String convertedFile = "C:\\output\\converted.pdf"; 
         
         try {
-        Converter converter = new Converter(new ByteArrayInputStream(DownloadFile(blobName).toByteArray()));
+        ByteArrayInputStream stream = new ByteArrayInputStream(downloadFile(blobName).toByteArray());
+        Converter converter = new Converter(() -> stream);
         PdfConvertOptions options = new PdfConvertOptions();
         converter.convert(convertedFile, options);
         }
@@ -56,18 +56,17 @@ public class LoadDocumentFromAzureBlobStorage {
             + "AccountName=Ram;" //Your account name.
             + "AccountKey=key"; //your account key.
 
-    public static ByteArrayOutputStream DownloadFile(String blobName) throws Exception
+    public static ByteArrayOutputStream downloadFile(String blobName) throws Exception
     {
-        CloudBlobContainer container = GetContainer();
+        CloudBlobContainer container = getContainer();
 
         CloudBlob blob = container.getBlockBlobReference(blobName);
         ByteArrayOutputStream memoryStream = new ByteArrayOutputStream();
         blob.download(memoryStream);
-        //memoryStream.Position = 0;
         return memoryStream;
     }
 
-    private static CloudBlobContainer GetContainer() throws Exception
+    private static CloudBlobContainer getContainer() throws Exception
     {
         String containerName = "***";
 

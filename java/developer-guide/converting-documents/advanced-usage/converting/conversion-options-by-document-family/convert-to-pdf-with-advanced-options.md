@@ -29,7 +29,6 @@ The following code demonstrates how to convert a document to PDF with advanced o
 {{< tab "ConvertToPdfWithAdvancedOptions.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
-import com.groupdocs.conversion.examples.Constants;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.options.convert.Rotation;
 

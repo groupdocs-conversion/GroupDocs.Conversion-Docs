@@ -172,7 +172,7 @@ GroupDocs.Conversion is a wise choice when you have to convert a PDF file into P
 {{< tab "PdfToPptxDocument.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
-import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
+import com.groupdocs.conversion.options.convert.PresentationConvertOptions;
 
 public class PdfToPptxDocument {
     public static void convert() {
@@ -215,7 +215,11 @@ Please check a complete code example of PDF to PNG conversion below:
 {{< tab "PdfToPngDocument.java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
-import com.groupdocs.conversion.options.convert.SpreadsheetConvertOptions;
+import com.groupdocs.conversion.contracts.SavePageStream;
+import com.groupdocs.conversion.filetypes.ImageFileType;
+import com.groupdocs.conversion.options.convert.ImageConvertOptions;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 
 public class PdfToPngDocument {
     public static void convert() {

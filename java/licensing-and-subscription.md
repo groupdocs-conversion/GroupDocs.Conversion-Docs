@@ -51,7 +51,7 @@ The license should be set:
 
 {{< alert style="info" >}}
 
-The license can be set multiple times per app domain but we recommend doing it once since all calls to the `SetLicense` method except for the first one will just waste processor time.
+The license can be set multiple times per app domain but we recommend doing it once since all calls to the `setLicense` method except for the first one will just waste processor time.
 
 {{< /alert >}}
 
@@ -61,8 +61,7 @@ The following code sets a license from a file.
 
 ```java
 import com.groupdocs.conversion.licensing.License;
-import java.io.File;
-...
+
 String licensePath = "path to the .lic file";
 License license = new License();
 license.setLicense(licensePath);
@@ -74,14 +73,16 @@ The following example shows how to load a license from a stream.
 
 ```java
 import com.groupdocs.conversion.licensing.License;
-import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
-...
+
 String licensePath = "path to the .lic file";
 try (InputStream fileStream = new FileInputStream(licensePath)) {
     License license = new License();
     license.setLicense(fileStream);
+} catch (IOException e) {
+    throw new RuntimeException(e);
 }
 ```
 <!--
@@ -111,7 +112,8 @@ Following is the sample code demonstrating how to use the [Metered](https://refe
 
 ```java
 import com.groupdocs.conversion.licensing.Metered;
-...
+import java.math.BigDecimal;
+
 String publicKey = ""; // Your public license key
 String privateKey = ""; // Your private license key
 
@@ -119,10 +121,10 @@ Metered metered = new Metered();
 metered.setMeteredKey(publicKey, privateKey);
 
 // Get amount (MB) consumed
-Double consumption = metered.getConsumptionQuantity();
+BigDecimal consumption = Metered.getConsumptionQuantity();
 System.out.print("Metered consumption = " + consumption);
 
 // Get count of credits consumed
-Double credit = metered.getConsumptionCredit();
+BigDecimal credit = Metered.getConsumptionCredit();
 System.out.print("Metered credit = " + credit);
 ```

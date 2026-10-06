@@ -44,7 +44,7 @@ For example, the MPP to PDF conversion code snippet looks like this:
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
-...
+
 // Load the source MPP file
 Converter converter = new Converter("sample-project.mpp");
 // Set the convert options for PDF format

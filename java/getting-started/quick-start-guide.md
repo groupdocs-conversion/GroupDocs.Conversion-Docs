@@ -29,7 +29,7 @@ To proceed, make sure you have:
 
 {{< tabs "quick-start-maven-dependency">}}
 {{< tab "Maven" >}}
-```java
+```xml
 <dependency>
     <groupId>com.groupdocs</groupId>
     <artifactId>groupdocs-conversion</artifactId>

@@ -53,7 +53,7 @@ The basic PPT to PPTX conversion could be performed using the code snippet below
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PresentationConvertOptions;
-...
+
 // Load the source PPT file
 Converter converter = new Converter("sample.ppt");
 PresentationConvertOptions options = new PresentationConvertOptions();
@@ -71,7 +71,7 @@ An opposite conversion from PPTX to PPT is also could be implemented with a mini
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PresentationConvertOptions;
 import com.groupdocs.conversion.filetypes.PresentationFileType;
-...
+
 // Load the source PPTX file
 Converter converter = new Converter("sample.pptx");
 PresentationConvertOptions options = new PresentationConvertOptions();
@@ -97,7 +97,7 @@ Here is an example of converting a PPTX presentation to PDF format. As you can s
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
-...
+
 // Load the source PPTX file
 Converter converter = new Converter("sample.pptx");
 PdfConvertOptions options = new PdfConvertOptions();
@@ -118,7 +118,7 @@ The Java code required for converting PPSM into PDF is provided below.
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
-...
+
 // Load the source PPSM file
 Converter converter = new Converter("sample.ppsm");
 PdfConvertOptions options = new PdfConvertOptions();
@@ -138,13 +138,20 @@ Here is a code snippet that shows how to convert PPTX to PNG image in Java progr
 {{< tabs "convert-pptx-to-png">}}
 {{< tab "Java" >}}
 ```java
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.contracts.SavePageStream;
 import com.groupdocs.conversion.options.convert.ImageConvertOptions;
 import com.groupdocs.conversion.filetypes.ImageFileType;
-...
-SavePageStream getPageStream = page => new FileOutputStream(String.format("converted-slide-%s.png", page));
+
+SavePageStream getPageStream = page -> {
+    try {
+        return new FileOutputStream(String.format("converted-slide-%s.png", page));
+    } catch (FileNotFoundException e) {
+        throw new RuntimeException(e);
+    }
+};
 // Load the source PPTX file
 Converter converter = new Converter("sample.pptx");
 // Set the convert options for PNG format

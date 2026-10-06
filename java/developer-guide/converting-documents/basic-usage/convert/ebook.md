@@ -46,7 +46,7 @@ For example, an eBook to PDF conversion code snippet looks like this:
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
-...
+
 // Load the source eBook file
 Converter converter = new Converter("sample.mobi");
 // Set the convert options for PDF format
@@ -74,7 +74,8 @@ The following code snippet shows how to convert a PDF document to eBook format i
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.EBookConvertOptions;
-...
+import com.groupdocs.conversion.filetypes.EBookFileType;
+
 // Load the source PDF file
 Converter converter = new Converter("sample.pdf");
 // Set the convert options for eBook format

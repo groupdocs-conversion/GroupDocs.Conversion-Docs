@@ -48,6 +48,7 @@ The following Java code snippet demonstrates how to apply a text watermark to a 
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.options.convert.WatermarkTextOptions;
+import java.awt.Color;
 
 public class AddWatermarkToConvertedDocument {
     public static void convert() {

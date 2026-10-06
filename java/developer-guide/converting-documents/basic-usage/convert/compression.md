@@ -66,34 +66,35 @@ To illustrate, here is a code sample showcasing how to convert the content of a 
 {{< tab "Java" >}}
 ```java
 import com.groupdocs.conversion.Converter;
+import com.groupdocs.conversion.contracts.ConvertOptionsProvider;
+import com.groupdocs.conversion.contracts.SaveDocumentStreamForFileType;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-...
-try (Converter converter = new Converter("sample.zip")) {
-            converter.convert(() -> new ByteArrayOutputStream(), (convertedStream, sourceFileName) -> {
-                String outputFolder = "C:\\Output";
-				Path path = Paths.get(outputFolder , sourceFileName + ".pdf");
-                if (!path.getParent().toFile().exists())
-                    Files.createDirectory(path.getParent());
-                try (FileOutputStream fs = new FileOutputStream(path.toFile()); InputStream inputStream = convertedStream.toInputStream();) {
-                    int read = 0;
-                    byte[] buf = new byte[1024];
-                    do {
-                        read = inputStream.read(buf, 0, buf.length);
-                        if (read > 0) {
-                            fs.write(buf, 0, read);
-                        }
 
-                    } while (read > 0);
-                }
-                return null;
-            }, (s, fileType) -> new PdfConvertOptions());
-        }
+String outputFolder = "converted";
+new File(outputFolder).mkdirs();
+final int[] index = {0};
+
+// Create an output stream for each converted archive item
+SaveDocumentStreamForFileType convertedStreamProvider = (fileType) -> {
+    File outputFile = new File(outputFolder, String.format("converted-%d.pdf", index[0]));
+    index[0]++;
+    try {
+        return new FileOutputStream(outputFile);
+    } catch (FileNotFoundException e) {
+        throw new RuntimeException(e);
+    }
+};
+
+// Convert each archive item to PDF
+ConvertOptionsProvider convertOptionsProvider = (sourceFileName, fileType) -> new PdfConvertOptions();
+
+// Load the source ZIP file
+try (Converter converter = new Converter("sample.zip")) {
+    converter.convert(convertedStreamProvider, convertOptionsProvider);
+}
 ```
 {{< /tab >}}
 {{< /tabs >}}

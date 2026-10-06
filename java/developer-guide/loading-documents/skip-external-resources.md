@@ -70,6 +70,7 @@ The following code snippet shows how to load the JPG and JPEG images and any res
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.options.load.WebLoadOptions;
+import java.util.Arrays;
 
 public static void setWhitelistedResources()
 {

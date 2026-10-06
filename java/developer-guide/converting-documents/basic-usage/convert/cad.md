@@ -46,11 +46,11 @@ For example, a DWG to PDF conversion code snippet looks like this:
 ```java
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
-...
+
 // Load the source DWG file
 Converter converter = new Converter("sample.dwg");
 // Set the convert options for PDF format
-PdfConvertOptions options = new CadConvertOptions();
+PdfConvertOptions options = new PdfConvertOptions();
 // Convert to PDF format
 converter.convert("converted.pdf", options);
 ```
@@ -74,7 +74,7 @@ The following code snippet shows how to convert a DWG document to STL in Java us
 import com.groupdocs.conversion.Converter;
 import com.groupdocs.conversion.options.convert.CadConvertOptions;
 import com.groupdocs.conversion.filetypes.CadFileType;
-...
+
 // Load the source DWG file
 Converter converter = new Converter("sample.dwg");
 // Set the convert options for STL format

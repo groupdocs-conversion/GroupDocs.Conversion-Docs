@@ -48,15 +48,36 @@ To allow OCR conversions [GroupDocs.Conversion](https://products.groupdocs.com/c
 
 First, you must decide which OCR processing library will use. Different libraries have different setup processes.
 
-In our example, we will use Aspose.OCR. Install the [Aspose.OCR](https://releases.aspose.com/java/repo/com/aspose/aspose-ocr/) nuget package in your project. Then implement [IOcrConnector](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.integration.ocr/iocrconnector/). The following code snippet provides a sample implementation:
+In our example, we will use Aspose.OCR. Add the [Aspose.OCR](https://releases.aspose.com/java/repo/com/aspose/aspose-ocr/) Maven dependency to your project. Aspose artifacts are hosted in the Aspose Maven repository (`https://releases.aspose.com/java/repo/`), so add it to the `repositories` section of your `pom.xml` as well:
+
+```xml
+<repositories>
+    <repository>
+        <id>AsposeJavaAPI</id>
+        <name>Aspose Java API</name>
+        <url>https://releases.aspose.com/java/repo/</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>com.aspose</groupId>
+        <artifactId>aspose-ocr</artifactId>
+        <version>26.9.0</version>
+    </dependency>
+</dependencies>
+```
+
+Then implement [IOcrConnector](https://reference.groupdocs.com/conversion/java/com.groupdocs.conversion.integration.ocr/iocrconnector/). The following code snippet provides a sample implementation:
 
 
 {{< tabs "convert-image-using-ocr">}}
 {{< tab "ConvertImageUsingOcr.java" >}}
 ```java
 import com.aspose.ocr.*;
+import com.aspose.ocr.models.AreasType;
+import com.aspose.ocr.models.DetectAreasMode;
 import com.groupdocs.conversion.Converter;
-import com.groupdocs.conversion.examples.Constants;
 import com.groupdocs.conversion.integration.ocr.IOcrConnector;
 import com.groupdocs.conversion.integration.ocr.RecognizedImage;
 import com.groupdocs.conversion.integration.ocr.TextFragment;
@@ -64,7 +85,7 @@ import com.groupdocs.conversion.integration.ocr.TextLine;
 import com.groupdocs.conversion.options.convert.PdfConvertOptions;
 import com.groupdocs.conversion.options.load.ImageLoadOptions;
 import javax.imageio.ImageIO;
-import java.awt.*;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.InputStream;
 import java.lang.Character;
@@ -77,13 +98,13 @@ import java.util.List;
  */
 public class ConvertImageUsingOcr {
     public static void run() {
-        String outputFile = Constants.getConvertedPath("converted.pdf");
+        String outputFile = "converted.pdf";
 
         ImageLoadOptions imageLoadOptions = new ImageLoadOptions();
         imageLoadOptions.setOcrConnector(new OcrConnector());
 
         //Once the `IOcrConnector` interface is implemented, the JPG to PDF conversion code snippet looks like this:
-        try (Converter converter = new Converter(Constants.SAMPLE_JPEG, () -> imageLoadOptions)) {
+        try (Converter converter = new Converter("sample.jpeg", () -> imageLoadOptions)) {
             PdfConvertOptions options = new PdfConvertOptions();
             converter.convert(outputFile, options);
         } catch (Exception e) {
@@ -122,9 +143,9 @@ class OcrConnector implements IOcrConnector {
     private RecognizedImage createRecognizedImageFromResult(RecognitionResult result) {
         List<TextLine> lines = new ArrayList<>();
 
-        for (int i = 0; i < result.recognitionAreasText.size(); i++) {
-            String text = result.recognitionAreasText.get(i).trim();
-            Rectangle rectangle = result.recognitionAreasRectangles.get(i);
+        for (RecognitionResult.LinesResult line : result.recognitionLinesResult) {
+            String text = line.textInLine.trim();
+            Rectangle rectangle = line.line;
             List<TextFragment> fragments = splitToFragments(text, (int)rectangle.getX(), (int)rectangle.getY(), (int)rectangle.getWidth(), (int)rectangle.getHeight());
             lines.add(new TextLine(fragments));
         }
