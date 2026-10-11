@@ -84,3 +84,7 @@ No. Stdio only; it is a child process of your AI client (or of your agent runtim
 
 **How do updates work in a restricted network?**
 Pull the pinned image version in a controlled window, re-tag internally, and roll it out like any other container update.
+
+## Read more
+
+* [3 architectures for AI document processing, and the one that keeps files inside your network](https://blog.groupdocs.com/total/on-premise-ai-document-processing-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.

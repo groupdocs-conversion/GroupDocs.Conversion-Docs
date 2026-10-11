@@ -75,14 +75,19 @@ The same one-prompt pattern converts DOCX, XLSX, PPTX, HTML, and the rest of the
 
 * **Output missing structure?** Scanned (image-only) PDFs have no text layer to convert — OCR is not currently part of this server; see the OCR question in [Troubleshooting & FAQ]({{< ref "conversion/mcp/troubleshooting-faq.md" >}}).
 * **Server not visible in the client?** Restart the client after registration; see [Troubleshooting]({{< ref "conversion/mcp/troubleshooting-faq.md" >}}).
+* **Watermark on the output, or calls failing after 15 documents?** That is evaluation mode; check with [`get_license_status`]({{< ref "conversion/mcp/tools-reference/get-license-status.md" >}}) and see [Licensing]({{< ref "conversion/mcp/getting-started/licensing.md" >}}).
 
 ## FAQ
 
 **Does PDF to Markdown work offline?**
-Yes — after the one-time package/image download, conversion runs fully locally; no network is used at runtime.
+Yes — after the one-time package/image download, conversion runs fully locally with a license file or in evaluation mode. Metered licensing reports usage (never document content) to GroupDocs, so it needs outbound access — see [Licensing]({{< ref "conversion/mcp/getting-started/licensing.md" >}}).
 
 **Are tables preserved in the Markdown?**
 Yes, as Markdown pipe tables; complex layouts are where the commercial engine earns its keep versus basic extractors.
 
 **Can I convert Markdown back to PDF or Word?**
 Yes — [Export Markdown to PDF or Word]({{< ref "conversion/mcp/use-cases/export-markdown-to-pdf-word.md" >}}).
+
+## Read more
+
+* [3 ways to turn PDFs into LLM-ready Markdown (and why local wins)](https://blog.groupdocs.com/conversion/pdf-to-llm-ready-markdown-locally-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.

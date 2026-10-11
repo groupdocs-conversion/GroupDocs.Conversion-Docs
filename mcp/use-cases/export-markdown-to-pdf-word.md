@@ -70,3 +70,10 @@ Yes — native, editable DOCX with proper styles for headings, lists, and tables
 
 **What about Markdown to other formats?**
 Markdown converts to the same target set as other inputs — HTML, PNG, and more; see [supported formats]({{< ref "conversion/mcp/supported-formats.md" >}}).
+
+**Will the exported PDF carry a watermark?**
+Only in evaluation mode: unlicensed output carries an evaluation watermark, so apply a license before you deliver reports outside the team — see [Licensing]({{< ref "conversion/mcp/getting-started/licensing.md" >}}).
+
+## Read more
+
+* [Automate report delivery: let the agent write Markdown and ship Word](https://blog.groupdocs.com/conversion/export-ai-markdown-to-pdf-word-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
