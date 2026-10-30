@@ -18,7 +18,7 @@ toc: True
 |**[Depth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/depth)** | Controls how many levels in depth to perform the conversion |
 |**[DisplayBccEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displaybccemailaddress)** | Option to display or hide "Bcc" email address |
 |**[DisplayCcEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayccemailaddress)** | Option to display or hide "Cc" email address |
-|**[DisplayEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayemailaddress)** | Option to display or hide email address |
+|**[DisplayEmailAddresses](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayemailaddresses)** | Option to display or hide the email addresses next to the names, for example `John Doe <john.doe@sample.com>` or only `John Doe`. Default: true. |
 |**[DisplayFromEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayfromemailaddress)** | Option to display or hide "from" email address |
 |**[DisplayHeader](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displayheader)** | Option to display or hide the email header |
 |**[DisplayToEmailAddress](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/emailloadoptions/displaytoemailaddress)** | Option to display or hide "to" email address |
