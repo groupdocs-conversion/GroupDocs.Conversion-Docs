@@ -10,6 +10,33 @@ hideChildren: False
 toc: True
 ---
 
+## Migrating to v26.10 (external resources)
+
+Version 26.10 tightens how documents load the resources they reference. Code compiles unchanged, but a conversion that relied on the earlier rules can produce different output or fail. With the default `SkipExternalResources = true`:
+
+| Before 26.10 | Since 26.10 | What to do |
+|---|---|---|
+| Local files outside the document's folder loaded | They are skipped | Add their folder to `WhitelistedResources` as a `file:` prefix, such as `file:///C:/assets/`, or copy the files next to the document |
+| UNC paths (`\\server\share`) loaded while `SkipExternalResources` was `false` | They never load, whatever the options | Copy the files to a local folder, or serve them over `https` and whitelist that prefix |
+| `WhitelistedResources` entries matched as fragments of the URL, such as `jpg` or `example.com` | Each entry must be an absolute URI prefix; any other entry makes the load fail with `InvalidLoadOptionsException` | Rewrite the entries, see [Migrating whitelist entries from earlier versions]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md#migrating-whitelist-entries-from-earlier-versions" >}}) |
+| Scripts in HTML, MHTML and SVG documents ran | No script runs | Set `ExecuteScripts = true` on `WebLoadOptions` or `SvgLoadOptions` for documents you trust |
+| SVG and SVGZ documents converted without load options used `PageDescriptionLanguageLoadOptions`, which has no resource control | They use `SvgLoadOptions`, which skips external resources | Pass `SvgLoadOptions` with a whitelist, or with `SkipExternalResources = false` |
+| XBRL and iXBRL taxonomies loaded from any location | A taxonomy outside the document's folder makes the load fail with `InvalidLoadOptionsException` | Pass `FinanceLoadOptions` with `SkipExternalResources = false` |
+| 3D material libraries, textures and buffers loaded from any location | They load only from the model's own folder, and never from a remote location | Add their folder to `ThreeDLoadOptions.WhitelistedResources` as a `file:` prefix |
+
+The same rules now also apply where they did not before: images outside the document's folder are no longer embedded when HTML or e-mail is converted to a spreadsheet format, Markdown documents no longer fetch remote images, and XML converted through an XSL-FO stylesheet no longer loads external images.
+
+For example, an XBRL filing that references a remote taxonomy converts again with:
+
+```csharp
+using (Converter converter = new Converter("filing.xbrl", (LoadContext loadContext) => new FinanceLoadOptions { SkipExternalResources = false }))
+{
+    converter.Convert("filing.xlsx", new SpreadsheetConvertOptions());
+}
+```
+
+To allow resources by your own rules instead, set an `ExternalResourceHandler`. See [Skip loading of external resources]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md" >}}).
+
 ## Migrating to v26.9 (removed obsolete members)
 
 Version 26.9 removes the members that were marked obsolete in earlier versions. Code that still uses them no longer compiles; replace them as follows:

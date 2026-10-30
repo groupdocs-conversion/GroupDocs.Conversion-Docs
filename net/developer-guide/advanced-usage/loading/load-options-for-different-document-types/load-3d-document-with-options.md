@@ -16,6 +16,11 @@ The following options are available:
 | Option | Description |
 |--------|-------------|
 |**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/threedloadoptions/format)** | The document type is auto-detected during loading, but you can explicitly specify the source format. Available options include: *Fbx, ThreeDS, ThreeMF, Amf, Ase, Dae, Drc, Gltf, Obj, Ply, Rvm, U3d, Usd, Usdz, Vrml, X* |
+|**[ExternalResourceHandler](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/threedloadoptions/externalresourcehandler)** | A handler called for each dependency the model asks to load; it can allow the dependency, skip it or supply its content. Default: null. Available since version 26.10. |
+|**[SkipExternalResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/threedloadoptions/skipexternalresources)** | Whether to skip dependencies outside the model's own folder, such as material libraries, textures and external buffers. Default: true. Remote dependencies never load. Available since version 26.10. |
+|**[WhitelistedResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/threedloadoptions/whitelistedresources)** | `file:` URI prefixes of local folders whose dependencies load while `SkipExternalResources` is true, such as `file:///D:/models/materials/`. Available since version 26.10. |
+
+A dependency that is not allowed is treated as missing. A model that cannot load without it, such as a glTF file whose external buffer is denied, fails to load. See [3D models]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md#3d-models" >}}).
 
 ## Load FBX document
 
