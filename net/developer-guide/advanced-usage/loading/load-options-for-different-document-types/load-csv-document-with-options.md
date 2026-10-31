@@ -34,6 +34,9 @@ toc: True
 |**[ShowGridLines](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/showgridlines)** | Specify if the grid lines should be visible. |
 |**[ShowHiddenSheets](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/showhiddensheets)** | Specify if the hidden sheets should be included in the converted document. |
 |**[SkipEmptyRowsAndColumns](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/skipemptyrowsandcolumns)** | Specify if empty rows and columns should be ignored. |
+|**[ExternalResourceHandler](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/externalresourcehandler)** | A handler called for each resource the document asks to load; it can allow the resource, skip it or supply its content. Default: null. Available since version 26.10. |
+|**[SkipExternalResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/skipexternalresources)** | Whether to skip the external resources the document references. Default: true. See [Skip loading of external resources]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md" >}}). |
+|**[WhitelistedResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/spreadsheetloadoptions/whitelistedresources)** | Absolute URI prefixes, such as `https://cdn.example.com/assets/`, of external resources to load while `SkipExternalResources` is true. Since version 26.10, an entry that is not an absolute URI prefix makes the load fail with `InvalidLoadOptionsException`. |
 
 ### Control behavior of converting date/time and numeric data
 

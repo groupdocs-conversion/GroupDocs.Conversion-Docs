@@ -19,6 +19,14 @@ The following options are available:
 |**[MinimumWidth](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/svgloadoptions/minimumwidth)** | Set minimum width for converting SVG document. Used when converting to raster formats. Default value is 800. |
 |**[MinimumHeight](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/svgloadoptions/minimumheight)** | Set minimum height for converting SVG document. Used when converting to raster formats. Default value is 600. |
 |**[CropToContentBounds](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/svgloadoptions/croptocontentbounds)** | Gets or sets a value indicating whether to crop the SVG bounding box to the content bounds before conversion. Default value is false. |
+|**[ExecuteScripts](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/svgloadoptions/executescripts)** | Whether the document's scripts run while it loads and converts. Default: false. Available since version 26.10. |
+|**[ExternalResourceHandler](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/svgloadoptions/externalresourcehandler)** | A handler called for each resource the document asks to load; it can allow the resource, skip it or supply its content. Default: null. Available since version 26.10. |
+|**[SkipExternalResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/svgloadoptions/skipexternalresources)** | Whether to skip the external resources the document references, such as linked images and stylesheets. Default: true. Content the document carries, local files inside its folder and resources that match `WhitelistedResources` still load. |
+|**[WhitelistedResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/svgloadoptions/whitelistedresources)** | Absolute URI prefixes, such as `https://cdn.example.com/assets/`, of external resources to load while `SkipExternalResources` is true. Since version 26.10, an entry that is not an absolute URI prefix makes the load fail with `InvalidLoadOptionsException`. |
+
+{{< alert style="info" >}}
+Since version 26.10, an SVG or SVGZ document converted without load options gets `SvgLoadOptions`, so external resources are skipped and scripts do not run unless you allow them. Earlier versions used `PageDescriptionLanguageLoadOptions`, which has no external resource control. See [Skip loading of external resources]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md" >}}).
+{{< /alert >}}
 
 ## Load SVG file
 

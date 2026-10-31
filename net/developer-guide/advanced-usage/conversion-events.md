@@ -46,9 +46,9 @@ Fire **once per produced item** — each converted document, each converted page
 | Handler | Signature | When it fires |
 |---------|-----------|---------------|
 | `OnDocumentConverted` | `Action<ConvertedContext>` | After each document conversion completes successfully |
-| `OnDocumentFailed` | `Action<ConvertContext, Exception>` | When a document conversion throws |
+| `OnDocumentFailed` | `Action<ConvertedContext, Exception>` | When a document conversion throws. Since version 26.10, also once for each contained document that cannot be loaded — an archive entry, an e-mail attachment, a mailbox item, or a file or OLE object embedded in a PDF, Word, Excel or PowerPoint document whose contents are converted. The context carries the item's name, hierarchy level and item index, with `FileType.Unknown` as its source and converted format. The item is skipped and the rest of the container still converts; earlier versions skipped it without calling the handler |
 | `OnPageConverted` | `Action<ConvertedPageContext>` | After each page is converted in page-by-page conversions |
-| `OnPageFailed` | `Action<ConvertContext, Exception>` | When a single page fails during page-by-page conversion |
+| `OnPageFailed` | `Action<ConvertedPageContext, Exception>` | When a single page fails during page-by-page conversion |
 | `OnCompressionCompleted` | `Action<Stream>` | After contents have been converted and packaged into a compressed archive (see [Extract and Convert Archive Contents]({{< ref "conversion/net/developer-guide/advanced-usage/converting/conversion-options-by-document-family/convert-contents-of-rar-or-zip-document-to-different-formats-and-compress.md" >}})) |
 
 See [Context Objects — Complete Guide]({{< ref "conversion/net/developer-guide/basic-usage/context-objects-complete-guide.md" >}}) for the properties exposed by `ConvertedContext`, `ConvertContext`, and `ConvertedPageContext`.

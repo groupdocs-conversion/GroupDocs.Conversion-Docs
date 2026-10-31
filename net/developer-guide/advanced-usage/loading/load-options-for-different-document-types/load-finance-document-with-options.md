@@ -20,6 +20,13 @@ The following options are available:
 | Option | Description |
 |--------|-------------|
 |**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/financeloadoptions/format)** | The document type is auto-detected during loading, but you can explicitly specify the source format. Available options are: *Xbrl, IXbrl* |
+|**[ExternalResourceHandler](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/financeloadoptions/externalresourcehandler)** | A handler called for each taxonomy reference while `SkipExternalResources` is true. It can skip a reference but cannot allow one that is denied. Default: null. Available since version 26.10. |
+|**[SkipExternalResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/financeloadoptions/skipexternalresources)** | Whether to deny taxonomy files outside the document's own folder. Default: true. Set it to `false` to convert a document that references a remote taxonomy. Available since version 26.10. |
+|**[WhitelistedResources](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/financeloadoptions/whitelistedresources)** | Validated like on the other load options classes, but not consulted for XBRL: a whitelisted remote schema is still denied. Available since version 26.10. |
+
+{{< alert style="warning" >}}
+Since version 26.10, external resources are not loaded by default, and an XBRL or inline XBRL document loads only when every taxonomy file it references is inside the document's own folder and the document is converted from a file path. A document that references a remote taxonomy, as most filings do, fails to load with `InvalidLoadOptionsException`. To convert such a document, set `SkipExternalResources` to `false`. See [XBRL and inline XBRL]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md#xbrl-and-inline-xbrl" >}}).
+{{< /alert >}}
 
 ## Load XBRL document
 
