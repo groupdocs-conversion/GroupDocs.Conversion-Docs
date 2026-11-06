@@ -104,3 +104,6 @@ With this code snippet, you can effortlessly convert the content of a ZIP archiv
 Refer to the [API reference](https://apireference.groupdocs.com/conversion/java/groupdocs.conversion.options.convert) for more conversion options and customizations.
 {{< /alert >}}
 
+## Change the archive format
+
+To change an archive's format while retaining its files, see [Convert archive formats]({{< ref "conversion/java/developer-guide/converting-documents/advanced-usage/converting/conversion-options-by-document-family/convert-to-compression-with-advanced-options.md" >}}). To configure a source format or password, see [Load compression document with options]({{< ref "conversion/java/developer-guide/loading-documents/load-options-for-different-document-types/load-compression-document-with-options.md" >}}).

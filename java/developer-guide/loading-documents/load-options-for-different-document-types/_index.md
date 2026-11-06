@@ -61,3 +61,7 @@ Handle metadata such as titles, authors, and other properties during the convers
 The load options feature in **[GroupDocs.Conversion for Java](https://products.groupdocs.com/conversion/java)** offers developers powerful tools to fine-tune the document loading process, ensuring flexibility and precision in handling diverse file formats. By understanding and utilizing these options, you can create efficient and robust document conversion workflows.
 
 Explore the documentation further to dive into format-specific load options and advanced usage scenarios.
+
+## Archive load options
+
+See [Load compression document with options]({{< ref "conversion/java/developer-guide/loading-documents/load-options-for-different-document-types/load-compression-document-with-options.md" >}}) for source formats, passwords, and nested archive processing.
