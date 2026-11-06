@@ -51,6 +51,10 @@ FinanceConvertOptions options = new FinanceConvertOptions
 
 You can convert between XBRL and iXBRL formats. This allows you to transform between human-readable inline XBRL and standard XBRL format.
 
+{{< alert style="warning" >}}
+Since version 26.10, external resources are not loaded by default, and an XBRL or inline XBRL document loads only when every taxonomy file it references is inside the document's own folder and the document is converted from a file path. A document that references a remote taxonomy, as most filings do, fails to load with `InvalidLoadOptionsException`. To convert such a document, pass `FinanceLoadOptions` with `SkipExternalResources` set to `false`. See [XBRL and inline XBRL]({{< ref "conversion/net/developer-guide/advanced-usage/loading/skip-external-resources.md#xbrl-and-inline-xbrl" >}}).
+{{< /alert >}}
+
 ### Convert XBRL to iXBRL
 
 ```csharp

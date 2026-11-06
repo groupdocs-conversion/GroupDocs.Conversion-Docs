@@ -68,6 +68,7 @@ The prompt is the orchestration layer: filtering ("only the 2025 ones"), sequenc
 * **Existing files are never overwritten** — re-running a batch produces distinctly-named files rather than clobbering earlier output.
 * **Large batches:** agents typically process files sequentially; a few hundred documents work fine, and the report at the end tells you exactly what happened. For scheduled/unattended pipelines beyond agent sessions, the same engine is scriptable via the [.NET library]({{< ref "conversion/net/_index.md" >}}).
 * **Evaluation mode** caps a single server process at 15 opened documents — a [license]({{< ref "conversion/mcp/getting-started/licensing.md" >}}) lifts this for real batches.
+* **Failures are reported per file.** When a file cannot be converted — an unsupported source format or a wrong password — the response for that file starts with the operation and the reason, and [`convert`]({{< ref "conversion/mcp/tools-reference/convert.md" >}}) accepts an optional `password`. Put "list any file that failed" in the prompt so a failure does not pass unnoticed.
 
 ## FAQ
 
@@ -79,3 +80,7 @@ They are kept by default — conversion writes new files. A separate output fold
 
 **Can I filter which files get converted?**
 Say it in the prompt — by extension, name pattern, or even content questions the agent checks via [`get_document_info`]({{< ref "conversion/mcp/tools-reference/get-document-info.md" >}}).
+
+## Read more
+
+* [A whole folder, one prompt: batch conversion with Claude and MCP](https://blog.groupdocs.com/conversion/batch-convert-folder-ai-agent-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.

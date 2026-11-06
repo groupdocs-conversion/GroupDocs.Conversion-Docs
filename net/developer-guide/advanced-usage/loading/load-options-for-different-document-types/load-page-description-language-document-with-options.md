@@ -17,6 +17,10 @@ The following options are available:
 |--------|-------------|
 |**[Format](https://reference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pagedescriptionlanguageloadoptions/format)** | The document type is auto-detected during loading, but you can explicitly specify the source format. Available options include: *Xps, Eps, Svg, Ps, Tex, Pcl, Cgm, Oxps* |
 
+{{< alert style="info" >}}
+For SVG and SVGZ documents, use [SvgLoadOptions]({{< ref "conversion/net/developer-guide/advanced-usage/loading/load-options-for-different-document-types/load-svg-document-with-options.md" >}}). It controls the external resources and scripts of the document, and since version 26.10 it is the default load options type for these formats. `PageDescriptionLanguageLoadOptions` has no external resource control.
+{{< /alert >}}
+
 ## Load XPS document
 
 The following code snippet shows how to load an XPS document with explicit format specification:

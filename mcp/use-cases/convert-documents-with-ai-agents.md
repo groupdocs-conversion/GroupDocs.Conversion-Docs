@@ -68,7 +68,7 @@ Restart the client. Documents go in the storage folder; conversions come back th
 
 **PDF → DOCX** (make a PDF editable):
 
-> Convert scan-agreement.pdf to DOCX so I can edit it
+> Convert agreement.pdf to DOCX so I can edit it
 
 **DOCX → PDF** (finalize for distribution):
 
@@ -94,3 +94,13 @@ No. The server runs locally over stdio; the data path is agent → local server 
 
 **Which AI clients work?**
 Claude Desktop, Claude Code, VS Code / GitHub Copilot, Visual Studio 2022, Cursor, Windsurf, Cline, Codex CLI, JetBrains Rider — [setup for each]({{< ref "conversion/net/mcp/install-in-ai-clients.md" >}}).
+
+**Can it make a scanned PDF editable?**
+Only if the PDF has a text layer. OCR is not part of this server, so an image-only scan will not come out as editable text.
+
+**What happens without a license?**
+The server runs in evaluation mode: converted output carries an evaluation watermark, and one server process opens at most 15 documents. Ask *"what is the license status of the conversion server?"* first — see [Licensing]({{< ref "conversion/mcp/getting-started/licensing.md" >}}).
+
+## Read more
+
+* [Why your AI agent should not convert documents by itself](https://blog.groupdocs.com/conversion/ai-agents-convert-documents-properly-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
