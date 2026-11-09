@@ -1,7 +1,7 @@
 ---
 id: convert-untrusted-uploads-safely
 url: conversion/net/use-cases/convert-untrusted-uploads-safely
-title: Convert Untrusted HTML and SVG Uploads Safely
+title: Convert untrusted HTML and SVG uploads safely
 weight: 1
 description: "Compare five ways to convert untrusted HTML and SVG uploads to PDF with GroupDocs.Conversion for .NET, and which one keeps a stranger's file out of your output."
 keywords: GroupDocs.Conversion, .NET, SSRF, untrusted uploads, file upload security, external resources, IExternalResourceHandler, WhitelistedResources, HTML to PDF, SVG to PDF
@@ -81,7 +81,9 @@ secure-untrusted-document-upload-conversion-dotnet/
 
 `Program.cs` holds all five methods below plus `ResourceAudit`, the
 `IExternalResourceHandler` the first four pass to their load options to
-record each decision.
+record each decision. The snippets below use `ResourceAudit` without
+repeating it; see
+[its code in `Program.cs`](https://github.com/groupdocs-conversion/secure-untrusted-document-upload-conversion-dotnet/blob/main/Program.cs#L234-L269).
 
 ## Method 1: ConvertUploadFromPath
 
@@ -276,7 +278,7 @@ try
 {
     using var converter = new Converter(
         () => File.OpenRead(uploadPath), (LoadContext _) => loadOptions);
-    converter.Convert(ResultPath("loose-whitelist.pdf"), new PdfConvertOptions());
+    converter.Convert("output/loose-whitelist.pdf", new PdfConvertOptions());
     return null;
 }
 catch (InvalidLoadOptionsException exception)
