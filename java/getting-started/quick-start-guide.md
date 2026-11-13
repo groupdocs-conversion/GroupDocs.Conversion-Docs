@@ -169,5 +169,5 @@ public class ConvertPdfPagesToPng {
 
 After completing the basics, explore additional resources to enhance your usage:
 - [Supported File Formats]({{< ref "conversion/java/supported-document-formats" >}}): Review the full list of supported file types.
-- [Licensing]({{< ref "conversion/java/licensing-and-subscription" >}}): Check details on licening and evaluation.
+- [Licensing]({{< ref "conversion/java/licensing-and-subscription" >}}): Check details on licensing and evaluation.
 - [Technical Support]({{< ref "conversion/java/technical-support" >}}): Contact support for assistance if you encounter issues.
