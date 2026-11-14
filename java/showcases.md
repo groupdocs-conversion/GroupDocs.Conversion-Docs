@@ -3,7 +3,7 @@ id: showcases
 url: conversion/java/showcases
 title: Showcases
 weight: 6
-description: "Code examples and live demostrations of GroupDocs.Conversion for Java"
+description: "Code examples and live demonstrations of GroupDocs.Conversion for Java"
 productName: GroupDocs.Conversion for Java
 hideChildren: False
 toc: True
