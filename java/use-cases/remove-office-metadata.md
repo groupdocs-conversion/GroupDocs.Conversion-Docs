@@ -6,7 +6,7 @@ description: "Compare retained and cleared Office properties when converting DOC
 keywords: ["remove document metadata Java", "Office to PDF Java", "clear custom document properties", "DOCX metadata removal Java", "XLSX metadata removal Java", "PowerPoint metadata removal Java", "GroupDocs.Conversion Java", "Java 26.10"]
 productName: GroupDocs.Conversion for Java
 author: GroupDocs Team
-draft: true
+draft: false
 toc: true
 hideChildren: false
 ---
